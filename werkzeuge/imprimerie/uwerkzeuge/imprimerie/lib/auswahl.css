@@ -1,0 +1,24 @@
+/* Auswahllisten im Stil des Hauses (Robert 11.10.2026), gilt auf allen Seiten. Verhalten: assets/js/auswahl.js. */
+.hwahl{position:relative;display:block;width:100%;min-width:0}
+.hwahl{margin:0!important;padding:0!important;font:inherit;letter-spacing:normal!important;text-transform:none!important;color:inherit}
+.hwahl-nativ{position:absolute!important;inset:0;width:100%!important;height:100%!important;opacity:0!important;pointer-events:none!important}
+.hwahl-knopf{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-width:0;margin:0;padding:0;border:0;background:none;text-align:left;cursor:pointer;line-height:1.3}
+.hwahl-knopf b{font-weight:inherit;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hwahl-knopf svg{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:1.4;opacity:.7;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.hwahl--offen .hwahl-knopf svg{transform:rotate(180deg)}
+.hwahl-knopf:focus-visible{outline:0;box-shadow:0 2px 0 var(--taupe,#c36b4b)}
+.hwahl-liste{position:fixed;z-index:2147483000;max-height:min(52vh,420px);overflow:auto;overscroll-behavior:contain;margin:0;padding:10px;list-style:none;border-radius:20px;
+  background:linear-gradient(180deg,#fcfafa,#f3ecea);color:#121116;text-align:left;
+  box-shadow:inset 0 0 0 1px rgba(239,118,73,.35),inset 0 0 0 5px rgba(252,250,250,.9),inset 0 0 0 6px rgba(239,118,73,.18),0 34px 50px -24px rgba(15,14,19,.6),0 10px 18px -10px rgba(15,14,19,.35);
+  opacity:0;transform:translateY(-8px) scale(.98);transform-origin:50% 0;transition:opacity .3s cubic-bezier(.32,.72,0,1),transform .45s cubic-bezier(.16,1,.3,1);outline:0}
+.hwahl-liste.hwahl-oben{transform-origin:50% 100%;transform:translateY(8px) scale(.98)}
+.hwahl-liste.hwahl-auf{opacity:1;transform:none}
+.hwahl-liste li{position:relative;display:flex;align-items:center;gap:14px;padding:11px 16px;border-radius:12px;font:500 1.12rem/1.25 'DS-titel',Fraunces,Georgia,serif;color:#121116;cursor:pointer;transition:background .2s,color .2s}
+.hwahl-liste li+li::before{content:'';position:absolute;left:16px;right:16px;top:0;height:1px;background:rgba(239,118,73,.16)}
+.hwahl-liste li i{width:7px;height:7px;flex:none;rotate:45deg;box-shadow:inset 0 0 0 1px rgba(239,118,73,.45);transition:background .25s}
+.hwahl-liste li.hwahl-hier{background:rgba(239,118,73,.1)}
+.hwahl-liste li[aria-selected=true]{background:#0f0e13;color:#f8f2f2}
+.hwahl-liste li[aria-selected=true] i{background:#f5a689;box-shadow:none}
+.hwahl-liste li[aria-selected=true]::before,.hwahl-liste li[aria-selected=true]+li::before{opacity:0}
+.hwahl-liste li[aria-disabled=true]{opacity:.4;cursor:default}
+@media (prefers-reduced-motion:reduce){.hwahl-liste{transition:none}}

@@ -1,0 +1,46 @@
+/* Die Künstlerliste · Culinarium / Walk on the Wild Side (06.11.2026). Aufbau wie der Eingang des Gästebuchs: Liste links, Anfrage rechts; Kleid des Hauses. */
+.ku-raum{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:22px;align-items:start;margin-top:22px}
+.ku-filter{margin:0 0 10px}
+.ku-filter button i{font-style:normal;margin-left:8px;opacity:.55}
+.ku-filter{margin:0 0 8px}
+.ku-sp{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.ku-sp button{padding:8px 13px;border:0;border-radius:999px;background:#f8f5f5;box-shadow:inset 0 0 0 1px rgba(71,68,85,.22);font:400 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#121116;cursor:pointer}
+.ku-sp button[aria-pressed="true"]{background:linear-gradient(#34323f,#18171d);color:#f5f1f0;box-shadow:none}
+.ku-liste{display:flex;flex-direction:column;gap:8px}
+.ku-k{display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:14px;width:100%;padding:12px 14px;border:0;border-radius:20px;background:#faf6f5;box-shadow:inset 0 0 0 1px rgba(26,25,31,.09),0 16px 30px -26px rgba(22,20,27,.5);text-align:left;color:var(--tinte);cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.ku-k:active{transform:scale(.985)}
+.ku-k.aktiv{box-shadow:inset 0 0 0 1.5px rgba(207,114,51,.85),0 16px 30px -26px rgba(22,20,27,.5)}
+.ku-k__b{width:62px;height:62px;border-radius:14px;overflow:hidden;background:#3a3845}
+.ku-k__b img{width:100%;height:100%;object-fit:cover;display:block}
+.ku-k__t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ku-k__t .mono{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:#a24f22;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ku-k__t b{font:400 19px/1.2 var(--serif);overflow-wrap:anywhere}
+.ku-k__t small{font-size:13px;color:#5d5a69}
+.ku-k.neu .ku-k__t b::after{content:'';display:inline-block;width:7px;height:7px;margin-left:8px;border-radius:50%;background:#cf7233;vertical-align:middle}
+.ku-st{padding:6px 10px;border-radius:999px;font:400 9.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:inset 0 0 0 1px rgba(71,68,85,.3);color:#474455}
+.ku-st--neu{background:#cf7233;color:#fff;box-shadow:none}
+.ku-st--gespraech{box-shadow:inset 0 0 0 1px rgba(207,114,51,.8);color:#a24f22}
+.ku-st--zugesagt{background:#3a3845;color:#f5f1f0;box-shadow:none}
+.ku-st--abgesagt{opacity:.6}
+.ku-d .re-d__kopf{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.ku-angaben{margin:0 0 16px;border-top:1px solid rgba(244,173,147,.18)}
+.ku-angaben>div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid rgba(244,173,147,.18)}
+.ku-angaben dt{font:400 9.5px/1.5 var(--mono);letter-spacing:.15em;text-transform:uppercase;color:rgba(229,222,221,.6)}
+.ku-angaben dd{margin:0;font-size:15.5px;line-height:1.4;color:#f5f1f0;min-width:0;overflow-wrap:anywhere}
+.ku-angaben a{color:#f4ad93;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.ku-d .ku-kopie{display:inline-block;vertical-align:1px;font-size:9.5px;margin-left:8px;padding:4px 9px;border:0;border-radius:999px;background:rgba(255,255,255,.1);color:#f5f1f0;font:400 9.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.ku-d .re-anliegen a{color:inherit}
+.ku-stand{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 16px}
+.ku-stand button{padding:9px 13px;border:0;border-radius:999px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(244,173,147,.28);color:#e5dedd;font:400 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:transform .3s}
+.ku-stand button:active{transform:scale(.96)}
+.ku-stand button[aria-pressed="true"]{background:linear-gradient(#f6c3ae,#e0835a);color:#16141b;box-shadow:none}
+.ku-f{display:grid;grid-template-columns:200px 1fr;gap:10px 14px;align-items:end}
+.ku-f .feld{margin:0}
+.ku-f .feld>span{color:rgba(229,222,221,.66)}
+.ku-f input,.ku-f textarea{width:100%;padding:11px 14px;border:0;border-radius:12px;background:#f8f5f5;font:400 14.5px/1.4 var(--sans);color:#121116;outline:0;resize:vertical}
+.ku-f .kn{grid-column:1/-1;justify-self:start}
+.ku-auftritt{margin:14px 0 0;font:400 17px/1.3 var(--serif);color:#f4ad93}
+@media (max-width:1100px){.ku-raum{grid-template-columns:1fr}}
+@media (max-width:560px){.ku-angaben>div{grid-template-columns:1fr;gap:4px}.ku-k{grid-template-columns:52px 1fr;}.ku-k__b{width:52px;height:52px}.ku-st{grid-column:2;justify-self:start}.ku-f{grid-template-columns:1fr}}
+.ku-bsp{display:inline-block;margin-right:8px;padding:3px 7px;border-radius:999px;background:#3a3845;color:#f5f1f0;font-style:normal;letter-spacing:.12em}
+.ku-bsp-satz{margin:0 0 14px;padding:10px 14px;border-radius:12px;background:rgba(244,173,147,.12);font-size:13.5px;line-height:1.45;color:#f4d6c9}

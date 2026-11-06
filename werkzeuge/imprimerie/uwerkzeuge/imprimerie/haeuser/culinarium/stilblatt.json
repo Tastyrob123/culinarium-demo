@@ -1,0 +1,447 @@
+{
+ "haus": "culinarium",
+ "stand": "2026-10-29",
+ "quelle": "STILBLATT-DRUCKSACHEN.md",
+ "masseinheit": "u = kurze Seite des Formats in mm; Schriftgrad gr in mm",
+ "rollen": {
+  "titel": {
+   "rolle": [
+    "titel"
+   ],
+   "schrift": "Fraunces 340",
+   "versalien": false
+  },
+  "gericht_menue": {
+   "rolle": [
+    "titel"
+   ],
+   "schrift": "Fraunces 340",
+   "versalien": false,
+   "trenner": " | ",
+   "slot": "liste.*.name",
+   "aufbau": [
+    "menue"
+   ]
+  },
+  "rudis_zeile": {
+   "rolle": [
+    "kapitale"
+   ],
+   "schrift": "Fraunces Zeile 360",
+   "versalien": true,
+   "trenner": " / ",
+   "sperr_max": 0.08,
+   "kein_fehler": "Versalien gewollt"
+  },
+  "text": {
+   "rolle": [
+    "text",
+    "kursiv"
+   ],
+   "schrift": [
+    "Instrument Sans 400",
+    "Instrument Sans 500"
+   ],
+   "kursiv": false
+  },
+  "etikett": {
+   "rolle": [
+    "mono"
+   ],
+   "schrift": "DM Mono",
+   "versalien": true,
+   "sperr": [
+    0.04,
+    0.1
+   ]
+  },
+  "band": {
+   "rolle": [
+    "plakat"
+   ],
+   "schrift": "Urbanist 600",
+   "nur_bei": [
+    "menue",
+    "plakat",
+    "plakathoch"
+   ]
+  },
+  "plakat_rueckseite": {
+   "rolle": [
+    "plakatfett"
+   ],
+   "schrift": "Urbanist 800",
+   "nur_bei": [
+    "plakat",
+    "plakatrueck",
+    "plakathoch"
+   ]
+  },
+  "kopfzeile_rudi": {
+   "rolle": [
+    "kopf"
+   ],
+   "schrift": "Anton 400 (OFL)",
+   "versalien": true,
+   "sperr_max": 0.02,
+   "nur_bei": [
+    "plakat",
+    "plakathoch"
+   ],
+   "farbe": "aus dem Motiv: Rudi-Rot #d6262b, Tiefrot #9c1218 oder Hellrot #ff4a3d, auf Rottönen Ton in Ton (mindestens 2:1), sonst ab 1,4:1; Creme #f6e6d6 nur, wenn kein Rot trägt",
+   "schatten": "leichter Schatten auf hellem, Leuchten auf dunklem Grund",
+   "breite_anteil_motiv": [
+    0.7,
+    0.85
+   ],
+   "abstand_oben_anteil_motiv": [
+    0.02,
+    0.07
+   ],
+   "strich_darunter": false,
+   "quelle": "abgelesen an Rudis acht Plakaten mit gemalter Kopfzeile (29.10.2026); steht die Kopfzeile schon im Bild, kommt keine zweite dazu"
+  }
+ },
+ "verboten": {
+  "versalien_in_rolle": [
+   "titel"
+  ],
+  "sperr_max": 0.1,
+  "rollen_fremd": "jede Rolle ausser titel, kapitale, text, kursiv, mono, plakat, plakatfett, detail, kopf"
+ },
+ "trenner": {
+  "menue": " | ",
+  "rudi": " / ",
+  "ort": " · ",
+  "umbruch": "nur zwischen Gliedern, Trenner am Zeilenende entfaellt"
+ },
+ "achse": {
+  "regel": "eine Achse je Seite; Textelemente ausser Zeitleiste und Aufbau 'geteilt' mittig",
+  "mittig_toleranz_mm": 0.8,
+  "ausnahmen_aufbau": [
+   "ansicht",
+   "geteilt",
+   "gutschein",
+   "gutscheinrueck",
+   "kartengruss",
+   "plakatrueck",
+   "programm"
+  ],
+  "ausnahme_zeitleiste": "Elemente mit ausr 'l' in Paaren (Uhrzeit DM Mono | Schritt) duerfen links stehen, wenn der Block als Ganzes mittig ist",
+  "ausnahmen_quer": [
+   "fenster",
+   "geteilt",
+   "einladung",
+   "rueckseite",
+   "deckel",
+   "gutschein"
+  ],
+  "ausnahmen_quer_grund": "Querformat mit Bild links und Textspalte rechts: Achse ist die Mitte der Textspalte (Entscheid Oberchef 29.10.); Einladung und Rückseite in A6/DL quer zweispaltig (Entscheid Oberchef 30.10., siehe zweispaltig_quer)",
+  "zweispaltig_quer": {
+   "aufbauten": [
+    "einladung",
+    "rueckseite",
+    "deckel",
+    "gutschein"
+   ],
+   "formate": [
+    "a6q",
+    "dlq",
+    "a5q"
+   ],
+   "regel": "zwei Spalten, jede mit eigener Mittelachse: links Zeichen, Etikett, Titel, Linie (Spaltenmitte bei 7 % u + 23 % der Innenbreite), rechts Datum, Ort, Satz, Instagram; beide Gruppen auf derselben optischen Mitte; Etiketten beider Spalten gleich gross",
+   "grund": "wenig Höhe und wenig Inhalt: zweispaltig grösser statt einspaltig klein (Robert «wenig Inhalt = grösser», Entscheid Oberchef 30.10.2026)",
+   "pruefung": "jeder Text steht mittig auf einer der zwei Spaltenachsen (Toleranz mittig_toleranz_mm); die Achsen sind die Mitten der linken und der rechten Textgruppe"
+  }
+ },
+ "komposition": {
+  "optische_mitte": "Gruppenmitte 4 % der freien Hoehe ueber der geometrischen Mitte zwischen Kopf- und Fusszeile",
+  "toleranz_mitte_anteil": 0.06,
+  "fuellung_min": 0.45,
+  "fuellung_max": 0.78,
+  "kopf_fuss_gleich_toleranz_mm": 1.0,
+  "zeichen_in_gruppe": "Abstand Zeichen zur naechsten Zeile hoechstens 0.6 x Zeichenbreite; Zeichen nie naeher als 8 % u am Rahmen ohne Nachbar",
+  "loch_max_textzeilen": 2.5,
+  "fuellung_max_aufbau": {
+   "menue": 0.92,
+   "karte": 0.9,
+   "grund": "Menükarte und Karten mit Rudis Zeilen verteilen die Gänge über die Höhe (Robert: keine Leere unten); Entscheid Oberchef 29.10."
+  }
+ },
+ "groessen_anteil_u": {
+  "aushang": {
+   "formate": [
+    "a3h",
+    "a4h",
+    "a5h"
+   ],
+   "titel": 0.105,
+   "text": 0.038,
+   "etikett": 0.0165,
+   "zeichen": 0.13
+  },
+  "karte": {
+   "formate": [
+    "a6h",
+    "dlh"
+   ],
+   "titel": 0.118,
+   "text": 0.047,
+   "etikett": 0.02,
+   "zeichen": 0.15
+  },
+  "quer": {
+   "formate": [
+    "a7q",
+    "a6q"
+   ],
+   "titel": 0.14,
+   "text": 0.055,
+   "etikett": 0.022,
+   "zeichen": 0.13
+  },
+  "handy": {
+   "formate": [
+    "story",
+    "mail",
+    "insta",
+    "ig11"
+   ],
+   "titel": 0.115,
+   "text": 0.046,
+   "etikett": 0.02,
+   "zeichen": 0.15
+  },
+  "kurzer_titel": {
+   "zeichen_max": 16,
+   "faktor_max": 1.3
+  }
+ },
+ "verhaeltnisse": {
+  "titel_zu_text": [
+   2.5,
+   3.2
+  ],
+  "etikett_zu_text": [
+   0.4,
+   0.5
+  ],
+  "zeichenbreite_zu_titelgrad": [
+   1.2,
+   1.4
+  ]
+ },
+ "mindestgrade_mm": {
+  "a3h": {
+   "titel": 15,
+   "text": 6,
+   "etikett": 2.6
+  },
+  "a4h": {
+   "titel": 15,
+   "text": 6,
+   "etikett": 2.6
+  },
+  "a5h": {
+   "titel": 11,
+   "text": 4.2,
+   "etikett": 2.0
+  },
+  "a6h": {
+   "titel": 6,
+   "text": 2.1,
+   "etikett": 1.5
+  },
+  "dlh": {
+   "titel": 6,
+   "text": 2.1,
+   "etikett": 1.5
+  },
+  "a7q": {
+   "titel": 5,
+   "text": 2.0,
+   "etikett": 1.5
+  },
+  "story": {
+   "titel": 7,
+   "text": 3.6,
+   "etikett": 1.6
+  },
+  "insta": {
+   "titel": 7,
+   "text": 3.6,
+   "etikett": 1.6
+  },
+  "mail": {
+   "titel": 7,
+   "text": 3.6,
+   "etikett": 1.6
+  },
+  "_detail": "Rolle 'detail' (Drink unter dem Gericht, Menükarte/Karte) darf eine Stufe kleiner sein; Untergrenze 2.1 mm"
+ },
+ "farben": {
+  "hell": {
+   "grund": [
+    "weiss"
+   ],
+   "titel": [
+    "tanne"
+   ],
+   "text": [
+    "tinte"
+   ],
+   "etikett": [
+    "taupe",
+    "akzent"
+   ],
+   "linie": [
+    "messing",
+    "akzent"
+   ],
+   "zeichen": [
+    "tanne"
+   ]
+  },
+  "creme": {
+   "grund": [
+    "papier"
+   ],
+   "titel": [
+    "tanne"
+   ],
+   "text": [
+    "tinte"
+   ],
+   "etikett": [
+    "taupe",
+    "akzent"
+   ],
+   "linie": [
+    "messing",
+    "akzent"
+   ],
+   "zeichen": [
+    "tanne"
+   ]
+  },
+  "dunkel": {
+   "grund": [
+    "navy"
+   ],
+   "titel": [
+    "weiss"
+   ],
+   "text": [
+    "papier"
+   ],
+   "etikett": [
+    "gold",
+    "akzent"
+   ],
+   "linie": [
+    "messing",
+    "akzent"
+   ],
+   "zeichen": [
+    "messing",
+    "weiss"
+   ]
+  },
+  "dc": {
+   "grund": [
+    "dc"
+   ],
+   "titel": [
+    "weiss"
+   ],
+   "text": [
+    "weiss"
+   ],
+   "etikett": [
+    "weiss"
+   ],
+   "linie": [
+    "weiss"
+   ],
+   "zeichen": [
+    "weiss"
+   ]
+  },
+  "werte": {
+   "navy": "#16151a",
+   "weiss": "#faf4f4",
+   "papier": "#f3ecea",
+   "tanne": "#3a3845",
+   "tinte": "#26242d",
+   "taupe": "#b15736",
+   "gold": "#f5a689",
+   "messing": "#ef7649",
+   "dc": "#8953a9"
+  },
+  "akzent": "Farbe des Abends (inhalt.akzent), nur Linie, Datum, Etikett"
+ },
+ "linien": {
+  "rahmen": {
+   "abstand_anteil_u": 0.045,
+   "abstand_min_mm": 4.5,
+   "staerke_anteil_u": 0.0018,
+   "staerke_min_mm": 0.25,
+   "ecke_anteil_u": 0.011
+  },
+  "titellinie": {
+   "laenge_anteil_u": [
+    0.08,
+    0.1
+   ],
+   "staerke_anteil_u": 0.0024,
+   "staerke_min_mm": 0.3
+  },
+  "zwischen_posten": "keine groben Linien; nur Luft oder kurzer feiner Strich in Kupfer 6-8 mm, Staerke 0.25 mm"
+ },
+ "raender_anteil_u": {
+  "rahmen": 0.045,
+  "satz_innen": [
+   0.08,
+   0.09
+  ],
+  "kopf_fuss_innen": 0.055,
+  "lesetext_max_breite": 0.74
+ },
+ "marke": {
+  "wortmarke_je_seite_max": 1,
+  "zeichen_und_wortmarke_zusammen": false,
+  "dirty_chicken_zeichen": "zeichen3"
+ },
+ "bilder": {
+  "plakatmotiv_anschnitt": false,
+  "verzerren": false
+ },
+ "umbruch": {
+  "einzelwort_letzte_zeile": false,
+  "ausnahme": "Titel aus einem Wort"
+ },
+ "schmuck": {
+  "zeichen_je_haus": "C",
+  "zierzeichen_verboten": [
+   "x",
+   "×",
+   "*",
+   "◆",
+   "♦",
+   "•",
+   "✕"
+  ],
+  "ausnahme": "x als Teil eines Namens (MOMO X RUDI)",
+  "c_als_trenner": false,
+  "akzent_voll_max": 1
+ },
+ "mindestgrade_zweck": {
+  "tisch": {
+   "aufbau": [
+    "menue"
+   ],
+   "wie": "dlh",
+   "grund": "Die Menükarte liegt am Platz und wird aus Armlänge gelesen, auch als A5 oder A4; die Aushang-Grade gelten dort nicht"
+  }
+ }
+}

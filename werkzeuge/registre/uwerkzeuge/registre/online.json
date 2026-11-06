@@ -1,0 +1,37 @@
+{
+ "name": "Das Besucherbuch",
+ "hinweis": "Culinarium Hannover, 28.10.2026 (Form wie Taverne zum Schäfli _werkzeuge/registre/online.json). Oberfläche statisch unter /werkzeuge/registre/ (Vorführung liest beispiel/*.json, braucht keinen Dienst); /api/registre für die Zentrale (Beispielwerte, dieselbe Rechnung) und für echte Werte mit Schlüssel. Eigener Speicher nur über REGISTRE_READ_WRITE_TOKEN (fehlt er: /tmp/culinarium-hannover-registre-demo, nie der gemeinsame Speicher eines anderen Werkzeugs oder Hauses). Braucht api/_speicher.py des gemeinsamen Online-Wegs. Rahmen aus der Oberfläche der Häuser (assets/oberflaeche/, Kleid culinarium): unter _werkzeuge/oberflaeche/, beim Hochladen nach assets/oberflaeche/. Bühnenfotos aus /assets/bild/ der Website (service, schildtag, glasnacht, plakatwand, kueche, anstossen, tablett, je -1600.webp; Aussenfoto fassade aus dem Kleid), Seitenbilder -640.webp, Schriften /assets/schrift/, Zeichen /assets/oberflaeche/kleid/culinarium-zeichen.svg. Die Zählung der Website (assets/messung.js, Quelle vorschlag/messung.js) sendet an /api/registre. Nichts ist online (Stand 28.10.2026).",
+ "funktionen": {
+  "api/registre.py": {
+   "von": "_werkzeuge/registre/online/registre.py",
+   "dauer": 30
+  }
+ },
+ "lib": {
+  "_werkzeuge/registre/registre.py": "api/_lib/registre/registre.py",
+  "_werkzeuge/registre/beispiel": "api/_lib/registre/beispiel"
+ },
+ "statik": {
+  "assets/oberflaeche": "assets/oberflaeche",
+  "_werkzeuge/registre/index.html": "werkzeuge/registre/index.html",
+  "_werkzeuge/registre/registre.css": "werkzeuge/registre/registre.css",
+  "_werkzeuge/registre/registre.js": "werkzeuge/registre/registre.js",
+  "_werkzeuge/registre/auftakt.js": "werkzeuge/registre/auftakt.js",
+  "_werkzeuge/registre/rundgang.js": "werkzeuge/registre/rundgang.js",
+  "_werkzeuge/registre/zur-werkbank.js": "werkzeuge/registre/zur-werkbank.js",
+  "_werkzeuge/registre/fehler.js": "werkzeuge/registre/fehler.js",
+  "_werkzeuge/registre/seiten.json": "werkzeuge/registre/seiten.json",
+  "_werkzeuge/registre/anleitung.html": "werkzeuge/registre/anleitung.html",
+  "_werkzeuge/registre/anleitung.js": "werkzeuge/registre/anleitung.js",
+  "_werkzeuge/registre/anleitung": "werkzeuge/registre/anleitung",
+  "_werkzeuge/registre/beispiel": "werkzeuge/registre/beispiel",
+  "_werkzeuge/registre/seiten-bilder.json": "werkzeuge/registre/seiten-bilder.json",
+  "_werkzeuge/registre/culinarium.css": "werkzeuge/registre/culinarium.css"
+ },
+ "umleitungen": [],
+ "stand": "/api/registre?tage=30&beispiel=1",
+ "pruefung": {
+  "weg": "/werkzeuge/registre/",
+  "kurz": true
+ }
+}

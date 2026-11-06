@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="de" data-wo-titel="Prüfung · {name} · Culinarium Hannover">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prüfung · Culinarium Hannover</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1f1d25">
+<link rel="icon" href="../../assets/oberflaeche/kleid/culinarium-zeichen.svg">
+<!-- Prüfseite von La Réception (Master Werkzeug-Bau R23, Vorlage Le Bureau des Rivage: studio/pruefung.html). Läuft ohne das Werkzeug:
+     prüft Browser, Server-Teil, Ablage, Wissen, PDF-Satz, zeigt die mitgeschriebenen Browserfehler und erklärt jedes Stichwort (Sehen · Grund · Tun). -->
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;src:url('../../assets/schrift/fraunces-soft.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('../../assets/schrift/instrument.woff2') format('woff2')}
+:root{--navy:#1f1d25;--nacht:#131216;--papier:#e5dedd;--weiss:#f5f1f0;--gold:#f4ab91;--messing:#d06138;--taupe:#92492e;--tinte:#131216;--gut:#46652e;--gelb:#ac5636;--rot:#a8321a;
+  --serif:'Fraunces',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:15px/1.6 var(--sans);color:var(--tinte);background:linear-gradient(rgba(229,222,221,.86),rgba(229,222,221,.86)),url('../../assets/zeichen/tapete-hell.svg') 0 0/168px 168px,var(--papier)}
+.kopf{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px clamp(16px,4vw,56px);color:var(--weiss);background:linear-gradient(rgba(31,29,37,.5),rgba(31,29,37,.5)),url('../../assets/zeichen/tapete-hell.svg') 0 0/168px 168px,var(--navy);box-shadow:0 0 0 1px rgba(244,171,145,.35)}
+.kopf img{width:58px;height:auto}
+.kopf b{display:block;font:400 22px/1.1 var(--serif)}
+.kopf small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.kopf .re{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+.kn{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 18px;border:0;border-radius:999px;font:500 13px var(--sans);text-decoration:none;cursor:pointer;color:var(--nacht);background:linear-gradient(180deg,#f5b49d,#d06138);box-shadow:0 8px 18px -10px rgba(19,18,22,.6)}
+.kn--linie{color:var(--weiss);background:transparent;box-shadow:inset 0 0 0 1px rgba(244,171,145,.5)}
+main{max-width:1080px;margin:0 auto;padding:28px clamp(16px,4vw,40px) 64px}
+h1{font:400 clamp(30px,4vw,44px)/1.1 var(--serif);color:var(--navy);margin:0 0 6px}
+h2{font:400 26px/1.2 var(--serif);color:var(--navy);margin:38px 0 12px}
+.satz{max-width:70ch;color:#282630;margin:0 0 18px}
+.blatt{background:var(--weiss);border-radius:14px;box-shadow:0 0 0 1px rgba(146,73,46,.25),0 16px 30px -22px rgba(19,18,22,.5);overflow:hidden}
+.z{display:grid;grid-template-columns:14px minmax(0,1.1fr) minmax(0,2fr) auto;gap:14px;align-items:center;padding:12px 18px;border-top:1px solid rgba(146,73,46,.18)}
+.z:first-child{border-top:0}
+.z i{width:12px;height:12px;border-radius:50%;background:var(--gut)}
+.z.gelb i{background:var(--gelb)}.z.rot i{background:var(--rot)}
+.z b{font-weight:500}
+.z span{color:#363440;overflow-wrap:anywhere}
+.z a{font-size:12px;color:var(--taupe)}
+.gr{font:600 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);padding:14px 18px 4px;background:rgba(220,206,203,.35)}
+.lex{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.lex article{padding:16px 18px;background:var(--weiss);border-radius:14px;box-shadow:0 0 0 1px rgba(146,73,46,.25);scroll-margin-top:20px}
+.lex article:target{box-shadow:0 0 0 2px var(--messing),0 16px 30px -18px rgba(19,18,22,.5)}
+.lex h3{margin:0 0 6px;font:600 12px var(--sans);letter-spacing:.16em;color:var(--navy)}
+.lex p{margin:4px 0;font-size:14px}.lex p b{font-weight:600;color:var(--taupe)}
+.fl{margin:0;padding:0;list-style:none}
+.fl li{padding:10px 18px;border-top:1px solid rgba(146,73,46,.18);font-size:13px;overflow-wrap:anywhere}
+.fl li:first-child{border-top:0}
+.fl time{color:var(--taupe);margin-right:10px}
+.rep{display:flex;gap:10px;flex-wrap:wrap}
+.rep .kn{background:var(--weiss);box-shadow:inset 0 0 0 1px rgba(146,73,46,.45)}
+.rep .kn.scharf{color:var(--weiss);background:var(--rot);box-shadow:none}
+.leer{padding:14px 18px;color:#413f4e}
+@media (max-width:640px){.z{grid-template-columns:12px minmax(0,1fr);row-gap:2px}.z span,.z a{grid-column:2}.kopf .re{margin-left:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<script src="../../assets/oberflaeche/kleid/culinarium.js"></script>
+<script src="../../assets/oberflaeche/oberflaeche.js" defer></script>
+<script src="studio/namen.js?v=31a3c2f7a8" defer></script>
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body>
+<header class="kopf">
+  <img src="zeichen-haus.svg?v=9ea1433c62" width="828" height="1051" alt="" style="width:30px;height:auto">
+  <div><b>Prüfung</b><small><span data-wo-name="gaeste">Werkzeug</span> · Culinarium Hannover</small></div>
+  <div class="re"><a class="kn kn--linie" href="./">Zum Werkzeug</a><button class="kn" type="button" id="neu">Neu prüfen</button></div>
+</header>
+<main>
+  <h1>Ist alles in Ordnung?</h1>
+  <p class="satz" id="satz">Die Seite prüft Browser, Server-Teil, Ablage, Wissen und PDF-Satz. Sie läuft auch, wenn das Werkzeug selbst nicht startet.</p>
+  <div class="blatt" id="punkte"><p class="leer">Prüfe …</p></div>
+
+  <h2>Fehler, die der Browser mitgeschrieben hat</h2>
+  <div class="blatt"><ul class="fl" id="fehler"><li>Lade …</li></ul></div>
+
+  <h2>Reparaturen</h2>
+  <p class="satz">Jede Reparatur erst nach einem zweiten Klick. Daten des Hauses (Anfragen, Briefe, Wissen) berührt keine davon. «Alle Daten herunterladen» gibt Anfragen mit Briefen, Fragen, Nachträge und das Wissen des Teams als eine Datei.</p>
+  <div class="rep">
+    <button class="kn" type="button" data-rep="fehler">Fehlerliste leeren</button>
+    <button class="kn" type="button" data-rep="geraet">Ansicht und Namen in diesem Browser zurücksetzen</button>
+    <a class="kn" href="api/export" download>Alle Daten herunterladen</a>
+  </div>
+
+  <h2>Lexikon</h2>
+  <p class="satz">Jede Meldung des Werkzeugs beginnt mit einem Stichwort. «Was tun?» in der Meldung führt hierher.</p>
+  <div class="lex" id="lex"></div>
+</main>
+<script src="pruefung.js?v=e37302ef7a"></script>
+</body>
+</html>

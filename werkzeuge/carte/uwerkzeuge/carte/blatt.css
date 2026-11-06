@@ -1,0 +1,59 @@
+/* La Carte · Blatt: nur für die Vorschau im Werkzeug (body.vorschau). Druck und PDF sehen genau aus wie der Satz des Projekts. */
+body.vorschau{background:transparent;padding:0 0 30px}
+body.vorschau .blatt{margin:0 0 26px;transform-origin:0 0;box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 22px 40px -22px rgba(20,24,26,.55),0 2px 6px rgba(20,24,26,.18)}
+body.vorschau .zoom{display:block;margin:0 auto}
+body.vorschau [data-k]{border-radius:2px;transition:background-color .25s,box-shadow .25s}
+body.einfach [data-k]{cursor:pointer}
+body.einfach .eintrag-hier{background:rgba(214,187,150,.28);box-shadow:0 0 0 1.5mm rgba(214,187,150,.28)}
+body.frei [data-k]{cursor:text;outline:none}
+body.frei [data-k]:hover{background:rgba(214,187,150,.25)}
+body.frei [data-k]:focus{background:rgba(214,187,150,.38);box-shadow:0 0 0 .6mm rgba(163,134,92,.7)}
+body.frei [data-k].geaendert{background:rgba(214,187,150,.45)}
+body.vorschau .blitz{animation:blitz 2s cubic-bezier(.16,1,.3,1)}
+@keyframes blitz{0%,45%{background:rgba(214,187,150,.95);box-shadow:0 0 0 1.4mm rgba(214,187,150,.95)}100%{background:transparent;box-shadow:0 0 0 1.4mm rgba(214,187,150,0)}}
+body.vorschau .nr-zeile{display:flex;justify-content:center;gap:10px;margin:-14px 0 22px;font:500 10.5px/1 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,244,244,.74)}   /* Tor 5 30.10.2026 (K8/K2): hell auf dem dunklen Rahmen der Vorschau */
+body.vorschau .nr-zeile b{font-weight:500;color:#F5A689}
+body.vorschau .nr-zeile.warn b{color:#FF9C8F}
+/* Gestalten: Rahmen um die Auswahl, Griffe zum Verschieben (oben links) und Vergrössern (unten rechts) */
+.ovrahmen{position:absolute;z-index:50;border:1.5px dashed #a3865c;border-radius:6px;pointer-events:none;box-shadow:0 0 0 4px rgba(214,187,150,.22)}
+.ovrahmen--band{border-color:#d6bb96;box-shadow:0 0 0 4px rgba(214,187,150,.35)}
+.ovh{position:absolute;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;pointer-events:auto;background:#1d2224;color:#d6bb96;box-shadow:0 0 0 2px #fff,0 6px 12px -4px rgba(20,24,26,.6);touch-action:none}
+.ovh svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ovh-m{left:-15px;top:-15px;cursor:move}
+.ovh-s{right:-15px;bottom:-15px;cursor:nwse-resize}
+body.frei [data-n]{cursor:pointer}
+body.frei [data-n] [data-k]{cursor:text}
+/* ---------------------------------------------------------------- Gestalten: Regeln für Satz und Druck (wie GBR satz.css, Ende) */
+[data-gf],[data-gf] *{font-family:var(--gf)!important}
+[data-gc],[data-gc] *{color:var(--gc)!important}
+.mt-strich[data-gc]{border-top-color:var(--gc)!important}
+[data-ga=kursiv],[data-ga=kursiv] *{font-style:italic!important}
+[data-ga=versal],[data-ga=versal] *{text-transform:uppercase!important;letter-spacing:.08em!important}
+[data-ga=medium],[data-ga=medium] *{font-weight:500!important}
+[data-ga=normal],[data-ga=normal] *{font-style:normal!important;text-transform:none!important;font-weight:400!important}
+[data-gal],[data-gal] *{text-align:var(--gal)!important}
+.rub[data-gal],.g-k[data-gal],.hin[data-gal]{justify-content:var(--gai)!important}
+.rub[data-gal] .rub-u{flex:none}
+[data-gz],[data-gz] *{line-height:var(--gz)!important}
+/* ---------------------------------------------------------------- Anordnen (nur Vorschau): Rahmen und Griffe wie in L’Imprimerie, Gold, Hilfslinien rot */
+body.anr-an #seiten [data-n]{cursor:move}
+body.anr-an #seiten [contenteditable="true"]{cursor:text;outline:2px solid #a3865c;background:rgba(214,187,150,.28)}
+.anr-h{position:absolute;z-index:24;pointer-events:none;outline:1px dashed rgba(163,134,92,.85);border-radius:2px}
+.anr-h[hidden],.anr[hidden],.anr__m[hidden]{display:none}
+.anr{position:absolute;z-index:25;pointer-events:none;outline:1.5px solid #c99d64;outline-offset:1px;box-shadow:0 0 0 1px rgba(20,24,26,.25)}
+.anr__g{position:absolute;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;pointer-events:auto;background:linear-gradient(180deg,#fff,#efdfc8);box-shadow:0 0 0 1.5px #c99d64,0 2px 5px rgba(0,0,0,.4);transition:transform .25s cubic-bezier(.16,1,.3,1);touch-action:none}
+.anr__g:hover{transform:scale(1.35)}
+.anr__g--nw{left:0;top:0;cursor:nwse-resize}.anr__g--ne{left:100%;top:0;cursor:nesw-resize}
+.anr__g--se{left:100%;top:100%;cursor:nwse-resize}.anr__g--sw{left:0;top:100%;cursor:nesw-resize}
+.anr__g--w{left:0;top:50%;cursor:ew-resize}.anr__g--e{left:100%;top:50%;cursor:ew-resize}
+.anr:not(.anr--lin) .anr__g--w,.anr:not(.anr--lin) .anr__g--e,.anr--lin .anr__g--nw,.anr--lin .anr__g--ne,.anr--lin .anr__g--se,.anr--lin .anr__g--sw,.anr--band .anr__g{display:none}
+.anr__m{position:absolute;left:50%;top:0;transform:translate(-50%,-150%);background:linear-gradient(180deg,#5a3316,#1d2224);color:#d6bb96;font:500 10.5px/1 'DM Mono',Menlo,monospace;letter-spacing:.06em;padding:5px 9px;border-radius:8px;white-space:nowrap;box-shadow:0 0 0 1px rgba(214,187,150,.4),0 6px 12px -6px rgba(0,0,0,.6)}
+.anr-hl{position:absolute;z-index:24;pointer-events:none;background:#b4413a;box-shadow:0 0 5px rgba(180,65,58,.55)}
+body.anr-an #seiten .lin::before{content:'';position:absolute;inset:-1.6mm 0}
+body.anr-an #seiten .lin{z-index:3}
+body.vorschau .anr-zu{border:0;background:none;padding:2px 0;font:500 10px/1 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#7d5a28;text-decoration:underline;text-underline-offset:3px;cursor:pointer;margin-left:10px}
+body.vorschau .anr-zu:hover{color:#1d2224}
+/* Auftritt der Seiten beim Öffnen einer Karte (Feder wie Le Bureau / GBR anordnen.js auftritt) */
+@keyframes kt-auf{from{translate:0 80px;scale:.95}}
+body.vorschau #seiten.kt-auf>.blatt{animation:kt-auf 1.6s cubic-bezier(.3,1.26,.4,1) backwards;animation-delay:calc(var(--i,0) * 90ms)}
+@media (prefers-reduced-motion:reduce){body.vorschau #seiten.kt-auf>.blatt{animation:none}}

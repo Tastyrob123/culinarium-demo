@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KI und eure Daten · Culinarium</title>
+<meta name="description" content="Ein Entwurf für die neue Website des Culinarium, mit Unterlagen und Ideen für Papier. Alles auf einen Blick.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16151a">
+<meta property="og:title" content="Alles auf einen Blick · Culinarium">
+<meta property="og:description" content="Ein Entwurf für die neue Website des Culinarium, mit Unterlagen, Studio und Ideen für Papier.">
+<meta property="og:image" content="werkbank/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preload" href="../assets/schrift/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/auftakt.webp" as="image">
+<link rel="preload" href="img/auftakt-h.webp" as="image">
+<link rel="stylesheet" href="werkbank.css?v=1793328578">
+<link rel="stylesheet" href="kapitel.css?v=1793328644">
+<style id="sb-ruhe">.bf .bf-blatt[data-a="heben"],.bf .bf-blatt[data-a="heben"].da{animation:none!important}.kap__geist{animation:none!important}.kn:hover,.kn:active,.rund:hover,.rund:active,.wahl button:active,.vh-wahl button:active,.bn button:hover,.bn button:active,.glanz:active,.ins-r:hover,.ins-r:active,.wf__pf:hover,.wf__pf:active,.rgc-p:hover,.rgc-p:active,.sbf-z:hover{transform:none!important;translate:none!important;scale:none!important}.kn{overflow:hidden}.ins-reiter,.fb__reiter{padding-top:10px!important;padding-bottom:26px!important;margin-top:-10px!important;margin-bottom:-26px!important}.wahl,.vh-wahl{padding-top:8px!important;padding-bottom:26px!important;margin-top:-8px!important;margin-bottom:-12px!important}.wfen .wfen__t{font-size:clamp(24px,3.6vw,54px)!important;line-height:1.14!important}.wfen .wfen__k{font-size:clamp(15px,1.36vw,19px)!important}#papier img.frei{filter:none!important;box-shadow:none!important}</style><style id="ki-stil">
+/* «KI und Ihre Daten» (ki_seite.py, 16.10.2026, zweite Fassung): Bausteine der Werkbank (ag-blatt, mn-preise, zt, odo, wfen, data-a),
+   eigene Teile nur für Raster, Auftakt, Karten und Zahlen. Bewegung nur über die data-a der Werkbank, nichts Eigenes animiert.
+   Das Claude-Zeichen in seinem Ton (#e2754e) ist der eine Farbpunkt der Seite. */
+.ki{--claude:#e2754e}
+.ki-hz{display:block;width:clamp(56px,5.4vw,84px);height:auto;margin:0 auto;color:var(--himmel)}
+.ki-claude{display:block;width:clamp(44px,4.2vw,64px);height:auto;color:var(--claude)}
+.ki-kopf{text-align:center;max-width:900px;margin:0 auto clamp(48px,5.6vw,96px)}
+.ki-kopf .t2{margin-top:clamp(18px,2vw,28px)}
+.ki-lauf{max-width:56ch;margin:clamp(18px,2vw,28px) auto 0;font-size:clamp(1.06rem,1.22vw,1.2rem);line-height:1.64;opacity:.86}
+/* Auftakt */
+.ki-auftakt{padding-top:clamp(130px,13vw,190px);padding-bottom:var(--abschnitt);text-align:center}
+.ki-auftakt .in{display:block}
+.ki-paar{display:flex;align-items:center;justify-content:center;gap:clamp(18px,2.2vw,34px)}
+.ki-paar__hz{width:clamp(72px,7vw,108px)}   /* Robert 16.10.: nur das Zeichen des Hauses, mittig in Gold, ohne Claude-Zeichen */
+.ki-paar__n{display:flex;justify-content:center;gap:clamp(40px,5vw,80px);margin:18px 0 0;font:400 11px/1.3 var(--mono,'DM Mono',monospace);letter-spacing:.24em;text-transform:uppercase;color:rgba(239,159,130,.8)}
+.ki-auftakt .t1{margin:clamp(34px,4vw,60px) 0 0;text-align:center}
+.ki-auftakt .t1 .z,.ki-kopf .t2 .z,.ki-auftakt .t1 .z>span,.ki-kopf .t2 .z>span{margin-left:auto;margin-right:auto}
+.ki-kopf .t2,.ki-auftakt .t1{text-align:center;margin-left:auto!important;margin-right:auto!important}
+.ki-buehne{margin:clamp(48px,5.6vw,96px) auto 0;max-width:1240px;border-radius:clamp(22px,2.4vw,32px);overflow:hidden;box-shadow:0 60px 90px -50px rgba(0,0,0,.85),0 22px 40px -28px rgba(0,0,0,.6)}
+.ki-buehne img{display:block;width:100%;height:auto;aspect-ratio:1620/1080;object-fit:cover}
+/* Zahlen + Kosten */
+.ki-zahlen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px double rgba(239,159,130,.55);border-bottom:3px double rgba(239,159,130,.55);margin-bottom:clamp(56px,6vw,104px)}
+.ki-zahl{padding:clamp(28px,3vw,48px) clamp(14px,1.6vw,26px);text-align:center}
+.ki-zahl+.ki-zahl{border-left:1px solid rgba(239,159,130,.22)}
+.ki-zahl__n{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(3.6rem,7vw,7.6rem);line-height:1.16;color:var(--creme)}
+.ki-zahl__t{margin:12px auto 0;max-width:22ch;line-height:1.55;color:rgba(255,255,255,.82);text-wrap:balance}
+.ki-blick{display:grid;gap:clamp(28px,3.4vw,56px);grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center}
+.ki-blick__text p{font-family:var(--serif);font-size:clamp(1.1rem,1.3vw,1.3rem);line-height:1.55;margin:.7em 0 0;color:var(--tinte)}
+/* Claude gross und mittig im freien Raum der linken Spalte (Robert 16.10.2026) */
+.ki-blick{align-items:stretch!important}
+.ki-blick__text{display:flex;flex-direction:column}
+.ki-marke{flex:1;display:flex;align-items:center;justify-content:center;gap:clamp(14px,1.4vw,22px);min-height:clamp(120px,12vw,190px);margin-bottom:clamp(16px,1.8vw,24px)}
+.ki-marke .ki-claude{width:clamp(56px,5vw,80px)}
+.ki-marke span{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,3.4vw,3.6rem);line-height:1;color:var(--tinte)}
+.ki-preise{max-width:none;margin:0}
+.ki-k__t{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,2.3vw,2.4rem);line-height:1.1;color:var(--tinte)}
+/* Vier Stellen: Foto + Karte, abwechselnd; das Foto ist so hoch wie die Karte */
+.ki-stellen{display:grid;gap:clamp(56px,6.4vw,112px)}
+.ki-st{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(24px,3vw,52px);align-items:stretch}
+.ki-st--um .ki-st__b{order:2}
+.ki-st__b{position:relative;margin:0;border-radius:clamp(22px,2.4vw,30px);overflow:hidden;box-shadow:0 50px 80px -48px rgba(0,0,0,.9),0 18px 34px -26px rgba(0,0,0,.6);min-height:420px}
+.ki-st__b img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ki-kerbe{position:absolute;left:0;bottom:0;padding:18px 26px 2px 24px;background:var(--navy,var(--navy));border-top-right-radius:24px;font:400 14px/1 var(--mono,'DM Mono',monospace);letter-spacing:.18em;text-transform:uppercase;color:var(--creme)}
+.ki-kerbe::before,.ki-kerbe::after{content:"";position:absolute;width:24px;height:24px;background:radial-gradient(circle at 100% 0,transparent 23.5px,var(--navy,var(--navy)) 24px)}
+.ki-kerbe::before{left:0;top:-24px}
+.ki-kerbe::after{right:-24px;bottom:0}
+.ki-k{display:flex;flex-direction:column}
+.ki-k dl{margin:clamp(14px,1.6vw,22px) 0 clamp(18px,2vw,26px)}
+.ki-k__r{padding:14px 0;border-top:1px solid rgba(71,69,84,.22)}
+.ki-k__r dt{font:400 11px/1.3 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--blau)}
+.ki-k__r dd{margin:6px 0 0;font-size:1rem;line-height:1.6;color:rgba(23,22,28,.86)}
+.ki-k__ohne{margin-top:auto;padding:clamp(18px,2vw,26px);border-radius:18px;background:var(--navy,var(--navy));color:#ffffff;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.ki-k__ohne-t{margin:0;font:400 11px/1.3 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--creme)}
+.ki-k__ohne p+p{margin:8px 0 0;font-family:var(--serif);font-size:clamp(1.08rem,1.25vw,1.24rem);line-height:1.5;color:rgba(255,255,255,.92)}
+/* Fenster: Satz mit kräftigem Schatten, damit er auf jedem Foto lesbar bleibt (Robert 16.10.2026) */
+#ki-fenster .wfen__t,#ki-fenster .wfen__k{text-shadow:0 1px 2px rgba(9,9,10,.95),0 3px 14px rgba(9,9,10,.85),0 10px 46px rgba(9,9,10,.75)}
+/* Geräte mit Film (Robert 16.10.2026): ein Gerät je Abschnitt, frei auf dem Grund, mittig zur Karte */
+.ki-k__mit{margin-top:auto;margin-bottom:10px;padding:clamp(18px,2vw,26px);border-radius:18px;background:rgba(71,69,84,.08);box-shadow:inset 0 0 0 1px rgba(71,69,84,.35)}
+.ki-k__mit .ki-k__ohne-t{color:var(--blau)}
+.ki-k__mit p+p{margin:8px 0 0;font-family:var(--serif);font-size:clamp(1.02rem,1.15vw,1.14rem);line-height:1.5;color:rgba(23,22,28,.86)}
+.ki-k__mit+.ki-k__ohne{margin-top:0}
+.ki-k p.ki-k__betrag{margin:10px 0 0;font:400 13px/1.3 var(--mono,'DM Mono',monospace);letter-spacing:.16em;text-transform:uppercase}
+.ki-k__mit p.ki-k__betrag{color:#4f4c5e}.ki-k__ohne p.ki-k__betrag{color:var(--creme)}
+[dir=rtl] .ki-k p.ki-k__betrag{letter-spacing:0}
+.ki-k__preis{margin:8px 0 0;font:400 13px/1.3 var(--mono,'DM Mono',monospace);letter-spacing:.16em;text-transform:uppercase;color:var(--blau)}
+.ki-geraet{margin:0;display:flex;align-items:center;justify-content:center}
+.ki-st--um .ki-geraet{order:2}
+.ki-film{display:block;width:100%;height:100%;object-fit:cover;background:#100f13}
+.ki-laptop{position:relative;width:100%;aspect-ratio:2000/1673;filter:drop-shadow(0 46px 50px rgba(0,0,0,.55))}
+.ki-laptop__s{position:absolute;left:9.7242%;top:2.0296%;width:80.5516%;height:62.3256%;overflow:hidden;background:#100f13}
+.ki-laptop__g{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.ki-handy{position:relative;width:min(300px,62%);aspect-ratio:540/1168;padding:11px;border-radius:52px;background:linear-gradient(160deg,#494656,#16161a 55%,var(--navy));
+  box-shadow:inset 0 0 0 1.5px rgba(239,159,130,.28),inset 0 0 0 5px #0e0d10,0 50px 70px -36px rgba(0,0,0,.85)}
+.ki-handy__s{width:100%;height:100%;border-radius:42px;overflow:hidden;background:#100f13}
+.ki-ipad{position:relative;width:100%;aspect-ratio:1180/820;padding:clamp(12px,1.4vw,20px);border-radius:clamp(26px,2.6vw,38px);background:linear-gradient(160deg,#494656,#16161a 55%,var(--navy));
+  box-shadow:inset 0 0 0 1.5px rgba(239,159,130,.28),inset 0 0 0 6px #0e0d10,0 50px 70px -40px rgba(0,0,0,.85)}
+.ki-ipad__s{width:100%;height:100%;border-radius:clamp(12px,1.2vw,18px);overflow:hidden;background:#100f13}
+/* Zwei Wege für den Chat (19.10.2026): zwei Karten nebeneinander, darunter «Beides» und die Antwort auf die Sorge */
+.ki-wege{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.6vw,40px);align-items:stretch}
+.ki-beides{text-align:center;margin:clamp(34px,4vw,60px) auto!important}
+.ki-sorge>p{max-width:62ch}
+[dir=rtl] .ki-weg .ki-k__preis{letter-spacing:0}
+/* Daten */
+/* Daten, edler (Robert 16.10.2026: «noch geiler und edler»): Anbieter als Platte, sechs Zusagen als helle Blätter mit Doppelrand und Siegel */
+.ki-anbieter{display:flex;align-items:center;justify-content:center;gap:clamp(16px,1.6vw,24px);width:max-content;max-width:100%;margin:0 auto clamp(44px,5vw,80px);padding:clamp(16px,1.6vw,22px) clamp(26px,2.6vw,40px);
+  border-radius:999px;background:var(--weiss);box-shadow:inset 0 1px 0 #ffffff,0 0 0 1px rgba(71,69,84,.45),0 0 0 6px rgba(247,238,238,.7),0 0 0 7px rgba(71,69,84,.25),0 30px 50px -36px rgba(18,18,21,.6)}
+.ki-anbieter .ki-claude{width:clamp(46px,4vw,60px)}
+.ki-anbieter p{margin:0;display:flex;flex-direction:column;text-align:left}
+.ki-anbieter b{font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--tinte)}
+.ki-anbieter span{font-size:.9rem;opacity:.72}
+.ki-daten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,30px)}
+.ki-d{position:relative;text-align:center;padding:clamp(34px,3.4vw,52px) clamp(24px,2.4vw,38px) clamp(30px,3vw,44px);border-radius:clamp(22px,2.2vw,30px);
+  background:var(--weiss);box-shadow:inset 0 1px 0 #ffffff,0 0 0 1px rgba(71,69,84,.5),0 50px 70px -52px rgba(18,18,21,.7),0 18px 30px -26px rgba(18,18,21,.45)}
+.ki-d::before,.ki-d::after{content:"";position:absolute;pointer-events:none;border:1px solid rgba(71,69,84,.45);border-radius:clamp(15px,1.5vw,22px);inset:10px}
+.ki-d::after{inset:14px;border-color:rgba(71,69,84,.2);border-radius:clamp(12px,1.2vw,19px)}
+.ki-siegel{display:grid;place-items:center;width:58px;height:58px;margin:0 auto;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f4e6e6,#ef9f82 55%,#474554);box-shadow:inset 0 0 0 1px rgba(255,255,255,.55),inset 0 0 0 5px rgba(71,69,84,.35),0 10px 18px -10px rgba(18,18,21,.7)}
+.ki-siegel i{width:12px;height:12px;transform:rotate(45deg);background:var(--navy)}
+.ki-d h3{margin:20px 0 0;font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,1.95vw,2rem);line-height:1.15;color:var(--tinte)}
+.ki-d p{margin:12px auto 0;line-height:1.62;max-width:34ch;color:rgba(23,22,28,.84)}
+.ki-raute{display:block;width:10px;height:10px;transform:rotate(45deg);background:var(--himmel)}
+/* Ohne KI */
+.ki-ohne{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2vw,30px)}
+.ki-o{padding:clamp(22px,2.4vw,32px);border-radius:clamp(20px,2vw,26px);background:var(--weiss);box-shadow:inset 0 1px 0 #ffffff,0 0 0 1px rgba(71,69,84,.35),0 34px 50px -40px rgba(18,18,21,.55)}
+.ki-o h3{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,1.7vw,1.75rem);color:var(--tinte)}
+.ki-o p{margin:12px 0 0;line-height:1.62;color:rgba(23,22,28,.86)}
+/* In Ihrer Hand */
+.ki-hand{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,3.6vw,64px);align-items:center;margin-bottom:clamp(56px,6vw,104px)}
+.ki-hand__b{margin:0;border-radius:clamp(22px,2.4vw,30px);overflow:hidden;box-shadow:0 50px 80px -48px rgba(0,0,0,.9)}
+.ki-hand__b img{display:block;width:100%;height:auto}
+/* Robert 29.10.2026: Bild und Textspalte oben und unten bündig, das Foto wächst auf die Höhe der Spalte, alle drei bleiben ganz */
+@media(min-width:1001px){.ki-hand{align-items:stretch}.ki-hand__b{display:flex}.ki-hand__b img{height:100%;min-height:100%;object-fit:cover;object-position:50% 30%}}
+.ki-hand__t .ki-hz{margin:0}
+.ki-hand__t .t2{margin:clamp(16px,1.8vw,24px) 0 clamp(20px,2.4vw,34px)}
+.ki-h{margin:0;padding:16px 0;border-top:1px solid rgba(239,159,130,.25);font-size:1.05rem;line-height:1.6;color:rgba(255,255,255,.82)}
+.ki-h b{display:block;font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--creme);margin-bottom:4px}
+.ki-offen{max-width:880px;margin:0 auto;text-align:center}
+.ki-offen>p{font-family:var(--serif);font-size:clamp(1.08rem,1.25vw,1.25rem);line-height:1.55;max-width:58ch;margin:14px auto 0;color:var(--tinte)}
+.ki-knoepfe{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:clamp(22px,2.4vw,34px)!important}
+.ki-quellen{font-size:.82rem!important;font-family:inherit!important;opacity:.72;margin-top:clamp(24px,2.6vw,36px)!important}
+.ki-quellen__l{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;font-size:.82rem}
+.ki-quellen__l a{color:var(--blau)}
+@media(max-width:1000px){.ki-blick,.ki-st,.ki-hand,.ki-wege{grid-template-columns:1fr}.ki-st--um .ki-st__b,.ki-st--um .ki-geraet{order:0}.ki-st__b{min-height:0;aspect-ratio:4/3}
+  .ki-zahlen{grid-template-columns:repeat(2,minmax(0,1fr))}.ki-zahl:nth-child(3){border-left:0}.ki-zahl:nth-child(n+3){border-top:1px solid rgba(239,159,130,.22)}
+  .ki-daten{grid-template-columns:repeat(2,minmax(0,1fr))}.ki-ohne{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ki-daten,.ki-ohne{grid-template-columns:1fr}.ki-paar__n{flex-direction:column;gap:6px}.ki-zahl__n{font-size:3.4rem}}
+
+/* Schlössli (sb_ki.py, 20.10.2026): Laptop als Bild mit echtem Bildschirm, Karten heben sich wie auf der Karte der Übergabe */
+.ki-geraet img{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 46px rgba(0,0,0,.5))}
+.ki [data-a="heben"]{opacity:1;transform:translate3d(0,100px,0) scale(.975);transition:transform 2.1s cubic-bezier(.16,1,.3,1)}
+.ki [data-a="heben"].da{transform:none}
+.ki .ag-blatt{position:relative;padding:clamp(26px,3.4vw,56px);border-radius:clamp(22px,2.4vw,34px);background:var(--weiss);color:var(--tinte);box-shadow:inset 0 1px 0 #ffffff,0 0 0 1px rgba(71,69,84,.22),0 60px 80px -56px rgba(0,0,0,.9)}
+.ki-sorge{margin-top:clamp(56px,6vw,100px)!important}
+.ki-hz{color:var(--himmel)}
+@media(prefers-reduced-motion:reduce){.ki [data-a="heben"]{transform:none;transition:none}}
+</style>
+<style>.ki-claude{color:#d97757!important}</style>
+<style id="zeile-ganz">h1,h2,h3,h4,.z>span{text-wrap:balance}h1 br+em,h2 br+em{display:inline-block;text-wrap:balance}.stapel .fen__k{position:relative}.stapel .fen__k span{position:absolute;left:50%;transform:translateX(-50%);margin:0;overflow:visible}@media(max-width:860px){.stapel .fen__k span{display:none}}@media(max-width:480px){.etk{grid-template-columns:minmax(0,1fr)!important}}@media(min-width:900px) and (max-width:1279px){.brett-p{grid-template-columns:300px minmax(0,1fr)}.brett-p__k{grid-column:1/-1}}@media(max-width:1279px){.brett-p p{text-wrap:balance}}.da:not([data-drift]){will-change:auto!important}.mb-ueber__t small{display:grid;grid-template-columns:64px minmax(0,1fr);align-items:baseline}.mb-ueber__t small span{min-width:0}@media(max-width:480px){.mn-titel{font-size:clamp(1.5rem,8vw,2.2rem);letter-spacing:.03em}.mn-ende{gap:10px}.mn-ende i{width:18px}.mn-ende span{letter-spacing:.12em;white-space:nowrap}a.kn[href="../index.html#geprueft"]{letter-spacing:.04em;font-size:9.5px;white-space:nowrap;padding-left:14px}.stapel .tel{width:21%;right:-2%}}@media(max-width:480px){.wege__t,figcaption,.mb-ueber__t small{text-wrap:balance}.sag-h{font-size:1.32rem;letter-spacing:.03em;gap:10px}.hs2-her{grid-template-columns:repeat(2,minmax(0,1fr))!important}.hs2-her figcaption small{font-size:9px;letter-spacing:0}.ki-knoepfe{flex-direction:column;align-items:stretch}.ki-knoepfe .kn{white-space:nowrap;letter-spacing:.04em;font-size:10px}#sag-aufbau[data-a="heben"]:not(.da){transform:translateY(56px) scale(.98)!important}.faecher--2 .blattk span{flex-direction:column;gap:3px;font-size:9.5px;letter-spacing:.08em}}.stage>.aside h1{font-size:clamp(2rem,3.6vw,3.3rem);white-space:nowrap}.stage>.aside h1 em{display:inline}</style><script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="haus-culinarium">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="hz"><path d="M27.47 14.81C26.03 14.81 24.74 14.48 23.59 13.83C22.45 13.16 21.38 12.32 20.41 11.31C19.44 10.30 18.54 9.27 17.70 8.20C16.87 7.13 16.04 6.20 15.22 5.41C14.41 4.61 13.57 4.08 12.72 3.83C11.86 3.57 10.95 3.75 9.98 4.38C8.85 5.07 8.26 6.42 8.22 8.41C8.19 10.39 8.64 12.75 9.59 15.48C10.55 18.23 11.92 21.05 13.70 23.97C15.65 27.04 17.67 29.59 19.77 31.59C21.87 33.59 23.85 34.81 25.72 35.23C27.47 35.66 29.06 35.59 30.50 35.03C31.95 34.46 33.23 33.59 34.36 32.41C35.48 31.22 36.39 29.95 37.09 28.58L38.27 29.22C37.21 31.40 35.72 33.34 33.80 35.03C31.88 36.72 29.71 38.03 27.30 38.97C24.89 39.90 22.38 40.36 19.78 40.36C17.05 40.36 14.49 39.84 12.09 38.80C9.71 37.75 7.61 36.30 5.80 34.45C3.99 32.60 2.58 30.46 1.55 28.03C0.52 25.59 0.00 22.98 0.00 20.19C0.00 17.39 0.52 14.77 1.55 12.34C2.58 9.91 3.99 7.77 5.80 5.92C7.61 4.07 9.71 2.63 12.09 1.61C14.49 0.58 17.05 0.06 19.78 0.06C21.26 0.06 22.60 0.29 23.80 0.73C25.00 1.17 26.11 1.70 27.12 2.30C28.13 2.90 29.07 3.43 29.92 3.88C30.77 4.32 31.57 4.55 32.31 4.55C33.75 4.55 34.69 4.17 35.14 3.41C35.59 2.65 35.81 1.62 35.81 0.34L37.09 0.34C37.33 1.94 37.36 3.59 37.19 5.28C37.01 6.97 36.57 8.53 35.88 9.97C35.18 11.41 34.14 12.57 32.78 13.47C31.41 14.37 29.64 14.81 27.47 14.81ZM27.47 14.81"/></g></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" id="rhgold-def"><defs><linearGradient id="rhgold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3b29a"/><stop offset=".3" stop-color="#e5815d"/><stop offset=".52" stop-color="#dd5b2b"/><stop offset=".66" stop-color="#5c596c"/><stop offset=".84" stop-color="#de6336"/><stop offset="1" stop-color="#ef9a7b"/></linearGradient><linearGradient id="rhgold-t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d95423"/><stop offset=".34" stop-color="#5c596c"/><stop offset=".56" stop-color="#4d4a5a"/><stop offset=".7" stop-color="#3f3c4a"/><stop offset=".86" stop-color="#595669"/><stop offset="1" stop-color="#6a667d"/></linearGradient></defs></svg>
+<div class="gang-linie" aria-hidden="true"></div>
+<header class="leiste"><div class="insel">
+  <a class="insel__m" href="#oben"><svg class="hz" viewBox="-0.5 -0.5 39.3 41.36" aria-hidden="true" fill="currentColor"><use href="#hz"/></svg><b>CULINARIUM</b><span>Entwurf</span></a>
+  <nav aria-label="Kapitel"><a href="#ki-blick">KI</a><a href="#ki-zahlen">In Zahlen</a><a href="#ki-stellen">Vier Stellen</a><a href="#ki-daten">Eure Daten</a><a href="#ki-ohne">Ohne KI</a><a href="#ki-hand">In eurer Hand</a><a href="index.html#sag-uebergabe">Zurück zur Übergabe</a></nav>
+  <a class="glanz" href="https://culinarium-hannover-entwurf.vercel.app/index.html" target="_blank" rel="noopener">Zur Website<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+</div></header>
+
+<main id="oben">
+<section class="fl fl--nacht tapete-leicht ki ki-auftakt" id="ki-blick">
+  <div class="in"><div data-a="auf"><svg class="ki-hz" viewBox="-0.5 -0.5 39.3 41.36" fill="currentColor" aria-hidden="true"><use href="#hz"/></svg></div><h1 class="t1 zt"><span class="z"><span>Wo die KI hilft.</span></span><span class="z"><span><em>Und wo eure Daten bleiben.</em></span></span></h1><p class="ki-lauf" data-a="worte">In drei Werkzeugen von Culinarium hilft an vier Stellen KI mit: dreimal Claude, das Sprachmodell von Anthropic, und einmal beim Malen neuer Plakate. Für jede Stelle steht hier, was sie macht, welche Daten wohin gehen und was ohne KI bleibt. Im Entwurf antworten alle vier mit beschrifteten Proben; die KI arbeitet erst über euer eigenes Konto.</p></div>
+</section>
+<section class="fl fl--navy tapete blatt ki" id="ki-zahlen">
+  <div class="in">
+    <div class="ki-zahlen"><div class="ki-zahl" data-a="auf" style="--i:0"><p class="ki-zahl__n"><span class="odo" data-z="4">4</span></p><p class="ki-zahl__t">Stellen nutzen KI, alles andere arbeitet ohne.</p></div><div class="ki-zahl" data-a="auf" style="--i:1"><p class="ki-zahl__n"><span class="odo" data-z="0">0</span></p><p class="ki-zahl__t">eurer Daten gehen ins Training des Modells.</p></div><div class="ki-zahl" data-a="auf" style="--i:2"><p class="ki-zahl__n"><span class="odo" data-z="30">30</span></p><p class="ki-zahl__t">Tage, dann löscht der Anbieter jede Eingabe.</p></div><div class="ki-zahl" data-a="auf" style="--i:3"><p class="ki-zahl__n"><span class="odo" data-z="12">12</span></p><p class="ki-zahl__t">Monate bewahrt ihr Anfragen auf, dann sind sie weg.</p></div></div>
+  </div>
+</section>
+<section class="fl fl--navy tapete blatt ki" id="ki-stellen">
+  <div class="in"><header class="ki-kopf"><div data-a="auf"><svg class="ki-hz" viewBox="-0.5 -0.5 39.3 41.36" fill="currentColor" aria-hidden="true"><use href="#hz"/></svg></div><h2 class="t2 zt"><span class="z"><span>Vier Stellen,</span></span><span class="z"><span><em>genau beschrieben.</em></span></span></h2><p class="ki-lauf" data-a="worte">Was die KI dort tut, was dabei zum Anbieter geht, was ihr aufbewahrt und was ohne sie bleibt.</p></header><div class="ki-stellen"><article class="ki-st"><figure class="ki-geraet" data-a="kipp"><img src="img/ki-geraet-reception.webp" alt="Das Gästebuch am Laptop: Der Chat für eure Gäste" loading="lazy" decoding="async"></figure><div class="ag-blatt ki-k" data-a="heben"><h3 class="ki-k__t">Der Chat für eure Gäste</h3><p class="ki-k__preis">Das Gästebuch</p><dl><div class="ki-k__r"><dt>Was sie tut</dt><dd>Beantwortet Fragen von Gästen zu den Abenden, zu Plätzen, Zeiten und Unverträglichkeiten, nur aus euren Seiten und Karten. Im Entwurf steht er im Werkzeug für die Gäste zum Ausprobieren.</dd></div><div class="ki-k__r"><dt>Was zum Anbieter geht</dt><dd>Fragen und Antworten des Gesprächs. Name und Kontakt nur, wenn ein Gast selbst etwas anfragt.</dd></div><div class="ki-k__r"><dt>Was gespeichert wird</dt><dd>Fragen und Antworten im Werkzeug für die Gäste, damit ihr seht, was Gäste wissen wollen; nach zwölf Monaten gelöscht.</dd></div></dl><div class="ki-k__ohne"><p class="ki-k__ohne-t">Ohne KI</p><p>Die Seite «Der Abend», die Fragen und Antworten und die Warteliste stehen wie gewohnt da.</p></div></div></article><article class="ki-st ki-st--um"><figure class="ki-geraet" data-a="kipp"><img src="img/ki-geraet-reception-2.webp" alt="Das Gästebuch am Laptop: Antwort auf eine Anfrage" loading="lazy" decoding="async"></figure><div class="ag-blatt ki-k" data-a="heben"><h3 class="ki-k__t">Antwort auf eine Anfrage</h3><p class="ki-k__preis">Das Gästebuch</p><dl><div class="ki-k__r"><dt>Was sie tut</dt><dd>Schreibt euch einen Antwortentwurf auf eine Frage oder einen Eintrag auf der Warteliste, im Ton von Culinarium.</dd></div><div class="ki-k__r"><dt>Was zum Anbieter geht</dt><dd>Die Anfrage mit Name, Kontakt und Anliegen.</dd></div><div class="ki-k__r"><dt>Was gespeichert wird</dt><dd>Anfragen im Werkzeug für die Gäste, nach zwölf Monaten gelöscht, auf Wunsch des Gastes sofort.</dd></div></dl><div class="ki-k__ohne"><p class="ki-k__ohne-t">Ohne KI</p><p>Eingang und Warteliste lassen sich bedienen. Die Antwort schreibt ihr dann selbst. Verschickt wird ohnehin nur, was jemand abschickt.</p></div></div></article><article class="ki-st"><figure class="ki-geraet" data-a="kipp"><img src="img/ki-geraet-imprimerie-2.webp" alt="Die Plakatwerkstatt am Laptop: Neue Plakate für einen Abend" loading="lazy" decoding="async"></figure><div class="ag-blatt ki-k" data-a="heben"><h3 class="ki-k__t">Neue Plakate für einen Abend</h3><p class="ki-k__preis">Die Plakatwerkstatt</p><dl><div class="ki-k__r"><dt>Was sie tut</dt><dd>Malt aus der Beschreibung eines Abends drei bis fünf neue Plakate im Stil eurer bisherigen, vorn und hinten. Ihr wählt eins und setzt im Editor Texte, Datum und Farbe.</dd></div><div class="ki-k__r"><dt>Was zum Anbieter geht</dt><dd>Die Beschreibung des Abends: Thema, Gerichte, Drinks, Gastkoch. Keine Angaben zu Gästen.</dd></div><div class="ki-k__r"><dt>Was gespeichert wird</dt><dd>Eure Plakate und eigenen Fotos bleiben im Browser auf eurem Gerät.</dd></div></dl><div class="ki-k__ohne"><p class="ki-k__ohne-t">Ohne KI</p><p>Rudis Illustrationen, der Editor und alle fertigen Plakate laufen weiter. Nur neue Plakate werden dann nicht gemalt.</p></div></div></article><article class="ki-st ki-st--um"><figure class="ki-geraet" data-a="kipp"><img src="img/ki-geraet-livre.webp" alt="Das Markenbuch am Laptop: Eine Markenprüfung" loading="lazy" decoding="async"></figure><div class="ag-blatt ki-k" data-a="heben"><h3 class="ki-k__t">Eine Markenprüfung</h3><p class="ki-k__preis">Das Markenbuch</p><dl><div class="ki-k__r"><dt>Was sie tut</dt><dd>Prüft einen fremden Entwurf, etwa eine Anzeige oder ein Plakat von außen, gegen Farben, Wortmarke und Schrift von Culinarium.</dd></div><div class="ki-k__r"><dt>Was zum Anbieter geht</dt><dd>Die ersten zwei Seiten der Datei als Bild.</dd></div><div class="ki-k__r"><dt>Was gespeichert wird</dt><dd>Nichts.</dd></div></dl><div class="ki-k__ohne"><p class="ki-k__ohne-t">Ohne KI</p><p>Fotos, Dateien und die Messung der Farben laufen weiter. Nur die schriftliche Beurteilung fehlt.</p></div></div></article></div>
+    <div class="ag-blatt ki-offen ki-sorge" data-a="heben"><h3 class="ki-k__t">Und wenn die KI Gästen etwas Falsches sagt?</h3><p>Die Frage ist richtig. Die KI darf nur wiedergeben, was ihr selbst veröffentlicht habt, und muss sagen, wenn sie etwas nicht weiß; dann nennt sie euren Kontakt. Ein Fehler lässt sich bei einer KI nie ganz ausschließen. Verbindlich sind das Ticket und das, was ihr sagt.</p></div></div>
+</section>
+<section class="wfen" id="ki-fenster" aria-label="Die KI macht den Entwurf. Abgeschickt wird von euch.">
+  <div class="wfen__f">
+    <img src="eigen/fen-fenster-tisch-1800.webp" srcset="eigen/fen-fenster-tisch-1800.webp 1200w, eigen/fen-fenster-tisch-1800.webp 1800w, eigen/fen-fenster-tisch-1800.webp 2400w" sizes="100vw" alt="Blick durch die Tür auf die lange Tafel bei Kerzenlicht" loading="lazy" decoding="async">
+    <div class="wfen__in"><svg class="wfen__z" viewBox="-0.5 -0.5 39.3 41.36" fill="currentColor" aria-hidden="true"><use href="#hz"/></svg><h2 class="wfen__t"><span>Die KI macht den Entwurf.</span><span><em>Abgeschickt wird von euch.</em></span></h2><p class="wfen__k">Jede Antwort an einen Gast geht erst hinaus, wenn jemand von euch sie selbst verschickt.</p></div>
+  </div>
+</section>
+<section class="fl fl--papier tapete-hell blatt ki" id="ki-daten">
+  <div class="in"><header class="ki-kopf"><div data-a="auf"><svg class="ki-hz" viewBox="-0.5 -0.5 39.3 41.36" fill="currentColor" aria-hidden="true"><use href="#hz"/></svg></div><h2 class="t2 zt"><span class="z"><span>Was mit euren</span></span><span class="z"><span>Daten <em>geschieht.</em></span></span></h2><p class="ki-lauf" data-a="worte">Der Anbieter des Sprachmodells ist Anthropic. Was er zusagt, steht in seinen Geschäftsbedingungen; was ihr aufbewahrt, bestimmt ihr.</p></header>
+    <div class="ki-anbieter" data-a="auf"><svg class="ki-claude" viewBox="0 0 24 24" role="img" aria-label="Claude"><path fill="currentColor" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg><p><b>Claude</b><span>Sprachmodell von Anthropic PBC, San Francisco</span></p></div>
+    <div class="ki-daten"><div class="ki-d" data-a="heben"><span class="ki-siegel" aria-hidden="true"><i></i></span><h3>Nicht zum Lernen</h3><p>Anthropic nutzt, was über euer Konto läuft, nicht zum Training seiner Modelle.</p></div><div class="ki-d" data-a="heben"><span class="ki-siegel" aria-hidden="true"><i></i></span><h3>Nach 30 Tagen gelöscht</h3><p>Eingaben und Antworten löscht Anthropic innerhalb von 30 Tagen. Länger nur bei Verstößen gegen seine Nutzungsregeln oder wenn ein Gesetz es verlangt.</p></div><div class="ki-d" data-a="heben"><span class="ki-siegel" aria-hidden="true"><i></i></span><h3>Euer eigener Speicher</h3><p>Was ihr aufbewahrt, liegt im Werkzeug für die Gäste, nur mit Zugang lesbar, und wird nach zwölf Monaten gelöscht.</p></div><div class="ki-d" data-a="heben"><span class="ki-siegel" aria-hidden="true"><i></i></span><h3>Menschen verschicken</h3><p>Die KI verschickt keine Mails und bucht nichts. Jede Antwort per Mail geht von euch hinaus.</p></div><div class="ki-d" data-a="heben"><span class="ki-siegel" aria-hidden="true"><i></i></span><h3>Gebucht wird woanders</h3><p>Plätze und Zahlung laufen über das Ticket auf der Seite. Karten- und Zahlungsdaten gehören nicht in den Chat.</p></div><div class="ki-d" data-a="heben"><span class="ki-siegel" aria-hidden="true"><i></i></span><h3>Abschaltbar</h3><p>Jede der vier Stellen lässt sich einzeln abschalten, das Werkzeug arbeitet weiter.</p></div></div></div>
+</section>
+<section class="fl fl--creme tapete-hell blatt ki" id="ki-ohne">
+  <div class="in"><header class="ki-kopf"><div data-a="auf"><svg class="ki-hz" viewBox="-0.5 -0.5 39.3 41.36" fill="currentColor" aria-hidden="true"><use href="#hz"/></svg></div><h2 class="t2 zt"><span class="z"><span>Läuft auch</span></span><span class="z"><span><em>ohne KI.</em></span></span></h2><p class="ki-lauf" data-a="worte">Fällt die KI aus, ist die Grenze des Monats erreicht oder schaltet ihr sie ab, arbeiten alle Werkzeuge weiter. Es fehlt nur, was die KI schreibt.</p></header><div class="ki-ohne"><div class="ki-o" data-a="kipp" style="--i:0"><h3>Der Chat für eure Gäste</h3><p>Die Seite «Der Abend», die Fragen und Antworten und die Warteliste stehen wie gewohnt da.</p></div><div class="ki-o" data-a="kipp" style="--i:1"><h3>Antwort auf eine Anfrage</h3><p>Eingang und Warteliste lassen sich bedienen. Die Antwort schreibt ihr dann selbst. Verschickt wird ohnehin nur, was jemand abschickt.</p></div><div class="ki-o" data-a="kipp" style="--i:2"><h3>Neue Plakate für einen Abend</h3><p>Rudis Illustrationen, der Editor und alle fertigen Plakate laufen weiter. Nur neue Plakate werden dann nicht gemalt.</p></div><div class="ki-o" data-a="kipp" style="--i:3"><h3>Eine Markenprüfung</h3><p>Fotos, Dateien und die Messung der Farben laufen weiter. Nur die schriftliche Beurteilung fehlt.</p></div></div></div>
+</section>
+<section class="fl fl--nacht tapete-leicht blatt ki" id="ki-hand">
+  <div class="in">
+    <div class="ki-hand">
+      <figure class="ki-hand__b" data-a="kipp"><img src="img/ki-team.webp" alt="Drei aus dem Team vor der Bar" loading="lazy" decoding="async"></figure>
+      <div class="ki-hand__t"><div data-a="auf"><svg class="ki-hz" viewBox="-0.5 -0.5 39.3 41.36" fill="currentColor" aria-hidden="true"><use href="#hz"/></svg></div><h2 class="t2 zt"><span class="z"><span>Ihr entscheidet,</span></span><span class="z"><span><em>wie weit sie geht.</em></span></span></h2><p class="ki-h" data-a="auf" style="--i:0"><b>Das Konto</b>läuft auf Culinarium. Beim Anbieter seht ihr jeden Aufruf.</p><p class="ki-h" data-a="auf" style="--i:1"><b>Die Obergrenze</b>setze ich je Monat. Ist sie erreicht, laufen die Werkzeuge bis zum nächsten Monat ohne KI weiter.</p><p class="ki-h" data-a="auf" style="--i:2"><b>Der Schalter</b>liegt bei euch. Auf euren Wunsch schalte ich die KI ab, die Werkzeuge laufen weiter wie beschrieben.</p></div>
+    </div>
+    <div class="ag-blatt ki-offen" data-a="heben"><h3 class="ki-k__t">Was ihr noch festlegt</h3><p>Eure Datenschutzerklärung bekommt vor dem Start einen Abschnitt zum Chat. Zwei Punkte entscheidet ihr: die Rechtsgrundlage für die Übermittlung in die USA und wie lange Anfragen aufbewahrt werden.</p>
+      <p class="ki-knoepfe"><a class="kn kn--klein" href="https://culinarium-hannover-entwurf.vercel.app/datenschutz.html" target="_blank" rel="noopener">Datenschutz auf der neuen Seite<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a>
+      <a class="kn kn--klein" href="index.html#sag-uebergabe">Zurück zur Übergabe<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></p>
+      <p class="ki-quellen">Angaben des Anbieters, gelesen am 28. Oktober 2026:</p><ul class="ki-quellen__l"><li><a href="https://privacy.anthropic.com/en/articles/7996868-is-my-data-used-for-model-training" target="_blank" rel="noopener">Anthropic: Training mit Daten</a></li><li><a href="https://privacy.anthropic.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noopener">Anthropic: Aufbewahrung</a></li></ul></div>
+  </div>
+</section>
+<script>
+(function () { var f = document.getElementById('ki-fenster'); if (!f) return; if (!('IntersectionObserver' in window)) { f.classList.add('da'); return; }
+  f.classList.add('weg'); new IntersectionObserver(function (es) { f.classList.toggle('weg', !es[0].isIntersecting); }).observe(f);
+  new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { o.disconnect(); f.classList.add('da'); } }, { threshold: 0.35 }).observe(f); })();
+</script>
+</main>
+
+<footer class="fuss">
+<nav class="in wege wf" id="uebersicht" aria-label="Das Wichtigste von Culinarium">
+  <div class="wf__kopf"><b class="wege__t">Das Wichtigste von Culinarium</b></div>
+  <div class="wfa" data-wfa aria-roledescription="Karussell" aria-label="Das Wichtigste von Culinarium">
+    <div class="wfa__b"><a class="fblatt" href="https://culinarium-hannover-entwurf.vercel.app/index.html" target="_blank" rel="noopener" data-i="0" data-p="0"><img src="eigen/fo-website.webp" width="1000" height="1000" alt="Ein Laptop mit der neuen Startseite von Culinarium" loading="lazy" decoding="async"></a><a class="fblatt" href="https://tastyrob123.github.io/culinarium-demo/werkzeuge/maison/index.html" target="_blank" rel="noopener" data-i="1" data-p="1"><img src="eigen/fo-maison.webp" width="1000" height="1000" alt="Ein Laptop mit dem Eingang zu den Werkzeugen" loading="lazy" decoding="async"></a><a class="fblatt" href="../unterlagen/index.html" target="_blank" rel="noopener" data-i="2" data-p="2"><img src="eigen/fo-unterlagen.webp" width="1000" height="1000" alt="Die Karten der Abende, neu gesetzt" loading="lazy" decoding="async"></a><a class="fblatt" href="https://culinarium-hannover-entwurf.vercel.app/abend.html" target="_blank" rel="noopener" data-i="3" data-p="3"><img src="eigen/fo-gaeste.webp" width="1000" height="1000" alt="Ein Laptop mit «Platz buchen»" loading="lazy" decoding="async"></a><a class="fblatt" href="../befund/index.html" target="_blank" rel="noopener" data-i="4" data-p="-3"><img src="eigen/fo-analyse-h.webp" width="1000" height="1000" alt="Ein Laptop mit dem Befund" loading="lazy" decoding="async"></a><a class="fblatt" href="../drucksachen/index.html" target="_blank" rel="noopener" data-i="5" data-p="-2"><img src="eigen/fo-drucksachen.webp" width="1000" height="1000" alt="Drucksachen für Tafel und Tür" loading="lazy" decoding="async"></a><a class="fblatt" href="../untersetzer/index.html" target="_blank" rel="noopener" data-i="6" data-p="-1"><img src="eigen/fo-etiketten.webp" width="1000" height="1000" alt="Vier Untersetzer für die Theke" loading="lazy" decoding="async"></a></div>
+    <div class="wfa__fuss">
+      <button type="button" class="wf__pf" data-f="-1" aria-label="Zurück"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+      <div class="wfa__texte" aria-live="polite"><div class="an"><h3>Die neue Website</h3><p>Der Entwurf mit allen Seiten: der Abend, die Plakate, das Haus, die Leute, der Weg und Dirty Chicken.</p><a class="kn kn--klein" href="https://culinarium-hannover-entwurf.vercel.app/index.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div><div><h3>Der Tresen</h3><p>Der Eingang für euch alle, von dort geht es in jedes Werkzeug.</p><a class="kn kn--klein" href="https://tastyrob123.github.io/culinarium-demo/werkzeuge/maison/index.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div><div><h3>Eure Karten</h3><p>Die Karte jedes Abends mit Rudis Gängen und Momos Drinks.</p><a class="kn kn--klein" href="../unterlagen/index.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div><div><h3>Für eure Gäste</h3><p>Platz buchen, die Warteliste, das Menü, die Zeiten, die Fragen und der Weg.</p><a class="kn kn--klein" href="https://culinarium-hannover-entwurf.vercel.app/abend.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div><div><h3>Der Befund</h3><p>Wie Culinarium heute im Netz steht, mit allen Punkten und ihren Bildern.</p><a class="kn kn--klein" href="../befund/index.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div><div><h3>Drucksachen</h3><p>Ideen für Papier, von der Karte am Platz bis zum Briefbogen.</p><a class="kn kn--klein" href="../drucksachen/index.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div><div><h3>Untersetzer</h3><p>Zwölf Untersetzer für Momos Drinks, im Kleid eurer Plakate.</p><a class="kn kn--klein" href="../untersetzer/index.html" target="_blank" rel="noopener">Öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a></div></div>
+      <button type="button" class="wf__pf" data-f="1" aria-label="Weiter"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+    </div>
+    <p class="wfa__zahl"><span data-f-zahl>1</span> / 7</p>
+  </div>
+</nav>
+<script>
+(function () {
+  var f = document.querySelector('.wf [data-wfa]'); if (!f) return;
+  var bl = [].slice.call(f.querySelectorAll('.fblatt')), tx = [].slice.call(f.querySelectorAll('.wfa__texte>div')), zahl = f.querySelector('[data-f-zahl]'), n = bl.length, ist = 0, halb = Math.floor(n / 2);
+  function zeige(k) {
+    ist = (k % n + n) % n;
+    bl.forEach(function (b, i) { var p = ((i - ist + n + halb) % n) - halb; b.setAttribute('data-p', p); b.setAttribute('aria-hidden', p !== 0); b.tabIndex = p === 0 ? 0 : -1; });
+    tx.forEach(function (t, i) { t.classList.toggle('an', i === ist); [].forEach.call(t.querySelectorAll('a'), function (a) { a.tabIndex = i === ist ? 0 : -1; }); });
+    if (zahl) zahl.textContent = ist + 1;
+  }
+  [].forEach.call(f.querySelectorAll('[data-f]'), function (b) { b.addEventListener('click', function () { zeige(ist + (+b.getAttribute('data-f'))); }); });
+  bl.forEach(function (b, i) { b.addEventListener('click', function (e) { if (i !== ist) { e.preventDefault(); zeige(i); } }); });
+  f.setAttribute('tabindex', '0');
+  f.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') zeige(ist + 1); else if (e.key === 'ArrowLeft') zeige(ist - 1); });
+  var x0 = null, st = f.querySelector('.wfa__b');
+  st.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  st.addEventListener('touchend', function (e) { if (x0 === null) return; var d = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(d) > 40) zeige(ist + (d < 0 ? 1 : -1)); }, { passive: true });
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (es, o) { es.forEach(function (x) { if (x.isIntersecting) { f.classList.add('da'); o.disconnect(); } }); }, { threshold: .25 }).observe(f); else f.classList.add('da');
+  zeige(0);
+})();
+</script>
+<div class="in fuss__u">
+  <div><b>Entwurf</b><p>Ein Entwurf von Robert Reff, Tasty Studios, Hamburg, nicht die offizielle Website von Culinarium. Wer den Link nicht hat, findet die Seite nicht, in keiner Suchmaschine. Fotos, Plakate, Zeichen und Texte gehören Culinarium, dem Walk on the Wild Side und den jeweiligen Fotografen.</p></div>
+  <div class="r mono"><span>robert@tasty-studios.de</span><a href="impressum.html">Impressum und Datenschutz</a><span>Stand 30.10.2026</span></div>
+</div></footer>
+
+<script>window.GEFUEGE={"sp": ["Von euch", "Daraus gemacht", "Die Seiten", "Im Hintergrund"], "fx": [0.118, 0.372, 0.628, 0.882], "n": [["fotos", 0, 0, "Eure Fotos", "von den Abenden", "ein", "Eure Fotos", "Die Aufnahmen, die Rudi geschickt hat: die Tafel bei Kerzenlicht, Momo an der Bar, jeder Teller, die Mannschaft und die Bar von außen.", ["Tafel", "Bar", "Teller"]], ["plakate", 0, 1, "Eure Plakate", "seit 2023", "ein", "Eure Plakate", "Jedes Plakat seit dem ersten Pop-up, mit Datum, Preis und seiner Farbe.", ["Plakate", "Farbe je Abend"]], ["menues", 0, 2, "Eure Menüs", "in Rudis Zeilen", "ein", "Eure Menüs", "Die Gänge in Rudis Schreibweise und Momos Signature Drinks, wie ihr sie angekündigt habt.", ["Gänge", "Drinks"]], ["texte", 0, 3, "Eure Worte", "aus euren Beiträgen", "ein", "Eure Worte", "Was ihr auf Instagram über eure Abende schreibt, ist der Grund jeder Zeile auf der Seite.", ["Beiträge", "Bio"]], ["zeichen", 0, 4, "Euer Logo", "Rudis Original", "ein", "Euer Logo", "CULINARIUM und «A UNiQUE EXPERiENCE» aus Rudis Original-Logo, in jeder Größe scharf.", ["Logo"]], ["haus", 0, 5, "Das Haus", "Walk on the Wild Side", "ein", "Das Haus", "Die Bar in Linden mit Adresse, Zeiten und Geschichte, als Ort jedes Abends.", []], ["bildwelt", 1, 0, "Bildwelt", "jedes Foto mit festem Platz", "", "Bildwelt", "Jedes Foto liegt in mehreren Größen vor, für den Rechner und fürs Handy, und sitzt mit seinem Ausschnitt fest.", ["Ausschnitt", "Größen"]], ["abenddaten", 1, 1, "Die Abende", "eine Stelle", "", "Die Abende", "Jeder Abend mit Plakat, Datum, Uhrzeit, Preis und Plätzen an einer Stelle. Daraus entstehen die Vitrinen, die Chronik und die nächsten Termine.", ["Datum", "Preis", "Plakat"]], ["karten", 1, 2, "Karte je Abend", "Menü und Drinks", "", "Karte je Abend", "Das Menü und die Drinks eines Abends als Blatt, für den Tisch und als PDF.", []], ["muster", 1, 3, "Nacht und Kerze", "auf den Flächen", "", "Farben und Muster", "Die Nacht der Bar, Schiefer und Warmweiß der Plakate und die Kerze aus euren Fotos, dazu ein feines Raster Ton in Ton.", ["Farben", "Raster"]], ["zeilen", 1, 4, "Rudis Zeilen", "als Schrift", "", "Rudis Zeilen", "Die Gänge in Versalien mit Schrägstrich, wie Rudi sie schreibt, als feste Schrift der Seite.", []], ["chronik", 1, 5, "Chronik", "2017 bis heute", "", "Chronik", "Die Bar seit 2017, das erste Pop-up 2023, Rudi seit 2024 und der ausgebuchte September 2026.", []], ["start", 2, 0, "Startseite", "der Abend zuerst", "seite", "Startseite", "Vom Auftakt über das erste Glas und drei Gänge zu den Plakaten, zum Haus, zu den Leuten und zu Dirty Chicken. Von hier führt ein Weg zu jeder Seite.", ["Glas", "Gänge", "Plakate"]], ["abend", 2, 1, "Der Abend", "buchen und Warteliste", "seite", "Der Abend", "Was auf den Tisch kommt, wann und wie viel, die nächsten Abende und die Warteliste.", ["Menü", "Termine"]], ["abende", 2, 2, "Alle Abende", "in Vitrinen", "seite", "Alle Abende", "Jeder Abend mit seinem Plakat, Jahr für Jahr.", []], ["team", 2, 3, "Haus und Team", "Bar und Leute", "seite", "Das Haus und das Team", "Die Bar in Linden, Derya, Momo und Rudi, und der Weg zur Haasemannstraße.", []], ["dc", 2, 4, "Dirty Chicken", "das Pop-up", "seite", "Dirty Chicken", "Das Pop-up aus demselben Haus mit eigener Seite im eigenen Violett.", []], ["buchen", 3, 0, "Platz buchen", "mit Ticket", "sys", "Platz buchen", "Im Entwurf gespielt: einen Abend wählen, Plätze wählen, zahlen, das Ticket kommt per Mail. Welches Kassensystem es wird, entscheidet ihr.", []], ["warteliste", 3, 1, "Warteliste", "ins Werkzeug", "sys", "Warteliste", "Wer keinen Platz mehr bekommt, trägt sich ein. Der Eintrag kommt im Werkzeug für die Gäste an, nie als Mail.", []], ["pdf", 3, 2, "Karten als PDF", "zum Teilen", "sys", "Karten als PDF", "Jede Karte eines Abends liegt zusätzlich als PDF bereit.", []], ["studio", 3, 3, "Sieben Werkzeuge", "für euch", "sys", "Sieben Werkzeuge", "Mit ihnen tragt ihr Termine, Menüs, Plakate und Texte selbst ein; jede Änderung wartet als Entwurf.", ["Termine", "Menüs", "Plakate"]]], "k": [["fotos", "bildwelt"], ["plakate", "abenddaten"], ["plakate", "muster"], ["menues", "karten"], ["menues", "zeilen"], ["texte", "start"], ["zeichen", "muster"], ["haus", "chronik"], ["bildwelt", "start"], ["bildwelt", "team"], ["abenddaten", "abend"], ["abenddaten", "abende"], ["zeilen", "start"], ["chronik", "team"], ["muster", "dc"], ["abend", "buchen"], ["abend", "warteliste"], ["karten", "pdf"], ["studio", "abend"], ["studio", "abende"], ["studio", "start"]], "tour": ["fotos", "plakate", "menues", "buchen", "warteliste", "studio"], "fuss": "Folgt einer Linie: Sie führt von dem, was von euch kommt, zur Seite", "start": ["Übersicht", "Von euch zur Seite", "Tippt eine Kachel an, dann leuchtet ihr Weg. Oder startet den Rundgang."]};window.SEITEN=[{"d": "index.html", "s": "startseite", "t": "Startseite", "k": "Startseite", "x": "Culinarium im Walk on the Wild Side, der Abend an der langen Tafel, das erste Glas, drei Gänge, die Plakate, das Haus, die Leute, Dirty Chicken und was Gäste vorher wissen wollen.", "n": 8}, {"d": "abend.html", "s": "der-abend", "t": "Der Abend", "k": "Der Abend", "x": "Was auf den Tisch kommt, wann und wie viel, die nächsten Abende zum Buchen und die Warteliste.", "n": 4}, {"d": "abende.html", "s": "alle-abende", "t": "Alle Abende", "k": "Abende", "x": "Jeder Abend seit dem ersten Pop-up 2023 mit seinem Plakat, Jahr für Jahr in einer Vitrine.", "n": 3}, {"d": "bar.html", "s": "das-haus", "t": "Das Haus", "k": "Das Haus", "x": "Walk on the Wild Side: die Bar in Linden, ihre Drinks, ihre Geschichte seit 2017 und wann sie offen hat.", "n": 3}, {"d": "leute.html", "s": "das-team", "t": "Das Team", "k": "Das Team", "x": "Derya, Momo und Rudi mit ihrem Weg, die Mannschaft bei der Arbeit und wie alles kam.", "n": 3}, {"d": "weg.html", "s": "der-weg", "t": "Der Weg", "k": "Der Weg", "x": "Die Haasemannstraße 13 in Linden, die Zeiten der Abende und die gezeichnete Karte.", "n": 2}, {"d": "dirty-chicken.html", "s": "dirty-chicken", "t": "Dirty Chicken", "k": "Dirty Chicken", "x": "Das Pop-up aus demselben Haus: das Essen, die Nacht mit Live-Musik und das erste Pop-up im Tiedthof.", "n": 4}, {"d": "impressum.html", "s": "rechtliches", "t": "Impressum und Datenschutz", "k": "Rechtliches", "x": "Impressum und Datenschutz.", "n": 1}];</script>
+<script id="auftakt-kacheln">
+/* Kacheln im Auftakt neigen sich zum Zeiger (nur transform); nach jedem Scrollen 300 ms Ruhe, kein Anheben */
+(function(){
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var ruhe=0;addEventListener('scroll',function(){ruhe=Date.now()+300;},{passive:true});
+  [].forEach.call(document.querySelectorAll('.akz'),function(k){
+    var b=k.querySelector('.akz__b'),t=0;
+    k.addEventListener('pointermove',function(e){
+      if(Date.now()<ruhe||t)return;
+      t=requestAnimationFrame(function(){t=0;var r=k.getBoundingClientRect();
+        k.classList.add('kipp');
+        b.style.setProperty('--ry',(((e.clientX-r.left)/r.width-.5)*9).toFixed(2)+'deg');
+        b.style.setProperty('--rx',((.5-(e.clientY-r.top)/r.height)*9).toFixed(2)+'deg');});
+    });
+    k.addEventListener('pointerleave',function(){k.classList.remove('kipp');b.style.setProperty('--ry','0deg');b.style.setProperty('--rx','0deg');});
+  });
+})();
+</script>
+<script id="hs-auftritt">
+/* Handschrift: jede Zeile der Tafel startet ihren Auftritt, sobald ein Drittel von ihr im Bild steht (nur Klassen setzen) */
+(function(){
+  var s=document.getElementById('handschrift');
+  if(!s||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  s.classList.add('lebt');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);e.target.classList.add('da');}});},{rootMargin:'0px 0px -6% 0px',threshold:.3});
+  [].forEach.call(s.querySelectorAll('.hs2-z'),function(z){io.observe(z);});
+})();
+</script>
+<script id="wfen-js">
+/* Fenster: der Satz kommt, wenn der Ausschnitt gut im Bild ist, und ruht unsichtbar, solange das Fenster nicht im Bild ist */
+(function () {
+  [].forEach.call(document.querySelectorAll('.wfen'), function (f) {
+    if (!('IntersectionObserver' in window)) { f.classList.add('da'); return; }
+    f.classList.add('weg');
+    new IntersectionObserver(function (es) { f.classList.toggle('weg', !es[0].isIntersecting); }).observe(f);
+    new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { o.disconnect(); f.classList.add('da'); } }, { threshold: 0.35 }).observe(f);
+  });
+})();
+</script>
+<script src="werkbank.js?v=1793328578"></script>
+<script id="brett-hilfe">(function(){var b=document.getElementById('brett'),k=document.getElementById('brett-noch');if(!b||!k||!('IntersectionObserver' in window))return;new IntersectionObserver(function(E,o){if(!E[0].isIntersecting)return;o.disconnect();setTimeout(function(){if(/\bvor\b/.test(b.className))k.click()},700)},{rootMargin:'0px 0px -35% 0px'}).observe(b)})();</script><script id="cv-hoehen">(function(){var d=document.documentElement;function alle(){d.classList.add('cv-alle');requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove('cv-alle')})})}/* einmal alles zeichnen, damit jede Fläche ihre echte Höhe kennt: Sprungmarken landen genau (content-visibility) */if(document.readyState==='complete')setTimeout(alle,300);else addEventListener('load',function(){setTimeout(alle,300)});addEventListener('resize',function(){clearTimeout(alle.t);alle.t=setTimeout(alle,400)})})();</script><script id="rh-vorladen">(function(){if(!("IntersectionObserver" in window))return;(window.requestIdleCallback||function(f){setTimeout(f,700)})(function(){var kand=[].slice.call(document.querySelectorAll(".band,.aga-reihe,.vh-felder,.ins-dev,.lu-seiten,[class*=reihe],[class*=zug],[class*=leiste]"));[].forEach.call(document.querySelectorAll("main *"),function(e){var c=getComputedStyle(e).overflowX;if((c==="auto"||c==="scroll")&&e.scrollWidth>e.clientWidth+4&&kand.indexOf(e)<0)kand.push(e)});var io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;io.unobserve(x.target);[].forEach.call(x.target.querySelectorAll("img[loading=lazy]"),function(i){i.loading="eager"})})},{rootMargin:"120% 0px 120% 0px"});kand.forEach(function(e){if(e.querySelector("img[loading=lazy]"))io.observe(e)})})})();</script>
+<script id="rh-frueh">(function(){if(!("IntersectionObserver" in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;io.unobserve(x.target);x.target.loading="eager"})},{rootMargin:"0px 0px 150% 0px"});[].forEach.call(document.querySelectorAll("main img[loading=lazy],body>section img[loading=lazy],section img[loading=lazy]"),function(i){io.observe(i)})})();</script>
+<script id="rh-zurueck">(function(){
+var WEB=/^\/(?:(?:index|abend|abende|bar|leute|weg|dirty-chicken|impressum|datenschutz|termine-pflege|404)\.html)?$/;   /* die Seiten der Website von Culinarium: dort nie ein Weg zurück (Memory «Zur Werkbank») */
+function ziel(a){try{var u=new URL(a.getAttribute('href'),location.href);if(!/^https?:$/.test(u.protocol))return null;
+ if(/\.pdf$/i.test(u.pathname))return null;
+ if(u.origin===location.origin){if(u.pathname===location.pathname)return null;if(WEB.test(u.pathname))return null;return u}
+ if(/^127\.0\.0\.1$|localhost/.test(u.hostname)&&/_werkzeuge\//.test(u.pathname))return u;return null}catch(e){return null}}
+function merk(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;var u=ziel(a);if(!u)return;var y=Math.round(scrollY);
+ if(u.origin!==location.origin&&/_werkzeuge\//.test(u.pathname)){var sk=a.closest('section[id]');u.searchParams.set('wb','de'+(sk&&/^[a-z0-9-]{1,40}$/.test(sk.id)?'.'+sk.id:''));u.searchParams.set('wy',y);u.searchParams.set('wbo',location.origin)}else u.searchParams.set('wb',y);a.href=u.toString();try{sessionStorage.setItem('wb-y',String(y))}catch(e){}
+ if(ev.type!=='click'||ev.defaultPrevented||ev.metaKey||ev.ctrlKey||ev.shiftKey)return;
+ /* Robert 19.10.2026 01:18 / Endprüfung: nur die sieben Werkzeuge (mit Anleitungen) öffnen einen neuen Tab, den «Zurück zur Werkbank» wieder schliesst;
+    Analyse, Drucksachen, Unterlagen, Mappe und die übrigen Beigaben im selben Tab, Safari-Zurück und der Knopf landen an der Stelle */
+ var werkzeug=/^\/(?:maison|studio|_?werkzeuge)\//.test(u.pathname);
+ ev.preventDefault();if(werkzeug)window.open(a.href,'_blank');else location.href=a.href}
+document.addEventListener('click',merk,true);document.addEventListener('auxclick',merk,true);
+var q=new URLSearchParams(location.search),y=q.get('y'),zur=false;
+if(y===null||!/^\d+$/.test(y))return;y=+y;
+try{history.scrollRestoration='manual'}catch(e){}
+var st=document.createElement('style');st.textContent='html.wb-sofort,html.wb-sofort *{transition:none!important;animation-duration:0s!important;animation-delay:0s!important;scroll-behavior:auto!important}';document.head.appendChild(st);
+document.documentElement.classList.add('wb-sofort');
+function fertigOben(){var grenze=y+innerHeight*.15;[].forEach.call(document.querySelectorAll('[data-a],.odo,.zt,.roll,img.ld'),function(e){var r=e.getBoundingClientRect();if(r.top+scrollY<grenze&&!e.classList.contains('da')){e.classList.add('da')}})}
+function geh(){window.scrollTo(0,y);fertigOben()}
+function los(){geh();requestAnimationFrame(function(){geh();requestAnimationFrame(function(){document.documentElement.classList.remove('wb-sofort')})});
+ var n=0,t=setInterval(function(){n++;if(Math.abs(scrollY-y)>40&&n<12&&!wegd)geh();if(n>=12)clearInterval(t)},150);
+ if(!zur){q.delete('y');history.replaceState(history.state,'',location.pathname+(q.toString()?'?'+q:'')+location.hash)}}
+var wegd=false;['wheel','touchstart','keydown'].forEach(function(k){addEventListener(k,function(){wegd=true},{once:true,passive:true})});
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',los);else los();
+addEventListener('load',function(){if(!wegd&&Math.abs(scrollY-y)>40)geh()});
+})();</script>
+<script id="rh-karussell">(function(){var K=[].slice.call(document.querySelectorAll("#register .rgw,[data-wfa],[data-rgw]"));if(!K.length)return;function hol(k){[].forEach.call(k.querySelectorAll("img"),function(i){try{i.fetchPriority="high"}catch(e){}i.loading="eager";if(i.decode)i.decode().catch(function(){})})}if(!("IntersectionObserver" in window)){K.forEach(hol);return}var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){io.unobserve(x.target);hol(x.target)}})},{rootMargin:"300% 0px 300% 0px"});K.forEach(function(k){io.observe(k)})})();</script>
+<style id="text-mitte">.tm{position:relative}
+@supports not (font:-apple-system-body){
+  .kn>.tm{top:.7px}.kn.kn--klein>.tm{top:0}
+  .wahl button>.tm,.vh-wahl button>.tm,.uwahl button>.tm,.uschalter button>.tm{top:1px;left:.065em}
+  .mb-kn>span{position:relative;top:.9px}
+  .sbf-z>.tm{top:.6px}
+}
+.rund[aria-label^="Zur"] svg,.rund[aria-label^="Vorig"] svg,.pf[aria-label^="Vorig"] svg{transform:translateX(.5px)}
+.rund[aria-label^="Weiter"] svg,.rund[aria-label^="Nächst"] svg,.pf[aria-label^="Nächst"] svg{transform:translateX(-.5px)}
+@supports (font:-apple-system-body){.pf[aria-label^="Vorig"] svg{transform:translate(.6px,.5px)}.pf[aria-label^="Nächst"] svg{transform:translate(-.6px,.5px)}}
+@supports not (font:-apple-system-body){.pf[aria-label^="Vorig"] svg{transform:translateX(.6px)}.pf[aria-label^="Nächst"] svg{transform:translateX(-.6px)}}</style><script id="text-mitte-js">(function(){function t(){document.querySelectorAll('.kn,.sbf-z,.wahl button,.vh-wahl button,.uwahl button,.uschalter button').forEach(function(k){var n=k.firstChild;if(n&&n.nodeType===3&&n.textContent.trim()){var s=document.createElement('span');s.className='tm';s.textContent=n.textContent;k.replaceChild(s,n)}})}t();addEventListener('load',t)})();</script><script id="ruecksprung">(function(){
+var id=null;try{id=history.state&&history.state.rs;if(!id){id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);history.replaceState(Object.assign({},history.state||{},{rs:id}),'')}}catch(e){}
+var K='rs:'+location.pathname+(id?':'+id:'');   /* je Eintrag im Verlauf: dieselbe Seite zweimal im Verlauf behält zwei Höhen */
+function merk(){try{sessionStorage.setItem(K,String(Math.round(window.scrollY||0)))}catch(e){}}
+function hol(){try{var v=sessionStorage.getItem(K);return v&&/^\d+$/.test(v)?+v:null}catch(e){return null}}
+addEventListener('pagehide',merk);
+document.addEventListener('click',function(ev){var a=ev.target&&ev.target.closest&&ev.target.closest('a[href]');if(a&&(a.getAttribute('href')||'').charAt(0)!=='#')merk()},true);
+function gezeigt(y){var g=y+innerHeight*1.2;[].forEach.call(document.querySelectorAll('[data-a],.odo,.zt,.roll,img.ld'),function(e){if(e.classList.contains('da'))return;var r=e.getBoundingClientRect();if(r.top+scrollY<g)e.classList.add('da')})}
+addEventListener('pageshow',function(ev){if(!ev.persisted)return;var y=hol();if(y===null)return;gezeigt(y);if(Math.abs(scrollY-y)>40)scrollTo(0,y)});
+var nav=null;try{nav=performance.getEntriesByType('navigation')[0]}catch(e){}
+var typ=nav?nav.type:(performance.navigation&&performance.navigation.type===2?'back_forward':'');
+if(typ!=='back_forward')return;
+var y=hol();if(y===null||y<40)return;
+try{history.scrollRestoration='manual'}catch(e){}
+var H=document.documentElement,st=document.createElement('style');
+st.textContent='html.rs-sofort,html.rs-sofort *{transition:none!important;animation-duration:0s!important;animation-delay:0s!important;scroll-behavior:auto!important}';
+document.head.appendChild(st);H.classList.add('rs-sofort');
+var weg=false;['wheel','touchstart','keydown','mousedown'].forEach(function(k){addEventListener(k,function(){weg=true},{once:true,passive:true})});
+function geh(){if(weg)return;scrollTo(0,y);gezeigt(y)}
+function los(){geh();requestAnimationFrame(function(){geh();requestAnimationFrame(function(){H.classList.remove('rs-sofort')})});
+ var n=0,t=setInterval(function(){n++;if(Math.abs(scrollY-y)>40)geh();if(n>=14||weg)clearInterval(t)},150)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',los);else los();
+addEventListener('load',function(){if(Math.abs(scrollY-y)>40)geh()});
+})();</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Culinarium · Startseite: 15 Fassungen der Überleitung zwischen Einstieg und «Abend und Haus» (Bau: website/ueberleitung.py).
+   Jede Fassung eigene Anordnung, eigene Bewegung; nur transform und opacity, nativer Scroll, kein Weichzeichner, nichts liegt über Bewegtem. */
+
+.ul{--bg:#16151A;background:var(--bg);color:var(--fg);overflow-x:clip}
+.ul-f{position:relative}
+.ul-b{position:relative;margin:0;overflow:clip;border-radius:var(--r);background:var(--lq) center/cover no-repeat}
+.ul-b img{display:block;width:100%;height:100%;object-fit:cover}
+.ul .mono{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--fg2);margin:0}
+
+/* Zeilen aus dem Schlitz; Platz für Unterlängen */
+.ul-zl .ul-z{display:block;overflow:clip;padding:.1em 0 .2em;margin:-.1em 0 -.2em}
+.ul-zl .ul-z>span{display:inline-block}
+html.js:not(.ruhig) .ul-zl .ul-z>span{transform:translateY(118%);transition:transform 1.2s var(--k) calc(var(--i,0)*120ms)}
+html.js .ul-f.da .ul-zl .ul-z>span{transform:none}
+
+/* Mit einer Überleitung braucht «Abend und Haus» oben keine eigene Leere mehr */
+html[data-ul]:not([data-ul="0"]) #ebenen{padding-top:clamp(44px,7vh,80px)}
+
+/* ---------------------------------------------------------------- 1 Darüber: randlos, die Wand schiebt sich über den absinkenden Einstieg */
+html[data-ul="1"]:not([data-ul="0"]) #ebenen{padding-top:0;background:var(--bg)}
+html[data-ul="1"] #ebenen .ue{padding:0}
+html[data-ul="1"] #ebenen .ue-rahmen{max-width:none;border-radius:0}
+html[data-ul="1"] #ebenen .ue-unter{max-width:calc(var(--max) + 2*var(--rand));padding-left:var(--rand);padding-right:var(--rand)}
+html[data-ul="1"]:not(.ruhig) #auftakt{will-change:transform}
+
+/* ---------------------------------------------------------------- 2 Fenster: das Bild steht, die Seite zieht darüber */
+.ul2-fenster{position:relative;height:min(72vh,660px);clip-path:inset(0);-webkit-clip-path:inset(0)}
+.ul2-schicht{position:fixed;top:0;left:0;right:0;height:100lvh;visibility:hidden}
+.ul2-schicht.an{visibility:visible}
+.ul2-schicht .ul-b{position:absolute;inset:0;border-radius:0}
+.ul2-hof{position:absolute;inset:0;background:radial-gradient(ellipse 46% 34% at 50% 50%,rgba(12,10,14,.5),transparent 78%)}
+.ul2-satz{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:90vw;margin:0;text-align:center;font-family:var(--titel);font-weight:340;font-size:clamp(34px,4.6vw,74px);line-height:1.02;letter-spacing:-.014em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;color:var(--weiss);text-shadow:0 4px 30px rgba(12,10,14,.8),0 1px 3px rgba(12,10,14,.55)}
+
+/* ---------------------------------------------------------------- 3 Tür auf: zwei Flügel in Schiefer gehen auseinander */
+.ul3{padding:clamp(40px,7vh,72px) var(--rand) 0}
+.ul3-rahmen{position:relative;max-width:var(--max);margin:0 auto;height:clamp(320px,64vh,600px);border-radius:var(--r);overflow:clip;isolation:isolate}
+.ul3-rahmen .ul-b{position:absolute;inset:0;border-radius:0}
+.ul3-fl{position:absolute;top:0;bottom:0;width:50%;background:#3A3845;display:flex;align-items:center;will-change:transform}
+.ul3-fl::before{content:"";position:absolute;inset:clamp(12px,1.8vw,26px);border:1px solid rgba(250,244,244,.22);border-radius:6px}
+.ul3-l{left:0;justify-content:flex-end;padding-right:clamp(24px,3vw,48px);box-shadow:inset -1px 0 0 var(--kerze)}
+.ul3-r{right:0;justify-content:flex-start;padding-left:clamp(24px,3vw,48px)}
+.ul3-fl span{position:relative;font-family:var(--titel);font-weight:340;font-size:clamp(30px,4.4vw,74px);line-height:1;letter-spacing:-.012em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;color:var(--weiss);white-space:nowrap}
+.ul3-zeile{max-width:var(--max);margin:16px auto 0!important}
+
+/* ---------------------------------------------------------------- 4 Anstossen: zwei Bilder steigen getrennt herauf und treffen sich an der Naht */
+.ul4{padding:clamp(40px,7vh,72px) var(--rand) 0}
+.ul4-paar{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--fuge)}
+.ul4-paar .ul-b{height:clamp(300px,60vh,580px)}
+.ul4-a .ul-b{border-radius:var(--r) 0 0 var(--r)}
+.ul4-b .ul-b{border-radius:0 var(--r) var(--r) 0}
+.ul4-paar p{margin-top:14px!important}
+.ul4-b p{text-align:right}
+html.js:not(.ruhig) .ul4-a{transform:translate3d(-26px,90px,0);transition:transform 1.4s var(--k)}
+html.js:not(.ruhig) .ul4-b{transform:translate3d(26px,160px,0);transition:transform 1.4s var(--k) .2s}
+html.js .ul4.da .ul4-a,html.js .ul4.da .ul4-b{transform:none}
+
+/* ---------------------------------------------------------------- 5 Farbkante: Band in der Abendfarbe, der Name zieht gross hindurch */
+.ul5-band{background:var(--kerze);color:#16151A;padding:clamp(26px,4.6vh,46px) 0 clamp(22px,4vh,38px);overflow:clip}
+.ul5-wort{margin:0;white-space:nowrap;font-family:var(--titel);font-weight:330;font-size:clamp(64px,10.5vw,170px);line-height:1.08;letter-spacing:-.02em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.ul5-lauf{display:inline-block;padding-left:var(--rand);will-change:transform}
+.ul5-lauf i{font-style:normal;color:rgba(22,21,26,.32);margin:0 .32em}
+.ul .ul5-info{padding:12px var(--rand) 0;color:rgba(22,21,26,.8)}
+
+/* ---------------------------------------------------------------- 6 Laufschrift: eine Zeile zwischen zwei Haarlinien */
+.ul6{padding:clamp(40px,7vh,72px) 0 0}
+.ul6-band{border-top:1px solid var(--linie);border-bottom:1px solid var(--linie);overflow:clip;padding:20px 0}
+.ul6-lauf{display:flex;align-items:center;width:max-content;will-change:transform}
+html.js:not(.ruhig) .ul6-lauf{animation:ul6 52s linear infinite}
+.ul6.still .ul6-lauf{animation-play-state:paused}
+.ul6-lauf span{white-space:nowrap;font-family:var(--titel);font-weight:340;font-size:clamp(22px,2.2vw,32px);line-height:1.2;font-variation-settings:"SOFT" 100,"opsz" 72}
+.ul6-lauf i{flex:none;width:7px;height:7px;border-radius:50%;background:var(--kerze);margin:0 clamp(24px,2.6vw,44px)}
+@keyframes ul6{to{transform:translate3d(-50%,0,0)}}
+
+/* ---------------------------------------------------------------- 7 Schräge: die Nacht kippt schräg in die warme Fläche der Bildwand */
+.ul7-feld{position:relative;height:clamp(150px,26vh,240px);overflow:clip}
+.ul7-schub{position:absolute;inset:0;will-change:transform}
+html.js:not(.ruhig) .ul7-schub{transform:translate3d(0,101%,0);transition:transform 1.5s var(--k)}
+html.js .ul7.da .ul7-schub{transform:none}
+.ul7-keil{position:absolute;inset:0;background:#222028;clip-path:polygon(100% 0,100% 100%,0 100%);-webkit-clip-path:polygon(100% 0,100% 100%,0 100%)}
+.ul7-kante{position:absolute;inset:0;width:100%;height:100%}
+.ul7-kante line{stroke:var(--kerze);stroke-width:1.6;vector-effect:non-scaling-stroke}
+html[data-ul="7"]:not([data-ul="0"]) #ebenen{padding-top:clamp(28px,5vh,56px);background:var(--bg)}
+
+/* ---------------------------------------------------------------- 8 Treppe: vier Hochformate steigen wie Stufen */
+.ul8{padding:clamp(48px,8vh,88px) var(--rand) 0}
+.ul8-feld{position:relative;max-width:min(var(--max),calc(68vh * 2.4));margin:0 auto}
+.ul8-stufen{display:flex;align-items:flex-end;justify-content:flex-end;gap:var(--fuge)}
+.ul8-s:nth-child(1){width:19%}.ul8-s:nth-child(2){width:22.5%}.ul8-s:nth-child(3){width:26%}.ul8-s:nth-child(4){width:30%}
+.ul8-s .ul-b{width:100%}
+.ul8-t{position:absolute;left:0;top:0;margin:0;font-family:var(--titel);font-weight:340;font-size:clamp(28px,3.3vw,54px);line-height:1.04;letter-spacing:-.012em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+html.js:not(.ruhig) .ul8-s{transform:translate3d(0,120px,0);transition:transform 1.3s var(--k) calc(var(--i)*150ms)}
+html.js .ul8.da .ul8-s{transform:none}
+
+/* ---------------------------------------------------------------- 9 Öffnen: das Fenster geht beim Scrollen auf, das Bild bleibt stehen */
+.ul9{padding:clamp(40px,7vh,72px) var(--rand) 0}
+.ul9-rahmen{max-width:var(--max);margin:0 auto;height:clamp(320px,64vh,600px);border-radius:var(--r);overflow:clip;will-change:transform}
+.ul9-gegen{width:100%;height:100%;will-change:transform}
+.ul9-gegen .ul-b{width:100%;height:100%;border-radius:0}
+
+/* ---------------------------------------------------------------- 10 Schild: hängt an der Kante und pendelt aus */
+.ul10{--seil:clamp(64px,10vh,104px);padding:0 var(--rand) clamp(24px,4vh,44px)}
+.ul10-haken{display:flex;justify-content:center;padding-top:var(--seil)}
+.ul10-schild{position:relative;background:#3A3845;color:#FAF4F4;padding:clamp(20px,2.4vw,32px) clamp(30px,3.8vw,58px) clamp(18px,2vw,26px);border-radius:8px;text-align:center;transform-origin:50% calc(-1 * var(--seil))}
+.ul10-schild::before{content:"";position:absolute;inset:7px;border:1.5px solid rgba(250,244,244,.82);border-radius:4px;pointer-events:none}
+.ul10-seil{position:absolute;bottom:100%;width:1px;height:var(--seil);background:rgba(250,244,244,.32)}
+.ul10-sl{left:22%}.ul10-sr{right:22%}
+.ul10-str{margin:0;font-family:var(--titel);font-weight:340;font-size:clamp(30px,4vw,64px);line-height:1.08;letter-spacing:-.012em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.ul10-str b{font-weight:inherit;color:var(--kerze-hell)}
+.ul .ul10-ort{margin-top:8px;color:rgba(250,244,244,.78)}
+html.js:not(.ruhig) .ul10-schild{transform:rotate(-7deg)}
+html.js:not(.ruhig) .ul10.da .ul10-schild{animation:ul10 2.6s cubic-bezier(.3,.6,.3,1) forwards}
+@keyframes ul10{0%{transform:rotate(-7deg)}30%{transform:rotate(4.2deg)}55%{transform:rotate(-2.2deg)}75%{transform:rotate(1deg)}90%{transform:rotate(-.35deg)}100%{transform:rotate(0)}}
+
+/* ---------------------------------------------------------------- 11 Lichter an: drei Bilder gehen nacheinander an */
+.ul11{padding:clamp(40px,7vh,72px) var(--rand) 0}
+.ul11-reihe{max-width:min(var(--max),calc(72vh * 2.25));margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--fuge)}
+.ul11-z .ul-b{aspect-ratio:3/4;border-radius:0}
+.ul11-z:first-child .ul-b{border-radius:var(--r) 0 0 var(--r)}
+.ul11-z:last-child .ul-b{border-radius:0 var(--r) var(--r) 0}
+html.js:not(.ruhig) .ul11-z{opacity:.14;will-change:opacity}
+
+/* ---------------------------------------------------------------- 12 Speisefolge: Rudis Schreibweise, Wort für Wort aus dem Schlitz */
+.ul12{padding:clamp(60px,10vh,104px) var(--rand) clamp(6px,2vh,20px)}
+.ul12-feld{max-width:var(--max);margin:0 auto}
+.ul12-zeilen{display:flex;flex-wrap:wrap;column-gap:.3em;margin:0;font-family:var(--titel);font-weight:300;font-size:clamp(30px,4.4vw,72px);line-height:1.06;letter-spacing:.012em;font-variation-settings:"SOFT" 100,"WONK" 0,"opsz" 144}
+.ul12-zeilen .ul-z{display:inline-block}
+.ul12-zeilen i{font-style:normal;color:var(--kerze)}
+.ul .ul12-unter{margin-top:22px}
+
+/* ---------------------------------------------------------------- 13 Durchblick: das Loch in der Wand, dahinter wandert die Tafel */
+.ul13{padding:clamp(40px,7vh,72px) var(--rand) 0}
+.ul13-wand{position:relative;max-width:var(--max);margin:0 auto;height:clamp(300px,58vh,540px)}
+.ul13-loch{position:absolute;left:28%;right:3%;top:0;bottom:0;overflow:clip;
+  clip-path:polygon(5% 8%,21% 3%,40% 6%,57% 1%,78% 5%,95% 2%,98% 21%,96% 46%,99% 70%,95% 96%,73% 99%,50% 94%,28% 98%,8% 95%,3% 72%,6% 47%,1% 25%);
+  -webkit-clip-path:polygon(5% 8%,21% 3%,40% 6%,57% 1%,78% 5%,95% 2%,98% 21%,96% 46%,99% 70%,95% 96%,73% 99%,50% 94%,28% 98%,8% 95%,3% 72%,6% 47%,1% 25%)}
+.ul13-tief{position:absolute;left:0;right:0;top:-14%;bottom:-14%;will-change:transform}
+.ul13-tief .ul-b{width:100%;height:100%;border-radius:0}
+.ul13-zeile{position:absolute;left:0;bottom:6%;max-width:24%}
+
+/* ---------------------------------------------------------------- 14 Klappkarte: klappt auf wie ein Buch */
+.ul14{padding:clamp(44px,7vh,80px) var(--rand) 0}
+.ul14-buch{display:flex;justify-content:center;perspective:2000px}
+.ul14-vorn,.ul14-rechts{height:clamp(300px,60vh,560px);aspect-ratio:3/4}
+.ul14-vorn{position:relative;border-radius:var(--r) 0 0 var(--r);overflow:hidden;transform-origin:100% 50%}
+.ul14-vorn .ul-b{width:100%;height:100%;border-radius:0}
+.ul14-deckel{position:absolute;inset:0;z-index:2;background:#3A3845;border-radius:0 var(--r) var(--r) 0;display:grid;place-items:center;color:#FAF4F4;transform-origin:0 50%}
+.ul14-deckel::before{content:"";position:absolute;inset:10px;border:1px solid rgba(250,244,244,.22);border-radius:5px}
+.ul14-deckel .marke{width:72%;height:auto}
+html.js:not(.ruhig) .ul14-deckel{transition:transform .95s cubic-bezier(.5,0,.75,.4) .2s}
+html.js:not(.ruhig) .ul14-vorn{transform:rotateY(90deg);transition:transform 1.05s cubic-bezier(.2,.6,.3,1) 1.15s}
+html.js .ul14.da .ul14-deckel{transform:rotateY(-90deg)}
+html.js .ul14.da .ul14-vorn{transform:none}
+html.ruhig .ul14-deckel{display:none}
+.ul14-rechts{position:relative;perspective:2000px;perspective-origin:0 50%;background:#3A3845;border-radius:0 var(--r) var(--r) 0;box-shadow:inset 1px 0 0 rgba(250,244,244,.14);padding:clamp(22px,3vw,48px);display:flex;flex-direction:column;justify-content:center;gap:12px;color:#FAF4F4}
+.ul .ul14-k{color:var(--kerze-hell)}
+.ul14-str{margin:0;font-family:var(--titel);font-weight:340;font-size:clamp(26px,2.8vw,44px);line-height:1.06;letter-spacing:-.01em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.ul14-ort{margin:0;font-size:17px;color:rgba(250,244,244,.82)}
+.ul14-zeit{display:flex;flex-direction:column;gap:6px;margin-top:10px!important;color:rgba(250,244,244,.78)!important}
+
+/* ---------------------------------------------------------------- 15 Ausrichten: schräg hingeworfen, beim Scrollen eine gerade Reihe */
+.ul15{padding:clamp(56px,9vh,96px) var(--rand) 0}
+.ul15-reihe{max-width:min(var(--max),calc(68vh * 2.25));margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--fuge)}
+.ul15-z{will-change:transform}
+.ul15-z .ul-b{aspect-ratio:3/4}
+
+/* ================================================================ Leiste unten: Nummer und Vorschaubild */
+body:has(.ul-leiste:not([hidden])){padding-bottom:var(--ul-l,50px)}
+.ul-leiste{position:fixed;left:0;right:0;bottom:0;z-index:96;height:var(--ul-l,50px);display:flex;align-items:center;gap:8px;padding:0 10px;background:#0F0E13;color:#FAF4F4;border-top:1px solid rgba(250,244,244,.1);font:500 13px/1 var(--etikett)}
+.ul-pfeil{flex:none;width:34px;height:34px;border:0;border-radius:8px;background:rgba(250,244,244,.08);color:#FAF4F4;font:400 22px/1 var(--text);cursor:pointer}
+@media (hover:hover){.ul-pfeil:hover{background:var(--kerze)}}
+.ul-daumen{flex:1 1 auto;min-width:0;display:flex;gap:5px;overflow-x:auto;scrollbar-width:none;padding:2px 0}
+.ul-daumen::-webkit-scrollbar{display:none}
+.ul-daumen button{flex:none;position:relative;width:64px;height:36px;padding:0;border:0;border-radius:5px;overflow:hidden;background:#26252E;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(250,244,244,.12)}
+.ul-daumen img{display:block;width:100%;height:100%;object-fit:cover;opacity:.62;transition:opacity .3s}
+.ul-daumen b{position:absolute;left:4px;bottom:3px;font:500 11px/1 var(--mono);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.9)}
+.ul-daumen button.an{box-shadow:inset 0 0 0 2px var(--kerze)}
+.ul-daumen button.an img,.ul-daumen button:hover img{opacity:1}
+.ul-name{flex:none;margin:0;min-width:180px;max-width:240px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.02em}
+.ul-name b{color:var(--kerze-hell);font-weight:500;margin-right:6px}
+
+/* ================================================================ Handy */
+@media (max-width:860px){
+  :root{--ul-l:46px}
+  .ul-name{display:none}
+  .ul-daumen button{width:56px;height:32px}
+  .ul-pfeil{width:32px;height:32px}
+
+  .ul2-fenster{height:58svh}
+  .ul2-satz{font-size:clamp(30px,8.6vw,44px)}
+
+  .ul3-rahmen{height:56svh}
+  .ul3-fl span{font-size:clamp(20px,6vw,30px)}
+  .ul3-l{padding-right:clamp(16px,4vw,24px)}.ul3-r{padding-left:clamp(16px,4vw,24px)}
+  .ul3-fl::before{inset:10px}
+  .ul3-zeile{line-height:1.5}
+
+  .ul4-paar .ul-b{height:46svh}
+  .ul .ul4-paar p{font-size:11px;line-height:1.45}
+
+  .ul5-wort{font-size:clamp(52px,15vw,80px)}
+
+  .ul6-lauf span{font-size:21px}
+
+  .ul7-feld{height:120px}
+
+  .ul8-feld{max-width:none}
+  .ul8-t{position:static;margin-bottom:22px}
+  .ul8-stufen{flex-wrap:wrap;justify-content:flex-start;align-items:flex-end;row-gap:var(--fuge)}
+  .ul8-s:nth-child(n){width:calc(50% - var(--fuge)/2)}
+  .ul8-s:nth-child(1){width:calc(44% - var(--fuge)/2)}.ul8-s:nth-child(2){width:calc(56% - var(--fuge)/2)}
+  .ul8-s:nth-child(3){width:calc(44% - var(--fuge)/2)}.ul8-s:nth-child(4){width:calc(56% - var(--fuge)/2)}
+
+  .ul9-rahmen{height:52svh}
+
+  .ul10-str{font-size:clamp(26px,7.4vw,36px)}
+  .ul10-schild{padding:20px 26px 18px}
+
+  .ul11-reihe{max-width:none}
+
+  .ul12-zeilen{font-size:clamp(28px,8.4vw,40px)}
+
+  .ul13-wand{height:auto}
+  .ul13-loch{position:relative;left:auto;right:auto;height:52svh}
+  .ul13-zeile{position:static;max-width:none;margin-top:16px!important}
+
+  .ul14-buch{perspective:1200px}
+  .ul14-vorn,.ul14-rechts{height:auto;width:50%;aspect-ratio:3/4.4}
+  .ul14-rechts{padding:16px 14px;gap:8px}
+  .ul14-str{font-size:21px}
+  .ul14-ort{font-size:14px}
+  .ul .ul14-k,.ul .ul14-zeit{font-size:10.5px;letter-spacing:.04em}
+
+  .ul15-reihe{max-width:none}
+}

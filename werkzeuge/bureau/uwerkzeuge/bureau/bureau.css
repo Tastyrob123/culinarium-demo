@@ -1,0 +1,204 @@
+/* bureau.css · Le Bureau im Rahmen von Culinarium (28.10.2026, aus dem Vorbild Schäfli). Kein eigenes Kleid: alles Sichtbare kommt aus dem Paket
+   (/culinarium-demo/assets/oberflaeche/grund.css, rahmen-buehne.css, kleid/culinarium.css). Kein fester Farbwert: jeder Ton ist aus den Werten des Kleids gemischt
+   (Fehlerbuch 10a: keine Farbe aus der Vorlage eines anderen Hauses). Hier stehen nur
+   1. die Brücke: die Werte, mit denen die Arbeitsfläche des Stamm-Werkzeugs zeichnet (welt.css: --blatt, --tinte, Platte, Kuhle, Knöpfe …),
+      zeigen auf die Werte des Kleids (--wo-…), in beiden Welten gleich;
+   2. die Lage von Quittung und Fenster im Rahmen «Die Bühne» (Rand 286 px, Leiste unten).
+   Wählt nie einen wo-Baustein an. */
+
+:root[data-wo-haus],:root[data-wo-haus][data-welt="land"],:root[data-wo-haus][data-welt="grand"]{
+  --blatt:var(--wo-blatt); --grund:var(--wo-papier); --zwei:var(--wo-papier2); --kante:var(--wo-g2);
+  --dunkel:var(--wo-tief); --dunkel2:var(--wo-nacht); --tief:color-mix(in srgb,var(--wo-tief) 80%,#000);
+  --tinte:var(--wo-tinte); --metall:var(--wo-g2); --strich:var(--wo-g2); --akzent:var(--wo-akzent); --klein:var(--wo-akzent); --punkt:var(--wo-punkt);
+  --linie-h:var(--wo-linie); --linie-d:var(--wo-linie-d);
+  --sans:var(--wo-sans); --mono:var(--wo-mono);
+  --titel:var(--wo-titel); --titel-g:var(--wo-titel-g); --titel-ls:0; --titel-mass:.94; --versal:var(--wo-titel); --versal-ls:.2em;
+  --r-xl:var(--wo-r1); --r-l:var(--wo-r1); --r-m:var(--wo-r2);
+  --platte-h:linear-gradient(180deg,color-mix(in srgb,var(--wo-blatt) 70%,#fff),var(--wo-blatt) 60%,color-mix(in srgb,var(--wo-blatt) 88%,var(--wo-tinte)));
+  --platte-h-s:inset 0 1px 0 #fff,inset 0 0 0 1px var(--wo-linie),0 26px 40px -30px rgba(0,0,0,.4);
+  --kuhle-h:linear-gradient(180deg,color-mix(in srgb,var(--wo-papier) 86%,var(--wo-tinte)),color-mix(in srgb,var(--wo-papier) 92%,var(--wo-tinte)) 40%,color-mix(in srgb,var(--wo-papier) 95%,var(--wo-tinte)));
+  --kuhle-h-s:inset 0 3px 6px -1px color-mix(in srgb,var(--wo-tief) 16%,transparent),inset 0 1px 0 color-mix(in srgb,var(--wo-tief) 9%,transparent),0 1px 0 #fff;
+  --platte-d:linear-gradient(180deg,var(--wo-nacht2),var(--wo-nacht) 50%,var(--wo-tief));
+  --platte-d-s:inset 0 1px 0 rgba(255,255,255,.14),inset 0 0 0 1px var(--wo-linie-d),0 26px 40px -16px rgba(0,0,0,.6);
+  --kuhle-d:linear-gradient(180deg,color-mix(in srgb,var(--wo-tief) 80%,#000),color-mix(in srgb,var(--wo-tief) 90%,#000) 34%,var(--wo-tief));
+  --kuhle-d-s:inset 0 3px 6px -1px rgba(0,0,0,.6),inset 0 1px 0 rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.08);
+  --kn-h:linear-gradient(180deg,var(--wo-g1),var(--wo-g2) 46%,var(--wo-g3));
+  --kn-h-s:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -3px 0 rgba(0,0,0,.22),0 14px 24px -14px rgba(0,0,0,.55);
+  --kn-d:linear-gradient(180deg,var(--wo-nacht2),var(--wo-nacht) 50%,var(--wo-tief));
+  --kn-d-s:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -3px 0 rgba(0,0,0,.3),0 14px 24px -14px rgba(0,0,0,.6);
+  --knauf-d:linear-gradient(180deg,var(--wo-nacht2),var(--wo-tief)); --knauf-d-s:inset 0 1px 0 rgba(255,255,255,.22),0 3px 6px rgba(0,0,0,.3);
+  --knauf-h:linear-gradient(180deg,var(--wo-g1),var(--wo-g3)); --knauf-h-s:inset 0 1px 0 rgba(255,255,255,.8),0 3px 6px rgba(0,0,0,.3);
+  --kn-fs:11px; --kn-ls:.16em;
+}
+body.ws.wo-app{background-color:var(--wo-papier);background-image:var(--wo-tapete);font-size:15px}
+.ws.wo-app{--ws-kopf:74px;--ws-rand:286px;--ws-leise:color-mix(in srgb,var(--wo-tinte) 64%,var(--wo-papier));--ws-leise-h:color-mix(in srgb,var(--wo-tinte) 66%,var(--wo-papier))}
+
+/* Startbild des Pakets in der Hauptfläche: Abstand nach unten wie bei den anderen Werkzeugen */
+.ws-titel--wo{display:block;max-width:none;margin:0 0 36px;text-align:left;color:inherit}   /* Fehlerbuch 10a: unter der Bühne mindestens 30 px Luft (Handy 24) */
+.ws-wo-start > .wo-lage{margin-top:0}
+.wo-raum > * + *{margin-top:22px}
+.wo-raum .ws-titel--wo + *{margin-top:0}
+
+/* Quittung über der Leiste, im Rahmen «Die Bühne» */
+.ws.wo-app .ws-quittung-ort{left:342px;right:28px;bottom:104px}
+.wo-rand__z{font-style:normal;font:400 9.5px/1 var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-akzent);margin-left:auto}
+@media (max-width:900px){
+  .ws.wo-app .ws-quittung-ort{left:10px;right:10px;bottom:84px}
+  .ws.wo-app .ws-haupt,.ws.wo-app #ws-mitte{padding:0}
+  .ws-titel--wo{margin-bottom:28px}
+}
+
+/* Bereich-Kacheln der Übersicht mit Foto (Fehlerbuch 10a «Bilder in jeder Liste»): website.css setzt .ws-bk auf display:block (Stamm-Fassung),
+   damit fiel das Foto der Rahmen-Kachel .wo-bk (Raster 132 px + Text) auf Breite null. Hier gilt wieder das Raster des Rahmens. */
+.wo-app .wo-ber > .wo-bk.ws-bk{display:grid;padding:0;border-radius:var(--wo-r2)}
+.wo-app .wo-ber > .wo-bk.ws-bk .wo-bk__b{display:block}
+
+/* Knöpfe des Stamms (.kn) im Startbild einer Ansicht («Veröffentlichen» im Entwurf, Weg zur Tafel): grund.css nimmt Knöpfen im Rahmen den Innenabstand,
+   die Schrift lief bis an den linken Rand und stand grösser als die Knöpfe daneben (Demo-Check Schlössli 21.10.2026, hier nachgezogen). */
+.ws.wo-app .ws-titel--wo .kn{padding:0 6px 0 20px;font:400 var(--kn-fs)/1 var(--wo-mono);letter-spacing:var(--kn-ls);text-transform:uppercase}
+/* Kacheln gleichmässig (Fehlerbuch 10a): zwischen 701 und 1100 px stehen die neun Bereiche zwei je Reihe, die letzte allein mittig statt links. */
+@media (min-width:701px) and (max-width:1100px){
+  .ws.wo-app .wo-ber > .wo-bk:nth-child(odd):last-child{grid-column:1 / -1;justify-self:center;width:calc(50% - 8px)}
+}
+
+/* ---------------------------------------------------------------- Termine (termine-ansicht.js, Culinarium 28.10.2026)
+   Jeder Abend als Karte: links sein Plakat (wie auf «Der Abend»: Wortmarke, Datum gross, Akzentfarbe je Abend), rechts die Felder.
+   Geänderte Karten warten gelb wie jede offene Eingabe des Werkzeugs (Kante in Kerzenlicht). Nur Werte des Kleids. */
+.cu-liste{display:grid;gap:18px}
+.cu-t{display:grid;grid-template-columns:132px minmax(0,1fr);gap:24px;align-items:start;padding:20px 22px;border-radius:var(--wo-r1);
+  background:var(--wo-blatt);box-shadow:inset 0 3px 0 var(--wo-kerze),inset 0 0 0 1px var(--wo-linie),0 22px 34px -30px color-mix(in srgb,var(--wo-tief) 60%,transparent)}
+.cu-t--offen{box-shadow:inset 0 3px 0 var(--wo-kerze),inset 0 0 0 2px color-mix(in srgb,var(--wo-kerze) 70%,transparent),0 22px 34px -30px color-mix(in srgb,var(--wo-tief) 60%,transparent);
+  background:color-mix(in srgb,var(--wo-blatt) 88%,var(--wo-kerze))}
+.cu-t--leuchtet{animation:cu-leuchten 1.6s ease-out 1}
+@keyframes cu-leuchten{from{box-shadow:inset 0 3px 0 var(--wo-kerze),0 0 0 6px color-mix(in srgb,var(--wo-kerze) 45%,transparent)}}
+.cu-t--beispiel{opacity:.82}
+.cu-pl{position:relative;margin:0;aspect-ratio:3/4;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  background:var(--wo-tief);color:var(--wo-blatt);box-shadow:inset 0 0 0 1px var(--wo-linie-d),inset 0 -4px 0 var(--ak)}
+.cu-pl__zeile{position:absolute;top:9px;left:0;right:0;text-align:center;font:400 7.5px/1 var(--wo-mono);letter-spacing:.16em;color:var(--wo-gold)}
+.cu-pl__marke{width:76%;height:auto;color:var(--wo-blatt);margin-bottom:6px}
+.cu-pl__tag{font:340 40px/1 var(--wo-titel);font-variation-settings:"SOFT" 100;color:var(--ak)}
+.cu-pl__monat{font:400 11px/1 var(--wo-etikett);letter-spacing:.12em;text-transform:uppercase}
+.cu-pl__frei{position:absolute;bottom:12px;font:400 9px/1 var(--wo-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-gold)}
+.cu-pl--voll::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 11px,color-mix(in srgb,var(--wo-tief) 40%,transparent) 11px 13px)}
+.cu-t__felder{min-width:0;display:grid;gap:12px}
+.cu-t__kopf{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.cu-t__wann{margin:0;font:340 24px/1.15 var(--wo-titel);font-variation-settings:"SOFT" 100;color:var(--wo-tief)}
+.cu-t__marke{font:400 10px/1 var(--wo-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-akzent);border-top:1px solid var(--wo-akzent);border-bottom:1px solid var(--wo-akzent);padding:4px 0}
+.cu-t__reihe{display:grid;grid-template-columns:minmax(0,2.4fr) minmax(0,1fr) minmax(0,.8fr) minmax(0,.7fr);gap:12px;align-items:end}
+.cu-f{display:grid;gap:6px;min-width:0}
+.cu-f__l{font:400 11px/1 var(--wo-etikett);letter-spacing:.12em;text-transform:uppercase;color:var(--ws-leise)}
+.cu-datum{display:grid;grid-template-columns:.7fr 1.4fr 1fr;gap:6px}
+.cu-zahl{box-sizing:border-box;width:100%;height:44px;padding:0 12px;border:0;border-radius:var(--wo-r2);font:400 16px/1 var(--wo-mono);color:var(--wo-tinte);
+  background:var(--kuhle-h);box-shadow:var(--kuhle-h-s)}
+.cu-zahl:focus-visible{outline:2px solid var(--wo-kerze);outline-offset:2px}
+.cu-t .ws-auswahl{display:block;min-width:0}
+.cu-t .ws-auswahl__knopf{height:44px;min-width:0;width:100%;padding:0 12px;gap:6px}
+.cu-t .ws-auswahl__knopf > span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cu-t__frei{margin:0;font-size:14px;color:var(--ws-leise)}
+.cu-t__fehler{margin:0;font-size:14px;color:var(--wo-akzent)}
+.cu-t__kn{display:flex;gap:18px;flex-wrap:wrap}
+.cu-leer > p,.cu-leise,.cu-quelle{color:var(--ws-leise);font-size:15px;margin:0 0 14px}
+.cu-quelle{font-size:13px;margin-top:30px}
+.cu-v,.cu-vl,.cu-vs{margin-top:44px}
+.cu-v__z,.cu-vl__z{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 16px;align-items:baseline;padding:14px 0;border-top:1px solid var(--wo-linie)}
+.cu-vl__z{grid-template-columns:minmax(0,200px) minmax(0,1fr) auto;align-items:center}
+.cu-v__z s,.cu-v__z mark{grid-column:2}
+.cu-v__z s{color:var(--ws-leise);text-decoration-color:var(--wo-akzent)}
+.cu-v__z mark{background:color-mix(in srgb,var(--wo-kerze) 22%,transparent);color:var(--wo-tinte);padding:2px 6px;border-radius:3px;justify-self:start}
+.cu-v__mk{font:400 10px/1.4 var(--wo-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-akzent)}
+.cu-v__z--beispiel,.cu-vl__z--beispiel{opacity:.7}
+.cu-vl__z b{font:400 14px/1.4 var(--wo-mono)}
+.cu-vl__z--ur{border-bottom:1px solid var(--wo-linie)}
+.cu-vs__kopf{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.cu-vs__kopf .cu-leise{margin:0;flex:1 1 280px}
+.cu-vs__huelle{border-radius:var(--wo-r1);overflow:hidden;background:var(--wo-tief);box-shadow:inset 0 0 0 1px var(--wo-linie-d);height:620px;display:flex;justify-content:center}
+.cu-vs__rahmen{border:0;width:100%;height:100%;background:var(--wo-tief)}
+.cu-vs__huelle[data-breite="handy"] .cu-vs__rahmen{width:390px;max-width:100%}
+@media (max-width:860px){
+  .cu-t{grid-template-columns:88px minmax(0,1fr);gap:14px;padding:16px}
+  .cu-t__reihe{grid-template-columns:1fr 1fr}
+  .cu-f--datum{grid-column:1/-1}
+  .cu-t__wann{font-size:20px}
+  .cu-pl__tag{font-size:28px}
+  .cu-vl__z{grid-template-columns:1fr}
+  .cu-vs__huelle{height:520px}
+}
+/* 30.10.2026 (Messlauf): am Handy stand das Datum in 224 px neben dem Plakat, Tag, Monat, Jahr und Beginn wurden zu «2…», «Nove…», «19:00 …».
+   Neben dem Plakat steht nur noch der Titel, die Felder laufen darunter über die ganze Breite. */
+/* 30.10.2026 (Messlauf 1000 px): vier Felder nebeneinander liessen dem Tag 41 px («2.», nur der Pfeil). Bis 1240 px steht das Datum allein in der ersten Zeile. */
+@media (min-width:861px) and (max-width:1240px){
+  .cu-t__reihe{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cu-f--datum{grid-column:1/-1}
+  .cu-datum{grid-template-columns:72px minmax(0,1fr) 96px}
+}
+@media (max-width:560px){
+  .cu-t__felder{display:contents}
+  .cu-t__felder > *{grid-column:1/-1}
+  .cu-t .cu-t__bild{grid-row:1}
+  .cu-t__felder > :is(.cu-t__wann,.cu-t__kopf){grid-column:2;grid-row:1;align-self:center}
+  .cu-datum{grid-template-columns:72px minmax(0,1fr) 96px}
+}
+@media (max-width:340px){.cu-t{grid-template-columns:1fr}.cu-t__bild{max-width:120px}.cu-t__felder > :is(.cu-t__wann,.cu-t__kopf){grid-column:1/-1;grid-row:auto}}
+
+/* Gestaltung 28.10.2026 (Prüfchat Gestaltung)
+   1. Titel der Aufgaben-Karten in Tinte: «.ws-ag span» (Stamm) färbte den ganzen Textblock leise, auch den Titel.
+   2. Sieben Aufgaben ohne Restreihe: die erste Karte (Neuer Abend) liegt doppelt breit, bei drei Spalten auch die letzte; nie mehr als vier Spalten. */
+.ws-ag .wo-ag__t{color:var(--wo-tinte)}
+.ws-ag .wo-ag__t>span{color:var(--ws-leise-h)}
+.ws-aufgaben{container-type:inline-size}
+@container (min-width:968px){.ws-aufgaben{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ws-aufgaben:has(>.wo-ag:nth-child(7):last-child)>.wo-ag:first-child .wo-ag__b{aspect-ratio:32/9}
+@container (min-width:476px){
+  .ws-aufgaben:has(>.wo-ag:nth-child(7):last-child)>.wo-ag:first-child{grid-column:span 2}
+}
+@container (min-width:722px) and (max-width:967.98px){
+  .ws-aufgaben:has(>.wo-ag:nth-child(7):last-child)>.wo-ag:last-child{grid-column:span 2}
+  .ws-aufgaben:has(>.wo-ag:nth-child(7):last-child)>.wo-ag:last-child .wo-ag__b{aspect-ratio:32/9}
+}
+/* 3. Plakate als Kartenbild: Ausschnitt aus dem Motiv, nie die Kante des Wortmarken-Bands am unteren Rand */
+.ws-ag img[src*="/p_"]{object-position:50% 22%}
+/* 4. Bereiche: der Satz steht ganz (kein «…»); acht Bereiche in drei Spalten ohne Restreihe: der letzte liegt doppelt breit */
+.ws-bereiche .wo-bk__t>span{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}
+.ws-bereiche{container-type:inline-size}
+@container (min-width:824px) and (max-width:1125.98px){
+  .ws-bereiche:has(>.wo-bk:nth-child(8):last-child)>.wo-bk:last-child{grid-column:span 2}
+}
+.ws-bk .wo-bk__b{overflow:hidden}
+.ws-bk img[src*="/p_"]{object-position:50% 0;transform:scale(1.38);transform-origin:50% 0}
+
+/* Robert 29.10.2026: Plakate der Abende sind quadratisch und stehen ganz, nie mit angeschnittener Wortmarke */
+.ws-eintrag .ws-eintrag__b{aspect-ratio:1/1}
+
+/* Messlauf 30.10.2026 (Kriterium 31): Plakat-Fotos in den Fotokacheln einer Seite stehen ganz (Dirty Chicken «Pop up»), auf der Nachtfarbe */
+.ws-foto:has(img[src*="plakat"]){background:#16141B}
+.ws-foto img[src*="plakat"]{object-fit:contain}
+/* Messlauf 30.10.2026 (Kriterium 35): Schrift der Umschalter und kleinen Tasten optisch mittig, Zeile auf Versalhöhe zugeschnitten, Höhe wie vorher */
+.ws-wahl2 button{text-box:trim-both cap alphabetic;padding-block:0;height:34px}
+.ws-taste:not(:has(svg,i,img)){display:inline-block;text-box:trim-both cap alphabetic;min-height:0;padding-block:14.3px}
+
+/* 30.10.2026 (Messlauf): lange Gruppentitel («Culinarium im Walk on the Wild Side.») wurden auf «Culinarium i…» gekürzt. Sie brechen jetzt um; die Zahl rechts bleibt oben stehen. */
+#ws-gruppen .ws-gr > summary{align-items:flex-start}
+#ws-gruppen .ws-gr > summary > b{white-space:normal;overflow:visible;text-overflow:clip;text-wrap:balance;min-width:0}
+#ws-gruppen .ws-gr > summary > small{flex-shrink:0;margin-top:.35em}
+/* Messlauf 30.10.2026: Werte unter «Zeiten & Preise» auf Versalhöhe zugeschnitten (Safari am Handy 0,6 px zu tief), Höhe bleibt 40 px */
+.ws-zl__wert{text-box:trim-both cap alphabetic}
+/* Ein langes Wort («Haasemannstraße 13.») schob sich unter «4 Texte · 2 Fotos»: der Titel ist nie schmaler als sein längstes Wort, die Zahl rückt dann in die nächste Zeile. */
+#ws-gruppen .ws-gr > summary{flex-wrap:wrap}
+#ws-gruppen .ws-gr > summary > b{flex:1 1 auto;min-width:min-content}
+/* Herkunftszeile über einem Wert («Weitere Texte · Spirituosen · „…3-Gänge-Menü.“»): ausgewogen umbrechen, damit kein Wortteil allein in der zweiten Zeile steht */
+.ws-zl > .ws-mono{text-wrap:balance}
+/* Abnahme-Tor 2, 30.10.2026 (S2): Kacheltitel «Einen Text ändern», «Preis oder Öffnungszeit» … ohne einzelnes Wort in der letzten Zeile */
+.wo-ag__t b{text-wrap:wrap}
+/* Abnahme-Tor 2, 30.10.2026 (K2, nie gekürzt): die Texte der Seitenliste («In der Seite») und die Bildtitel im Fenster «Foto tauschen» stehen ganz, ohne «…» */
+#ws-gruppen .ws-st span{display:block;-webkit-line-clamp:unset;overflow:visible;overflow-wrap:break-word}
+.ws-fwahl__t{display:block;-webkit-line-clamp:unset;overflow:visible;text-wrap:balance}
+/* Abnahme-Tor 2, 30.10.2026 (K7/K2 bei 1280 und 1000): drei Bereichskacheln je Reihe liessen der Schrift zu wenig Platz («Dirty / Chicken», «hinter» allein).
+   Bis 1365 px stehen zwei je Reihe, zwischen 901 und 1100 px (Rand daneben) eine je Reihe. */
+@media (min-width:1101px) and (max-width:1365px){
+  .ws.wo-app .wo-ber{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ws.wo-app .wo-ber > .wo-bk{grid-column:auto!important;justify-self:stretch!important;width:auto!important}   /* acht Bereiche, vier Reihen zu zwei, keine Lücke */
+}
+@media (min-width:901px) and (max-width:1100px){
+  .ws.wo-app .wo-ber{grid-template-columns:minmax(0,1fr)}
+  .ws.wo-app .wo-ber > .wo-bk:nth-child(odd):last-child{grid-column:auto;justify-self:stretch;width:auto}
+}

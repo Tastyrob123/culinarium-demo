@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Muster · Werkzeug-Oberfläche</title><meta name="robots" content="noindex, nofollow">
+<!-- Musterseite des Pakets: jeder Baustein einmal, im Kleid des Hauses. Im Haus unter /culinarium-demo/assets/oberflaeche/muster.html?haus=culinarium.
+     So wird auch jedes Werkzeug eingebunden: 1. kleid/<haus>.js  2. grund.css  3. rahmen-<inseln|buehne>.css  4. kleid/<haus>.css  5. oberflaeche.js -->
+<script>var WOH = (new URLSearchParams(location.search).get('haus') || 'culinarium').replace(/[^a-z]/g, ''); document.write('<script src="kleid/' + WOH + '.js"><\/script>');</script>
+<script>document.write('<link rel="stylesheet" href="grund.css"><link rel="stylesheet" href="rahmen-' + WO_HAUS.rahmen + '.css"><link rel="stylesheet" href="kleid/' + WOH + '.css"><script src="oberflaeche.js"><\/script>');</script>
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="wo-app">
+<header class="wo-kopf" id="kopf"></header>
+<nav class="wo-rand" id="rand" aria-label="Bereiche"></nav>
+<main class="wo-raum" id="raum"></main>
+<footer class="wo-leiste" id="leiste"></footer>
+<script>
+(function () {
+  var H = WO.haus, f = H.foto;
+  document.getElementById('kopf').innerHTML = WO.kopf({ werkzeug: 'website', unter: 'Website', titel: 'Muster', stand: 'Alle Bausteine', pruefung: '#', anleitung: '#', website: '/' });
+  document.getElementById('rand').innerHTML = WO.rand([
+    { eintraege: [{ text: 'Übersicht', an: true, href: '#' }] },
+    { titel: 'Gruppe', eintraege: [{ text: 'Eintrag', href: '#' }, { text: 'Eintrag mit Zahl', zahl: 3, href: '#' }, { text: 'Noch ein Eintrag', href: '#' }] },
+    { titel: 'Für alle Seiten', eintraege: [{ text: 'Angaben des Hauses', href: '#' }, { text: 'Zeiten & Preise', href: '#' }] }
+  ], { website: '/', anleitung: '#', pruefung: '#' });
+  document.getElementById('leiste').innerHTML = WO.leiste({ titel: 'Entwurf: 1 Änderung wartet', satz: 'Gespeichert, noch nicht auf der Website.', entwurf: true,
+    knoepfe: WO.knopf('Vorher, nachher', 'auge', 'glas', { klein: true }) + WO.knopf('Speichern', 'haken', 'glas', { klein: true }) + WO.knopf('Veröffentlichen', 'hoch', 'gold', { klein: true }) });
+  var kachel = function (t, s, z) { return '<a class="wo-ag" href="#"><span class="wo-ag__b"><img src="' + f + '" alt=""></span><span class="wo-ag__t"><i class="wo-ag__z">' + WO.ic(z) + '</i><b>' + t + '</b><span>' + s + '</span></span></a>'; };
+  var bereich = function (t, n, s) { return '<a class="wo-bk" href="#"><span class="wo-bk__b"><img src="' + f + '" alt=""></span><span class="wo-bk__t"><b>' + t + '</b><small>' + n + '</small><span>' + s + '</span></span><i class="wo-bk__p">' + WO.ic('pfeil') + '</i></a>'; };
+  var an = function (n, d, st, neu) { return '<a class="wo-an' + (neu ? ' wo-an--neu' : '') + '" href="#"><span class="wo-an__b"><img src="' + f + '" alt=""></span><span class="wo-an__t"><span class="wo-an__k"><i class="wo-sp">DE</i>Zimmer · 2 Personen</span><b>' + n + '</b><small>' + d + '</small></span><span class="wo-an__st"><em>' + st + '</em><small>vor 1 Tag</small></span></a>'; };
+  document.getElementById('raum').innerHTML =
+    WO.startbild({ werkzeug: 'website', h1: '<span data-wo-gruss>' + WO.gruss() + '</span> <em>Was ändern wir heute?</em>', satz: 'Das Startbild ist in allen sechs Werkzeugen eines Hauses gleich: Gruss nach Tageszeit, ein Satz, was das Werkzeug tut, Knopf «Anleitung», das Haus von aussen.',
+      knoepfe: WO.knopf('Anleitung', 'buch', 'gold', { href: '#' }) + WO.knopf('Zweiter Weg', 'chat', 'glas', { href: '#' }) })
+    + '<div class="wo-lage"><div class="wo-lg"><i class="wo-lg__z">' + WO.ic('stift') + '</i><span class="wo-mk">Leerer Zustand</span><b>Nichts offen</b><p>Was du speicherst, sammelt sich hier.</p></div>'
+    + '<div class="wo-lg"><i class="wo-lg__z">' + WO.ic('welt') + '</i><span class="wo-mk">Lage</span><b>Wie gebaut</b><p>Ein Satz zum Stand.</p><a class="wo-lk" href="#">Weg dorthin</a></div>'
+    + '<div class="wo-lg"><i class="wo-lg__z">' + WO.ic('karte') + '</i><span class="wo-mk">Lage</span><b>Drei Fächer</b><p>Immer drei, am Handy untereinander.</p><a class="wo-lk" href="#">Weg dorthin</a></div></div>'
+    + '<h2 class="wo-zw">Kacheln <em>mit Foto</em></h2><div class="wo-aufg">' + kachel('Einen Text ändern', 'Kurzer Satz, wozu.', 'stift') + kachel('Foto tauschen', 'Kurzer Satz, wozu.', 'foto') + kachel('Hinweis für Gäste', 'Kurzer Satz, wozu.', 'glocke') + kachel('Telefon oder E-Mail', 'Kurzer Satz, wozu.', 'tel') + '</div>'
+    + '<h2 class="wo-zw">Bereiche <em>als Liste</em></h2><div class="wo-ber">' + bereich('Startseite', '1 Seite', 'Ein Satz, was in diesem Bereich steht.') + bereich('Zimmer', '5 Seiten', 'Ein Satz, was in diesem Bereich steht.') + bereich('Rechtliches', '1 Seite', 'Ein Satz, was in diesem Bereich steht.') + '</div>'
+    + '<h2 class="wo-zw">Liste, Filter <em>und Detail</em></h2><div class="wo-eing"><div class="wo-eing__leiste"><div class="wo-seg" role="group"><button type="button" aria-pressed="true">Alle <b>3</b></button><button type="button" aria-pressed="false">Offen <b>2</b></button><button type="button" aria-pressed="false">Erledigt <b>1</b></button></div>'
+    + '<label class="wo-such">' + WO.ic('suche') + '<input type="search" placeholder="Suchen"></label><span class="wo-hinw">Beispiele, als Beispiel beschriftet</span></div>'
+    + '<div class="wo-eing__liste">' + an('Beispiel Gast', '14. bis 17. November', 'Neu', true) + an('Zweiter Gast', 'Samstag, 19.30 Uhr', 'Offen') + an('Dritter Gast', '3. und 4. März', 'Erledigt') + '</div>'
+    + '<article class="wo-det"><header class="wo-det__kopf"><span class="wo-mk">Zimmer · Beispiel</span><h3>Beispiel Gast</h3><dl class="wo-det__daten"><div><dt>Daten</dt><dd>14. bis 17. November</dd></div><div><dt>Personen</dt><dd>2</dd></div></dl></header>'
+    + '<div class="wo-det__brief"><div class="wo-brief"><div class="wo-brief__kopf">' + WO.zeichen() + '<b>' + H.voll + '</b><span>Briefkopf des Hauses</span></div><div class="wo-brief__text"><p>Sehr geehrter Herr Beispiel</p><p>Ein Brief auf Papier, offene Stellen <mark class="wo-lu">markiert</mark>.</p></div></div>'
+    + '<div class="wo-det__kn">' + WO.knopf('Als PDF speichern', 'pdf', 'dunkel') + WO.knopf('Text kopieren', 'kopie', 'hell') + '</div></div></article></div>'
+    + '<h2 class="wo-zw">Felder <em>und Wahl</em></h2><div class="wo-fe"><div class="wo-fe__kopf"><span class="wo-mk">Eintrag ändern</span><b>Beispiel</b></div><div class="wo-fe__reihe"><label class="wo-feld"><span>Name</span><input value="Beispiel"></label><label class="wo-feld"><span>Zusatz</span><input value=""></label></div>'
+    + '<div class="wo-fe__reihe wo-fe__reihe--u"><div class="wo-feld"><span>Art</span><div class="wo-wahl" role="group"><button type="button" aria-pressed="false">Eins</button><button type="button" aria-pressed="true">Zwei</button><button type="button" aria-pressed="false">Drei</button></div></div><div class="wo-fe__kn">' + WO.knopf('Abbrechen', 'x', 'hell', { klein: true }) + WO.knopf('Übernehmen', 'haken', 'dunkel', { klein: true }) + '</div></div></div>'
+    + '<div class="wo-quittung" role="status"><i>' + WO.ic('haken') + '</i><span><b>Gespeichert</b>Was sich geändert hat, in einem Satz.</span><a href="#">Vorher, nachher</a><a href="#">Rückgängig</a><button type="button" aria-label="Schliessen">' + WO.ic('x') + '</button></div>';
+  document.addEventListener('click', function (e) { var b = e.target.closest('.wo-seg button, .wo-wahl button'); if (b) b.parentNode.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); if (e.target.closest('a[href="#"]')) e.preventDefault(); });
+})();
+</script>
+</body></html>

@@ -1,0 +1,71 @@
+{
+ "_hinweis": "Knopf-Namen der Tafeln «So geht’s» je Werkzeug, erst nach der Lieferung aus dem Code des Werkzeugs gelesen (M20). Leer bis dahin.",
+ "bureau": [
+  [
+   "stift",
+   "Text oder Foto ändern",
+   "Den Bereich wählen, in der Vorschau auf den Text oder das Foto klicken und ändern, oder «Eigenes Foto hochladen». «Speichern» legt es in den Entwurf."
+  ],
+  [
+   "uhr",
+   "Einen Abend ankündigen",
+   "Unter Termine mit «Neuer Abend» Datum, Uhrzeit und Plätze eintragen. Ist er vorbei oder ausgebucht: «Von der Seite nehmen»."
+  ],
+  [
+   "waage",
+   "Erst ansehen, dann online",
+   "«Vorher, nachher» zeigt beide Stände nebeneinander, «Veröffentlichen» stellt sie auf die Website. Jeder frühere Stand lässt sich mit «Zurückholen» wieder holen."
+  ]
+ ],
+ "reception": [
+  [
+   "blase",
+   "Gäste fragen im Chat",
+   "Auf jeder Seite der Website können Gäste fragen. Mit «Chat ausprobieren» siehst du, was der Chat antwortet, wenn ein Gast nach Plätzen oder Unverträglichkeiten fragt."
+  ],
+  [
+   "eingang",
+   "Anfragen beantworten",
+   "Im «Eingang» steht jede Anfrage mit einem Brief im Ton des Culinarium. «Text kopieren» oder «Als PDF speichern», verschickt wird nur, was du selbst schickst."
+  ],
+  [
+   "liste",
+   "Lücken schliessen",
+   "Wusste der Chat etwas nicht, steht die Frage offen. Mit «Antwort nachtragen» ergänzt du es einmal; unter «Das weiss der Chat» siehst du, woraus er antwortet."
+  ]
+ ],
+ "carte": [
+  [
+   "stift",
+   "Den nächsten Abend anlegen",
+   "Mit «Nächsten Abend anlegen» entsteht die Karte des Abends; jeder Gang steht mit seinem Drink daneben, ein weiterer kommt mit «Neuer Eintrag» dazu."
+  ],
+  [
+   "pdf",
+   "Erst ansehen",
+   "«Probe-PDF» zeigt die Karte genau so, wie sie am Platz liegt. «Vorher, nachher» vergleicht mit dem letzten Stand."
+  ],
+  [
+   "zurueck",
+   "Speichern und zeigen",
+   "«Speichern» legt den Entwurf ab, «Veröffentlichen» setzt die PDF neu. Unter «Frühere Fassungen» liegt jeder frühere Abend bereit."
+  ]
+ ],
+ "imprimerie": [
+  [
+   "satz",
+   "Den Abend beschreiben",
+   "Unter «Abend beschreiben» Thema, Konzept, Gastkoch und Wochenende eintragen, drei, vier oder fünf Vorschläge wählen und «Vorschläge anlegen»."
+  ],
+  [
+   "fuenf",
+   "Neue Plakate, eigene Ideen",
+   "Jeder Vorschlag ist ein ganz neues Plakat im Stil von Rudis Plakaten, mit eigener Bildidee, vorn und hinten. Den passenden mit «Diesen bearbeiten» öffnen und im Editor fertig machen. Rudis Illustrationen liegen unter «Plakat-Motive»."
+  ],
+  [
+   "druck",
+   "Drucken",
+   "«Druckfertig speichern» legt das Plakat als PDF für die Druckerei ab, dazu Bilder für Beitrag und Story."
+  ]
+ ]
+}

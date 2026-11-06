@@ -1,0 +1,30 @@
+/* anleitung.css · Anleitung zu Le Bureau (Culinarium, 28.10.2026). Kopf dunkel in der Nacht der Bar, Raum hell im Warmweiss der Plakate (Werkzeuge hell), Werte nur aus dem Kleid. */
+body.an{margin:0;background:var(--wo-papier);color:var(--wo-tinte);font:16px/1.6 var(--wo-sans)}
+.an-kopf{position:sticky;top:0;z-index:5;background:var(--wo-tapete);border-bottom:1px solid var(--wo-linie-d)}
+.an-kopf__in{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.an-marke{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+.an-marke b{display:block;font:var(--wo-titel-g) 20px/1.1 var(--wo-titel)}
+.an-marke small{display:block;margin-top:4px;font:400 10px/1 var(--wo-mono);letter-spacing:.18em;text-transform:uppercase;color:var(--wo-g2)}
+.an-zeichen{width:44px;height:44px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--wo-linie-d);background:var(--wo-g2);
+  -webkit-mask:url(../../assets/oberflaeche/kleid/culinarium-zeichen.svg) center/62% no-repeat;mask:url(../../assets/oberflaeche/kleid/culinarium-zeichen.svg) center/62% no-repeat}
+.an-zurueck{font:400 11px/1 var(--wo-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-g1);text-decoration:none;padding:12px 16px;border-radius:var(--wo-r3);box-shadow:inset 0 0 0 1px var(--wo-linie-d)}
+.an-raum{max-width:1180px;margin:0 auto;padding:56px 24px 80px}
+.an-auftakt{max-width:760px;margin:0 0 56px}
+.an-zier{margin:0 0 14px;font:400 11px/1 var(--wo-mono);letter-spacing:.22em;text-transform:uppercase;color:var(--wo-akzent)}
+.an-auftakt h1{margin:0 0 18px;font:var(--wo-titel-g) clamp(36px,5vw,58px)/1.05 var(--wo-titel);color:var(--wo-tief)}
+.an-auftakt h1 em{font-style:normal;color:var(--wo-akzent)}
+.an-satz{margin:0;font-size:18px;color:var(--wo-leise)}
+.an-schritt{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start;padding:40px 0;border-top:2px solid var(--wo-nacht2)}
+.an-schritt--ohne{grid-template-columns:minmax(0,760px)}
+.an-nr{margin:0 0 10px;font:var(--wo-titel-g) 44px/1 var(--wo-titel);color:var(--wo-g3)}
+.an-text h2{margin:0 0 14px;font:var(--wo-titel-g) 28px/1.15 var(--wo-titel);color:var(--wo-tief)}
+.an-text p{margin:0 0 14px}
+.an-schritt figure{margin:0;border-radius:var(--wo-r1);overflow:hidden;box-shadow:0 0 0 1px var(--wo-linie),0 30px 50px -30px color-mix(in srgb,var(--wo-tief) 60%,transparent);background:var(--wo-blatt)}
+.an-schritt figure img{display:block;width:100%;height:auto}
+.an-weg{display:inline-block;margin:6px 10px 0 0;padding:12px 18px;border-radius:var(--wo-r3);font:400 11px/1 var(--wo-mono);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
+  color:var(--wo-blatt);background:linear-gradient(180deg,var(--wo-nacht2),var(--wo-nacht) 50%,var(--wo-tief));box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 12px 20px -12px color-mix(in srgb,var(--wo-tief) 70%,transparent)}
+.an-fuss{background:var(--wo-tief);color:var(--wo-g2);text-align:center;padding:28px 16px;font:400 10px/1 var(--wo-mono);letter-spacing:.2em;text-transform:uppercase}
+@media (max-width:860px){.an-schritt{grid-template-columns:1fr;gap:22px}.an-raum{padding:36px 16px 60px}.an-kopf__in{padding:12px 16px}.an-zurueck{padding:10px 12px;font-size:10px}.an-marke small{display:none}}
+/* Abnahme-Tor 2, 30.10.2026 (S1): «Zurück zum Werkzeug» einzeilig und mittig */
+.an-zurueck{white-space:nowrap;text-align:center;display:inline-flex;align-items:center;justify-content:center}
+@media (max-width:420px){.an-zurueck{letter-spacing:.1em;padding:10px 10px}}

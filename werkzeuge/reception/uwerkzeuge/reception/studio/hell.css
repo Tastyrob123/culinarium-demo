@@ -1,0 +1,407 @@
+/* Helle Farbwelt und Bühne für alle Werkzeuge des Grand Beau-Rivage (Robert 15.10.2026):
+   «Der Banner oben bleibt dunkelblau, dann der Hintergrund weiss, die Kacheln blau, links weiss lassen.»
+   «Heroes richtig schön, geil, luxuriös, edel», Vorbild Le Bureau des Carlton-Europe (Bühne mit Foto rechts).
+   Gilt für Le Bureau, Le Registre, La Réception, Le Livre. Wird nach studio.css und dem Werkzeug-CSS geladen. Vorher-Stand: _sicherung/…vor-hell-2026-10-15 */
+
+/* ---------- Raum: hell, Platten weiss mit leichtem Schatten ---------- */
+body.bu{background:#ece7e6;
+  --raum:#ece7e6;
+  --platte:linear-gradient(180deg,#fdfcfb,#f5f1f0 60%,#f1eceb);
+  --platte-s:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(200,135,111,.22),0 1px 0 rgba(146,73,46,.14),0 28px 50px -34px rgba(31,29,37,.38),0 10px 22px -16px rgba(31,29,37,.2);
+  --blau-k:radial-gradient(120% 90% at 50% 0%,rgba(234,88,35,.26),transparent 58%),linear-gradient(165deg,#34323f 0%,#25232c 46%,#15141a 100%);
+  --blau-s:inset 0 1px 0 rgba(255,255,255,.2),inset 0 0 0 1px rgba(244,171,145,.42),inset 0 -3px 0 rgba(0,0,0,.35),0 2px 2px rgba(19,18,22,.12),0 28px 40px -24px rgba(19,18,22,.6)}
+.rand{background:linear-gradient(180deg,#fefdfc,#f5f1f0);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(200,135,111,.24),0 24px 44px -30px rgba(31,29,37,.32)}
+
+/* Texte, die bisher auf Marine standen */
+h2.zw{color:var(--navy)}
+h2.zw em{color:var(--taupe-tief)}
+.reiter .leise,#ansicht>.lade .leise{color:var(--leise)}
+.reiter .wahl2 button,.filter .wahl2 button{color:var(--leise)}
+.wahl2--dunkel button{color:rgba(231,223,222,.72)}
+
+/* ---------- Bühne: jeder Kopf einer Ansicht (studio/buehne.js setzt das Foto) ---------- */
+.titel.buehne{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;
+  max-width:none;margin:0 0 38px;padding:clamp(34px,3.8vw,58px) clamp(28px,3.6vw,58px);min-height:clamp(250px,23vw,340px);border-radius:28px;color:#f2eceb;
+  background:radial-gradient(90% 120% at 0% 0%,rgba(234,88,35,.18),transparent 55%),linear-gradient(rgba(31,29,37,.6),rgba(31,29,37,.6)),url('../../../assets/zeichen/tapete-dunkel.svg') 0 0/168px 168px,#1f1d25;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(244,171,145,.45),0 36px 60px -36px rgba(31,29,37,.75),0 12px 24px -16px rgba(31,29,37,.35)}
+.titel.buehne::before{content:'';position:absolute;inset:8px;border-radius:21px;border:1px solid rgba(244,171,145,.34);pointer-events:none;z-index:2}
+.buehne__foto{position:absolute;top:0;right:0;bottom:0;width:min(58%,820px);z-index:-1;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 42%);mask-image:linear-gradient(90deg,transparent 0,#000 42%)}
+.buehne__foto img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 2.4s var(--e1)}
+.buehne__foto.da img{opacity:1;transform:none}
+.buehne__foto::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(19,18,22,.5),transparent 48%),linear-gradient(90deg,rgba(31,29,37,.3),transparent 60%)}
+.titel.buehne>:not(.buehne__foto){position:relative;z-index:1;max-width:min(60%,720px)}
+.titel.buehne .zier{justify-content:flex-start;color:var(--gold)}
+.titel.buehne .zier>i:first-child{display:none}
+.titel.buehne .zier>i:last-child{width:110px;background:linear-gradient(90deg,rgba(244,171,145,.65),rgba(244,171,145,0))}
+.titel.buehne h1{margin:18px 0 0;text-align:left;font-size:clamp(42px,4.3vw,70px);line-height:1.02;color:#f2eceb;text-shadow:0 2px 26px rgba(0,0,0,.4)}
+.titel.buehne h1 em{color:var(--gold)}
+.titel.buehne p.satz{margin-top:18px;max-width:58ch;font-size:16px;line-height:1.6;color:rgba(243,237,236,.84);text-shadow:0 1px 14px rgba(0,0,0,.45)}
+.titel.buehne .titel__kn{justify-content:flex-start;margin-top:26px}
+.titel.buehne .kn--linie{--o:#e1d0cd;--m:#f5b49d;--u:#d06138;--t:#1f1d25;--licht:rgba(249,246,246,.95);--kante:rgba(54,52,64,.5);--ko:#413e4e;--ku:#131216;--kt:#e1d0cd}
+/* Bereichsköpfe (knapp): niedriger, Knöpfe unter dem Text */
+.titel--knapp.buehne{min-height:clamp(210px,17vw,260px)}
+.titel--knapp.buehne>div:not(.buehne__foto){display:flex;flex-direction:column;align-items:flex-start}
+.titel--knapp.buehne h1{font-size:clamp(38px,3.6vw,58px);margin-top:16px}
+.titel--knapp.buehne .titel__kn{margin-top:20px}
+/* Auftritt: Text kommt ruhig herein, Goldrahmen zieht sich auf */
+@keyframes bueAuf{from{transform:translateY(16px)}to{transform:none}}
+@keyframes bueRahmen{from{transform:scale(.985)}to{transform:none}}
+.titel.buehne>:not(.buehne__foto){animation:bueAuf .9s var(--e1) both}
+.titel.buehne>h1,.titel.buehne>div>h1{animation-delay:.06s}
+.titel.buehne::before{animation:bueRahmen 1.4s var(--e1) .25s both}
+@media (max-width:860px){
+  .titel.buehne{padding:0 0 26px;min-height:0;border-radius:22px}
+  .titel.buehne::before{inset:6px;border-radius:17px}
+  .buehne__foto{position:relative;width:100%;height:160px;z-index:0;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 55%);mask-image:linear-gradient(0deg,transparent 0,#000 55%)}
+  .titel.buehne>:not(.buehne__foto){max-width:none;margin-left:22px;margin-right:22px}
+  .titel.buehne h1{font-size:clamp(34px,9vw,44px)}
+}
+
+/* ---------- Kacheln: blau mit Tiefe ---------- */
+.ag,.bk{color:#f2eceb}
+.ag{background:var(--blau-k)!important;box-shadow:var(--blau-s)!important}
+.ag b{color:#f2eceb!important}
+.ag span{color:rgba(243,237,236,.74)!important}
+.ag em{background:linear-gradient(180deg,#e1d0cd,#d06138)!important;color:#1f1d25!important;box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4)!important}
+@media (hover:hover){.ag:hover{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* ---------- Übersicht: Lage als blaue Tafel mit Symbolen, dichter gesetzt (Robert: «Schriften in den Kacheln schöner, so viel Leerraum») ---------- */
+.lage{background:var(--blau-k)!important;box-shadow:var(--blau-s)!important;padding:10px;border-radius:26px;position:relative;isolation:isolate;overflow:hidden}
+.lage::after{content:'';position:absolute;inset:7px;border-radius:20px;border:1px solid rgba(244,171,145,.26);pointer-events:none}
+.lg{display:grid;grid-template-columns:46px minmax(0,1fr);column-gap:16px;align-content:start;padding:22px 24px}
+.lg>*{grid-column:2}
+.lg .lg__z{grid-column:1;grid-row:1/span 4;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#1f1d25;
+  background:linear-gradient(180deg,#e1d0cd,#db693f);box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4),0 10px 18px -10px rgba(0,0,0,.6)}
+.lg .lg__z svg{width:19px;height:19px;stroke-width:1.5}
+.lg+.lg::before{background:linear-gradient(180deg,rgba(244,171,145,0),rgba(244,171,145,.4),rgba(244,171,145,0))}
+.lg .mono{color:var(--gold);font-size:9.5px;letter-spacing:.24em}
+.lg b{margin:6px 0 4px;font-size:27px;line-height:1.08;color:#f2eceb}
+.lg span{font-size:13.5px;line-height:1.5;color:rgba(243,237,236,.72)}
+.lg button,.lg a{margin-top:12px;justify-self:start;color:var(--goldhell);text-decoration-color:rgba(231,223,222,.45);font-size:13px}
+.lg button:hover,.lg a:hover{color:#fff}
+
+/* Häufig gebraucht: Symbol im Goldkreis, kompakter */
+.ag{min-height:0;gap:5px;padding:18px 18px 18px;position:relative;isolation:isolate;overflow:hidden}
+.ag::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.12) 50%,transparent 60%);transform:translateX(-120%);transition:transform .9s var(--e1);pointer-events:none;z-index:-1}
+@media (hover:hover){.ag:hover::after{transform:translateX(120%)}}
+.ag .ag__z{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;margin-bottom:10px;color:var(--gold);background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(244,171,145,.35)}
+.ag .ag__z svg{width:18px;height:18px;stroke-width:1.5}
+.ag b{font-size:21px!important}
+
+/* Bereiche: Fotokacheln mit blauem Rahmen */
+.bk{background:var(--blau-k);box-shadow:var(--blau-s)}
+.bk__n{background:none;box-shadow:none;padding:12px 8px 6px 10px}
+.bk__n b{color:#f2eceb}
+.bk__n small{color:var(--gold)}
+.bk__n i{background:linear-gradient(180deg,#e1d0cd,#d06138)!important;color:#1f1d25!important}
+
+/* ---------- Kopfzeile: zurück zu La Maison ---------- */
+.kopf .rund[aria-label="Zurück zu La Maison"] svg{width:17px;height:17px}
+
+/* ---------- La Carte: Speisekarten als 3D-Objekte (Robert: «als 3D-Elemente, wie im Druck-Bereich») ---------- */
+.mc4{perspective:1400px}
+.mck{min-height:0;padding:20px 22px 22px;gap:4px;animation:mckRein .9s var(--e1) both;animation-delay:calc(var(--i,0)*70ms)}
+@keyframes mckRein{from{transform:translateY(22px) rotateX(6deg)}to{transform:none}}
+.mck>img{display:none}
+.mbuch{height:190px;margin:4px 0 14px;display:grid;place-items:center;perspective:900px}
+.mbuch__d{position:relative;width:122px;height:170px;transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(6deg);transition:transform .9s var(--e2)}
+.mck:hover .mbuch__d{transform:rotateY(-8deg) rotateX(2deg) translateY(-6px)}
+.mbuch__d::before{content:'';position:absolute;top:2px;bottom:2px;right:-9px;width:10px;transform:rotateY(90deg);transform-origin:left;background:repeating-linear-gradient(0deg,#e1d3d0 0 2px,#cdb6b2 2px 3px);border-radius:0 2px 2px 0}
+.mbuch__d::after{content:'';position:absolute;left:10%;right:-14%;bottom:-18px;height:18px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);transform:translateZ(-30px)}
+.mbuch__v{position:absolute;inset:0;border-radius:3px 7px 7px 3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:14px 10px;text-align:center;
+  background:linear-gradient(90deg,rgba(0,0,0,.35) 0,rgba(255,255,255,.08) 5%,transparent 9%),url('../../../assets/zeichen/tapete-dunkel.svg') 0 0/168px 168px,linear-gradient(160deg,#2d2b36,#1f1d25 60%,#0e0e11);
+  box-shadow:inset 0 0 0 5px #1f1d25,inset 0 0 0 6px rgba(244,171,145,.7),inset 0 0 0 9px #1f1d25,inset 0 0 0 10px rgba(244,171,145,.35),0 18px 26px -12px rgba(0,0,0,.8)}
+.mbuch__v img{width:30px!important;height:auto;margin:0 0 2px;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+.mbuch__v em{font:normal 6.5px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.mbuch__v b{font:400 13px/1.15 var(--caps)!important;letter-spacing:.06em;color:transparent!important;background:linear-gradient(180deg,#ebe1df,#ee8b67 50%,#bd5935);-webkit-background-clip:text;background-clip:text}
+.mbuch__v small{font:6px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(231,223,222,.55)}
+.mck>b{font-size:23px}
+
+/* So läuft eine Preisänderung: Zeitleiste, Goldlinie zieht sich, Schritte steigen nacheinander auf */
+.ablauf{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:1180px;margin:0 auto}
+.ablauf::before{content:'';position:absolute;left:12%;right:12%;top:48px;height:1px;background:linear-gradient(90deg,rgba(208,97,56,0),#d06138 12%,#d06138 88%,rgba(208,97,56,0));transform-origin:left;animation:abLinie 1.6s var(--e1) .2s both}
+@keyframes abLinie{from{transform:scaleX(0)}to{transform:none}}
+.ab{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:22px 20px 24px;border-radius:24px;color:#f2eceb;background:var(--blau-k);box-shadow:var(--blau-s);
+  animation:abAuf .8s var(--e1) both;animation-delay:calc(.25s + var(--i)*.22s)}
+@keyframes abAuf{from{transform:translateY(24px)}to{transform:none}}
+.ab__z{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;margin-bottom:14px;color:#1f1d25;background:linear-gradient(180deg,#e1d0cd,#db693f);box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4),0 0 0 6px rgba(208,97,56,.16),0 12px 20px -10px rgba(0,0,0,.6);
+  animation:abPuls 2.4s var(--e2) both;animation-delay:calc(.5s + var(--i)*.22s)}
+@keyframes abPuls{0%{box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4),0 0 0 0 rgba(208,97,56,.5),0 12px 20px -10px rgba(0,0,0,.6)}60%,100%{box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4),0 0 0 14px rgba(208,97,56,0),0 12px 20px -10px rgba(0,0,0,.6)}}
+.ab__z svg{width:21px;height:21px;stroke-width:1.5}
+.ab .mono{color:var(--gold)}
+.ab b{margin:6px 0 8px;font:400 21.5px/1.1 var(--serif);color:#f2eceb}
+.ab p{margin:0;font-size:13.5px;line-height:1.55;color:rgba(243,237,236,.74)}
+.ablauf__fuss{max-width:1180px;margin:18px auto 0;padding:16px 22px!important}
+@media (max-width:1100px){.ablauf{grid-template-columns:repeat(2,minmax(0,1fr))}.ablauf::before{display:none}}
+@media (max-width:620px){.ablauf{grid-template-columns:1fr}}
+
+/* ---------- Hinweis für Gäste: Miniatur der Website ---------- */
+.mini-w>.mono{display:block;margin:0 0 12px}
+.mini{border-radius:16px;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px rgba(200,135,111,.25),0 30px 50px -30px rgba(31,29,37,.5),0 10px 20px -14px rgba(31,29,37,.3)}
+.mini__leiste{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;background:linear-gradient(180deg,#eeeae9,#e2dcdb);border-bottom:1px solid rgba(200,135,111,.25)}
+.mini__leiste i{width:9px;height:9px;border-radius:50%;background:#d0c3c0}
+.mini__leiste span{margin:0 auto;padding:3px 14px;border-radius:7px;background:#fff;font:9.5px var(--mono);letter-spacing:.06em;color:var(--leise)}
+.mini__band{position:relative;padding:11px 18px;text-align:center;font:400 13px/1.45 var(--sans);color:#e5dedd;background:#1f1d25;transition:opacity .4s}
+.mini__band.aus{opacity:.5}
+.mini__band em{display:inline-block;margin-right:10px;padding:2px 8px;border-radius:999px;font:normal 8.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#1f1d25;background:var(--gold);vertical-align:1px}
+.mini__band u{color:#f4ab91;text-underline-offset:3px}
+.mini__seite{position:relative;height:250px;overflow:hidden}
+.mini__seite>img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95)}
+.mini__seite::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,18,22,.55),transparent 40%,rgba(19,18,22,.55))}
+.mini__nav{position:absolute;z-index:1;top:12px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:6px 14px;border-radius:999px;background:rgba(31,29,37,.82)}
+.mini__nav span{width:34px;height:3px;border-radius:2px;background:rgba(231,223,222,.6)}
+.mini__nav img{width:16px;height:auto}
+.mini__t{position:absolute;z-index:1;left:0;right:0;bottom:24px;text-align:center;color:#f2eceb}
+.mini__t small{display:block;font:8.5px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.mini__t b{display:block;margin-top:6px;font:400 24.1px/1 var(--serif)}
+.mini-w>.leise{margin:12px 2px 0}
+
+/* ---------- Sprachen: Beispiel ---------- */
+.ue--bsp{position:relative;opacity:.92}
+.ue--bsp::before{content:'Beispiel';position:absolute;right:22px;top:20px;padding:4px 10px;border-radius:999px;font:9px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#1f1d25;background:var(--gold)}
+.ue--bsp input{cursor:default;color:var(--leise)!important}
+
+/* ---------- Kopf einer Karte mit Miniatur oder Symbol; Symbole je Zeile ---------- */
+.kh{display:flex;align-items:center;gap:16px;margin-bottom:6px}
+.kh>div{flex:1;min-width:0}
+.kh h3{margin:0!important}
+.kh p{margin:3px 0 0!important}
+.kh__b{width:96px;height:64px;border-radius:12px;object-fit:cover;flex:none;box-shadow:0 0 0 1px rgba(200,135,111,.3),0 10px 18px -10px rgba(31,29,37,.5)}
+.kh__z{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;color:#e1d0cd;background:linear-gradient(180deg,#413e4e,#131216);box-shadow:inset 0 1px 0 rgba(244,173,147,.3),0 0 0 1px rgba(244,171,145,.45),0 10px 16px -10px rgba(0,0,0,.6)}
+.kh__z svg,.zl__z svg,.fz__z svg{width:18px;height:18px;stroke-width:1.5}
+.zl{grid-template-columns:34px minmax(0,1fr) auto!important}
+.zl__z,.fz__z{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--taupe-tief);background:rgba(208,97,56,.12);box-shadow:inset 0 0 0 1px rgba(208,97,56,.3)}
+.zl__z svg,.fz__z svg{width:15px;height:15px}
+.fz>span{display:grid;grid-template-columns:34px minmax(0,1fr);column-gap:12px;align-items:center}
+.fz>span .fz__z{grid-row:1/3}
+.fz>span b,.fz>span small{grid-column:2}
+.fz{grid-template-columns:260px minmax(0,1fr) auto}
+
+/* ---------- Bureau: Reiter Texte / Fotos, Fotoraster ---------- */
+.stellen__w{display:flex;margin:0 0 12px;width:100%}
+.stellen__w button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.stellen__w svg{width:14px;height:14px}
+.stellen__satz{margin:2px 4px 14px;font-size:12.5px}
+.fotoraster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fr{position:relative;display:flex;flex-direction:column;padding:6px;border:0;border-radius:16px;text-align:left;background:var(--blau-k);box-shadow:var(--blau-s);color:#f2eceb;transition:transform .5s var(--e2)}
+.fr:hover{transform:translateY(-3px)}
+.fr__b{display:block;aspect-ratio:4/3;border-radius:11px;overflow:hidden;background:#15141a}
+.fr__b img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--e1)}
+.fr:hover .fr__b img{transform:scale(1.06)}
+.fr__n{display:block;padding:8px 6px 4px}
+.fr__n small{display:block;font:8.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fr__n b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:3px;font:400 12px/1.25 var(--serif);color:#f2eceb}
+.fr em{position:absolute;top:12px;right:12px;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;font:normal 9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#1f1d25;background:linear-gradient(180deg,#e1d0cd,#db693f);opacity:0;transform:translateY(-4px);transition:opacity .3s,transform .4s var(--e2)}
+.fr em svg{width:11px;height:11px}
+.fr:hover em,.fr:focus-visible em{opacity:1;transform:none}
+.fr.geaendert{box-shadow:var(--blau-s),0 0 0 2px var(--gelb)}
+/* Speisekarte auf Papier gestellt, wie ein Produktfoto; fünf Karten in einer Reihe */
+.mc4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important}
+.mbuch{margin:-6px -8px 16px;height:210px;border-radius:16px;background:radial-gradient(70% 60% at 50% 38%,#f9f6f6,#e5dedd 70%,#d9c7c3);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(244,171,145,.5),inset 0 -14px 24px -18px rgba(129,64,41,.35)}
+.mbuch__d::after{background:radial-gradient(closest-side,rgba(37,36,44,.45),transparent)}
+.ablauf::before{z-index:2;pointer-events:none}
+.ab__z{position:relative;z-index:3}
+
+/* ---------- Wahlschalter auf hellem Grund: Kuhle, gewählt = blaue Platte mit Goldschrift ---------- */
+.filter .wahl2,.reiter .wahl2{background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.filter .wahl2 button,.reiter .wahl2 button{color:var(--leise)}
+.filter .wahl2 button[aria-pressed="true"],.reiter .wahl2 button[aria-pressed="true"],.stellen__w button[aria-pressed="true"]{color:var(--goldhell)!important;background:linear-gradient(180deg,#413e4e,#25232c 55%,#18171d)!important;box-shadow:inset 0 1px 0 rgba(244,173,147,.3),inset 0 0 0 1px rgba(244,171,145,.5),0 8px 14px -8px rgba(19,18,22,.6)!important}
+
+/* ---------- Le Registre ---------- */
+.rg-bsp{background:var(--blau-k)!important;box-shadow:var(--blau-s)!important}
+.rg-wenig,.rg-fuss{color:var(--leise)}
+.rg-wenig .link,.rg-mehr .link,.rg-weitere{color:var(--taupe-tief)!important;text-decoration-color:rgba(200,135,111,.5)!important}
+.rg-tag{color:var(--taupe-tief)}
+.rg .kn--hellrand{color:var(--navy)}
+.rg .rg-a{background:var(--blau-k);box-shadow:var(--blau-s);color:#f2eceb}
+.rg .rg-a b{color:#f2eceb}
+.rg .rg-a small{color:rgba(243,237,236,.7)}
+.rg .rg-a .rg-a__l{color:var(--gold);background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(244,171,145,.35)}
+.rg .rg-a.aktiv{box-shadow:var(--blau-s),0 0 0 2px var(--gold)}
+.rg .rg-a.gold .rg-a__l{color:#1f1d25;background:linear-gradient(180deg,#e1d0cd,#db693f)}
+.lg:not(:has(.lg__z)){display:block}
+
+/* Kopf mit dem Team-Foto (Karriere): Hochformat im flachen Kopf, der Ausschnitt sitzt auf dem Gesicht, die Augen bleiben im Bild (Robert 15.10.2026) */
+.buehne__foto:has(img[src*="/team-"]){-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 24%);mask-image:linear-gradient(90deg,transparent 0,#000 24%)}
+.buehne__foto img[src*="/team-"]{object-position:50% 13%}
+
+/* ---------- Entwurf: Beispiel, solange nichts offen ist ---------- */
+.ae-bsp{position:relative;max-width:1180px;margin:18px auto 0;padding:38px 0 0}
+.ae-bsp::before{content:'Beispiel';position:absolute;top:0;left:0;padding:4px 10px;border-radius:999px;font:9px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#1f1d25;background:var(--gold)}
+.ae-bsp .ae{opacity:.94}
+.ae-bsp .ae__kn .link{cursor:default;opacity:.55}
+
+/* ---------- Frühere Fassungen: lesbar auf hell, Beispiel als Zeitleiste ---------- */
+.vl--ursprung{box-shadow:inset 0 0 0 1px rgba(200,135,111,.35)}
+.vl--ursprung b{color:var(--navy)}.vl--ursprung span{color:var(--leise)}
+.vl-bsp{position:relative;max-width:1080px;margin:18px auto 0;padding:38px 0 0 34px}
+.vl-bsp::before{content:'Beispiel';position:absolute;top:0;left:0;padding:4px 10px;border-radius:999px;font:9px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#1f1d25;background:var(--gold)}
+.vl-bsp::after{content:'';position:absolute;left:12px;top:62px;bottom:70px;width:1px;background:linear-gradient(180deg,#d06138,rgba(208,97,56,.15))}
+.vl-bsp .vl{position:relative;justify-content:flex-start;background:var(--blau-k);box-shadow:var(--blau-s);color:#f2eceb}
+.vl-bsp .vl>div{flex:1;min-width:0}
+.vl-bsp .vl b{color:#f2eceb}.vl-bsp .vl span{color:rgba(243,237,236,.72)}
+.vl-bsp .vl::before{content:'';position:absolute;left:-27px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:linear-gradient(180deg,#e1d0cd,#d06138);box-shadow:0 0 0 4px rgba(208,97,56,.18)}
+.vl__z{width:40px;height:40px;flex:none;border-radius:50%;display:grid;place-items:center;color:#1f1d25;background:linear-gradient(180deg,#e1d0cd,#db693f);box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4)}
+.vl__z svg{width:17px;height:17px;stroke-width:1.5}
+.vl__m{font:normal 9px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);padding:4px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(244,171,145,.45)}
+.vl-bsp .kn{cursor:default;opacity:.6}
+.vl-bsp__satz{margin:14px 0 0}
+
+/* ---------- La Carte im Bureau: die Originalkarten frei auf Papier, wie in L’Imprimerie ---------- */
+.kt-flaeche{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:40px 30px;align-items:end;max-width:1180px;margin:0 auto;padding:56px 44px 44px;border-radius:28px;
+  background:radial-gradient(80% 70% at 50% 30%,#f9f6f6,#efe9e8 70%,#e4dddc);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(200,135,111,.22),0 28px 50px -34px rgba(31,29,37,.35);perspective:1400px}
+.kt{display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--tinte);text-decoration:none;animation:ktRein 1s var(--e1) both;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes ktRein{from{transform:translateY(28px)}to{transform:none}}
+.kt__b{display:block;width:100%;max-width:200px;transform:rotate(var(--r,0deg));transition:transform .8s var(--e2)}
+.kt__b img{display:block;width:100%;height:auto;aspect-ratio:1405/1988;object-fit:cover;border-radius:2px;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 2px 3px rgba(31,29,37,.18),0 26px 34px -16px rgba(31,29,37,.55),0 50px 60px -40px rgba(31,29,37,.45)}
+.kt:hover .kt__b{transform:rotate(0deg) translateY(-10px) scale(1.03)}
+.kt b{margin-top:26px;font:400 19.8px/1.15 var(--serif);color:var(--navy)}
+.kt small{margin-top:7px;font:9.5px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-tief)}
+.kt em{margin-top:8px;padding:4px 10px;border-radius:999px;font:normal 9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#1f1d25;background:var(--gold)}
+
+/* ---------- Seitenleiste: Übersicht grösser abgesetzt, Einträge reagieren beim Überfahren (Robert 15.10.2026) ---------- */
+.nav>.nw:first-child{padding:13px 14px;margin-bottom:6px;font-size:20px;border-radius:15px;background:linear-gradient(180deg,#efe9e8,#e1d9d8);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(200,135,111,.28),0 8px 14px -10px rgba(31,29,37,.35)}
+.nav>.nw:first-child[aria-current="true"]{background:linear-gradient(180deg,#2c2a34,#1f1d25)}
+.nw{transition:background .35s,box-shadow .35s,transform .45s var(--e2),color .3s}
+@media (hover:hover){.nw:hover:not([aria-current="true"]){transform:translateX(5px);background:rgba(208,97,56,.12);color:var(--navy)}
+  .wege a{transition:background .3s,color .3s,transform .45s var(--e2)}.wege a:hover{transform:translateX(4px)}}
+
+/* ---------- Zeiten & Preise: Vorschau der Stelle beim Überfahren einer Zeile ---------- */
+.zl-blick{position:fixed;z-index:60;width:440px;padding:8px 8px 10px;border-radius:20px;pointer-events:none;
+  background:var(--blau-k);box-shadow:var(--blau-s),0 40px 70px -30px rgba(19,18,22,.65);
+  opacity:0;transform:translateY(10px) scale(.94);transform-origin:70% 0;transition:opacity .3s ease,transform .5s var(--e1)}
+.zl-blick.auf{opacity:1;transform:none}
+.zl-blick__r{position:relative;width:424px;height:265px;border-radius:13px;overflow:hidden;background:#15141a}
+.zl-blick__r iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform:scale(.2945);transform-origin:0 0;pointer-events:none}
+.zl-blick.laedt .zl-blick__r::after{content:'Seite wird geladen …';position:absolute;inset:0;display:grid;place-items:center;font:9.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:#15141a}
+.zl-blick__t{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:9px 6px 0}
+.zl-blick__t b{font:400 13.8px var(--serif);color:#f2eceb}
+.zl-blick__t small{font:8.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.zl{transition:background .3s}
+@media (hover:hover){.zl:hover{background:rgba(208,97,56,.07);border-radius:12px}}
+@media (hover:none){.zl-blick{display:none}}
+
+/* ---------- Sprachen: Abstand, Weg in drei Schritten, wo der Satz auf der Website steht ---------- */
+.leer-hinweis+.ue-weg,.leer-hinweis+.ae-bsp,.leer-hinweis+.vl-bsp{margin-top:26px}
+.ue-weg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:1180px;margin:26px auto 26px}
+.ue-weg__s{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:14px;padding:18px 20px;border-radius:20px;color:#f2eceb;background:var(--blau-k);box-shadow:var(--blau-s);animation:abAuf .8s var(--e1) both;animation-delay:calc(.15s + var(--i)*.18s)}
+.ue-weg__s i{grid-row:1/3;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#1f1d25;background:linear-gradient(180deg,#e1d0cd,#db693f);box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4)}
+.ue-weg__s i svg{width:18px;height:18px;stroke-width:1.5}
+.ue-weg__s b{font:400 18.1px/1.15 var(--serif);color:#f2eceb}
+.ue-weg__s span{margin-top:4px;font-size:13px;line-height:1.5;color:rgba(243,237,236,.74)}
+.ue-wo{display:flex;align-items:center;gap:16px;margin:0 0 20px;padding:12px;border-radius:16px;background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.ue-wo img{width:120px;height:78px;object-fit:cover;border-radius:11px;flex:none;box-shadow:0 10px 18px -10px rgba(31,29,37,.5)}
+.ue-wo small{display:block;font:9px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--taupe-tief)}
+.ue-wo b{display:block;margin:3px 0 2px;font:400 16.3px/1.2 var(--serif);color:var(--navy)}
+.ue-wo span{font-size:13px;color:var(--leise)}
+@media (max-width:900px){.ue-weg{grid-template-columns:1fr}}
+.ue--bsp::before{top:-11px;right:26px;box-shadow:0 6px 12px -6px rgba(31,29,37,.4)}
+
+/* ---------- Auftritt beim Öffnen einer Ansicht, wie Le Livre (studio/buehne.js setzt .feder und --fi) ---------- */
+@keyframes feder{0%{transform:translate3d(0,46px,0) scale(.965)}100%{transform:none}}
+.feder{animation:feder 1.15s cubic-bezier(.28,1.42,.42,1) both!important;animation-delay:calc(var(--fi,0) * 70ms)!important}
+.ansicht-neu>*{animation:none}
+
+/* Schliessen-Knopf der Fenster: goldenes Kreuz auf Marine, dreht sich beim Überfahren (Robert 15.10.2026: «das X oben in der Ecke») */
+.fenster__zu{color:var(--goldhell)!important;transition:transform .5s var(--e2)}
+.fenster__zu svg{width:15px;height:15px;stroke-width:1.7}
+@media (hover:hover){.fenster__zu:hover{transform:rotate(90deg) scale(1.05)}}
+/* «Übersicht» immer blau (Robert 15.10.2026), gewählt mit Goldkante */
+.nav>.nw:first-child{color:#f2eceb;background:linear-gradient(180deg,#393644,#25232c 55%,#18171d);box-shadow:inset 0 1px 0 rgba(244,173,147,.3),inset 0 0 0 1px rgba(244,171,145,.45),0 12px 20px -12px rgba(19,18,22,.7)}
+.nav>.nw:first-child[aria-current="true"]{box-shadow:inset 0 1px 0 rgba(244,173,147,.3),inset 0 0 0 1.5px var(--gold),0 12px 20px -12px rgba(19,18,22,.7)}
+@media (hover:hover){.nav>.nw:first-child:hover:not([aria-current="true"]){color:#f2eceb;background:linear-gradient(180deg,#413e4e,#27262f 55%,#18171d)}}
+
+/* ---------- Wahlschalter überall: Kuhle mit Tiefe, gewählt = blaue Platte mit Goldschrift und Lichtkante, Überfahren hebt an (Robert 15.10.2026: «richtig sexy») ---------- */
+.wahl2:not(.wahl2--dunkel){padding:5px;gap:3px;border-radius:999px;background:linear-gradient(180deg,#ded6d5,#e8e3e2 45%,#eeeae9);
+  box-shadow:inset 0 3px 7px -2px rgba(19,18,22,.2),inset 0 1px 0 rgba(19,18,22,.08),inset 0 0 0 1px rgba(200,135,111,.2),0 1px 0 #fff}
+.wahl2:not(.wahl2--dunkel) button{position:relative;border-radius:999px;padding:10px 18px;color:rgba(19,18,22,.62);
+  transition:color .35s,background .45s,box-shadow .45s,transform .45s var(--e2)}
+@media (hover:hover){.wahl2:not(.wahl2--dunkel) button:not([aria-pressed="true"]):hover{color:var(--navy);transform:translateY(-1px);
+  background:linear-gradient(180deg,rgba(253,251,250,.95),rgba(239,233,232,.9));box-shadow:inset 0 1px 0 #fff,0 0 0 1px rgba(208,97,56,.28),0 6px 12px -8px rgba(19,18,22,.35)}}
+.wahl2:not(.wahl2--dunkel) button[aria-pressed="true"]{color:var(--goldhell)!important;text-shadow:0 1px 1px rgba(0,0,0,.35);
+  background:radial-gradient(120% 140% at 50% -40%,rgba(244,173,147,.35),transparent 60%),linear-gradient(180deg,#413e4e,#25232c 55%,#131216)!important;
+  box-shadow:inset 0 1px 0 rgba(244,173,147,.35),inset 0 0 0 1px rgba(244,171,145,.55),inset 0 -2px 0 rgba(0,0,0,.35),0 10px 16px -8px rgba(19,18,22,.6)!important}
+.wahl2:not(.wahl2--dunkel) button:active{transform:translateY(1px) scale(.97)}
+/* Goldlinie nur in den Lücken zwischen den Kacheln, nicht quer darüber (Robert 16.10.2026: «da geht so ein Strich durch die Kacheln») */
+.ablauf::before{z-index:0!important}
+.ab{position:relative;z-index:1}
+
+/* ---------- Zeiten & Preise: Knopf «Zeigen» je Zeile, Mini-Film im Fenster (Robert 16.10.2026) ---------- */
+.zl__kn{display:flex;align-items:center;gap:14px}
+.zl__blick{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 13px 0 10px;border:0;border-radius:999px;font:9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--goldhell);
+  background:linear-gradient(180deg,#413e4e,#25232c 55%,#18171d);box-shadow:inset 0 1px 0 rgba(244,173,147,.3),inset 0 0 0 1px rgba(244,171,145,.45),0 8px 14px -8px rgba(19,18,22,.6);transition:transform .4s var(--e2)}
+.zl__blick svg{width:13px;height:13px}
+@media (hover:hover){.zl__blick:hover{transform:translateY(-2px)}.zl:hover{background:none}}
+.zl{grid-template-columns:34px minmax(0,1fr) auto!important}
+.zl-blick{width:560px;pointer-events:auto}
+.zl-blick__r{width:544px;height:340px}
+.zl-blick__r iframe{transform:scale(.3778);transform-origin:0 0;will-change:auto}
+.zl-blick__kreis{position:absolute;border-radius:50%;border:2.5px solid #f18964;box-shadow:0 0 0 4px rgba(241,137,100,.25),0 0 30px rgba(241,137,100,.55);
+  opacity:0;transform:scale(1.5);transition:opacity .35s ease,transform .7s cubic-bezier(.34,1.3,.5,1);pointer-events:none}
+.zl-blick__kreis.an{opacity:1;transform:none}
+.zl-blick__t{align-items:center}
+.zl-blick__t b{flex:1}
+.zl-blick__t .link{color:var(--goldhell);text-decoration-color:rgba(231,223,222,.45);font-size:12px}
+
+/* ---------- Hinweis für Gäste: grosse Vorschau mittig, Gestaltung des Banners (Robert 16.10.2026) ---------- */
+.hw-vor{max-width:980px;margin:0 auto 26px;text-align:center}
+.hw-vor>.mono{display:block;margin:0 0 12px}
+.mini--gross{text-align:left}
+.mini--gross .mini__seite{height:380px}
+.mini--gross .mini__t b{font-size:40px}
+.mini__band{padding:14px 22px;transition:background .4s,color .4s}
+.mini__band u{color:var(--lk,#f4ab91)}
+.hw-vor>.leise{margin-top:12px}
+.hw-stil{max-width:980px;margin:0 auto 22px}
+.hw-stil h3{margin:0 0 12px}
+.hw-z{display:flex;align-items:center;gap:18px;padding:8px 0}
+.hw-z>.mono{min-width:70px}
+.hw-wahl{flex-wrap:wrap}
+.hw-wahl button{display:inline-flex;align-items:center;gap:8px}
+.hw-wahl i{width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18),0 0 0 2px rgba(255,255,255,.6)}
+.hw-arbeit{grid-template-columns:minmax(0,980px)!important;justify-content:center}
+
+/* ---------- Häufig gebraucht: Foto des Hauses oben in jeder Kachel, Symbol darauf (Robert 16.10.2026) ---------- */
+.ag--foto{padding:6px 6px 18px!important;gap:4px}
+.ag__b{display:block;width:100%;aspect-ratio:16/8.5;border-radius:16px;overflow:hidden;background:#15141a;box-shadow:inset 0 0 0 1px rgba(244,171,145,.25)}
+.ag__b img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.4s var(--e1);filter:saturate(.95)}
+@media (hover:hover){.ag--foto:hover .ag__b img{transform:scale(1.08)}}
+.ag--foto .ag__z{margin:-24px 0 4px 14px;position:relative;z-index:1;border-radius:50%!important;width:44px!important;height:44px!important;color:#1f1d25!important;
+  background:linear-gradient(180deg,#e1d0cd,#db693f)!important;box-shadow:inset 0 1px 0 #f7f2f1,inset 0 -2px 0 rgba(54,52,64,.4),0 8px 14px -6px rgba(0,0,0,.6)!important}
+.ag--foto b,.ag--foto span:not(.ag__b){padding:0 14px}
+.ag--foto em{top:16px!important;right:16px!important}
+
+/* «Zeigen» neu (Robert 16.10.2026: «Buttons dunkel, falsch platziert, zu schnell, gelber Kreis auf gelber Fläche»):
+   heller Knopf wie «Seite öffnen», Fenster gross in der Mitte über leicht abgedunkelter Seite, ruhiger Zoom, Stelle ausgeleuchtet */
+.zl__blick{color:var(--tinte,#1f1d25)!important;background:linear-gradient(180deg,#f9f6f6,#e3dad8)!important;
+  box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(200,135,111,.45),0 10px 18px -10px rgba(19,18,22,.45)!important;height:36px;padding:0 15px 0 12px}
+.zl__blick svg{color:var(--messing,#c8876f)}
+.zl-schleier{position:fixed;inset:0;z-index:59;background:rgba(19,18,22,.42);visibility:hidden;transition:visibility 0s .35s,background-color .35s ease}
+.zl-schleier:not(.auf){background:rgba(19,18,22,0)}
+.zl-schleier.auf{visibility:visible;transition:visibility 0s,background-color .35s ease}
+.zl-blick{left:50%!important;top:50%!important;width:min(980px,calc(100vw - 48px))!important;padding:12px 12px 14px!important;border-radius:26px!important;
+  background:linear-gradient(180deg,#f9f6f6,#e7dfde)!important;box-shadow:0 0 0 1px rgba(200,135,111,.35),0 50px 90px -30px rgba(19,18,22,.6)!important;
+  opacity:1!important;visibility:hidden;transform:translate(-50%,calc(-50% + 60px)) scale(.94)!important;transition:visibility 0s .5s,transform .5s var(--e1)!important}
+.zl-blick.auf{visibility:visible;transform:translate(-50%,-50%)!important;transition:visibility 0s,transform .9s cubic-bezier(.28,1.3,.42,1)!important}
+.zl-blick__r{width:100%!important;height:auto!important;aspect-ratio:1440/860;border-radius:16px!important;background:#e7dfde!important}
+.zl-blick.laedt .zl-blick__r::after{background:#e7dfde!important;color:var(--messing,#c8876f)!important}
+.zl-blick__kreis{border-radius:14px!important;border:2px solid #fff!important;
+  box-shadow:0 0 0 2px #1f1d25,0 0 0 9999px rgba(19,18,22,0)!important;transform:scale(1.25)!important;visibility:hidden;opacity:1!important;
+  transition:transform .8s cubic-bezier(.28,1.3,.42,1),box-shadow .6s ease,visibility 0s .6s!important}
+.zl-blick__kreis.an{visibility:visible;transform:none!important;box-shadow:0 0 0 2px #1f1d25,0 0 0 9999px rgba(19,18,22,.5)!important;transition:transform .8s cubic-bezier(.28,1.3,.42,1),box-shadow .6s ease,visibility 0s!important}
+.zl-blick__t{display:flex;align-items:center;gap:14px;margin:14px 8px 2px!important}
+.zl-blick__t>span{flex:1;display:flex;flex-direction:column;gap:3px}
+.zl-blick__t small{font:9px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--messing,#c8876f)}
+.zl-blick__t b{font:400 18.9px var(--serif)!important;color:#1f1d25!important}
+.zl-blick__kn{height:40px;padding:0 20px;border:0;border-radius:999px;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#eee9e8;cursor:pointer;
+  background:linear-gradient(180deg,#413e4e,#25232c 55%,#18171d);box-shadow:inset 0 1px 0 rgba(244,173,147,.3),0 8px 14px -8px rgba(19,18,22,.6);transition:transform .4s var(--e2)}
+.zl-blick__zu{width:40px;height:40px;border-radius:50%;border:1px solid rgba(200,135,111,.5);background:#f9f6f6;color:#c8876f;font:300 21.6px/1 var(--sans);cursor:pointer;transition:transform .4s var(--e2)}
+@media (hover:hover){.zl-blick__kn:hover,.zl-blick__zu:hover{transform:translateY(-2px)}}
+/* Hinweis-Vorschau in den echten Farben (Robert 16.10.2026: «Marine sieht aus wie grau, Rot wie rosa»): nie halb durchsichtig */
+.mini__band.aus{opacity:1}
+.zl-blick__kn{color:#1f1d25!important;background:linear-gradient(180deg,#f9f6f6,#e3dad8)!important;box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(200,135,111,.45),0 10px 18px -10px rgba(19,18,22,.45)!important}
+.zl-blick__zu{font-size:26px!important;color:#1f1d25!important}
+.zl-blick:not(.auf) .zl-blick__kreis{visibility:hidden!important}

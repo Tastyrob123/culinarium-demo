@@ -1,0 +1,6 @@
+{
+ "name": "La Carte",
+ "hinweis": "culinarium-carte, 28.10.2026: Online-Teil NICHT gebaut und nicht hochgeladen (Auftrag: nichts online). Diese Andock-Datei nennt nur Stand-Weg und Prüfweg für La Maison (M13). Vorlage für den Online-Teil, wenn er kommt: Taverne zum Schäfli/_werkzeuge/carte/online/ und dessen online.json (Speicher-Schicht, carte_druck.js mit ZIELE = carte.ZIELE, Anschluss online aus).",
+ "stand": "/_werkzeuge/carte/api/status",
+ "pruefung": {"weg": "/_werkzeuge/carte/", "kurz": false}
+}

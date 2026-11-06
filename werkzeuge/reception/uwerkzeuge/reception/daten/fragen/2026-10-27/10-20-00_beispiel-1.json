@@ -1,0 +1,13 @@
+{
+ "zeit": "2026-10-27T10:20:00+01:00",
+ "frage": "Wann ist der nächste Abend?",
+ "antwort": "Der nächste Termin steht noch nicht fest. Wer auf der Warteliste steht, erfährt ihn zuerst.\n- Freitag: ab 19 Uhr\n- Samstag: ab 17 Uhr\n- Plätze: wenige, an einer Tafel",
+ "belegt": true,
+ "thema": "",
+ "gruppe": "Termine & Warteliste",
+ "sprache": "de",
+ "buchung": true,
+ "mappe": false,
+ "anfrage": "",
+ "beispiel": true
+}

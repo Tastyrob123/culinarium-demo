@@ -1,0 +1,249 @@
+{
+ "stand": "2026-10-28 12:12:29",
+ "quelle": "La Carte (_werkzeuge/carte/_daten/stand/)",
+ "abende": {
+  "DFqbLG2s_dc": {
+   "ab": "2025-02-21",
+   "preis": "79,00 EUR",
+   "gaenge": [
+    [
+     "Apéritif",
+     "Sauerteig / Tomate / Butter",
+     "Cognac | Toasted Pumpkin Samen | Limette | Champagner"
+    ],
+    [
+     "Vorspeise",
+     "Miso / Sellerie / Röstzwiebeln",
+     "Vodka | Tom Yam | Guava | Cocos | Acids | Soda"
+    ],
+    [
+     "Hauptgang",
+     "Spinat / braune Butter / Parmesan",
+     "Tequila | lakto-fermentierte Tomate | Agave | Limette"
+    ],
+    [
+     "Dessert",
+     "Kaffee / Molke / Amaretto",
+     "Vodka | Cacao | Matcha | Mango"
+    ],
+    [
+     "Absacker",
+     "",
+     "Gin | Turmeric | Ingwer"
+    ]
+   ],
+   "upgrade": [],
+   "karte": "abend-2025-02-21",
+   "name": "21./22. Februar 2025"
+  },
+  "DCCf-ikoaGs": {
+   "ab": "2024-11-29",
+   "preis": "69,00 EUR",
+   "gaenge": [
+    [
+     "Apéritif",
+     "Sauerteig / fermentierte Tomate",
+     "Pallini Limoncello | Basilikum | Olivenöl | Schaumwein"
+    ],
+    [
+     "Vorspeise",
+     "Beeten / Salzzitrone / Feta-Käse",
+     "… | Purple-Shiso-Blätter | Yuzu | Galgant | Ziegenmilch"
+    ]
+   ],
+   "upgrade": [],
+   "karte": "abend-2024-11-29",
+   "name": "29./30. November 2024"
+  },
+  "C8cgYVSouVT": {
+   "ab": "2024-07-19",
+   "preis": "69,00 EUR",
+   "gaenge": [
+    [
+     "Apéritif",
+     "Sauerteigbrot / geröstete Kürbisbutter / Senfkaviar",
+     "Vodka | Bergamotte | Champagner-Säure | Gurke | Dill"
+    ]
+   ],
+   "upgrade": [],
+   "karte": "abend-2024-07-19",
+   "name": "19./20. Juli 2024"
+  },
+  "C56bJeds8PF": {
+   "ab": "2024-04-26",
+   "preis": "69,00 EUR",
+   "gaenge": [
+    [
+     "Apéritif",
+     "Sauerteigbrot / Miso-Butter",
+     "Arcane · Hendrick’s Floral Adora | Rosen-Shrub | CO2"
+    ],
+    [
+     "Vorspeise",
+     "Gurke / Sesam / Sternanis",
+     "Cabinet Collins · Discarded Vodka | gelbe Paprika | grüner Apfel"
+    ],
+    [
+     "Hauptgang",
+     "Sellerie / Lauch / Frisée",
+     "Mystical Mixology · Hendrick’s Neptunia | Gurke | rosa Pfeffer | Sellerie"
+    ],
+    [
+     "Dessert",
+     "Amalfi-Zitrone / Vanille",
+     "Wanderlust · Monkey Shoulder Whisky | Rhabarber | Spargel | weisser Port | Estragon"
+    ],
+    [
+     "Absacker",
+     "",
+     "Curiosity Crush · Discarded Banana Peel Rum | Erdbeere | Grana Padano"
+    ]
+   ],
+   "upgrade": [],
+   "karte": "abend-2024-04-26",
+   "name": "26./27. April 2024"
+  },
+  "CzMcqNcMCqG": {
+   "ab": "2023-11-17",
+   "preis": "59,00 EUR",
+   "gaenge": [
+    [
+     "Apéritif",
+     "",
+     "Un air de Déjà-vu · Cranberry-Orangen-Sherbet | Rosmarin | Thomas Henry Spicy Ginger"
+    ],
+    [
+     "Vorspeise",
+     "Pilzkraftbrühe mit vegetarischen Gyoza",
+     "Pera Dulce · Cazcabel Tequila Honey | Cleared Pear Water | weisse Schokolade"
+    ],
+    [
+     "Hauptgang",
+     "Gebackenes … auf Kartoffelstampf mit Champagner-…",
+     "Beet it · Beetroot-infused Knut Hansen Gin | Himbeer-Cordial | …"
+    ],
+    [
+     "Dessert",
+     "Crème Brûlée",
+     "Russian Winter · Three Sixty Vodka | Vanille | Coldbrew-Kaffee | …"
+    ],
+    [
+     "Absacker",
+     "",
+     "Apfel-Punsch · Ron Piet Rum | Sherry | Limette | Kamille | Apfel | Zimt"
+    ]
+   ],
+   "upgrade": [],
+   "karte": "abend-2023-11-17",
+   "name": "17./18. November 2023"
+  },
+  "ohne-2023": {
+   "ab": "2023-09-22",
+   "preis": "59,00 EUR",
+   "gaenge": [
+    [
+     "Apéritif",
+     "",
+     "White Mojito"
+    ],
+    [
+     "Vorspeise",
+     "Sashimi vom Balfego-Thunfisch · Tomate / Ingwer / Sesam (vegetarische Alternative auf Nachfrage)",
+     "Birne"
+    ],
+    [
+     "Hauptgang",
+     "Risotto vom Hokkaido-Kürbis mit gebratenen Pfifferlingen",
+     "Butternut Old Fashioned"
+    ],
+    [
+     "Dessert",
+     "Crème Brulée mit hausgemachtem Sorbet",
+     "Escape"
+    ],
+    [
+     "Absacker",
+     "",
+     "Autumn Highball"
+    ]
+   ],
+   "upgrade": [],
+   "karte": "abend-2023-09-22",
+   "name": "22./23. September 2023"
+  },
+  "CxNkFWTIvL2": {
+   "ab": "2023-09-15",
+   "preis": "80,00 EUR",
+   "gaenge": [
+    [
+     "Amuse Bouche",
+     "",
+     "Cleared Strawberry Martini · Gin | Cleared Erdbeer-Wasser"
+    ],
+    [
+     "Apéritif",
+     "",
+     "Umami · Tequila | lakto-fermentierte Tomaten | Agave | Limettensaft | Tomatenstaub"
+    ],
+    [
+     "Vorspeise",
+     "Das „Brot der Freude“ · Geeister Sugo von allerfeinsten sizilianischen Dattel-Tomaten / Burrata-Mozzarella / Pfirsich / Avocado",
+     "Cabra · Mezcal | Thymian | Feige | Birne | Limetten | ziegenmilch-filtriert"
+    ],
+    [
+     "Hauptgang",
+     "Allerlei geröstete Pilze in Schnittlauch-Rahmsauce · hausgemachte Bandnudeln / grüner Erbsen-Sud",
+     "Molekulare Aviation · Gin | Zitrone | Maraschino | Veilchen-Caviar"
+    ],
+    [
+     "Dessert",
+     "Crème Brulée mit hausgemachtem Sorbet",
+     "Black Pearl · Black Sesam fatwashed Tequila | Guave | Grapefruit | Limette | MSG Solution"
+    ]
+   ],
+   "upgrade": [
+    "Bunter Salat von der Permakultur Kirchhorst",
+    "Filet vom Fjord-Lachs mit Bouillabaisse-Sauce",
+    "Striploin-Steak (grasgefüttert aus Australien) mit Kräuterbutter"
+   ],
+   "karte": "abend-2023-09-15",
+   "name": "15./16. September 2023"
+  }
+ },
+ "naechster": {
+  "ab": "2025-02-21",
+  "titel": "Menü",
+  "motto": "",
+  "mit": "BY MOMO X RUDI",
+  "preis": "79,00 EUR",
+  "gaenge": [
+   [
+    "Apéritif",
+    "Sauerteig | Tomate | Butter",
+    "Cognac | Toasted Pumpkin Samen | Limette | Champagner"
+   ],
+   [
+    "Vorspeise",
+    "Miso | Sellerie | Röstzwiebeln",
+    "Vodka | Tom Yam | Guava | Cocos | Acids | Soda"
+   ],
+   [
+    "Hauptgang",
+    "Spinat | braune Butter | Parmesan",
+    "Tequila | lakto-fermentierte Tomate | Agave | Limette"
+   ],
+   [
+    "Dessert",
+    "Kaffee | Molke | Amaretto",
+    "Vodka | Cacao | Matcha | Mango"
+   ],
+   [
+    "Absacker",
+    "",
+    "Gin | Turmeric | Ingwer"
+   ]
+  ],
+  "upgrade": [],
+  "beispiel": true
+ }
+}

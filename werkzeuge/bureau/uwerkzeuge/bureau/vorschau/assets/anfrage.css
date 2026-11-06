@@ -1,0 +1,199 @@
+/* Anfragen an das Team (29.10.2026, Anschluss ans Gästebuch): Warteliste, eigene Feier, Nachricht in einer Karte wie «Platz buchen» (buchen.css),
+   Bestätigung als Ticket. Gebaut von assets/anfrage.js; auf jeder Seite, deshalb unabhängig von buchen.css. */
+html.af-offen,html.af-offen body{overflow:hidden}
+.af-dialog{position:fixed;inset:0;z-index:210;display:grid;place-items:center;padding:16px}
+.af-dialog[hidden]{display:none}
+.af-grund{position:absolute;inset:0;background:rgba(10,9,12,.72);animation:af-grund .5s ease both}
+@keyframes af-grund{from{opacity:0}}
+.af-karte{position:relative;width:min(640px,100%);overflow:hidden;background:linear-gradient(#F9F4F0,#F1E9E4);color:#2A2833;border-radius:28px;box-shadow:0 60px 90px -40px rgba(0,0,0,.95),inset 0 1px 0 #fff;--fg:#2A2833;--fg2:#5A5562;--linie:rgba(42,40,51,.16)}
+.af-karte::before{content:"";position:absolute;inset:12px;border:1px solid rgba(176,140,90,.45);border-radius:18px;pointer-events:none;z-index:1}
+/* nur der Inhalt scrollt, der Rahmen der Karte bleibt stehen */
+.af-innen{max-height:calc(100svh - 32px);overflow:auto;overscroll-behavior:contain;padding:clamp(28px,3.4vw,44px)}
+html.js:not(.ruhig) .af-karte{animation:af-karte 1.1s cubic-bezier(.16,.84,.3,1) both}
+@keyframes af-karte{0%{transform:translateY(90px) scale(.98)}62%{transform:translateY(-5px) scale(1.002)}100%{transform:none}}
+.af-zu{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:50%;border:0;background:#F7F0EB;cursor:pointer;z-index:2;box-shadow:0 6px 12px -6px rgba(42,40,51,.45),inset 0 1px 0 #fff}
+.af-zu::before,.af-zu::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.6px;background:#2A2833;transform:translate(-50%,-50%) rotate(45deg)}
+.af-zu::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.af-schritt{display:flex;flex-direction:column;gap:20px;position:relative}
+.af-schritt[hidden]{display:none}
+.af-kicker{font:400 11px/1.3 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#9A7A4E;padding-right:48px}
+.af-titel{font:340 clamp(42px,5vw,64px)/.98 var(--titel);letter-spacing:-.015em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;margin:-6px 0 0;padding-right:44px;text-wrap:balance}
+.af-text{margin:-4px 0 0;font-size:17px;line-height:1.5;color:#5A5562;max-width:46ch;text-wrap:pretty}
+.af-feld{display:flex;flex-direction:column;gap:8px;min-width:0;border:0;margin:0;padding:0}
+.af-label{font:500 10.5px/1.2 var(--etikett);letter-spacing:.2em;text-transform:uppercase;color:#9A7A4E}
+.af-label small{font:400 10.5px/1 var(--etikett);letter-spacing:.12em;text-transform:none;color:#8A8592;margin-left:6px}
+.af-zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.af-feld input,.af-feld textarea{width:100%;min-width:0;background:#F1E9E4;border:0;border-radius:12px;padding:0 16px;font:400 16px/1.4 var(--text);color:#2A2833;
+  box-shadow:inset 0 2px 4px rgba(42,40,51,.08),inset 0 0 0 1px rgba(42,40,51,.1)}
+.af-feld input{height:50px}
+.af-feld textarea{min-height:104px;padding:13px 16px;resize:vertical}
+.af-feld input::placeholder,.af-feld textarea::placeholder{color:#8A8592}
+.af-feld input:focus,.af-feld textarea:focus{outline:none;box-shadow:inset 0 2px 4px rgba(42,40,51,.08),inset 0 0 0 1.5px var(--kerze)}
+.af-feld [aria-invalid=true]{box-shadow:inset 0 0 0 1.5px #C9533A}
+.af-karte .wt-wahl span{background:#F1E9E4}
+.af-zaehler{display:inline-flex;align-items:center;gap:6px;padding:6px;border-radius:999px;width:max-content;background:#F1E9E4;box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(42,40,51,.1),0 10px 18px -12px rgba(42,40,51,.35)}
+.af-zaehler button{position:relative;width:44px;height:44px;border-radius:50%;border:0;background:#F7F0EB;cursor:pointer;box-shadow:0 6px 12px -6px rgba(42,40,51,.45),inset 0 1px 0 #fff}
+.af-zaehler button::before{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.6px;background:#2A2833;transform:translate(-50%,-50%)}
+.af-zaehler button[data-plus="1"]::after{content:"";position:absolute;left:50%;top:50%;width:1.6px;height:14px;background:#2A2833;transform:translate(-50%,-50%)}
+.af-zaehler button:disabled{opacity:.4;cursor:default}
+.af-zaehler output{min-width:44px;display:grid;place-items:center;height:44px;font:340 28px/1 var(--titel)}
+.af-falle{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.af-tat{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.af-karte .knopf span{white-space:nowrap}
+.af-karte .knopf[disabled]{opacity:.6;cursor:wait}
+.af-fehler{margin:0;padding:14px 16px;border-radius:12px;background:rgba(176,140,90,.13);box-shadow:inset 0 0 0 1px rgba(176,140,90,.35);color:#4A3A33;font-size:15px;line-height:1.5}
+.af-fehler a{color:var(--kerze-tief);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.af-fehler[hidden]{display:none}
+/* Bestätigung: das Ticket wie nach «Platz buchen», nur ohne Zahlung */
+.af-ticket{position:relative;background:#FBF7F3;border-radius:6px;padding:32px 26px 26px;text-align:center;transform:rotate(-2deg);margin:6px 8px;box-shadow:0 30px 44px -26px rgba(42,40,51,.6)}
+.af-ticket::before{content:"";position:absolute;inset:9px;border:1px solid rgba(176,140,90,.6);outline:1px solid rgba(176,140,90,.28);outline-offset:-6px;pointer-events:none}
+html.js:not(.ruhig) .af-ticket{animation:af-ticket 2.2s .15s both}
+@keyframes af-ticket{0%{transform:translateY(120px) rotate(1.5deg) scale(.97);animation-timing-function:cubic-bezier(.16,.84,.3,1)}
+  64%{transform:translateY(-8px) rotate(-2.5deg) scale(1.003);animation-timing-function:cubic-bezier(.45,0,.35,1)}100%{transform:rotate(-2deg)}}
+.af-t-marke{width:72%;margin:0 auto;color:#2A2833}.af-t-marke .marke{width:100%;height:auto}
+.af-t-zeile{margin-top:8px;font:600 9px/1 var(--etikett);letter-spacing:.2em;color:#9A7A4E}
+.af-t-fuer{margin-top:24px;font:500 11px/1 var(--etikett);letter-spacing:.16em;text-transform:uppercase;color:#8A8592}
+.af-t-name{margin-top:6px;font:340 clamp(28px,3vw,38px)/1.1 var(--titel);font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 96;overflow-wrap:anywhere;text-wrap:balance}
+.af-t-mehr{margin-top:14px;display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;font:400 13px/1.3 var(--mono)}
+.af-t-ok{margin-top:16px;padding-top:12px;border-top:1px solid rgba(176,140,90,.4);font:600 11px/1 var(--etikett);letter-spacing:.2em;text-transform:uppercase;color:var(--kerze-tief);display:flex;flex-wrap:wrap;justify-content:center;gap:8px 0}
+.af-t-ok span{white-space:nowrap}
+.af-t-ok span+span::before{content:"·";margin:0 .6em}
+.af-danke{margin:4px 0 0;font:340 22px/1.35 var(--titel);font-variation-settings:"SOFT" 100,"opsz" 48;text-wrap:pretty}
+/* Gäste-Chat (29.10.2026, Robert: «wie bei Rivage … unten rechts elegant edel aufklappend»): runder Knopf mit dem «C», darüber ein schmales, hohes
+   Gesprächsfenster, an der Ecke verankert, ohne Abdunklung; am Handy eine Lade von unten mit Griff. Bewegung nur über transform und opacity. */
+.cc-knopf{position:fixed;z-index:206;right:var(--rand);bottom:max(16px,calc(env(safe-area-inset-bottom) + 12px),calc(var(--rand) * .5));
+  transition:transform .55s var(--k),box-shadow .45s}   /* der Knopf des Hauses (.knopf); Kante rechts wie die Leiste oben (var(--rand)) */
+.cc-knopf.weg{transform:translateY(calc(100% + 60px))}   /* wie .leiste.weg: gleiche Dauer und Kurve, nur nach unten */
+html:not(.js) .cc-knopf.weg{transform:none}
+.cc-knopf__t{display:grid}
+.cc-knopf__t b{grid-area:1/1;font:inherit;transition:opacity .3s,transform .45s var(--k)}
+.cc-knopf__zu{opacity:0;transform:translateY(8px)}
+.cc-offen .cc-knopf__auf{opacity:0;transform:translateY(-8px)}
+.cc-offen .cc-knopf__zu{opacity:1;transform:none}
+.cc-knopf i{position:relative;display:grid;place-items:center}
+.cc-knopf i>span{grid-area:1/1;display:grid;place-items:center;transition:transform .5s var(--k),opacity .3s}
+.cc-knopf__c svg{width:20px;height:auto;color:#fff}
+.cc-knopf__x{opacity:0;transform:rotate(-90deg) scale(.6)}
+.cc-knopf__x svg{width:16px;height:16px;stroke:#fff;stroke-width:1.8;fill:none;stroke-linecap:round}
+.cc-offen .cc-knopf__c{opacity:0;transform:rotate(90deg) scale(.6)}
+.cc-offen .cc-knopf__x{opacity:1;transform:none}
+.cc{position:fixed;z-index:205;right:var(--rand);bottom:calc(max(16px,calc(env(safe-area-inset-bottom) + 12px),calc(var(--rand) * .5)) + 72px);
+  width:min(400px,calc(100vw - 2 * var(--rand)));height:min(620px,calc(100vh - 150px));height:min(620px,calc(100svh - 150px));display:flex;flex-direction:column;
+  background:linear-gradient(#F9F4F0,#F1E9E4);color:#2A2833;border-radius:24px;box-shadow:0 40px 80px -30px rgba(0,0,0,.85),0 0 0 1px rgba(201,164,106,.35);
+  opacity:0;transform:translateY(16px) scale(.96);transform-origin:100% 100%;transition:opacity .3s,transform .55s cubic-bezier(.16,.84,.3,1);overflow:hidden}
+.cc[hidden]{display:none}
+.cc-offen .cc{opacity:1;transform:none}
+.cc::before{content:"";position:absolute;inset:9px;border:1px solid rgba(176,140,90,.38);border-radius:17px;pointer-events:none;z-index:2}
+.cc__griff{display:none}
+.cc__kopf{display:flex;align-items:center;gap:12px;padding:20px 16px 14px 24px;border-bottom:1px solid rgba(176,140,90,.3);flex:none}
+.cc__c{flex:none;width:26px;color:var(--kerze-tief)}.cc__c svg{width:26px;height:auto;display:block}
+.cc__kopf div{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.cc__kopf b{font:340 21px/1.1 var(--titel);font-variation-settings:"SOFT" 100,"opsz" 48}
+.cc__kopf div span{font:500 10px/1.2 var(--etikett);letter-spacing:.14em;text-transform:uppercase;color:#9A7A4E}
+.cc__neu,.cc__zu{flex:none;width:36px;height:36px;border:0;border-radius:50%;display:grid;place-items:center;background:transparent;color:#5A5562;cursor:pointer;transition:background .3s}
+.cc__neu:hover,.cc__zu:hover{background:rgba(176,140,90,.15)}
+.cc__neu svg,.cc__zu svg{width:16px;height:16px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cc__log{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:18px 22px 10px;display:flex;flex-direction:column;gap:12px}
+.cc__start{margin:auto 0;display:flex;flex-direction:column;align-items:flex-start;padding:8px 2px}
+.cc__start-c{color:var(--kerze-tief);margin-bottom:14px}.cc__start-c svg{width:40px;height:auto;display:block}
+.cc__start h3{margin:0 0 6px;font:340 27px/1.15 var(--titel);font-variation-settings:"SOFT" 100,"opsz" 72}
+.cc__start p{margin:0 0 20px;font-size:14.5px;line-height:1.5;color:#5A5562;text-wrap:pretty}
+.cc__karten{display:grid;grid-template-columns:1fr 1fr;gap:9px;width:100%}
+.cc__karten button{display:flex;flex-direction:column;gap:4px;text-align:left;padding:13px 14px;border:0;border-radius:14px;background:#FBF7F3;color:#2A2833;cursor:pointer;
+  box-shadow:inset 0 0 0 1px rgba(176,140,90,.32);transition:box-shadow .3s,transform .4s var(--k)}
+.cc__karten button:hover{box-shadow:inset 0 0 0 1px var(--kerze-tief);transform:translateY(-1px)}
+.cc__karten b{font:500 14.5px/1.2 var(--text)}
+.cc__karten span{font:400 11.5px/1.3 var(--mono);color:#7A7380}
+.cc__b{margin:0;max-width:88%;font-size:15px;line-height:1.55;text-wrap:pretty}
+.cc__b--gast{align-self:flex-end;padding:10px 16px;border-radius:18px 18px 4px 18px;background:#2A2833;color:#F7F0EB;line-height:1.45}
+.cc__b--haus{align-self:flex-start;padding:2px 0}
+.cc__b--denkt{display:flex;gap:5px;padding:10px 0}
+.cc__b--denkt i{width:6px;height:6px;border-radius:50%;background:var(--kerze);animation:cc-denkt 1s infinite}
+.cc__b--denkt i:nth-child(2){animation-delay:.15s}.cc__b--denkt i:nth-child(3){animation-delay:.3s}
+@keyframes cc-denkt{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.cc__schritt{display:inline-flex;align-items:center;margin-top:10px;padding:10px 16px;border:0;border-radius:999px;background:#2A2833;color:#F7F0EB;font:600 10.5px/1.2 var(--etikett);
+  letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.cc__b--haus .cc__schritt{display:flex;width:max-content}
+.cc__weiter{display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:14px;background:rgba(176,140,90,.1);box-shadow:inset 0 0 0 1px rgba(176,140,90,.3)}
+.cc__weiter label{display:flex;flex-direction:column;gap:6px}
+.cc__weiter label span{font:500 10px/1 var(--etikett);letter-spacing:.18em;text-transform:uppercase;color:#9A7A4E}
+.cc__weiter input{height:44px;padding:0 14px;border:0;border-radius:10px;background:#FBF7F3;font:400 16px var(--text);color:#2A2833;box-shadow:inset 0 0 0 1px rgba(42,40,51,.12)}
+.cc__weiter input:focus{outline:none;box-shadow:inset 0 0 0 1.5px var(--kerze)}
+.cc__weiter .cc__schritt{align-self:flex-start;margin-top:2px}
+.cc__feld{flex:none;display:flex;align-items:flex-end;gap:10px;margin:6px 16px 0;padding:10px 8px 10px 16px;border-radius:18px;background:#FBF7F3;box-shadow:inset 0 0 0 1px rgba(176,140,90,.35)}
+.cc__feld label{flex:1;min-width:0;display:block}
+.cc__feld textarea{display:block;width:100%;height:24px;max-height:120px;padding:2px 0;border:0;background:none;resize:none;font:400 16px/1.4 var(--text);color:#2A2833;outline:none;scrollbar-width:none}
+.cc__feld textarea::placeholder{color:#8A8592}
+.cc__send{flex:none;width:38px;height:38px;border:0;border-radius:50%;display:grid;place-items:center;background:var(--kerze);color:#fff;cursor:pointer;transition:transform .4s var(--k)}
+.cc__send:disabled{opacity:.5;cursor:wait}
+.cc__send svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.cc__fuss{flex:none;margin:0;padding:10px 24px 18px;font-size:11.5px;line-height:1.4;color:#8A8592}
+.cc__fuss a{color:inherit}
+@media (max-width:860px){
+  .cc-offen .cc-knopf{opacity:0;pointer-events:none}   /* am Handy schliessen Griff und × der Lade */
+  /* Lade von unten, nicht bildschirmfüllend, mit Griff */
+  .cc{left:0;right:0;bottom:0;width:auto;height:min(76vh,640px);height:min(76svh,640px);border-radius:22px 22px 0 0;transform:translateY(100%);transform-origin:50% 100%;
+    padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -24px 60px -20px rgba(0,0,0,.8),0 0 0 1px rgba(201,164,106,.35)}
+  .cc::before{inset:8px 8px 0;border-bottom:0;border-radius:15px 15px 0 0}
+  .cc-offen .cc{transform:none}
+  .cc__griff{display:grid;place-items:center;flex:none;height:26px;margin:0;padding:0;border:0;background:transparent;cursor:grab;touch-action:none}
+  .cc__griff i{width:42px;height:5px;border-radius:3px;background:rgba(42,40,51,.25)}
+  .cc__kopf{padding:4px 12px 12px 20px}
+  .cc__log{padding:14px 18px 8px}
+  .cc__start-c{display:none}
+  .cc__start h3{font-size:24px}
+  .cc__start p{margin-bottom:16px}
+  .cc__feld{margin:6px 12px 0}
+  .cc__fuss{padding:8px 20px 12px}
+}
+@media (prefers-reduced-motion:reduce){.cc,.cc-knopf,.cc-knopf i>span{transition:none;animation:none}}
+/* Gutschein: das Motiv der Gestaltung oben in der Karte, zwei Wege zur Wahl */
+.af-bild{margin:0;border-radius:14px;overflow:hidden;box-shadow:0 20px 34px -24px rgba(42,40,51,.7)}
+.af-bild img{display:block;width:100%;height:auto}
+.af-zwei-wahl{grid-template-columns:repeat(2,1fr)}
+@media (max-width:860px){
+  .af-dialog{padding:0;align-items:end}
+  .af-karte{width:100%;border-radius:24px 24px 0 0}
+  .af-innen{max-height:100svh;padding:26px 20px 34px;overflow-x:hidden}
+  .af-karte::before{inset:10px;border-radius:16px 16px 0 0}
+  .af-zu{top:18px;right:18px}
+  .af-zwei{grid-template-columns:minmax(0,1fr)}
+  .af-titel{font-size:clamp(36px,10.4vw,46px)}
+  .af-text{font-size:16px}
+  .af-karte .wt-wahl span{padding:12px}
+}
+@media (prefers-reduced-motion:reduce){.af-karte,.af-ticket,.af-grund{animation:none!important}}
+
+/* Sichtbare Zugänge (26199, Robert: «wie kommt man zu den Sachen?»): Gutschein und lange Tafel als Kacheln mit Bild, Satz und Knopf;
+   Startseite beide nebeneinander, Der Abend und Alle Abende je eine breite Kachel. «Schreib uns» als Knopf in der Kontaktspalte des Fusses. */
+.zugaenge{padding:clamp(72px,11vh,130px) var(--rand)}
+.zg-reihe{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.4vw,56px)}
+.zg{display:flex;flex-direction:column;gap:clamp(22px,2.4vw,32px)}
+.zg-bild{position:relative;margin:0;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#1A1920;box-shadow:0 40px 70px -40px rgba(0,0,0,.9)}
+.zg-gutschein{background:#17161B}   /* Grund des Motivs, kein Rand sichtbar */
+.zg-gutschein img{display:block;width:100%;height:100%;object-fit:contain}
+.zg-bild .zg-foto{position:absolute;inset:0;margin:0;height:100%}
+.zg-text{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.zg-text>.sw:last-child{margin-top:auto;padding-top:8px}
+.zg-k{margin:0;color:var(--kerze-hell)}
+.zg-t{margin:0;text-wrap:balance}
+.zg-s{margin:0;max-width:44ch;color:var(--fg2);font-size:clamp(17px,1.3vw,19px);line-height:1.55;text-wrap:pretty}
+.zg-breit{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(28px,4.4vw,80px)}
+.zg-breit .zg-text>.sw:last-child{margin-top:8px}
+button.knopf{border:0;cursor:pointer}
+.fuss .fu-s2 .fu-tat{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px}
+@media (min-width:861px){.fuss .fu-tat{align-self:start}}   /* mit dem Knopf «Schreib uns» ist die Kontaktspalte höher: alle drei oben bündig */
+@media (max-width:860px){
+  .zg-reihe{grid-template-columns:minmax(0,1fr);gap:64px}
+  .zg-breit{grid-template-columns:minmax(0,1fr)}
+}
+/* 30.10.2026 Oberchef: Schliessen ohne «×», der Zurück-Pfeil der Werkzeuge */
+.af-zu::before{width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M6 9.67 2.67 6.33 6 3M2.67 6.33h7.33a3.33 3.33 0 0 1 0 6.67h-2%22 fill=%22none%22 stroke=%22%232A2833%22 stroke-width=%221.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E") center/16px 16px no-repeat;transform:translate(-50%,-50%)}
+.af-zu::after{display:none}
+
+/* 30.10.2026 Tor K5/K32: solange ein Dialog offen ist (Anfrage, Ticket «Dein Platz an der Tafel», Abend-Ansicht), treten Sprach- und Chat-Knopf zurück und verdecken nichts */
+html.af-offen .cc-knopf,html.af-offen .sprache-knopf,html:has(#tb-dialog:not([hidden])) .cc-knopf,html:has(#tb-dialog:not([hidden])) .sprache-knopf,html:has(.ad[role=dialog]:not([hidden])) .cc-knopf,html:has(.ad[role=dialog]:not([hidden])) .sprache-knopf{opacity:0;visibility:hidden;pointer-events:none}
+/* 30.10.2026 Oberchef: «Neues Gespräch» als Knopf mit Schrift «Neu beginnen» (EN «Start over») statt eines zweiten runden Pfeils neben «Schliessen» */
+.cc .cc__neu{align-self:flex-start;margin-top:6px;width:auto;height:28px;padding:0 12px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(176,140,90,.38);display:flex;align-items:center;justify-content:center}
+.cc .cc__neu span{font:500 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#5A5562;white-space:nowrap;text-box:trim-both cap alphabetic}
+

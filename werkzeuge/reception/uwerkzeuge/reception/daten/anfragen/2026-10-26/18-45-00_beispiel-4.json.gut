@@ -1,0 +1,33 @@
+{
+ "zeit": "2026-10-26T18:45:00+01:00",
+ "art": "feier",
+ "name": "Kai Brandt",
+ "kontakt": "+49 151 2345678",
+ "datum": "Samstag, 13. März 2027",
+ "personen": 12,
+ "anliegen": "Die lange Tafel für den 40. Geburtstag, 12 Personen.",
+ "sprache": "de",
+ "gespraech": "beispiel-4",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Kann man die lange Tafel auch für eine eigene Feier haben? Ich werde 40, wir wären 12."
+  },
+  {
+   "rolle": "assistant",
+   "text": "Ja, die lange Tafel gibt es auch für eure eigene Feier; reservieren geht bei der Bar per Nachricht oder Telefon. Wenn du magst, gebe ich deine Anfrage weiter: Wie heisst du, und wie erreicht dich das Team?"
+  },
+  {
+   "rolle": "user",
+   "text": "Kai Brandt, 0151 2345678, am liebsten Samstag, 13. März 2027"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Danke. Dies ist ein Entwurf von Tasty Studios: Die Anfrage geht nicht an das Team, sie liegt nur zur Ansicht im Gästebuch."
+  }
+ ],
+ "status": "gelesen",
+ "beispiel": true,
+ "abteilung": "Feiern",
+ "entwurf": null
+}

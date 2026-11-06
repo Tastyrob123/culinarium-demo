@@ -1,0 +1,2171 @@
+{
+ "bestand": [
+  "2023-09-15_culinarium_hannover_CxNkFWTIvL2-1.jpg",
+  "2023-09-15_culinarium_hannover_CxNkFWTIvL2-2.jpg",
+  "2023-09-16_culinarium_hannover_CxQg56AItz6-1.jpg",
+  "2023-09-16_culinarium_hannover_CxQg56AItz6-2.jpg",
+  "2023-09-16_culinarium_hannover_CxQg56AItz6-3.jpg",
+  "2023-09-16_culinarium_hannover_CxQg56AItz6-4.jpg",
+  "2023-09-16_culinarium_hannover_CxQg56AItz6-5.jpg",
+  "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-1.jpg",
+  "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-2.jpg",
+  "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-3.jpg",
+  "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-4.jpg",
+  "2023-10-12_culinarium_hannover_CyT32RTMB4d-1.jpg",
+  "2023-10-12_culinarium_hannover_CyT32RTMB4d-2.jpg",
+  "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-1.jpg",
+  "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-2.jpg",
+  "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-3.jpg",
+  "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-4.jpg",
+  "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+  "2023-11-03_culinarium_hannover_CzMcqNcMCqG-2.jpg",
+  "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-1.jpg",
+  "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-2.jpg",
+  "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-3.jpg",
+  "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-4.jpg",
+  "2023-12-12_culinarium_hannover_C0w6iuCMcnF-1.jpg",
+  "2023-12-12_culinarium_hannover_C0w6iuCMcnF-2.jpg",
+  "2024-01-09_culinarium_hannover_C15hZ_zIh60-1.jpg",
+  "2024-01-09_culinarium_hannover_C15hZ_zIh60-2.jpg",
+  "2024-01-09_culinarium_hannover_C15hZ_zIh60-3.jpg",
+  "2024-01-09_culinarium_hannover_C15hZ_zIh60-4.jpg",
+  "2024-01-09_culinarium_hannover_C15hZ_zIh60-5.jpg",
+  "2024-01-09_culinarium_hannover_C15hZ_zIh60-6.jpg",
+  "2024-01-10_culinarium_hannover_C17kqAXLfs_-1.jpg",
+  "2024-01-10_culinarium_hannover_C17kqAXLfs_-2.jpg",
+  "2024-01-29_culinarium_hannover_C2sFkpSscHP-1.jpg",
+  "2024-04-18_culinarium_hannover_C56bJeds8PF-1.jpg",
+  "2024-04-18_culinarium_hannover_C56bJeds8PF-2.jpg",
+  "2024-06-20_culinarium_hannover_C8cgYVSouVT-1.jpg",
+  "2024-06-20_culinarium_hannover_C8cgYVSouVT-2.jpg",
+  "2024-11-06_culinarium_hannover_DCCf-ikoaGs-1.jpg",
+  "2024-11-06_culinarium_hannover_DCCf-ikoaGs-2.jpg",
+  "2025-02-04_culinarium_hannover_DFqZn2UMYMV-1.jpg",
+  "2025-02-04_culinarium_hannover_DFqZn2UMYMV-2.jpg",
+  "2025-02-04_culinarium_hannover_DFqZn2UMYMV-3.jpg",
+  "2025-02-04_culinarium_hannover_DFqZn2UMYMV-4.jpg",
+  "2025-02-04_culinarium_hannover_DFqZn2UMYMV-5.jpg",
+  "2025-02-04_culinarium_hannover_DFqZn2UMYMV-6.jpg",
+  "2025-02-04_culinarium_hannover_DFqbLG2s_dc-1.jpg",
+  "2025-02-04_culinarium_hannover_DFqbLG2s_dc-2.jpg",
+  "2025-05-17_culinarium_hannover_DJw8OqGMY1G-1.jpg",
+  "2025-05-17_culinarium_hannover_DJw8OqGMY1G-2.jpg",
+  "2025-10-13_culinarium_hannover_DPwlqcfiKcA-1.jpg",
+  "2025-10-13_culinarium_hannover_DPwlqcfiKcA-2.jpg",
+  "2026-03-06_culinarium_hannover_DVjkofijp6R-1.jpg",
+  "2026-03-06_culinarium_hannover_DVjkofijp6R-2.jpg",
+  "2026-07-29_culinarium_hannover_DbYnkdkjrNy-1.jpg",
+  "2026-07-29_culinarium_hannover_DbYnkdkjrNy-2.jpg",
+  "2025-06-24_rudi__san_DLSA60BMwiG-1.jpg"
+ ],
+ "ausnahmen": [
+  "p_",
+  "pl_",
+  "ill_",
+  "po_",
+  "pr_"
+ ],
+ "fotos": {
+  "flur": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_C56bJeds8PF": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w6iuCMcnF-1.jpg",
+   "grund": "Ausschnitt (558 Punkte, Inhalt 0.83)"
+  },
+  "coupe": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws29": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "team_alle": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r08": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "hok2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_DPwlqcfiKcA": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "Ausschnitt (636 Punkte, Inhalt 0.89)"
+  },
+  "momo_hoch": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r01": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "glaeser": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_C8cgYVSouVT": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2024-04-18_culinarium_hannover_C56bJeds8PF-1.jpg",
+   "grund": "Ausschnitt (492 Punkte, Inhalt 0.82)"
+  },
+  "ecke": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "d3": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r09": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "service": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kerze1": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_DFqbLG2s_dc": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqbLG2s_dc-1.jpg",
+   "grund": "pHash 0"
+  },
+  "spag": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_tisch": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "trio2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "anrichten": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_DJw8OqGMY1G": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2025-05-17_culinarium_hannover_DJw8OqGMY1G-1.jpg",
+   "grund": "pHash 0"
+  },
+  "d2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "beete": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t10": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_C17kqAXLfs_": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "Ausschnitt (590 Punkte, Inhalt 0.88)"
+  },
+  "rudi": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pass4": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "glasnacht": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "schildnacht": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tarte": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "klaeren": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t03": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "roq1": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "anstossen": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "momo": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kerze3": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "p_CzMcqNcMCqG": {
+   "im_feed": true,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "pHash 0"
+  },
+  "g1": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kerze2": {
+   "im_feed": true,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C0w6iuCMcnF_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C0w6iuCMcnF_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C0w6iuCMcnF_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-3.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C0w6iuCMcnF_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C0w6iuCMcnF_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-5.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C0w6iuCMcnF_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-6.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C0w6iuCMcnF_6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-6.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C17kqAXLfs__0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-29_culinarium_hannover_C2sFkpSscHP-1.jpg",
+   "grund": "Ausschnitt (278 Punkte, Inhalt 1.00)"
+  },
+  "ab_C17kqAXLfs__1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-29_culinarium_hannover_C2sFkpSscHP-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C56bJeds8PF_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C56bJeds8PF_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C56bJeds8PF_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C56bJeds8PF_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C56bJeds8PF_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-06-20_culinarium_hannover_C8cgYVSouVT-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_C8cgYVSouVT_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_10": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_11": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_12": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_13": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_14": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_8": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_C8cgYVSouVT_9": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CxNkFWTIvL2_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CxNkFWTIvL2_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CxNkFWTIvL2_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CxNkFWTIvL2_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-3.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CxNkFWTIvL2_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CxNkFWTIvL2_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-5.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CxNkFWTIvL2_6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-15_culinarium_hannover_CxNkFWTIvL2-1.jpg",
+   "grund": "Ausschnitt (205 Punkte, Inhalt 0.83)"
+  },
+  "ab_CxNkFWTIvL2_7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-16_culinarium_hannover_CxQg56AItz6-1.jpg",
+   "grund": "Ausschnitt (397 Punkte, Inhalt 0.99)"
+  },
+  "ab_CxNkFWTIvL2_8": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CyT32RTMB4d_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CyT32RTMB4d_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CyT32RTMB4d_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-3.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CyT32RTMB4d_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CyT32RTMB4d_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-10-25_culinarium_hannover_Cy0KSO7MlDA-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CyT32RTMB4d_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CyT32RTMB4d_6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CyT32RTMB4d_7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CyT32RTMB4d_8": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CzMcqNcMCqG_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CzMcqNcMCqG_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CzMcqNcMCqG_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-3.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CzMcqNcMCqG_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CzMcqNcMCqG_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w5_ZEsfY5-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_CzMcqNcMCqG_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CzMcqNcMCqG_6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_CzMcqNcMCqG_7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DCCf_ikoaGs_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DCCf_ikoaGs_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DCCf_ikoaGs_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-3.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DCCf_ikoaGs_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DCCf_ikoaGs_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-5.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DCCf_ikoaGs_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-6.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DCCf_ikoaGs_6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-6.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DFqbLG2s_dc_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DFqbLG2s_dc_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DFqbLG2s_dc_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DJw8OqGMY1G_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-05-17_culinarium_hannover_DJw8OqGMY1G-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DJw8OqGMY1G_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DJw8OqGMY1G_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DJw8OqGMY1G_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DJw8OqGMY1G_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DJw8OqGMY1G_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_DPwlqcfiKcA_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-10-13_culinarium_hannover_DPwlqcfiKcA-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DVjkofijp6R_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2026-03-06_culinarium_hannover_DVjkofijp6R-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_DbYnkdkjrNy_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2026-07-29_culinarium_hannover_DbYnkdkjrNy-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_ohne_2023_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-1.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_ohne_2023_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-2.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_ohne_2023_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-3.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_ohne_2023_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-25_culinarium_hannover_CxnB2TiM4Iy-4.jpg",
+   "grund": "pHash 0"
+  },
+  "ab_ohne_2023_4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ab_ohne_2023_5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "abr_C8cgYVSouVT_1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "abr_C8cgYVSouVT_2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "abr_C8cgYVSouVT_3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "abr_DJw8OqGMY1G_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-06-24_rudi__san_DLSA60BMwiG-1.jpg",
+   "grund": "pHash 0"
+  },
+  "abr_DVjkofijp6R_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "abr_DbYnkdkjrNy_0": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "baiser": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "bar": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "barlicht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "barnacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "barneg": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "beeteglas": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "d1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_burger": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_drink": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_plakat": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_plakat_ganz": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_team": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_team2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_tisch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dc_zeichen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_bar": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_burger": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_drinks": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_glas": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_karte": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_salat": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_sosse": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dn_team": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_bar": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_burger": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_drinks": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_glas": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_igburger": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_igdrink": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_igteam": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_igtisch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_karte": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_salat": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_sosse": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_team": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "dw_tisch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_36611": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_36738": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_3967": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4032": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4075": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4238": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4582": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4834": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4843": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_4921": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_5289": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_5345": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_5541": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_63740": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_63741": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fa_63963": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fassade": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "fensterdraussen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "flaschen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-1.jpg",
+   "grund": "pHash 0"
+  },
+  "g4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "g5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "glas": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "hok1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ill_C0w6iuCMcnF": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-12-12_culinarium_hannover_C0w6iuCMcnF-1.jpg",
+   "grund": "Ausschnitt (337 Punkte, Inhalt 0.99)"
+  },
+  "ill_C17kqAXLfs_": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2024-01-10_culinarium_hannover_C17kqAXLfs_-1.jpg",
+   "grund": "Ausschnitt (375 Punkte, Inhalt 1.00)"
+  },
+  "ill_C56bJeds8PF": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2024-04-18_culinarium_hannover_C56bJeds8PF-1.jpg",
+   "grund": "Ausschnitt (373 Punkte, Inhalt 1.00)"
+  },
+  "ill_C8cgYVSouVT": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2024-06-20_culinarium_hannover_C8cgYVSouVT-1.jpg",
+   "grund": "Ausschnitt (357 Punkte, Inhalt 1.00)"
+  },
+  "ill_CxNkFWTIvL2": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-09-15_culinarium_hannover_CxNkFWTIvL2-1.jpg",
+   "grund": "Ausschnitt (347 Punkte, Inhalt 0.99)"
+  },
+  "ill_CyT32RTMB4d": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-10-12_culinarium_hannover_CyT32RTMB4d-1.jpg",
+   "grund": "Ausschnitt (396 Punkte, Inhalt 0.90)"
+  },
+  "ill_CzMcqNcMCqG": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "Ausschnitt (407 Punkte, Inhalt 1.00)"
+  },
+  "ill_DCCf-ikoaGs": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2024-11-06_culinarium_hannover_DCCf-ikoaGs-1.jpg",
+   "grund": "Ausschnitt (287 Punkte, Inhalt 1.00)"
+  },
+  "ill_DFqbLG2s_dc": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqbLG2s_dc-1.jpg",
+   "grund": "Ausschnitt (240 Punkte, Inhalt 1.00)"
+  },
+  "ill_DJw8OqGMY1G": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2025-05-17_culinarium_hannover_DJw8OqGMY1G-1.jpg",
+   "grund": "Ausschnitt (342 Punkte, Inhalt 1.00)"
+  },
+  "ill_DPwlqcfiKcA": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2025-10-13_culinarium_hannover_DPwlqcfiKcA-1.jpg",
+   "grund": "Ausschnitt (309 Punkte, Inhalt 1.00)"
+  },
+  "ill_DVjkofijp6R": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2026-03-06_culinarium_hannover_DVjkofijp6R-1.jpg",
+   "grund": "Ausschnitt (412 Punkte, Inhalt 0.86)"
+  },
+  "ill_DbYnkdkjrNy": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2026-07-29_culinarium_hannover_DbYnkdkjrNy-1.jpg",
+   "grund": "Ausschnitt (338 Punkte, Inhalt 1.00)"
+  },
+  "kanister": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "karte": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kartglas": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_36913": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_37016": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3831": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3842": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3855": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3858": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3859": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3887": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3901": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3916": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_3986": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4004": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4024": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4026": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4093": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4108": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4568": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4574": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_4972": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_5005": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_5022": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_5037": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_5062": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_5376": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_5409": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kf_64066": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kopf_derya": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kopf_momo": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kopf_rudi": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "kueche": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "lachen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "lauch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-06-24_rudi__san_DLSA60BMwiG-1.jpg",
+   "grund": "Ausschnitt (682 Punkte, Inhalt 1.00)"
+  },
+  "loch": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "m8": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2025-02-04_culinarium_hannover_DFqZn2UMYMV-2.jpg",
+   "grund": "pHash 0"
+  },
+  "p_C0w6iuCMcnF": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "Ausschnitt (707 Punkte, Inhalt 0.81)"
+  },
+  "p_CxNkFWTIvL2": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-09-15_culinarium_hannover_CxNkFWTIvL2-1.jpg",
+   "grund": "pHash 0"
+  },
+  "p_CyT32RTMB4d": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-10-12_culinarium_hannover_CyT32RTMB4d-1.jpg",
+   "grund": "pHash 0"
+  },
+  "p_DCCf-ikoaGs": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2024-11-06_culinarium_hannover_DCCf-ikoaGs-1.jpg",
+   "grund": "pHash 0"
+  },
+  "p_DVjkofijp6R": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "Ausschnitt (657 Punkte, Inhalt 0.89)"
+  },
+  "p_DbYnkdkjrNy": {
+   "im_feed": false,
+   "ausnahme": true,
+   "gepostet": "2023-11-03_culinarium_hannover_CzMcqNcMCqG-1.jpg",
+   "grund": "Ausschnitt (571 Punkte, Inhalt 0.82)"
+  },
+  "pass": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pass2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pass3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pl23": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2023-09-15_culinarium_hannover_CxNkFWTIvL2-1.jpg",
+   "grund": "pHash 0"
+  },
+  "plakatwand": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "pop23": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r02": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r03": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r04": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r05": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r06": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r07": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r10": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "r11": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "roq2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "schaum": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "schaumglas": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "schildnah": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "schildtag": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t01": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t02": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t04": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t05": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t06": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t07": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t08": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t09": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t11": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t12": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t13": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "t14": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tablett": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tafelleer": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "team_alle_vorn": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "theke": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "theke2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_63873": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_63875": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_84558": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_dz1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_dz2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_dz2ki": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "tm_dz2treu": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "toast": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "trio": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w1": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w2": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w3": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w4": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w5": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w6": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "w7": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_barlicht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_barnacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_ecke": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_fassade": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_fensterdraussen": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_flur": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_schildnacht": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_schildnah": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "wg_schildtag": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws00": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws01": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws02": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws03": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-1.jpg",
+   "grund": "Ausschnitt (122 Punkte, Inhalt 0.86)"
+  },
+  "ws05": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws07": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws09": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws10": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws11": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws12": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws13": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws14": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws15": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws16": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws19": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws20": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws21": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws25": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws28": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "2024-01-09_culinarium_hannover_C15hZ_zIh60-3.jpg",
+   "grund": "Ausschnitt (728 Punkte, Inhalt 1.00)"
+  },
+  "ws30": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws31": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws32": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws33": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws35": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws37": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws39": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws40": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws41": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws42": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws43": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws44": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws45": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws47": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws48": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws49": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws50": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws51": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  },
+  "ws52": {
+   "im_feed": false,
+   "ausnahme": false,
+   "gepostet": "",
+   "grund": ""
+  }
+ },
+ "doppelt": []
+}

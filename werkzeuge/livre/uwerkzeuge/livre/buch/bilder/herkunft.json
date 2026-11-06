@@ -1,0 +1,326 @@
+{
+ "tresen": {
+  "quelle": "_quelle/vom-kunden/drive/4568.jpg",
+  "was": "Am Tresen wird geschüttelt, vor dem Regal mit den Flaschen",
+  "original": [
+   5304,
+   6630
+  ],
+  "hier": [
+   1440,
+   1800
+  ]
+ },
+ "tafel-koch": {
+  "quelle": "_quelle/vom-kunden/drive/5301.jpg",
+  "was": "Am Tisch der Gäste, im Gespräch",
+  "original": [
+   5304,
+   7952
+  ],
+  "hier": [
+   1201,
+   1800
+  ]
+ },
+ "tafel-kerzen": {
+  "quelle": "_quelle/vom-kunden/drive/4972.jpg",
+  "was": "Die lange Tafel, gedeckt, mit Kerzen",
+  "original": [
+   1638,
+   2048
+  ],
+  "hier": [
+   1440,
+   1800
+  ]
+ },
+ "kerzen": {
+  "quelle": "_quelle/vom-kunden/drive/3855.jpg",
+  "was": "Kerzen auf der Tafel, dahinter das Mikrofon für den Live-Act",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "putz": {
+  "quelle": "_quelle/vom-kunden/drive/4029.jpg",
+  "was": "Durchbruch in der Wand, dahinter ein Tisch mit Kerze und Apothekerflasche",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "flur": {
+  "quelle": "_quelle/vom-kunden/drive/3887.jpg",
+  "was": "Der Flur zur Bar im Licht der Hängelampe",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "ballons": {
+  "quelle": "_quelle/vom-kunden/drive/3937.jpg",
+  "was": "Glasballons mit Sirup und Zapfhähnen an der Bar",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "glas-dunkel": {
+  "quelle": "_quelle/vom-kunden/drive/5369.jpg",
+  "was": "Ein Glas auf dunklem Tisch",
+  "original": [
+   5304,
+   7952
+  ],
+  "hier": [
+   1201,
+   1800
+  ]
+ },
+ "ecke": {
+  "quelle": "_quelle/vom-kunden/drive/5541.jpg",
+  "was": "Die Schilder WILD SIDE an der Klinkerecke, darunter Bänder und Graffiti",
+  "original": [
+   5304,
+   7952
+  ],
+  "hier": [
+   1201,
+   1800
+  ]
+ },
+ "anstossen": {
+  "quelle": "_quelle/vom-kunden/drive/4026.jpg",
+  "was": "Ein roter Drink wird über den Tisch gereicht",
+  "original": [
+   1638,
+   2048
+  ],
+  "hier": [
+   1440,
+   1800
+  ]
+ },
+ "anstossen2": {
+  "quelle": "_quelle/vom-kunden/drive/4024.jpg",
+  "was": "Anstossen über der Tafel",
+  "original": [
+   1638,
+   2048
+  ],
+  "hier": [
+   1440,
+   1800
+  ]
+ },
+ "pass": {
+  "quelle": "_quelle/vom-kunden/36740.png",
+  "was": "Angerichtete Teller in Reihe",
+  "original": [
+   2582,
+   1936
+  ],
+  "hier": [
+   1800,
+   1350
+  ]
+ },
+ "teller": {
+  "quelle": "_quelle/vom-kunden/drive/5045.jpg",
+  "was": "Ein Teller auf dunklem Grund",
+  "original": [
+   1638,
+   2048
+  ],
+  "hier": [
+   1440,
+   1800
+  ]
+ },
+ "glas-hell": {
+  "quelle": "_quelle/vom-kunden/drive/4921.jpg",
+  "was": "Ein heller Drink im Weinglas",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "giessen": {
+  "quelle": "_quelle/vom-kunden/drive/3823.jpg",
+  "was": "Ein Drink wird am Tresen eingegossen",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "schaum": {
+  "quelle": "_quelle/vom-kunden/drive/63963.jpg",
+  "was": "Schaum aus dem Siphon auf einem Drink",
+  "original": [
+   2498,
+   3330
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "team": {
+  "quelle": "_quelle/vom-kunden/drive/63873.jpg",
+  "was": "Drei vor dem Schriftzug NEGRONI an der Bar",
+  "original": [
+   4004,
+   3003
+  ],
+  "hier": [
+   1800,
+   1350
+  ]
+ },
+ "schild-nacht": {
+  "quelle": "_quelle/vom-kunden/drive/4096.jpg",
+  "was": "Das Schild WILD SIDE in der Nacht",
+  "original": [
+   1536,
+   2048
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "teller-gold": {
+  "quelle": "_quelle/vom-kunden/drive/5146.jpg",
+  "was": "Ein Gericht auf einem Teller mit Goldrand",
+  "original": [
+   3000,
+   4000
+  ],
+  "hier": [
+   1350,
+   1800
+  ]
+ },
+ "plakat-2024-11": {
+  "quelle": "_quelle/extern/ig/2024-11-06_culinarium_hannover_DCCf-ikoaGs-1.jpg",
+  "was": "Plakat 29./30.11.2024, Ski",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ },
+ "plakat-2025-02": {
+  "quelle": "_quelle/extern/ig/2025-02-04_culinarium_hannover_DFqbLG2s_dc-1.jpg",
+  "was": "Plakat 21./22.02.2025, Panther auf dem Thron",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ },
+ "plakat-2025-06": {
+  "quelle": "_quelle/extern/ig/2025-05-17_culinarium_hannover_DJw8OqGMY1G-1.jpg",
+  "was": "Plakat 13./14.06.2025, Gärtnerin",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ },
+ "plakat-2025-11": {
+  "quelle": "_quelle/extern/ig/2025-10-13_culinarium_hannover_DPwlqcfiKcA-1.jpg",
+  "was": "Plakat 14./15.11.2025, Kürbis",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ },
+ "plakat-2026-03": {
+  "quelle": "_quelle/extern/ig/2026-03-06_culinarium_hannover_DVjkofijp6R-1.jpg",
+  "was": "Plakat 27./28.03.2026, Panther mit Eisbecher",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ },
+ "plakat-2026-09": {
+  "quelle": "_quelle/extern/ig/2026-07-29_culinarium_hannover_DbYnkdkjrNy-1.jpg",
+  "was": "Plakat 25./26.09.2026, Mondfrau",
+  "original": [
+   2014,
+   2003
+  ],
+  "hier": [
+   1800,
+   1790
+  ]
+ },
+ "plakat-2023-10": {
+  "quelle": "_quelle/extern/ig/2023-10-12_culinarium_hannover_CyT32RTMB4d-1.jpg",
+  "was": "Plakat 21.10.2023, «BY MOMO X CHRISTOPH» · Beleg für das Band der Plakate (28.10.2026)",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ },
+ "plakat-2024-04": {
+  "quelle": "_quelle/extern/ig/2024-04-18_culinarium_hannover_C56bJeds8PF-1.jpg",
+  "was": "Plakat 26./27.04.2024, «BY MOMO» · Beleg für das Band der Plakate (28.10.2026)",
+  "original": [
+   1440,
+   1432
+  ],
+  "hier": [
+   1440,
+   1432
+  ]
+ }
+}

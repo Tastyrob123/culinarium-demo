@@ -1,0 +1,545 @@
+{
+ "reihen": 20,
+ "stuecke": [
+  {
+   "id": "011-DernächsteAben",
+   "r": 1,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "012-16Seit2017inLi",
+   "r": 1,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "013-RoteBeeteZwieb",
+   "r": 1,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "021-tafel",
+   "r": 2,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "022-coupe",
+   "r": 2,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/coupe-1000.webp"
+  },
+  {
+   "id": "023-FilmSignatureD",
+   "r": 2,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "031-team_alle",
+   "r": 3,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/team_alle-2400.webp"
+  },
+  {
+   "id": "032-DirtyChickenDi",
+   "r": 3,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "033-r08",
+   "r": 3,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/r08-1600.webp"
+  },
+  {
+   "id": "041-hok2",
+   "r": 4,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/hok2-1000.webp"
+  },
+  {
+   "id": "042-AusgebuchtDank",
+   "r": 4,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "043-tafel",
+   "r": 4,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "051-MomosDrinkzumD",
+   "r": 5,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "052-momo_hoch",
+   "r": 5,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/momo_hoch-1600.webp"
+  },
+  {
+   "id": "053-r01",
+   "r": 5,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/r01-2400.webp"
+  },
+  {
+   "id": "061-16SignatureDri",
+   "r": 6,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "062-EinAbendimSomm",
+   "r": 6,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "063-tafel",
+   "r": 6,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "071-ecke",
+   "r": 7,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/ecke-1600.webp"
+  },
+  {
+   "id": "072-FilmSignatureD",
+   "r": 7,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "073-r09",
+   "r": 7,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/r09-2400.webp"
+  },
+  {
+   "id": "081-HokkaidoKürbis",
+   "r": 8,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "082-service",
+   "r": 8,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/service-2400.webp"
+  },
+  {
+   "id": "083-FreitagFreitag",
+   "r": 8,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "091-tafel",
+   "r": 9,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "092-spag",
+   "r": 9,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/spag-2400.webp"
+  },
+  {
+   "id": "093-DernächsteAben",
+   "r": 9,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "101-dn_tisch",
+   "r": 10,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/dn_tisch-2400.webp"
+  },
+  {
+   "id": "102-trio2",
+   "r": 10,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/trio2-2400.webp"
+  },
+  {
+   "id": "103-PopupDirtyChic",
+   "r": 10,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "111-anrichten",
+   "r": 11,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/anrichten-1600.webp"
+  },
+  {
+   "id": "112-WasfüreinAbend",
+   "r": 11,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "113-tafel",
+   "r": 11,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "121-d2",
+   "r": 12,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/d2-1000.webp"
+  },
+  {
+   "id": "122-beete",
+   "r": 12,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/beete-1600.webp"
+  },
+  {
+   "id": "123-Dankefür2026Fü",
+   "r": 12,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "131-t10",
+   "r": 13,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/t10-1000.webp"
+  },
+  {
+   "id": "132-tafel",
+   "r": 13,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "133-rudi",
+   "r": 13,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/rudi-2400.webp"
+  },
+  {
+   "id": "141-FilmAmPassJede",
+   "r": 14,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "142-Samstagausgebu",
+   "r": 14,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "143-glasnacht",
+   "r": 14,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/glasnacht-2400.webp"
+  },
+  {
+   "id": "151-AubergineKokos",
+   "r": 15,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "152-schildnacht",
+   "r": 15,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/schildnacht-2400.webp"
+  },
+  {
+   "id": "153-tarte",
+   "r": 15,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/tarte-2400.webp"
+  },
+  {
+   "id": "161-15TastingundSc",
+   "r": 16,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "162-NocheinAbendin",
+   "r": 16,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "163-18RückblickNov",
+   "r": 16,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "171-roq1",
+   "r": 17,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/roq1-2400.webp"
+  },
+  {
+   "id": "172-anstossen",
+   "r": 17,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/anstossen-2400.webp"
+  },
+  {
+   "id": "173-NochdreiPlätze",
+   "r": 17,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "181-momo",
+   "r": 18,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/momo-2400.webp"
+  },
+  {
+   "id": "182-Dusagstmirwasd",
+   "r": 18,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "183-Freitag271126N",
+   "r": 18,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "191-m2",
+   "r": 19,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/m2-1000.webp"
+  },
+  {
+   "id": "192-tafel",
+   "r": 19,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "193-g1",
+   "r": 19,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/g1-2400.webp"
+  },
+  {
+   "id": "201-LauchBlumenkoh",
+   "r": 20,
+   "c": 1,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  },
+  {
+   "id": "202-kerze2",
+   "r": 20,
+   "c": 2,
+   "w": 1,
+   "h": 1,
+   "art": "foto",
+   "bild": "/Users/robertreff/Desktop/Website-Projekte/Culinarium Hannover/website/assets/bild/kerze2-1000.webp"
+  },
+  {
+   "id": "203-DernächsteAben",
+   "r": 20,
+   "c": 3,
+   "w": 1,
+   "h": 1,
+   "art": "html",
+   "bild": ""
+  }
+ ]
+}

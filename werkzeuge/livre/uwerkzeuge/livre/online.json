@@ -1,0 +1,65 @@
+{
+ "name": "Le Livre",
+ "hinweis": "culinarium-livre, 28.10.2026 (Form wie Schäfli _werkzeuge/livre/online.json). Funktion api/livre.py aus _werkzeuge/livre/online/livre_online.py, Logik und Daten als lib. Oberfläche statisch unter /werkzeuge/livre/ (keine Quellen, kein _quellen.json, kein _register-vor-schaerfen.json, keine Prüfordner). Speichert nichts, kein Blob. Downloads online in Website-Grösse (Originale nur lokal). KI nur mit ANTHROPIC_API_KEY am Vercel-Projekt und LIVRE_KI=1 (Roberts Wort, Regel 54), sonst Probe-Antwort; requirements: Pillow, PyMuPDF. Fotos aus /assets/bild/, Schriften /assets/schrift/ (Fraunces, Urbanist, Instrument Sans, DM Mono), Zeichen /assets/zeichen/, Kleid aus _werkzeuge/oberflaeche/ unter /assets/oberflaeche/. Nichts davon ist hochgeladen.",
+ "funktionen": {
+  "api/livre.py": {
+   "von": "_werkzeuge/livre/online/livre_online.py",
+   "dauer": 120
+  }
+ },
+ "lib": {
+  "_werkzeuge/livre/livre.py": "api/_lib/livre/livre.py",
+  "_werkzeuge/livre/livre.json": "api/_lib/livre/livre.json"
+ },
+ "statik": {
+  "_werkzeuge/oberflaeche": "assets/oberflaeche",
+  "_werkzeuge/livre/index.html": "werkzeuge/livre/index.html",
+  "_werkzeuge/livre/livre.css": "werkzeuge/livre/livre.css",
+  "_werkzeuge/livre/livre.js": "werkzeuge/livre/livre.js",
+  "_werkzeuge/livre/start.js": "werkzeuge/livre/start.js",
+  "_werkzeuge/livre/rundgang.js": "werkzeuge/livre/rundgang.js",
+  "_werkzeuge/livre/zur-werkbank.js": "werkzeuge/livre/zur-werkbank.js",
+  "_werkzeuge/livre/livre.json": "werkzeuge/livre/livre.json",
+  "_werkzeuge/livre/buch.html": "werkzeuge/livre/buch.html",
+  "_werkzeuge/livre/buch.js": "werkzeuge/livre/buch.js",
+  "_werkzeuge/livre/anleitung.html": "werkzeuge/livre/anleitung.html",
+  "_werkzeuge/livre/anleitung.js": "werkzeuge/livre/anleitung.js",
+  "_werkzeuge/livre/dateien": "werkzeuge/livre/dateien",
+  "_werkzeuge/livre/beispiel": "werkzeuge/livre/beispiel",
+  "_werkzeuge/livre/anleitung": "werkzeuge/livre/anleitung",
+  "_werkzeuge/livre/original": "werkzeuge/livre/original",
+  "_werkzeuge/livre/buch": "werkzeuge/livre/buch",
+  "_werkzeuge/livre/listen": "werkzeuge/livre/listen"
+ },
+ "umleitungen": [
+  {
+   "source": "/_werkzeuge/livre/",
+   "destination": "/werkzeuge/livre/index.html"
+  },
+  {
+   "source": "/werkzeuge/livre/api/:pfad*",
+   "destination": "/api/livre?__weg=/werkzeuge/livre/api/:pfad*"
+  },
+  {
+   "source": "/_werkzeuge/livre/api/:pfad*",
+   "destination": "/api/livre?__weg=/_werkzeuge/livre/api/:pfad*"
+  },
+  {
+   "source": "/marke/api/:pfad*",
+   "destination": "/api/livre?__weg=/marke/api/:pfad*"
+  },
+  {
+   "source": "/marke/livre.json",
+   "destination": "/werkzeuge/livre/livre.json"
+  },
+  {
+   "source": "/_werkzeuge/livre/:pfad*",
+   "destination": "/werkzeuge/livre/:pfad*"
+  }
+ ],
+ "stand": "/marke/livre.json",
+ "pruefung": {
+  "weg": "/werkzeuge/livre/",
+  "kurz": false
+ }
+}

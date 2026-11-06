@@ -1,0 +1,41 @@
+{
+ "_hinweis": "Je Werkzeug: Stand-Weg ab der Wurzel seines Servers (lokal über /_weiter/<werkzeug>/ von server.py), Adresse, Anleitung, Ordner mit seinem Code (Knopf-Namen der Tafel). Form nach Master 4.1; Ports aus AUFTRAG-GEMEINSAM.md. Am Ende gegen die Lieferung des Werkzeugs geprüft (LIEFERUNG.md im Revier).",
+ "bureau": {
+  "adresse": "http://127.0.0.1:9082/_werkzeuge/bureau/",
+  "stand": "/_werkzeuge/bureau/api/ueberblick",
+  "anleitung": "http://127.0.0.1:9082/_werkzeuge/bureau/anleitung.html",
+  "pruefung": "http://127.0.0.1:9082/werkzeuge/website/pruefung.html?haus=culinarium",
+  "code": [
+   "~/Desktop/Website-Projekte/Culinarium Hannover/_werkzeuge/bureau",
+   "~/Desktop/Website-Projekte/_Werkzeuge/werkzeuge/website"
+  ]
+ },
+ "carte": {
+  "adresse": "http://127.0.0.1:9083/_werkzeuge/carte/",
+  "stand": "/_werkzeuge/carte/api/status",
+  "anleitung": "http://127.0.0.1:9083/_werkzeuge/carte/anleitung.html"
+ },
+ "imprimerie": {
+  "adresse": "http://127.0.0.1:9087/_werkzeuge/imprimerie/",
+  "stand": "/_werkzeuge/imprimerie/haeuser/culinarium/vorlagen/index.json",
+  "anleitung": "http://127.0.0.1:9087/_werkzeuge/imprimerie/hilfe/index.html"
+ },
+ "reception": {
+  "adresse": "http://127.0.0.1:9084/_werkzeuge/reception/",
+  "stand": "/_werkzeuge/reception/api/ueberblick",
+  "anleitung": "http://127.0.0.1:9084/_werkzeuge/reception/anleitung.html",
+  "beispiel": true
+ },
+ "livre": {
+  "adresse": "http://127.0.0.1:9085/_werkzeuge/livre/",
+  "stand": "/marke/livre.json",
+  "anleitung": "http://127.0.0.1:9085/_werkzeuge/livre/anleitung.html"
+ },
+ "registre": {
+  "adresse": "http://127.0.0.1:9086/_werkzeuge/registre/",
+  "stand": [
+   "/api/registre?tage=30&beispiel=1"
+  ],
+  "anleitung": "http://127.0.0.1:9086/_werkzeuge/registre/anleitung.html"
+ }
+}

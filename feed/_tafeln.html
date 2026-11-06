@@ -1,0 +1,44 @@
+<!doctype html><meta charset="utf-8"><style>@font-face{font-family:'B';src:url('../_werkbank/fonts/Fraunces-Light.ttf') format('truetype')}
+@font-face{font-family:'M';src:url('../_werkbank/fonts/DMMono-Regular.ttf') format('truetype')}
+@font-face{font-family:'S';src:url('../_werkbank/fonts/InstrumentSans-Regular.ttf') format('truetype')}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#333333}
+.k{position:relative;width:1080px;height:1350px;overflow:hidden;margin:0 0 20px;font-family:'B',Georgia,serif}
+.k--t,.k--e{background:#222028 url(/culinarium-demo/assets/zeichen/tapete-dunkel.svg) 50% 50%/360px auto;color:#faf4f4}
+.k--a{background:#faf4f4;color:#222028}
+/* das Raster zeigt 3:4, also 34 px weniger je Seite: der Rahmen hält Abstand */
+.k i.r{position:absolute;inset:86px 96px;border:1.5px solid rgba(239,118,73,.62)}
+.k--a i.r{border-color:rgba(136,67,41,.6)}
+.k .ce{position:absolute;left:0;right:0;top:170px;display:flex;justify-content:center}
+.k .satz{position:absolute;left:120px;right:120px;top:50%;transform:translateY(-46%);text-align:center;font-size:112px;line-height:1.14;letter-spacing:-.005em}
+.k .satz b{font-weight:400;color:#ef7649;display:block}
+.k .satz span{display:block}
+.k .lin{position:absolute;left:50%;bottom:262px;width:110px;height:2px;margin-left:-55px;background:#ef7649}
+.k .kl{position:absolute;left:120px;right:120px;bottom:186px;text-align:center;font-family:'M',monospace;font-size:23px;letter-spacing:.2em;text-transform:uppercase;color:#ef7649}
+.k--a .kl{color:#884329}.k--a .lin{background:#ab4721}
+.k--a .name{position:absolute;left:0;right:0;top:268px;text-align:center;font-size:92px;line-height:1.1}
+.k--a .bild{position:absolute;left:138px;right:138px;top:424px;height:640px;display:flex;align-items:center;justify-content:center}
+.k--a .bild img{width:100%;height:100%;object-fit:cover;object-position:var(--op,50% 50%);display:block;border:1.5px solid rgba(34,32,40,.5);padding:12px;background:#fdf9f9}
+.k--a .lin{bottom:236px}.k--a .kl{bottom:164px}.k--a .ce{top:150px}
+.k--a .bild svg{height:100%;width:auto}
+.k--e .et{position:absolute;left:50%;top:50%;width:700px;transform:translate(-50%,-50%) rotate(-5deg)}
+.k--e .et img{width:100%;display:block;filter:drop-shadow(0 30px 34px rgba(0,0,0,.5))}
+.k--t.hell{background:#faf4f4;color:#222028}
+.k--t.hell i.r{border-color:rgba(136,67,41,.6)}.k--t.hell .satz b{color:#884329}.k--t.hell .kl{color:#884329}.k--t.hell .lin{background:#ab4721}
+/* Blatt aus der Karte: Stube, Name des Gerichts, seine Zeile und der Preis, wie auf der Karte des Hauses */
+.k--k{background:#faf4f4;color:#222028}
+.k--k i.r{border-color:rgba(136,67,41,.6)}
+.k--k i.r::after{content:'';position:absolute;inset:10px;border:1px solid rgba(136,67,41,.35)}
+.k--k .ce{top:158px}
+.k--k .mit{position:absolute;left:150px;right:150px;top:330px;bottom:330px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.k--k .name{font-size:104px;line-height:1.08}
+.k--k .name span{display:block}
+.k--k .zl{margin-top:44px;font-family:'S',Arial,sans-serif;font-size:45px;line-height:1.42;color:rgba(34,32,40,.8);max-width:660px}
+.k--k .pr{position:absolute;left:150px;right:150px;bottom:236px;display:flex;align-items:baseline;gap:16px;font-size:62px}
+.k--k .pr i{flex:1;border-bottom:3px dotted rgba(34,32,40,.4);transform:translateY(-10px)}
+.k--k .pr small{font-family:'M',monospace;font-size:23px;letter-spacing:.2em;text-transform:uppercase;color:#884329}
+.k--k .kl{position:absolute;left:120px;right:120px;bottom:160px;text-align:center;font-family:'M',monospace;font-size:21px;letter-spacing:.2em;text-transform:uppercase;color:#884329}
+.av{width:640px;height:640px;border-radius:50%;background:#222028 url(/culinarium-demo/assets/zeichen/tapete-dunkel.svg) 50% 50%/360px auto;display:flex;align-items:center;justify-content:center;position:relative}
+.av::after{content:'';position:absolute;inset:34px;border-radius:50%;border:3px solid rgba(239,118,73,.7)}
+.av{border-radius:0}.av::after{border-radius:50%}</style><div class="av" id="av"><svg viewBox="-0.5 -0.5 39.3 41.36" width="330" height="347" fill="#ef7649"><path d="M27.47 14.81C26.03 14.81 24.74 14.48 23.59 13.83C22.45 13.16 21.38 12.32 20.41 11.31C19.44 10.30 18.54 9.27 17.70 8.20C16.87 7.13 16.04 6.20 15.22 5.41C14.41 4.61 13.57 4.08 12.72 3.83C11.86 3.57 10.95 3.75 9.98 4.38C8.85 5.07 8.26 6.42 8.22 8.41C8.19 10.39 8.64 12.75 9.59 15.48C10.55 18.23 11.92 21.05 13.70 23.97C15.65 27.04 17.67 29.59 19.77 31.59C21.87 33.59 23.85 34.81 25.72 35.23C27.47 35.66 29.06 35.59 30.50 35.03C31.95 34.46 33.23 33.59 34.36 32.41C35.48 31.22 36.39 29.95 37.09 28.58L38.27 29.22C37.21 31.40 35.72 33.34 33.80 35.03C31.88 36.72 29.71 38.03 27.30 38.97C24.89 39.90 22.38 40.36 19.78 40.36C17.05 40.36 14.49 39.84 12.09 38.80C9.71 37.75 7.61 36.30 5.80 34.45C3.99 32.60 2.58 30.46 1.55 28.03C0.52 25.59 0.00 22.98 0.00 20.19C0.00 17.39 0.52 14.77 1.55 12.34C2.58 9.91 3.99 7.77 5.80 5.92C7.61 4.07 9.71 2.63 12.09 1.61C14.49 0.58 17.05 0.06 19.78 0.06C21.26 0.06 22.60 0.29 23.80 0.73C25.00 1.17 26.11 1.70 27.12 2.30C28.13 2.90 29.07 3.43 29.92 3.88C30.77 4.32 31.57 4.55 32.31 4.55C33.75 4.55 34.69 4.17 35.14 3.41C35.59 2.65 35.81 1.62 35.81 0.34L37.09 0.34C37.33 1.94 37.36 3.59 37.19 5.28C37.01 6.97 36.57 8.53 35.88 9.97C35.18 11.41 34.14 12.57 32.78 13.47C31.41 14.37 29.64 14.81 27.47 14.81ZM27.47 14.81"/></svg></div>

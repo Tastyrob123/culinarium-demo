@@ -1,0 +1,56 @@
+chromium 1440 OK   Register: Pfeil weiter · 0→1
+chromium 1440 OK   Befund: Pfeil weiter · 0→1
+chromium 1440 OK   Kein Abschnitt «Die Rechnung» · 0 Stellen
+chromium 1440 OK   Vergleich: Schieber 50 → 20 · 50 → 20
+chromium 1440 OK   Vergleich: zweite Seite («Der Abend»)
+chromium 1440 OK   Seiten: dritte Seite wählen · 8 Reiter
+chromium 1440 OK   Werkzeug-Reiter: fünfter (Marke) · MarkeDas Markenbuch
+chromium 1440 OK   Werkzeuge verlinkt · 7 von 7 mit Adresse
+chromium 1440 OK   Feed: Klick auf das Handy lädt den Feed
+chromium 1440 OK   Fuss «Das Wichtigste»: Pfeil weiter · 0→1
+chromium 1440 OK   keine Skriptfehler auf der Werkbank
+chromium 1440 OK   Karten: zweite Karte wählen · n-abend-2025-02-21-01.webp → n-abend-2023-09-15-01.webp
+chromium 1440 OK   Mails: «Ganze Mail» klappt auf
+chromium 1440 OK   Vorschlag: PDF lädt · 200
+chromium 390 OK   Register: Pfeil weiter · 0→1
+chromium 390 OK   Befund: Pfeil weiter · 0→1
+chromium 390 OK   Kein Abschnitt «Die Rechnung» · 0 Stellen
+chromium 390 OK   Vergleich: Schieber 50 → 20 · 50 → 20
+chromium 390 OK   Vergleich: zweite Seite («Der Abend»)
+chromium 390 OK   Seiten: dritte Seite wählen · 8 Reiter
+chromium 390 OK   Werkzeug-Reiter: fünfter (Marke) · MarkeDas Markenbuch
+chromium 390 OK   Werkzeuge verlinkt · 7 von 7 mit Adresse
+chromium 390 OK   Feed: am Touch-Gerät führt «Feed ansehen» zur Feed-Seite
+chromium 390 OK   Fuss «Das Wichtigste»: Pfeil weiter · 0→1
+chromium 390 OK   keine Skriptfehler auf der Werkbank
+chromium 390 OK   Karten: zweite Karte wählen · n-abend-2025-02-21-01.webp → n-abend-2023-09-15-01.webp
+chromium 390 OK   Mails: «Ganze Mail» klappt auf
+chromium 390 OK   Vorschlag: PDF lädt · 200
+webkit 1440 OK   Register: Pfeil weiter · 0→1
+webkit 1440 OK   Befund: Pfeil weiter · 0→1
+webkit 1440 OK   Kein Abschnitt «Die Rechnung» · 0 Stellen
+webkit 1440 OK   Vergleich: Schieber 50 → 20 · 50 → 20
+webkit 1440 OK   Vergleich: zweite Seite («Der Abend»)
+webkit 1440 OK   Seiten: dritte Seite wählen · 8 Reiter
+webkit 1440 OK   Werkzeug-Reiter: fünfter (Marke) · MarkeDas Markenbuch
+webkit 1440 OK   Werkzeuge verlinkt · 7 von 7 mit Adresse
+webkit 1440 OK   Feed: Klick auf das Handy lädt den Feed
+webkit 1440 OK   Fuss «Das Wichtigste»: Pfeil weiter · 0→1
+webkit 1440 OK   keine Skriptfehler auf der Werkbank
+webkit 1440 OK   Karten: zweite Karte wählen · n-abend-2025-02-21-01.webp → n-abend-2023-09-15-01.webp
+webkit 1440 OK   Mails: «Ganze Mail» klappt auf
+webkit 1440 OK   Vorschlag: PDF lädt · 200
+webkit 390 OK   Register: Pfeil weiter · 0→1
+webkit 390 OK   Befund: Pfeil weiter · 0→1
+webkit 390 OK   Kein Abschnitt «Die Rechnung» · 0 Stellen
+webkit 390 OK   Vergleich: Schieber 50 → 20 · 50 → 20
+webkit 390 OK   Vergleich: zweite Seite («Der Abend»)
+webkit 390 OK   Seiten: dritte Seite wählen · 8 Reiter
+webkit 390 OK   Werkzeug-Reiter: fünfter (Marke) · MarkeDas Markenbuch
+webkit 390 OK   Werkzeuge verlinkt · 7 von 7 mit Adresse
+webkit 390 OK   Feed: Klick auf das Handy lädt den Feed
+webkit 390 OK   Fuss «Das Wichtigste»: Pfeil weiter · 0→1
+webkit 390 OK   keine Skriptfehler auf der Werkbank
+webkit 390 OK   Karten: zweite Karte wählen · n-abend-2025-02-21-01.webp → n-abend-2023-09-15-01.webp
+webkit 390 OK   Mails: «Ganze Mail» klappt auf
+webkit 390 OK   Vorschlag: PDF lädt · 200

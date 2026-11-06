@@ -1,0 +1,146 @@
+/* welt.css · die zwei Welten der Werkzeuge: Grandhotel und Landhaus.
+   Jedes Werkzeug lädt diese Datei zuerst und nimmt JEDE Farbe, Schrift, Rundung und Fläche von hier.
+   Die Welt steht als data-welt="grand" oder data-welt="land" am <html>; welt.js setzt und wechselt sie.
+   Grandhotel: gelesen aus dem Grand Beau-Rivage (Le Livre). Landhaus: gelesen aus dem Berghotel Gasterntal
+   (Farbwelt «Tal: Fels, Kander, Tanne»). Was im Landhaus neu gesetzt ist, steht in STAND.md.
+   Eigene Klassen eines Werkzeugs bekommen einen eigenen Vorsatz (ws- Website, kt- Karten, ga- Gäste),
+   damit sich nichts überschneidet. Hier wird nur nach Absprache geändert (STAND.md). */
+
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url('schriften/cormorant-garamond-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:500;font-display:swap;src:url('schriften/cormorant-garamond-500-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:400 700;font-display:swap;src:url('schriften/Cinzel-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:400 700;font-display:swap;src:url('schriften/Cinzel-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Barlow Semi';font-style:normal;font-weight:500;font-display:swap;src:url('schriften/barlowsemi-500.woff2') format('woff2')}
+@font-face{font-family:'Barlow Semi';font-style:normal;font-weight:600;font-display:swap;src:url('schriften/barlowsemi-600.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('schriften/InstrumentSans-normal-400_600.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('schriften/DMMono-normal-400.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:500;font-display:swap;src:url('schriften/DMMono-normal-500.woff2') format('woff2')}
+
+:root{
+  color-scheme:light;
+  --sans:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'DM Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  --e1:cubic-bezier(.16,1,.3,1); --e2:cubic-bezier(.32,.72,0,1);
+
+  /* Grandhotel (Ausgangszustand) */
+  --blatt:#FDF9F1; --grund:#F7F0E3; --zwei:#EFE4CF; --kante:#E2D2B5;
+  --dunkel:#1B2033; --dunkel2:#2C334D; --tief:#11141F;
+  --tinte:#1A1D28; --metall:#E6D2A2; --strich:#B0934F; --akzent:#967D40; --klein:#826C35; --punkt:#7A1F2B;
+  --linie-h:rgba(130,108,53,.3); --linie-d:rgba(230,210,162,.3);
+  --titel:'Cormorant Garamond','Iowan Old Style',Georgia,serif; --titel-g:500; --titel-ls:0; --titel-mass:1;
+  --versal:'Cinzel',Georgia,serif; --versal-ls:.24em;
+  --r-xl:28px; --r-l:22px; --r-m:16px;
+  --platte-h:linear-gradient(180deg,#fcf7ee,#f4ecdc 60%,#ebe0cb);
+  --platte-h-s:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(130,108,53,.14),0 1.5px 0 #d6c7a8,0 34px 46px -32px rgba(26,29,40,.45);
+  --kuhle-h:linear-gradient(180deg,#e8dcc3,#efe5d1 40%,#f1e8d6);
+  --kuhle-h-s:inset 0 3px 6px -1px rgba(26,29,40,.16),inset 0 1px 0 rgba(26,29,40,.1),inset 0 0 0 1px rgba(130,108,53,.1),0 1px 0 #fff;
+  --platte-d:linear-gradient(180deg,#2a3048,#232940 46%,#181c2d);
+  --platte-d-s:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(230,210,162,.28),0 2px 0 #0d1019,0 40px 50px -32px rgba(0,0,0,.7);
+  --kuhle-d:linear-gradient(180deg,#0e111b,#151826 34%,#151928);
+  --kuhle-d-s:inset 0 3px 6px -1px rgba(6,7,10,.62),inset 0 1px 0 rgba(6,7,10,.55),inset 0 0 0 1px rgba(6,7,10,.3),0 1px 0 rgba(255,255,255,.08);
+  --kn-h:linear-gradient(180deg,#fcf7ee 0%,#f2e8d5 46%,#e2d2b5 100%);
+  --kn-h-s:inset 0 1px 0 rgba(255,255,255,.92),inset 0 -3px 0 rgba(130,108,53,.38),0 1px 1px rgba(0,0,0,.3),0 16px 24px -14px rgba(26,29,40,.55);
+  --kn-d:linear-gradient(180deg,#3f4767 0%,#2c334d 46%,#1b2033 100%);
+  --kn-d-s:inset 0 1px 0 rgba(255,255,255,.24),inset 0 -3px 0 rgba(0,0,0,.4),0 1px 1px rgba(0,0,0,.3),0 16px 24px -14px rgba(26,29,40,.7);
+  --knauf-d:linear-gradient(180deg,#3f4767,#11141f); --knauf-d-s:inset 0 1px 0 rgba(255,255,255,.24),inset 0 -2px 0 rgba(0,0,0,.28),0 3px 6px rgba(0,0,0,.35);
+  --knauf-h:linear-gradient(180deg,#fcf7ee,#e2d2b5); --knauf-h-s:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(130,108,53,.38),0 3px 6px rgba(0,0,0,.35);
+  --kn-fs:13px; --kn-ls:.13em;
+}
+:root[data-welt="land"]{
+  --blatt:#F6F8F8; --grund:#E9ECEC; --zwei:#C7CFD3; --kante:#9DA2A3;
+  --dunkel:#1D2224; --dunkel2:#2C3136; --tief:#14181A;
+  --tinte:#1A1F21; --metall:#D6BB96; --strich:#D6BB96; --akzent:#3B4423; --klein:#3B4423; --punkt:#C5000F;
+  --linie-h:rgba(29,34,36,.22); --linie-d:rgba(214,187,150,.32);
+  --titel:'Barlow Semi','DIN Alternate','Arial Narrow',sans-serif; --titel-g:600; --titel-ls:-.012em; --titel-mass:.9;
+  --versal:'DM Mono',ui-monospace,Menlo,monospace; --versal-ls:.2em;
+  --r-xl:34px; --r-l:26px; --r-m:18px;
+  --platte-h:linear-gradient(180deg,#f7f9f9,#eef1f1 60%,#e0e5e6);
+  --platte-h-s:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(29,34,36,.1),0 1.5px 0 #c7cfd3,0 34px 46px -32px rgba(29,34,36,.45);
+  --kuhle-h:linear-gradient(180deg,#d6dcde,#e1e6e7 40%,#e6eaea);
+  --kuhle-h-s:inset 0 3px 6px -1px rgba(29,34,36,.18),inset 0 1px 0 rgba(29,34,36,.1),inset 0 0 0 1px rgba(29,34,36,.08),0 1px 0 #fff;
+  --platte-d:linear-gradient(180deg,#3a4146,#2c3136 46%,#1d2224);
+  --platte-d-s:inset 0 1px 0 rgba(255,255,255,.12),inset 0 0 0 1px rgba(214,187,150,.26),0 2px 0 #0d1011,0 40px 50px -32px rgba(0,0,0,.7);
+  --kuhle-d:linear-gradient(180deg,#0d1011,#14181a 34%,#171b1d);
+  --kuhle-d-s:inset 0 3px 6px -1px rgba(0,0,0,.62),inset 0 1px 0 rgba(0,0,0,.55),inset 0 0 0 1px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.08);
+  --kn-h:linear-gradient(#f7f9f9,#e0e5e6 55%,#c7cfd3);
+  --kn-h-s:inset 0 1px 0 #fff,inset 0 -2px 0 #9da2a3,0 12px 22px -12px rgba(29,34,36,.5);
+  --kn-d:linear-gradient(#485056,#2c3136 55%,#1d2224);
+  --kn-d-s:inset 0 1px 0 #7b858c,inset 0 -2px 0 #0d1011,0 12px 22px -12px rgba(29,34,36,.7);
+  --knauf-d:linear-gradient(#3f474c,#1d2224); --knauf-d-s:inset 0 1px 0 #6f797f,inset 0 -2px 0 #0d1011;
+  --knauf-h:linear-gradient(#f7f9f9,#c7cfd3); --knauf-h-s:inset 0 1px 0 #fff,inset 0 -2px 0 #9da2a3;
+  --kn-fs:11.5px; --kn-ls:.17em;
+}
+
+/* Nur in einer Welt zeigen: <span class="nur-grand">…</span><span class="nur-land">…</span> */
+:root[data-welt="land"] .nur-grand,:root:not([data-welt="land"]) .nur-land{display:none}
+
+/* Grundlage */
+*{box-sizing:border-box}
+body{margin:0;background:var(--grund);color:var(--tinte);font-family:var(--sans);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,figure,dl,dd{margin:0;padding:0}
+ul,ol{list-style:none}
+h1,h2,h3,h4{font-family:var(--titel);font-weight:var(--titel-g);letter-spacing:var(--titel-ls);text-wrap:balance}
+[hidden]{display:none !important}
+
+/* Fünf Schriftstufen des Werkzeugs */
+.t-ansicht{font-family:var(--titel);font-weight:var(--titel-g);letter-spacing:var(--titel-ls);font-size:calc(36px * var(--titel-mass));line-height:1.05}
+.t-zwischen{font-family:var(--titel);font-weight:var(--titel-g);letter-spacing:var(--titel-ls);font-size:calc(22px * var(--titel-mass));line-height:1.15}
+.t-akzent{color:var(--akzent)}
+.kap{font-family:var(--versal);font-size:12px;letter-spacing:var(--versal-ls);text-transform:uppercase;color:var(--klein);display:flex;align-items:center;gap:18px}
+.kap::after{content:"";height:1px;width:72px;background:currentColor;opacity:.55}
+.angabe{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--klein)}
+.zahl{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* Flächen: Platte liegt auf (anfassen), Kuhle liegt tiefer (etwas gehört hinein) */
+.platte{background:var(--platte-h);box-shadow:var(--platte-h-s);border-radius:var(--r-l)}
+.kuhle{background:var(--kuhle-h);box-shadow:var(--kuhle-h-s);border-radius:var(--r-l)}
+.auf-dunkel{background:var(--dunkel);color:var(--blatt)}
+.auf-dunkel .kap,.auf-dunkel .angabe{color:var(--metall)}
+.auf-dunkel .t-akzent{color:var(--metall)}
+.auf-dunkel .platte,.platte--d{background:var(--platte-d);box-shadow:var(--platte-d-s);color:var(--blatt)}
+.auf-dunkel .kuhle,.kuhle--d{background:var(--kuhle-d);box-shadow:var(--kuhle-d-s);color:var(--blatt)}
+
+/* Knöpfe: Tiefe, runder Knauf mit Pfeil. Geben nach, werden nie heller. Kein Punkt in der Taste. */
+.kn{position:relative;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;height:54px;padding:0 7px 0 26px;border:0;border-radius:999px;white-space:nowrap;cursor:pointer;text-decoration:none;
+  font-family:var(--mono);font-size:var(--kn-fs);letter-spacing:var(--kn-ls);text-transform:uppercase;color:var(--tinte);background:var(--kn-h);box-shadow:var(--kn-h-s);transition:transform .25s var(--e2)}
+.kn i{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--knauf-d);box-shadow:var(--knauf-d-s);color:var(--blatt);transition:transform .6s var(--e2)}
+.kn i svg{width:16px;height:16px}
+.kn--d{color:var(--blatt);background:var(--kn-d);box-shadow:var(--kn-d-s)}
+.kn--d i{background:var(--knauf-h);box-shadow:var(--knauf-h-s);color:var(--tinte)}
+.kn--klein{height:46px;padding:0 6px 0 20px}
+.kn--klein i{width:34px;height:34px}
+.kn--ohne{padding:0 26px}
+.kn:active{transform:translateY(2px)}
+.kn[disabled]{cursor:default;opacity:.55}
+@media (hover:hover) and (pointer:fine){ .kn:not([disabled]):hover i{transform:translateX(3px)} }
+:focus-visible{outline:2px solid var(--tinte);outline-offset:3px}
+.auf-dunkel :focus-visible{outline-color:var(--metall)}
+
+/* Feld: eine Kuhle. Auswahl: gewählt ist ein Rahmen, nie ein Punkt. */
+.feld{display:flex;flex-direction:column;gap:8px;min-width:0}
+.feld > label,.feld > span{font-family:var(--versal);font-size:11px;letter-spacing:var(--versal-ls);text-transform:uppercase;color:var(--klein)}
+.feld input,.feld textarea{font:inherit;color:var(--tinte);border:0;border-radius:var(--r-m);padding:15px 18px;background:var(--kuhle-h);box-shadow:var(--kuhle-h-s);width:100%}
+.feld textarea{min-height:120px;resize:vertical;line-height:1.5}
+.wahl{display:flex;flex-wrap:wrap;gap:12px}
+.wahl > *{font:inherit;color:var(--tinte);border:0;cursor:pointer;padding:14px 20px;border-radius:var(--r-m);background:var(--platte-h);box-shadow:var(--platte-h-s)}
+.wahl > [aria-pressed="true"],.wahl > .an{box-shadow:var(--platte-h-s),0 0 0 2px var(--tinte)}
+
+/* Liste: links das Wort, rechts die Zahl */
+.liste{background:var(--blatt);border-radius:var(--r-l);padding:4px 22px;box-shadow:var(--platte-h-s)}
+.liste > *{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--linie-h)}
+.liste > :first-child{border-top:0}
+.liste > * > :last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--klein);text-align:right}
+
+/* Der eine Farbpunkt: die Marke «Entwurf» */
+.marke{display:inline-block;background:var(--punkt);color:var(--blatt);font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;border-radius:8px}
+
+/* Entwurfs-Leiste: steht unten in jeder Ansicht */
+.entwurfsleiste{position:sticky;bottom:0;z-index:4;background:var(--platte-d);box-shadow:var(--platte-d-s);color:var(--blatt);padding:14px 14px 14px 26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.entwurfsleiste b{color:var(--metall);font-weight:600}
+
+/* Quittung nach jedem Speichern: nichts speichert still */
+.quittung{background:var(--blatt);box-shadow:var(--platte-h-s);border-radius:var(--r-m);padding:14px 18px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+
+.strich{height:1px;background:var(--strich);border:0;margin:0}
+
+@media (prefers-reduced-motion:reduce){ .kn,.kn i{transition:none} }

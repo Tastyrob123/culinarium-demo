@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Newsletter & E-Mail · Die Plakatwerkstatt · Culinarium</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316151a'/%3E%3Cg transform='translate%284.60 4.00%29 scale%280.1714%29' fill='%23ef7649'%3E%3Cpath d='M95.43 51.24C90.43 51.24 85.95 50.09 81.95 47.84C77.99 45.51 74.27 42.59 70.9 39.08C67.53 35.57 64.41 32 61.49 28.28C58.61 24.56 55.72 21.33 52.87 18.59C50.06 15.81 47.14 13.97 44.19 13.1C41.2 12.19 38.04 12.82 34.67 15.01C30.74 17.4 28.69 22.09 28.56 29.01C28.45 35.89 30.01 44.08 33.32 53.57C36.65 63.12 41.41 72.92 47.59 83.06C54.37 93.73 61.38 102.59 68.68 109.53C75.98 116.48 82.85 120.72 89.35 122.18C95.43 123.67 100.95 123.43 105.96 121.48C110.99 119.5 115.44 116.48 119.36 112.38C123.26 108.25 126.42 103.84 128.85 99.08L132.95 101.3C129.27 108.87 124.09 115.61 117.42 121.48C110.75 127.35 103.21 131.91 94.84 135.17C86.47 138.4 77.75 140 68.71 140C59.23 140 50.34 138.19 42 134.58C33.73 130.93 26.44 125.9 20.15 119.47C13.86 113.04 8.96 105.61 5.38 97.17C1.81 88.69 0 79.62 0 69.93C0 60.2 1.81 51.1 5.38 42.66C8.96 34.22 13.86 26.78 20.15 20.36C26.44 13.93 33.73 8.93 42 5.38C50.34 1.81 59.23 0 68.71 0C73.86 0 78.51 0.8 82.68 2.33C86.85 3.86 90.7 5.7 94.21 7.78C97.72 9.87 100.99 11.71 103.94 13.27C106.89 14.8 109.67 15.6 112.24 15.6C117.25 15.6 120.51 14.28 122.07 11.64C123.64 9 124.4 5.42 124.4 0.97L128.85 0.97C129.68 6.53 129.79 12.26 129.2 18.13C128.57 24 127.04 29.42 124.65 34.43C122.21 39.43 118.6 43.46 113.88 46.59C109.12 49.71 102.97 51.24 95.43 51.24ZM95.43 51.24'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="lib/auswahl.css?v=35-cu1">
+<link rel="stylesheet" href="studio.css?v=82-cu1">
+<link rel="stylesheet" href="mail.css?v=26-cu1">
+<script>/* Hauseigene Stilschicht (Robert 15.10.2026: GBR hell, wie die übrigen Werkzeuge des Hauses). Ein Haus ohne Eintrag bleibt beim Kern. */
+(function(){var HAUS_STIL={culinarium:1},h=new URLSearchParams(location.search).get('haus')||'culinarium';if(!HAUS_STIL[h])return;
+document.write('<link rel="stylesheet" href="haeuser/'+h+'/hell.css?v=6-cu1"><script src="haeuser/'+h+'/buehne.js?v=3-cu1" defer><\/script>');})();</script>
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="ml-seite">
+<div class="ml">
+  <header class="ml-kopf">
+    <a class="ml-marke" href="index.html" title="Zur Übersicht der Plakatwerkstatt"><span class="ml-zeichen" id="mlZeichen"></span><span class="ml-marke__n"><b>Die Plakatwerkstatt</b><small>Newsletter & E-Mail</small></span></a>
+    <input class="ml-name" id="mlName" aria-label="Name der E-Mail" spellcheck="false">
+    <span class="ml-gespeichert" id="mlGespeichert">Gespeichert</span>
+    <span class="ml-frei"></span>
+    <div class="ml-geraet" role="group" aria-label="Ansicht">
+      <button class="an" data-geraet="600" title="Bildschirm, 600 px"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></button>
+      <button data-geraet="375" title="Handy, 375 px"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></button>
+    </div>
+    <details class="ml-pruefen" id="mlPruefen">
+      <summary class="kn kn--klein kn--ohne"><span class="ml-pruef__zahl" id="mlPruefZahl">0</span><span>Prüfung</span></summary>
+      <div class="ml-pruef__liste" id="mlPruefListe"></div>
+    </details>
+    <button class="kn kn--klein kn--ohne" id="mlFenster" title="In einem neuen Fenster ansehen"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span>Ansehen</span></button>
+    <button class="kn kn--klein kn--ohne" id="mlKopieren"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><span>HTML kopieren</span></button>
+    <button class="kn ms-kn-gold" id="mlDatei"><span>Als Datei speichern</span><i><svg viewBox="0 0 24 24"><path d="M12 5v12m-5-5 5 5 5-5"/></svg></i></button>
+  </header>
+
+  <aside class="ml-links">
+    <a class="ms-lnk ms-lnk--zurueck ml-zurueck" href="index.html"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg><span>Zur Übersicht</span></a>
+    <div class="ml-kapitel"><span class="ml-kapitel__z" id="mlKapitelZeichen"></span><h1>Newsletter <span style="white-space:nowrap">&amp; E-Mail</span></h1><p>Versendbar, im Stil des Hauses</p></div>
+    <h3>Vorlagen</h3>
+    <nav class="ml-vorlagen" id="mlVorlagen"></nav>
+    <div id="mlMeineBox" hidden>
+      <h3>Meine E-Mails <em id="mlMeineZahl"></em></h3>
+      <div class="ml-meine" id="mlMeine"></div>
+    </div>
+    <h3>Teile der E-Mail</h3>
+    <nav class="ml-nav">
+      <button data-teil="mail"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg><span>Betreff und Versand</span></button>
+      <button data-teil="kopf"><svg viewBox="0 0 24 24"><path d="M4 4h16v7H4zM4 15h16M4 19h10"/></svg><span>Kopf und Kopfbild</span></button>
+      <button data-teil="fuss"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 9h10M4 13h16v7H4z"/></svg><span>Fuss mit Adresse</span></button>
+    </nav>
+  </aside>
+
+  <main class="ml-mitte">
+    <div class="ml-buehne" id="mlBuehne">
+      <div class="ml-posteingang">
+        <span class="ml-pe__zeichen">CU</span>
+        <div><b>Culinarium</b><span class="ml-pe__betreff" id="mlBetreff"></span><span class="ml-pe__vorschau" id="mlVorschau"></span></div>
+      </div>
+      <div class="ml-blatt" id="mlBlatt"><iframe id="mlRahmen" title="Vorschau der E-Mail" scrolling="no"></iframe><span class="ml-blatt__licht"></span></div>
+      <span class="ml-boden"></span>
+    </div>
+  </main>
+
+  <aside class="ml-rechts">
+    <h3>Baustein einfügen</h3>
+    <div class="ml-einfuegen" id="mlEinfuegen"></div>
+    <div class="ml-felder" id="mlFelder"></div>
+  </aside>
+</div>
+
+<dialog class="ml-fotos" id="mlFotos">
+  <div class="ml-fotos__kopf"><h2>Fotos des Hauses</h2>
+    <label class="ms-suche"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" id="mlFotoSuche" placeholder="Suchen: Abend, Tafel …" aria-label="Fotos suchen"></label>
+    <button class="rund" id="mlFotoZu" aria-label="Schliessen"><svg viewBox="0 0 24 24"><path d="M9 14.5 4 9.5l5-5M4 9.5h11a5 5 0 0 1 0 10h-3"/></svg></button></div>
+  <div class="ms-chips ml-fotos__gruppen" id="mlFotoGruppen"></div>
+  <div class="ml-fotos__raster" id="mlFotoRaster"></div>
+</dialog>
+<div class="ml-hinweis" id="mlHinweis" role="status" hidden></div>
+
+<script src="lib/auswahl.js?v=35-cu1"></script>
+<script src="katalog.js?v=35-cu1"></script>
+<script src="mail-satz.js?v=4-cu1"></script>
+<script src="mail.js?v=16-cu1"></script>
+</body>
+</html>

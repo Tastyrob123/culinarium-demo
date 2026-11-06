@@ -1,0 +1,101 @@
+/* L’Imprimerie des Culinarium Hannover (21.10.2026, Weg der Werkstatt der Wirtschaft am Schlössli, dort nur gelesen): Anschluss an die Werkzeug-Oberfläche «Die Bühne» (Nachtrag Chef-Chat 17.10.2026, oberflaeche.js daneben;
+   gleicher Weg wie die Werkstatt des Landgasthof Ruedihus, dort nur gelesen).
+   Kopf, Marke, runde Knöpfe, Rand und Startbilder sehen aus wie in den anderen Werkzeugen des Hauses (Werte aus grund.css, rahmen-buehne.css,
+   kleid/culinarium.css); die Arbeitsfläche (Blatt, Werkzeugleiste, rechte Spalte) bleibt, wie sie ist. Nur transform und opacity bewegen. */
+
+/* Köpfe: dunkle Fläche des Kleids mit den Rauten der Brüstung wie .wo-kopf */
+.kopf,.ms-kopf{background:var(--wo-nacht)!important;box-shadow:0 1px 0 var(--wo-linie-d),0 18px 30px -22px rgba(0,0,0,.6)!important;isolation:isolate;position:relative}
+.kopf::after,.ms-kopf::after{content:'';position:absolute;inset:0;z-index:-1;background:var(--wo-tapete);opacity:.55;pointer-events:none}
+.ms-kopf{border-bottom:0!important}
+/* Marke wie in jedem Werkzeug: Zeichen, Name in der Titelschrift, Unterzeile in Kerze */
+button.wo-marke-w{border:0;background:none;padding:0;cursor:pointer;text-align:left;font:inherit}
+.kopf .wo-marke-w b,.ms-kopf .wo-marke-w b{font:var(--wo-titel-g) 19px/1.1 var(--wo-titel);letter-spacing:.02em;text-transform:none;color:var(--wo-weiss)}
+.kopf .wo-marke-w small,.ms-kopf .wo-marke-w small{font:400 9.5px/1.4 var(--wo-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--wo-gold)}
+.ms-kopf .ws-marke{margin-right:auto;flex:none}
+.ms-kopf .ws-marke~.ms-suche{margin-left:0}
+/* Runde Knöpfe in beiden Köpfen wie .wo-kn--rund im Kopf des Pakets */
+.ms-kopf .rund.ws-rund,.kopf__werk .rund.ws-rund{padding:0;place-items:center;border:0;border-radius:50%;color:var(--wo-gold);
+  background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px var(--wo-linie-d),inset 0 1px 0 rgba(255,255,255,.1)}
+.ms-kopf .rund.ws-rund svg,.kopf__werk .rund.ws-rund svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6}
+.ms-kopf .rund.ws-rund:hover,.kopf__werk .rund.ws-rund:hover{color:var(--wo-weiss)}
+.ms-kopf .ws-web{flex:none}
+
+/* Rand der Übersicht wie .wo-rand: weisse Platte, Einträge in der Grundschrift, der gewählte als dunkle Tafel in der Titelschrift */
+#start .ms-leiste{background:var(--wo-weiss)!important;border-radius:var(--wo-r1)!important;box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px var(--wo-linie),0 26px 40px -30px rgba(0,0,0,.4)!important}
+#start .ms-nav button span{font:500 14.5px/1.3 var(--wo-sans);letter-spacing:0;color:var(--wo-tinte)}
+#start .ms-nav button.an span{font:var(--wo-titel-g) 19px/1.2 var(--wo-titel);color:var(--wo-weiss)}
+#start .ms-nav button em{font:400 10px/1 var(--wo-mono);letter-spacing:.06em;color:var(--wo-leise)}
+#start .ms-marke{display:none}
+
+/* Startbilder: Werte von .wo-sb im Rahmen «Die Bühne» */
+#start .ws-sb{margin:0 0 30px;border-radius:var(--wo-r1);min-height:430px;display:flex;align-items:center;padding:56px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 0 1px var(--wo-linie-d),0 40px 60px -40px rgba(0,0,0,.75)}
+#start .ws-sb.wo-sb--buehne{min-height:250px;padding:38px 48px}
+#start .ws-sb h1.wo-sb__h{margin:18px 0 0;padding:0;font:var(--wo-titel-g) clamp(38px,4.1vw,62px)/1.04 var(--wo-titel);letter-spacing:var(--wo-titel-ls);color:var(--wo-weiss);text-wrap:balance;text-transform:none}
+#start .ws-sb.wo-sb--buehne h1.wo-sb__h{font-size:clamp(32px,3.2vw,48px)}
+#start .ws-sb .wo-sb__satz{display:block;margin:16px 0 0;max-width:56ch;font:400 15.5px/1.62 var(--wo-sans);letter-spacing:0;text-transform:none;color:rgba(255,255,255,.8)}
+#start .ws-sb .wo-sb__kn{width:100%}
+#start .ws-sb .ms-feld{flex:1 1 100%;max-width:620px}
+#start .ws-titel{display:block;margin:0 0 8px}
+@media (max-width:900px){
+  #start .ws-sb{display:block;min-height:0;padding:0}
+  #start .ws-sb h1.wo-sb__h{font-size:clamp(32px,9vw,40px)}
+  #start .ws-sb .wo-sb__satz{font-size:14.5px}
+}
+#start .ws-sb .ms-feld{width:100%}
+#start .ws-sb .ms-feld textarea{min-width:0;flex:1 1 auto}
+.wo-marke-w .ws-alt{display:none}
+#start .ws-sb.wo-sb--voll .wo-sb__text{max-width:min(58%,700px)}
+#start .ws-sb .ms-feld textarea{font-size:16px}
+#start .ws-sb .ms-feld{max-width:100%}
+#start .ws-sb .ms-lnk{color:var(--wo-gold)}
+@media (max-width:900px){
+  #start .ws-sb.wo-sb--voll .wo-sb__text{max-width:none}
+  .ms-kopf .ws-web,.ms-kopf .ws-marke small{display:none}
+  .ms-kopf .ws-marke{flex:0 1 auto;min-width:0}
+  .ms-kopf .ws-marke b{font-size:17px}
+}
+@media (max-width:600px){.ms-kopf .ws-marke>span:not(.wo-zeichen){display:none}}   /* das Zeichen ist im Kleid des Hauses selbst ein span: es bleibt */
+#start .ws-sb .wo-sb__zier{max-width:100%}
+@media (min-width:901px){.ms-kopf .rund.ws-rund,.kopf__werk .rund.ws-rund{width:42px;height:42px}}
+
+/* Der gewählte Bereich in der dunklen Fläche des Kleids; unter dem Kopf eine feine Linie in Kerze */
+#start .ms-nav button.an{background:linear-gradient(180deg,var(--wo-nacht2),var(--wo-nacht))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)!important}
+.kopf,.ms-kopf{border-bottom:1px solid var(--ws-horizont,rgba(239,118,73,.45))!important}
+#start .ws-sb .wo-sb__foto img{filter:saturate(.92) contrast(1.03)}
+/* Website-Pille ohne Unterstreichung (der Kern unterstreicht Links im Kopf) */
+.ms-kopf .ws-web,.ms-kopf .ws-web span{text-decoration:none!important}
+/* Kopf der Arbeitsfläche am Handy: Unterzeile weg, unter 600 px nur das Zeichen (sonst 54 px Überstand bei 320, Fund 17.10.2026) */
+@media (max-width:900px){.kopf .wo-marke-w small{display:none}.kopf .wo-marke-w b{font-size:17px}}
+@media (max-width:600px){.kopf .wo-marke-w>span:not(.wo-zeichen){display:none}}
+/* Kleine Handys (320 px): Kopf der Arbeitsfläche in einer Zeile, ohne Überstand (runde Knöpfe 30 px, engere Abstände, «Speichern» knapper) */
+@media (max-width:360px){.kopf{padding:0 6px}.kopf .kopf__werk{gap:3px}.kopf .kopf__werk .rund{width:30px;height:30px}.kopf #btnNeu{padding:0 8px}.kopf #btnSpeichern{padding-left:12px;letter-spacing:.06em;gap:6px}}
+
+/* M21 (Robert 18.10.2026, Carlton La Maison: «nicht so krass reaktiv … sanfter … luxuriöser und edler»): keine Kachel kippt mehr zur Maus;
+   sie hebt sich langsam wenige Pixel, ein feiner Messingrand bleibt das Zeichen. Gilt für Kampagnen, Mail-Vorlagen, Vorlagen und Arten. */
+.wo,.mk,.vk,.art,.wv__k{--sanft:cubic-bezier(.22,.61,.36,1);--rx:0deg!important;--ry:0deg!important}
+.wo .wo__k,.wo.kipp .wo__k,.mk .mk__k,.mk.kipp .mk__k,.vk .vk__bild,.art .art__bild,.wv__k .wv__bild{transition:transform 1.1s var(--sanft),box-shadow 1.1s var(--sanft)!important}
+@media (hover:hover){
+  .wo:hover .wo__k,.mk:hover .mk__k{transform:translateZ(0) translateY(-4px)}
+  .vk:hover .vk__bild,.wv__k:hover .wv__bild{transform:translateY(-4px)}
+  .art:hover .art__bild,.art:focus-visible .art__bild{transform:translateY(-5px)}
+}
+@media (prefers-reduced-motion:reduce){.wo__k,.mk__k,.vk__bild,.art__bild,.wv__bild{transition:none!important}}
+/* Handy (Fund 21.10.2026, Schäfli 390 px): das Zeichen in der Marke fiel auf 0 px zusammen (leerer Kreis) und «Neu» ragte mit seinem Knauf 28 px über den Rand.
+   Grund: die Regel «unter 600 px nur das Zeichen» blendete jedes span der Marke aus, auch das Zeichen (im Kleid des Hauses ein span). Marke und «Neu» schrumpfen nicht, die Suche nimmt den Rest */
+@media (max-width:600px){.ms-kopf .ws-marke{flex:none}.ms-kopf .ms-kn-neu{flex:none}.ms-kopf .ms-suche{min-width:0;flex:1 1 0}}
+.kopf .wo-marke-w .wo-zeichen{flex:none}
+/* «Neu» am Handy als runder Knopf mit Plus (Wort bleibt für Vorleser): sonst drückt «Zurück zur Drucksache», sobald eine Drucksache offen war, die Suche auf 0 px */
+@media (max-width:600px){.ms-kopf .ms-kn-neu{flex:none;width:36px;padding:0;justify-content:center}.ms-kopf .ms-kn-neu>span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+/* «Übersicht» im Rand ist immer die dunkle Startpille; die Regel für Einträge (Schrift in Tinte) färbte ihr Wort dunkel auf dunkel (Fund 21.10.2026, Fehlerbuch «Titel auf dunklem Grund hell») */
+#start .ms-nav>button[data-ansicht="start"]:not(.an) span{color:var(--wo-weiss)}
+/* Aus dem Demo-Check der Wirtschaft am Schlössli (21.10.2026, DEMOCHECK.md dort), hier nachgezogen:
+   Anlässe mit nur einem Anlass im Monat: das Foto blieb nicht in seiner Spalte und deckte Titel und Text zu */
+.ev-raster .wo--breit .wo__k{width:100%;min-width:0}
+/* Handy: Leiste unter dem Blatt in einer Zeile, Zoom ganz sichtbar; «Zurück zur Drucksache» als runder Knopf mit Pfeil statt leerem Kreis; 320 px: Suche gibt nach */
+@media (max-width:600px){.fussleiste .insel{max-width:calc(100vw - 24px)}.fussleiste .insel>:not(#formatInfo){flex:none}#formatInfo{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.fussleiste .schalter>span{display:none}
+  .ms-kopf .start__zu{flex:none;width:36px;padding:0;justify-content:center}.ms-kopf .start__zu svg{flex:none}}
+@media (max-width:360px){#start .ms-kopf .ms-suche{flex:1 1 0;min-width:36px;padding-left:10px;padding-right:6px;gap:6px}#start .ms-kopf .ms-suche input{min-width:0;width:100%}}
+
+/* Demo-Check Schäfli 21.10.2026: Zahl im gewählten (dunklen) Eintrag des Rands war fast unsichtbar (dunkelgrau auf dunkler Fläche) */
+#start .ms-nav button.an em{color:rgba(245,243,239,.66)}

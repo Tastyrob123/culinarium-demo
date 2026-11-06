@@ -1,0 +1,407 @@
+[
+ {
+  "key": "pl_CxNkFWTIvL2",
+  "titel": "Katze im Cocktailglas",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Sommer",
+   "thema": "Cocktail",
+   "farbe": "Rosa",
+   "stimmung": "verspielt"
+  },
+  "akzent": "#ba4757",
+  "hell_oben": 0.426,
+  "hell_unten": 0.708,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#87323f",
+  "ganz": "po_CxNkFWTIvL2",
+  "kopf_box": [
+   0.1491,
+   0.0273,
+   0.8481,
+   0.1083
+  ],
+  "ganz_kopf_box": [
+   0.1792,
+   0.0418,
+   0.825,
+   0.1047
+  ],
+  "kopf_rudi": {
+   "farbe": "#f6e6d6",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_CyT32RTMB4d",
+  "titel": "Goldener Herbst",
+  "quelle": "plakat",
+  "schrift": false,
+  "schlagworte": {
+   "jahreszeit": "Herbst",
+   "thema": "Bar",
+   "farbe": "Türkis",
+   "stimmung": "elegant"
+  },
+  "akzent": "#13606a",
+  "hell_oben": 0.313,
+  "hell_unten": 0.419,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#0d545d",
+  "ganz": "po_CyT32RTMB4d",
+  "kopf_box": null,
+  "ganz_kopf_box": null,
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_CzMcqNcMCqG",
+  "titel": "Winter is coming",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Winter",
+   "thema": "Martini",
+   "farbe": "Grün",
+   "stimmung": "verspielt"
+  },
+  "akzent": "#7d3c2c",
+  "hell_oben": 0.383,
+  "hell_unten": 0.329,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#444d37",
+  "ganz": "po_CzMcqNcMCqG",
+  "kopf_box": [
+   0.0889,
+   0.0292,
+   0.9202,
+   0.1442
+  ],
+  "ganz_kopf_box": [
+   0.1206,
+   0.0482,
+   0.8895,
+   0.1201
+  ],
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_C0w6iuCMcnF",
+  "titel": "Silvester auf der Bühne",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Winter",
+   "thema": "Champagner",
+   "farbe": "Rot",
+   "stimmung": "festlich"
+  },
+  "akzent": "#78090a",
+  "hell_oben": 0.382,
+  "hell_unten": 0.248,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#a4080a",
+  "ganz": "po_C0w6iuCMcnF",
+  "kopf_box": [
+   0.1476,
+   0.0741,
+   0.8705,
+   0.1637
+  ],
+  "ganz_kopf_box": [
+   0.1773,
+   0.0789,
+   0.8416,
+   0.1447
+  ],
+  "kopf_rudi": {
+   "farbe": "#f6e6d6",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_C17kqAXLfs_",
+  "titel": "Flashback",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Winter",
+   "thema": "Cocktail",
+   "farbe": "Violett",
+   "stimmung": "schräg"
+  },
+  "akzent": "#5f024c",
+  "hell_oben": 0.296,
+  "hell_unten": 0.181,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#60024b",
+  "ganz": "po_C17kqAXLfs_",
+  "kopf_box": [
+   0.08,
+   0.0223,
+   0.9155,
+   0.1281
+  ],
+  "ganz_kopf_box": [
+   0.1157,
+   0.0403,
+   0.8961,
+   0.1245
+  ],
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "leuchten"
+  }
+ },
+ {
+  "key": "pl_C56bJeds8PF",
+  "titel": "Kabinett der Illusionen",
+  "quelle": "plakat",
+  "schrift": false,
+  "schlagworte": {
+   "jahreszeit": "Frühling",
+   "thema": "Kuriositäten",
+   "farbe": "Blaugrau",
+   "stimmung": "geheimnisvoll"
+  },
+  "akzent": "#523c2f",
+  "hell_oben": 0.484,
+  "hell_unten": 0.384,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#5a4e3e",
+  "ganz": "po_C56bJeds8PF",
+  "kopf_box": null,
+  "ganz_kopf_box": null,
+  "kopf_rudi": {
+   "farbe": "#9c1218",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_C8cgYVSouVT",
+  "titel": "Erdig",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Sommer",
+   "thema": "Reise",
+   "farbe": "Sand",
+   "stimmung": "sonnig"
+  },
+  "akzent": "#c86a24",
+  "hell_oben": 0.494,
+  "hell_unten": 0.447,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#39515e",
+  "ganz": "po_C8cgYVSouVT",
+  "kopf_box": [
+   0.0858,
+   0.0351,
+   0.9172,
+   0.1326
+  ],
+  "ganz_kopf_box": [
+   0.1206,
+   0.051,
+   0.8866,
+   0.1229
+  ],
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_DCCf-ikoaGs",
+  "titel": "Gondeln aus Gläsern",
+  "quelle": "plakat",
+  "schrift": false,
+  "schlagworte": {
+   "jahreszeit": "Winter",
+   "thema": "Champagner",
+   "farbe": "Hellblau",
+   "stimmung": "verspielt"
+  },
+  "akzent": "#6c7c89",
+  "hell_oben": 0.847,
+  "hell_unten": 0.799,
+  "kopf_frei": false,
+  "kopf_farbe": "navy",
+  "rueck_farbe": "#3c4f54",
+  "ganz": "po_DCCf-ikoaGs",
+  "kopf_box": null,
+  "ganz_kopf_box": null,
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_DFqbLG2s_dc",
+  "titel": "Panther im Abendrot",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Winter",
+   "thema": "Cocktail",
+   "farbe": "Orange",
+   "stimmung": "verführerisch"
+  },
+  "akzent": "#ef7648",
+  "hell_oben": 0.53,
+  "hell_unten": 0.468,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#7c3d24",
+  "ganz": "po_DFqbLG2s_dc",
+  "kopf_box": [
+   0.0873,
+   0.0351,
+   0.9172,
+   0.1326
+  ],
+  "ganz_kopf_box": [
+   0.1218,
+   0.05,
+   0.887,
+   0.1245
+  ],
+  "kopf_rudi": {
+   "farbe": "#9c1218",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_DJw8OqGMY1G",
+  "titel": "Spargel im Gewächshaus",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Frühling",
+   "thema": "Garten",
+   "farbe": "Grün",
+   "stimmung": "frisch"
+  },
+  "akzent": "#90b15a",
+  "hell_oben": 0.608,
+  "hell_unten": 0.66,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#435228",
+  "ganz": "po_DJw8OqGMY1G",
+  "kopf_box": [
+   0.0979,
+   0.0273,
+   0.9292,
+   0.1267
+  ],
+  "ganz_kopf_box": [
+   0.1318,
+   0.0439,
+   0.8987,
+   0.1214
+  ],
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "dunkel"
+  }
+ },
+ {
+  "key": "pl_DPwlqcfiKcA",
+  "titel": "Kürbis bei Kerzen",
+  "quelle": "plakat",
+  "schrift": false,
+  "schlagworte": {
+   "jahreszeit": "Herbst",
+   "thema": "Kürbis",
+   "farbe": "Dunkelblau",
+   "stimmung": "warm"
+  },
+  "akzent": "#961407",
+  "hell_oben": 0.195,
+  "hell_unten": 0.247,
+  "kopf_frei": true,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#14354a",
+  "ganz": "po_DPwlqcfiKcA",
+  "kopf_box": null,
+  "ganz_kopf_box": null,
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "leuchten"
+  }
+ },
+ {
+  "key": "pl_DVjkofijp6R",
+  "titel": "Panther und Spaghetti-Eis",
+  "quelle": "plakat",
+  "schrift": true,
+  "schlagworte": {
+   "jahreszeit": "Frühling",
+   "thema": "Dessert",
+   "farbe": "Rot",
+   "stimmung": "frech"
+  },
+  "akzent": "#881301",
+  "hell_oben": 0.234,
+  "hell_unten": 0.285,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#891302",
+  "ganz": "po_DVjkofijp6R",
+  "kopf_box": [
+   0.0858,
+   0.0331,
+   0.9157,
+   0.1306
+  ],
+  "ganz_kopf_box": [
+   0.1221,
+   0.0524,
+   0.8866,
+   0.1229
+  ],
+  "kopf_rudi": {
+   "farbe": "#ff4a3d",
+   "schatten": "leuchten"
+  }
+ },
+ {
+  "key": "pl_DbYnkdkjrNy",
+  "titel": "Tanz auf dem Mond",
+  "quelle": "plakat",
+  "schrift": false,
+  "schlagworte": {
+   "jahreszeit": "Herbst",
+   "thema": "Nacht",
+   "farbe": "Violett",
+   "stimmung": "träumerisch"
+  },
+  "akzent": "#352d5f",
+  "hell_oben": 0.318,
+  "hell_unten": 0.273,
+  "kopf_frei": false,
+  "kopf_farbe": "weiss",
+  "rueck_farbe": "#2d295b",
+  "ganz": "po_DbYnkdkjrNy",
+  "kopf_box": null,
+  "ganz_kopf_box": null,
+  "kopf_rudi": {
+   "farbe": "#d6262b",
+   "schatten": "leuchten"
+  }
+ }
+]

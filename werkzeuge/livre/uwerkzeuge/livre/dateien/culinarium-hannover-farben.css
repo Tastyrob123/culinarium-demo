@@ -1,0 +1,23 @@
+/* Culinarium Hannover · Farben der Marke (31.10.2026), Werte der Website und der Plakate */
+:root{
+  --nacht:#16151A; /* Nacht: Grund der dunklen Flächen: die Bar bei Nacht */
+  --nacht-tief:#0F0E13; /* Nacht tief: die tiefste Fläche, unter Bildern und im Fuss */
+  --strasse:#1C1B21; /* Strasse: dunkle Fläche beim Ankommen, draussen kühl */
+  --bar:#222028; /* Bar: dunkle Fläche drinnen, einen Ton wärmer */
+  --tafel:#26252E; /* Tafel: dunkle Fläche an der Tafel im Kerzenlicht */
+  --schiefer:#3A3845; /* Schiefer: die Farbe der Wortmarke auf jedem Plakat: Schrift auf Warmweiss und Flächen */
+  --weiss:#FAF4F4; /* Warmweiss: Grund der hellen Flächen und Schrift auf Dunkel: das Band unter jedem Plakat */
+  --tinte:#2A2833; /* Tinte: Lesetext auf Warmweiss, nie reines Schwarz */
+  --leise:#5B5763; /* Leise: zweite Zeile auf Warmweiss */
+  --kerze:#EF7649; /* Kerze: die Farbe des Abends: Schrägstrich in Rudis Zeilen, Knauf, Linien auf Dunkel */
+  --kerze-hell:#F5A689; /* Kerze hell: leise Betonung auf Dunkel */
+  --kerze-tief:#B15736; /* Kerze tief: Betonung auf Warmweiss, wo Kerze zu hell steht */
+  --dc:#8953A9; /* Dirty-Chicken-Violett: nur für Dirty Chicken, Rudis zweite Küche: Flächen und Tapete */
+  --dc-hell:#FFF7EF; /* Dirty-Chicken-Hell: Schrift auf Violett */
+  --abend-eisblau:#B3EBFC; /* Eisblau: Plakat 29./30.11.2024, Ski */
+  --abend-orange:#EF7649; /* Orange: Plakat 21./22.02.2025, Panther auf dem Thron */
+  --abend-gruen:#94B253; /* Grasgrün: Plakat 13./14.06.2025, Gärtnerin */
+  --abend-nachtblau:#112D43; /* Nachtblau: Plakat 14./15.11.2025, Kürbis */
+  --abend-ochsenblut:#881301; /* Ochsenblut: Plakat 27./28.03.2026, Panther mit Eisbecher */
+  --abend-sepia:#4D3321; /* Sepia: Plakat 25./26.09.2026, Mondfrau */
+}

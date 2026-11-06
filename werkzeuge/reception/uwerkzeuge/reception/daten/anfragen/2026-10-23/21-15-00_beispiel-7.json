@@ -1,0 +1,51 @@
+{
+ "zeit": "2026-10-23T21:15:00+02:00",
+ "art": "abend",
+ "name": "Emma Clarke",
+ "kontakt": "emma.clarke@example.com",
+ "datum": "",
+ "personen": 2,
+ "anliegen": "Visiting Hannover with her partner and would like two seats at the next evening.",
+ "sprache": "en",
+ "gespraech": "beispiel-7",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Hi, we are visiting Hannover in spring and would love two seats at the next evening. Is that possible?"
+  },
+  {
+   "rolle": "assistant",
+   "text": "The next date has not been fixed yet; on the waiting list you hear about it first. Could you give me your name and an email address?"
+  },
+  {
+   "rolle": "user",
+   "text": "Emma Clarke, emma.clarke@example.com"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Thank you. This is a draft by Tasty Studios: your request does not go to the team, it is only kept for viewing in the host tool."
+  }
+ ],
+ "status": "gelesen",
+ "beispiel": true,
+ "abteilung": "Abende",
+ "entwurf": {
+  "betreff": "Two seats at the table",
+  "text": "Hi Emma,\n\nthank you for your message. The next evening has not been fixed yet; once it is, you will be among the first to know.\n\nOn Fridays we start at 7 pm, on Saturdays at 5 pm: an aperitif, three courses from Rudi and five drinks from Momo, who explains each one at the table. There are only a few seats, and tickets are sold in advance only.\n\nSee you at the table\n\nMomo und Rudi\nCulinarium im Walk on the Wild Side",
+  "team": "Grundlage: Startseite «Gut zu wissen» (Freitag ab 19, Samstag ab 17, Vorverkauf), Der Abend (Aperitif, drei Gänge, fünf Drinks).\nOffen: Termin, Plätze.",
+  "vorlage": "abend",
+  "absender": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+  "zeit": "2026-10-23T21:15:00+02:00",
+  "deutsch": {
+   "betreff": "Zwei Plätze an der Tafel",
+   "text": "Hallo Emma,\n\ndanke für deine Nachricht. Der nächste Abend steht noch nicht fest; sobald er feststeht, erfährst du es mit als Erste.\n\nFreitags beginnen wir um 19 Uhr, samstags um 17 Uhr: ein Aperitif, drei Gänge von Rudi und fünf Drinks von Momo, der jeden am Tisch erklärt. Es gibt nur wenige Plätze, Tickets gibt es nur im Vorverkauf.\n\nBis bald an der Tafel\n\nMomo und Rudi\nCulinarium im Walk on the Wild Side",
+   "quelle": "fdcd47267c50"
+  }
+ },
+ "verlauf_de": [
+  "Hallo, wir sind im Frühjahr in Hannover und würden gern zu zweit zum nächsten Abend kommen. Ist das möglich?",
+  "Der nächste Termin steht noch nicht fest; auf der Warteliste erfährst du ihn zuerst. Magst du mir deinen Namen und eine E-Mail-Adresse geben?",
+  "Emma Clarke, emma.clarke@example.com",
+  "Danke. Dies ist ein Entwurf von Tasty Studios: Die Anfrage geht nicht an das Team, sie liegt nur zur Ansicht im Gästebuch."
+ ]
+}

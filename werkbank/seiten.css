@@ -1,0 +1,148 @@
+/* Unterseiten der Werkbank (Drucksachen, Kofferetiketten, Unterlagen, Material). Liegt über werkbank.css. */
+.leiste--sofort{animation-delay:.5s}
+.sk{position:relative;padding:clamp(128px,15vh,180px) var(--rand) calc(clamp(56px,7vw,110px) + var(--rund));background:var(--nacht) var(--muster) 50% 0/var(--musterb) auto;overflow:hidden;--vz:350ms}
+.sk .in{display:grid;gap:clamp(34px,5vw,80px);align-items:center}
+@media(min-width:1040px){.sk .in{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
+.sk h1{font-size:clamp(2.5rem,4.9vw,5.2rem)}
+.sk .lauf{margin-top:clamp(20px,2.4vw,34px);max-width:46ch;font-size:clamp(1.08rem,1.3vw,1.3rem)}
+.sk .kn-reihe{margin-top:clamp(24px,2.8vw,40px)}
+.auslage{position:relative;aspect-ratio:1/.78;width:100%;max-width:820px;justify-self:end}
+.auslage>*{position:absolute;will-change:transform}
+.auslage img{width:100%;height:auto;display:block}
+.auslage .blattbild img{box-shadow:0 0 0 1px rgba(239,118,73,.45),0 26px 34px -22px rgba(0,0,0,.85)}
+.auslage .form img{filter:drop-shadow(0 0 .6px rgba(239,118,73,.9)) drop-shadow(0 18px 14px rgba(0,0,0,.5))}
+@media(max-width:1039px){.auslage{justify-self:center;max-width:620px}}
+/* ein Stück: Text links, Vorschauen auf Karton rechts, im Wechsel gespiegelt */
+.stueck .in{display:grid;gap:clamp(30px,4.6vw,84px);align-items:center}
+@media(min-width:1040px){.stueck .in{grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr)}.stueck--r .in{grid-template-columns:minmax(0,1.26fr) minmax(0,.74fr)}.stueck--r .stueck__t{order:2}}
+.stueck .t2{font-size:clamp(2rem,3.5vw,3.7rem)}
+.stueck__t .lauf{margin-top:clamp(18px,2vw,28px);max-width:44ch}
+.stueck__f{margin-top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--taupe);line-height:1.7}
+.fl--navy .stueck__f,.fl--nacht .stueck__f,.fl--tief .stueck__f{color:var(--gold)}
+.stueck__t .kn-reihe{margin-top:26px}
+/* Karton im Mittelton, damit helle und dunkle Blätter einen Rand haben */
+.karton{position:relative;border-radius:34px;background:#9f634c;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 0 0 1px rgba(63,19,2,.16),0 40px 50px -40px rgba(63,19,2,.7);padding:clamp(22px,3.2vw,52px);display:flex;flex-wrap:wrap;gap:clamp(12px,1.8vw,28px);justify-content:center;align-items:center}
+.fl--navy .karton,.fl--nacht .karton,.fl--tief .karton{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 40px 50px -40px rgba(0,0,0,.9)}
+.karton figure{margin:0;flex:0 1 auto;min-width:0}
+.karton img{display:block;width:100%;height:auto;filter:none}
+.karton .sch img{box-shadow:0 18px 24px -16px rgba(41,11,0,.75)}
+.karton figcaption{margin-top:10px;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:rgba(23,22,26,.74)}
+.karton--tuer{align-items:flex-start;padding-top:clamp(30px,4vw,60px)}
+.karton--tuer figure{position:relative}
+@media(max-width:700px){.karton--tuer figure{width:42%!important}.karton figure[style*="width:30%"]{width:42%!important}}
+.karton--tuer figure::before{content:'';position:absolute;left:50%;top:10.2%;width:13%;aspect-ratio:1;margin-left:-6.5%;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fbebeb,#db511e 52%,#73280c);box-shadow:0 6px 10px -3px rgba(26,7,0,.6);z-index:2}
+/* Etiketten: Raster in vollen Reihen */
+.etk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(26px,3.4vw,60px) clamp(14px,2vw,34px)}
+@media(max-width:1100px){.etk{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:640px){.etk{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.etk li{display:flex;flex-direction:column;align-items:center;text-align:center}
+.etk .b{height:clamp(150px,17vw,250px);display:grid;place-items:center;width:100%}
+.etk img{max-height:clamp(150px,17vw,250px);max-width:100%;object-fit:contain;width:auto;height:auto;transition:transform .8s var(--e3);filter:drop-shadow(0 16px 14px rgba(0,0,0,.45))}
+.etk li:hover img{transform:rotate(-4deg) scale(1.06)}
+.etk h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.2;margin-top:18px}
+.etk p{color:rgba(255,255,255,.74);font-size:.98rem;line-height:1.45;max-width:26ch;margin-top:6px}
+.etk small{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-top:10px;opacity:.9}
+.bogenblick{border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px rgba(23,22,26,.14),0 40px 50px -36px rgba(63,19,2,.7);background:#ffffff}
+.bogenblick img{width:100%;display:block}
+.ausklang{position:relative;background:var(--tief);padding:clamp(46px,5.6vw,90px) var(--rand);border-radius:var(--rund) var(--rund) 0 0;margin-top:calc(var(--rund)*-1)}
+.ausklang .in{display:flex;flex-wrap:wrap;gap:22px 40px;align-items:center;justify-content:space-between}
+.ausklang p{font-family:var(--sans);font-weight:500;font-size:clamp(1.3rem,2vw,2rem);line-height:1.3;max-width:26ch}
+.fuss--kurz .in{display:grid;gap:24px}
+@media(min-width:860px){.fuss--kurz .in{grid-template-columns:1fr 1fr;align-items:end}}
+/* ---------- Unterlagen: Fächer im Kopf, Wahl, zwei Blätter nebeneinander ---------- */
+.auslage--pdf{aspect-ratio:1/.72}
+.auslage--pdf img{border-radius:4px}
+.uwahl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(24px,3vw,44px)}
+.uwahl button{height:46px;padding:0 19px;border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--tinte);white-space:nowrap;
+  background:linear-gradient(180deg,#fffdfd,#f8f0f0);box-shadow:inset 0 1px 0 #ffffff,inset 0 -2px 0 rgba(112,45,21,.22),inset 0 0 0 1px rgba(112,45,21,.16),0 8px 14px -10px rgba(76,28,10,.45);transition:transform .45s var(--e2)}
+.uwahl button:hover{transform:translateY(-1px)} .uwahl button:active{transform:translateY(1px)}
+.uwahl button[aria-pressed="true"]{color:#ffffff;background:linear-gradient(180deg,#45414f,#222028 50%,#0f0f12);box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -2px 0 rgba(0,0,0,.55),inset 0 0 0 1px rgba(239,118,73,.5),0 10px 16px -10px rgba(22,21,26,.7)}
+.uschau{border-radius:34px;background:#9f634c;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 0 0 1px rgba(63,19,2,.16),0 40px 50px -40px rgba(63,19,2,.7);padding:clamp(18px,3vw,48px)}
+.upaar{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.4vw,40px);align-items:start;max-width:1180px;margin:0 auto;touch-action:pan-y}
+.ublatt{margin:0;min-width:0}
+.ublatt__b{position:relative;aspect-ratio:760/1075;background:#ffffff;border-radius:4px;overflow:hidden;box-shadow:0 24px 30px -20px rgba(41,11,0,.75)}
+.ublatt__b img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:translateX(var(--von,5%));transition:opacity .5s var(--e1),transform .8s var(--e1)}
+.ublatt__b img.an{opacity:1;transform:none}
+.ublatt__b img.weg{opacity:0}
+.ublatt figcaption{margin-top:12px;text-align:center;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(23,22,26,.8)}
+.upaar .schau__p--l{left:-14px}.upaar .schau__p--r{right:-14px}
+.uschalter{display:none}
+.ufuss{display:flex;flex-wrap:wrap;gap:16px 30px;align-items:center;justify-content:space-between;max-width:1180px;margin:clamp(18px,2.4vw,34px) auto 0;color:var(--tinte)}
+.ufuss h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,2.1rem);line-height:1.15}
+.ufuss p{margin-top:5px;color:rgba(23,22,26,.76)}
+@media(max-width:760px){
+  .upaar{grid-template-columns:1fr}
+  .uschalter{display:flex;gap:6px;justify-content:center;margin-bottom:16px}
+  .uschalter button{height:42px;padding:0 20px;border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--tinte);background:linear-gradient(180deg,#fffdfd,#f8f0f0);box-shadow:inset 0 1px 0 #ffffff,inset 0 -2px 0 rgba(112,45,21,.22)}
+  .uschalter button[aria-pressed="true"]{color:#ffffff;background:linear-gradient(180deg,#45414f,#222028 50%,#0f0f12);box-shadow:inset 0 1px 0 rgba(255,255,255,.26),inset 0 -2px 0 rgba(0,0,0,.55)}
+  .uschau[data-s="neu"] .ublatt--alt,.uschau[data-s="alt"] .ublatt--neu{display:none}
+  .ublatt figcaption{display:none}
+  .upaar .schau__p--l{left:2px}.upaar .schau__p--r{right:2px}
+}
+/* ---------- Material: je Ordner eine Fläche, Dateien als Zeilen mit rundem Pfeil ---------- */
+.ordnerz .in{display:grid;gap:clamp(24px,4vw,70px);align-items:start}
+@media(min-width:1000px){.ordnerz .in{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+.ordnerz .kap{font-size:clamp(1.5rem,2.3vw,2.3rem);color:var(--tinte);margin-bottom:16px}
+.ordnerz .kap b{color:var(--taupe);font-size:.6em}
+.ordnerz.blatt{padding-top:clamp(60px,7vw,110px);padding-bottom:calc(clamp(60px,7vw,110px) + var(--rund))}
+.dateien{display:grid;gap:0 clamp(20px,3vw,48px)}
+@media(min-width:700px){.dateien--2{grid-template-columns:1fr 1fr}}
+.dateien a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 2px;border-bottom:1px solid rgba(23,22,26,.16);font-size:1.06rem;transition:none}
+.dateien a:hover{padding-left:10px}
+.dateien i{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#ffffff;background:linear-gradient(180deg,#4b4755,#33303b 50%,#1f1d25);box-shadow:inset 0 1px 0 rgba(255,255,255,.24),inset 0 -2px 0 rgba(0,0,0,.45),0 8px 12px -8px rgba(22,21,26,.7);transition:transform .5s var(--e2)}
+.dateien a:hover i{transform:translate(2px,-2px)}
+.dateien svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:1.4}
+
+/* ---------- Drucksachen als Übersicht (Robert 10.10.2026): ein Raster aus Kacheln statt eines Abschnitts je Stück ---------- */
+.raster-p{--g:clamp(16px,1.8vw,26px);container-type:inline-size;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:row dense;gap:var(--g)}
+.kachel{display:flex;flex-direction:column;min-width:0;background:var(--weiss);border-radius:clamp(18px,1.8vw,26px);overflow:hidden;box-shadow:inset 0 1px 0 #ffffff,0 0 0 1px rgba(0,0,0,.06),0 2px 0 rgba(0,0,0,.05),0 30px 44px -34px rgba(0,0,0,.5)}
+.kachel__b{display:block;width:100%;border:0;padding:0;margin:0;cursor:zoom-in;background:var(--karton);height:calc((100cqw - 2*var(--g))/3*.6889)}
+.kachel__b img{display:block;width:100%;height:100%;object-fit:contain}
+.kachel.gross3{grid-column:span 2;flex-direction:row}
+.kachel.gross3 .kachel__b{width:64%;flex:none;height:auto;min-height:calc((100cqw - 2*var(--g))/3*.6889)}
+.kachel.gross3 .kachel__t{justify-content:center}
+.kachel.gross3 .kachel__pdf{margin-top:8px}
+.kachel__t{display:flex;flex-direction:column;gap:8px;padding:clamp(16px,1.6vw,22px) clamp(18px,1.8vw,24px) clamp(18px,1.8vw,24px);flex:1}
+.kachel__f{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe)}
+.kachel h3{margin:0;font-family:var(--serif);font-weight:inherit;font-size:clamp(20px,1.6vw,24px);line-height:1.2;color:var(--tinte)}
+.kachel__s{margin:0;font-size:16px;line-height:1.5;color:var(--tinte);opacity:.82}
+.kachel__pdf{margin-top:auto;padding-top:6px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinte);text-decoration:none;border-bottom:1px solid currentColor}
+.kachel__pdf svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.6}
+@media (max-width:980px){.raster-p{grid-template-columns:repeat(2,minmax(0,1fr))}.kachel.gross3{grid-column:auto;flex-direction:column}.kachel.gross3 .kachel__b{width:100%;min-height:0}.kachel.gross3 .kachel__t{justify-content:flex-start}.kachel.gross2{grid-column:span 2}.kachel__b,.kachel.gross3 .kachel__b{height:calc((100cqw - var(--g))/2*.6889)}}
+@media (max-width:620px){.raster-p{grid-template-columns:minmax(0,1fr)}.kachel.gross2{grid-column:auto}.kachel__b{height:calc(100cqw*.6889)}}
+.glupe{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:clamp(14px,3vw,44px);background:rgba(9,9,10,.9);opacity:0;transition:opacity .22s}
+.glupe.offen{opacity:1}
+.glupe img{max-width:min(1800px,100%);max-height:calc(100vh - 120px);object-fit:contain;border-radius:12px}
+.glupe p{margin:0;color:#ffffff;font-family:var(--serif);font-size:20px}
+.glupe__zu{position:absolute;top:16px;right:16px;width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;background:var(--papier);color:var(--tinte);font-size:24px;line-height:1}
+
+/* Kleine Galerie am Ende (Robert 10.10.2026): vier je Reihe, nur Bild, Format, Name, PDF */
+.galerie-p .kopfzeile{margin-bottom:clamp(28px,3vw,44px)}
+.raster-p.klein{grid-template-columns:repeat(4,minmax(0,1fr))}
+.raster-p.klein .kachel__b{height:calc((100cqw - 3*var(--g))/4*.6889)}
+.raster-p.klein .kachel.gross3 .kachel__b{width:50%;min-height:calc((100cqw - 3*var(--g))/4*.6889)}
+.raster-p.klein .kachel h3{font-size:clamp(18px,1.3vw,20px)}
+.raster-p.klein .kachel__t{gap:6px;padding:14px 16px 16px}
+@media (max-width:980px){.raster-p.klein{grid-template-columns:repeat(2,minmax(0,1fr))}.raster-p.klein .kachel__b,.raster-p.klein .kachel.gross3 .kachel__b{width:100%;min-height:0;height:calc((100cqw - var(--g))/2*.6889)}}
+@media (max-width:620px){.raster-p.klein{grid-template-columns:minmax(0,1fr)}.raster-p.klein .kachel__b,.raster-p.klein .kachel.gross3 .kachel__b{height:calc(100cqw*.6889)}}
+
+/* Robert 11.10.2026: die geschlossene Lupe lag unsichtbar über der Seite und schluckte alle Klicks (display:flex schlug hidden) */
+.glupe[hidden]{display:none}
+
+/* ---------- Kofferaufkleber als Haufen wie bei Salt & Silver (12.10.2026, PAPIER_SEITE['etik_haufen']) ---------- */
+.sk .haufen{position:relative;width:100%;max-width:700px;aspect-ratio:1;justify-self:end}
+.sk .haufen i{position:absolute;left:var(--x);top:var(--y);width:var(--w);translate:-50% -50%;rotate:var(--r)}
+.sk .haufen img{display:block;width:100%;height:auto;opacity:0;transform:translate3d(0,110px,0) scale(.86) rotate(calc(var(--r) * -1.4));
+  transition:opacity .6s linear,transform 1.15s var(--e1);transition-delay:calc(var(--i) * 60ms + 150ms)}
+.sk .haufen.los img{opacity:1;transform:none}
+@media(max-width:1039px){.sk .haufen{max-width:560px;justify-self:center}}
+@media(prefers-reduced-motion:reduce){.sk .haufen img{opacity:1;transform:none;transition:none}}
+/* Schatten fest im Bild: kein CSS-Filter (sonst zeichnet Safari ihn beim Hereinkommen verspätet) */
+.etk--gb img{filter:none}
+.etk--gb .b,.etk--gb img{max-height:clamp(170px,19vw,280px)}
+.fl--papier .etk p,.fl--creme .etk p{color:rgba(23,22,26,.72)}
+.fl--papier .etk small,.fl--creme .etk small{color:var(--taupe)}
+
+.upaar{align-items:center}
+.ublatt--alt .ublatt__b{aspect-ratio:1/1.414!important}
+.ublatt--alt .ublatt__b img{width:100%;height:100%;object-fit:cover}

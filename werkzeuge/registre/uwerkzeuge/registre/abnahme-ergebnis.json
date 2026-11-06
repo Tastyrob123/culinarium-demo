@@ -1,0 +1,470 @@
+{
+ "datum": "30.10.2026, 05:51:57",
+ "laeufe": [
+  "chromium 1440",
+  "chromium 390",
+  "webkit 1440",
+  "webkit 390"
+ ],
+ "zeilen": {
+  "A01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A06": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A07": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A08": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A08b": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A09": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A10": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "A11": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "B01": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "B02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "B03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "B04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "B05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "B06": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "C01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "C02": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "C03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "C04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "C05": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "D01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "D02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "D03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "D04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "E01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "E03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "E04": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "F01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "G01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "G02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "G03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "G04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "H01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "H02": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "H03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "H04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "H05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I01b": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I06": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I07": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "I08": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "I09": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "J01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "J02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "J03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "J04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "J05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "K01": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "K02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "K03": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "K04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "K05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "K06": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "L01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "L02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "L03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "L04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "L05": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "M01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "M02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N04": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N06": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N07": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "N08": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "O01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "Z01": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "Z01b": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "Z02": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "E05": {
+   "gilt": 2,
+   "gruen": 2,
+   "rot": null
+  },
+  "P01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "P01b": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "P02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "P03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "Q01": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "Q02": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "Q03": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "Q04": {
+   "gilt": 1,
+   "gruen": 1,
+   "rot": null
+  },
+  "Q05": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  },
+  "Q06": {
+   "gilt": 4,
+   "gruen": 4,
+   "rot": null
+  }
+ },
+ "rot": {},
+ "alle": 91,
+ "gilt": 91,
+ "gruen": 91
+}

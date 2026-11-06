@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Elf Mails · Culinarium</title>
+<style>
+@font-face{font-family:'Petrona';font-weight:100 900;font-display:swap;src:url('../assets/schrift/fraunces-soft.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-weight:400 600;font-display:swap;src:url('../assets/schrift/instrument.woff2') format('woff2')}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#16151a;color:#faf4f4;font:400 17px/1.6 'Instrument Sans',system-ui,sans-serif;--rand:clamp(20px,4.6vw,76px)}
+header.kopf{padding:clamp(56px,8vw,120px) var(--rand) clamp(30px,4vw,60px);text-align:center}
+header.kopf img{width:clamp(50px,5.9vw,92px);height:auto}
+h1{margin:clamp(14px,1.6vw,24px) 0 0;font:340 clamp(2rem,4.6vw,4.2rem)/1.08 'Petrona',Georgia,serif}h1 em{font-style:normal;color:#f5a689}
+header.kopf p{max-width:60ch;margin:clamp(18px,2.1vw,32px) auto 0;color:rgba(250,244,244,.86)}
+main{padding:0 0 clamp(60px,8vw,120px)}
+.band{display:flex;gap:clamp(20px,2.4vw,40px);align-items:flex-start;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--rand);padding:4px var(--rand) 34px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.band::-webkit-scrollbar{display:none}
+.band:focus-visible{outline:2px solid #f5a689;outline-offset:-2px}
+.mb{flex:0 0 clamp(300px,34vw,520px);scroll-snap-align:start}
+.mb:last-child{margin-inline-end:var(--rand)}
+.mb-ueber{display:flex;gap:16px;align-items:flex-start;margin:0 4px 18px}
+.mb-nr{font:400 2.3rem/.9 'Petrona',Georgia,serif;color:#f5a689}
+.mb-ueber__t{display:flex;flex-direction:column;gap:5px;min-width:0}
+.mb-ueber__t b{font:340 1.3rem/1.2 'Petrona',Georgia,serif}
+.mb-ueber__t small{font-size:.86rem;line-height:1.4;color:rgba(250,244,244,.74)}
+.mb-ueber__t small span{display:inline-block;min-width:5.4em;font:400 10px/1.4 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:#f5a689}
+.mb-blatt{position:relative;height:640px;border-radius:20px;overflow:hidden;background:#f2eaea;box-shadow:0 0 0 1px rgba(239,118,73,.3),0 40px 50px -30px rgba(0,0,0,.9);-webkit-mask-image:linear-gradient(#000 68%,transparent);mask-image:linear-gradient(#000 68%,transparent)}
+.mb.auf .mb-blatt{-webkit-mask-image:none;mask-image:none}
+.mb-in{position:relative}.mb-in table{max-width:100%}
+.mb-ganz{position:relative;margin:18px 0 0;text-align:center}
+.mb.auf .mb-ganz{margin-top:22px}
+.mb-kn{display:inline-flex;align-items:center;gap:12px;padding:8px 8px 8px 22px;border:0;border-radius:999px;cursor:pointer;font:400 11.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;
+  background:linear-gradient(180deg,#3a3845,#222028 60%,#0f0e13);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(239,118,73,.38),0 14px 22px -12px rgba(0,0,0,.8)}
+.mb-kn i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;color:#26242d;background:linear-gradient(180deg,#faf4f4,#f5a689 55%,#ef7649);box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.mb-kn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mb-kn .z,.mb.auf .mb-kn .a{display:none}.mb.auf .mb-kn .z{display:inline}.mb.auf .mb-kn svg{transform:rotate(180deg)}
+.mb-kn:focus-visible{outline:2px solid #b1adac;outline-offset:3px}
+.pfeile{display:flex;justify-content:center;gap:14px;margin-top:4px}
+.pf{width:52px;height:52px;border:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;color:#26242d;background:linear-gradient(180deg,#faf4f4,#f5a689 55%,#ef7649);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 12px 20px -10px rgba(0,0,0,.7)}
+.pf svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pf:disabled{opacity:.35;cursor:default}
+footer{padding:26px var(--rand) 40px;text-align:center;font-size:.92rem;color:rgba(250,244,244,.6);border-top:1px solid rgba(239,118,73,.2)}
+footer a{color:#b1adac}
+/* Hereinkommen wie auf den anderen Werkbank-Seiten: heben, nur transform und opacity, bei reduced-motion sofort da */
+html.js .hr{opacity:0;transform:translate3d(0,34px,0) scale(.985)}
+html.js .hr.da{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1) calc(var(--i,0) * 110ms),transform 1.2s cubic-bezier(.16,1,.3,1) calc(var(--i,0) * 110ms)}
+@media (prefers-reduced-motion:reduce){html.js .hr{opacity:1;transform:none;transition:none}}
+@media (max-width:760px){.mb{flex-basis:calc(100vw - 2 * var(--rand))}.pfeile{display:none}}
+@media (hover:none){.pfeile{display:none}}
+</style><style id="zeile-ganz">h1,h2,h3,h4,.z>span{text-wrap:balance}h1 br+em,h2 br+em{display:inline-block;text-wrap:balance}.stapel .fen__k{position:relative}.stapel .fen__k span{position:absolute;left:50%;transform:translateX(-50%);margin:0;overflow:visible}@media(max-width:860px){.stapel .fen__k span{display:none}}@media(max-width:480px){.etk{grid-template-columns:minmax(0,1fr)!important}}@media(min-width:900px) and (max-width:1279px){.brett-p{grid-template-columns:300px minmax(0,1fr)}.brett-p__k{grid-column:1/-1}}@media(max-width:1279px){.brett-p p{text-wrap:balance}}.da:not([data-drift]){will-change:auto!important}.mb-ueber__t small{display:grid;grid-template-columns:64px minmax(0,1fr);align-items:baseline}.mb-ueber__t small span{min-width:0}@media(max-width:480px){.mn-titel{font-size:clamp(1.5rem,8vw,2.2rem);letter-spacing:.03em}.mn-ende{gap:10px}.mn-ende i{width:18px}.mn-ende span{letter-spacing:.12em;white-space:nowrap}a.kn[href="../index.html#geprueft"]{letter-spacing:.04em;font-size:9.5px;white-space:nowrap;padding-left:14px}.stapel .tel{width:21%;right:-2%}}@media(max-width:480px){.wege__t,figcaption,.mb-ueber__t small{text-wrap:balance}.sag-h{font-size:1.32rem;letter-spacing:.03em;gap:10px}.hs2-her{grid-template-columns:repeat(2,minmax(0,1fr))!important}.hs2-her figcaption small{font-size:9px;letter-spacing:0}.ki-knoepfe{flex-direction:column;align-items:stretch}.ki-knoepfe .kn{white-space:nowrap;letter-spacing:.04em;font-size:10px}#sag-aufbau[data-a="heben"]:not(.da){transform:translateY(56px) scale(.98)!important}.faecher--2 .blattk span{flex-direction:column;gap:3px;font-size:9.5px;letter-spacing:.08em}}.stage>.aside h1{font-size:clamp(2rem,3.6vw,3.3rem);white-space:nowrap}.stage>.aside h1 em{display:inline}</style><script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body>
+<script>if (!matchMedia('(prefers-reduced-motion:reduce)').matches && 'IntersectionObserver' in window) document.documentElement.classList.add('js');</script>
+<header class="kopf"><img class="hr" style="--i:0" src="img/zeichen.png" alt="" width="72"><h1 class="hr" style="--i:1">Elf Mails,<br><em>so persönlich wie der Abend.</em></h1>
+<p class="hr" style="--i:2">Was ein Gast nach der Buchung oder auf der Warteliste von euch bekommt, kommt im Kleid der neuen Seite. Elf Fälle als Idee, von der Buchung bis zum Abend danach. Namen, Daten und Nummern sind Beispielwerte, Preis, Zeiten und Adresse sind eure.</p></header>
+<main><div class="band" id="mband" tabindex="0" aria-label="Die elf Mails, zum Blättern"><article class="mb hr" style="--i:0">
+  <header class="mb-ueber"><span class="mb-nr">01</span><span class="mb-ueber__t"><b>Dein Ticket</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Gleich nach der Buchung</small><small><span>Betreff</span>Dein Platz an der Tafel ist gebucht</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Dein Platz<br><span style="color:#f5a689">an der Tafel.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Lena</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Schön, dass du dabei bist. Dein Platz an der Tafel ist gebucht, das Ticket steht unten in dieser Mail.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Zum Ankommen gibt es einen Aperitif, danach drei Gänge aus der Küche und zu jedem Gang einen Drink, den Momo dir an der Tafel erklärt.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Verträgst du etwas nicht, schreib es uns einfach als Antwort auf diese Mail.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/kerze2.jpg" width="544" alt="Gäste und Kerzen an der langen Tafel" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Dein Ticket · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Abend</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Freitag, 27. November 2026</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Beginn</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">19:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Plätze</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">2</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Preis</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">89,00 EUR je Platz</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Nr.</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">C-0412</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/weg.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Den Weg ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover. Die Bar liegt an der Ecke Haasemannstraße und Rampenstraße.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:1">
+  <header class="mb-ueber"><span class="mb-nr">02</span><span class="mb-ueber__t"><b>Auf der Warteliste</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Gleich nach dem Eintrag auf der Warteliste</small><small><span>Betreff</span>Du stehst auf der Warteliste</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Du stehst<br><span style="color:#f5a689">auf der Liste.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Jonas</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Danke für deinen Eintrag. Der Abend ist gerade voll, du stehst auf der Warteliste.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Wird ein Platz frei, schreiben wir dir sofort. Und sobald der nächste Abend feststeht, erfährst du es vor allen anderen.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/glaeser.jpg" width="544" alt="Zwei Gläser stoßen an" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Dein Eintrag · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Abend</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Freitag oder Samstag, egal</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Plätze</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">2</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Name</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Jonas Becker</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abende.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Alle Abende ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Willst du deinen Eintrag ändern, antworte einfach auf diese Mail.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:2">
+  <header class="mb-ueber"><span class="mb-nr">03</span><span class="mb-ueber__t"><b>Ein Platz ist frei</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Wenn für einen vollen Abend ein Platz frei wird</small><small><span>Betreff</span>Ein Platz an der Tafel ist frei geworden</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Ein Platz<br><span style="color:#f5a689">ist frei geworden.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Jonas</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Gute Nachricht: Für den Abend, auf dessen Warteliste du stehst, ist ein Platz frei geworden.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Wir halten ihn bis morgen Abend für dich frei; danach fragen wir den Nächsten auf der Liste.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/service.jpg" width="544" alt="Ein Teller wird an die Tafel gebracht" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Der Abend · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Abend</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Samstag, 28. November 2026</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Beginn</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">17:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Frei</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">1 Platz</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Preis</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">89,00 EUR je Platz</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abend.html#termine-buchen" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Jetzt buchen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Passt es dir doch nicht, musst du nichts tun; du bleibst auf der Liste.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:3">
+  <header class="mb-ueber"><span class="mb-nr">04</span><span class="mb-ueber__t"><b>Morgen an der Tafel</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Am Tag vor dem Abend</small><small><span>Betreff</span>Morgen Abend sitzt du an der Tafel</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Morgen Abend<br><span style="color:#f5a689">ist dein Platz gedeckt.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Lena</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Morgen ist es so weit. Die Tafel wird gedeckt, Rudi bereitet die Gänge vor, und Momo stellt die Drinks zusammen.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Komm gern ein paar Minuten früher, der Aperitif wartet. Verträgst du etwas nicht, sag es uns bis morgen Mittag als Antwort auf diese Mail.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/kerze3.jpg" width="544" alt="Kerzen auf der gedeckten Tafel" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Morgen · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Abend</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Freitag, 27. November 2026</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Beginn</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">19:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Plätze</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">2</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Nr.</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">C-0412</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/weg.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Den Weg ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">05</span><span class="mb-ueber__t"><b>Danke für den Abend</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Am Morgen nach dem Abend</small><small><span>Betreff</span>Danke, dass du an der Tafel warst</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Danke<br><span style="color:#f5a689">für den Abend.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Lena</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Schön, dass du gestern an der Tafel gesessen hast. Wir hoffen, jeder Teller und jeder Drink ist dir in Erinnerung geblieben.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Die Karte des Abends steht unten, falls du einen Drink nachschlagen willst. Und sobald der nächste Abend feststeht, bist du die Erste, die es erfährt.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/toast.jpg" width="544" alt="Gläser heben sich über der Tafel" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Die Karte von gestern · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Apéritif</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Sauerteig | Tomate | Butter</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Vorspeise</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Miso | Sellerie | Röstzwiebeln</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Hauptgang</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Spinat | braune Butter | Parmesan</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Dessert</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Kaffee | Molke | Amaretto</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abende.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Alle Abende ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Willst du uns etwas sagen, antworte einfach auf diese Mail. Momo und Rudi lesen mit.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">06</span><span class="mb-ueber__t"><b>Der nächste Abend steht</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Wenn der nächste Termin feststeht</small><small><span>Betreff</span>Der nächste Abend steht fest</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Der nächste Abend<br><span style="color:#f5a689">steht fest.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Jonas</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Du stehst auf unserer Liste, darum erfährst du es zuerst: Der nächste Abend an der langen Tafel steht fest.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Rudi hat die Gänge geschrieben, Momo arbeitet an den Drinks. Die Plätze sind ab heute für dich buchbar, ab übermorgen für alle.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/anstossen.jpg" width="544" alt="Gäste stossen an der Tafel an" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Der Abend · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Freitag</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">18. Dezember 2026, 19:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Samstag</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">19. Dezember 2026, 17:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Preis</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">89,00 EUR je Platz</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abend.html#termine-buchen" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Platz buchen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Termine und Preis sind im Entwurf Beispielwerte.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">07</span><span class="mb-ueber__t"><b>Rückblick mit Fotos</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Eine Woche nach dem Abend</small><small><span>Betreff</span>So war der Abend an der Tafel</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">So war<br><span style="color:#f5a689">der Abend.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Lena</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Eine Woche ist der Abend her, und wir denken noch gern daran: an die Gänge, die Drinks und an eure Gespräche an der langen Tafel.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Ein paar Fotos stehen jetzt auf Instagram. Vielleicht findest du dich darauf wieder.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/lachen.jpg" width="544" alt="Gäste lachen an der Tafel" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Der Abend · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Datum</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Freitag, 27. November 2026</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Gänge</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">drei, dazu Apéritif und Absacker</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Drinks</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">fünf von Momo</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/index.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Fotos ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Gefällt dir ein Foto besonders, schreib es uns. Wir schicken es dir gern in voller Größe.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">08</span><span class="mb-ueber__t"><b>Eure Feier an der Tafel</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Als Antwort auf eine Anfrage für eine Feier</small><small><span>Betreff</span>Eure Feier an der langen Tafel</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Eure Feier<br><span style="color:#f5a689">an der langen Tafel.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Mara</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Danke für deine Anfrage. Ein Geburtstag an der langen Tafel: Das machen wir gern.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Rudi schreibt euch ein eigenes Menü, Momo stellt die Drinks dazu, und die Tafel gehört an dem Abend nur euch. Sag uns, wie viele ihr seid und was euch wichtig ist, dann melden wir uns mit einem Vorschlag.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/tafelleer.jpg" width="544" alt="Die gedeckte lange Tafel" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Deine Anfrage · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Anlass</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Geburtstag</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Wunschtermin</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Samstag, 16. Januar 2027</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Gäste</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">etwa zwölf</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abend.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Die Tafel ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Name, Termin und Anzahl sind Beispielwerte.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">09</span><span class="mb-ueber__t"><b>Dirty Chicken ist zurück</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Vor einem Pop-up von Dirty Chicken</small><small><span>Betreff</span>Dirty Chicken ist wieder da</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Dirty Chicken<br><span style="color:#f5a689">ist wieder da.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Jonas</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Aus demselben Haus kommt noch etwas anderes: Dirty Chicken macht wieder ein Pop-up, mit Sandwiches, Dirty Drinks und Live-Musik.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Anmelden musst du dich nicht. Komm vorbei, solange der Vorrat reicht.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/dc_burger.jpg" width="544" alt="Das Chicken Sandwich von Dirty Chicken" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Das Pop-up · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Wann</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Samstag, 30. Mai, ab 18:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Wo</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">AM:PM Café im Tiedthof</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Instagram</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">@dirtychicken.hannover</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/dirty-chicken.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Dirty Chicken ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Datum und Ort sind die des ersten Pop-ups, hier als Beispiel.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">10</span><span class="mb-ueber__t"><b>Für dich zuerst</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>An die Gäste, die schon an der Tafel sassen</small><small><span>Betreff</span>Wir halten einen Platz für dich frei</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Wir halten einen Platz<br><span style="color:#f5a689">für dich frei.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Lena</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Du hast schon an der Tafel gesessen, darum fragen wir dich zuerst: Für den nächsten Abend halten wir einen Platz für dich frei.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Sag uns bis Sonntag Bescheid, ob du dabei bist. Danach geben wir den Platz an die Warteliste weiter.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/kerze2.jpg" width="544" alt="Gäste und Kerzen an der langen Tafel" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Für dich · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Abend</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Freitag, 18. Dezember 2026</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Beginn</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">19:00 Uhr</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Frei bis</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Sonntag, 22. November</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abend.html#termine-buchen" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Platz annehmen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Passt es dir nicht, musst du nichts tun.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article><article class="mb hr" style="--i:4">
+  <header class="mb-ueber"><span class="mb-nr">11</span><span class="mb-ueber__t"><b>Ein Abend als Geschenk</b><small><span>Von</span>Culinarium</small><small><span>Wann</span>Wenn jemand einen Abend verschenkt</small><small><span>Betreff</span>Ein Abend an der langen Tafel, für dich</small></span></header>
+  <div class="mb-blatt"><div class="mb-in">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f2eaea"><tr><td align="center" style="padding:24px 12px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#faf4f4;border-radius:22px;overflow:hidden">
+  <tr><td align="center" style="background:#222028;padding:34px 30px 30px">
+    <img src="img/logo.png" width="240" alt="Culinarium · A unique experience" style="display:block;border:0;width:240px;max-width:72%;height:auto;margin:0 auto">
+    <h1 style="margin:28px 0 0;font:400 clamp(28px,7.4vw,36px)/1.15 Georgia,'Times New Roman',serif;color:#faf4f4">Ein Abend<br><span style="color:#f5a689">an der langen Tafel.</span></h1>
+  </td></tr>
+  <tr><td style="padding:34px clamp(22px,6vw,40px) 8px"><p style="margin:0 0 14px;font:400 20px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d">Hallo Lena</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Jonas schenkt dir einen Abend an der langen Tafel: drei Gänge aus Rudis Küche und zu jedem Gang einen Drink, den Momo dir an der Tafel erklärt.</p><p style="margin:0 0 14px;font:400 16px/1.62 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#3a3845">Den Gutschein findest du im Anhang. Such dir einen Abend aus und schreib uns auf Instagram, dann halten wir deinen Platz frei.</p></td></tr>
+  <tr><td style="padding:6px 28px 6px"><img src="img/anstossen.jpg" width="544" alt="Gäste stossen an der Tafel an" style="display:block;border:0;width:100%;height:auto;border-radius:16px"></td></tr>
+  <tr><td style="padding:10px 28px 6px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#222028;border-radius:16px">
+    <tr><td style="padding:22px 26px 12px"><div style="font:400 10.5px/1.2 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f5a689;padding-bottom:12px">Dein Gutschein · Beispielwerte</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Von</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">Jonas Becker</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Personen</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">2</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Gültig bis</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">[Datum]</td></tr><tr><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 11px/1.3 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b1adac;width:38%">Nr.</td><td style="padding:11px 0;border-top:1px solid #4a4855;font:400 16px/1.35 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#faf4f4">C-[0000]</td></tr></table></td></tr></table></td></tr>
+  <tr><td align="center" style="padding:26px 40px 8px"><a href="https://culinarium-hannover-entwurf.vercel.app/abende.html" style="display:inline-block;padding:16px 30px;border-radius:999px;background:#222028;font:400 12px/1 'Helvetica Neue',Helvetica,Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#faf4f4;text-decoration:none">Alle Abende ansehen &nbsp;↗</a></td></tr>
+  <tr><td style="padding:14px 40px 30px"><p style="margin:0;font:400 15px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#5b5763;text-align:center">Wert und Gültigkeit legt das Haus noch fest; bis dahin stehen sie in Klammern.</p>
+    <img src="img/trio.jpg" width="520" alt="Drei aus dem Team vor der Bar" style="display:block;border:0;width:100%;max-width:520px;height:auto;margin:26px auto 0;border-radius:16px">
+    <p style="margin:16px 0 0;font:400 17px/1.4 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#26242d;text-align:center">Bis bald an der Tafel, Momo, Derya und Rudi</p></td></tr>
+  <tr><td align="center" style="background:#16151a;padding:26px 30px"><div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,Arial,sans-serif;color:#b1adac">Walk on the Wild Side · Haasemannstraße 13 · 30449 Hannover<br>Freitag ab 19:00 · Samstag ab 17:00</div></td></tr>
+</table>
+</td></tr></table>
+</div></div>
+  <p class="mb-ganz"><button type="button" class="mb-kn" aria-expanded="false"><span class="a">Ganze Mail</span><span class="z">Weniger zeigen</span><i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></i></button></p>
+</article></div>
+<div class="pfeile hr" style="--i:2"><button type="button" class="pf" data-r="-1" aria-label="Vorige Mail"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button><button type="button" class="pf" data-r="1" aria-label="Nächste Mail"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div></main>
+<footer class="hr">Entwurf von Robert Reff, Tasty Studios. Stand 30.10.2026. <a href="../werkbank/index.html#papier">Zurück zu «Alles auf einen Blick»</a></footer>
+<script>
+(function () {
+  /* Hereinkommen: Kopf, Band und Fuss heben sich, sobald sie ins Bild kommen; die Mails im Band kommen zusammen mit dem Band */
+  if (document.documentElement.classList.contains('js')) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (!e.isIntersecting) return; io.unobserve(e.target);
+      (e.target.id === 'mband' ? [].slice.call(e.target.querySelectorAll('.hr')) : [e.target]).forEach(function (x) { x.classList.add('da'); }); }); }, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
+    [].forEach.call(document.querySelectorAll('header.kopf .hr,.pfeile,footer'), function (x) { io.observe(x); }); io.observe(document.getElementById('mband'));
+  }
+})();
+(function () {
+  /* die Mail steht in der Seite; zu sieht man den oberen Teil, auf die ganze Mail, sofort */
+  var ms = [].slice.call(document.querySelectorAll('.mb'));
+  function lage(m) { var bl = m.querySelector('.mb-blatt'), i = bl.querySelector('.mb-in'); bl.style.height = (m.classList.contains('auf') ? i.scrollHeight : Math.min(640, i.scrollHeight)) + 'px'; }
+  ms.forEach(function (m) {
+    var k = m.querySelector('.mb-kn');
+    [].forEach.call(m.querySelectorAll('img'), function (im) { if (!im.complete) im.addEventListener('load', function () { lage(m); }, { once: true }); });
+    lage(m);
+    k.addEventListener('click', function () { var auf = m.classList.toggle('auf'); k.setAttribute('aria-expanded', auf); lage(m); if (!auf) m.scrollIntoView({ block: 'nearest' }); });
+  });
+  var rt = 0; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { ms.forEach(lage); kl(); }, 120); });
+  /* Pfeile am Laptop blättern das Band um eine Mail */
+  var b = document.getElementById('mband'), p = document.querySelectorAll('.pf');
+  function schritt() { return ms[0].getBoundingClientRect().width + parseFloat(getComputedStyle(b).columnGap || 0); }
+  function kl() { p[0].disabled = b.scrollLeft < 4; p[1].disabled = b.scrollLeft > b.scrollWidth - b.clientWidth - 4; }
+  [].forEach.call(p, function (x) { x.addEventListener('click', function () { b.scrollBy({ left: +x.dataset.r * schritt(), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }); });
+  b.addEventListener('scroll', kl, { passive: true }); kl();
+})();
+</script>
+<style id="text-mitte">.tm{position:relative}
+@supports not (font:-apple-system-body){
+  .kn>.tm{top:.7px}.kn.kn--klein>.tm{top:0}
+  .wahl button>.tm,.vh-wahl button>.tm,.uwahl button>.tm,.uschalter button>.tm{top:1px;left:.065em}
+  .mb-kn>span{position:relative;top:.9px}
+  .sbf-z>.tm{top:.6px}
+}
+.rund[aria-label^="Zur"] svg,.rund[aria-label^="Vorig"] svg,.pf[aria-label^="Vorig"] svg{transform:translateX(.5px)}
+.rund[aria-label^="Weiter"] svg,.rund[aria-label^="Nächst"] svg,.pf[aria-label^="Nächst"] svg{transform:translateX(-.5px)}
+@supports (font:-apple-system-body){.pf[aria-label^="Vorig"] svg{transform:translate(.6px,.5px)}.pf[aria-label^="Nächst"] svg{transform:translate(-.6px,.5px)}}
+@supports not (font:-apple-system-body){.pf[aria-label^="Vorig"] svg{transform:translateX(.6px)}.pf[aria-label^="Nächst"] svg{transform:translateX(-.6px)}}</style><script id="text-mitte-js">(function(){function t(){document.querySelectorAll('.kn,.sbf-z,.wahl button,.vh-wahl button,.uwahl button,.uschalter button').forEach(function(k){var n=k.firstChild;if(n&&n.nodeType===3&&n.textContent.trim()){var s=document.createElement('span');s.className='tm';s.textContent=n.textContent;k.replaceChild(s,n)}})}t();addEventListener('load',t)})();</script><script id="ruecksprung">(function(){
+var id=null;try{id=history.state&&history.state.rs;if(!id){id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);history.replaceState(Object.assign({},history.state||{},{rs:id}),'')}}catch(e){}
+var K='rs:'+location.pathname+(id?':'+id:'');   /* je Eintrag im Verlauf: dieselbe Seite zweimal im Verlauf behält zwei Höhen */
+function merk(){try{sessionStorage.setItem(K,String(Math.round(window.scrollY||0)))}catch(e){}}
+function hol(){try{var v=sessionStorage.getItem(K);return v&&/^\d+$/.test(v)?+v:null}catch(e){return null}}
+addEventListener('pagehide',merk);
+document.addEventListener('click',function(ev){var a=ev.target&&ev.target.closest&&ev.target.closest('a[href]');if(a&&(a.getAttribute('href')||'').charAt(0)!=='#')merk()},true);
+function gezeigt(y){var g=y+innerHeight*1.2;[].forEach.call(document.querySelectorAll('[data-a],.odo,.zt,.roll,img.ld'),function(e){if(e.classList.contains('da'))return;var r=e.getBoundingClientRect();if(r.top+scrollY<g)e.classList.add('da')})}
+addEventListener('pageshow',function(ev){if(!ev.persisted)return;var y=hol();if(y===null)return;gezeigt(y);if(Math.abs(scrollY-y)>40)scrollTo(0,y)});
+var nav=null;try{nav=performance.getEntriesByType('navigation')[0]}catch(e){}
+var typ=nav?nav.type:(performance.navigation&&performance.navigation.type===2?'back_forward':'');
+if(typ!=='back_forward')return;
+var y=hol();if(y===null||y<40)return;
+try{history.scrollRestoration='manual'}catch(e){}
+var H=document.documentElement,st=document.createElement('style');
+st.textContent='html.rs-sofort,html.rs-sofort *{transition:none!important;animation-duration:0s!important;animation-delay:0s!important;scroll-behavior:auto!important}';
+document.head.appendChild(st);H.classList.add('rs-sofort');
+var weg=false;['wheel','touchstart','keydown','mousedown'].forEach(function(k){addEventListener(k,function(){weg=true},{once:true,passive:true})});
+function geh(){if(weg)return;scrollTo(0,y);gezeigt(y)}
+function los(){geh();requestAnimationFrame(function(){geh();requestAnimationFrame(function(){H.classList.remove('rs-sofort')})});
+ var n=0,t=setInterval(function(){n++;if(Math.abs(scrollY-y)>40)geh();if(n>=14||weg)clearInterval(t)},150)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',los);else los();
+addEventListener('load',function(){if(Math.abs(scrollY-y)>40)geh()});
+})();</script>
+</body></html>

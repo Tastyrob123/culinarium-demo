@@ -1,0 +1,13 @@
+/* Auftritte (gebaut von _werkbank/gt_auftritte.py, nicht von Hand ändern). Takt des Gasterntal, Robert 18.10.2026 17:46 und 18:17 */
+html.wb-takt [data-a]{transition-duration:.6s,.85s;transition-timing-function:ease,cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--vz,0ms) + var(--i,0)*120ms)}
+html.wb-takt [data-a="auf"]:not(.da){transform:translateY(40px)}
+/* Blätter und Tafeln (mkhoch): überall gleich, auch auf ki.html, wo sie bisher ohne Gestaltung standen; 40 px und 1,04 statt 120–150 px */
+html.wb-takt [data-a="mkhoch"]{transition:opacity .6s ease,transform .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--vz,0ms) + var(--i,0)*120ms)}
+html.wb-takt [data-a="mkhoch"]:not(.da){transform:translateY(40px) scale(1.04)}
+html.wb-takt [data-a="mkhoch"].da{transform:none;opacity:1}
+.wb-nach{transition:opacity .6s ease,translate .85s cubic-bezier(.22,.61,.36,1),scale .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--wi,0)*120ms)}
+.wb-nach:not(.wb-da){opacity:0;translate:0 40px}
+.wb-nach.wb-bild{opacity:1!important}
+.wb-nach.wb-bild:not(.wb-da){scale:1.04}
+@media (prefers-reduced-motion:reduce){.wb-nach{opacity:1!important;translate:none!important;scale:none!important;transform:none!important;visibility:visible!important}}
+@media print{.wb-nach{opacity:1!important;translate:none!important;scale:none!important;transform:none!important;visibility:visible!important}}

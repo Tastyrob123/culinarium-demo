@@ -1,0 +1,518 @@
+/* La Réception · Culinarium Hannover: Feinabstimmung nach hell.css (21.10.2026, Kopie aus dem Reservationsbuch des Schlössli, dort aus dem Gastgeber des Ruedihus,
+   dort aus dem Grand Beau-Rivage mit den Korrekturen von Carlton-Europe und Waldhotel Doldenhorn). Am 28.10.2026 aus dem Schäfli ins Kleid des Culinarium gerechnet (Farbwelt A «Plakat»:
+   Nacht, Schiefer, Warmweiss, Kerze; _bau/culinarium_kleid.py), Titelschrift Fraunces mit weichen Enden, nie fett, nie kursiv; Tapete aus website/assets/zeichen. Bewegung nur über transform und opacity. */
+
+/* ---------- Kopf: Name wie auf den Karten des Hauses, Gelasio fett in Versalien, Unterzeile in Kerzenlicht ---------- */
+.kopf__marke b{font:400 14.5px/1.1 var(--caps);letter-spacing:.2em;text-transform:uppercase;color:#f5f1f0}
+.kopf__marke small{font-family:var(--mono);letter-spacing:.22em;color:rgba(244,173,147,.78)}
+.kopf__titel{font-weight:400;letter-spacing:.005em}
+/* Das Zeichen des Hauses ist hoch, nicht rund wie das des Rivage: nach Höhe setzen und nie schrumpfen lassen (Fund Doldenhorn, 320 px) */
+.kopf__marke{flex:none}.kopf__marke img{width:auto;height:40px}
+@media (max-width:420px){.kopf__marke img{height:34px}}
+.titel .zier,.titel .mono{letter-spacing:.24em}
+.nw{font-family:var(--sans);font-weight:400;font-size:15.5px}
+.leiste__t b,.quit b,.fenster h2,h2.zw{letter-spacing:0}
+
+/* Betonung in Titeln wie auf der Website: Farbe statt Schräge (main.css: .mk h1 em{font-style:normal}) */
+#ansicht :is(h1,h2,h3) em,.fenster h2 em{font-style:normal}
+
+/* Handy: «Chat ausprobieren» schmaler (Carlton 17.10.2026) */
+@media (max-width:480px){#k-probe{letter-spacing:.07em;font-size:10px;padding-left:12px}}
+/* 320 px: «Chat ausprobieren» ragte 8 px aus dem Bild; dort nur der Knauf (der Name bleibt für Vorleser im Knopf) */
+@media (max-width:360px){#k-probe{font-size:0;letter-spacing:0;padding-left:5px;gap:0}}
+/* Handy in Safari: lange Zeilen in den Karten drückten die Seite breiter als den Bildschirm (Fund Carlton 16.10.2026, gilt auch im Rivage) */
+.gs-hinweis{min-width:0;max-width:100%;overflow:hidden}
+@media (max-width:760px){.gs-hinweis{align-items:stretch}.gs-hinweis #gs-name{max-width:100%}}
+
+/* ---------- Eingang: Abteilungen (E15/E22 aus dem Doldenhorn): Rezeption, Event, Personal ---------- */
+.re-abt{display:grid;grid-template-columns:repeat(auto-fit,minmax(82px,1fr));gap:6px;margin:0 0 12px;padding:6px;border-radius:18px;background:#f9f6f6;box-shadow:inset 0 0 0 1px rgba(26,25,31,.1),0 14px 26px -22px rgba(31,29,37,.5)}
+.re-abt button{display:flex;align-items:baseline;justify-content:space-between;gap:10px;min-width:0;padding:10px 12px 9px;border:0;border-radius:13px;background:none;text-align:left;color:var(--tinte);cursor:pointer;transition:background-color .3s var(--e1),color .3s var(--e1),transform .4s var(--e2)}
+.re-abt button span{white-space:nowrap;font:400 10px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.re-abt button i{font:400 19px/1 var(--serif);font-style:normal;color:rgba(26,25,31,.32)}
+.re-abt button i.da{color:var(--tinte)}
+.re-abt button:hover{background:rgba(26,25,31,.04)}
+.re-abt button:active{transform:scale(.97)}
+.re-abt button[aria-pressed="true"]{color:#f5f1f0;background:linear-gradient(#34323f,#18171d);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -2px 0 #0a090c}
+.re-abt button[aria-pressed="true"] i{color:#f4ab91}
+.re-filter{flex-wrap:wrap}
+.re-angaben dd small{display:block;margin-top:3px;font:400 12.5px/1.3 var(--mono);letter-spacing:.04em;color:rgba(229,222,221,.62);overflow-wrap:anywhere}
+.re-angaben dd{font-size:15.5px;line-height:1.3}
+
+/* ========== Der Brief: Briefpapier des Culinarium (Warmweiss, Linie in Kerze, das «C» der Wortmarke) ==========
+   Blatt in warmem Weiss, ein feiner Goldrahmen, das Zeichen in Gold, Hausname in Gelasio fett und Versalien, Ort in Kerzenlicht, Etiketten in DM Mono, Text in Instrument Sans,
+   Fusszeile mit Adresse, Telefon und Mail. Gilt für «Gestalten», «Nur Text», PDF und Vorschau; die Mail trägt dasselbe Kleid in reception.js (briefMail). */
+.brief{--ri:16px;--gold:#d06138;--tinte-brief:#282730;
+  padding:clamp(52px,5.6vw,84px) clamp(38px,5.6vw,86px) clamp(44px,4.6vw,70px);border-radius:3px;color:var(--tinte-brief);
+  background:
+    radial-gradient(120% 70% at 50% -8%,rgba(255,255,255,.75),rgba(255,255,255,0) 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='k'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .3 0 0 0 0 .28 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23k)'/%3E%3C/svg%3E"),
+    linear-gradient(180deg,#f8f4f3,#efe9e8);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 0 0 1px rgba(54,52,64,.16),0 2px 3px rgba(13,13,16,.25),0 22px 36px -14px rgba(0,0,0,.55),0 60px 90px -44px rgba(0,0,0,.8)}
+.brief::before{inset:var(--ri);border:1px solid rgba(208,97,56,.5)}
+.brief::after{display:none}
+.brief__kopf{gap:8px;padding-bottom:0;margin-bottom:28px;border-bottom:0}
+.brief__kopf img{width:34px;margin-bottom:8px}
+.gs--zeichen{--fs:34px;width:calc(34px * var(--s,1))}
+.brief__kopf b,.gs--haus{font-family:var(--serif);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#1f1d25;padding-left:.2em}
+.gs--haus{--fs:17px}
+.brief__kopf b{font-size:17px}
+.brief__kopf span,.gs--zeile{font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.24em;white-space:nowrap;text-transform:uppercase;color:#ea5823}
+.gs--zeile{--fs:9.5px;margin-top:8px}
+/* Linien: fein in Gold */
+.gs--linie i{height:var(--lst,1px);background:var(--lfb,linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.62) 16%,rgba(208,97,56,.62) 84%,rgba(208,97,56,0)))}
+.brief__linie{background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.55),rgba(208,97,56,0))}
+/* An / Von */
+.brief__an{gap:10px 36px;margin:2px 0 26px}
+.brief__an dt,.gs--an dt{font:400 9.5px/1.2 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#92492e}
+.brief__an dd,.gs--an dd{margin-top:5px;font:400 14.5px/1.4 var(--sans);color:#1f1d25}
+.brief__an dd small{font:400 12.5px/1.4 var(--sans);color:#413f4e}
+.brief__an a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(208,97,56,.55)}
+/* Betreff: kleines Etikett in Mono, Betreff in Gelasio fett */
+.brief__betreff{padding-top:16px;border-top:0;background:linear-gradient(90deg,rgba(208,97,56,.5),rgba(208,97,56,0) 70%) top left/100% 1px no-repeat}
+.brief__betreff dt,.gs-mono{display:block;margin-bottom:6px;font:400 9.5px/1.2 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#92492e}
+.brief__betreff dd{font:400 21px/1.2 var(--serif);letter-spacing:0;text-transform:none;color:#1f1d25}
+.gs--betreff{--fs:21px;font-family:var(--serif);font-weight:400;letter-spacing:0;text-transform:none;line-height:1.2;color:#1f1d25}
+.brief--gestalt .brief__betreff{margin:0 0 28px;padding-top:16px;background:linear-gradient(90deg,rgba(208,97,56,.5),rgba(208,97,56,0) 70%) top left/100% 1px no-repeat}
+/* Brieftext in Instrument Sans (wie die Hausmails) */
+.brief__text{font:400 16px/1.7 var(--sans);color:var(--tinte-brief);margin-top:6px}
+.brief__text p{margin:0 0 1.05em}
+.gs--p{--fs:16px;font-family:var(--sans);line-height:1.7;margin:0 0 calc(1.05em + var(--mb,0px));color:var(--tinte-brief)}
+.gs--sign{margin-top:calc(1.4em + var(--mb,0px))}
+.gs--sign::first-line{color:#1a191f;font-family:var(--serif);font-weight:400}
+/* Offene Stellen: Markierung in Kerzenlicht, kein Etikett */
+.offen-feld{padding:0 1px;border-radius:0;font-style:normal;color:#413e4e;background:linear-gradient(transparent 56%,rgba(244,171,145,.62) 56%);box-shadow:none;border-bottom:1px dotted rgba(208,97,56,.8)}
+.offen-feld i{display:none}
+.gs .offen-feld::before{content:none}
+/* Schreiben im Satz: nur ein warmer Schimmer und die Schreibmarke in Gold */
+.gs--schreib{background:rgba(244,171,145,.2);box-shadow:0 0 0 6px rgba(244,171,145,.2);border-radius:2px;caret-color:var(--gold)}
+.brief__text textarea,.brief__betreff input{display:block;width:100%;border:0;border-radius:2px;background:transparent;box-shadow:none;resize:none;overflow:hidden;outline:0;caret-color:var(--gold);color:inherit;transition:background-color .3s var(--e1),box-shadow .3s var(--e1);-webkit-appearance:none;appearance:none}
+.brief__text textarea{min-height:420px;padding:0;font:400 16px/1.7 var(--sans)}
+.brief__betreff input{padding:0;font:400 21px/1.2 var(--serif);color:#1f1d25}
+.brief__text textarea:hover,.brief__betreff input:hover{background:rgba(244,171,145,.12);box-shadow:0 0 0 8px rgba(244,171,145,.12)}
+.brief__text textarea:focus,.brief__betreff input:focus{background:rgba(244,171,145,.2);box-shadow:0 0 0 8px rgba(244,171,145,.2)}
+/* Siegel: das Zeichen auf einer kleinen Scheibe aus Wandholz; Fusszeile in Mono */
+.brief__siegel{display:flex;align-items:center;justify-content:center;width:46px;height:46px;margin:30px auto 4px;border-radius:50%;pointer-events:none;background:#1f1d25;box-shadow:0 0 0 1px rgba(208,97,56,.7),0 0 0 4px #f5f1f0,0 0 0 5px rgba(208,97,56,.35)}
+.brief__siegel img{width:18px;height:auto}
+.brief__fuss,.gs--fuss{font-family:var(--mono);font-size:10px;line-height:1.9;letter-spacing:.14em;text-transform:uppercase;color:#413f4e}
+.brief__fuss{margin-top:16px;padding-top:14px;border-top:0;background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.5),rgba(208,97,56,0)) top center/100% 1px no-repeat}
+.gs--fuss{--fs:10px;margin-top:0;padding-top:14px}
+.brief--leer .brief__kopf{margin-bottom:22px}
+@media (max-width:760px){
+  .brief{--ri:9px;padding:44px 24px 34px}
+  .brief__kopf b{font-size:15px}.gs--haus{--fs:15px}.brief__text,.gs--p,.brief__text textarea{font-size:15px}
+  .brief__betreff dd,.gs--betreff,.brief__betreff input{font-size:18px}
+  .brief__kopf span{font-size:8.5px;letter-spacing:.16em;white-space:normal}.gs--zeile{--fs:8.5px;letter-spacing:.16em;white-space:normal}
+  .brief__an{grid-template-columns:1fr}.gs--fuss,.brief__fuss{font-size:9.5px;letter-spacing:.08em}
+}
+.gs-flaeche .brief{box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 0 0 1px rgba(54,52,64,.18),0 2px 3px rgba(13,13,16,.22),0 22px 40px -18px rgba(31,29,37,.5)}
+
+/* ========== Drucken (⌘P), wie beim Carlton: A4 ohne Ränder des Browsers, nur der Brief, Papierton und Gold immer mit ========== */
+@media print{
+  @page{size:A4;margin:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{background:#fff!important;height:auto!important;overflow:visible!important}
+  body.re>*:not(main){display:none!important}
+  .haupt{height:0!important;min-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important}
+  .re-detail,.gs-flaeche,.re-eingang,#ansicht,.re-post,.re-spalte{transform:none!important;position:static!important;filter:none!important}
+  .gs-hinweis,.gs-werk,.gw,.re-post__kopf,.re-post__unten,.re-post__kn,.re-notiz,.re-modus,.re-liste,.re-abt{display:none!important}
+  #brief,.brief--bearb{position:absolute!important;left:0;top:0;width:calc(210mm / .8)!important;max-width:none!important;margin:0!important;zoom:.8;border-radius:0!important;box-shadow:none!important;
+    padding:24mm 26mm 22mm!important;min-height:calc(297mm / .8);break-inside:auto}
+  .gs{box-shadow:none!important;cursor:default!important;background:none!important}
+  .offen-feld{background:none!important;border:0!important;box-shadow:none!important;color:inherit!important;padding:0!important}
+  .gs--schreib,.gs--wahl{box-shadow:none!important;background:none!important}
+  .gs--p,.gs--bild,.gs--an,.brief__siegel,.gs--fuss{break-inside:avoid}
+  .brief--bearb textarea{field-sizing:content;height:auto!important;min-height:0!important;overflow:visible!important}
+  .brief__text textarea:hover,.brief__text textarea:focus,.brief__betreff input:hover,.brief__betreff input:focus{background:transparent!important;box-shadow:none!important}
+}
+
+/* Lange Wörter ohne Leerzeichen brechen um, statt die Seite breiter zu machen (Carlton F38, Prüfung mit 5'000 Zeichen) */
+.re #ansicht :is(.re-n, .re-f, .re-a, .re-d, .sb-z, .sb-offen__z, .wi-l, .re-notiz, #w-antwort, .re-zitat, blockquote, .gs--p, .brief__text, .re-de, .re-gespraech__l) {overflow-wrap:anywhere;min-width:0}
+/* Scrollen zu einem Ziel hält Abstand zu Kopf und Leiste (Carlton 17.10.2026, 1366 × 650) */
+html:has(body.re){scroll-padding-top:92px;scroll-padding-bottom:124px}
+/* Kein Nachrücken der Seite durch den Browser (Scroll-Anker): Beim Antippen eines Knopfs schliesst La Réception die Auswahl im Brief, darunter
+   ändert sich die Höhe, und Firefox schob die Seite dabei um 80 px nach; der Knopf rutschte unter dem Finger weg, Löschen, Wieder offen und Fenster
+   gingen nicht auf (Fund Doldenhorn 17.10.2026, Firefox am Handy, steckt so auch im Rivage und Carlton). Das Werkzeug hält die Lage selbst (ruhigTauschen). */
+html:has(body.re),body.re{overflow-anchor:none}
+
+/* Kleine Handys (320 px, Fund Bau-Prüfung 17.10.2026, steckt auch im Rivage): «1fr» nahm die Mindestbreite der Karteikarte (Knopfzeile) und schob
+   «Vom Team nachgetragen» 14 px über den Rand. Spalte darf schrumpfen, Knöpfe brechen um. */
+@media (max-width:420px){.re-nliste{grid-template-columns:minmax(0,1fr)}.re-n{padding:26px 18px 20px}.re-n__kn{flex-wrap:wrap}}
+/* Kleine, niedrige Handys (z. B. 320 × 640): Werkzeugleiste oben und «Gestalten» unten liessen keinen Platz für den gewählten Teil, die Ecken lagen
+   unter dem Blatt (Fund Bau-Prüfung 17.10.2026, steckt auch im Rivage). Das Blatt wird niedriger, sein Inhalt rollt in sich. */
+@media (max-width:1100px) and (max-height:720px){.gs-seite{height:26vh}}
+/* 320 px im Safari-Kern: die Auswahl «Bereich» im Feld «Neues Wissen» nimmt die Breite der längsten Möglichkeit («Kandersteg & Ausflüge») und schob
+   den Bereich 24 px über den Rand (Fund Doldenhorn 17.10.2026). */
+.wi-neu__leiste .wi-neu__ber{flex:1 1 150px;min-width:0;max-width:100%;width:auto}
+.wi-neu{min-width:0}
+
+/* ---------- Tapete im Kopf (Punktraster mit Zeiger) ---------- */
+.kopf::after{opacity:.9}
+/* Gelasio trägt die Punkte von Ä Ö Ü höher als Cormorant: im Kopf (eine Zeile, abgeschnitten mit …) schnitt die Zeilenhöhe 1,15 sie ab («Ubersicht») */
+.kopf__titel{line-height:1.4;padding-top:1px}
+.titel h1,h2.zw,.fenster h2,.karte h3{padding-top:.04em}
+/* Kleine Handys (320 px, Prüfung 17.10.2026, steckt so im Rivage): die neun Arten der Übersicht standen in «1fr 1fr»; lange Namen wie
+   «Sitzung in der Jungestube» gaben die Mindestbreite vor und schoben die Übersicht auf 365 px. Spalten dürfen schrumpfen, Namen brechen um. */
+@media (max-width:900px){.re-arten{grid-template-columns:repeat(2,minmax(0,1fr))}.re-art b{overflow-wrap:anywhere;hyphens:auto}}
+
+/* ================= aus dem Schlössli übernommen (19./20.10.2026), Farben mit _bau/culinarium_kleid.py ins Kleid des Culinarium gerechnet ================= 
+   Hier, was ein Restaurant ohne Zimmer braucht. */
+/* Titel: Fraunces mit weichen Enden, ruhig (340–400), nie fett; Betonung über die Farbe */
+#ansicht :is(h1,h2,h3),.fenster h2,.brief__betreff dd,.gs--betreff{font-weight:400!important;letter-spacing:.01em}
+/* Blau nur auf hellen Flächen; auf dunklen (Bühne, Anfrage-Karte) bleiben Titel und Hervorhebungen weiss (Robert 20.10.2026, Fehlerbuch 10a) */
+#ansicht :is(h1,h2,h3) em:not(.wo-sb *):not(.re-d *),.fenster h2 em{color:#474455}
+#ansicht .wo-sb :is(h1,h2,h3) em,#ansicht .re-d :is(h1,h2,h3) em{color:#fff}
+.brief__kopf b,.gs--haus{font-weight:400;letter-spacing:.3em}
+.brief__kopf img,.gs--zeichen img{height:auto}
+/* Hinweise zu einer Anfrage: Ruhetag, Ferien, Etagen, Allergien. Schirmrot nur als Punkt (Markenbuch), Text in Tinte */
+.re-hinw{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px;padding:0}
+.re-hinw__p{display:inline-flex;align-items:center;gap:8px;min-width:0;padding:8px 14px 8px 10px;border-radius:999px;background:#f8f5f5;box-shadow:inset 0 0 0 1px rgba(71,68,85,.22);font:400 13px/1.3 var(--sans);color:#121116;overflow-wrap:anywhere}
+.re-hinw__p svg{flex:none;width:16px;height:16px;fill:none;stroke:#474455;stroke-width:1.5}
+.re-hinw--ruhetag,.re-hinw--ferien{box-shadow:inset 0 0 0 1px rgba(253,153,100,.75)}
+.re-hinw--ruhetag::before,.re-hinw--ferien::before{content:'';flex:none;width:7px;height:7px;border-radius:50%;background:#FD9964}
+.re-a__hinw{display:block;margin-top:4px;font:400 10px/1.2 var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:#3f3c4b}
+/* Chat ausprobieren: das Handy des Gastes, im Kleid des Hauses (Ochsenblut, Kalk), nur transform beim Auftritt */
+.probe__rechts{display:grid;place-items:center;padding:28px;background:#282630 url('../../assets/zeichen/tapete-dunkel.svg') 0 0/168px 168px}
+.ws-handy{display:grid;grid-template-rows:auto minmax(0,1fr) auto;width:min(390px,100%);height:min(720px,100%);border-radius:38px;overflow:hidden;background:#f8f5f5;
+  box-shadow:0 0 0 10px #121116,0 0 0 11px rgba(242,158,127,.35),0 40px 80px -30px rgba(0,0,0,.7);animation:ws-handy-auf .7s cubic-bezier(.16,1,.3,1) both}
+@keyframes ws-handy-auf{from{transform:translateY(26px) scale(.97)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.ws-handy{animation:none}}
+.ws-handy__kopf{display:flex;align-items:center;gap:12px;padding:22px 20px 16px;background:#282630;color:#fdfcfb}
+.ws-handy__kopf img{width:26px;height:auto;filter:brightness(0) invert(.86) sepia(.2) hue-rotate(160deg)}
+.ws-handy__kopf b{display:block;font:400 12px/1.2 'Fraunces',system-ui,sans-serif;letter-spacing:.24em;text-transform:uppercase}
+.ws-handy__kopf small{display:block;margin-top:4px;font:400 10px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#f29e7f}
+.ws-handy__l{display:flex;flex-direction:column;gap:10px;padding:18px 16px;overflow:auto;overscroll-behavior:contain}
+.probe .ws-handy .ws-bl{max-width:86%;margin:0;padding:11px 14px;border-radius:18px;font:400 14.5px/1.45 var(--sans);white-space:pre-line;overflow-wrap:anywhere}
+.probe .ws-handy .ws-bl--haus{align-self:flex-start;background:#fff;color:#121116;box-shadow:inset 0 0 0 1px rgba(18,17,22,.08);border-bottom-left-radius:6px}
+.probe .ws-handy .ws-bl--gast{align-self:flex-end;background:#474455;color:#fdfcfb;border-bottom-right-radius:6px}
+.probe .ws-handy .ws-bl--wartet{color:#747B7B}
+.probe .ws-handy .ws-bl--weg{align-self:flex-start;background:#282630;color:#fdfcfb;text-decoration:none;font:400 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;padding:13px 16px}
+.ws-handy__feld{display:flex;align-items:flex-end;gap:8px;padding:12px;border-top:1px solid rgba(18,17,22,.1);background:#fff}
+.ws-handy__feld textarea{flex:1;min-width:0;min-height:42px;max-height:120px;resize:none;padding:11px 14px;border:0;border-radius:21px;background:#f1eae9;font:400 15px/1.35 var(--sans);color:#121116;overflow-wrap:anywhere}
+.ws-handy__feld textarea:focus{outline:2px solid #f29e7f;outline-offset:0}
+.ws-handy__feld .rund{flex:none;width:42px;height:42px;border-radius:50%;border:0;background:#474455;color:#fff;display:grid;place-items:center;cursor:pointer}
+.ws-handy__feld .rund svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6}
+@media (max-width:900px){.probe__rechts{padding:14px}.ws-handy{height:100%;border-radius:26px;box-shadow:0 0 0 6px #121116}}
+/* Eingang: die Namen der Arbeit (Reservation, Bankett, Gutschein) sind länger als Rezeption/Event: zwei Spalten statt vier */
+.re-abt{grid-template-columns:repeat(2,minmax(0,1fr))}
+.re-abt button span{overflow:hidden;text-overflow:ellipsis}
+/* Angaben einer Anfrage: «Über» (Formular und Seite) über die ganze Breite, sonst stapelt es sich in einer schmalen Spalte */
+/* Farben der Hauspalette in einer Reihe (Master M25: nie zwei Reihen): elf Töne, kleinere Felder */
+.gs-seite .gs-farben{flex-wrap:nowrap;gap:5px}
+.gs-seite .gs-farben button{width:21px;height:21px;flex:none}
+/* Auswahl und Kalender im Stil des Hauses (studio/auswahl.js): nie die Systemauswahl */
+.ws-wahl__echt{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.ws-wahl{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;padding:10px 14px 10px 16px;border:0;border-radius:14px;background:#f8f5f5;
+  box-shadow:inset 0 0 0 1px rgba(71,68,85,.24),0 1px 0 rgba(255,255,255,.9);font:400 15px/1.2 var(--sans);color:#121116;text-align:left;cursor:pointer}
+.ws-wahl span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ws-wahl i{flex:none;width:9px;height:9px;border-right:1.5px solid #474455;border-bottom:1.5px solid #474455;transform:translateY(-2px) rotate(45deg);transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.ws-wahl[aria-expanded="true"] i{transform:translateY(2px) rotate(225deg)}
+.ws-wahl:focus-visible{outline:2px solid #f29e7f;outline-offset:2px}
+.ws-wahl__l{position:fixed;z-index:9999;max-height:320px;overflow:auto;padding:6px;border-radius:16px;background:#fdfcfb;box-shadow:0 0 0 1px rgba(18,17,22,.1),0 24px 40px -18px rgba(18,17,22,.45);animation:ws-wahl-auf .28s cubic-bezier(.16,1,.3,1) both}
+@keyframes ws-wahl-auf{from{transform:translateY(-6px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.ws-wahl__l{animation:none}}
+.ws-wahl__l>button{display:block;width:100%;padding:10px 14px;border:0;border-radius:10px;background:none;font:400 14.5px/1.3 var(--sans);color:#121116;text-align:left;cursor:pointer}
+.ws-wahl__l>button[aria-selected="true"]{background:#282630;color:#fdfcfb}
+.ws-kal{width:252px;padding:6px}
+.ws-kal__k{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.ws-kal__k b{font:400 12px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#282630}
+.ws-kal__k button{width:32px;height:32px;border:0;border-radius:50%;background:#f1eae9;color:#282630;font-size:18px;cursor:pointer}
+.ws-kal__g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.ws-kal__g i{font:400 9.5px/2 var(--mono);font-style:normal;letter-spacing:.1em;text-transform:uppercase;text-align:center;color:#515656}
+.ws-kal__g button{height:32px;border:0;border-radius:50%;background:none;font:400 13.5px/1 var(--sans);color:#121116;cursor:pointer}
+.ws-kal__g button[aria-selected="true"]{background:#474455;color:#fff}
+.ws-kal__leer{display:block;width:100%;margin-top:8px;padding:9px;border:0;border-radius:10px;background:#f1eae9;font:400 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#282630;cursor:pointer}
+/* Bilder in jeder Liste (Robert 19.10.2026): Fragen, Nachträge, Angaben des Wissens, Offenes, Links und Verlauf je mit Foto des Hauses, gross genug zum Erkennen */
+.re-f__bild,.sb-z__bild,.sb-offen__bild,.wi-l__bild,.sb-verlauf__bild{display:block;flex:none;overflow:hidden;border-radius:12px;background:#e4d6d3;box-shadow:inset 0 0 0 1px rgba(71,68,85,.18)}
+.re-f__bild img,.sb-z__bild img,.sb-offen__bild img,.wi-l__bild img,.sb-verlauf__bild img,.re-n__bild img{display:block;width:100%;height:100%;object-fit:cover}
+.re-f{display:grid;grid-template-columns:76px minmax(0,1fr);column-gap:18px}
+.re-f>*:not(.re-f__bild){grid-column:2}
+.re-f__bild{grid-column:1;grid-row:1/span 6;width:76px;height:76px}
+.re-n{overflow:hidden}
+.re-n__bild{display:block;height:132px;margin:-1px -1px 16px;overflow:hidden;border-radius:inherit;border-bottom-left-radius:0;border-bottom-right-radius:0}
+.sb-rechts .sb-z,.sb-z{grid-template-columns:52px minmax(0,30%) minmax(0,1fr) auto;align-items:center}
+.sb-rechts .sb-z.lang,.sb-z.lang{grid-template-columns:52px minmax(0,1fr) auto}
+.sb-z.lang .sb-z__was,.sb-z.lang .sb-z__angabe{grid-column:2}
+.sb-z.lang .sb-z__bild{grid-row:1/span 2}
+.sb-z__bild{width:52px;height:52px;border-radius:10px}
+.sb-offen__z{display:flex;align-items:center;gap:14px}
+.sb-offen__bild{width:56px;height:56px}
+.wi-l{display:flex;align-items:center;gap:14px}
+.wi-l__bild{width:56px;height:56px}
+.sb-verlauf li{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:12px;align-items:start}
+.sb-verlauf li>*:not(.sb-verlauf__bild){grid-column:2}
+.sb-verlauf__bild{grid-column:1;grid-row:1/span 3;width:48px;height:48px;border-radius:10px}
+@media (max-width:600px){.re-f{grid-template-columns:56px minmax(0,1fr);column-gap:14px}.re-f__bild{width:56px;height:56px}.sb-rechts .sb-z,.sb-z,.sb-rechts .sb-z.lang,.sb-z.lang{grid-template-columns:44px minmax(0,1fr)}.sb-z__bild{width:44px;height:44px;grid-row:1/span 3}.sb-z>*:not(.sb-z__bild){grid-column:2!important}}
+/* Robert 20.10.2026 (Eingang, Bildschirmfoto): «warum ist unten … eine andere Farbe als oben?» Die dunklen Arbeitsflächen nehmen genau die Töne des Kleids
+   (Kopf und Bühne, Ton in Ton wie die Website), nicht eigene. Und: Abstand zwischen Bühne und den Kacheln darunter war zu klein. */
+:root{--navy:var(--wo-nacht);--marine:var(--wo-nacht);--blau:var(--wo-nacht2);
+  --insel:radial-gradient(120% 160% at 50% -50%,rgba(242,158,127,.18),rgba(242,158,127,0) 60%),linear-gradient(180deg,#42404f 0%,var(--wo-nacht) 34%,var(--wo-tief) 100%)}
+.re-abt button[aria-pressed="true"],.wahl2 button[aria-pressed="true"]{background:linear-gradient(var(--wo-nacht2),var(--wo-tief));color:var(--wo-weiss)}
+#ansicht>.wo-sb{margin-bottom:34px}
+@media (max-width:900px){#ansicht>.wo-sb{margin-bottom:24px}}
+/* Handy: der lange Name im Kopf stiess an «Bereiche» */
+@media (max-width:440px){.wo-kopf .wo-marke-w b{font-size:15.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44vw;display:block}}
+
+/* Robert 20.10.2026 (Bildschirmfotos Eingang, Nachtrag, Wissen): «viel zu nah an der Schrift», «super unübersichtlich … nicht richtig formatiert»,
+   «so viel Leerraum», «Antwortfelder des Chats schöner». Regel für jedes Werkzeug: zwischen Schrift und Kachel/Knopf mindestens 16 px, Angaben in Gruppen
+   mit gleichem Raster, kein leerer Raum zwischen zusammengehörigen Teilen, Antworten als gesetzte Antwort statt Rohtext. */
+.re-d .re-woher{margin:16px 0 0!important;padding:0!important;font:400 10px/1.5 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:rgba(221,204,201,.78)}
+.re-d .re-angaben{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:14px 0 0;padding:0;border:0;border-radius:16px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(242,158,127,.2);overflow:hidden}
+.re-d .re-angaben--gast{grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);margin-top:10px}
+.re-d .re-angaben>div,.re-d .re-angaben>div+div{min-width:0;padding:14px 18px 15px;box-shadow:none;border-left:1px solid rgba(242,158,127,.16);margin:0}
+.re-d .re-angaben>div:first-child{border-left:0}
+.re-d .re-angaben dt{font:400 9.5px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(221,204,201,.75)}
+.re-d .re-angaben dd{margin:8px 0 0;font:400 15.5px/1.35 var(--sans);color:#f5f0ef;overflow-wrap:normal;word-break:normal}
+.re-d .re-angaben .re-mail,.re-d .re-angaben a{overflow-wrap:anywhere}
+.re-d .re-hinw{margin:18px 0 0}
+.re-d .re-anliegen{margin:26px 0 0;padding:0 0 0 40px;font:400 18px/1.5 var(--sans);color:#f1eae9}
+.re-d .re-anliegen::before{top:-4px;font-size:40px;color:#f29e7f}
+.re-d .re-gespraech{margin-top:26px!important;padding-top:18px}
+.re-d{justify-content:flex-start}
+@media (max-width:900px){.re-d .re-angaben,.re-d .re-angaben--gast{grid-template-columns:1fr 1fr}.re-d .re-angaben>div:nth-child(odd){border-left:0}.re-d .re-angaben>div:nth-child(n+3){border-top:1px solid rgba(242,158,127,.16)}.re-d .re-angaben--gast>div:first-child{grid-column:1/-1}.re-d .re-angaben--gast>div:nth-child(2){border-left:0;border-top:1px solid rgba(242,158,127,.16)}.re-d .re-angaben--gast>div:nth-child(3){border-left:1px solid rgba(242,158,127,.16)}}
+/* Die Nachricht über die Website: Felder des Formulars als ruhige Liste auf Papier */
+.re-formular{align-self:stretch;margin:4px 0 0;padding:18px 22px 8px;border-radius:18px;background:linear-gradient(180deg,#f8f5f5,#f1eae9);color:#121116}
+.re-gespraech .re-formular__k{max-width:none;margin:0 0 10px;padding:0;border-radius:0;background:none;box-shadow:none;font:400 9.5px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#3f3c4b}
+.re-formular dl{margin:0}
+.re-formular dl>div{display:grid;grid-template-columns:minmax(110px,30%) minmax(0,1fr);gap:16px;padding:11px 0;border-top:1px solid rgba(18,17,22,.09)}
+.re-formular dt{font:400 13px/1.45 var(--sans);color:#515656}
+.re-formular dd{margin:0;font:400 14.5px/1.45 var(--sans);color:#121116;overflow-wrap:anywhere}
+@media (max-width:600px){.re-formular{padding:16px 16px 6px}.re-formular dl>div{grid-template-columns:1fr;gap:3px}}
+/* Antwort des Chats: als gesetzte Antwort mit Absender, Liste mit Punkten statt Bindestrichen */
+.re-f__antw summary{margin-top:10px}
+.re-chat-antwort{margin:12px 0 4px;padding:16px 20px 14px;border-radius:18px 18px 18px 6px;background:#FBFDFD;box-shadow:inset 0 0 0 1px rgba(71,68,85,.14),0 10px 22px -18px rgba(18,17,22,.5);color:#121116;font:400 15px/1.55 var(--sans);max-width:68ch}
+.re-chat-antwort__k{display:flex;align-items:center;gap:8px;margin:0 0 10px;font:400 9.5px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#3f3c4b}
+.re-chat-antwort__k img{width:12px;height:auto}
+.re-chat-antwort p{margin:0 0 8px}
+.re-chat-antwort ul{list-style:none;margin:4px 0 6px;padding:0}
+.re-chat-antwort li{position:relative;padding:7px 0 7px 18px;border-top:1px solid rgba(18,17,22,.07)}
+.re-chat-antwort li::before{content:'';position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:#474455}
+.re-chat-antwort li b{font-weight:400;color:#282630}
+/* Karteikarten «Vom Team nachgetragen»: Luft zwischen Etikett und Text */
+.re-n__l{margin-top:4px;margin-bottom:10px}
+.re-n__q{margin-top:0;margin-bottom:6px}
+.re-n__zier{margin:22px auto 22px}
+.re-n__a{margin:0 0 6px;line-height:1.6}
+.re-n__kopf{margin-bottom:22px}
+.re-d .re-gespraech summary{padding:4px 0}
+.re-d .re-gespraech summary:hover{color:#f5f0ef}
+.re-f .re-chat-antwort p{margin:0 0 8px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;font:inherit;color:inherit;max-width:none}
+@media (max-width:600px){.re-f__kn{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}.re-f__kn .kn{flex:none;max-width:100%;white-space:nowrap}.re-gr summary b{overflow:visible;white-space:normal}}
+
+/* ========== «Nur Text» sieht aus wie «Gestalten» (Robert 20.10.2026, Bild: Betreff abgeschnitten «(Pro», Text in einem blauen Kasten mit Füllung) ==========
+   Gleiche Linie unter dem Kopf, Betreff in derselben Schrift und Stärke und mit Umbruch, beim Schreiben nur der leise Schimmer wie im Satz, kein Rahmen. */
+.brief--bearb .brief__kopf{padding-bottom:26px;margin-bottom:26px;background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.62) 16%,rgba(208,97,56,.62) 84%,rgba(208,97,56,0)) bottom center/100% 1px no-repeat}
+.brief--bearb .brief__betreff{margin-bottom:22px}
+.brief--bearb .brief__betreff textarea{display:block;width:100%;min-height:0;padding:0;border:0;background:transparent;resize:none;overflow:hidden;font:400 21px/1.2 var(--serif);letter-spacing:.01em;color:#1f1d25;caret-color:var(--gold);outline:0;-webkit-appearance:none;appearance:none;white-space:pre-wrap;overflow-wrap:anywhere}
+.brief--bearb textarea,.brief--bearb textarea:hover,.brief--bearb textarea:focus,.brief--bearb textarea:focus-visible{outline:0!important;box-shadow:none!important;background:transparent!important}
+@media (max-width:760px){.brief--bearb .brief__betreff textarea{font-size:18px}}
+
+/* ================= Culinarium Hannover (21.10.2026) =================
+   Angaben einer Anfrage: ohne gewählten Platz drei Felder, das Datum bekommt die doppelte Breite (ausgeschriebene Wochentage der Tischkarte,
+   «Freitag, 30. Oktober 2026», sonst über drei Zeilen; Fehlerbuch 10a «Angaben in Gruppen, Wörter nie mitten getrennt»). */
+.re-d .re-angaben--drei{grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)}
+@media (max-width:900px){.re-d .re-angaben--drei{grid-template-columns:1fr 1fr}.re-d .re-angaben--drei>div:first-child{grid-column:1/-1}.re-d .re-angaben--drei>div:nth-child(2){border-left:0;border-top:1px solid rgba(242,158,127,.16)}.re-d .re-angaben--drei>div:nth-child(3){border-left:1px solid rgba(242,158,127,.16)}}
+
+/* Demo-Check 21.10.2026 (Fund im Schlössli, gleich hier): Spalte und Handy von «Chat ausprobieren» haben eine feste Höhe, sonst wuchs das Handy
+   mit jeder Antwort mit, die linke Spalte rutschte nach oben weg und das Eingabefeld lag nach einigen Fragen unter dem Rand. Die Antworten rollen im Handy selbst. */
+.probe__k{grid-template-rows:minmax(0,1fr)}.probe__rechts{grid-template:minmax(0,1fr)/minmax(0,1fr);min-height:0}
+@media (max-width:900px){.probe__k{grid-template-rows:auto minmax(0,1fr)}}
+
+/* ================= Culinarium Hannover (28.10.2026): Schrift wie die Website =================
+   Fraunces mit weichen Enden (SOFT 100) für Titel, nie fett, nie kursiv (CHARAKTER.md Abschnitt 4); die Achsen wirken nur in Fraunces. */
+body.re{font-variation-settings:"SOFT" 100,"opsz" 72}
+body.re :is(h1,h2,h3,b,strong,em,i,dt){font-style:normal}
+.re-d h2,.re-post__kopf h2,.re-n__q,.brief__kopf b,.gs--haus{font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+/* Plakatzeile im Briefkopf wie auf den Plakaten (kleines i bleibt), höchstens .06em gesperrt (PDF bleibt lesbar, Master 9) */
+.brief__kopf span,.gs--zeile{text-transform:none;letter-spacing:.06em;padding-left:0}
+
+/* Gestaltung 28.10.2026: Briefkopf = Rudis Original (Wortmarke mit Zeile) als einziges Logo; kein Siegel, kein Hausname in gesperrter Antiqua */
+.brief__kopf .brief__marke{display:block;width:min(270px,68%);height:auto;margin:0 auto}
+.gs--zeichen.gs--marke{--fs:270px;width:calc(min(270px,68%) * var(--s,1));margin:0 auto calc(26px + var(--mb,0px))}
+.gs--marke img{display:block;width:100%;height:auto}
+@media (max-width:700px){.brief__kopf .brief__marke{width:min(220px,80%)}.gs--zeichen.gs--marke{width:calc(min(220px,80%) * var(--s,1))}}
+/* Gestaltung 28.10.2026: die Werkzeugleiste des Briefs schliesst ohne Spalt an den Kopf an; vorher schauten «An»/«Von» zwischen Kopf und Leiste hervor */
+.gs-flaeche .gs-werk{top:var(--kopf)}
+/* Ende jeder Ansicht scrollt über Leiste und Rundgang-Schild hinaus; die Fusszeile des Briefs liegt nie darunter */
+@media (min-width:901px){.wo-app{padding-bottom:220px}}
+/* Karten in Eingang und Fragen: Kennzeile und Angaben brechen um, statt mit «…» abzubrechen («WEBSI…», «4 Plätze · …») */
+.re-a .re-a__k,.re-a .re-a__n small{white-space:normal;overflow:visible;text-overflow:clip;text-wrap:pretty}
+
+/* Messlauf 29.10.2026: langer Titel drückt den Zähler auf die nächste Zeile statt ihn zu überdecken (Handy); «Übernehmen» schrumpft nie unter seine Schrift */
+.re-gr summary{flex-wrap:wrap;row-gap:4px}
+#w-los{flex:none}
+
+/* Messlauf 30.10.2026 (Kriterium 35): Schrift optisch mittig: Umschalter (Sperrung ausgleichen), Beispielfragen im Probe-Chat (Zeile auf Versalhöhe) */
+.wahl2 button{padding-left:18.5px!important;padding-right:17.5px!important}
+.probe__fragen span{text-box:trim-both cap alphabetic}
+/* Messlauf 30.10.2026 (Kriterium 5): langer Gruppentitel («Allergien & Unverträglichkeiten») schrumpft nie unter sein längstes Wort, der Zähler rückt daneben bzw. darunter statt darüber */
+.re-gr summary b{min-width:min-content}
+/* Messlauf 30.10.2026 (Gästebuch): Fragen in der Übersicht ganz lesbar (bis drei Zeilen statt «…»), Hinweiszeile im Brief am Handy zweizeilig statt gekürzt, Karteikarten-Frage ausgewogen umbrochen */
+.re-q .re-a__n b{-webkit-line-clamp:3;text-wrap:pretty}
+@media (max-width:760px){.gs-hinweis #gs-name{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.5;min-height:3em;text-wrap:pretty}}
+.re-n__q{text-wrap:balance}
+@supports (font:-apple-system-body){.re-modus button{padding-left:18.25px!important;padding-right:17.75px!important}}   /* nur Safari: «Gestalten» rastet dort einen halben Punkt weiter rechts ein */
+/* Kein «×» (Robert 30.10.2026): alle Schliessen-Knöpfe zeigen den Zurück-Pfeil; der Pfeil dreht sich beim Überfahren nicht mehr, er rückt leicht nach links */
+.quit button:last-child svg{width:14px;height:14px;stroke-width:1.7}
+.gs-seite .gs-seite__zu:hover{transform:none}
+@media (hover:hover){.fenster__zu:hover{transform:none}.fenster__zu:hover svg,.gs-seite .gs-seite__zu:hover svg,.quit button:last-child:hover svg{translate:-1.5px 0;transition:translate .3s}}
+/* Gestalten-Platte (Messlauf 30.10.2026): «−» und «+» gezeichnet statt Schrift (das Minus der Schrift sass in Safari 2,5 px zu tief);
+   Knöpfe in Sperrschrift gleichen die Sperrung hinter dem letzten Buchstaben vorne aus, damit das Wort optisch mittig sitzt */
+.gs-seite .gs-groesse button{display:grid;place-items:center;padding:0}
+.gs-seite .gs-groesse button svg{display:block;width:15px;height:15px;stroke-width:1.8}
+.gs-seite .gs-seg button{text-indent:.1em}
+.gs-seite .gs-anordnen button{text-indent:.1em}
+.gs-seite footer button{text-indent:.06em}
+.gs-seite .gs-seg--schrift button{text-indent:0}   /* die Schriftmuster sind nicht gesperrt */
+/* K33 (Tor 3, 30.10.2026): «Chat ausprobieren» klappt edel an der Ecke auf wie beim Rivage, ohne abgedunkelte Seite; die Seite bleibt sichtbar und bedienbar */
+.probe{inset:auto 24px 24px auto;display:block;padding:0;background:none;pointer-events:none}
+html.probe-offen{overflow:visible}
+.probe__k{pointer-events:auto;width:min(820px,calc(100vw - 48px));height:min(660px,calc(100vh - 120px));grid-template-columns:minmax(260px,300px) minmax(0,1fr);transform-origin:100% 100%;
+  box-shadow:0 0 0 1px rgba(239,118,73,.3),0 40px 80px -30px rgba(15,14,19,.6),0 14px 28px -14px rgba(15,14,19,.4);animation:probe-auf .55s cubic-bezier(.22,1.2,.36,1) both}
+@keyframes probe-auf{from{opacity:0;scale:.9;translate:0 18px}}
+.probe__links{padding:28px 24px 20px;gap:12px}
+.probe__links h2{font-size:28px}
+@media (max-width:900px){.probe{inset:auto 12px 12px 12px}.probe__k{width:100%;height:min(720px,calc(100vh - 24px))}}
+@media (prefers-reduced-motion:reduce){.probe__k{animation:none}}
+
+/* 30.10.2026 Tor 3 K12: Glieder der Anfrage-Karten (reception.js glieder()) – Umbruch nur zwischen Gliedern, der Punkt vor einem Glied am Zeilenanfang wird abgeschnitten */
+.re-a .re-gl-r,.re-d .re-gl-r{margin-left:-1.6em;clip-path:inset(-4px -4px -4px 1.6em);white-space:normal}
+.re-gl{display:inline-block;white-space:nowrap}
+.re-gl::before{content:"·";display:inline-block;width:1.6em;text-align:center;letter-spacing:0}
+/* 30.10.2026: bis 900 px wieder einspaltig (Text und Fragen oben, das Handy darunter); die Eckfassung oben setzte zwei Spalten fest */
+@media (max-width:900px){.probe .probe__k{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}}
+/* 30.10.2026 Tor 3 K12: Bildzeilen in «Foto einfügen» (Rudis «Lauch / Blumenkohl / Chipotle») brechen nur zwischen Gliedern, der Schrägstrich am Zeilenanfang wird abgeschnitten */
+.gs-fotos .re-gl-r{display:block;margin-left:-1em;clip-path:inset(-4px -4px -4px 1em);white-space:normal}
+.re-gl--strich .re-gl::before{content:"/";width:1em}
+/* 30.10.2026 Tor 3 (Stichproben 1000/1280): Kennzahl-Kacheln der Übersicht unter 1180 px untereinander (vorher ~200 px breit, Text zerfiel) */
+@media (max-width:1180px){#ansicht .wo-lage{grid-template-columns:minmax(0,1fr)}#ansicht .wo-lage .wo-lg+.wo-lg{border-left:0;border-top:1px solid var(--wo-linie-d)}}
+/* Hero: «Wer hat geschrieben?» bleibt zusammen, die Textspalte darf dafür bis 1180 px breiter werden */
+@media (min-width:701px){#ansicht>.wo-sb .wo-sb__h em{white-space:nowrap}}
+@media (min-width:701px) and (max-width:1180px){#ansicht>.wo-sb .wo-sb__text{max-width:min(76%,700px)}}
+/* Eingang: Liste und geöffnete Anfrage bis 1360 px untereinander, damit Kopf, Name und Felder der Anfrage nicht zerfallen (vorher bis 1180 px) */
+@media (max-width:1360px){.re-eingang{grid-template-columns:minmax(0,1fr)}.re-spalte{position:static;max-height:none;overflow:visible;margin:0;padding:0}}
+
+/* Tor 3 (390): Kopfzeile im Angabe-Fenster hält Abstand zum runden Zurück-Knopf, Trenner nie am Zeilenanfang */
+#fenster .sb-fk{display:block;padding-right:44px;margin-left:-1.6em;clip-path:inset(-4px -4px -4px 1.6em);white-space:normal;text-wrap:balance}
+#fenster textarea#f-angabe{overflow:hidden;resize:none}
+/* Tor 3 (390): Kopf eines Wissens-Bereichs mit klarer Rangfolge: Titel über die volle Breite, Zahl darunter, Bild links, Plus rechts */
+@media (max-width:700px){#ansicht .sb-t__k{display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"b t n" "b s n";column-gap:14px;row-gap:4px;align-items:center}
+#ansicht .sb-t__k .sb-t__bild{grid-area:b}#ansicht .sb-t__k h2{grid-area:t;align-self:end;text-wrap:balance}#ansicht .sb-t__k small{grid-area:s;align-self:start}#ansicht .sb-t__k .sb-t__neu{grid-area:n}}
+#fenster textarea#f-frage{overflow:hidden;resize:none;min-height:0}
+/* Tor 3 (K5): das Anführungszeichen steht frei vor der Frage, der Titel rückt dafür ein */
+.re-f .re-f__q{position:relative;padding-left:.95em}.re-f .re-f__q::before{left:0;top:.02em}
+.re-f .re-f__q:dir(rtl){padding-left:0;padding-right:.95em}
+/* Tor 3 (K5, Schreibung): die Frage steht als Zitat, mit schliessendem Zeichen */
+.re-f .re-f__q::after{content:'»';font-family:var(--sans);color:var(--messing)}
+.re-f .re-f__q:dir(rtl)::after{content:'«'}
+/* eng wie im Haus («AUSGEBUCHT!»): öffnendes Zeichen hängt direkt am ersten Buchstaben */
+.re-f .re-f__q{padding-left:var(--q-w,.41em);text-indent:calc(-1 * var(--q-w,.41em))}.re-f .re-f__q::before{position:static;font:inherit;font-family:var(--sans);color:var(--messing)}
+.re-f .re-f__q:dir(rtl){padding-left:0;padding-right:var(--q-w,.41em)}
+/* Tor 3 (31.10.): die Liste der Bereiche passt zwischen Suchfeld und Leiste, nichts schiebt sie unter das Suchfeld */
+@media (min-width:1001px){#ansicht .sb-idx{align-self:start;max-height:calc(100vh - var(--kopf,90px) - 226px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(176,112,86,.35) transparent}}
+
+/* ---------- Die Abende (06.11.2026, Robert 03.11.: Übersicht, welche Reservierungen für welchen Abend fest sind) ----------
+   Karten hell wie die Abteilungen, je Platz der Tafel ein Feld: Kerze = Ticket, Schiefer = fest zugesagt, leer = frei. Nur transform/opacity bewegt. */
+.re-abende{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:8px 0 34px}
+.re-ab{display:flex;flex-direction:column;min-width:0;padding:24px 24px 22px;border-radius:24px;background:#faf6f5;box-shadow:inset 0 0 0 1px rgba(26,25,31,.1),0 22px 40px -30px rgba(22,20,27,.55);color:var(--tinte)}
+.re-ab.vorbei{opacity:.62}
+.re-ab__k{display:grid;grid-template-columns:1fr auto;align-items:end;gap:4px 12px;margin-bottom:16px}
+.re-ab__k .mono{grid-column:1/-1;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#a24f22}
+.re-ab__k h3{margin:0;min-width:0;font:400 clamp(26px,2.1vw,31px)/1.05 var(--serif);letter-spacing:-.005em;white-space:nowrap}
+.re-ab__frei{font:400 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#474455;white-space:nowrap}
+.re-ab__frei i{font:400 26px/1 var(--serif);font-style:normal;letter-spacing:0;color:var(--tinte);margin-right:5px}
+.re-ab.voll .re-ab__frei{color:#a24f22}
+.re-ab__b{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;margin-bottom:14px}
+.re-ab__b span{aspect-ratio:1/1.35;border-radius:5px;box-shadow:inset 0 0 0 1px rgba(71,68,85,.28);background:#fff}
+.re-ab__b span.t{background:#cf7233;box-shadow:none}
+.re-ab__b span.f{background:#3a3845;box-shadow:none}
+.re-ab__z{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 18px;padding:12px 0;border-top:1px solid rgba(26,25,31,.1);border-bottom:1px solid rgba(26,25,31,.1)}
+.re-ab__z div{min-width:0}
+.re-ab__z dt{white-space:nowrap;display:flex;align-items:center;gap:6px;font:400 9.5px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5d5a69}
+.re-ab__z dt i{flex:none;width:9px;height:9px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(71,68,85,.4);background:#fff}
+.re-ab__z dt i.t{background:#cf7233;box-shadow:none}.re-ab__z dt i.f{background:#3a3845;box-shadow:none}
+.re-ab__z dd{margin:6px 0 0;font:400 24px/1 var(--serif)}
+.re-ab__u{margin:0 0 8px;font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:#5d5a69}
+.re-ab__leer{margin:0 0 6px;font-size:14px;color:#5d5a69}
+.re-ab__l{list-style:none;margin:0 0 14px;padding:0;display:flex;flex-direction:column;gap:6px}
+.re-ab__l button{display:grid;grid-template-columns:1fr auto;gap:2px 12px;width:100%;padding:11px 14px;border:0;border-radius:14px;background:#fff;box-shadow:inset 0 0 0 1px rgba(26,25,31,.09);text-align:left;color:var(--tinte);cursor:pointer;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.re-ab__l button:active{transform:scale(.98)}
+.re-ab__l b{font:400 16px/1.25 var(--serif);min-width:0;overflow-wrap:anywhere}
+.re-ab__l span{font:400 11px/1.6 var(--mono);letter-spacing:.08em;color:#474455;white-space:nowrap}
+.re-ab__l em{grid-column:1/-1;font-style:normal;font-size:12.5px;color:#a24f22}
+.re-ab__l--offen button{background:transparent;box-shadow:inset 0 0 0 1px rgba(207,114,51,.55)}
+.re-ab-ohne{margin:6px 0 30px}
+.re-ab-ohne>.leise{margin:-4px 0 14px;max-width:620px}
+.re-ab__l--ohne{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.re-abende--vorbei{margin-top:14px}
+
+/* Zusage im Eingang: auf der dunklen Karte der Anfrage */
+.re-zus{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 22px;margin:0 0 16px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(244,173,147,.22)}
+.re-zus--fest{box-shadow:inset 0 0 0 1px rgba(244,173,147,.6);background:rgba(207,114,51,.12)}
+.re-zus__t{min-width:0}
+.re-zus__t .mono{display:block;margin-bottom:6px;font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:#f4ad93}
+.re-zus__t b{display:block;font:400 19px/1.25 var(--serif);color:#f5f1f0}
+.re-zus__t p{margin:4px 0 0;font-size:13.5px;color:rgba(229,222,221,.72)}
+.re-zus__f{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px}
+.re-zus__f .feld{margin:0;min-width:0}
+.re-zus__f .feld>span{color:rgba(229,222,221,.66)}
+.re-zus__f select,.re-zus__f input{padding:10px 13px;border:0;border-radius:12px;background:#f8f5f5;font:400 14.5px/1.3 var(--sans);color:#121116;outline:0;min-width:0}
+.re-zus__f select{max-width:100%}
+.re-zus__f .feld--z input{width:76px}
+.re-zus__f select:focus,.re-zus__f input:focus{box-shadow:0 0 0 1.5px rgba(208,97,56,.85),0 0 0 6px rgba(244,171,145,.22)}
+.re-zus__kn{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:560px){.re-zus__f{width:100%}.re-zus__f .feld:first-child{flex:1 1 100%}.re-zus__f select{width:100%}.re-ab{padding:20px 18px}.re-ab__z dd{font-size:21px}}
+.re-ab .re-ab__z{margin-bottom:18px}.re-ab .re-ab__u{margin-top:2px}
+
+/* ---------- Gutscheine (06.11.2026): Register mit fortlaufenden Nummern, Website und Bar in einer Reihe. Auswahl als Knöpfe des Hauses, keine Liste des Browsers. ---------- */
+.gs-drei{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:10px 0 34px}
+.gs-p{display:flex;flex-direction:column;gap:12px;min-width:0;padding:22px 22px 20px;border-radius:24px;background:#faf6f5;box-shadow:inset 0 0 0 1px rgba(26,25,31,.1),0 22px 40px -30px rgba(22,20,27,.55);color:var(--tinte)}
+.gs-p>.mono{font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:#a24f22}
+.gs-p h3{margin:-4px 0 4px;font:400 25px/1.1 var(--serif)}
+.gs-p .feld{margin:0}
+.gs-p .feld input{width:100%;padding:11px 14px;border:0;border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1px rgba(71,68,85,.22);font:400 15px/1.3 var(--sans);color:#121116;outline:0}
+.gs-p .feld input:focus{box-shadow:0 0 0 1.5px rgba(208,97,56,.85),0 0 0 6px rgba(244,171,145,.22)}
+.gs-p .kn{align-self:flex-start;margin-top:4px}
+.gs-p--dunkel{background:var(--insel);box-shadow:var(--insel-s);color:#e1d3d0}
+.gs-p--dunkel>.mono{color:#f4ad93}.gs-p--dunkel h3{color:#f5f1f0}.gs-p--dunkel .feld>span{color:rgba(229,222,221,.66)}
+.gs-p--dunkel .feld input{background:#f8f5f5;box-shadow:none}
+.gs-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gs-gross{margin:0;font:400 46px/1 var(--serif);letter-spacing:.01em}
+.gs-leise{margin:0;font-size:13.5px;line-height:1.5;color:#5d5a69}
+.gs-antwort{margin:0;min-height:1.3em;font-size:13.5px;color:#f4ad93}.gs-antwort.fehl{color:#ffb1a0}
+.gs-p:not(.gs-p--dunkel) .gs-antwort{color:#a24f22}
+.gs-chips{display:flex;flex-wrap:wrap;gap:6px}
+.gs-chips label{position:relative;cursor:pointer}
+.gs-chips label input{position:absolute;opacity:0;width:1px;height:1px}
+.gs-chips label span,.gs-chips button{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:0;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(71,68,85,.25);font:400 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#121116;cursor:pointer;transition:transform .25s}
+.gs-chips button i{font-style:normal;opacity:.5}
+.gs-chips label input:checked+span,.gs-chips button[aria-pressed="true"]{background:linear-gradient(#34323f,#18171d);color:#f5f1f0;box-shadow:none}
+.gs-chips label input:focus-visible+span{outline:2px solid #cf7233;outline-offset:2px}
+.gs-chips label:active span,.gs-chips button:active{transform:scale(.96)}
+.gs-filter{margin:0 0 14px}
+.gs-liste{display:flex;flex-direction:column;gap:8px;margin-bottom:30px}
+.gs-z{display:grid;grid-template-columns:170px minmax(0,1fr) 180px auto;grid-template-areas:"n w s k" "m m m m";gap:6px 18px;align-items:center;padding:16px 18px;border-radius:20px;background:#faf6f5;box-shadow:inset 0 0 0 1px rgba(26,25,31,.09)}
+.gs-z__n{grid-area:n;display:flex;flex-direction:column;gap:5px;min-width:0}
+.gs-z__n b{font:400 23px/1 var(--serif);letter-spacing:.02em}
+.gs-z__n .mono{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#5d5a69}
+.gs-z__w{grid-area:w;display:flex;flex-direction:column;gap:3px;min-width:0}
+.gs-z__w b{font:400 17px/1.25 var(--serif);overflow-wrap:anywhere}
+.gs-z__w span{font-size:13.5px;color:#474455}.gs-z__w em{font-style:normal;font-size:13px;color:#a24f22;overflow-wrap:anywhere}
+.gs-z__s{grid-area:s;display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.gs-z__s small{font-size:12px;color:#5d5a69}
+.gs-z__k{grid-area:k;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px}
+.gs-z__mehr{grid-area:m;display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;padding-top:12px;margin-top:6px;border-top:1px solid rgba(26,25,31,.08)}
+.gs-z__mehr .mono{width:100%;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:#5d5a69}
+.gs-z__mehr .feld{margin:0}.gs-z__mehr input{padding:10px 13px;border:0;border-radius:12px;background:#fff;box-shadow:inset 0 0 0 1px rgba(71,68,85,.22);font:400 14.5px/1.3 var(--sans)}
+.gs-st{padding:6px 10px;border-radius:999px;font:400 9.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:inset 0 0 0 1px rgba(207,114,51,.8);color:#a24f22}
+.gs-st--bezahlt{background:#3a3845;color:#f5f1f0;box-shadow:none}
+.gs-st--eingeloest{background:#cf7233;color:#fff;box-shadow:none}
+.gs-st--storniert{box-shadow:inset 0 0 0 1px rgba(71,68,85,.35);color:#5d5a69}
+.gs-z--storniert{opacity:.6}.gs-z--storniert .gs-z__n b{text-decoration:line-through;text-decoration-thickness:1px}
+@media (max-width:1180px){.gs-drei{grid-template-columns:1fr 1fr}.gs-drei .gs-p--dunkel{grid-column:1/-1}.gs-z{grid-template-columns:150px minmax(0,1fr) auto;grid-template-areas:"n w s" "k k k" "m m m"}.gs-z__k{justify-content:flex-start}}
+@media (max-width:640px){.gs-drei{grid-template-columns:1fr}.gs-z{grid-template-columns:1fr;grid-template-areas:"n" "w" "s" "k" "m"}}
+.gs-sum{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:6px 0 0;border-top:1px solid rgba(26,25,31,.1)}
+.gs-sum div{padding:12px 0;border-bottom:1px solid rgba(26,25,31,.1)}
+.gs-sum div:nth-child(odd){padding-right:12px}
+.gs-sum dt{font:400 9.5px/1.4 var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#5d5a69}
+.gs-sum dd{margin:5px 0 0;font:400 26px/1 var(--serif)}
+.gs-sum dd small{display:block;margin-top:4px;font:400 12.5px/1 var(--sans);color:#a24f22}

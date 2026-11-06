@@ -1,0 +1,95 @@
+/* Plakatwerkstatt · Ansichten «Abend beschreiben» und «Plakat-Motive» (plakat.js), Culinarium 28.10.2026. Farben und Schriften aus dem Kleid (--wo-*) und
+   dem Kern (--navy, --messing, --tinte …); Bewegung nur transform/opacity. Keine Pillen-Reihen als Zierde: die Chips sind Filter, wie überall im Kern. */
+.pk-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px;max-width:980px;margin:6px 0 34px;padding:26px 28px 28px;border-radius:14px;
+  background:var(--wo-blatt,#faf4f4);box-shadow:0 1px 0 #fff inset,0 24px 50px -30px rgba(22,21,26,.45),0 0 0 1px var(--wo-linie,rgba(38,36,45,.14))}
+.pk-form label{display:flex;flex-direction:column;gap:8px;min-width:0}
+.pk-form label>span{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-akzent,#b15736)}
+.pk-form input,.pk-form textarea,.pk-form select{width:100%;min-width:0;padding:12px 14px;border:0;border-radius:10px;font:400 16px/1.35 var(--sans);color:var(--tinte);
+  background:#fff;box-shadow:inset 0 1px 2px rgba(22,21,26,.12),0 0 0 1px var(--wo-linie,rgba(38,36,45,.14))}
+.pk-form textarea{min-height:84px;resize:vertical}
+.pk-form input:focus,.pk-form textarea:focus,.pk-form select:focus{outline:0;box-shadow:inset 0 1px 2px rgba(22,21,26,.12),0 0 0 1.5px var(--messing)}
+.pk-form .pk-breit{grid-column:1/-1}
+.pk-form .pk-unten{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;justify-content:space-between}
+.pk-zahl{display:flex;align-items:center;gap:8px;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-leise,#5b5763)}
+.pk-zahl button{width:40px;height:40px;border:0;border-radius:50%;font:15px var(--mono);color:var(--tinte);background:#fff;box-shadow:0 0 0 1px var(--wo-linie,rgba(38,36,45,.14));cursor:pointer}
+.pk-zahl button.an{color:#faf4f4;background:var(--navy)}
+.pk-hinweis{grid-column:1/-1;margin:0 0 6px;font:14px/1.5 var(--sans);color:var(--wo-leise,#5b5763)}
+.pk-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:34px 26px;margin:6px 0 60px}
+.pk-karte{display:flex;flex-direction:column;gap:14px;min-width:0}
+.pk-blaetter{position:relative;height:262px;display:flex;align-items:flex-end;justify-content:center}
+.pk-blaetter .blatt{box-shadow:0 1px 1px rgba(22,21,26,.18),0 18px 34px -16px rgba(22,21,26,.55);border-radius:2px}
+.pk-blaetter .pk-hinten{position:absolute!important;right:0;top:0;transform:rotate(4deg);opacity:.96}
+.pk-blaetter .pk-vorn{transform:translateX(-14%) rotate(-1.2deg);transition:transform .6s cubic-bezier(.22,.68,.26,1)}
+@media (hover:hover){.pk-karte:hover .pk-vorn{transform:translateX(-14%) translateY(-6px) rotate(-1.2deg)}}
+.pk-text{display:flex;flex-direction:column;gap:4px;min-width:0}
+.pk-text b{font:340 23px/1.15 var(--serif);color:var(--tinte);font-variation-settings:'SOFT' 100}
+.pk-text small{font:10px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--wo-leise,#5b5763)}
+.pk-text em{font-style:normal;font-size:13px;color:var(--wo-akzent,#b15736)}
+.pk-auftrag{margin-top:6px;font:13px/1.5 var(--sans);color:var(--wo-leise,#5b5763)}
+.pk-auftrag summary{cursor:pointer;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--wo-akzent,#b15736)}
+.pk-auftrag p{margin:8px 0 0}
+.pk-los{align-self:flex-start;margin-top:auto}   /* Knöpfe nebeneinander auf einer Linie (Fehlerbuch: Kacheln schliessen unten bündig ab) */
+.pk-leer{grid-column:1/-1;font:16px/1.5 var(--sans);color:var(--wo-leise,#5b5763)}
+.pk-chips{margin:0 0 12px;align-items:center}
+.pk-chips__n{min-width:96px;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-akzent,#b15736)}
+#pkFilter{margin:4px 0 22px}
+.pk-motivzahl{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--wo-leise,#5b5763);margin:0 0 18px}
+@media (max-width:760px){.pk-form{grid-template-columns:1fr;padding:20px 18px}.pk-chips__n{width:100%}}
+
+/* Gestaltung 28.10.2026, Fund 2: «Anlässe der nächsten Wochen» ohne Leerraum. Die grosse Karte reicht über so viele Reihen, wie rechts Karten stehen;
+   die rechten Karten strecken sich auf ihre Höhe */
+#startWochen > .wo:first-child:nth-last-child(3) { grid-row: span 2 }
+#startWochen > .wo:first-child:nth-last-child(2) { grid-row: span 1 }
+#startWochen { grid-template-rows: none; grid-auto-rows: 1fr }
+.pk-zuletzt-satz { margin: -6px 0 14px }
+
+/* Abend beschreiben, live (Oberchef 28.10.): Hinweis im Ton des Hauses und Karten «entsteht …», bis Vorder- und Rückseite da sind */
+.pk-hinweis--live { border-left: 2px solid var(--wo-kerze, #ef7649); padding-left: 14px }
+.pk-entsteht .pk-blaetter { position: relative }
+/* Grösse nach der Höhe des Blattfachs (262 px) wie die fertigen Blätter (vorn 222 px, hinten 144 px), nie nach der Kartenbreite: in breiten Karten ragten die
+   Platzhalter sonst über Text und Knopf (Robert 29.10.) */
+.pk-entsteht__blatt { position: absolute; left: 50%; bottom: 10px; height: calc(var(--vorn, 230px) - 16px); width: auto; aspect-ratio: 1; border-radius: 3px;
+  background: linear-gradient(110deg, rgba(239,118,73,.10) 8%, rgba(239,118,73,.28) 18%, rgba(239,118,73,.10) 33%) 0 0 / 200% 100%, #f3ecea;
+  box-shadow: 0 10px 28px rgba(22,21,26,.14); animation: pk-malt 1.6s linear infinite; transform: translateX(-64%) rotate(-1.2deg) }
+.pk-entsteht__blatt--h { left: auto; right: 0; top: 0; bottom: auto; height: var(--hinten, 144px); transform: rotate(4deg); background-color: #26242d }
+@keyframes pk-malt { to { background-position: -200% 0 } }
+@media (prefers-reduced-motion: reduce) { .pk-entsteht__blatt { animation: none } }
+
+/* «Abend beschreiben»: keine Restreihe (Gestaltung 28.10.): 4 Vorschläge 2 × 2, 5 Vorschläge 3 + 2 mittig */
+#pkVorschlaege > .pk-hinweis { grid-column: 1 / -1; flex: 0 0 100% }
+@media (min-width: 700px) {
+  #pkVorschlaege[data-n="4"] { grid-template-columns: repeat(2, minmax(270px, 1fr)) }
+  #pkVorschlaege[data-n="5"] { display: flex; flex-wrap: wrap; justify-content: center }
+  #pkVorschlaege[data-n="5"] > .pk-karte { flex: 0 0 calc((100% - 52px) / 3) }
+}
+
+/* Konzept je Vorschlag in einer Zeile über dem Plakat (Oberchef 28.10.: «Der Döner als Ozeandampfer, die Wings als Möwen») */
+.pk-idee { margin: 0 0 12px; font: 340 19px/1.3 var(--wo-titel, Georgia, serif); font-variation-settings: "SOFT" 100, "opsz" 144; color: var(--wo-tief, #16151a) }
+.pk-nurkonzept { padding: 18px 20px; border-radius: 14px; background: rgba(239, 118, 73, .06) }
+
+/* «Plakat-Motive» ohne Restreihe und ohne Loch (Gestaltung 28.10., zweite Nachprüfung): feste Kartenbreite, die letzte Reihe steht mittig */
+#pkMotive { display: flex; flex-wrap: wrap; justify-content: center; gap: 34px 26px }
+#pkMotive > .pk-karte { flex: 0 0 100%; min-width: 0 }
+#pkMotive > .pk-leer { flex: 0 0 100% }
+@media (min-width: 700px) { #pkMotive > .pk-karte { flex-basis: calc((100% - 26px) / 2) } }
+@media (min-width: 1180px) { #pkMotive > .pk-karte { flex-basis: calc((100% - 52px) / 3) } }
+
+/* Alle Vorschläge unter «Abend beschreiben» (Robert 29.10.): je Abend eine Überschrift, darunter die Vorschläge 2 × 2 */
+.pk-alle__titel { margin: 10px 0 6px; font: 340 34px/1.1 var(--wo-titel, Georgia, serif); font-variation-settings: "SOFT" 100, "opsz" 144; color: var(--wo-tief, #16151a) }
+.pk-abend { display: flex; flex-direction: column; gap: 6px; margin: 34px 0 22px; padding-top: 22px; border-top: 1px solid var(--wo-linie, rgba(38,36,45,.14));
+  font: 340 26px/1.15 var(--wo-titel, Georgia, serif); font-variation-settings: "SOFT" 100; color: var(--tinte) }
+.pk-abend small { font: 10px/1.6 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--wo-leise, #5b5763) }
+@media (min-width: 700px) { #pkAlle .pk-raster[data-n="4"] { grid-template-columns: repeat(2, minmax(270px, 1fr)) } }
+
+/* Vorschläge grösser, Rückseite dicht neben der Vorderseite (Robert 29.10.): das Blattfach ist so breit wie das Paar (plakat.js fachStil) und steht mittig */
+.pk-blaetter--gross { width: 100%; margin: 0 auto }
+
+/* Fundliste Gestaltung 29.10.: 09 Konzeptzeilen einer Reihe gleich hoch (Platz für zwei Zeilen), ausgewogen umbrochen; 10 Formular so breit wie die Bühne;
+   11 zweite Zeile der Filter beginnt an der Kante der Chips */
+.pk-idee{min-height:2.6em;text-wrap:balance}
+.pk-form{max-width:none}
+.pk-chips{position:relative;padding-left:108px}
+.pk-chips__n{position:absolute;left:0;top:0;height:36px;display:flex;align-items:center;min-width:0}
+
+/* K35 (Tor 30.10.2026): Ziffern 3/4/5 in den runden Wahlknöpfen optisch mittig */
+.pk-zahl button{display:grid;place-items:center;padding:1px 0 0;line-height:1}

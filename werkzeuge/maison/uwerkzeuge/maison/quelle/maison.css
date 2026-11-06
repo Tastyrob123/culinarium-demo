@@ -1,0 +1,450 @@
+/* La Maison · Culinarium Hannover (28.10.2026). Quelle für bau.py, nicht die Ausgabe. Aufbau und Wege wie La Maison der Häuser.
+   Kleid aus der gebauten Website (website/assets/culinarium.css, Farbwelt A «Plakat»): Nacht #16151A, Strasse #1C1B21, Schiefer #3A3845, Warmweiss #FAF4F4,
+   Kerze #EF7649 (hell #F5A689, tief #B15736), Tinte #26242D. Titel Fraunces mit weichen Enden (SOFT 100, leicht), Lauf Instrument Sans, Etiketten Urbanist,
+   Zahlen und Daten DM Mono. Nie fett, nie kursiv. Knöpfe: dunkle Platte (10 px) mit rundem Knauf in Kerze, wie die Website.
+   Die tragende Idee des Hauses: die Plakatwand. Jeder Abend kündigt sich mit einem eigenen Plakat in eigener Farbe an, darunter immer das Band mit
+   der Wortmarke. Das «x» von «Momo x Rudi» ist das einzige Ornament, das «C» der Wortmarke das einzige Zeichen.
+   Empfang «Die Plakatwand»: links die Bühne wie ein Schaufenster der Bar (in Ruhe die Fenster am Abend, beim Darüberfahren die echte Vorschau, M23),
+   rechts die sechs Werkzeuge als Plakate, jedes mit einer Abendfarbe aus den echten Plakaten (marke.json → abendfarben). Nichts hüpft, nichts schwingt;
+   Bewegung nur transform/opacity, Wechsel hart und deckend. */
+
+@font-face{font-family:'Fraunces';src:url(schrift/fraunces-soft.woff2) format('woff2');font-weight:100 900;font-display:swap}   /* swap (Oberchef 29.10.2026): der Titel wartet nie auf die Schrift */
+@font-face{font-family:'Titel Ersatz';src:local('Georgia');size-adjust:94%;ascent-override:96%}
+@font-face{font-family:'Instrument Sans';src:url(schrift/instrument.woff2) format('woff2');font-weight:400 600;font-display:swap}   /* swap mit «Lauf Ersatz»: der erste Schirm wartet nicht */
+@font-face{font-family:'Urbanist';src:url(schrift/urbanist.woff2) format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'DM Mono';src:url(schrift/dmmono.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Lauf Ersatz';src:local('Helvetica Neue'),local('Arial');size-adjust:98%}
+
+:root{
+  --tief:#16151A;--dunkel:#1C1B21;--schiefer:#3A3845;--schiefer-h:#46434F;--schiefer-t:#26242D;
+  --raum:#F3ECEA;--raum2:#E9E0DE;--papier:#FAF4F4;--weiss:#FFFCFB;
+  --gold:#EF7649;--gold-h:#F5A689;--gold-t:#B15736;--tinte:#26242D;--titel-f:#2E2B36;
+  --leise:#5B5763;--leise-d:rgba(250,244,244,.76);
+  --titel:'Fraunces','Titel Ersatz',Georgia,serif;--lauf:'Instrument Sans','Lauf Ersatz',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace;
+  --rand:clamp(16px,4.6vw,76px);--rund:12px;--rund-k:10px;--fuge:clamp(6px,.6vw,9px);
+  --e1:cubic-bezier(.22,1,.36,1);--knopf:cubic-bezier(.32,.72,0,1);
+  --tap-d:url(img/tapete-dunkel.webp);--tap-h:url(img/tapete-hell.webp);
+  --x:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Ccircle cx='7' cy='7' r='2.2' fill='%23EF7649'/%3E%3C/svg%3E")
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:auto}
+body.ma{margin:0;font-variation-settings:'SOFT' 100;background:var(--raum);color:var(--tinte);font:400 17px/1.62 var(--lauf);-webkit-font-smoothing:antialiased;overflow-x:clip}
+.ma img{display:block;max-width:100%;height:auto}
+.ma a{color:inherit}
+:where(.ma) p{margin:0}
+.ma h1,.ma h2,.ma h3{margin:0;font-weight:340}
+.ma :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.mono{font:400 11.5px/1.5 var(--mono);letter-spacing:.16em;text-transform:uppercase}
+.innen{max-width:1400px;margin:0 auto;padding-inline:var(--rand);position:relative}
+.dunkel{background-color:var(--tief);background-image:var(--tap-d);background-size:224px;color:#FAF4F4}
+.tapete{background-color:var(--raum);background-image:var(--tap-h);background-size:224px}
+.papier{background-color:var(--papier)}
+
+/* ---------- Startfehler-Tür (R04) ---------- */
+.m-tuer{position:fixed;inset:auto 16px 16px 16px;z-index:90;max-width:560px;margin:0 auto;padding:22px 24px;border-radius:var(--rund);background:var(--papier);color:var(--tinte);border-top:3px solid var(--schiefer);box-shadow:0 30px 60px -24px rgba(22,21,26,.6)}
+.m-tuer__t{font:340 20px/1.3 var(--titel);margin-bottom:6px;color:var(--titel-f)}
+.m-tuer p+p{color:var(--leise);margin-bottom:14px}
+.m-tuer .knopf{margin:4px 8px 0 0}
+
+/* ---------- Knöpfe: dunkle Platte (10 px) wie auf der Website, Tiefe in drei Stufen, runder Knauf mit Pfeil, Glanzstreif (wie die Website) ---------- */
+.knopf{position:relative;display:inline-flex;align-items:center;gap:16px;height:54px;padding:0 6px 0 24px;border-radius:var(--rund-k);overflow:hidden;border:0;cursor:pointer;
+  font:400 12px/1 var(--mono);letter-spacing:.15em;text-transform:uppercase;text-decoration:none;white-space:nowrap;color:var(--tief);
+  background:linear-gradient(180deg,#FFFCFB 0%,#F6EEEC 52%,#EAE0DD 100%);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(60,40,30,.28),0 16px 30px -16px rgba(10,9,13,.6),0 3px 8px -3px rgba(10,9,13,.3);
+  transition:transform .5s var(--knopf),box-shadow .5s var(--knopf)}
+.knopf::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(255,244,240,.4) 48%,transparent 66%);transform:translateX(-120%);pointer-events:none}
+.knopf:hover{transform:translateY(-2px)}
+.knopf:hover::after{transform:translateX(120%);transition:transform 1.1s var(--knopf)}
+.knopf:active{transform:translateY(1px) scale(.985)}
+.knopf i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;background:linear-gradient(180deg,var(--schiefer-h),var(--schiefer) 50%,var(--schiefer-t));color:#FAF4F4;box-shadow:inset 0 1px 0 rgba(255,240,236,.3),0 6px 12px -6px rgba(0,0,0,.6)}
+.knopf svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.knopf--dunkel{color:var(--weiss);background:linear-gradient(180deg,var(--schiefer-h) 0%,var(--schiefer) 46%,var(--schiefer-t) 100%);box-shadow:inset 0 1px 0 rgba(255,240,236,.28),inset 0 -1px 0 rgba(10,9,13,.45),0 16px 30px -16px rgba(22,21,26,.7),0 3px 8px -3px rgba(22,21,26,.35)}
+.knopf--dunkel i{background:linear-gradient(180deg,#FBD9CB,var(--gold-h) 55%,var(--gold));color:var(--tief)}
+.knopf--klein{height:44px;padding-left:18px;padding-top:1.3px;gap:12px;font-size:11.5px}   /* Robert 29.10.: Schrift optisch mittig (gemessen Chromium/WebKit, Messlauf text-mitte) */
+.knopf--klein i{width:34px;height:34px}
+@media (max-width:420px){.knopf{padding-left:16px;gap:10px;font-size:11px;letter-spacing:.1em}}
+.ma .knopf{color:var(--tief)}
+.ma .knopf--dunkel{color:var(--weiss)}
+
+/* ---------- Leiste oben: Insel aus Warmweiss, Eck-Knöpfe (M01, M02), verschwindet beim Hinunterscrollen ---------- */
+.m-oben{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px var(--rand) 0;pointer-events:none;transition:transform .6s var(--e1)}
+.m-oben>*{pointer-events:auto}
+.m-oben.weg{transform:translateY(-130%)}
+.m-insel{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px);height:58px;padding:0 24px 0 6px;border-radius:var(--rund);min-width:0;overflow:hidden;
+  background:linear-gradient(180deg,rgba(251,250,247,.98),rgba(243,236,234,.98));box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 var(--schiefer),0 18px 34px -22px rgba(22,21,26,.55)}
+/* M24: Ecke oben links wie in allen Werkzeugen des Hauses (oberflaeche .wo-marke-w): das «C» der Wortmarke im Ring, Name, darunter «Bereich · Haus» */
+.m-ecke{display:flex;align-items:center;gap:13px;text-decoration:none;color:var(--tinte);flex:none}
+.m-ecke__ring{position:relative;flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 38%,#46434F,#1C1B21 74%);box-shadow:inset 0 0 0 1px rgba(245,166,137,.8),inset 0 0 0 4px rgba(22,21,26,.5),0 6px 14px -8px rgba(0,0,0,.8)}
+.m-ecke__z{width:22px;height:28px;color:#FBD9CB}
+.m-ecke__t{display:flex;flex-direction:column;min-width:0}
+.m-ecke__t b{font:340 18px/1.1 var(--titel);white-space:nowrap;color:var(--tinte)}
+.m-ecke__t small{font:400 9.5px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--schiefer);white-space:nowrap;margin-top:3px}
+.m-insel__wege{display:flex;gap:clamp(12px,1.4vw,22px)}
+.m-insel__p{position:relative;font:400 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--tinte);padding:6px 0;white-space:nowrap}
+.m-insel__p::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--schiefer);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--e1)}
+.m-insel__p:hover::after,.m-insel__p.an::after{transform:scaleX(1)}
+.m-insel__p.an{color:var(--schiefer)}
+/* Buchstaben rollen beim Überfahren der Namen (M01) */
+.rl{display:inline-flex;overflow:hidden;height:1.2em;line-height:1.2em}
+.rl b{display:inline-block;font-weight:400;white-space:pre;text-shadow:0 1.2em 0 currentColor;transition:transform .45s var(--e1);transition-delay:calc(var(--n)*14ms)}
+.m-insel__p:hover .rl b{transform:translateY(-1.2em)}
+.m-oben__ecke{flex:none}
+.m-oben__ecke.knopf{height:46px;padding-left:18px;gap:12px}
+.m-oben__ecke.knopf i{width:36px;height:36px}
+@media (max-width:1180px){.m-insel__wege{display:none}.m-insel{padding-right:22px}}
+/* Fehlerbuch 10a (Leiste): die Namen stehen nur, wenn sie ganz zwischen die Eck-Knöpfe passen (maison.js misst und setzt .eng) */
+.m-oben.eng .m-insel__wege{display:none}.m-oben.eng .m-insel{padding-right:22px}
+@media (max-width:760px){.m-oben__ecke--l{display:none}}
+@media (max-width:480px){.m-ecke__t small{display:none}.m-oben{padding-top:12px}.m-oben__ecke.knopf{font-size:0;letter-spacing:0;gap:0;padding-left:5px;width:46px}}
+
+/* ---------- Empfang «Die Plakatwand» (M03–M06, M16, M23, Fehlerbuch 10a: Kopf, Bühne und alle sechs Werkzeuge im ersten Bild) ---------- */
+.m-empfang{position:relative;padding:clamp(96px,8vw,112px) 0 clamp(40px,4vw,60px);overflow-x:clip}
+/* Kopf (neu 29.10.2026): links Wortmarke · Bar · Ort, darunter «Der Tresen» als Hauptsache; rechts Datum, Gruss, Kennzahlen als ein Block,
+   dessen letzte Zeile auf der Grundlinie des Titels steht (last baseline). Getrennt mit «·» wie auf der Website, keine «x»-Zierden, Linie schlicht. */
+.rw-kopf{display:flex;align-items:last baseline;justify-content:space-between;gap:22px 48px;flex-wrap:wrap}
+.rw-kopf__l{min-width:0}
+.rw-kopf__ort{display:flex;align-items:baseline;flex-wrap:wrap;row-gap:6px;font:400 11px/1.3 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--leise)}
+.rw-kopf__ort>span{white-space:nowrap}
+.rw-pkt{display:inline-block;margin:0 .75em;letter-spacing:0;color:var(--leise)}
+.rw-titel{margin-top:clamp(12px,1.1vw,16px)!important;font:340 clamp(2.6rem,4.8vw,4.5rem)/.95 var(--titel)!important;letter-spacing:-.015em;color:var(--titel-f)}
+.rw-titel em{font-style:normal;color:inherit}
+.rw-kopf__r{min-width:0;text-align:right}
+.rw-datum{min-height:1.5em;font:400 11px/1.5 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--leise)}
+.rw-kopf__bsp{color:var(--gold-t)}
+.rw-kopf__bsp .rw-pkt{color:var(--leise)}
+.rw-gruss{margin-top:8px;font:400 clamp(1.05rem,1.15vw,1.15rem)/1.4 var(--lauf);color:var(--leise);text-wrap:balance}
+.rw-gruss span{color:var(--tinte)}
+.rw-linie{height:1px;margin:clamp(18px,1.8vw,26px) 0 clamp(20px,2vw,28px);background:rgba(58,56,69,.32)}
+/* Kennzahlen (M06) im Textfluss: Zahl und Wort auf einer Grundlinie */
+.m-zeile{margin-top:8px;font:400 15px/1.6 var(--lauf);color:var(--leise)}
+.m-zeile>span,.m-zeile>a{white-space:nowrap}
+.m-zeile>.rw-pkt{white-space:normal}
+.m-zeile b{font:340 1.6rem/1 var(--titel);font-variation-settings:'SOFT' 100,'opsz' 144;letter-spacing:0;color:var(--titel-f);margin-right:.28em}
+.m-zeile a{color:var(--tinte);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.m-zeile>span:first-child{margin-right:.4em}
+/* schmal: nie ein «·» am Zeilenende; was nicht in eine Zeile passt, steht auf einer eigenen */
+@media (max-width:1000px){.rw-kopf__bsp{display:block}.rw-kopf__bsp .rw-pkt,.m-zeile>.rw-pkt:has(+a){display:none}.m-zeile>a{display:table;margin-top:6px}}
+@media (max-width:700px){.rw-kopf__ort{display:block;letter-spacing:.14em;line-height:1.6}.rw-kopf__wm{margin-bottom:10px}.rw-kopf__ort>.rw-pkt:first-of-type{display:none}}
+@media (max-width:360px){.rw-kopf__ort>.rw-pkt{display:none}.rw-kopf__ort>span:last-child{display:block}}
+.bsp{font:400 9.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-t)}
+.dunkel .bsp{color:var(--gold-h)}
+
+/* das Feld: Bühne links, Plakatwand rechts; beide beginnen und enden auf derselben Linie (Fehlerbuch 10a) */
+.rw-feld{display:grid;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(18px,2vw,30px);align-items:stretch}
+.hz-buehne{display:flex;min-width:0}
+.hz-rahmen{position:relative;flex:1;margin:0;min-height:100%;border-radius:var(--rund);overflow:hidden;background:var(--dunkel);
+  border:var(--fuge) solid var(--schiefer);box-shadow:0 40px 70px -42px rgba(22,21,26,.7),inset 0 0 0 1px rgba(245,166,137,.35)}
+.ma .hz-bild{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:0;visibility:hidden}
+.hz-bild.an{opacity:1;visibility:visible}   /* harter, deckender Wechsel (M16, Fehlerbuch 10a: nie halb durchscheinend) */
+.hz-bild--ruhe{object-position:50% 78%}
+.hz-bild--schirm{object-position:50% 0;background:var(--papier)}
+.hz-unter{position:absolute;left:0;right:0;bottom:0;padding:16px 20px 14px;background:var(--schiefer);font:400 10.5px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#FAF4F4;pointer-events:none;
+  border-top:1px solid rgba(245,166,137,.45)}
+.hz-unter span{display:none}
+.hz-unter span.an{display:block}
+.hz-platz{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:24px;background:var(--papier) var(--tap-h) 0 0/168px;color:var(--tinte)}
+.hz-platz.an{display:grid}
+.hz-platz svg{width:26px;margin:0 auto 10px;color:var(--schiefer)}
+.hz-platz b{display:block;font:340 22px/1.2 var(--titel);color:var(--titel-f);margin-bottom:8px}
+.hz-platz small{display:block;margin-top:10px;font:400 10.5px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+
+/* die Plakatwand: sechs Plakate dicht an dicht, die Fuge in Nacht dazwischen (Grundform «Plakatwand» der Website) */
+.rw-wand{min-width:0;border-radius:var(--rund);background:var(--schiefer);padding:var(--fuge);box-shadow:0 40px 70px -42px rgba(22,21,26,.7),inset 0 0 0 1px rgba(245,166,137,.35)}
+.rw-gefache{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--fuge);height:100%}
+.rw-g{min-width:0;display:flex}
+.rw-g a{position:relative;flex:1;display:flex;flex-direction:column;text-decoration:none;color:var(--tinte);background:var(--papier);border-radius:3px;overflow:hidden}
+.rw-b{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--raum2)}
+.rw-b img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--e1)}
+.rw-t{flex:1;display:flex;flex-direction:column;gap:3px;padding:clamp(10px,1vw,14px) clamp(12px,1.1vw,16px) clamp(12px,1.1vw,16px);border-top:2px solid var(--schiefer)}
+.rw-nr{font:400 9.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--schiefer);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rw-name{font:340 clamp(1.05rem,1.22vw,1.32rem)/1.12 var(--titel);color:var(--titel-f);white-space:nowrap}   /* eine Zeile: Plakate gleich gebaut (Zeichen ohne Platzbedarf) */
+.rw-stand{font-size:13px;line-height:1.35;color:var(--leise);min-height:2.7em;padding-right:42px;text-wrap:balance}   /* Platz für zwei Zeilen: der Stand kommt nach dem Laden, nichts verrutscht (CLS) */
+.rw-stand b{font-weight:400;color:var(--tinte)}
+.hz-ring{position:absolute;right:12px;bottom:14px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;color:var(--schiefer);box-shadow:inset 0 0 0 1px rgba(58,56,69,.4);transition:background-color .35s ease,color .35s ease,box-shadow .35s ease}
+.hz-ring svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* beim Darüberfahren (M21): ruhig und edel, nichts hebt sich, nichts springt; feine Kante in Kerzenlicht, «x» am Namen, Foto zoomt sehr langsam ein wenig */
+.rw-g a::after{content:"";position:absolute;inset:0;border-radius:3px;box-shadow:inset 0 0 0 2px var(--gold-h);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.rw-g a.an::after,.rw-g a:focus-visible::after{opacity:1}
+.rw-g a.an .rw-b img{transform:scale(1.035)}
+.rw-name::after{content:"";position:absolute;top:50%;display:inline-block;width:5px;height:5px;margin:-2.5px 0 0 12px;border-radius:50%;background:var(--gold);opacity:0;transition:opacity .35s ease}   /* Robert 29.10.: kein x, ein ruhiger Punkt auf der Mitte */
+.rw-g a.an .rw-name::after,.rw-g a:focus-visible .rw-name::after{opacity:1}
+.rw-g a.an .hz-ring,.rw-g a:focus-visible .hz-ring{background:var(--schiefer);color:#fff;box-shadow:none}
+.rw-g a.gedrueckt .rw-t{background:var(--raum)}
+.m-hilfe{margin-top:16px;font-size:14px;color:var(--leise)}
+.m-hilfe kbd{font:400 11px/1 var(--mono);padding:3px 6px;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(58,56,69,.35);color:var(--tinte)}
+@media (max-width:1000px){
+  .rw-feld{grid-template-columns:1fr}
+  .hz-buehne{display:none}
+  .rw-kopf{flex-direction:column;align-items:stretch}
+  .rw-kopf__r{text-align:left}
+}
+@media (max-width:700px){.rw-gefache{grid-template-columns:repeat(2,minmax(0,1fr))}.m-hilfe{display:none}.rw-g .hz-ring{display:none}.rw-stand{padding-right:0}.rw-name{white-space:normal}}
+@media (max-width:420px){.rw-titel{font-size:2.6rem!important}.rw-name{font-size:1rem}.rw-stand{font-size:12.5px}}
+
+/* ---------- Laufband (M07): Namen der Werkzeuge und des Hauses, läuft nur im Bild, hält beim Überfahren ---------- */
+.m-band{overflow:hidden;background:var(--schiefer);border-block:1px solid rgba(245,166,137,.4);padding:14px 0;color:#FAF4F4}
+.m-band ul{display:flex;width:max-content;margin:0;padding:0;list-style:none;gap:26px;animation:m-band 70s linear infinite;animation-play-state:paused}
+.m-band.laeuft ul{animation-play-state:running}
+.m-band:hover ul{animation-play-state:paused}
+.m-band li{font:340 15px/1 var(--titel);white-space:nowrap;display:flex;align-items:center}
+.m-band li.p::before{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--gold-h)}
+@keyframes m-band{to{transform:translateX(-50%)}}
+
+/* ---------- Säle (M08, M09): je Werkzeug ein Abschnitt, schiebt sich als Platte über den vorigen ---------- */
+.m-saal{position:relative;padding:clamp(84px,9vw,148px) 0;border-radius:var(--rund) var(--rund) 0 0;margin-top:calc(var(--rund) * -1);box-shadow:0 -24px 50px -34px rgba(22,21,26,.5);overflow-x:clip}
+.m-saal__kopf{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:820px;margin:0 auto}
+.m-saal__z{width:26px;height:auto;color:var(--schiefer)}
+.dunkel .m-saal__z{color:var(--gold-h)}
+.m-saal__nr{margin-top:18px;font:400 11px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--schiefer)}
+.dunkel .m-saal__nr{color:var(--gold-h)}
+.m-saal__titel{margin-top:14px!important;font:340 clamp(2.1rem,3.9vw,3.6rem)/1.08 var(--titel)!important;color:var(--titel-f)}
+.m-saal__titel em{font-style:normal;color:var(--schiefer)}
+.m-saal__satz{margin-top:18px;max-width:58ch;font-size:clamp(1rem,1.1vw,1.1rem);color:var(--leise)}
+.dunkel .m-saal__satz{color:var(--leise-d)}
+.m-saal__linie{position:relative;width:100%;height:1px;margin-top:clamp(40px,4vw,60px);background:rgba(58,56,69,.35)}
+.m-saal__linie i{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px}
+.dunkel .m-saal__linie{background:rgba(245,166,137,.35)}
+.m-saal__feld{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(24px,3.4vw,56px);align-items:start;margin-top:clamp(36px,3.4vw,52px)}
+@media (max-width:1000px){.m-saal__feld{grid-template-columns:1fr}}
+/* Gestaltung 28.10.2026: die rechte Spalte (So geht’s, Zahlen, Knopf) läuft neben den Stücken mit, statt eine leere Fläche neben der langen linken Spalte zu lassen */
+@media (min-width:1001px){.m-saal__feld>div:last-child{position:sticky;top:clamp(24px,5vh,56px)}}
+/* Bildschirm des Werkzeugs: Fensterleiste und echte Aufnahme */
+.m-schirm{margin:0;border-radius:var(--rund);overflow:hidden;background:#fff;box-shadow:0 46px 80px -46px rgba(22,21,26,.6),0 0 0 1px rgba(22,21,26,.08)}
+.dunkel .m-schirm{box-shadow:0 46px 80px -40px rgba(0,0,0,.85),0 0 0 1px rgba(245,166,137,.25)}
+.m-schirm__leiste{display:flex;align-items:center;gap:8px;height:32px;padding:0 14px;background:linear-gradient(180deg,#FFFCFB,#EFE7E5);border-bottom:2px solid var(--schiefer)}
+.m-schirm__leiste::before{content:"";width:9px;height:9px;border-radius:50%;background:#E2D8D6;box-shadow:15px 0 0 #E2D8D6,30px 0 0 #E2D8D6;margin-right:34px}
+.m-schirm__leiste span{font:400 10px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--leise);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.m-schirm img{width:100%}
+.m-schirm--platz{aspect-ratio:16/10.4;display:flex;flex-direction:column}
+.m-platz{flex:1;display:grid;place-items:center;align-content:center;gap:10px;text-align:center;padding:24px;background:var(--papier) var(--tap-h) 0 0/168px;color:var(--tinte)}
+.m-platz svg{width:26px;color:var(--schiefer)}
+.m-platz b{display:block;font:340 22px/1.2 var(--titel);color:var(--titel-f)}
+.m-platz p{max-width:36ch;font-size:14.5px;color:var(--leise)}
+.m-platz small{font:400 10px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+.m-schirme{display:grid;gap:clamp(18px,2vw,28px)}
+.m-schirme--zwei{grid-template-columns:1fr 1fr}
+@media (max-width:700px){.m-schirme--zwei{grid-template-columns:1fr}}
+/* Tafel «So geht’s»: helles Blatt mit Kante in Kerzenlicht oben, Zeilen untereinander */
+.m-tafel{border-radius:var(--rund);padding:clamp(22px,2.2vw,30px);background:linear-gradient(180deg,#FFFCFB,var(--papier) 60%,#F3ECEA);border-top:3px solid var(--schiefer);box-shadow:inset 0 0 0 1px rgba(22,21,26,.06),0 30px 50px -34px rgba(22,21,26,.5);color:var(--tinte)}
+.m-tafel__kopf{display:flex;align-items:center;gap:12px;font:400 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--schiefer)}
+.m-tafel__kopf::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(58,56,69,.45),rgba(58,56,69,0))}
+.m-tafel__z{display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;margin-top:16px;padding:16px;border-radius:var(--rund-k);background:#F6F0EF;box-shadow:inset 0 0 0 1px rgba(58,56,69,.12)}
+.m-tafel__z i{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,var(--schiefer-h),var(--schiefer) 55%,var(--schiefer-t));color:#FAF4F4}
+.m-tafel__z svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.m-tafel__z b{display:block;font:340 18px/1.25 var(--titel);color:var(--titel-f);margin-bottom:4px}
+.m-tafel__z p{font-size:15px;line-height:1.5;color:var(--leise)}
+.m-ui{font:400 .86em/1 var(--mono);letter-spacing:.06em;color:var(--tinte);white-space:nowrap;padding:2px 6px;border-radius:4px;background:rgba(58,56,69,.1)}
+.m-tafel__stand{margin-top:18px;font-size:15px;color:var(--tinte)}
+.m-tafel__stand b{font-weight:600}
+.m-tafel .knopf{margin-top:22px}
+/* Zahlen eines Saals */
+.m-zahlen{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:20px}
+.m-zahl b{display:block;font:340 clamp(1.9rem,2.6vw,2.5rem)/1 var(--titel);color:var(--titel-f)}
+.m-zahl span{display:block;margin-top:6px;font:400 10.5px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+.dunkel .m-zahl b{color:#FFFCFB}.dunkel .m-zahl span{color:var(--gold-h)}
+.m-hinweis{font-size:14px;color:var(--leise);margin-top:14px}
+.dunkel .m-hinweis{color:var(--leise-d)}
+/* Farben des Hauses: höchstens eine Reihe (M25) */
+.m-farben{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:clamp(6px,.8vw,12px);margin:clamp(36px,4vw,56px) 0 0;padding:0;list-style:none}
+.m-farben li{min-width:0}
+.m-farben i{display:block;aspect-ratio:1/1.1;border-radius:var(--rund-k);background:var(--c);box-shadow:inset 0 0 0 1px rgba(22,21,26,.1)}
+.m-farben b{display:block;margin-top:8px;font:400 10px/1.25 var(--mono);letter-spacing:.08em;text-transform:uppercase;overflow-wrap:anywhere}
+.m-farben span{display:block;font:400 10px/1.2 var(--mono);color:var(--leise)}
+@media (max-width:700px){.m-farben b,.m-farben span{display:none}}
+/* Weg des Gastes (Besuche) */
+.m-weg{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:0;margin:0;padding:0;list-style:none;border-top:2px solid var(--schiefer)}
+.m-weg li{padding:22px 18px 6px 0;border-right:1px solid rgba(58,56,69,.22)}
+.m-weg li+li{padding-left:18px}
+.m-weg li:last-child{border-right:0}
+.m-weg b{display:block;font:340 clamp(1.9rem,2.8vw,2.7rem)/1 var(--titel);color:var(--titel-f)}
+.m-weg span{display:block;margin-top:8px;font:400 11px/1.35 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.m-weg small{display:block;margin-top:6px;font-size:14px;color:var(--leise)}
+.m-weg__z{display:block;width:.86em;height:1em;color:var(--gold-t)}
+@media (max-width:700px){.m-weg{grid-template-columns:1fr 1fr}.m-weg li:nth-child(2n){border-right:0}.m-weg li:nth-child(n+3){border-top:1px solid rgba(58,56,69,.22)}.m-weg li:nth-child(odd){padding-left:0}}
+
+/* Stücke der Säle (Fehlerbuch 10a: mehr Bilder): zweiter Bildschirm, gedruckte Karten, Fotos aus dem Bildarchiv, leicht versetzt wie Blätter auf dem Tisch */
+.m-saal__links{min-width:0}
+.m-stuecke{position:relative;display:grid;gap:clamp(12px,1.4vw,22px);margin-top:clamp(-56px,-3.4vw,-28px);padding-left:clamp(28px,5vw,90px);z-index:1}
+.m-stuecke--eins{grid-template-columns:1fr}
+.m-stuecke--eins .m-schirm{width:78%;justify-self:end;box-shadow:0 50px 90px -40px rgba(22,21,26,.7),0 0 0 1px rgba(22,21,26,.08)}
+.m-stuecke--karten{grid-template-columns:.72fr 1fr .72fr;align-items:end;padding-left:clamp(16px,3vw,48px)}
+.m-stuecke--fotos{grid-template-columns:repeat(6,minmax(0,1fr));align-items:end;padding-left:0;margin-top:clamp(18px,2vw,28px)}
+.m-stueck{margin:0;border-radius:var(--rund-k);overflow:hidden;background:#fff;box-shadow:0 34px 60px -30px rgba(22,21,26,.6),0 0 0 1px rgba(22,21,26,.07)}
+.dunkel .m-stueck{box-shadow:0 40px 70px -30px rgba(0,0,0,.85),0 0 0 1px rgba(245,166,137,.22)}
+.m-stueck img{width:100%;height:auto}
+.m-stueck--blatt{border-radius:4px}
+.m-stueck--quer{border-radius:4px;margin-bottom:clamp(20px,3vw,46px)}
+.m-stueck--foto{aspect-ratio:3/4}
+.m-stueck--foto img{height:100%;object-fit:cover}
+.m-stuecke--fotos .m-stueck:nth-child(odd){margin-bottom:clamp(14px,1.6vw,26px)}
+@media (max-width:700px){.m-stuecke{padding-left:0;margin-top:16px}.m-stuecke--eins .m-schirm{width:100%}.m-stuecke--fotos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Titel auf dunklem Grund ganz weiss, Betonung über die Stärke (Fehlerbuch 10a) */
+.dunkel .m-saal__titel,.dunkel .m-saal__titel em{color:#fff}
+.dunkel .m-saal__titel em{font-weight:340}
+
+/* ---------- Fuss als Platte (M10) ---------- */
+.m-fuss{padding:clamp(56px,6vw,96px) var(--rand) clamp(40px,4vw,64px)}
+.m-fuss__platte{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:clamp(22px,3vw,48px);align-items:start;padding:clamp(26px,3vw,44px);border-radius:var(--rund);
+  background:linear-gradient(180deg,#FFFCFB,var(--papier));border-top:3px solid var(--schiefer);box-shadow:0 30px 60px -40px rgba(22,21,26,.55)}
+.m-fuss__marke{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--schiefer);text-align:center}
+.m-fuss__wm{width:clamp(44px,4vw,58px);height:auto}
+.m-fuss__marke b{font:340 17px/1.2 var(--titel);color:var(--titel-f)}
+.m-fuss__k{font:400 11px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--schiefer);margin-bottom:10px!important}
+.m-fuss__spalte{display:grid;gap:6px;font-size:15px;align-content:start}
+.m-fuss__spalte a{text-decoration:none;border-bottom:1px solid rgba(58,56,69,.3);justify-self:start}
+.m-fuss__leer{color:var(--leise)}
+.m-nb{white-space:nowrap}
+@media (max-width:900px){.m-fuss__platte{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.m-fuss__platte{grid-template-columns:1fr}.m-fuss__marke{align-items:flex-start;text-align:left}}
+
+/* ---------- Bewegung wie in den Zentralen der anderen Häuser (Fehlerbuch 10a): Empfang beim Öffnen mit Bühne aus 40 px und 1,04, Plakate
+   gestaffelt von unten, Fotos zoomen im Rahmen an ihren Platz; beim Scrollen Stücke 40 px, 0,85 s, 0,12 s Staffel, Bildschirme schweben aus 1,04.
+   Nur transform, deckend, kein Aufblenden. Erst wenn das Ruhebild da ist (.bereit), höchstens 1,4 s. ---------- */
+@keyframes mbAuf{from{translate:0 40px;scale:1.04}}
+@keyframes mbKachel{from{translate:0 70px}}
+@keyframes mbZoom{from{scale:1.1}}
+@keyframes mbKopf{from{translate:0 22px}}
+@media (prefers-reduced-motion:no-preference){
+  .js .rw .rw-kopf{animation:mbKopf .9s cubic-bezier(.22,.61,.36,1) .05s both}
+  .js .rw .hz-rahmen{animation:mbAuf 1s cubic-bezier(.22,.61,.36,1) .15s both}
+  .js .rw .hz-bild--ruhe{animation:mbZoom 2.4s cubic-bezier(.22,.61,.36,1) .15s both}
+  .js .rw .rw-wand{animation:mbAuf 1s cubic-bezier(.22,.61,.36,1) .2s both}
+  .js .rw .rw-g{animation:mbKachel 1.05s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(.26s + var(--i,0)*.09s)}
+  .js .rw .rw-g .rw-b img{animation:mbZoom 1.9s cubic-bezier(.22,.61,.36,1) both;animation-delay:calc(.26s + var(--i,0)*.09s)}
+  .js .rw .m-hilfe{animation:mbKopf .85s cubic-bezier(.22,.61,.36,1) .6s both}
+  .js .m-empfang:not(.bereit) :is(.rw-kopf,.hz-rahmen,.hz-bild--ruhe,.rw-wand,.rw-g,.rw-g img,.m-hilfe){animation-play-state:paused}
+  .js [data-r]{transform:translate3d(0,40px,0);transition:transform .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0)*120ms)}
+  .js [data-r="schweb"]:not(.da){transform:translate3d(0,60px,0) scale(1.04)}
+  .js [data-r].da{transform:none}
+  .js .m-schirm img{transform:scale(1.08);transition:transform 2.2s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0)*120ms)}
+  .js .m-schirm.da img{transform:none}
+  /* Titel zeilenweise (30.10.2026): der Titel steht, seine Wörter steigen Zeile für Zeile (maison.js teilt sie, --z = Zeile) */
+  .js .m-saal__titel.wo-zl{transform:none;transition:none}
+  .js .m-saal__titel.wo-zl .wo-w{display:inline-block;transform:translate3d(0,.6em,0);transition:transform .95s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0) * 120ms + var(--z,0) * 95ms)}
+  .js .m-saal__titel.wo-zl.da .wo-w{transform:none}
+  .js .m-f5__titel.wo-zl{animation:none}
+  .js .m-f5__titel.wo-zl .wo-w{display:inline-block;animation:m5auf .8s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.1s + var(--z,0) * .1s)}
+  /* Die Fotos der fünf Fenster zoomen ein, sobald sie geladen sind (scale, getrennt vom Zoom beim Zeigen) */
+  .js .m-f5__k img.da{animation:m5zoom 1.9s cubic-bezier(.16,1,.3,1) both}
+  /* Die Wegstufen der Besucherliste steigen gestaffelt */
+  .js .m-weg[data-r]{transform:none}
+  .js .m-weg li{transform:translate3d(0,40px,0);transition:transform .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0) * 110ms)}
+  .js .m-weg.da li{transform:none}
+}
+@keyframes m5zoom{from{scale:1.1}}
+/* Zahlen laufen hoch: der unsichtbare Zwilling mit dem Endwert hält die Breite */
+.wo-zl-z{display:inline-grid;justify-items:end}.wo-zl-z>*{grid-area:1/1}.wo-zl-z>[aria-hidden]{visibility:hidden}
+@media (prefers-reduced-motion:reduce){
+  .js [data-r],.js .wo-w,.js .m-weg li{transform:none!important;transition:none!important}
+  .m-band ul{animation:none}
+  .knopf,.knopf::after,.rl b,.rw-b img{transition:none!important}
+}
+/* schmale Rechner (1001–1180): Namen etwas kleiner, damit sie auf einer Zeile bleiben; reicht es nicht, bricht der Name um statt abgeschnitten zu werden */
+@media (min-width:1001px) and (max-width:1180px){.rw-name{font-size:.98rem;white-space:normal}}
+
+/* ================= Culinarium: Die Plakatwand (28.10.2026) =================
+   Die Wand ist Nacht mit der Tapete der Website; jedes Werkzeug hängt daran wie ein Plakat eines Abends: oben das Bild, darunter eine Kante in der
+   Abendfarbe des Plakats (--pk, aus marke.json) und das warmweisse Band mit Nummer, Name und Stand (einfach, ohne Doppelrahmen). */
+.rw-wand{background:var(--tief) var(--tap-d) 0 0/224px;box-shadow:0 40px 70px -42px rgba(22,21,26,.75),inset 0 0 0 1px rgba(245,166,137,.28)}
+.rw-g a{border-radius:4px;background:var(--papier);box-shadow:0 18px 30px -22px rgba(0,0,0,.85)}
+.rw-t{border-top:5px solid var(--pk,var(--gold))}
+.rw-nr{color:var(--pa,var(--gold-t))}
+.rw-name{font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;letter-spacing:-.008em}
+.rw-g a::after{box-shadow:inset 0 0 0 2px var(--pk,var(--gold-h))}
+.rw-g a.gedrueckt .rw-t{background:#F6EEEC}
+/* Kopf: die Wortmarke steht in der Zeile über dem Titel, auf der Grundlinie von Bar und Ort (29.10.2026) */
+.rw-kopf__wm{display:block;width:clamp(104px,8.4vw,124px);height:auto;flex:none;color:var(--tinte)}
+.rw-titel{font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;letter-spacing:-.015em}
+.m-fuss__wm{width:clamp(170px,15vw,230px);color:var(--tinte)}
+/* das «x» im Laufband */
+/* Gestaltung 28.10.2026: jedes «x» kommt aus der Schrift (Fraunces wie «Momo x Rudi» im Band), nie als gezeichneter Pfad */
+.m-saal__linie i::before{content:'';display:block;width:6px;height:6px;margin:auto;border-radius:50%;background:var(--gold)}   /* Robert 29.10.: kein x */
+.m-band li.p::before{content:'';transform:none;width:5px;height:5px;border-radius:50%;background:var(--gold-h);opacity:.9;align-self:center}   /* Robert 29.10.: kein x, Punkt genau auf der Mitte der Zeile */
+.m-saal__titel,.m-saal__titel em,.m-tafel b{font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144}
+.ma em,.ma i{font-style:normal}
+
+@media (max-width:420px){.rw-nr{white-space:normal;overflow:visible}}
+
+/* Nie fett (CHARAKTER.md 4): Hervorhebungen über die Farbe, nie über die Stärke */
+.ma b,.ma strong{font-weight:inherit}
+
+/* ---------- Empfang mit fünf hohen Fenstern (Robert 29.10.2026, nach der Zentrale eines anderen Hauses gebaut) ----------
+   Fünf hohe Fenster über die ganze Höhe, je Werkzeug ein Foto des Abends; darüber in der Mitte Wortmarke, «Der Tresen», Gruss, Datum und die
+   Zahlenzeile der Besucherliste. Bewegung: die Fenster schweben gestaffelt herauf, die Schrift folgt (nur transform), erst wenn die Fotos
+   dekodiert sind. Trennlinien in Kerzenlicht, getrennt wird mit «·», keine «x». */
+.m-f5{position:relative;display:block;min-height:max(100svh,720px);padding:0;overflow:hidden;background:var(--tief) url(img/tapete-dunkel.webp) 0 0/224px}
+.m-f5__reihe{position:absolute;inset:0}
+.m-f5__reihe ol{list-style:none;margin:0;padding:0;height:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.m-f5__reihe li{min-width:0}
+.m-f5__reihe li+li .m-f5__k{border-left:3px solid var(--gold-h)}
+.m-f5__k{position:relative;display:block;height:100%;overflow:hidden;text-decoration:none;color:#fff;background:var(--farbe,var(--dunkel));
+  animation:m5schweb .8s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(var(--i)*100ms)}   /* kurz (Oberchef 29.10.2026): 0,8 s, gestaffelt bis 1,2 s, wartet auf nichts */
+.m-f5__k picture{position:absolute;inset:0}
+.m-f5__k img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;transition:transform 1.4s cubic-bezier(.16,1,.3,1),opacity .2s ease}
+.js .m-f5__k img:not(.da){opacity:0}   /* das Foto blendet ein, sobald es geladen ist; davor die Motivfarbe */
+.m-f5__k::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,21,26,.92),rgba(22,21,26,.12) 42%,rgba(22,21,26,.24) 60%,rgba(22,21,26,.66) 100%)}
+.m-f5__t{position:absolute;z-index:1;left:clamp(16px,1.8vw,26px);right:clamp(16px,1.8vw,26px);bottom:clamp(28px,4.4vh,44px);
+  animation:m5auf .7s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(.2s + var(--i)*100ms)}
+.m-f5__w{display:block;font:400 10.5px/1.3 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-h)}
+.m-f5__t b{display:block;margin:8px 0 6px;color:#fff;font:340 clamp(1.5rem,2.1vw,2.15rem)/1.05 var(--titel);font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;letter-spacing:-.01em;text-wrap:balance}
+.m-f5__t small{display:block;min-height:2.8em;font-size:13.5px;line-height:1.4;color:rgba(250,244,244,.78);text-wrap:balance}   /* zwei Zeilen Platz: die Namen einer Reihe stehen auf einer Linie; 30.10.2026: die Titel werden bei schmalen Fenstern (1000 px) so klein, dass jeder Name in eine Zeile passt (Grundlinie gleich) */
+.m-f5__t small b{display:inline;margin:0;font:inherit;color:#fff}
+.m-f5__p{display:grid;place-items:center;width:36px;height:36px;margin-top:18px;border-radius:50%;color:var(--tief);background:linear-gradient(180deg,#FBC9B4,var(--gold));
+  box-shadow:inset 0 1px 0 rgba(255,244,238,.9),inset 0 -2px 0 rgba(0,0,0,.22),0 6px 12px -6px rgba(0,0,0,.6);transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
+.m-f5__p svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.9}
+@media (hover:hover){.m-f5__k:hover img,.m-f5__k.an img{transform:scale(1.06)}.m-f5__k:hover .m-f5__p,.m-f5__k.an .m-f5__p{transform:translate(2px,-2px) scale(1.06)}}
+.m-f5__k:focus-visible{outline:2px solid var(--gold-h);outline-offset:-5px}
+.m-f5__oben{position:absolute;z-index:5;left:0;right:0;top:0;padding:clamp(150px,21vh,210px) var(--rand) 120px;text-align:center;color:#fff;pointer-events:none;
+  background:radial-gradient(62% 54% at 50% 46%,rgba(22,21,26,.78) 0%,rgba(22,21,26,.52) 46%,rgba(22,21,26,.18) 78%,rgba(22,21,26,0) 100%)}
+.m-f5__oben a{pointer-events:auto}
+.m-f5__ort{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;row-gap:8px;font:400 11px/1.3 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:rgba(250,244,244,.86);
+  text-shadow:0 1px 2px rgba(10,9,12,.9);animation:m5auf .8s cubic-bezier(.16,1,.3,1) both .05s}
+.m-f5__ort>span{white-space:nowrap}
+.m-f5__wm{display:block;width:clamp(120px,9.5vw,148px);height:auto;color:#fff;filter:drop-shadow(0 2px 6px rgba(10,9,12,.7))}
+.m-f5 .rw-pkt{color:inherit}
+.m-f5__titel{margin:clamp(14px,1.8vh,22px) 0 0!important;font:340 clamp(3.6rem,8vw,7.6rem)/.92 var(--titel)!important;font-variation-settings:'SOFT' 100,'WONK' 1,'opsz' 144;letter-spacing:-.02em;color:#fff;
+  text-shadow:0 0 .12em rgba(10,9,12,.85),0 2px 4px rgba(10,9,12,.9),0 8px 34px rgba(10,9,12,.7);animation:m5auf .8s cubic-bezier(.16,1,.3,1) both .1s}
+.m-f5__gruss{margin-top:clamp(14px,2vh,22px);font:400 clamp(1.1rem,1.4vw,1.35rem)/1.4 var(--lauf);color:rgba(250,244,244,.86);text-wrap:balance;
+  text-shadow:0 1px 2px rgba(10,9,12,.95),0 3px 14px rgba(10,9,12,.8);animation:m5auf .8s cubic-bezier(.16,1,.3,1) both .15s}
+.m-f5__gruss span{color:#fff}
+.m-f5__datum{min-height:1.5em;margin-top:10px;font:400 11px/1.5 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:#fff;
+  text-shadow:0 0 .3em rgba(10,9,12,1),0 1px 2px rgba(10,9,12,1);animation:m5auf .8s cubic-bezier(.16,1,.3,1) both .2s}
+.m-f5 .rw-kopf__bsp{color:var(--gold-h)}
+.m-f5__zeile{display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:baseline;row-gap:6px;margin-top:22px;padding:12px 24px 13px;border-radius:999px;pointer-events:auto;
+  background:rgba(22,21,26,.66);box-shadow:inset 0 0 0 1px rgba(245,166,137,.45),0 20px 30px -20px rgba(0,0,0,.9);font:400 15px/1.4 var(--lauf);color:rgba(250,244,244,.84);
+  animation:m5auf .8s cubic-bezier(.16,1,.3,1) both .25s}
+.m-f5__zeile>span:first-child{margin-right:12px;font:400 10.5px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-h)}
+.m-f5__zeile b{margin-right:.3em;font:340 1.7rem/1 var(--titel);font-variation-settings:'SOFT' 100,'opsz' 144;color:var(--gold-h)}
+.m-f5__zeile .rw-pkt{margin:0 .8em;color:rgba(245,166,137,.7)}
+.m-f5__zeile a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font:400 10.5px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase}
+.m-f5__zeile a svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.6;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.m-f5__zeile a:hover svg,.m-f5__zeile a.an svg{transform:translateX(3px)}
+@keyframes m5schweb{from{transform:translate3d(0,140px,0)}}
+@keyframes m5auf{from{transform:translate3d(0,22px,0)}}
+@media (prefers-reduced-motion:reduce){.m-f5 *{animation:none!important}}
+@media (max-width:800px){
+  .m-f5{min-height:0;display:flex;flex-direction:column}
+  .m-f5__oben{order:-1;position:relative;padding:118px var(--rand) 30px;background:none}
+  .m-f5__reihe{position:relative;inset:auto}
+  .m-f5__reihe ol{grid-template-columns:1fr;height:auto}
+  .m-f5__reihe li+li .m-f5__k{border-left:0;border-top:3px solid var(--gold-h)}
+  .m-f5__k{height:150px;animation:none}
+  .m-f5__k::after{background:linear-gradient(90deg,rgba(22,21,26,.86),rgba(22,21,26,.22) 72%)}
+  .m-f5__t{bottom:auto;top:50%;transform:translateY(-50%);animation:none;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;align-items:center}
+  .m-f5__t>*{grid-column:1}.m-f5__p{grid-column:2;grid-row:1/4;margin:0}.m-f5__t small{min-height:0}
+  .m-f5__titel{font-size:3.6rem!important}
+  .m-f5__zeile{padding:10px 18px;margin-top:18px}
+  .m-f5__zeile .hz-z{flex-basis:100%;margin-top:6px}
+  .m-f5__zeile .rw-pkt:has(+.hz-z){display:none}
+  .m-f5__ort{display:block;line-height:1.7;letter-spacing:.16em}.m-f5__wm{margin:0 auto 10px}.m-f5__ort>.rw-pkt:first-of-type{display:none}
+}
+@media (max-width:360px){.m-f5__ort>.rw-pkt{display:none}.m-f5__ort>span:last-child{display:block}}
+
+/* Knöpfe geben beim Drücken nach, wie in allen Werkzeugen (Kleid, 29.10.2026); nur beim Drücken, die Übergänge bleiben */
+@media (prefers-reduced-motion:no-preference){:is(.knopf,.kn,.m-f5__k,.m-f5__zeile a,.rw-g a,button):active{scale:.975;transition:scale .12s ease-out}}
+
+/* 30.10.2026: in der Reihe der fünf Fenster (breite Schirme) passt jeder Name in eine Zeile, die Titel stehen auf einer Grundlinie (1000 px: 21 px). Am Handy (Bänder) gilt die normale Grösse. */
+@media (min-width:801px){.m-f5__t b{font-size:min(clamp(1.5rem,2.1vw,2.15rem),calc((20vw - 3px - 2 * clamp(16px,1.8vw,26px)) / 7.6))}}

@@ -1,0 +1,242 @@
+[
+ {
+  "name": "Nacht",
+  "hex": "#16151A",
+  "rgb": [
+   22,
+   21,
+   26
+  ],
+  "rolle": "Grund der dunklen Flächen: die Bar bei Nacht",
+  "gruppe": "nacht",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Nacht tief",
+  "hex": "#0F0E13",
+  "rgb": [
+   15,
+   14,
+   19
+  ],
+  "rolle": "die tiefste Fläche, unter Bildern und im Fuss",
+  "gruppe": "nacht",
+  "woher": "Wert der Website (culinarium.css)"
+ },
+ {
+  "name": "Strasse",
+  "hex": "#1C1B21",
+  "rgb": [
+   28,
+   27,
+   33
+  ],
+  "rolle": "dunkle Fläche beim Ankommen, draussen kühl",
+  "gruppe": "nacht",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Bar",
+  "hex": "#222028",
+  "rgb": [
+   34,
+   32,
+   40
+  ],
+  "rolle": "dunkle Fläche drinnen, einen Ton wärmer",
+  "gruppe": "nacht",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Tafel",
+  "hex": "#26252E",
+  "rgb": [
+   38,
+   37,
+   46
+  ],
+  "rolle": "dunkle Fläche an der Tafel im Kerzenlicht",
+  "gruppe": "nacht",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Schiefer",
+  "hex": "#3A3845",
+  "rgb": [
+   58,
+   56,
+   69
+  ],
+  "rolle": "die Farbe der Wortmarke auf jedem Plakat: Schrift auf Warmweiss und Flächen",
+  "gruppe": "nacht",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Warmweiss",
+  "hex": "#FAF4F4",
+  "rgb": [
+   250,
+   244,
+   244
+  ],
+  "rolle": "Grund der hellen Flächen und Schrift auf Dunkel: das Band unter jedem Plakat",
+  "gruppe": "hell",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Tinte",
+  "hex": "#2A2833",
+  "rgb": [
+   42,
+   40,
+   51
+  ],
+  "rolle": "Lesetext auf Warmweiss, nie reines Schwarz",
+  "gruppe": "hell",
+  "woher": "Wert der Website (culinarium.css)"
+ },
+ {
+  "name": "Leise",
+  "hex": "#5B5763",
+  "rgb": [
+   91,
+   87,
+   99
+  ],
+  "rolle": "zweite Zeile auf Warmweiss",
+  "gruppe": "hell",
+  "woher": "Wert der Website (culinarium.css)"
+ },
+ {
+  "name": "Kerze",
+  "hex": "#EF7649",
+  "rgb": [
+   239,
+   118,
+   73
+  ],
+  "rolle": "die Farbe des Abends: Schrägstrich in Rudis Zeilen, Knauf, Linien auf Dunkel",
+  "gruppe": "kerze",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Kerze hell",
+  "hex": "#F5A689",
+  "rgb": [
+   245,
+   166,
+   137
+  ],
+  "rolle": "leise Betonung auf Dunkel",
+  "gruppe": "kerze",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Kerze tief",
+  "hex": "#B15736",
+  "rgb": [
+   177,
+   87,
+   54
+  ],
+  "rolle": "Betonung auf Warmweiss, wo Kerze zu hell steht",
+  "gruppe": "kerze",
+  "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+ },
+ {
+  "name": "Dirty-Chicken-Violett",
+  "hex": "#8953A9",
+  "rgb": [
+   137,
+   83,
+   169
+  ],
+  "rolle": "nur für Dirty Chicken, Rudis zweite Küche: Flächen und Tapete",
+  "gruppe": "dc",
+  "woher": "Wert der Website (culinarium.css)"
+ },
+ {
+  "name": "Dirty-Chicken-Hell",
+  "hex": "#FFF7EF",
+  "rgb": [
+   255,
+   247,
+   239
+  ],
+  "rolle": "Schrift auf Violett",
+  "gruppe": "dc",
+  "woher": "Wert der Website (culinarium.css)"
+ },
+ {
+  "name": "Eisblau",
+  "hex": "#B3EBFC",
+  "rgb": [
+   179,
+   235,
+   252
+  ],
+  "rolle": "Plakat 29./30.11.2024, Ski",
+  "gruppe": "abende",
+  "woher": "gemessen am Plakat 29./30.11.2024"
+ },
+ {
+  "name": "Orange",
+  "hex": "#EF7649",
+  "rgb": [
+   239,
+   118,
+   73
+  ],
+  "rolle": "Plakat 21./22.02.2025, Panther auf dem Thron",
+  "gruppe": "abende",
+  "woher": "gemessen am Plakat 21./22.02.2025"
+ },
+ {
+  "name": "Grasgrün",
+  "hex": "#94B253",
+  "rgb": [
+   148,
+   178,
+   83
+  ],
+  "rolle": "Plakat 13./14.06.2025, Gärtnerin",
+  "gruppe": "abende",
+  "woher": "gemessen am Plakat 13./14.06.2025"
+ },
+ {
+  "name": "Nachtblau",
+  "hex": "#112D43",
+  "rgb": [
+   17,
+   45,
+   67
+  ],
+  "rolle": "Plakat 14./15.11.2025, Kürbis",
+  "gruppe": "abende",
+  "woher": "gemessen am Plakat 14./15.11.2025"
+ },
+ {
+  "name": "Ochsenblut",
+  "hex": "#881301",
+  "rgb": [
+   136,
+   19,
+   1
+  ],
+  "rolle": "Plakat 27./28.03.2026, Panther mit Eisbecher",
+  "gruppe": "abende",
+  "woher": "gemessen am Plakat 27./28.03.2026"
+ },
+ {
+  "name": "Sepia",
+  "hex": "#4D3321",
+  "rgb": [
+   77,
+   51,
+   33
+  ],
+  "rolle": "Plakat 25./26.09.2026, Mondfrau",
+  "gruppe": "abende",
+  "woher": "gemessen am Plakat 25./26.09.2026"
+ }
+]

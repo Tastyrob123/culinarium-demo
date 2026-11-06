@@ -1,0 +1,40 @@
+{
+ "zeit": "2026-10-24T10:20:00+02:00",
+ "art": "nachricht",
+ "name": "Sophie Wagner",
+ "kontakt": "sophie.wagner@example.com",
+ "datum": "",
+ "personen": 1,
+ "anliegen": "Kann am gebuchten Abend nicht kommen und fragt, ob sie ihr Ticket zurückgeben kann.",
+ "sprache": "de",
+ "gespraech": "beispiel-6",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Ich habe ein Ticket, kann aber nicht kommen. Kann ich es zurückgeben?"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Tickets werden nicht rückerstattet, weil die Plätze an der Tafel begrenzt sind. Magst du dem Team schreiben? Dann brauche ich deinen Namen und eine E-Mail-Adresse."
+  },
+  {
+   "rolle": "user",
+   "text": "Sophie Wagner, sophie.wagner@example.com"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Danke. Dies ist ein Entwurf von Tasty Studios: Die Anfrage geht nicht an das Team, sie liegt nur zur Ansicht im Gästebuch."
+  }
+ ],
+ "status": "erledigt",
+ "beispiel": true,
+ "abteilung": "Nachrichten",
+ "entwurf": {
+  "betreff": "Dein Ticket",
+  "text": "Hallo Sophie,\n\nschade, dass du nicht kommen kannst. Da die Plätze an der Tafel begrenzt sind, können Tickets nicht rückerstattet werden; so steht es auch beim Vorverkauf.\n\nWenn jemand deinen Platz übernehmen möchte, schreib uns kurz, wer an deiner Stelle kommt.\n\nBis bald in Linden\n\nMomo und Rudi\nCulinarium im Walk on the Wild Side",
+  "team": "Grundlage: Startseite «Gut zu wissen» und der Beitrag zum letzten Abend («Tickets nicht rückerstattet»).\nOffen: ob ein Platz weitergegeben werden darf (steht nirgends).",
+  "vorlage": "",
+  "absender": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+  "zeit": "2026-10-24T10:20:00+02:00"
+ }
+}

@@ -1,0 +1,212 @@
+/* L’Imprimerie des Grand Beau-Rivage: helle Farbwelt mit Bühne, wie die übrigen Werkzeuge des Hauses (Robert 15.10.2026):
+   «Der Banner oben bleibt dunkelblau, dann der Hintergrund weiss, die Kacheln blau, links weiss lassen.»
+   «Heroes richtig schön, geil, luxuriös, edel», Vorbild Le Bureau des Carlton-Europe.
+   Gleiche Sprache wie Grand Beau-Rivage/website/studio/hell.css. Nur für dieses Haus geladen (index.html, HAUS_STIL),
+   nach studio.css und ms-bureau.css; entfernen = vorheriger Stand (Raum Marine). Bühne und Maison-Knopf setzt haeuser/culinarium/buehne.js. */
+:root{
+  --raum:#f2e7e7;
+  --platte:linear-gradient(180deg,#fdfbfb,#f8f2f2 60%,#f3e9e9);
+  --platte-s:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(177,87,54,.22),0 1px 0 rgba(142,73,48,.14),0 28px 50px -34px rgba(22,21,26,.38),0 10px 22px -16px rgba(22,21,26,.2);
+  --mb-platte:var(--platte);--mb-platte-s:var(--platte-s);
+  --blau-k:radial-gradient(120% 90% at 50% 0%,rgba(239,118,73,.26),transparent 58%),linear-gradient(165deg,#413e52 0%,#131217 46%,#0f0e13 100%);
+  --blau-s:inset 0 1px 0 rgba(255,255,255,.2),inset 0 0 0 1px rgba(245,166,137,.42),inset 0 -3px 0 rgba(0,0,0,.35),0 2px 2px rgba(15,14,19,.12),0 28px 40px -24px rgba(15,14,19,.6);
+  --bue-grund:radial-gradient(90% 120% at 0% 0%,rgba(239,118,73,.18),transparent 55%),linear-gradient(rgba(22,21,26,.6),rgba(22,21,26,.6)),url('tapete-ui-dunkel.webp') 0 0/224px auto,#16151a;
+  --bue-s:inset 0 1px 0 rgba(255,255,255,.16),0 0 0 1px rgba(245,166,137,.45),0 36px 60px -36px rgba(22,21,26,.75),0 12px 24px -16px rgba(22,21,26,.35)}
+
+/* ---------- Raum: hell; Kopf bleibt Marine ---------- */
+body{background:var(--raum)}
+.start,.start.ms{background:var(--raum)}
+.start.ms .start__in{background:none;box-shadow:none;margin:0;border-radius:0}
+.start.ms .ms-leiste{background:var(--platte);box-shadow:var(--platte-s)}
+.start.ms .ms-haupt{padding-top:30px}
+
+/* Editor: Arbeitsfläche als blaue Tafel, Platten links und rechts weiss */
+.flaeche{background:var(--bue-grund);box-shadow:var(--bue-s);transition:box-shadow .5s}
+/* Dunkles Dokument auf heller Fläche, helles auf blauer (buehne.js, grundPruefen) */
+.flaeche.flaeche--hell{background:radial-gradient(90% 70% at 50% 0%,#fefcfc,rgba(254,252,252,0) 70%),linear-gradient(rgba(243,233,233,.86),rgba(243,233,233,.86)),url('tapete-ui-hell.webp') 0 0/224px auto,#f0e1e1;
+  box-shadow:inset 0 2px 8px rgba(22,21,26,.08),inset 0 0 0 1px rgba(177,87,54,.3),0 1px 0 #fff}
+
+/* Newsletter-Baukasten (mail.html): Raum hell */
+.ml{background:var(--raum)}
+
+/* ---------- Bühne: Kopf jeder Ansicht ---------- */
+.ms-bue{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;
+  margin:0 0 42px;padding:clamp(34px,3.8vw,58px) clamp(28px,3.6vw,58px);min-height:clamp(250px,23vw,340px);border-radius:28px;color:#f4ebeb;
+  background:var(--bue-grund);box-shadow:var(--bue-s)}
+.ms-bue::before{content:'';position:absolute;inset:8px;border-radius:21px;border:1px solid rgba(245,166,137,.34);pointer-events:none;z-index:2;animation:bueRahmen 1.4s var(--e1) .25s both}
+.ms-bue__foto{position:absolute;top:0;right:0;bottom:0;width:min(58%,820px);z-index:-1;pointer-events:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 42%);mask-image:linear-gradient(90deg,transparent 0,#000 42%)}
+.ms-bue__foto img{display:block;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.2s var(--e2),transform 2.4s var(--e1)}
+.ms-bue__foto.da img{opacity:1;transform:none}
+.ms-bue__foto::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,14,19,.5),transparent 48%),linear-gradient(90deg,rgba(22,21,26,.3),transparent 60%)}
+.ms-bue>:not(.ms-bue__foto){position:relative;z-index:1;max-width:min(60%,720px);animation:bueAuf .9s var(--e1) both}
+#start .ms-bue h1,.start.ms .ms-bue.ms-titel h1,.ms-bue .kd__text h1{margin:0;text-align:left;font:500 clamp(42px,4.3vw,70px)/1.02 var(--serif);color:#f4ebeb;text-shadow:0 2px 26px rgba(0,0,0,.4)}
+.ms-bue p,.ms-bue .ms-leise,.ms-bue .start__satz,#start .ms-bue .start__satz{margin:16px 0 0;max-width:58ch;font-size:16px;line-height:1.6;color:rgba(244,235,235,.84);text-shadow:0 1px 14px rgba(0,0,0,.45);text-align:left}
+@keyframes bueAuf{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes bueRahmen{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+/* Goldlinie über dem Titel */
+.ms-bue>h1::before,.ms-bue .kd__text h1::before,.ms-bue.weg__kopf h1::before{content:'';display:block;width:110px;height:1px;margin:0 0 22px;background:linear-gradient(90deg,rgba(245,166,137,.75),rgba(245,166,137,0))}
+
+/* Bereichsköpfe (knapp): niedriger */
+.ms-bue--knapp{min-height:clamp(210px,17vw,260px)}
+.ms-bue--knapp h1,.start.ms .ms-bue--knapp.ms-titel h1{font-size:clamp(38px,3.6vw,58px)}
+
+/* Übersicht: Begrüssung mit Feld */
+.ms-gruss.ms-bue{margin-bottom:50px}
+.ms-gruss.ms-bue .ms-feld{width:min(820px,100%);max-width:72%;margin-top:28px;box-shadow:0 0 0 1px rgba(245,166,137,.5),0 20px 34px -18px rgba(0,0,0,.7)}
+.ms-gruss.ms-bue .ms-lnk--alle{margin-top:14px;color:var(--goldhell)}
+.ms-gruss.ms-bue .ms-lnk--alle:hover{color:#fff}
+
+/* Titel mit Satz in den Bereichen: untereinander */
+.start.ms .ms-titel.ms-bue{display:flex;flex-direction:column;align-items:flex-start;gap:0}
+
+/* Arten und Vorlagen: Kopf als Tafel, Text links */
+.ms-bue>.start__direkt{max-width:72%!important}
+.ms-tafel.ms-bue .start__direkt{width:min(820px,100%);margin:28px 0 0;box-shadow:0 0 0 1px rgba(245,166,137,.5),0 20px 34px -18px rgba(0,0,0,.7)}
+.ms-tafel.ms-bue .start__fehler{color:#f3c9c3}
+#msNeu .ms-tafel{margin-bottom:34px}
+
+/* Vorlagen einer Art: Kopf als Tafel, Format rechts unten auf der Tafel */
+.weg__kopf.ms-bue{flex-direction:row;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 30px}
+.weg__kopf.ms-bue>div{max-width:min(60%,720px)}
+.weg__kopf.ms-bue .start__format{color:var(--gold)}
+.ms-bue .start__zurueck{color:var(--goldhell)}
+
+/* Anlass oder Abteilung im Detail: das Foto des Anlasses wird die Bühne */
+.kd.ms-bue{display:flex;margin-bottom:50px}
+.kd.ms-bue>.kd__bild{display:none}
+.kd.ms-bue .kd__wo{color:var(--gold)}
+.kd.ms-bue .kd__zahl{border-top-color:rgba(245,166,137,.3)}
+.kd.ms-bue .kd__zahl b{color:var(--gold)}
+.kd.ms-bue .kd__zahl span{color:rgba(244,235,235,.74)}
+.kd.ms-bue .ms-feld{box-shadow:0 0 0 1px rgba(245,166,137,.5),0 20px 34px -18px rgba(0,0,0,.7)}
+
+/* ---------- Kacheln: blau mit Tiefe (Anlässe, Abteilungen, Newsletter) ---------- */
+.ms-wochen .wo{padding:8px 8px 16px;border-radius:26px;background:var(--blau-k);box-shadow:var(--blau-s);transition:transform .6s var(--e2),box-shadow .6s var(--e2)}
+.ms-wochen .wo__k{border-radius:19px}
+.ms-wochen .wo__k::after{inset:8px;border-radius:13px}
+.ms-wochen .wo__n{margin:14px 8px 0 10px}
+.ms-wochen .wo__n b{color:#f4ebeb}
+.ms-wochen .wo__n small{color:var(--gold)}
+.ms-wochen .wo__n i{color:#16151a;background:linear-gradient(180deg,#e7d1d1,#cd8368);box-shadow:inset 0 1px 0 #f8f0f0,inset 0 -2px 0 rgba(53,51,65,.4),0 10px 18px -10px rgba(0,0,0,.6)}
+@media (hover:hover){.ms-wochen .wo:hover{transform:translateY(-4px)}}
+a.wo{text-decoration:none}
+
+/* ---------- Seitenleiste: Übersicht grösser abgesetzt, Einträge reagieren beim Überfahren (Robert 15.10.2026, wie in allen Werkzeugen des Hauses) ---------- */
+/* «Übersicht» immer blau, gewählt mit Goldkante (Robert 15.10.2026, wie in allen Werkzeugen) */
+.start.ms .ms-nav>button[data-ansicht="start"]{height:52px;margin-bottom:8px;padding:0 14px;font-size:20px;border-radius:15px;color:#f4ebeb;background:linear-gradient(180deg,#5f4e53,#131217 55%,#1e1c26);box-shadow:inset 0 1px 0 rgba(250,244,244,.3),inset 0 0 0 1px rgba(245,166,137,.45),0 12px 20px -12px rgba(15,14,19,.7)}
+.start.ms .ms-nav>button[data-ansicht="start"] svg{color:#e5cdcd}
+.start.ms .ms-nav>button[data-ansicht="start"].an{box-shadow:inset 0 1px 0 rgba(250,244,244,.3),inset 0 0 0 1.5px var(--gold),0 12px 20px -12px rgba(15,14,19,.7)}
+.start.ms .ms-gleiter{border-radius:13px}
+.start.ms .ms-nav button,.start.ms .ms-fuss button{transition:background .35s,box-shadow .35s,transform .45s var(--e2),color .3s}
+@media (hover:hover){.start.ms .ms-nav button:hover:not(.an),.start.ms .ms-fuss button:hover{transform:translateX(5px);background:rgba(196,109,78,.12);color:var(--navy)}
+  .start.ms .ms-nav>button[data-ansicht="start"]:hover:not(.an){color:#f4ebeb;background:linear-gradient(180deg,#534f68,#363444 55%,#22202a)}}
+
+/* ---------- Kopfzeile: zurück zu La Maison (im Editor etwas enger, damit der Name ganz bleibt) ---------- */
+.kopf{gap:16px}.kopf__werk{gap:8px}
+.zur-maison{display:inline-grid;place-items:center;text-decoration:none}
+.zur-maison svg{width:17px;height:17px}
+
+@media (max-width:860px){
+  .ms-bue{padding:0 0 26px;min-height:0;border-radius:22px}
+  .ms-bue::before{inset:6px;border-radius:17px}
+  .ms-bue__foto{position:relative;width:100%;height:160px;z-index:0;flex:none;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 55%);mask-image:linear-gradient(0deg,transparent 0,#000 55%)}
+  .ms-bue>:not(.ms-bue__foto),#start .ms-bue>:not(.ms-bue__foto){max-width:none!important;margin-left:22px;margin-right:22px}
+  .ms-bue h1,.start.ms .ms-bue.ms-titel h1,.ms-bue .kd__text h1{font-size:clamp(34px,9vw,44px)}
+  .ms-gruss.ms-bue .ms-feld,.ms-tafel.ms-bue .start__direkt{max-width:none;width:auto}
+  .weg__kopf.ms-bue{flex-direction:column;align-items:stretch}
+  .weg__kopf.ms-bue .start__format{width:auto}
+  .kd.ms-bue{flex-direction:column;align-items:stretch}
+}
+@media (prefers-reduced-motion:reduce){.ms-bue::before,.ms-bue>*{animation:none!important}.ms-bue__foto img{transition:none}}
+/* Anlässe je Monat: Satz der breiten Kachel auf Blau */
+.ms-wochen .wo--breit .wo__satz{color:rgba(244,235,235,.76)}
+.ms-wochen .wo--breit .wo__n{padding-left:6px}
+/* Schweben statt Einblenden (Robert 16.10.: nie aus unsichtbar): die alten Auftritte mit Ausblenden fallen weg, schweben.css führt die Teile */
+#start .wo:not([data-sw]),.start.ms #startWahl>div:not([hidden])>*:not([data-sw]),.start.ms.an .ms-leiste,.start.ms.an .ms-kopf,.ms-bue>:not(.ms-bue__foto),.ms-bue::before{animation:none}
+/* Abteilungen als Mosaik: die blaue Fassung bleibt als Rahmen, Name liegt auf dem Foto */
+#startAbteilungen>.wo{padding:8px}
+#startAbteilungen .wo__k{border-radius:19px}
+#startAbteilungen .wo__n i{position:relative}
+/* Sanft (Robert 16.10.: «hakelig, nicht flüssig»): ein Element pro Blick. Es schwebt der ganze Abschnitt (Raster), nicht jede Kachel einzeln;
+   kurzer Weg, kein Federn der Grösse. Kacheln reagieren beim Überfahren nur mit Schatten, ohne Weg. */
+#startWochen[data-sw],#startAbteilungen[data-sw],#abListe[data-sw],.ev-raster[data-sw],#msNewsletter .ms-wochen[data-sw]{--weg:clamp(28px,3vw,44px);--kl:1}
+#startAbteilungen .wo__licht,#startWochen>.wo:first-child .wo__licht{display:none}
+/* Nach der Uhr hereinschweben (feder.css) statt Scroll-Zeitachse: das Foto der Bühne ist sofort deckend da und zoomt nur mit dem Auftritt */
+.ms-bue__foto img{opacity:1;transform:none;transition:none}
+
+/* Lange Namen auf den Querkarten brechen um statt unter den Pfeil zu laufen */
+body #startWochen>.wo:not(:first-child) .wo__n>span:first-child{min-width:0}
+body #startWochen>.wo:not(:first-child) .wo__n b{font-size:19px;overflow-wrap:anywhere;hyphens:auto}
+/* Farb- und Schriftpakete in Le Livre ohne Bild zeigen die Dateiart */
+.ll-d__art{font:600 28px/1 "DS-titel",Georgia,serif;font-style:normal;letter-spacing:.14em;color:#b15736}
+.ll-d__f--dunkel .ll-d__art{color:#f5a689}
+
+/* Handy (Prüfung 16.10.2026): die Kopfleiste war mit dem Knopf zu La Maison 92 px breiter als das Handy, «Speichern» lag halb ausserhalb.
+   Unter 820 px: «Übersicht» nur als Zeichen, Le Livre steht im Editor schon in der Werkzeugleiste, engere Abstände. */
+@media (max-width:820px){
+  .kopf{gap:6px;padding:0 8px}.kopf__werk{gap:6px}
+  .kopf #btnNeu>span{display:none}.kopf #btnNeu{padding:0 11px}
+  .kopf .kopf__werk>[data-livre]{display:none}
+  .kopf #btnZurueck{display:inline-grid}   /* Rückgängig auch am Handy (in der Vorlage dort ausgeblendet, sonst gibt es am Handy keines) */
+  .kopf__marke small{display:none}.kopf__marke{overflow:hidden}.kopf__marke b{overflow:hidden;text-overflow:ellipsis}
+  /* Blatt zuerst, dann «Gestalten», dann Entwerfen/Vorlagen/Fotos/Ablage: wer eine Vorlage öffnet, sieht sie sofort (vorher 1'576 px tiefer) */
+  .studio{display:flex;flex-direction:column}.studio>.mitte{order:-2}.studio>.rechts{order:-1}
+}
+
+/* Handy: Knopf «Bereiche» und die Seitenleiste als Fach (R07, Prüfung 16.10.2026). Über 900 px unsichtbar. */
+.ms-bereiche{display:none}
+@media (max-width:900px){
+  .start.ms .ms-kopf{gap:8px;padding:0 10px}
+  .ms-bereiche{display:inline-grid;place-items:center;flex:none}
+  .start.ms .ms-kopf-zeichen{display:none}
+  .start.ms .ms-kopf .ms-suche{flex:1 1 auto;min-width:0}
+  .start.ms .ms-kopf .ms-pruef{display:none}
+  .start.ms.leiste-auf .ms-leiste{display:flex;position:fixed;z-index:40;top:70px;left:8px;bottom:8px;width:min(300px,calc(100vw - 16px));margin:0;overflow-y:auto;
+    animation:fachAuf .32s cubic-bezier(.2,.8,.2,1) both}
+  .start.ms.leiste-auf::after{content:'';position:fixed;inset:64px 0 0;z-index:39;background:rgba(15,14,19,.38)}
+  .start.ms.leiste-auf .ms-leiste .ms-fuss::after{content:'';display:block;height:8px}
+}
+@keyframes fachAuf{from{transform:translateX(-24px)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.start.ms.leiste-auf .ms-leiste{animation:none}}
+
+/* Culinarium (28.10.2026): die Website setzt nie kursiv und nie fett, Betonung über Farbe */
+#start em,#start i:not([class]),.ms-leise em{font-style:normal}
+/* Fraunces mit weichen Enden für Titel wie die Website (340, SOFT 100); Eingabefelder und lange Zeilen in der Lesetype des Hauses */
+#start h1,#start h2,.ms-bue h1,.ms-titel h1{font-weight:340;letter-spacing:-.012em;font-variation-settings:'SOFT' 100,'opsz' 72}
+textarea,.hwahl-knopf,.hwahl-liste li,.ideen button,#start input[type=search],.ms-kopf input,.ml input[type=search]{font-family:var(--sans)!important;font-weight:400!important;letter-spacing:0!important;font-style:normal!important}
+textarea::placeholder,input::placeholder{font-style:normal!important}
+/* Radius 10 px wie die Website (--r), keine Einkerbungen */
+.ms-karte,.ms-kachel,.kachel,.wo__k,.ms-bue{border-radius:10px}
+/* R05 Website-Knopf: am Handy weg (Kopf bleibt in 390 und 320 px in einer Zeile) */
+@media (max-width:700px){.zur-website{display:none!important}}
+/* Kleine Handys, 320 px: Kopf mit Bereiche, Suche, Zentrale, Hausbuch und «Neu» passt in eine Zeile, Titel der Bühne passt hinein */
+@media (max-width:360px){.start.ms .ms-kopf{gap:5px;padding:0 6px}.start.ms .ms-kopf .rund,.start.ms .ms-kopf .ms-rund,.start.ms .ms-kopf .ms-bereiche{width:34px;height:34px;flex:none}#start .ms-bue h1,.start.ms .ms-bue.ms-titel h1{font-size:30px}}
+/* Handy bis 430 px: der Kopf im Editor ist sonst zu breit (Zeichen, sechs runde Knöpfe und «Speichern» mit Knauf; Fund Schlössli 20.10.2026, R07).
+   Engere Abstände, runde Knöpfe 34 px, «Speichern» knapper; alles bleibt sichtbar und tippbar */
+@media (max-width:430px){.kopf{padding:0 8px}.kopf .kopf__werk{gap:4px}.kopf .kopf__werk .rund{width:34px;height:34px}.kopf #btnSpeichern{padding-left:12px;padding-right:4px;letter-spacing:.06em;gap:6px}.kopf #btnNeu{padding:0 8px}.kopf .wo-marke-w .wo-zeichen{height:30px}}
+/* Kleine Handys bis 360 px: «Speichern» nur noch als runder Knauf mit Pfeil, das Wort bleibt für Vorleser im Knopf */
+@media (max-width:360px){.kopf #btnSpeichern{padding:0 3px}.kopf #btnSpeichern .nb,.kopf #btnSpeichern .nk{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+/* Master F45 (Firefox, Scroll-Anker): die geneigte Karte ändert beim Überfahren die Höhe darunter, Firefox verschiebt die Ansicht, das sperrte den Klick */
+#start .ms-haupt{overflow-anchor:none}
+/* I14 Werkzeugleiste bleibt in einer Zeile: in schmaler Mitte nur Symbole, das Blatt springt nicht */
+.mitte{container:mitte/inline-size}
+@container mitte (max-width:800px){.werkzeug{flex-wrap:nowrap;gap:8px}.werkzeug .insel{min-width:0;overflow-x:auto;scrollbar-width:none}.werkzeug .insel::-webkit-scrollbar{display:none}.werkzeug .insel button>span:not(.insel__zeichen){display:none}.werkzeug .insel button{min-width:38px;padding:0 6px}.werkzeug .seitenwahl{flex:none}}
+/* Mittlere Breiten 901–1240 px (Fund 21.10.2026 bei 1024 und 920, Fehlerbuch «Kopf bei 920/1000/1100/1240 prüfen»): das Feld im Startbild wurde neben
+   «Fünf Entwürfe» auf zwei Buchstaben zerdrückt, die Querkarten der Anlässe brachen ihren Titel Buchstabe für Buchstabe. Feld wie am Handy (Text oben, Knopf darunter),
+   Querkarten mit Foto oben und Text darunter */
+@media (min-width:901px) and (max-width:1240px){#start .ws-sb .ms-feld{flex-wrap:wrap;border-radius:26px;padding:12px 12px 12px 18px}#start .ws-sb .ms-feld textarea{flex-basis:calc(100% - 40px)}#start .ws-sb .ms-feld .knopf--voll{width:100%}}
+@media (min-width:761px) and (max-width:1240px){#startWochen>.wo:not(:first-child){grid-template-columns:1fr;gap:12px 0}#startWochen>.wo:not(:first-child) .wo__n{padding:0 6px 4px}}
+/* Editor-Kopf 901–1240 px (Fund 21.10.2026, Fehlerbuch «Titel im Kopf überdeckt nie einen Knopf», geprüft 920/1000/1100/1240): die Marke schrumpfte, ihr Name lag
+   unter «Rückgängig» und «Wiederholen», bei 920 ragte «Druckfertig speichern» 52 px hinaus. Marke nur als Zeichen, Knöpfe mit Zeichen statt Wort, «Speichern» kurz;
+   der Name der Drucksache kürzt mit «…» */
+.kopf__mitte{min-width:0}.kopf__name{min-width:0;text-overflow:ellipsis}
+@media (min-width:601px) and (max-width:1240px){.kopf .wo-marke-w>span:not(.wo-zeichen){display:none}.kopf .kopf__marke{flex:none}
+  .kopf #btnNeu>span,.kopf #btnPruefen .pruef__t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .kopf #btnSpeichern .nb{display:none}.kopf #btnSpeichern .nk{display:inline}}
+/* Culinarium (28.10.2026): fünf Abteilungen; die Liste steht in gleich breiten Kacheln, die letzte Reihe mittig (Fehlerbuch 10a «keine Karte allein, letzte Reihe mittig») */
+@media (min-width:761px){#abListe{display:flex;flex-wrap:wrap;justify-content:center}#abListe>.wo{flex:0 1 calc((100% - 48px) / 3);min-width:0}}
+/* R06: Wege unten in der Seitenleiste (Zentrale, Website, Prüfung) */
+.ms-fuss .ms-wege{display:block;margin:8px 0 4px;font-size:12.5px;line-height:1.5;color:rgba(38,36,45,.62)}
+.ms-fuss .ms-wege a{color:#3a3845;text-decoration:none;border-bottom:1px solid rgba(239,118,73,.6)}
+.ms-fuss .ms-wege a:hover,.ms-fuss .ms-wege a:focus-visible{color:#26242d;border-color:#ef7649}

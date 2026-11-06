@@ -1,0 +1,1017 @@
+{
+ "browser": "chromium",
+ "breite": 390,
+ "hoehe": 844,
+ "gruen": 167,
+ "gesamt": 168,
+ "zeilen": [
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/ (1. Mal)",
+   "ok": true,
+   "mehr": "200 · 563 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/ (2. Mal)",
+   "ok": true,
+   "mehr": "200 · 532 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/satz/blatt.html (1. Mal)",
+   "ok": true,
+   "mehr": "200 · 515 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/satz/blatt.html (2. Mal)",
+   "ok": true,
+   "mehr": "200 · 514 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/anleitung.html (1. Mal)",
+   "ok": true,
+   "mehr": "200 · 533 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/anleitung.html (2. Mal)",
+   "ok": true,
+   "mehr": "200 · 528 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/pruefung.html (1. Mal)",
+   "ok": true,
+   "mehr": "200 · 526 ms"
+  },
+  {
+   "id": "A01",
+   "n": "Laden /_werkzeuge/carte/pruefung.html (2. Mal)",
+   "ok": true,
+   "mehr": "200 · 525 ms"
+  },
+  {
+   "id": "R01",
+   "n": "Aufbau: Kopfleiste, Rand, Hauptfläche, Leiste, Fenster, Quittung mit aria-live (Oberfläche der Häuser, Rahmen «Die Bühne», Kleid culinarium)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R05",
+   "n": "Kopfleiste: Zeichen, «Die Pairing-Karte» (Name aus dem Kleid), Haus, Titel der Karte, runde Knöpfe, Website ansehen (Alle Abende); keine Abfrage «Wer arbeitet hier?»",
+   "ok": false,
+   "mehr": ""
+  },
+  {
+   "id": "R05",
+   "n": "Knöpfe des Kopfs führen zum Tresen (Zentrale, 9081), Prüfung, Anleitung; das Schaufenster (9082) steht im Rand; immer 127.0.0.1",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "F10a",
+   "n": "Kein Fenster «Wer arbeitet hier?» beim Öffnen",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "F10a",
+   "n": "Untere Leiste: Titel einzeilig, Satz ganz (ohne «…»), Kopf und Leiste im selben Zustand",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C01",
+   "n": "Karten des Hauses als Fotokacheln: «Der nächste Abend» oben, darunter die sieben früheren Abende mit Plakat, neueste zuerst, in zwei Gruppen mit Zwischentitel",
+   "ok": true,
+   "mehr": "abend, abend-2025-02-21, abend-2024-11-29, abend-2024-07-19, abend-2024-04-26, abend-2023-11-17, abend-2023-09-22, abend-2023-09-15"
+  },
+  {
+   "id": "C13",
+   "n": "Wege: Frühere Fassungen, Veröffentlichte PDF, Zur Werkbank, Alle Abende auf der Website, das Schaufenster (Name aus dem Kleid), Anschluss, Rundgang",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2025-02-21: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2025-02-21: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2025-02-21: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2024-11-29: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2024-11-29: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2024-11-29: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2024-07-19: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2024-07-19: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2024-07-19: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2024-04-26: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2024-04-26: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2024-04-26: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2023-11-17: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2023-11-17: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2023-11-17: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2023-09-22: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2023-09-22: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2023-09-22: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Karte abend-2023-09-15: Vorschau gesetzt, nichts läuft über",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R16",
+   "n": "Karte abend-2023-09-15: Startbild mit Foto, Zeichen und Titel (Bühne)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Karte abend-2023-09-15: kein seitliches Verrutschen (390 px)",
+   "ok": true,
+   "mehr": "0"
+  },
+  {
+   "id": "C07",
+   "n": "Vorschau «1 Seite, wie in der PDF», ein Blatt A4 hoch",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C07",
+   "n": "Vorschau verkleinert per transform, nie per zoom",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C07",
+   "n": "Zoom + vergrössert die Vorschau",
+   "ok": true,
+   "mehr": "340 → 572 px"
+  },
+  {
+   "id": "R15",
+   "n": "Ohne Adresse öffnet die zuletzt gewählte Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R15",
+   "n": "Aus dem Tresen (Zentrale) geöffnet: die erste Karte («Der nächste Abend»)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C01",
+   "n": "Modus Fortgeschritten mit Satz, nach Neuladen gemerkt (R15)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C01",
+   "n": "Modus Einfach mit Satz",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Handy: der Rand liegt hinter dem Knopf «Bereiche», zu bis man ihn drückt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Handy: «Bereiche» öffnet den Rand mit den Karten und den Wegen",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R07",
+   "n": "Handy: nach der Wahl schliesst sich der Rand",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C04",
+   "n": "Klick links: rechts blinkt der Gang",
+   "ok": true,
+   "mehr": "VorspeiseMiso / Sellerie / RöstzwiebelnVodka | Tom Yam | Gua"
+  },
+  {
+   "id": "C04",
+   "n": "Klick links: links und rechts auf derselben Höhe (± 60 px), soweit die Vorschau scrollen kann",
+   "ok": true,
+   "mehr": "493 / 1221 · Vorschau am Rand"
+  },
+  {
+   "id": "F10a",
+   "n": "Knöpfe der gewählten Zeile: eigene Zeile, nie über Bild oder Text, keine Fläche dahinter",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "F10a",
+   "n": "Plus-Knopf «Gang am Ende» ist ein Knopf des Rahmens mit Körper und Knauf",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "F10a",
+   "n": "Rudis Teller in der Liste in Versalien (Schrift des Hauses), Gang als Etikett darüber",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C04",
+   "n": "Klick rechts (Drink): Gang links gewählt und blinkt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C04",
+   "n": "Doppelklick in der Vorschau öffnet den Gang",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Gang: Felder Gang, Teller (Rudi), Drink (Momo)",
+   "ok": true,
+   "mehr": "Gang, Teller, Drink, Auf der Karte zeigen"
+  },
+  {
+   "id": "C02",
+   "n": "Doppelklick auf die Zeile öffnet das Fenster mit allen Feldern",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Fenster zeigt «So steht es auf der Karte»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Vorschau im Fenster folgt beim Tippen",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R11",
+   "n": "Quittung nach dem Speichern mit «Rückgängig» und «Vorher / nachher»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Geänderter Teller steht in der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Ticketpreis: Felder Angabe, Preis, Währung",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C03",
+   "n": "Preis in der Schreibweise der Karte: «85» wird «85,00»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R08",
+   "n": "Leiste: «Entwurf: n Änderungen», Marke «Entwurf»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R09",
+   "n": "Speichern-Knopf grün «Gespeichert» nach dem Speichern",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C01",
+   "n": "Kachel trägt die Marke «Entwurf»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C09",
+   "n": "Neu laden: der Entwurf ist noch da",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C03",
+   "n": "«86,5» wird «86,50»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R11",
+   "n": "«Rückgängig» in der Quittung holt den Stand davor (85,00)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R10",
+   "n": "«Nichts geändert, nichts gespeichert.»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "«Neuer Eintrag»: Fenster «Neuer Eintrag» als Kopie eines Gangs (nicht des Preises)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Ohne Teller und Drink: «Bitte einen Teller oder einen Drink eintragen.»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Neuer Gang steht in der Karte mit Drink",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Neuer Teller steht in Versalien wie die Nachbarn",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C09",
+   "n": "Marke «Neu» an der Zeile",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Kopieren öffnet die Kopie als neuen Gang",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Abbrechen nimmt die Kopie wieder weg",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Ausblenden: Marke «Ausgeblendet», nicht mehr in der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Wieder zeigen",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Nach oben verschieben",
+   "ok": true,
+   "mehr": "7 → 6"
+  },
+  {
+   "id": "C02",
+   "n": "Nach unten verschieben",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Seite ausblenden: die einzige Seite bleibt («Auf der Karte steht keine Seite mehr», nichts gespeichert); Seiten verschieben betrifft nicht (je Karte eine Seite)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "«Eintrag hinzufügen» an der Rubrik «Upgrade nach Wahl»: Fenster «Neuer Eintrag»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Neuer Eintrag unter dem Upgrade steht in der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Rubrik verschieben: «Diese Rubrik steht schon zuoberst» (einzige Rubrik)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Neue Rubrik steht in der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Entfernen fragt nach",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C02",
+   "n": "Entfernen nimmt die Rubrik weg",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C09",
+   "n": "Vorher / nachher: Neu und Geändert",
+   "ok": true,
+   "mehr": "4 Stellen"
+  },
+  {
+   "id": "C10",
+   "n": "Probe-PDF gedruckt, Quittung mit «Probe öffnen»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C10",
+   "n": "Probe-PDF enthält den Entwurf (Nussbutter, Rote Bete, 85,00)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R12",
+   "n": "Veröffentlichen öffnet zuerst «Vorher und nachher»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R12",
+   "n": "Fortschritt mit Schritten",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C11",
+   "n": "Veröffentlicht: «Die neue Fassung steht», Wörter geprüft",
+   "ok": true,
+   "mehr": "1 Seite, 79 Wörter geprüft. Schriftmass 110 bis 110 %. Demo: Die Website bleibt, wie sie i"
+  },
+  {
+   "id": "C11",
+   "n": "Veröffentlichte PDF = Daten (Nussbutter, Rote Bete)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C27",
+   "n": "Nach dem Veröffentlichen: karten.json in der Form der Website (Abend DFqbLG2s_dc mit dem neuen Gang); die Website selbst bleibt unberührt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R08",
+   "n": "Leiste danach: «Alles veröffentlicht»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R12",
+   "n": "Ohne Entwurf steht kein Knopf «Veröffentlichen» und keiner «Vorher, nachher»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C12",
+   "n": "Frühere Fassungen: «Ursprünglicher Stand» und die eben veröffentlichte Fassung",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C12",
+   "n": "«In den Entwurf holen»: Entwurf ohne Rote Bete, PDF bleibt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C09",
+   "n": "Entwurf verwerfen: wieder wie veröffentlicht",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C09",
+   "n": "Der verworfene Entwurf bleibt im Verlauf",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "Klick wählt ein Element (Rahmen mit Griffen)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "Seitenleiste «Gestalten» geht auf",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "Gestalten: Schriften und Farben des Hauses, Textart nur normal oder Versalien (nie fett, nie kursiv)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "Ziehen zeigt das Mass «+x · +y mm» und verschiebt",
+   "ok": true,
+   "mehr": "+17.4 · +12.2 mm"
+  },
+  {
+   "id": "R08",
+   "n": "Nach dem Ziehen: Eingaben warten gelb («Speichern»)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "⌘Z nimmt das Ziehen zurück",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "⌘⇧Z wiederholt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "Pfeiltaste schiebt 0,5 mm",
+   "ok": true,
+   "mehr": " → translate(0.5mm, 0mm)"
+  },
+  {
+   "id": "C05",
+   "n": "«Anordnung zurücksetzen» stellt die Seite wie gesetzt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C05",
+   "n": "Doppelklick schreibt direkt in die Karte",
+   "ok": true,
+   "mehr": "Gin | RhabarberAbsackerGin | Turmeric | Ingwer ProbeTicket85"
+  },
+  {
+   "id": "R09",
+   "n": "⌘S speichert (auch aus der Vorschau)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C06",
+   "n": "Daten als Text: Ungültiges wird abgewiesen",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C06",
+   "n": "Daten als Text enthalten die Seite der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C06",
+   "n": "Server weist fremdes HTML ab (neues Merkmal)",
+   "ok": true,
+   "mehr": "Seite 1: ein Baustein, den es in dieser Karte nicht gibt."
+  },
+  {
+   "id": "C07",
+   "n": "Ansicht Website: «Alle Abende» (abende.html), das Fenster dieses Abends ist offen (Menükarte vom Februar 2025)",
+   "ok": true,
+   "mehr": "Alle Abende · heute, mit der Karte dieses Abends"
+  },
+  {
+   "id": "C07",
+   "n": "Ansicht Website: «Der Abend» (abend.html)",
+   "ok": true,
+   "mehr": "Der Abend · heute, so steht es auf der Website"
+  },
+  {
+   "id": "C07",
+   "n": "Ansicht Website: «Startseite» (index.html)",
+   "ok": true,
+   "mehr": "Startseite · heute, so steht es auf der Website"
+  },
+  {
+   "id": "C07",
+   "n": "Zurück zur Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C07",
+   "n": "Kartenwechsel: die Ansicht Website öffnet den Abend der neuen Karte (erstes Wochenende 2023)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Der nächste Abend: Datum mit Pfeilen (kein Kalender des Systems), sechs Gänge mit Teller und Drink, als Beispiel wörtlich die Karte vom Februar 2025",
+   "ok": true,
+   "mehr": "[\"Sauerteig | Tomate | Butter\",\"79,00 EUR\"]"
+  },
+  {
+   "id": "C08",
+   "n": "Blatt A4 hoch: Wortmarke, Titel, Datum «Fr 21. und Sa 22. Februar 2025», Strich zwischen den Gängen, Ticketpreis als Marke",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Karte schön und mittig: Menü in der Mitte des Blatts (± 3 %), jede Zeile mittig (± 2 %), unten kein leerer Teil (unter 18 %)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Eintrag geht sofort in die Karte rechts (Rudis Zeile mit Schrägstrich) und wird beim Verlassen des Feldes gespeichert; das Beispiel ist weg",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Pfeil: eine Woche später (Fr 28. Februar und Sa 1. März 2025), Teller bleiben",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "«Nächsten Abend anlegen»: Teller und Drinks leer, Zeile und Preis bleiben, Datum ein Freitag nach heute",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Gänge stehen noch nicht fest: Satz auf der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C03",
+   "n": "Ticketpreis «89» wird «89,00 EUR» (Schreibweise der Plakate)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Die Küche veröffentlicht die Karte des nächsten Abends selbst",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "C08",
+   "n": "Veröffentlichte PDF des nächsten Abends = Daten (HOKKAIDO / KÜRBISKERNÖL / HASELNUSS, 89,00), eine Seite",
+   "ok": true,
+   "mehr": "Menü FR 30. UND SA 31. OKTOBER 2026 BY MOMO X RUDI APÉRITIF SAUERTEIG / KÜRBIS /"
+  },
+  {
+   "id": "C27",
+   "n": "karten.json trägt den nächsten Abend (Datum, Gänge, Preis)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Ohne Rolle: 403 ROLLE",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Unbekannte Rolle (Spa gibt es im Culinarium nicht, C19 betrifft nicht): 403 ROLLE",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Küche druckt eine Probe der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Küche veröffentlicht frühere Abende nicht: 403",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Service veröffentlicht nicht: 403",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Zurückholen nur Direktion",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Anschluss an die Website nur Direktion",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Demo-Sperre: Anschluss einschalten wird abgewiesen (DEMO), die Website bleibt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S01",
+   "n": "Daten mit falscher Art (Abend für eine Satz-Karte): 400 PRUEF",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Fremde Herkunft: 403 HERKUNFT",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Nur JSON: 415",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Über 3 MB: 413",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Falscher Host: 421",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Gesperrte Pfade (_daten, .py) nicht ausgeliefert",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Sicherheitskopfzeilen (CSP, frame-ancestors)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Programmcode im Text: 400 PRUEF",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "S02",
+   "n": "Zu viele Änderungen in einer Minute: 429 GRENZE",
+   "ok": true,
+   "mehr": "nach 29 Anfragen"
+  },
+  {
+   "id": "C14",
+   "n": "Prüfseite: Browser, Server, Karten (alle Abende), Druck, Sicherungen, Fehler",
+   "ok": true,
+   "mehr": " Zurück: Die Pairing-Karte Prüfung des Werkzeugs. Diese Seite läuft auch dann, "
+  },
+  {
+   "id": "C15",
+   "n": "Alle Daten herunterladen: jede Karte mit Stand, Ursprung, Verlauf und Protokoll",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R03",
+   "n": "Fehlermelder: Skriptfehler kommt im Server an",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R04",
+   "n": "Startfehler-Tür «Die Pairing-Karte startet nicht.» mit «Prüfung öffnen»",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R18",
+   "n": "Rundgang (?rundgang): Lichtkegel und Karte mit Text über die Abende",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R19",
+   "n": "«Zur Werkbank» erscheint, wenn aus der Werkbank geöffnet",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R19",
+   "n": "«Zur Werkbank» führt auf die Werkbank des Hauses (http://127.0.0.1:9088/werkbank/index.html#werkzeuge → 200)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R05",
+   "n": "Alle 14 Links in Kopf und Rand antworten (Tresen 9081, Schaufenster 9082, Werkbank 9088, Website 8765, Anleitung, Prüfung, PDF)",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A08",
+   "n": "Zwei Fenster: das zweite bekommt KONFLIKT, nichts überschrieben",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A08",
+   "n": "Netz weg beim Speichern: Meldung VERBINDUNG",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A08",
+   "n": "5'000 Zeichen ohne Leerzeichen: abgewiesen «Der Text ist zu lang», Eingabe bleibt gelb, kein Verrutschen",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A08",
+   "n": "3'900 Zeichen ohne Leerzeichen: gespeichert, bricht in der Liste um",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A08",
+   "n": "<script> im Text: abgewiesen mit Meldung, Eingabe bleibt gelb",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A08",
+   "n": "Emoji und Umlaute stehen in der Karte",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "R13",
+   "n": "Ungespeicherte Verschiebung: Leiste gelb",
+   "ok": true,
+   "mehr": "{\"x\":-20.9375,\"y\":480.078125,\"width\":431.65625,\"height\":29.90625}"
+  },
+  {
+   "id": "R13",
+   "n": "Verlassen mit ungespeicherten Eingaben: der Browser fragt",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A99",
+   "n": "Keine Skriptfehler auf allen Seiten",
+   "ok": true,
+   "mehr": ""
+  },
+  {
+   "id": "A99",
+   "n": "Keine toten Adressen",
+   "ok": true,
+   "mehr": ""
+  }
+ ]
+}

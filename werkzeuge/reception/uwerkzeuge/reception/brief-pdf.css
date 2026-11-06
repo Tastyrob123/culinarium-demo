@@ -1,0 +1,68 @@
+/* Brief als PDF (A4): wird von brief_pdf.js (Chromium auf dem Server) gesetzt, nicht am Bildschirm benutzt. Briefpapier des Landgasthof Ruedihus (wie ruedihus.css «Der Brief»): Blatt, feiner Goldrahmen, Kopf mit dem Zeichen, Fusszeile auf jeder Seite. */
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;src:url('../../assets/schrift/fraunces-soft.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-weight:400 600;src:url('../../assets/schrift/instrument.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-weight:400;src:url('../../assets/schrift/dmmono.woff2') format('woff2')}
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{margin:0;padding:0;background:#fff}
+body{font-family:'Fraunces',Georgia,'Times New Roman',serif;color:#1a191f;font-variant-numeric:lining-nums;-webkit-font-smoothing:antialiased}
+.seite{position:relative;width:210mm;height:297mm;overflow:hidden;break-after:page;page-break-after:always;background:linear-gradient(180deg,#f6f3f2,#e5dedd)}
+.seite:last-child{break-after:auto;page-break-after:auto}
+.seite::before{content:'';position:absolute;inset:0;background:radial-gradient(130% 70% at 50% -5%,rgba(255,255,255,.65),rgba(255,255,255,0) 62%),radial-gradient(150% 120% at 50% 45%,rgba(167,83,53,0) 55%,rgba(167,83,53,.12) 100%)}
+.rahmen{position:absolute;inset:8mm;border:.25mm solid rgba(208,97,56,.7)}
+.rahmen::after{content:'';position:absolute;inset:1.6mm;border:.15mm solid rgba(208,97,56,.32)}
+.ecke{position:absolute;width:9.5mm;height:9.5mm;background-size:100% 100%;background-repeat:no-repeat}
+.ecke.a{left:-1.6mm;top:-1.6mm;background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2740%27%20height=%2740%27%20viewBox=%270%200%2040%2040%27%3E%3Cg%20transform=%27translate%280%2C0%29%27%20fill=%27none%27%20stroke=%27%23d06640%27%20stroke-linecap=%27round%27%3E%3Cpath%20d=%27M2%2030V11Q2%202%2011%202H30%27%20stroke-width=%271.5%27/%3E%3Cpath%20d=%27M8%2025V15Q8%208%2015%208H25%27%20stroke-width=%27.9%27%20opacity=%27.8%27/%3E%3Cpath%20d=%27M15%2015Q22%2015%2022%2022%27%20stroke-width=%27.9%27%20opacity=%27.7%27/%3E%3Ccircle%20cx=%2715%27%20cy=%2715%27%20r=%271.7%27%20fill=%27%23d06640%27%20stroke=%27none%27/%3E%3Cpath%20d=%27M2%2033v3M33%202h3%27%20stroke-width=%271.1%27%20opacity=%27.6%27/%3E%3C/g%3E%3C/svg%3E")}.ecke.b{right:-1.6mm;top:-1.6mm;background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2740%27%20height=%2740%27%20viewBox=%270%200%2040%2040%27%3E%3Cg%20transform=%27translate%2840%2C0%29%20scale%28-1%2C1%29%27%20fill=%27none%27%20stroke=%27%23d06640%27%20stroke-linecap=%27round%27%3E%3Cpath%20d=%27M2%2030V11Q2%202%2011%202H30%27%20stroke-width=%271.5%27/%3E%3Cpath%20d=%27M8%2025V15Q8%208%2015%208H25%27%20stroke-width=%27.9%27%20opacity=%27.8%27/%3E%3Cpath%20d=%27M15%2015Q22%2015%2022%2022%27%20stroke-width=%27.9%27%20opacity=%27.7%27/%3E%3Ccircle%20cx=%2715%27%20cy=%2715%27%20r=%271.7%27%20fill=%27%23d06640%27%20stroke=%27none%27/%3E%3Cpath%20d=%27M2%2033v3M33%202h3%27%20stroke-width=%271.1%27%20opacity=%27.6%27/%3E%3C/g%3E%3C/svg%3E")}
+.ecke.c{left:-1.6mm;bottom:-1.6mm;background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2740%27%20height=%2740%27%20viewBox=%270%200%2040%2040%27%3E%3Cg%20transform=%27translate%280%2C40%29%20scale%281%2C-1%29%27%20fill=%27none%27%20stroke=%27%23d06640%27%20stroke-linecap=%27round%27%3E%3Cpath%20d=%27M2%2030V11Q2%202%2011%202H30%27%20stroke-width=%271.5%27/%3E%3Cpath%20d=%27M8%2025V15Q8%208%2015%208H25%27%20stroke-width=%27.9%27%20opacity=%27.8%27/%3E%3Cpath%20d=%27M15%2015Q22%2015%2022%2022%27%20stroke-width=%27.9%27%20opacity=%27.7%27/%3E%3Ccircle%20cx=%2715%27%20cy=%2715%27%20r=%271.7%27%20fill=%27%23d06640%27%20stroke=%27none%27/%3E%3Cpath%20d=%27M2%2033v3M33%202h3%27%20stroke-width=%271.1%27%20opacity=%27.6%27/%3E%3C/g%3E%3C/svg%3E")}.ecke.d{right:-1.6mm;bottom:-1.6mm;background-image:url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%2740%27%20height=%2740%27%20viewBox=%270%200%2040%2040%27%3E%3Cg%20transform=%27translate%2840%2C40%29%20scale%28-1%2C-1%29%27%20fill=%27none%27%20stroke=%27%23d06640%27%20stroke-linecap=%27round%27%3E%3Cpath%20d=%27M2%2030V11Q2%202%2011%202H30%27%20stroke-width=%271.5%27/%3E%3Cpath%20d=%27M8%2025V15Q8%208%2015%208H25%27%20stroke-width=%27.9%27%20opacity=%27.8%27/%3E%3Cpath%20d=%27M15%2015Q22%2015%2022%2022%27%20stroke-width=%27.9%27%20opacity=%27.7%27/%3E%3Ccircle%20cx=%2715%27%20cy=%2715%27%20r=%271.7%27%20fill=%27%23d06640%27%20stroke=%27none%27/%3E%3Cpath%20d=%27M2%2033v3M33%202h3%27%20stroke-width=%271.1%27%20opacity=%27.6%27/%3E%3C/g%3E%3C/svg%3E")}
+.koerper{position:absolute;left:27mm;right:27mm;top:21mm;bottom:31mm;overflow:hidden}
+.seite.folge .koerper{top:20mm}
+.fuss{position:absolute;left:27mm;right:27mm;bottom:14.5mm;text-align:center;font-size:6.8pt;line-height:1.75;letter-spacing:.08em;color:#454252;padding-top:2.4mm;background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.6),rgba(208,97,56,0)) top center/100% .2mm no-repeat}
+.fuss .nr{display:block;font-style:normal;letter-spacing:.14em;color:#92492e}
+.b{position:relative}
+.zeichen{display:block;margin:0 auto 2.6mm}.zeichen img{display:block;width:100%;height:auto}
+.haus{text-align:center;text-transform:uppercase;letter-spacing:.34em;font-size:14.5pt;line-height:1.2;color:#1f1d25;padding-left:.34em}
+.zeile{text-align:center;text-transform:uppercase;letter-spacing:.2em;font-size:6.4pt;font-style:normal;color:#92492e;margin:2.4mm 0 0;padding-left:.2em}
+.linie{margin:0 auto;display:block}.linie i{display:block;width:100%;height:.26mm;background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.75) 18%,rgba(208,97,56,.75) 82%,rgba(208,97,56,0));position:relative;overflow:visible}
+.linie.raute i::after{content:'';position:absolute;left:50%;top:50%;width:1.8mm;height:1.8mm;transform:translate(-50%,-50%) rotate(45deg);background:#d06138;box-shadow:0 0 0 1.3mm #f2eceb,0 0 0 1.45mm rgba(208,97,56,.55)}
+.an{display:grid;grid-template-columns:1fr 1fr;gap:2mm 10mm}.an>div{min-width:0}
+.an dt{font-style:normal;font-size:7.4pt;color:#92492e;letter-spacing:.06em}
+.an dd{margin:.8mm 0 0;font-size:9.4pt;line-height:1.35;color:#1f1d25;overflow-wrap:anywhere}
+.an dd small{display:block;font-style:normal;font-size:7.8pt;color:#454252}
+.betreff-l{font-style:normal;font-size:7.4pt;color:#92492e;letter-spacing:.06em;margin-bottom:1mm}
+.betreff{text-transform:uppercase;letter-spacing:.12em;line-height:1.5;color:#1f1d25}
+.absatz{margin:0 0 calc(3mm + var(--mb,0mm));line-height:1.55;color:#1a191f;overflow-wrap:break-word;orphans:2;widows:2}
+.absatz.sign{margin-top:5mm}.absatz.sign::first-line{font-style:normal;color:#1f1d25}
+.absatz.fort{margin-top:0}
+.foto{margin:1mm auto 4mm;display:block}.foto img{display:block;width:100%;height:auto;border-radius:.6mm;box-shadow:0 0 0 .2mm rgba(146,73,46,.3)}
+.siegel{display:flex;align-items:center;justify-content:center;width:15mm;height:15mm;margin:6mm auto 0;border-radius:50%;background:radial-gradient(circle at 35% 28%,#f9f6f6,#e7dfde 70%);box-shadow:0 0 0 .22mm rgba(208,97,56,.85),0 0 0 1mm #f2eceb,0 0 0 1.2mm rgba(208,97,56,.5)}
+.siegel img{width:9.2mm;height:auto}
+.kleinkopf{display:flex;align-items:center;justify-content:center;gap:3mm;padding-bottom:3mm;margin-bottom:6mm;background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.6),rgba(208,97,56,0)) bottom center/100% .2mm no-repeat}
+.kleinkopf img{width:9mm;height:auto}.kleinkopf b{font-weight:400;text-transform:uppercase;letter-spacing:.3em;font-size:8.6pt;color:#1f1d25}
+.messen{position:absolute;left:-9999px;top:0}
+.haus,.zeile,.betreff{margin-bottom:var(--mb,0mm)}
+
+/* ===== Ruedihus (rahmen.py): Kleid der Hausmails (mails/01-tisch …) statt Jugendstil-Rahmen des Carlton ===== */
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;src:url('../../assets/schrift/instrument.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;src:url('../../assets/schrift/dmmono.woff2') format('woff2')}
+body{font-family:'Instrument Sans',system-ui,sans-serif;color:#282730}
+.haus{font-family:'Fraunces',Georgia,serif;font-weight:400;text-transform:uppercase;letter-spacing:.2em;font-size:13pt;color:#1f1d25;padding-left:.2em}
+.zeile{font-family:'Instrument Sans',system-ui,sans-serif;font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:#ea5823}
+.betreff{font-family:'Fraunces',Georgia,serif;font-weight:400;text-transform:none;letter-spacing:0;font-size:15pt;line-height:1.2;color:#1a191f}
+.absatz.sign::first-line{font-style:normal;color:#1a191f}
+.kleinkopf b{font-family:'Fraunces',Georgia,serif;font-weight:400;text-transform:uppercase;letter-spacing:.16em;font-size:8.5pt}
+.fuss,.seitenzahl{font-family:'Instrument Sans',system-ui,sans-serif}
+
+/* ================= Culinarium Hannover (28.10.2026) =================
+   Keine Zierecken aus dem Vorbild; statt der Raute das «x» von «Momo x Rudi» (einziges Ornament des Kleids, wie --cu-x in kleid/culinarium.css).
+   Die Plakatzeile «A UNiQUE EXPERiENCE BY MOMO X RUDI» so geschrieben wie auf den Plakaten (kleines i bleibt) und höchstens .06em gesperrt:
+   ab .1em zerfällt sie in der PDF Buchstabe für Buchstabe (Master Abschnitt 9, Versalien-Sperrung). */
+.ecke{display:none}
+.linie.raute i::after{/* kein «x» als Zierzeichen (Robert 30.10.2026): ein kleiner Punkt in Kerze */width:5mm;height:2.4mm;transform:translate(-50%,-50%);border-radius:0;box-shadow:none;
+  background:#f6efed url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 12'%3E%3Ccircle cx='12' cy='6' r='1.6' fill='%23EF7649'/%3E%3C/svg%3E") center/contain no-repeat}
+.zeile{text-transform:none;letter-spacing:.06em;padding-left:0}
+
+/* Gestaltung 28.10.2026: Kopf = Rudis Original; Folgeseiten kleiner; Linie mit dem «x» aus der Schrift statt Raute */
+.zeichen{margin:0 auto 1mm}
+.kleinkopf img{width:30mm}
+.linie.raute i::after{content:'';width:1.6mm;height:1.6mm;transform:translate(-50%,-50%);border-radius:50%;background:#d06138;box-shadow:none;padding:0}   /* Robert 29.10.: kein x, Punkt auf der Mitte */
+.linie.raute i{background:linear-gradient(90deg,rgba(208,97,56,0),rgba(208,97,56,.75) 18%,rgba(208,97,56,.75) calc(50% - 3.4mm),transparent calc(50% - 3.4mm),transparent calc(50% + 3.4mm),rgba(208,97,56,.75) calc(50% + 3.4mm),rgba(208,97,56,.75) 82%,rgba(208,97,56,0))}

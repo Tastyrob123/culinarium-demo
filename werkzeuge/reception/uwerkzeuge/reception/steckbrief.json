@@ -1,0 +1,504 @@
+{
+ "stand": 1793159628.4597652,
+ "bereiche": [
+  {
+   "bereich": "Culinarium",
+   "gruppen": [
+    {
+     "gruppe": "Auf einen Blick",
+     "zeilen": [
+      {
+       "fid": "2522ee7985",
+       "was": "Was es ist",
+       "angabe": "Food-Pairing-Abende an der langen Tafel im Walk on the Wild Side, Hannover-Linden",
+       "beleg": "Food-Pairing-Abende an der langen Tafel im Walk on the Wild Side, Hannover-Linden.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "64ab26bbcb",
+       "was": "Am Abend",
+       "angabe": "ein Menü mit fünf passenden Drinks an einer langen Tafel",
+       "beleg": "ein Menü mit fünf passenden Drinks an einer langen Tafel für vierzehn Gäste",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "a616d71711",
+       "was": "Wann",
+       "angabe": "an einzelnen Wochenenden, meist ein Freitag und der Samstag danach",
+       "beleg": "Culinarium gibt es an einzelnen Wochenenden, meist ein Freitag und der Samstag danach.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "05af1ce63e",
+       "was": "Beginn",
+       "angabe": "Freitag ab 19 Uhr, Samstag ab 17 Uhr",
+       "beleg": "Freitags ab 19 Uhr, samstags ab 17 Uhr.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "d9269e4318",
+       "was": "Plätze",
+       "angabe": "vierzehn an einer langen Tafel",
+       "beleg": "Vierzehn Gäste an einer langen Tafel.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "68557d731b",
+       "was": "Seit wann",
+       "angabe": "seit 2023: aus einem Pop-up an der Bar sind ausgebuchte Abende geworden",
+       "beleg": "Aus einem Pop-up an der Bar sind ausgebuchte Abende geworden.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Der Abend & Warteliste",
+   "gruppen": [
+    {
+     "gruppe": "So läuft ein Abend",
+     "zeilen": [
+      {
+       "fid": "54eb896e9b",
+       "was": "Aperitif",
+       "angabe": "zum Ankommen",
+       "beleg": "Aperitif",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "zum Ankommen"
+       ]
+      },
+      {
+       "fid": "ffbf937928",
+       "was": "Drei Gänge",
+       "angabe": "von Rudi, an jedem Abend neu",
+       "beleg": "von Rudi, an jedem Abend neu",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "7f6ed51d55",
+       "was": "Fünf Drinks",
+       "angabe": "Momos Signature Drinks, passend zum Essen",
+       "beleg": "Momos Signature Drinks, passend zum Essen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "4280f69c70",
+       "was": "Tasting und Schulung",
+       "angabe": "Momo erklärt jeden Drink am Tisch: Fatwashing, Milkwashing, Klärung mit Enzymen",
+       "beleg": "Momo erklärt jeden Drink am Tisch: Fatwashing, Milkwashing, Klärung mit Enzymen",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "9d934fa323",
+       "was": "Das Menü",
+       "angabe": "ändert sich mit jedem Abend; was es gibt, steht auf der Karte an deinem Platz",
+       "beleg": "Das Menü ändert sich mit jedem Abend.",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Was genau es gibt, steht auf der Karte an deinem Platz."
+       ]
+      }
+     ]
+    },
+    {
+     "gruppe": "Der nächste Abend",
+     "zeilen": [
+      {
+       "fid": "2fd9b282a0",
+       "was": "Termin",
+       "angabe": "steht noch nicht fest",
+       "beleg": "Der nächste Termin steht noch nicht fest.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "2d8581748a",
+       "was": "Warteliste",
+       "angabe": "wer sich einträgt, erfährt den nächsten Termin vor allen anderen",
+       "beleg": "Trag dich ein: Sobald der nächste Termin feststeht, erfährst du es vor allen anderen.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "5a4cd49276",
+       "was": "Eintragen",
+       "angabe": "auf «Der Abend»: Tag (Freitag, Samstag oder egal), Plätze, Name und E-Mail; im Fuss jeder Seite mit der E-Mail vormerken",
+       "beleg": "Egal",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Dein Platz am nächsten Abend."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Tickets & Preise",
+   "gruppen": [
+    {
+     "gruppe": "Preis",
+     "zeilen": [
+      {
+       "fid": "a6430beac7",
+       "was": "Zuletzt",
+       "angabe": "89,00 EUR am 25. und 26. September 2026, ausgebucht",
+       "beleg": "Zuletzt 89,00 EUR am 25. und 26. September 2026.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "dbd24d3878",
+       "was": "Darin",
+       "angabe": "drei Gänge, fünf Drinks, Tasting und Schulung",
+       "beleg": "Angekündigt waren drei Gänge, fünf Drinks, Tasting und Schulung.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Tickets",
+     "zeilen": [
+      {
+       "fid": "6fd3b62876",
+       "was": "Vorverkauf",
+       "angabe": "Tickets gibt es bisher nur im Vorverkauf, per PayPal; dazu eine Nachricht an @culinarium_hannover",
+       "beleg": "Tickets gibt es bisher nur im Vorverkauf.",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Tickets ausschließlich per Vorverkauf über PayPal."
+       ]
+      },
+      {
+       "fid": "ae2db5c064",
+       "was": "Zurückgeben",
+       "angabe": "nicht möglich: Tickets werden nicht rückerstattet",
+       "beleg": "Da die Plätze begrenzt sind, bitten wir um Verständnis, dass Tickets nicht rückerstattet werden können.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Drinks & Küche",
+   "gruppen": [
+    {
+     "gruppe": "Die Drinks",
+     "zeilen": [
+      {
+       "fid": "aaa08baf5d",
+       "was": "Wer",
+       "angabe": "Momo (Mohamed Ben Khelifa) mixt die Signature Drinks hinter der Bar des Hauses",
+       "beleg": "Die Drinks mixt Momo, hinter der Bar des Hauses.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "04b700ebef",
+       "was": "Fatwashing",
+       "angabe": "die Spirituose nimmt den Geschmack eines Fetts an, kalt gestellt wird das Fett wieder abgehoben",
+       "beleg": "Die Spirituose nimmt den Geschmack eines Fetts an; kalt gestellt, wird das Fett wieder abgehoben.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "0bcad735e8",
+       "was": "Milkwashing",
+       "angabe": "Milch bindet die Trübstoffe und wird abgefiltert, der Drink wird klar und weich",
+       "beleg": "Milch bindet die Trübstoffe und wird abgefiltert, der Drink wird klar und weich.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "bf82796124",
+       "was": "Enzyme",
+       "angabe": "lösen die Trübung aus Fruchtsaft, der Geschmack bleibt",
+       "beleg": "Enzyme lösen die Trübung aus Fruchtsaft, der Geschmack bleibt.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    },
+    {
+     "gruppe": "Die Küche",
+     "zeilen": [
+      {
+       "fid": "33901f1062",
+       "was": "Wer",
+       "angabe": "Rudi Napieraj kocht die drei Gänge",
+       "beleg": "In der Küche steht Rudi Napieraj.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "22846a9f0c",
+       "was": "Rudis Zeilen",
+       "angabe": "LAUCH / BLUMENKOHL / CHIPOTLE, so schreibt er seine Teller",
+       "beleg": "LAUCH / BLUMENKOHL / CHIPOTLE",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Seine Teller schreibt er in drei, vier Wörtern, so stehen sie auch hier."
+       ]
+      },
+      {
+       "fid": "c046ffe946",
+       "was": "Gemüse",
+       "angabe": "steht bei ihm oft im Mittelpunkt: Lauch, Blumenkohl, Kürbis, Rote Bete",
+       "beleg": "Gemüse steht bei ihm oft im Mittelpunkt: Lauch, Blumenkohl, Kürbis, Rote Bete.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Kontakt",
+   "gruppen": [
+    {
+     "gruppe": "So erreichst du das Team",
+     "zeilen": [
+      {
+       "fid": "1a43b44e04",
+       "was": "Culinarium",
+       "angabe": "keine eigene Telefonnummer und keine E-Mail-Adresse; Fragen zu einem Abend per Nachricht an @culinarium_hannover auf Instagram",
+       "beleg": "Culinarium hat keine eigene Telefonnummer und keine eigene E-Mail-Adresse.",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      },
+      {
+       "fid": "f6bb1bfd97",
+       "was": "Die Bar",
+       "angabe": "Telefon +49 163 3909578; reservieren per Nachricht oder Telefon",
+       "beleg": "Telefon +49 163 3909578.",
+       "datei": "gast_umgebung.txt",
+       "mehr": [
+        "Reservieren geht per Nachricht oder Telefon."
+       ]
+      },
+      {
+       "fid": "a820b2f818",
+       "was": "Instagram",
+       "angabe": "@culinarium_hannover, @walkonthewildside_hannover, @dirtychicken.hannover",
+       "beleg": "Instagram: @culinarium_hannover (Culinarium), @walkonthewildside_hannover (die Bar), @dirtychicken.hannover (Dirty Chicken).",
+       "datei": "gast_umgebung.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Das Haus (Bar)",
+   "gruppen": [
+    {
+     "gruppe": "Walk on the Wild Side",
+     "zeilen": [
+      {
+       "fid": "7f9807974c",
+       "was": "Was",
+       "angabe": "eine Nachbarschafts-Mixology-Bar in Linden, Haasemannstraße 13: Drinks, Events, private Veranstaltungen und Tastings",
+       "beleg": "eine Nachbarschafts-Mixology-Bar in Linden, Haasemannstraße 13. Drinks, Events, private Veranstaltungen und Tastings.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "c08f465ff5",
+       "was": "Ohne Karte",
+       "angabe": "wer an die Theke kommt, erzählt, was er mag, und bekommt seinen eigenen Drink",
+       "beleg": "Eine Getränkekarte gibt es im Walk on the Wild Side nicht.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "dd6446411a",
+       "was": "Geöffnet",
+       "angabe": "Donnerstag 19 bis 1 Uhr, Freitag und Samstag 19 bis 2 Uhr; Sonntag bis Mittwoch geschlossen",
+       "beleg": "Donnerstag 19 bis 1 Uhr · Freitag und Samstag 19 bis 2 Uhr",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Sonntag bis Mittwoch"
+       ]
+      },
+      {
+       "fid": "c3d4f06c52",
+       "was": "Eigene Feier",
+       "angabe": "die lange Tafel für eure eigene Feier; dazu Konzerte, DJ-Abende, Gastschichten",
+       "beleg": "die lange Tafel für eure eigene Feier",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "398daf3015",
+       "was": "Seit",
+       "angabe": "Ende Oktober 2017 in Linden; seit dem Reopening am 9. November 2023 führt Derya Ivkin die Bar",
+       "beleg": "Christoph Elbert und Verena Schindler eröffneten die Bar Ende Oktober 2017 in Linden",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Seit dem Reopening am 9. November 2023 führt Derya Ivkin sie."
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Team",
+   "gruppen": [
+    {
+     "gruppe": "Drei Leute, ein Haus",
+     "zeilen": [
+      {
+       "fid": "f7d448b11f",
+       "was": "Derya Ivkin",
+       "angabe": "führt die Bar, das Haus von Culinarium, seit dem Reopening im November 2023",
+       "beleg": "Führt das Walk on the Wild Side, das Haus von Culinarium, seit dem Reopening im November 2023.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "469bed48f9",
+       "was": "Momo",
+       "angabe": "Mohamed Ben Khelifa, mixt die Signature Drinks und erklärt jeden selbst",
+       "beleg": "Steht hinter der Bar und mixt die Signature Drinks, auch die fünf eines Culinarium-Abends, und erklärt jeden selbst.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "b9e81cbeed",
+       "was": "Rudi Napieraj",
+       "angabe": "kocht seit 2024 bei Culinarium und steht beim Pop-up Dirty Chicken in der Küche",
+       "beleg": "Kocht seit 2024 bei Culinarium, drei Gänge an der langen Tafel, und steht beim Pop-up Dirty Chicken in der Küche.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Der Weg",
+   "gruppen": [
+    {
+     "gruppe": "Hinfinden",
+     "zeilen": [
+      {
+       "fid": "1242db0cb0",
+       "was": "Adresse",
+       "angabe": "Walk on the Wild Side, Haasemannstraße 13, 30449 Hannover",
+       "beleg": "Haasemannstraße 13",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "30449 Hannover"
+       ]
+      },
+      {
+       "fid": "dd95ea7b9a",
+       "was": "Ecke",
+       "angabe": "Haasemannstraße, Ecke Rampenstraße, am Schild über der Hausecke",
+       "beleg": "Haasemannstraße, Ecke Rampenstraße",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "Am Schild über der Hausecke erkennst du die Bar schon von weitem."
+       ]
+      },
+      {
+       "fid": "758bf80316",
+       "was": "Plus Code",
+       "angabe": "9PC7+49 Hannover",
+       "beleg": "9PC7+49 Hannover",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Dirty Chicken",
+   "gruppen": [
+    {
+     "gruppe": "Das Pop-up",
+     "zeilen": [
+      {
+       "fid": "5d975a0db5",
+       "was": "Was",
+       "angabe": "Fried Chicken im Brötchen mit Paprika-Honig-Mayo und eingelegten Zwiebeln, Chunks mit Spicy Glaze und grüner Sauce, Pommes, Krautsalat, Dirty Drinks und Musik",
+       "beleg": "Im Brötchen mit Paprika-Honig-Mayo und eingelegten Zwiebeln, als Chunks mit Spicy Glaze und grüner Sauce.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "74ab53c459",
+       "was": "Wann",
+       "angabe": "nur an einzelnen Tagen; die Termine stehen auf Instagram @dirtychicken.hannover",
+       "beleg": "Nur an einzelnen Tagen.",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "@dirtychicken.hannover"
+       ]
+      },
+      {
+       "fid": "24ef551a52",
+       "was": "Opening",
+       "angabe": "30. Mai 2026, 14 bis 22 Uhr, im AM:PM Café im Tiedthof, Goseriede 4",
+       "beleg": "30. Mai 2026, 14 bis 22 Uhr",
+       "datei": "gast_wissen.txt",
+       "mehr": [
+        "AM:PM Café im Tiedthof, Goseriede 4"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bereich": "Alle Abende",
+   "gruppen": [
+    {
+     "gruppe": "Bisher",
+     "zeilen": [
+      {
+       "fid": "08c2d94600",
+       "was": "Erstes Pop-up",
+       "angabe": "20. Mai 2023 mit Momo",
+       "beleg": "Das erste Pop-up gab es am 20. Mai 2023 mit Momo.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "b045eb44ce",
+       "was": "Name",
+       "angabe": "2023 «by Momo x Christoph», seit Juli 2024 «by Momo x Rudi»",
+       "beleg": "2023 hiessen die Abende „by Momo x Christoph“, seit Juli 2024 „by Momo x Rudi“.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      },
+      {
+       "fid": "2843d4db14",
+       "was": "Plakate",
+       "angabe": "seit September 2023 bekommt jeder Abend ein eigenes Plakat",
+       "beleg": "Seit September 2023 bekommt jeder Culinarium-Abend ein eigenes Plakat.",
+       "datei": "gast_wissen.txt",
+       "mehr": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

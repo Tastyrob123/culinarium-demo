@@ -1,0 +1,12 @@
+/* pruefung-haus.css · Prüfseite des Stamms im Kleid von Culinarium (28.10.2026, aus dem Vorbild Schäfli). Werte nur aus kleid/culinarium.css;
+   hier Grund, Kopf und Schrift der Seite, damit sie aussieht wie das Werkzeug des Hauses und nicht wie der Stamm. */
+body.wsp{margin:0;background-color:var(--wo-papier);background-image:none;color:var(--wo-tinte);font:15px/1.55 var(--wo-sans);-webkit-font-smoothing:antialiased}
+.wsp-kopf{background:var(--wo-tapete);color:#fff;border-bottom:1px solid var(--wo-linie-d)}
+.wsp .wsp-kopf .kap,.wsp .wsp-kopf .kap span{color:var(--wo-gold);font-family:var(--wo-mono)}
+.wsp-kopf__titel{color:#fff;font-family:var(--wo-titel);font-weight:460;letter-spacing:0}
+.wsp-kopf a:not(.wsp-taste){color:var(--wo-g1)}
+.wsp-kopf .wsp-taste{color:var(--wo-tief)}
+.wsp h2.t-zwischen{font-family:var(--wo-titel);font-weight:460;color:var(--wo-tief)}
+.wsp .kap span{color:var(--wo-akzent)}
+.wsp summary,.wsp b,.wsp strong,.wsp .wsp-punkt__t{font-weight:400}
+.wsp .wsp-lex summary{font-family:var(--wo-titel);font-size:18px;font-variation-settings:"SOFT" 100}

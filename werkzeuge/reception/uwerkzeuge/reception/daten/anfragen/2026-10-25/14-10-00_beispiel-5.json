@@ -1,0 +1,33 @@
+{
+ "zeit": "2026-10-25T14:10:00+01:00",
+ "art": "feier",
+ "name": "Tim Becker",
+ "kontakt": "tim.becker@example.com",
+ "datum": "Freitag, 4. Dezember 2026",
+ "personen": 18,
+ "anliegen": "Weihnachtsfeier der Firma an der langen Tafel, 18 Personen.",
+ "sprache": "de",
+ "gespraech": "beispiel-5",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Wir sind 18 Kollegen und suchen etwas für die Weihnachtsfeier am 4. Dezember. Geht das bei euch?"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Die lange Tafel gibt es auch für eure eigene Feier; ob es für 18 passt, klärt das Team mit dir. Wie heisst du, und wie erreicht dich das Team?"
+  },
+  {
+   "rolle": "user",
+   "text": "Tim Becker, tim.becker@example.com"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Danke. Dies ist ein Entwurf von Tasty Studios: Die Anfrage geht nicht an das Team, sie liegt nur zur Ansicht im Gästebuch."
+  }
+ ],
+ "status": "gelesen",
+ "beispiel": true,
+ "abteilung": "Feiern",
+ "entwurf": null
+}

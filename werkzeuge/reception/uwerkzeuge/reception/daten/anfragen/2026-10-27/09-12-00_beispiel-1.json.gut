@@ -1,0 +1,36 @@
+{
+ "zeit": "2026-10-27T09:12:00+01:00",
+ "art": "warteliste",
+ "name": "Lena Hoffmann",
+ "kontakt": "lena.hoffmann@example.com",
+ "datum": "Freitag",
+ "personen": 2,
+ "anliegen": "Warteliste: Freitag, 2 Plätze",
+ "sprache": "de",
+ "gespraech": "beispiel-1",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Über ein Formular der Website (Seite Der Abend): Tag: Freitag, ab 19:00\nPlätze: 2"
+  }
+ ],
+ "status": "neu",
+ "beispiel": true,
+ "an": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+ "abteilung": "Warteliste",
+ "seite": "/abend.html#warteliste",
+ "seite_name": "Der Abend",
+ "web": true,
+ "nachricht": "Tag: Freitag, ab 19:00\nPlätze: 2",
+ "formular": "warteliste",
+ "uhrzeit": "ab 19:00",
+ "entwurf": {
+  "betreff": "Dein Platz an der Tafel (Probe)",
+  "text": "Hallo Lena Hoffmann,\n\ndanke für deine Nachricht. Dies ist ein Probe-Brief ohne KI, damit sich Gestalten, PDF und Text prüfen lassen.\n\nDer nächste Abend steht noch nicht fest [Termin eintragen]; sobald er feststeht, erfährst du es zuerst [Plätze prüfen].\n\nDamit wir deinen Platz in Ruhe vorbereiten können:\n- Freitag oder Samstag\n- wie viele Plätze\n\nBis bald an der Tafel\n\n[Name]\nCulinarium im Walk on the Wild Side",
+  "team": "Grundlage: Probe ohne KI\nOffen: Termin, Plätze",
+  "vorlage": "warteliste",
+  "absender": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+  "zeit": "2026-10-28T12:46:13+08:00",
+  "fassung": 1
+ }
+}

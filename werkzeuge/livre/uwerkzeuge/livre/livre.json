@@ -1,0 +1,5318 @@
+{
+ "haus": "Culinarium Hannover",
+ "ort": "Hannover-Linden",
+ "fotos": [
+  {
+   "k": "momo",
+   "t": {
+    "de": "An der Bar wird ein Drink geschüttelt"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 6630,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/momo-2400.webp",
+   "fm": "../../assets/bild/momo-1600.webp",
+   "fs": "../../assets/bild/momo-640.webp"
+  },
+  {
+   "k": "rudi",
+   "t": {
+    "de": "Der Koch erklärt am Tisch einen Teller"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/rudi-2400.webp",
+   "fm": "../../assets/bild/rudi-1600.webp",
+   "fs": "../../assets/bild/rudi-640.webp"
+  },
+  {
+   "k": "glas",
+   "t": {
+    "de": "Ein Drink im Nick-and-Nora-Glas auf dunklem Tisch"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/glas-2400.webp",
+   "fm": "../../assets/bild/glas-1600.webp",
+   "fs": "../../assets/bild/glas-640.webp"
+  },
+  {
+   "k": "tarte",
+   "t": {
+    "de": "Tarte mit roten Früchten und Eis"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3996,
+   "h": 5991,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/tarte-2400.webp",
+   "fm": "../../assets/bild/tarte-1600.webp",
+   "fs": "../../assets/bild/tarte-640.webp"
+  },
+  {
+   "k": "tafelleer",
+   "t": {
+    "de": "Die lange Tafel mit Kerzen, gedeckt"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4115,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/tafelleer-2400.webp",
+   "fm": "../../assets/bild/tafelleer-1600.webp",
+   "fs": "../../assets/bild/tafelleer-640.webp"
+  },
+  {
+   "k": "toast",
+   "t": {
+    "de": "Am Tisch wird angestoßen"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/toast-1600.webp",
+   "fm": "../../assets/bild/toast-1600.webp",
+   "fs": "../../assets/bild/toast-640.webp"
+  },
+  {
+   "k": "tablett",
+   "t": {
+    "de": "Ein Tablett mit Gläsern wird gebracht"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2530,
+   "h": 3373,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/tablett-2400.webp",
+   "fm": "../../assets/bild/tablett-1600.webp",
+   "fs": "../../assets/bild/tablett-640.webp"
+  },
+  {
+   "k": "schildnacht",
+   "t": {
+    "de": "Das Schild Walk on the Wild Side bei Nacht"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/schildnacht-2400.webp",
+   "fm": "../../assets/bild/schildnacht-1600.webp",
+   "fs": "../../assets/bild/schildnacht-640.webp"
+  },
+  {
+   "k": "barnacht",
+   "t": {
+    "de": "Die Fenster der Bar von außen bei Nacht"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/barnacht-1000.webp",
+   "fm": "../../assets/bild/barnacht-1000.webp",
+   "fs": "../../assets/bild/barnacht-640.webp"
+  },
+  {
+   "k": "anrichten",
+   "t": {
+    "de": "Der Koch richtet Teller an"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1825,
+   "h": 2738,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/anrichten-1600.webp",
+   "fm": "../../assets/bild/anrichten-1600.webp",
+   "fs": "../../assets/bild/anrichten-640.webp"
+  },
+  {
+   "k": "kerze1",
+   "t": {
+    "de": "Ein Drink wird bei Kerzenlicht erklärt"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kerze1-1000.webp",
+   "fm": "../../assets/bild/kerze1-1000.webp",
+   "fs": "../../assets/bild/kerze1-640.webp"
+  },
+  {
+   "k": "kerze2",
+   "t": {
+    "de": "Gäste und Kerzen an der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kerze2-1000.webp",
+   "fm": "../../assets/bild/kerze2-1000.webp",
+   "fs": "../../assets/bild/kerze2-640.webp"
+  },
+  {
+   "k": "kerze3",
+   "t": {
+    "de": "Blick durch die Tür auf die Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kerze3-1000.webp",
+   "fm": "../../assets/bild/kerze3-1000.webp",
+   "fs": "../../assets/bild/kerze3-640.webp"
+  },
+  {
+   "k": "theke",
+   "t": {
+    "de": "Hinter der Theke unter dem Negroni-Schriftzug"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/theke-2400.webp",
+   "fm": "../../assets/bild/theke-1600.webp",
+   "fs": "../../assets/bild/theke-640.webp"
+  },
+  {
+   "k": "theke2",
+   "t": {
+    "de": "An der Bar wird vorbereitet"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/theke2-2400.webp",
+   "fm": "../../assets/bild/theke2-1600.webp",
+   "fs": "../../assets/bild/theke2-640.webp"
+  },
+  {
+   "k": "m1",
+   "t": {
+    "de": "Gekühlte Schalen werden bereitgestellt"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m1-1600.webp",
+   "fm": "../../assets/bild/m1-1600.webp",
+   "fs": "../../assets/bild/m1-640.webp"
+  },
+  {
+   "k": "m2",
+   "t": {
+    "de": "Mit dem Brenner über den Tellern"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m2-1000.webp",
+   "fm": "../../assets/bild/m2-1000.webp",
+   "fs": "../../assets/bild/m2-640.webp"
+  },
+  {
+   "k": "m3",
+   "t": {
+    "de": "Gläser mit Goldrand"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m3-1600.webp",
+   "fm": "../../assets/bild/m3-1600.webp",
+   "fs": "../../assets/bild/m3-640.webp"
+  },
+  {
+   "k": "m4",
+   "t": {
+    "de": "Ein Löffel über dem Dessert"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m4-1000.webp",
+   "fm": "../../assets/bild/m4-1000.webp",
+   "fs": "../../assets/bild/m4-640.webp"
+  },
+  {
+   "k": "m5",
+   "t": {
+    "de": "Eine Schale mit Haselnüssen"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m5-1600.webp",
+   "fm": "../../assets/bild/m5-1600.webp",
+   "fs": "../../assets/bild/m5-640.webp"
+  },
+  {
+   "k": "m6",
+   "t": {
+    "de": "Mit dem Spritzbeutel am Fenster"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m6-1000.webp",
+   "fm": "../../assets/bild/m6-1000.webp",
+   "fs": "../../assets/bild/m6-640.webp"
+  },
+  {
+   "k": "m7",
+   "t": {
+    "de": "Hände an den Gläsern"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m7-1600.webp",
+   "fm": "../../assets/bild/m7-1600.webp",
+   "fs": "../../assets/bild/m7-640.webp"
+  },
+  {
+   "k": "m8",
+   "t": {
+    "de": "Sauce wird angegossen"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Auf der Website auch unter «ab_DCCf_ikoaGs_1»",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/m8-1600.webp",
+   "fm": "../../assets/bild/m8-1600.webp",
+   "fs": "../../assets/bild/m8-640.webp"
+  },
+  {
+   "k": "kueche",
+   "t": {
+    "de": "Zwei Köche von hinten am Pass"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kueche-1600.webp",
+   "fm": "../../assets/bild/kueche-1600.webp",
+   "fs": "../../assets/bild/kueche-640.webp"
+  },
+  {
+   "k": "service",
+   "t": {
+    "de": "Ein Teller wird an den Tisch gebracht"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/service-2400.webp",
+   "fm": "../../assets/bild/service-1600.webp",
+   "fs": "../../assets/bild/service-640.webp"
+  },
+  {
+   "k": "schildtag",
+   "t": {
+    "de": "Die Schilder Walk on the Wild Side an der Hausecke"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/schildtag-2400.webp",
+   "fm": "../../assets/bild/schildtag-1600.webp",
+   "fs": "../../assets/bild/schildtag-640.webp"
+  },
+  {
+   "k": "ecke",
+   "t": {
+    "de": "Die Hausecke mit der Bar"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ecke-1600.webp",
+   "fm": "../../assets/bild/ecke-1600.webp",
+   "fs": "../../assets/bild/ecke-640.webp"
+  },
+  {
+   "k": "fassade",
+   "t": {
+    "de": "Die Fenster der Bar am Abend"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/fassade-1600.webp",
+   "fm": "../../assets/bild/fassade-1600.webp",
+   "fs": "../../assets/bild/fassade-640.webp"
+  },
+  {
+   "k": "flur",
+   "t": {
+    "de": "Durch den Flur in die Bar"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/flur-1000.webp",
+   "fm": "../../assets/bild/flur-1000.webp",
+   "fs": "../../assets/bild/flur-640.webp"
+  },
+  {
+   "k": "anstossen",
+   "t": {
+    "de": "Am Tisch wird bei Kerzen angestoßen"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/anstossen-2400.webp",
+   "fm": "../../assets/bild/anstossen-1600.webp",
+   "fs": "../../assets/bild/anstossen-640.webp"
+  },
+  {
+   "k": "bar",
+   "t": {
+    "de": "An der Bar wird eingeschenkt"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/bar-1000.webp",
+   "fm": "../../assets/bild/bar-1000.webp",
+   "fs": "../../assets/bild/bar-640.webp"
+  },
+  {
+   "k": "klaeren",
+   "t": {
+    "de": "Ein Drink läuft durch den Filter in die Gläser"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/klaeren-1000.webp",
+   "fm": "../../assets/bild/klaeren-1000.webp",
+   "fs": "../../assets/bild/klaeren-640.webp"
+  },
+  {
+   "k": "g1",
+   "t": {
+    "de": "Drink mit Schaum und Garnitur"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 4754,
+   "h": 7127,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/g1-2400.webp",
+   "fm": "../../assets/bild/g1-1600.webp",
+   "fs": "../../assets/bild/g1-640.webp"
+  },
+  {
+   "k": "g2",
+   "t": {
+    "de": "Ein heller Drink mit Kräutern"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/g2-2400.webp",
+   "fm": "../../assets/bild/g2-1600.webp",
+   "fs": "../../assets/bild/g2-640.webp"
+  },
+  {
+   "k": "g3",
+   "t": {
+    "de": "Ein Longdrink mit Erdbeere"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Auf der Website auch unter «ab_DCCf_ikoaGs_0»",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/g3-1600.webp",
+   "fm": "../../assets/bild/g3-1600.webp",
+   "fs": "../../assets/bild/g3-640.webp"
+  },
+  {
+   "k": "g4",
+   "t": {
+    "de": "Ein Glas mit Feige"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/g4-1600.webp",
+   "fm": "../../assets/bild/g4-1600.webp",
+   "fs": "../../assets/bild/g4-640.webp"
+  },
+  {
+   "k": "g5",
+   "t": {
+    "de": "Ein Drink auf dem Holztresen"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2731,
+   "h": 3641,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/g5-2400.webp",
+   "fm": "../../assets/bild/g5-1600.webp",
+   "fs": "../../assets/bild/g5-640.webp"
+  },
+  {
+   "k": "pass",
+   "t": {
+    "de": "Am Pass werden die Teller angerichtet"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2732,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/pass-2400.webp",
+   "fm": "../../assets/bild/pass-1600.webp",
+   "fs": "../../assets/bild/pass-640.webp"
+  },
+  {
+   "k": "pass2",
+   "t": {
+    "de": "Zwei Köche am Pass"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1491,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/pass2-1000.webp",
+   "fm": "../../assets/bild/pass2-1000.webp",
+   "fs": "../../assets/bild/pass2-640.webp"
+  },
+  {
+   "k": "pass3",
+   "t": {
+    "de": "Eine Reihe Teller wird garniert"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1200,
+   "h": 1600,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/pass3-1000.webp",
+   "fm": "../../assets/bild/pass3-1000.webp",
+   "fs": "../../assets/bild/pass3-640.webp"
+  },
+  {
+   "k": "pass4",
+   "t": {
+    "de": "Die Sauce kommt auf den Teller"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2582,
+   "h": 1936,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/pass4-2400.webp",
+   "fm": "../../assets/bild/pass4-1600.webp",
+   "fs": "../../assets/bild/pass4-640.webp"
+  },
+  {
+   "k": "lauch",
+   "t": {
+    "de": "Lauch, Blumenkohl und Chipotle auf dem Teller"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "quer",
+   "w": 7952,
+   "h": 5304,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/lauch-2400.webp",
+   "fm": "../../assets/bild/lauch-1600.webp",
+   "fs": "../../assets/bild/lauch-640.webp"
+  },
+  {
+   "k": "roq1",
+   "t": {
+    "de": "Blumenkohl mit Roquefort, Kapern und Quinoa, daneben der Drink"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2615,
+   "h": 3487,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/roq1-2400.webp",
+   "fm": "../../assets/bild/roq1-1600.webp",
+   "fs": "../../assets/bild/roq1-640.webp"
+  },
+  {
+   "k": "roq2",
+   "t": {
+    "de": "Derselbe Teller, durch das Glas gesehen"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2923,
+   "h": 3897,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/roq2-2400.webp",
+   "fm": "../../assets/bild/roq2-1600.webp",
+   "fs": "../../assets/bild/roq2-640.webp"
+  },
+  {
+   "k": "hok1",
+   "t": {
+    "de": "Hokkaido mit Kürbiskernöl und Haselnuss im Glas"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/hok1-1000.webp",
+   "fm": "../../assets/bild/hok1-1000.webp",
+   "fs": "../../assets/bild/hok1-640.webp"
+  },
+  {
+   "k": "hok2",
+   "t": {
+    "de": "Das Dessert neben dem Drink"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/hok2-1000.webp",
+   "fm": "../../assets/bild/hok2-1000.webp",
+   "fs": "../../assets/bild/hok2-640.webp"
+  },
+  {
+   "k": "spag",
+   "t": {
+    "de": "Spaghetti-Eis mit Kiwi und weißer Schokolade"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2889,
+   "h": 3852,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/spag-2400.webp",
+   "fm": "../../assets/bild/spag-1600.webp",
+   "fs": "../../assets/bild/spag-640.webp"
+  },
+  {
+   "k": "t01",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t01-1600.webp",
+   "fm": "../../assets/bild/t01-1600.webp",
+   "fs": "../../assets/bild/t01-640.webp"
+  },
+  {
+   "k": "t02",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t02-1600.webp",
+   "fm": "../../assets/bild/t02-1600.webp",
+   "fs": "../../assets/bild/t02-640.webp"
+  },
+  {
+   "k": "t03",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t03-1000.webp",
+   "fm": "../../assets/bild/t03-1000.webp",
+   "fs": "../../assets/bild/t03-640.webp"
+  },
+  {
+   "k": "t04",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t04-1000.webp",
+   "fm": "../../assets/bild/t04-1000.webp",
+   "fs": "../../assets/bild/t04-640.webp"
+  },
+  {
+   "k": "t05",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t05-1000.webp",
+   "fm": "../../assets/bild/t05-1000.webp",
+   "fs": "../../assets/bild/t05-640.webp"
+  },
+  {
+   "k": "t06",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t06-1000.webp",
+   "fm": "../../assets/bild/t06-1000.webp",
+   "fs": "../../assets/bild/t06-640.webp"
+  },
+  {
+   "k": "t07",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t07-1000.webp",
+   "fm": "../../assets/bild/t07-1000.webp",
+   "fs": "../../assets/bild/t07-640.webp"
+  },
+  {
+   "k": "t08",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/t08-2400.webp",
+   "fm": "../../assets/bild/t08-1600.webp",
+   "fs": "../../assets/bild/t08-640.webp"
+  },
+  {
+   "k": "t09",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t09-1000.webp",
+   "fm": "../../assets/bild/t09-1000.webp",
+   "fs": "../../assets/bild/t09-640.webp"
+  },
+  {
+   "k": "t10",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t10-1000.webp",
+   "fm": "../../assets/bild/t10-1000.webp",
+   "fs": "../../assets/bild/t10-640.webp"
+  },
+  {
+   "k": "t11",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t11-1000.webp",
+   "fm": "../../assets/bild/t11-1000.webp",
+   "fs": "../../assets/bild/t11-640.webp"
+  },
+  {
+   "k": "t12",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2693,
+   "h": 3591,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t12-2400.webp",
+   "fm": "../../assets/bild/t12-1600.webp",
+   "fs": "../../assets/bild/t12-640.webp"
+  },
+  {
+   "k": "t13",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t13-1600.webp",
+   "fm": "../../assets/bild/t13-1600.webp",
+   "fs": "../../assets/bild/t13-640.webp"
+  },
+  {
+   "k": "t14",
+   "t": {
+    "de": "An der Tafel"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/t14-1000.webp",
+   "fm": "../../assets/bild/t14-1000.webp",
+   "fs": "../../assets/bild/t14-640.webp"
+  },
+  {
+   "k": "trio",
+   "t": {
+    "de": "Drei aus dem Team vor der Bar"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4004,
+   "h": 3003,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/trio-2400.webp",
+   "fm": "../../assets/bild/trio-1600.webp",
+   "fs": "../../assets/bild/trio-640.webp"
+  },
+  {
+   "k": "glaeser",
+   "t": {
+    "de": "Zwei Gläser stoßen an"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4115,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/glaeser-2400.webp",
+   "fm": "../../assets/bild/glaeser-1600.webp",
+   "fs": "../../assets/bild/glaeser-640.webp"
+  },
+  {
+   "k": "barlicht",
+   "t": {
+    "de": "Die Bar bei Nacht von draußen"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/barlicht-2400.webp",
+   "fm": "../../assets/bild/barlicht-1600.webp",
+   "fs": "../../assets/bild/barlicht-640.webp"
+  },
+  {
+   "k": "dc_burger",
+   "t": {
+    "de": "Ein Dirty-Chicken-Burger"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Dirty Chicken (@dirtychicken.hannover), Beitrag vom 3. Juni 2026, Foto von @focusonbiz_hannover",
+   "u": "https://www.instagram.com/p/DZId0KMoAtq/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_burger-1000.webp",
+   "fm": "../../assets/bild/dc_burger-1000.webp",
+   "fs": "../../assets/bild/dc_burger-640.webp"
+  },
+  {
+   "k": "dc_drink",
+   "t": {
+    "de": "Chicken und ein Drink"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Dirty Chicken (@dirtychicken.hannover), Beitrag vom 3. Juni 2026, Foto von @focusonbiz_hannover",
+   "u": "https://www.instagram.com/p/DZIo4FHIqRR/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_drink-1000.webp",
+   "fm": "../../assets/bild/dc_drink-1000.webp",
+   "fs": "../../assets/bild/dc_drink-640.webp"
+  },
+  {
+   "k": "dc_tisch",
+   "t": {
+    "de": "Ein Tisch voller Dirty Chicken"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Dirty Chicken (@dirtychicken.hannover), Beitrag vom 13. Juni 2026, Foto von @focusonbiz_hannover",
+   "u": "https://www.instagram.com/p/DZiug6EoMRr/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_tisch-1000.webp",
+   "fm": "../../assets/bild/dc_tisch-1000.webp",
+   "fs": "../../assets/bild/dc_tisch-640.webp"
+  },
+  {
+   "k": "dc_team",
+   "t": {
+    "de": "Die Mannschaft an der Theke"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Dirty Chicken (@dirtychicken.hannover), Beitrag vom 3. Juni 2026, Foto von @focusonbiz_hannover",
+   "u": "https://www.instagram.com/p/DZIjZWNCGZT/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_team-1000.webp",
+   "fm": "../../assets/bild/dc_team-1000.webp",
+   "fs": "../../assets/bild/dc_team-640.webp"
+  },
+  {
+   "k": "dc_plakat",
+   "t": {
+    "de": "Das Pop-up-Plakat von Dirty Chicken"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 640,
+   "h": 1136,
+   "art": "haus",
+   "q": "Instagram von Dirty Chicken (@dirtychicken.hannover), Beitrag vom 6. Juni 2026",
+   "u": "https://www.instagram.com/p/DZPYEOJIfVb/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_plakat-640.webp",
+   "fm": "../../assets/bild/dc_plakat-640.webp",
+   "fs": "../../assets/bild/dc_plakat-640.webp"
+  },
+  {
+   "k": "dc_plakat_ganz",
+   "t": {
+    "de": "Das Pop-up-Plakat von Dirty Chicken"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 640,
+   "h": 898,
+   "art": "haus",
+   "q": "Ausschnitt aus einem Foto von Rudi (das Team vor der Bar), für die Website zugeschnitten",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_plakat_ganz-640.webp",
+   "fm": "../../assets/bild/dc_plakat_ganz-640.webp",
+   "fs": "../../assets/bild/dc_plakat_ganz-640.webp"
+  },
+  {
+   "k": "beete",
+   "t": {
+    "de": "Rote Bete mit Schaum"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/beete-1600.webp",
+   "fm": "../../assets/bild/beete-1600.webp",
+   "fs": "../../assets/bild/beete-640.webp"
+  },
+  {
+   "k": "beeteglas",
+   "t": {
+    "de": "Der Drink zum Teller"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/beeteglas-1600.webp",
+   "fm": "../../assets/bild/beeteglas-1600.webp",
+   "fs": "../../assets/bild/beeteglas-640.webp"
+  },
+  {
+   "k": "karte",
+   "t": {
+    "de": "Die gedruckte Karte am Platz"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/karte-2400.webp",
+   "fm": "../../assets/bild/karte-1600.webp",
+   "fs": "../../assets/bild/karte-640.webp"
+  },
+  {
+   "k": "kartglas",
+   "t": {
+    "de": "Gläser und Karte auf dem Tisch"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4115,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/kartglas-2400.webp",
+   "fm": "../../assets/bild/kartglas-1600.webp",
+   "fs": "../../assets/bild/kartglas-640.webp"
+  },
+  {
+   "k": "trio2",
+   "t": {
+    "de": "Das Team vor der Bar"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 3072,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/trio2-2400.webp",
+   "fm": "../../assets/bild/trio2-1600.webp",
+   "fs": "../../assets/bild/trio2-640.webp"
+  },
+  {
+   "k": "team_alle",
+   "t": {
+    "de": "Das ganze Team hinter der Theke"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 4096,
+   "h": 4096,
+   "art": "haus",
+   "q": "Instagram von Dirty Chicken (@dirtychicken.hannover), Beitrag vom 3. Juni 2026. Mit KI auf 4K geschärft. Die KI verändert Gesichter leicht; für Druck und Werbung das Original beim Fotografen anfragen. Auf der Website auch unter «dc_team2»",
+   "u": "https://www.instagram.com/p/DZIjZWNCGZT/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/team_alle-2400.webp",
+   "fm": "../../assets/bild/team_alle-1600.webp",
+   "fs": "../../assets/bild/team_alle-640.webp"
+  },
+  {
+   "k": "w1",
+   "t": {
+    "de": "Am Fenster der Küche"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2741,
+   "h": 3655,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w1-2400.webp",
+   "fm": "../../assets/bild/w1-1600.webp",
+   "fs": "../../assets/bild/w1-640.webp"
+  },
+  {
+   "k": "w2",
+   "t": {
+    "de": "Im Service"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w2-1000.webp",
+   "fm": "../../assets/bild/w2-1000.webp",
+   "fs": "../../assets/bild/w2-640.webp"
+  },
+  {
+   "k": "w3",
+   "t": {
+    "de": "In der Bar"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w3-1000.webp",
+   "fm": "../../assets/bild/w3-1000.webp",
+   "fs": "../../assets/bild/w3-640.webp"
+  },
+  {
+   "k": "w4",
+   "t": {
+    "de": "Am Durchgang"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w4-1000.webp",
+   "fm": "../../assets/bild/w4-1000.webp",
+   "fs": "../../assets/bild/w4-640.webp"
+  },
+  {
+   "k": "w5",
+   "t": {
+    "de": "An einem Tisch der Bar"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w5-1000.webp",
+   "fm": "../../assets/bild/w5-1000.webp",
+   "fs": "../../assets/bild/w5-640.webp"
+  },
+  {
+   "k": "w6",
+   "t": {
+    "de": "Service an der Tafel"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w6-1600.webp",
+   "fm": "../../assets/bild/w6-1600.webp",
+   "fs": "../../assets/bild/w6-640.webp"
+  },
+  {
+   "k": "w7",
+   "t": {
+    "de": "Mit dem Brenner über dem Teller"
+   },
+   "b": "pass",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/w7-1000.webp",
+   "fm": "../../assets/bild/w7-1000.webp",
+   "fs": "../../assets/bild/w7-640.webp"
+  },
+  {
+   "k": "schildnah",
+   "t": {
+    "de": "Das Schild Walk on the Wild Side"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/schildnah-1000.webp",
+   "fm": "../../assets/bild/schildnah-1000.webp",
+   "fs": "../../assets/bild/schildnah-640.webp"
+  },
+  {
+   "k": "kanister",
+   "t": {
+    "de": "Glasballons mit Sirup und Saft an der Bar"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kanister-1000.webp",
+   "fm": "../../assets/bild/kanister-1000.webp",
+   "fs": "../../assets/bild/kanister-640.webp"
+  },
+  {
+   "k": "schaum",
+   "t": {
+    "de": "Schaum aus dem Siphon auf einem Drink"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2498,
+   "h": 3330,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/schaum-2400.webp",
+   "fm": "../../assets/bild/schaum-1600.webp",
+   "fs": "../../assets/bild/schaum-640.webp"
+  },
+  {
+   "k": "schaumglas",
+   "t": {
+    "de": "Ein Drink mit Schaum bei Kerzenlicht"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/schaumglas-2400.webp",
+   "fm": "../../assets/bild/schaumglas-1600.webp",
+   "fs": "../../assets/bild/schaumglas-640.webp"
+  },
+  {
+   "k": "coupe",
+   "t": {
+    "de": "Ein Drink und ein Dessert auf dem Tresen"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1366,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/coupe-1000.webp",
+   "fm": "../../assets/bild/coupe-1000.webp",
+   "fs": "../../assets/bild/coupe-640.webp"
+  },
+  {
+   "k": "baiser",
+   "t": {
+    "de": "Baiser mit Beeren"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/baiser-2400.webp",
+   "fm": "../../assets/bild/baiser-1600.webp",
+   "fs": "../../assets/bild/baiser-640.webp"
+  },
+  {
+   "k": "kopf_momo",
+   "t": {
+    "de": "Momo"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 800,
+   "h": 800,
+   "art": "haus",
+   "q": "Ausschnitt aus einem Foto von Rudi (das Team vor der Bar), für die Website zugeschnitten",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kopf_momo-640.webp",
+   "fm": "../../assets/bild/kopf_momo-640.webp",
+   "fs": "../../assets/bild/kopf_momo-640.webp"
+  },
+  {
+   "k": "kopf_derya",
+   "t": {
+    "de": "Derya Ivkin"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 800,
+   "h": 800,
+   "art": "haus",
+   "q": "Ausschnitt aus einem Foto von Rudi (das Team vor der Bar), für die Website zugeschnitten",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kopf_derya-640.webp",
+   "fm": "../../assets/bild/kopf_derya-640.webp",
+   "fs": "../../assets/bild/kopf_derya-640.webp"
+  },
+  {
+   "k": "kopf_rudi",
+   "t": {
+    "de": "Rudi Napieraj"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 800,
+   "h": 800,
+   "art": "haus",
+   "q": "Ausschnitt aus einem Foto von Rudi (das Team vor der Bar), für die Website zugeschnitten",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/kopf_rudi-640.webp",
+   "fm": "../../assets/bild/kopf_rudi-640.webp",
+   "fs": "../../assets/bild/kopf_rudi-640.webp"
+  },
+  {
+   "k": "momo_hoch",
+   "t": {
+    "de": "Momo vor der Bar"
+   },
+   "b": "team",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1680,
+   "h": 2241,
+   "art": "haus",
+   "q": "Ausschnitt aus einem Foto von Rudi (das Team vor der Bar), für die Website zugeschnitten",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/momo_hoch-1600.webp",
+   "fm": "../../assets/bild/momo_hoch-1600.webp",
+   "fs": "../../assets/bild/momo_hoch-640.webp"
+  },
+  {
+   "k": "pop23",
+   "t": {
+    "de": "Das Plakat zum ersten Pop-up am 20. Mai 2023"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1024,
+   "h": 1024,
+   "art": "haus",
+   "q": "Instagram von Momo (@momo012027), Beitrag vom 18. Mai 2023",
+   "u": "https://www.instagram.com/p/CsZTwYtMoyC/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/pop23-1000.webp",
+   "fm": "../../assets/bild/pop23-1000.webp",
+   "fs": "../../assets/bild/pop23-640.webp"
+  },
+  {
+   "k": "pl23",
+   "t": {
+    "de": "Das erste Culinarium-Plakat, September 2023"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Momo (@momo012027), Beitrag vom 8. September 2023. Auf der Website auch unter «p_CxNkFWTIvL2»",
+   "u": "https://www.instagram.com/p/Cw8KZ8Lsiiu/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/pl23-1000.webp",
+   "fm": "../../assets/bild/pl23-1000.webp",
+   "fs": "../../assets/bild/pl23-640.webp"
+  },
+  {
+   "k": "dn_burger",
+   "t": {
+    "de": "Ein Chicken-Sandwich im Papier"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2954,
+   "h": 3938,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_burger-2400.webp",
+   "fm": "../../assets/bild/dn_burger-1600.webp",
+   "fs": "../../assets/bild/dn_burger-640.webp"
+  },
+  {
+   "k": "dn_sosse",
+   "t": {
+    "de": "Grüne Sauce kommt auf die Chicken Chunks"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2721,
+   "h": 3628,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_sosse-2400.webp",
+   "fm": "../../assets/bild/dn_sosse-1600.webp",
+   "fs": "../../assets/bild/dn_sosse-640.webp"
+  },
+  {
+   "k": "dn_bar",
+   "t": {
+    "de": "Ein Drink und Chicken an der Theke"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_bar-1000.webp",
+   "fm": "../../assets/bild/dn_bar-1000.webp",
+   "fs": "../../assets/bild/dn_bar-640.webp"
+  },
+  {
+   "k": "dn_glas",
+   "t": {
+    "de": "Ein klarer Drink neben dem Chicken"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_glas-1000.webp",
+   "fm": "../../assets/bild/dn_glas-1000.webp",
+   "fs": "../../assets/bild/dn_glas-640.webp"
+  },
+  {
+   "k": "dn_karte",
+   "t": {
+    "de": "Die Karte von Dirty Chicken"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_karte-1000.webp",
+   "fm": "../../assets/bild/dn_karte-1000.webp",
+   "fs": "../../assets/bild/dn_karte-640.webp"
+  },
+  {
+   "k": "dn_tisch",
+   "t": {
+    "de": "Ein Tisch voller Dirty Chicken von oben"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2839,
+   "h": 3786,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_tisch-2400.webp",
+   "fm": "../../assets/bild/dn_tisch-1600.webp",
+   "fs": "../../assets/bild/dn_tisch-640.webp"
+  },
+  {
+   "k": "dn_drinks",
+   "t": {
+    "de": "Drinks, Pommes und Chicken auf dem Tisch"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2857,
+   "h": 3809,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_drinks-2400.webp",
+   "fm": "../../assets/bild/dn_drinks-1600.webp",
+   "fs": "../../assets/bild/dn_drinks-640.webp"
+  },
+  {
+   "k": "dn_salat",
+   "t": {
+    "de": "Krautsalat, Pommes und ein Longdrink"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/dn_salat-2400.webp",
+   "fm": "../../assets/bild/dn_salat-1600.webp",
+   "fs": "../../assets/bild/dn_salat-640.webp"
+  },
+  {
+   "k": "dn_team",
+   "t": {
+    "de": "Das Team hinter der Theke"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2048,
+   "h": 1536,
+   "art": "haus",
+   "q": "Foto von Rudi für Dirty Chicken (27. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dn_team-1600.webp",
+   "fm": "../../assets/bild/dn_team-1600.webp",
+   "fs": "../../assets/bild/dn_team-640.webp"
+  },
+  {
+   "k": "dc_zeichen",
+   "t": {
+    "de": "Das Logo von Dirty Chicken: das D mit Hühnerfuß über dem Schriftzug, Sandwiches & More"
+   },
+   "b": "dc",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Logo von Dirty Chicken, Original von Rudi (28. Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/dc_zeichen-1000.webp",
+   "fm": "../../assets/bild/dc_zeichen-1000.webp",
+   "fs": "../../assets/bild/dc_zeichen-640.webp"
+  },
+  {
+   "k": "glasnacht",
+   "t": {
+    "de": "Ein Drink im Stielglas auf dunklem Tisch"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 5304,
+   "h": 7952,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/glasnacht-2400.webp",
+   "fm": "../../assets/bild/glasnacht-1600.webp",
+   "fs": "../../assets/bild/glasnacht-640.webp"
+  },
+  {
+   "k": "flaschen",
+   "t": {
+    "de": "Flaschen an der Bar"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/flaschen-1000.webp",
+   "fm": "../../assets/bild/flaschen-1000.webp",
+   "fs": "../../assets/bild/flaschen-640.webp"
+  },
+  {
+   "k": "loch",
+   "t": {
+    "de": "Durch die Wand auf einen Tisch mit Kerzen"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/loch-2400.webp",
+   "fm": "../../assets/bild/loch-1600.webp",
+   "fs": "../../assets/bild/loch-640.webp"
+  },
+  {
+   "k": "lachen",
+   "t": {
+    "de": "Zwei Gäste lachen an der Bar"
+   },
+   "b": "tafel",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/lachen-2400.webp",
+   "fm": "../../assets/bild/lachen-1600.webp",
+   "fs": "../../assets/bild/lachen-640.webp"
+  },
+  {
+   "k": "r01",
+   "t": {
+    "de": "Blumenkohl mit Kürbis auf weißem Teller"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3024,
+   "h": 4032,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r01-2400.webp",
+   "fm": "../../assets/bild/r01-1600.webp",
+   "fs": "../../assets/bild/r01-640.webp"
+  },
+  {
+   "k": "r02",
+   "t": {
+    "de": "Ein Teller mit oranger Sauce auf dunklem Tisch"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r02-1000.webp",
+   "fm": "../../assets/bild/r02-1000.webp",
+   "fs": "../../assets/bild/r02-640.webp"
+  },
+  {
+   "k": "r03",
+   "t": {
+    "de": "Ein Teller und ein Glas Weißwein"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r03-1000.webp",
+   "fm": "../../assets/bild/r03-1000.webp",
+   "fs": "../../assets/bild/r03-640.webp"
+  },
+  {
+   "k": "r04",
+   "t": {
+    "de": "Ein Dessert im Glas mit Deckel"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026). Licht und Schärfe mit KI nachgeschärft",
+   "u": "",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/r04-2400.webp",
+   "fm": "../../assets/bild/r04-1600.webp",
+   "fs": "../../assets/bild/r04-640.webp"
+  },
+  {
+   "k": "r05",
+   "t": {
+    "de": "Ein Teller von oben, daneben die Karte"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3024,
+   "h": 4032,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r05-2400.webp",
+   "fm": "../../assets/bild/r05-1600.webp",
+   "fs": "../../assets/bild/r05-640.webp"
+  },
+  {
+   "k": "r06",
+   "t": {
+    "de": "Ein Gast am Teller"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "quer",
+   "w": 2048,
+   "h": 1638,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r06-1600.webp",
+   "fm": "../../assets/bild/r06-1600.webp",
+   "fs": "../../assets/bild/r06-640.webp"
+  },
+  {
+   "k": "r07",
+   "t": {
+    "de": "Ein Teller mit Röstzwiebeln"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r07-1600.webp",
+   "fm": "../../assets/bild/r07-1600.webp",
+   "fs": "../../assets/bild/r07-640.webp"
+  },
+  {
+   "k": "r08",
+   "t": {
+    "de": "Zwei Knödel mit Kräutern"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r08-1600.webp",
+   "fm": "../../assets/bild/r08-1600.webp",
+   "fs": "../../assets/bild/r08-640.webp"
+  },
+  {
+   "k": "r09",
+   "t": {
+    "de": "Ein Teller auf Porzellan mit grünem Rand"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3000,
+   "h": 4000,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r09-2400.webp",
+   "fm": "../../assets/bild/r09-1600.webp",
+   "fs": "../../assets/bild/r09-640.webp"
+  },
+  {
+   "k": "r10",
+   "t": {
+    "de": "Ein Teller und ein Glas von oben"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3026,
+   "h": 4034,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r10-2400.webp",
+   "fm": "../../assets/bild/r10-1600.webp",
+   "fs": "../../assets/bild/r10-640.webp"
+  },
+  {
+   "k": "r11",
+   "t": {
+    "de": "Ein gebackenes Dessert"
+   },
+   "b": "teller",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3072,
+   "h": 4096,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/r11-2400.webp",
+   "fm": "../../assets/bild/r11-1600.webp",
+   "fs": "../../assets/bild/r11-640.webp"
+  },
+  {
+   "k": "d1",
+   "t": {
+    "de": "Zwei Drinks auf dem Tisch"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/d1-1600.webp",
+   "fm": "../../assets/bild/d1-1600.webp",
+   "fs": "../../assets/bild/d1-640.webp"
+  },
+  {
+   "k": "d2",
+   "t": {
+    "de": "Ein heller Drink mit Minze"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/d2-1000.webp",
+   "fm": "../../assets/bild/d2-1000.webp",
+   "fs": "../../assets/bild/d2-640.webp"
+  },
+  {
+   "k": "d3",
+   "t": {
+    "de": "Ein Drink wird durch das Sieb gegossen"
+   },
+   "b": "drinks",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2562,
+   "h": 3416,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/d3-2400.webp",
+   "fm": "../../assets/bild/d3-1600.webp",
+   "fs": "../../assets/bild/d3-640.webp"
+  },
+  {
+   "k": "barneg",
+   "t": {
+    "de": "Die Rückwand der Bar mit dem Negroni-Schriftzug"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1638,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/barneg-1600.webp",
+   "fm": "../../assets/bild/barneg-1600.webp",
+   "fs": "../../assets/bild/barneg-640.webp"
+  },
+  {
+   "k": "ws00",
+   "t": {
+    "de": "Die Bar am Abend, Kerze auf dem Tisch"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 9. November 2023. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/CzbxDQMMKQ3/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws00-1000.webp",
+   "fm": "../../assets/bild/ws00-1000.webp",
+   "fs": "../../assets/bild/ws00-640.webp"
+  },
+  {
+   "k": "ws01",
+   "t": {
+    "de": "Hinter der Theke unter dem Negroni-Schriftzug"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 12. November 2023. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/CzjTFZSsFa5/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws01-1000.webp",
+   "fm": "../../assets/bild/ws01-1000.webp",
+   "fs": "../../assets/bild/ws01-640.webp"
+  },
+  {
+   "k": "ws02",
+   "t": {
+    "de": "Die Karte zum Valentinstag bei Kerzenlicht"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 7. Dezember 2023. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C0j1thbsh_y/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws02-1000.webp",
+   "fm": "../../assets/bild/ws02-1000.webp",
+   "fs": "../../assets/bild/ws02-640.webp"
+  },
+  {
+   "k": "ws03",
+   "t": {
+    "de": "Ein roter Drink vor der vollen Bar"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 720,
+   "h": 1280,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 1. Januar 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C1khavJsCR2/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws03-640.webp",
+   "fm": "../../assets/bild/ws03-640.webp",
+   "fs": "../../assets/bild/ws03-640.webp"
+  },
+  {
+   "k": "ws05",
+   "t": {
+    "de": "Gastschicht: zwei Bartender an der Theke"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 26. Februar 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C30ngEIrNQM/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws05-1000.webp",
+   "fm": "../../assets/bild/ws05-1000.webp",
+   "fs": "../../assets/bild/ws05-640.webp"
+  },
+  {
+   "k": "ws07",
+   "t": {
+    "de": "An der Theke, ein Drink und ein Fächer"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 8. März 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C4QsQhqM2s1/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws07-1000.webp",
+   "fm": "../../assets/bild/ws07-1000.webp",
+   "fs": "../../assets/bild/ws07-640.webp"
+  },
+  {
+   "k": "ws09",
+   "t": {
+    "de": "Konzert in der Bar"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 4096,
+   "h": 4059,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 26. März 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/p/C4-zC6JIO_Y/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ws09-2400.webp",
+   "fm": "../../assets/bild/ws09-1600.webp",
+   "fs": "../../assets/bild/ws09-640.webp"
+  },
+  {
+   "k": "ws10",
+   "t": {
+    "de": "Gast hinter der Bar"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 10. April 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C5ljExNs6kE/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws10-1000.webp",
+   "fm": "../../assets/bild/ws10-1000.webp",
+   "fs": "../../assets/bild/ws10-640.webp"
+  },
+  {
+   "k": "ws11",
+   "t": {
+    "de": "Gastschicht"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1295,
+   "h": 1619,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 16. Mai 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C7Bco_FsO1O/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws11-1000.webp",
+   "fm": "../../assets/bild/ws11-1000.webp",
+   "fs": "../../assets/bild/ws11-640.webp"
+  },
+  {
+   "k": "ws12",
+   "t": {
+    "de": "Ein Drink wird eingeschenkt"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4114,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 17. Mai 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/p/C7D_5dfsn1i/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ws12-2400.webp",
+   "fm": "../../assets/bild/ws12-1600.webp",
+   "fs": "../../assets/bild/ws12-640.webp"
+  },
+  {
+   "k": "ws13",
+   "t": {
+    "de": "Die Rückwand der Bar mit Negroni-Schriftzug"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 17. Mai 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C7D_5dfsn1i/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws13-1000.webp",
+   "fm": "../../assets/bild/ws13-1000.webp",
+   "fs": "../../assets/bild/ws13-640.webp"
+  },
+  {
+   "k": "ws14",
+   "t": {
+    "de": "Duo im Konzert"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1799,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 7. Juni 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C76ERk_oJal/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws14-1000.webp",
+   "fm": "../../assets/bild/ws14-1000.webp",
+   "fs": "../../assets/bild/ws14-640.webp"
+  },
+  {
+   "k": "ws15",
+   "t": {
+    "de": "Gitarre beim Konzert"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 7. Juni 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C76ERk_oJal/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws15-1000.webp",
+   "fm": "../../assets/bild/ws15-1000.webp",
+   "fs": "../../assets/bild/ws15-640.webp"
+  },
+  {
+   "k": "ws16",
+   "t": {
+    "de": "Sängerin beim Konzert"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 7. Juni 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C76ERk_oJal/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws16-1000.webp",
+   "fm": "../../assets/bild/ws16-1000.webp",
+   "fs": "../../assets/bild/ws16-640.webp"
+  },
+  {
+   "k": "ws19",
+   "t": {
+    "de": "Konzert mit Gitarre"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1066,
+   "h": 1333,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 25. August 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/C_GTXkOsQLH/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws19-1000.webp",
+   "fm": "../../assets/bild/ws19-1000.webp",
+   "fs": "../../assets/bild/ws19-640.webp"
+  },
+  {
+   "k": "ws20",
+   "t": {
+    "de": "Gast-Bartender mit Drink"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 14. Oktober 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DBHXxmYM0vY/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws20-1000.webp",
+   "fm": "../../assets/bild/ws20-1000.webp",
+   "fs": "../../assets/bild/ws20-640.webp"
+  },
+  {
+   "k": "ws21",
+   "t": {
+    "de": "Plakat Anniversary Night, 30. November 2024"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 10. November 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DCMDSnpIOHt/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws21-1000.webp",
+   "fm": "../../assets/bild/ws21-1000.webp",
+   "fs": "../../assets/bild/ws21-640.webp"
+  },
+  {
+   "k": "ws25",
+   "t": {
+    "de": "Plakat Silvester-Frühshoppen"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1350,
+   "h": 1687,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 21. November 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DCpKG5ossk4/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws25-1000.webp",
+   "fm": "../../assets/bild/ws25-1000.webp",
+   "fs": "../../assets/bild/ws25-640.webp"
+  },
+  {
+   "k": "ws28",
+   "t": {
+    "de": "Ein Glas vor der vollen Bar"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 18. Dezember 2024. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DDuvG1Rs7kq/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws28-1000.webp",
+   "fm": "../../assets/bild/ws28-1000.webp",
+   "fs": "../../assets/bild/ws28-640.webp"
+  },
+  {
+   "k": "ws29",
+   "t": {
+    "de": "Gläser beim Klären"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1200,
+   "h": 1500,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 15. Januar 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DE1rV7YML5A/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws29-1000.webp",
+   "fm": "../../assets/bild/ws29-1000.webp",
+   "fs": "../../assets/bild/ws29-640.webp"
+  },
+  {
+   "k": "ws30",
+   "t": {
+    "de": "Kleine Teller zum Teilen"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1200,
+   "h": 1500,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 15. Januar 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DE1rV7YML5A/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws30-1000.webp",
+   "fm": "../../assets/bild/ws30-1000.webp",
+   "fs": "../../assets/bild/ws30-640.webp"
+  },
+  {
+   "k": "ws31",
+   "t": {
+    "de": "Ein Drink im Gegenlicht"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1799,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 15. Januar 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DE1rV7YML5A/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws31-1000.webp",
+   "fm": "../../assets/bild/ws31-1000.webp",
+   "fs": "../../assets/bild/ws31-640.webp"
+  },
+  {
+   "k": "ws32",
+   "t": {
+    "de": "Plakat Tanz in den Mai"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 13. April 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DIZXgSVMXWs/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws32-1000.webp",
+   "fm": "../../assets/bild/ws32-1000.webp",
+   "fs": "../../assets/bild/ws32-640.webp"
+  },
+  {
+   "k": "ws33",
+   "t": {
+    "de": "Flaschen auf dem Tresen"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1440,
+   "h": 960,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 16. Juni 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DK-GT7TITWD/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws33-1000.webp",
+   "fm": "../../assets/bild/ws33-1000.webp",
+   "fs": "../../assets/bild/ws33-640.webp"
+  },
+  {
+   "k": "ws35",
+   "t": {
+    "de": "Das Schild Wild Side bei Nacht"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "quer",
+   "w": 1440,
+   "h": 963,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 16. Juni 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DK-GT7TITWD/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws35-1000.webp",
+   "fm": "../../assets/bild/ws35-1000.webp",
+   "fs": "../../assets/bild/ws35-640.webp"
+  },
+  {
+   "k": "ws37",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 6. September"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1350,
+   "h": 1687,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 31. August 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DOCMXG-iC59/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws37-1000.webp",
+   "fm": "../../assets/bild/ws37-1000.webp",
+   "fs": "../../assets/bild/ws37-640.webp"
+  },
+  {
+   "k": "ws39",
+   "t": {
+    "de": "Plakat Two Years, 5. Dezember 2025"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1920,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 2. Oktober 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DPTyybwiFIB/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws39-1000.webp",
+   "fm": "../../assets/bild/ws39-1000.webp",
+   "fs": "../../assets/bild/ws39-640.webp"
+  },
+  {
+   "k": "ws40",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 22. November"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1350,
+   "h": 1687,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 17. November 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium. Auf der Website auch unter «ws47»",
+   "u": "https://www.instagram.com/p/DRK_iVDiChc/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws40-1000.webp",
+   "fm": "../../assets/bild/ws40-1000.webp",
+   "fs": "../../assets/bild/ws40-640.webp"
+  },
+  {
+   "k": "ws41",
+   "t": {
+    "de": "Plakat Silvester-Frühshoppen"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1920,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 25. November 2025. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DRfZEXXiHLj/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws41-1000.webp",
+   "fm": "../../assets/bild/ws41-1000.webp",
+   "fs": "../../assets/bild/ws41-640.webp"
+  },
+  {
+   "k": "ws42",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 24. Januar"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1350,
+   "h": 1687,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 14. Januar 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DTf-jwUCObe/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws42-1000.webp",
+   "fm": "../../assets/bild/ws42-1000.webp",
+   "fs": "../../assets/bild/ws42-640.webp"
+  },
+  {
+   "k": "ws43",
+   "t": {
+    "de": "Wild Side x Rudi in Love"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 3. Februar 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DUT3HDnCMo1/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws43-1000.webp",
+   "fm": "../../assets/bild/ws43-1000.webp",
+   "fs": "../../assets/bild/ws43-640.webp"
+  },
+  {
+   "k": "ws44",
+   "t": {
+    "de": "Karte Drunk in Love"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 3. Februar 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DUT3HDnCMo1/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws44-1000.webp",
+   "fm": "../../assets/bild/ws44-1000.webp",
+   "fs": "../../assets/bild/ws44-640.webp"
+  },
+  {
+   "k": "ws45",
+   "t": {
+    "de": "Karte Dishes in Love"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 3. Februar 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DUT3HDnCMo1/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws45-1000.webp",
+   "fm": "../../assets/bild/ws45-1000.webp",
+   "fs": "../../assets/bild/ws45-640.webp"
+  },
+  {
+   "k": "ws48",
+   "t": {
+    "de": "Plakat Mystic Mella"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1920,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 16. März 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DV9QHR0iE4V/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws48-1000.webp",
+   "fm": "../../assets/bild/ws48-1000.webp",
+   "fs": "../../assets/bild/ws48-640.webp"
+  },
+  {
+   "k": "ws49",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 16. Mai"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1814,
+   "h": 2418,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 11. Mai 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DYNDzMgIR7M/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws49-1600.webp",
+   "fm": "../../assets/bild/ws49-1600.webp",
+   "fs": "../../assets/bild/ws49-640.webp"
+  },
+  {
+   "k": "ws50",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 5. September"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1136,
+   "h": 1440,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 2. September 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DcxmPV3oZbA/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws50-1000.webp",
+   "fm": "../../assets/bild/ws50-1000.webp",
+   "fs": "../../assets/bild/ws50-640.webp"
+  },
+  {
+   "k": "ws51",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 3. Oktober"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1584,
+   "h": 2112,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 29. September 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/Dd3Vx4lolo3/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws51-1000.webp",
+   "fm": "../../assets/bild/ws51-1000.webp",
+   "fs": "../../assets/bild/ws51-640.webp"
+  },
+  {
+   "k": "ws52",
+   "t": {
+    "de": "Plakat SESSION Sip & Sounds, 17. Oktober"
+   },
+   "b": "wildside",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1408,
+   "h": 1888,
+   "art": "fremd",
+   "q": "Instagram der Bar Walk on the Wild Side (@walkonthewildside_hannover), Beitrag vom 13. Oktober 2026. Die Bar ist der Ort der Abende, gehört aber nicht zu Culinarium",
+   "u": "https://www.instagram.com/p/DecaAh8oxYw/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ws52-1000.webp",
+   "fm": "../../assets/bild/ws52-1000.webp",
+   "fs": "../../assets/bild/ws52-640.webp"
+  },
+  {
+   "k": "fensterdraussen",
+   "t": {
+    "de": "Von draußen durchs Fenster der Bar"
+   },
+   "b": "ort",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1536,
+   "h": 2048,
+   "art": "haus",
+   "q": "Foto von Rudi, aus seinen Dateien für Culinarium (Oktober 2026)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/fensterdraussen-1000.webp",
+   "fm": "../../assets/bild/fensterdraussen-1000.webp",
+   "fs": "../../assets/bild/fensterdraussen-640.webp"
+  },
+  {
+   "k": "plakatwand",
+   "t": {
+    "de": "Alle Culinarium-Plakate seit dem ersten Pop-up an einer dunklen Wand, der letzte Platz ist noch frei"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quer",
+   "w": 3000,
+   "h": 1800,
+   "art": "haus",
+   "q": "Alle Plakate von Culinarium, für die Website nebeneinander an eine dunkle Wand gesetzt (keine eigene Aufnahme)",
+   "u": "",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/plakatwand-2400.webp",
+   "fm": "../../assets/bild/plakatwand-1600.webp",
+   "fs": "../../assets/bild/plakatwand-640.webp"
+  },
+  {
+   "k": "ab_CxNkFWTIvL2_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 16. September 2023",
+   "u": "https://www.instagram.com/p/CxQg56AItz6/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CxNkFWTIvL2_0-1000.webp",
+   "fm": "../../assets/bild/ab_CxNkFWTIvL2_0-1000.webp",
+   "fs": "../../assets/bild/ab_CxNkFWTIvL2_0-640.webp"
+  },
+  {
+   "k": "ab_CxNkFWTIvL2_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3291,
+   "h": 4114,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 16. September 2023. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/p/CxQg56AItz6/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ab_CxNkFWTIvL2_1-2400.webp",
+   "fm": "../../assets/bild/ab_CxNkFWTIvL2_1-1600.webp",
+   "fs": "../../assets/bild/ab_CxNkFWTIvL2_1-640.webp"
+  },
+  {
+   "k": "ab_ohne_2023_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. September 2023",
+   "u": "https://www.instagram.com/p/CxnB2TiM4Iy/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_ohne_2023_0-1000.webp",
+   "fm": "../../assets/bild/ab_ohne_2023_0-1000.webp",
+   "fs": "../../assets/bild/ab_ohne_2023_0-640.webp"
+  },
+  {
+   "k": "ab_ohne_2023_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. September 2023",
+   "u": "https://www.instagram.com/p/CxnB2TiM4Iy/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_ohne_2023_1-1000.webp",
+   "fm": "../../assets/bild/ab_ohne_2023_1-1000.webp",
+   "fs": "../../assets/bild/ab_ohne_2023_1-640.webp"
+  },
+  {
+   "k": "ab_ohne_2023_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. September 2023",
+   "u": "https://www.instagram.com/p/CxnB2TiM4Iy/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_ohne_2023_2-1000.webp",
+   "fm": "../../assets/bild/ab_ohne_2023_2-1000.webp",
+   "fs": "../../assets/bild/ab_ohne_2023_2-640.webp"
+  },
+  {
+   "k": "ab_ohne_2023_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. September 2023",
+   "u": "https://www.instagram.com/p/CxnB2TiM4Iy/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_ohne_2023_3-1000.webp",
+   "fm": "../../assets/bild/ab_ohne_2023_3-1000.webp",
+   "fs": "../../assets/bild/ab_ohne_2023_3-640.webp"
+  },
+  {
+   "k": "ab_ohne_2023_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1110,
+   "h": 1414,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 22. September 2023, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/18043303768543094/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_ohne_2023_4-1000.webp",
+   "fm": "../../assets/bild/ab_ohne_2023_4-1000.webp",
+   "fs": "../../assets/bild/ab_ohne_2023_4-640.webp"
+  },
+  {
+   "k": "ab_ohne_2023_5",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 778,
+   "h": 862,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 22. September 2023, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/18043303768543094/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_ohne_2023_5-640.webp",
+   "fm": "../../assets/bild/ab_ohne_2023_5-640.webp",
+   "fs": "../../assets/bild/ab_ohne_2023_5-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. Oktober 2023",
+   "u": "https://www.instagram.com/p/Cy0KSO7MlDA/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_0-1000.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_0-1000.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_0-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. Oktober 2023",
+   "u": "https://www.instagram.com/p/Cy0KSO7MlDA/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_1-1000.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_1-1000.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_1-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. Oktober 2023",
+   "u": "https://www.instagram.com/p/Cy0KSO7MlDA/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_2-1000.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_2-1000.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_2-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 25. Oktober 2023",
+   "u": "https://www.instagram.com/p/Cy0KSO7MlDA/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_3-1000.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_3-1000.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_3-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 881,
+   "h": 1214,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 21. Oktober 2023, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/18031229551623138/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_4-640.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_4-640.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_4-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_5",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 881,
+   "h": 1114,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 21. Oktober 2023, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/18031229551623138/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_5-640.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_5-640.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_5-640.webp"
+  },
+  {
+   "k": "ab_CyT32RTMB4d_6",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 881,
+   "h": 1311,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 21. Oktober 2023, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/18031229551623138/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CyT32RTMB4d_6-640.webp",
+   "fm": "../../assets/bild/ab_CyT32RTMB4d_6-640.webp",
+   "fs": "../../assets/bild/ab_CyT32RTMB4d_6-640.webp"
+  },
+  {
+   "k": "ab_CzMcqNcMCqG_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 12. Dezember 2023",
+   "u": "https://www.instagram.com/p/C0w5_ZEsfY5/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CzMcqNcMCqG_0-1000.webp",
+   "fm": "../../assets/bild/ab_CzMcqNcMCqG_0-1000.webp",
+   "fs": "../../assets/bild/ab_CzMcqNcMCqG_0-640.webp"
+  },
+  {
+   "k": "ab_CzMcqNcMCqG_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 12. Dezember 2023",
+   "u": "https://www.instagram.com/p/C0w5_ZEsfY5/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CzMcqNcMCqG_1-1000.webp",
+   "fm": "../../assets/bild/ab_CzMcqNcMCqG_1-1000.webp",
+   "fs": "../../assets/bild/ab_CzMcqNcMCqG_1-640.webp"
+  },
+  {
+   "k": "ab_CzMcqNcMCqG_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 12. Dezember 2023",
+   "u": "https://www.instagram.com/p/C0w5_ZEsfY5/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CzMcqNcMCqG_2-1000.webp",
+   "fm": "../../assets/bild/ab_CzMcqNcMCqG_2-1000.webp",
+   "fs": "../../assets/bild/ab_CzMcqNcMCqG_2-640.webp"
+  },
+  {
+   "k": "ab_CzMcqNcMCqG_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 12. Dezember 2023",
+   "u": "https://www.instagram.com/p/C0w5_ZEsfY5/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CzMcqNcMCqG_3-1000.webp",
+   "fm": "../../assets/bild/ab_CzMcqNcMCqG_3-1000.webp",
+   "fs": "../../assets/bild/ab_CzMcqNcMCqG_3-640.webp"
+  },
+  {
+   "k": "ab_CzMcqNcMCqG_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 881,
+   "h": 1022,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 18. November 2023, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/17852298117100707/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_CzMcqNcMCqG_4-640.webp",
+   "fm": "../../assets/bild/ab_CzMcqNcMCqG_4-640.webp",
+   "fs": "../../assets/bild/ab_CzMcqNcMCqG_4-640.webp"
+  },
+  {
+   "k": "ab_C0w6iuCMcnF_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 9. Januar 2024",
+   "u": "https://www.instagram.com/p/C15hZ_zIh60/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C0w6iuCMcnF_0-1000.webp",
+   "fm": "../../assets/bild/ab_C0w6iuCMcnF_0-1000.webp",
+   "fs": "../../assets/bild/ab_C0w6iuCMcnF_0-640.webp"
+  },
+  {
+   "k": "ab_C0w6iuCMcnF_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 9. Januar 2024",
+   "u": "https://www.instagram.com/p/C15hZ_zIh60/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C0w6iuCMcnF_1-1000.webp",
+   "fm": "../../assets/bild/ab_C0w6iuCMcnF_1-1000.webp",
+   "fs": "../../assets/bild/ab_C0w6iuCMcnF_1-640.webp"
+  },
+  {
+   "k": "ab_C0w6iuCMcnF_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 9. Januar 2024",
+   "u": "https://www.instagram.com/p/C15hZ_zIh60/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C0w6iuCMcnF_2-1000.webp",
+   "fm": "../../assets/bild/ab_C0w6iuCMcnF_2-1000.webp",
+   "fs": "../../assets/bild/ab_C0w6iuCMcnF_2-640.webp"
+  },
+  {
+   "k": "ab_C0w6iuCMcnF_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1800,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 9. Januar 2024",
+   "u": "https://www.instagram.com/p/C15hZ_zIh60/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C0w6iuCMcnF_3-1000.webp",
+   "fm": "../../assets/bild/ab_C0w6iuCMcnF_3-1000.webp",
+   "fs": "../../assets/bild/ab_C0w6iuCMcnF_3-640.webp"
+  },
+  {
+   "k": "ab_C0w6iuCMcnF_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 9. Januar 2024",
+   "u": "https://www.instagram.com/p/C15hZ_zIh60/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C0w6iuCMcnF_4-1000.webp",
+   "fm": "../../assets/bild/ab_C0w6iuCMcnF_4-1000.webp",
+   "fs": "../../assets/bild/ab_C0w6iuCMcnF_4-640.webp"
+  },
+  {
+   "k": "ab_C0w6iuCMcnF_5",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1080,
+   "h": 1350,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 9. Januar 2024",
+   "u": "https://www.instagram.com/p/C15hZ_zIh60/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C0w6iuCMcnF_5-1000.webp",
+   "fm": "../../assets/bild/ab_C0w6iuCMcnF_5-1000.webp",
+   "fs": "../../assets/bild/ab_C0w6iuCMcnF_5-640.webp"
+  },
+  {
+   "k": "ab_C17kqAXLfs__0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2821,
+   "h": 4115,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 29. Januar 2024, für die Website ohne Schrift zugeschnitten. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/p/C2sFkpSscHP/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ab_C17kqAXLfs__0-2400.webp",
+   "fm": "../../assets/bild/ab_C17kqAXLfs__0-1600.webp",
+   "fs": "../../assets/bild/ab_C17kqAXLfs__0-640.webp"
+  },
+  {
+   "k": "ab_C56bJeds8PF_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 3637,
+   "h": 4115,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 27. April 2024, für die Website ohne Namen und Schrift zugeschnitten. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/stories/highlights/18001739309358299/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ab_C56bJeds8PF_0-2400.webp",
+   "fm": "../../assets/bild/ab_C56bJeds8PF_0-1600.webp",
+   "fs": "../../assets/bild/ab_C56bJeds8PF_0-640.webp"
+  },
+  {
+   "k": "ab_C56bJeds8PF_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 969,
+   "h": 1483,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 29. April 2024, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/18001739309358299/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C56bJeds8PF_1-640.webp",
+   "fm": "../../assets/bild/ab_C56bJeds8PF_1-640.webp",
+   "fs": "../../assets/bild/ab_C56bJeds8PF_1-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 890,
+   "h": 1252,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 20. Juli 2024, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/17998169033694589/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_0-640.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_0-640.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_0-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_1-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_1-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_1-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_2-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_2-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_2-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_3-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_3-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_3-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_4-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_4-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_4-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_5",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_5-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_5-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_5-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_6",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_6-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_6-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_6-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_7",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_7-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_7-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_7-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_8",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_8-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_8-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_8-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_9",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_9-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_9-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_9-640.webp"
+  },
+  {
+   "k": "ab_C8cgYVSouVT_10",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 25. Juli 2024",
+   "u": "https://www.instagram.com/p/C92atzHohOo/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_C8cgYVSouVT_10-1000.webp",
+   "fm": "../../assets/bild/ab_C8cgYVSouVT_10-1000.webp",
+   "fs": "../../assets/bild/ab_C8cgYVSouVT_10-640.webp"
+  },
+  {
+   "k": "abr_C8cgYVSouVT_1",
+   "t": {
+    "de": "ZWIEBELTARTELETT"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 30. Juli 2024",
+   "u": "https://www.instagram.com/p/C-DxMFqs5Pz/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/abr_C8cgYVSouVT_1-1000.webp",
+   "fm": "../../assets/bild/abr_C8cgYVSouVT_1-1000.webp",
+   "fs": "../../assets/bild/abr_C8cgYVSouVT_1-640.webp"
+  },
+  {
+   "k": "abr_C8cgYVSouVT_2",
+   "t": {
+    "de": "ROTE BEETE / ZWIEBEL / PARMESAN"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 2. August 2024",
+   "u": "https://www.instagram.com/p/C-Kj2bGMcOb/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/abr_C8cgYVSouVT_2-1000.webp",
+   "fm": "../../assets/bild/abr_C8cgYVSouVT_2-1000.webp",
+   "fs": "../../assets/bild/abr_C8cgYVSouVT_2-640.webp"
+  },
+  {
+   "k": "abr_C8cgYVSouVT_3",
+   "t": {
+    "de": "HOKKAIDO / KÜRBISKERN ÖL / HASELNUSS"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 3. August 2024",
+   "u": "https://www.instagram.com/p/C-OFq0msPA7/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/abr_C8cgYVSouVT_3-1000.webp",
+   "fm": "../../assets/bild/abr_C8cgYVSouVT_3-1000.webp",
+   "fs": "../../assets/bild/abr_C8cgYVSouVT_3-640.webp"
+  },
+  {
+   "k": "ab_DCCf_ikoaGs_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1799,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 4. Februar 2025",
+   "u": "https://www.instagram.com/p/DFqZn2UMYMV/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DCCf_ikoaGs_2-1000.webp",
+   "fm": "../../assets/bild/ab_DCCf_ikoaGs_2-1000.webp",
+   "fs": "../../assets/bild/ab_DCCf_ikoaGs_2-640.webp"
+  },
+  {
+   "k": "ab_DCCf_ikoaGs_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1799,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 4. Februar 2025",
+   "u": "https://www.instagram.com/p/DFqZn2UMYMV/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DCCf_ikoaGs_3-1000.webp",
+   "fm": "../../assets/bild/ab_DCCf_ikoaGs_3-1000.webp",
+   "fs": "../../assets/bild/ab_DCCf_ikoaGs_3-640.webp"
+  },
+  {
+   "k": "ab_DCCf_ikoaGs_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1799,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 4. Februar 2025",
+   "u": "https://www.instagram.com/p/DFqZn2UMYMV/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DCCf_ikoaGs_4-1000.webp",
+   "fm": "../../assets/bild/ab_DCCf_ikoaGs_4-1000.webp",
+   "fs": "../../assets/bild/ab_DCCf_ikoaGs_4-640.webp"
+  },
+  {
+   "k": "ab_DCCf_ikoaGs_5",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1799,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 4. Februar 2025",
+   "u": "https://www.instagram.com/p/DFqZn2UMYMV/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DCCf_ikoaGs_5-1000.webp",
+   "fm": "../../assets/bild/ab_DCCf_ikoaGs_5-1000.webp",
+   "fs": "../../assets/bild/ab_DCCf_ikoaGs_5-640.webp"
+  },
+  {
+   "k": "ab_DFqbLG2s_dc_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 2710,
+   "h": 4102,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 22. Februar 2025, für die Website ohne Namen und Schrift zugeschnitten. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/stories/highlights/17880607827614865/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ab_DFqbLG2s_dc_0-2400.webp",
+   "fm": "../../assets/bild/ab_DFqbLG2s_dc_0-1600.webp",
+   "fs": "../../assets/bild/ab_DFqbLG2s_dc_0-640.webp"
+  },
+  {
+   "k": "ab_DJw8OqGMY1G_0",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 821,
+   "h": 1212,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 15. Juni 2025, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/17891010861596684/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DJw8OqGMY1G_0-640.webp",
+   "fm": "../../assets/bild/ab_DJw8OqGMY1G_0-640.webp",
+   "fs": "../../assets/bild/ab_DJw8OqGMY1G_0-640.webp"
+  },
+  {
+   "k": "ab_DJw8OqGMY1G_1",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 721,
+   "h": 979,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 15. Juni 2025, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/17891010861596684/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DJw8OqGMY1G_1-640.webp",
+   "fm": "../../assets/bild/ab_DJw8OqGMY1G_1-640.webp",
+   "fs": "../../assets/bild/ab_DJw8OqGMY1G_1-640.webp"
+  },
+  {
+   "k": "ab_DJw8OqGMY1G_2",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quer",
+   "w": 4096,
+   "h": 2988,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 15. Juni 2025, für die Website ohne Namen und Schrift zugeschnitten. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/stories/highlights/17891010861596684/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/ab_DJw8OqGMY1G_2-2400.webp",
+   "fm": "../../assets/bild/ab_DJw8OqGMY1G_2-1600.webp",
+   "fs": "../../assets/bild/ab_DJw8OqGMY1G_2-640.webp"
+  },
+  {
+   "k": "ab_DJw8OqGMY1G_3",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 820,
+   "h": 1328,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 15. Juni 2025, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/17891010861596684/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DJw8OqGMY1G_3-640.webp",
+   "fm": "../../assets/bild/ab_DJw8OqGMY1G_3-640.webp",
+   "fs": "../../assets/bild/ab_DJw8OqGMY1G_3-640.webp"
+  },
+  {
+   "k": "ab_DJw8OqGMY1G_4",
+   "t": {
+    "de": "Culinarium, Bild zum Abend"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 821,
+   "h": 1327,
+   "art": "haus",
+   "q": "Instagram von Culinarium, Story vom 15. Juni 2025, für die Website ohne Namen und Schrift zugeschnitten",
+   "u": "https://www.instagram.com/stories/highlights/17891010861596684/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/ab_DJw8OqGMY1G_4-640.webp",
+   "fm": "../../assets/bild/ab_DJw8OqGMY1G_4-640.webp",
+   "fs": "../../assets/bild/ab_DJw8OqGMY1G_4-640.webp"
+  },
+  {
+   "k": "abr_DJw8OqGMY1G_0",
+   "t": {
+    "de": "LAUCH / BLUMENKOHL / CHIPOTLE"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1440,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 24. Juni 2025",
+   "u": "https://www.instagram.com/p/DLSA60BMwiG/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/abr_DJw8OqGMY1G_0-1000.webp",
+   "fm": "../../assets/bild/abr_DJw8OqGMY1G_0-1000.webp",
+   "fs": "../../assets/bild/abr_DJw8OqGMY1G_0-640.webp"
+  },
+  {
+   "k": "abr_DVjkofijp6R_0",
+   "t": {
+    "de": "BLUMENKOHL / ROGUEFORT / KAPERN / QUINOA"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "hoch",
+   "w": 1440,
+   "h": 1657,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 8. April 2026",
+   "u": "https://www.instagram.com/p/DW4V45ujR0B/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/abr_DVjkofijp6R_0-1000.webp",
+   "fm": "../../assets/bild/abr_DVjkofijp6R_0-1000.webp",
+   "fs": "../../assets/bild/abr_DVjkofijp6R_0-640.webp"
+  },
+  {
+   "k": "abr_DbYnkdkjrNy_0",
+   "t": {
+    "de": "AUBERGINE / KOKOS / LIMETTE / SESAM"
+   },
+   "b": "abende",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 4096,
+   "h": 4096,
+   "art": "haus",
+   "q": "Instagram von Rudi (@rudi__san), Beitrag vom 23. Oktober 2026. Licht und Schärfe mit KI nachgeschärft",
+   "u": "https://www.instagram.com/p/De1pn9ttMoX/",
+   "ue": true,
+   "alt": false,
+   "vn": true,
+   "fl": "../../assets/bild/abr_DbYnkdkjrNy_0-2400.webp",
+   "fm": "../../assets/bild/abr_DbYnkdkjrNy_0-1600.webp",
+   "fs": "../../assets/bild/abr_DbYnkdkjrNy_0-640.webp"
+  },
+  {
+   "k": "p_CyT32RTMB4d",
+   "t": {
+    "de": "Plakat Culinarium, Sa 21. Oktober 2023"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 12. Oktober 2023",
+   "u": "https://www.instagram.com/p/CyT32RTMB4d/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_CyT32RTMB4d-1000.webp",
+   "fm": "../../assets/bild/p_CyT32RTMB4d-1000.webp",
+   "fs": "../../assets/bild/p_CyT32RTMB4d-640.webp"
+  },
+  {
+   "k": "p_CzMcqNcMCqG",
+   "t": {
+    "de": "Plakat Culinarium, Fr 17. und Sa 18. November 2023"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 3. November 2023",
+   "u": "https://www.instagram.com/p/CzMcqNcMCqG/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_CzMcqNcMCqG-1000.webp",
+   "fm": "../../assets/bild/p_CzMcqNcMCqG-1000.webp",
+   "fs": "../../assets/bild/p_CzMcqNcMCqG-640.webp"
+  },
+  {
+   "k": "p_C0w6iuCMcnF",
+   "t": {
+    "de": "Plakat Culinarium, So 31. Dezember 2023"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 12. Dezember 2023",
+   "u": "https://www.instagram.com/p/C0w6iuCMcnF/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_C0w6iuCMcnF-1000.webp",
+   "fm": "../../assets/bild/p_C0w6iuCMcnF-1000.webp",
+   "fs": "../../assets/bild/p_C0w6iuCMcnF-640.webp"
+  },
+  {
+   "k": "p_C17kqAXLfs_",
+   "t": {
+    "de": "Plakat Culinarium, Fr 26. und Sa 27. Januar 2024"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1430,
+   "h": 1420,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 10. Januar 2024",
+   "u": "https://www.instagram.com/p/C17kqAXLfs_/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_C17kqAXLfs_-1000.webp",
+   "fm": "../../assets/bild/p_C17kqAXLfs_-1000.webp",
+   "fs": "../../assets/bild/p_C17kqAXLfs_-640.webp"
+  },
+  {
+   "k": "p_C56bJeds8PF",
+   "t": {
+    "de": "Plakat Culinarium, Fr 26. und Sa 27. April 2024"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 18. April 2024",
+   "u": "https://www.instagram.com/p/C56bJeds8PF/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_C56bJeds8PF-1000.webp",
+   "fm": "../../assets/bild/p_C56bJeds8PF-1000.webp",
+   "fs": "../../assets/bild/p_C56bJeds8PF-640.webp"
+  },
+  {
+   "k": "p_C8cgYVSouVT",
+   "t": {
+    "de": "Plakat Culinarium, Fr 19. und Sa 20. Juli 2024"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 20. Juni 2024",
+   "u": "https://www.instagram.com/p/C8cgYVSouVT/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_C8cgYVSouVT-1000.webp",
+   "fm": "../../assets/bild/p_C8cgYVSouVT-1000.webp",
+   "fs": "../../assets/bild/p_C8cgYVSouVT-640.webp"
+  },
+  {
+   "k": "p_DCCf-ikoaGs",
+   "t": {
+    "de": "Plakat Culinarium, Fr 29. und Sa 30. November 2024"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 6. November 2024",
+   "u": "https://www.instagram.com/p/DCCf-ikoaGs/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_DCCf-ikoaGs-1000.webp",
+   "fm": "../../assets/bild/p_DCCf-ikoaGs-1000.webp",
+   "fs": "../../assets/bild/p_DCCf-ikoaGs-640.webp"
+  },
+  {
+   "k": "p_DFqbLG2s_dc",
+   "t": {
+    "de": "Plakat Culinarium, Fr 21. und Sa 22. Februar 2025"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 4. Februar 2025",
+   "u": "https://www.instagram.com/p/DFqbLG2s_dc/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_DFqbLG2s_dc-1000.webp",
+   "fm": "../../assets/bild/p_DFqbLG2s_dc-1000.webp",
+   "fs": "../../assets/bild/p_DFqbLG2s_dc-640.webp"
+  },
+  {
+   "k": "p_DJw8OqGMY1G",
+   "t": {
+    "de": "Plakat Culinarium, Fr 13. und Sa 14. Juni 2025"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 17. Mai 2025",
+   "u": "https://www.instagram.com/p/DJw8OqGMY1G/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_DJw8OqGMY1G-1000.webp",
+   "fm": "../../assets/bild/p_DJw8OqGMY1G-1000.webp",
+   "fs": "../../assets/bild/p_DJw8OqGMY1G-640.webp"
+  },
+  {
+   "k": "p_DPwlqcfiKcA",
+   "t": {
+    "de": "Plakat Culinarium, Fr 14. und Sa 15. November 2025"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 13. Oktober 2025",
+   "u": "https://www.instagram.com/p/DPwlqcfiKcA/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_DPwlqcfiKcA-1000.webp",
+   "fm": "../../assets/bild/p_DPwlqcfiKcA-1000.webp",
+   "fs": "../../assets/bild/p_DPwlqcfiKcA-640.webp"
+  },
+  {
+   "k": "p_DVjkofijp6R",
+   "t": {
+    "de": "Plakat Culinarium, Fr 27. und Sa 28. März 2026"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 1440,
+   "h": 1432,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 6. März 2026",
+   "u": "https://www.instagram.com/p/DVjkofijp6R/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_DVjkofijp6R-1000.webp",
+   "fm": "../../assets/bild/p_DVjkofijp6R-1000.webp",
+   "fs": "../../assets/bild/p_DVjkofijp6R-640.webp"
+  },
+  {
+   "k": "p_DbYnkdkjrNy",
+   "t": {
+    "de": "Plakat Culinarium, Fr 25. und Sa 26. September 2026"
+   },
+   "b": "plakate",
+   "s": "jahr",
+   "f": "quadrat",
+   "w": 2014,
+   "h": 2003,
+   "art": "haus",
+   "q": "Instagram von Culinarium (@culinarium_hannover), Beitrag vom 29. Juli 2026",
+   "u": "https://www.instagram.com/p/DbYnkdkjrNy/",
+   "ue": false,
+   "alt": false,
+   "vn": false,
+   "fl": "../../assets/bild/p_DbYnkdkjrNy-1600.webp",
+   "fm": "../../assets/bild/p_DbYnkdkjrNy-1600.webp",
+   "fs": "../../assets/bild/p_DbYnkdkjrNy-640.webp"
+  }
+ ],
+ "dateien": [
+  {
+   "k": "logo",
+   "var": [
+    {
+     "k": "original",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-logo-original.svg",
+      "culinarium-hannover-logo-original.png",
+      "culinarium-hannover-logo-original-rudi.pdf"
+     ],
+     "px": [
+      2400,
+      443
+     ]
+    },
+    {
+     "k": "schiefer",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-logo-schiefer.svg",
+      "culinarium-hannover-logo-schiefer.png"
+     ],
+     "px": [
+      2400,
+      443
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "culinarium-hannover-logo-weiss.svg",
+      "culinarium-hannover-logo-weiss.png"
+     ],
+     "px": [
+      2400,
+      443
+     ]
+    }
+   ]
+  },
+  {
+   "k": "wortmarke",
+   "var": [
+    {
+     "k": "schiefer",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-wortmarke-schiefer.svg",
+      "culinarium-hannover-wortmarke-schiefer.png"
+     ],
+     "px": [
+      2400,
+      266
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "culinarium-hannover-wortmarke-weiss.svg",
+      "culinarium-hannover-wortmarke-weiss.png"
+     ],
+     "px": [
+      2400,
+      266
+     ]
+    }
+   ]
+  },
+  {
+   "k": "zeile",
+   "var": [
+    {
+     "k": "schiefer",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-zeile-schiefer.svg",
+      "culinarium-hannover-zeile-schiefer.png"
+     ],
+     "px": [
+      1800,
+      116
+     ]
+    },
+    {
+     "k": "weiss",
+     "grund": "dunkel",
+     "dateien": [
+      "culinarium-hannover-zeile-weiss.svg",
+      "culinarium-hannover-zeile-weiss.png"
+     ],
+     "px": [
+      1800,
+      116
+     ]
+    }
+   ]
+  },
+  {
+   "k": "dc",
+   "var": [
+    {
+     "k": "dc-logo",
+     "grund": "dc",
+     "dateien": [
+      "culinarium-hannover-dc-logo.png",
+      "culinarium-hannover-dc-logo.pdf"
+     ],
+     "px": [
+      1440,
+      1440
+     ]
+    },
+    {
+     "k": "dc-d",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-dc-d.png",
+      "culinarium-hannover-dc-d.pdf"
+     ],
+     "px": [
+      495,
+      541
+     ]
+    }
+   ]
+  },
+  {
+   "k": "tapete",
+   "var": [
+    {
+     "k": "dunkel",
+     "grund": "dunkel",
+     "dateien": [
+      "culinarium-hannover-tapete-dunkel.png",
+      "culinarium-hannover-tapete-dunkel.svg",
+      "culinarium-hannover-tapete-dunkel.webp"
+     ],
+     "farbe": "#16151A",
+     "px": [
+      224,
+      224
+     ]
+    },
+    {
+     "k": "hell",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-tapete-hell.png",
+      "culinarium-hannover-tapete-hell.svg",
+      "culinarium-hannover-tapete-hell.webp"
+     ],
+     "farbe": "#FAF4F4",
+     "px": [
+      224,
+      224
+     ]
+    },
+    {
+     "k": "dc",
+     "grund": "dc",
+     "dateien": [
+      "culinarium-hannover-tapete-dc.png",
+      "culinarium-hannover-tapete-dc.svg",
+      "culinarium-hannover-tapete-dc.webp"
+     ],
+     "farbe": "#8953A9",
+     "px": [
+      240,
+      240
+     ]
+    }
+   ]
+  },
+  {
+   "k": "website",
+   "var": [
+    {
+     "k": "heute",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-instagram-profilbild.jpg"
+     ],
+     "px": [
+      1080,
+      1080
+     ]
+    }
+   ]
+  },
+  {
+   "k": "farben",
+   "var": [
+    {
+     "k": "alle",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-farben.css",
+      "culinarium-hannover-farben.json",
+      "culinarium-hannover-farben.ase"
+     ]
+    }
+   ]
+  },
+  {
+   "k": "schriften",
+   "var": [
+    {
+     "k": "alle",
+     "grund": "hell",
+     "dateien": [
+      "culinarium-hannover-schriften.zip"
+     ]
+    }
+   ]
+  }
+ ],
+ "farben": [
+  {
+   "k": "nacht",
+   "n": "Nacht",
+   "h": "#16151A",
+   "rgb": [
+    22,
+    21,
+    26
+   ],
+   "r": "Grund der dunklen Flächen: die Bar bei Nacht",
+   "g": "nacht",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "nacht-tief",
+   "n": "Nacht tief",
+   "h": "#0F0E13",
+   "rgb": [
+    15,
+    14,
+    19
+   ],
+   "r": "die tiefste Fläche, unter Bildern und im Fuss",
+   "g": "nacht",
+   "woher": "Wert der Website (culinarium.css)"
+  },
+  {
+   "k": "strasse",
+   "n": "Strasse",
+   "h": "#1C1B21",
+   "rgb": [
+    28,
+    27,
+    33
+   ],
+   "r": "dunkle Fläche beim Ankommen, draussen kühl",
+   "g": "nacht",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "bar",
+   "n": "Bar",
+   "h": "#222028",
+   "rgb": [
+    34,
+    32,
+    40
+   ],
+   "r": "dunkle Fläche drinnen, einen Ton wärmer",
+   "g": "nacht",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "tafel",
+   "n": "Tafel",
+   "h": "#26252E",
+   "rgb": [
+    38,
+    37,
+    46
+   ],
+   "r": "dunkle Fläche an der Tafel im Kerzenlicht",
+   "g": "nacht",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "schiefer",
+   "n": "Schiefer",
+   "h": "#3A3845",
+   "rgb": [
+    58,
+    56,
+    69
+   ],
+   "r": "die Farbe der Wortmarke auf jedem Plakat: Schrift auf Warmweiss und Flächen",
+   "g": "nacht",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "weiss",
+   "n": "Warmweiss",
+   "h": "#FAF4F4",
+   "rgb": [
+    250,
+    244,
+    244
+   ],
+   "r": "Grund der hellen Flächen und Schrift auf Dunkel: das Band unter jedem Plakat",
+   "g": "hell",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "tinte",
+   "n": "Tinte",
+   "h": "#2A2833",
+   "rgb": [
+    42,
+    40,
+    51
+   ],
+   "r": "Lesetext auf Warmweiss, nie reines Schwarz",
+   "g": "hell",
+   "woher": "Wert der Website (culinarium.css)"
+  },
+  {
+   "k": "leise",
+   "n": "Leise",
+   "h": "#5B5763",
+   "rgb": [
+    91,
+    87,
+    99
+   ],
+   "r": "zweite Zeile auf Warmweiss",
+   "g": "hell",
+   "woher": "Wert der Website (culinarium.css)"
+  },
+  {
+   "k": "kerze",
+   "n": "Kerze",
+   "h": "#EF7649",
+   "rgb": [
+    239,
+    118,
+    73
+   ],
+   "r": "die Farbe des Abends: Schrägstrich in Rudis Zeilen, Knauf, Linien auf Dunkel",
+   "g": "kerze",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "kerze-hell",
+   "n": "Kerze hell",
+   "h": "#F5A689",
+   "rgb": [
+    245,
+    166,
+    137
+   ],
+   "r": "leise Betonung auf Dunkel",
+   "g": "kerze",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "kerze-tief",
+   "n": "Kerze tief",
+   "h": "#B15736",
+   "rgb": [
+    177,
+    87,
+    54
+   ],
+   "r": "Betonung auf Warmweiss, wo Kerze zu hell steht",
+   "g": "kerze",
+   "woher": "Farbwelt «Plakat» der Hausregeln, unverändert auf der Website"
+  },
+  {
+   "k": "dc",
+   "n": "Dirty-Chicken-Violett",
+   "h": "#8953A9",
+   "rgb": [
+    137,
+    83,
+    169
+   ],
+   "r": "nur für Dirty Chicken, Rudis zweite Küche: Flächen und Tapete",
+   "g": "dc",
+   "woher": "Wert der Website (culinarium.css)"
+  },
+  {
+   "k": "dc-hell",
+   "n": "Dirty-Chicken-Hell",
+   "h": "#FFF7EF",
+   "rgb": [
+    255,
+    247,
+    239
+   ],
+   "r": "Schrift auf Violett",
+   "g": "dc",
+   "woher": "Wert der Website (culinarium.css)"
+  },
+  {
+   "k": "abend-eisblau",
+   "n": "Eisblau",
+   "h": "#B3EBFC",
+   "rgb": [
+    179,
+    235,
+    252
+   ],
+   "r": "Plakat 29./30.11.2024, Ski",
+   "g": "abende",
+   "woher": "gemessen am Plakat 29./30.11.2024",
+   "b": "buch/bilder/plakat-2024-11.jpg"
+  },
+  {
+   "k": "abend-orange",
+   "n": "Orange",
+   "h": "#EF7649",
+   "rgb": [
+    239,
+    118,
+    73
+   ],
+   "r": "Plakat 21./22.02.2025, Panther auf dem Thron",
+   "g": "abende",
+   "woher": "gemessen am Plakat 21./22.02.2025",
+   "b": "buch/bilder/plakat-2025-02.jpg"
+  },
+  {
+   "k": "abend-gruen",
+   "n": "Grasgrün",
+   "h": "#94B253",
+   "rgb": [
+    148,
+    178,
+    83
+   ],
+   "r": "Plakat 13./14.06.2025, Gärtnerin",
+   "g": "abende",
+   "woher": "gemessen am Plakat 13./14.06.2025",
+   "b": "buch/bilder/plakat-2025-06.jpg"
+  },
+  {
+   "k": "abend-nachtblau",
+   "n": "Nachtblau",
+   "h": "#112D43",
+   "rgb": [
+    17,
+    45,
+    67
+   ],
+   "r": "Plakat 14./15.11.2025, Kürbis",
+   "g": "abende",
+   "woher": "gemessen am Plakat 14./15.11.2025",
+   "b": "buch/bilder/plakat-2025-11.jpg"
+  },
+  {
+   "k": "abend-ochsenblut",
+   "n": "Ochsenblut",
+   "h": "#881301",
+   "rgb": [
+    136,
+    19,
+    1
+   ],
+   "r": "Plakat 27./28.03.2026, Panther mit Eisbecher",
+   "g": "abende",
+   "woher": "gemessen am Plakat 27./28.03.2026",
+   "b": "buch/bilder/plakat-2026-03.jpg"
+  },
+  {
+   "k": "abend-sepia",
+   "n": "Sepia",
+   "h": "#4D3321",
+   "rgb": [
+    77,
+    51,
+    33
+   ],
+   "r": "Plakat 25./26.09.2026, Mondfrau",
+   "g": "abende",
+   "woher": "gemessen am Plakat 25./26.09.2026",
+   "b": "buch/bilder/plakat-2026-09.jpg"
+  }
+ ],
+ "gruppen": [
+  {
+   "k": "nacht",
+   "n": "Nacht und Schiefer",
+   "s": "Die dunklen Flächen, so wie die Bar am Abend: draussen kühl, drinnen mit jedem Schritt wärmer. Schiefer ist die Farbe der Wortmarke.",
+   "bild": "buch/bilder/schild-nacht.jpg",
+   "bild_t": "Das Schild der Bar in der Nacht. Daraus kommen die dunklen Flächen."
+  },
+  {
+   "k": "hell",
+   "n": "Warmweiss",
+   "s": "Das Warmweiss des Bandes, das unter jedem Plakat liegt. Darauf wird gelesen, in Tinte, nie in reinem Schwarz.",
+   "bild": "listen/farbe-hell.webp",
+   "bild_t": "So steht Warmweiss mit Tinte auf der Website."
+  },
+  {
+   "k": "kerze",
+   "n": "Kerze",
+   "s": "Das Licht des Abends: Orange vom Plakat im Februar 2025, nah am Licht im Flur der Bar. Es betont, es schreibt nie den Lesetext.",
+   "bild": "buch/bilder/flur.jpg",
+   "bild_t": "Der Flur zur Bar im Licht der Hängelampe. So nah liegt Kerze am Licht des Hauses."
+  },
+  {
+   "k": "dc",
+   "n": "Dirty Chicken",
+   "s": "Das Violett aus dem Logo von Dirty Chicken. Es gehört nur dorthin, nie zu den Abenden von Culinarium.",
+   "bild": "listen/farbe-dc.webp",
+   "bild_t": "Das Logo von Dirty Chicken, Rudis Original. Daraus kommt das Violett."
+  },
+  {
+   "k": "abende",
+   "n": "Die Farben der Abende",
+   "s": "Jeder Abend hat sein Plakat und seine eigene Farbe. Gemessen an der Illustration, je Plakat ein Ton."
+  }
+ ],
+ "glanz": [],
+ "groessen": {
+  "culinarium-hannover-dc-d.pdf": 343374,
+  "culinarium-hannover-dc-d.png": 396324,
+  "culinarium-hannover-dc-logo.pdf": 605124,
+  "culinarium-hannover-dc-logo.png": 523321,
+  "culinarium-hannover-farben.ase": 904,
+  "culinarium-hannover-farben.css": 1773,
+  "culinarium-hannover-farben.json": 4544,
+  "culinarium-hannover-instagram-profilbild.jpg": 43206,
+  "culinarium-hannover-logo-original-rudi.pdf": 10985,
+  "culinarium-hannover-logo-original.png": 92207,
+  "culinarium-hannover-logo-original.svg": 61531,
+  "culinarium-hannover-logo-schiefer.png": 92537,
+  "culinarium-hannover-logo-schiefer.svg": 61531,
+  "culinarium-hannover-logo-weiss.png": 87172,
+  "culinarium-hannover-logo-weiss.svg": 61531,
+  "culinarium-hannover-marke.zip": 2873532,
+  "culinarium-hannover-schriften.zip": 416778,
+  "culinarium-hannover-tapete-dc.png": 6924,
+  "culinarium-hannover-tapete-dc.svg": 717,
+  "culinarium-hannover-tapete-dc.webp": 2306,
+  "culinarium-hannover-tapete-dunkel.png": 1633,
+  "culinarium-hannover-tapete-dunkel.svg": 1298,
+  "culinarium-hannover-tapete-dunkel.webp": 390,
+  "culinarium-hannover-tapete-hell.png": 1581,
+  "culinarium-hannover-tapete-hell.svg": 1298,
+  "culinarium-hannover-tapete-hell.webp": 354,
+  "culinarium-hannover-wortmarke-schiefer.png": 59401,
+  "culinarium-hannover-wortmarke-schiefer.svg": 10241,
+  "culinarium-hannover-wortmarke-weiss.png": 55847,
+  "culinarium-hannover-wortmarke-weiss.svg": 10241,
+  "culinarium-hannover-zeile-schiefer.png": 36456,
+  "culinarium-hannover-zeile-schiefer.svg": 51415,
+  "culinarium-hannover-zeile-weiss.png": 34033,
+  "culinarium-hannover-zeile-weiss.svg": 51415
+ },
+ "bereiche": [
+  "ort",
+  "tafel",
+  "teller",
+  "drinks",
+  "pass",
+  "team",
+  "plakate",
+  "abende",
+  "dc",
+  "wildside"
+ ],
+ "schriften": [
+  {
+   "k": "t",
+   "n": "Fraunces",
+   "d": "fraunces-soft.woff2",
+   "r": "Titel und Rudis Zeilen",
+   "e": "340 für Titel, 300 für Rudis Zeilen in Versalien, weiche Enden (SOFT 100); nie fett, nie kursiv",
+   "p": "LAUCH / BLUMENKOHL / CHIPOTLE",
+   "w": 300,
+   "bild": "listen/schrift-t.webp"
+  },
+  {
+   "k": "e",
+   "n": "Urbanist",
+   "d": "urbanist.woff2",
+   "r": "Etiketten und Knöpfe",
+   "e": "600 bis 700, Versalien, 0,12 em gesperrt",
+   "p": "A UNiQUE EXPERiENCE",
+   "w": 700,
+   "bild": "listen/schrift-e.webp"
+  },
+  {
+   "k": "s",
+   "n": "Instrument Sans",
+   "d": "instrument.woff2",
+   "r": "Lesetext",
+   "e": "400, 17 px, Zeilenabstand 1,62",
+   "p": "Momo wird persönlich jeden Drink für dich erklären.",
+   "w": 400,
+   "bild": "listen/schrift-s.webp"
+  },
+  {
+   "k": "m",
+   "n": "DM Mono",
+   "d": "dmmono.woff2",
+   "r": "Zeiten, Daten, Preise",
+   "e": "400, Versalien, 13 px, 0,06 em gesperrt",
+   "p": "Haasemannstraße 13 · 30449 Hannover",
+   "w": 400,
+   "bild": "listen/schrift-m.webp"
+  }
+ ],
+ "namen": {
+  "zentrale": "Der Tresen",
+  "website": "Das Schaufenster",
+  "karten": "Die Pairing-Karte",
+  "gaeste": "Das Gästebuch",
+  "marke": "Das Markenbuch",
+  "besuche": "Die Besucherliste",
+  "druck": "Die Plakatwerkstatt"
+ },
+ "zusammen": {
+  "ab_DCCf_ikoaGs_1": "m8",
+  "ab_DCCf_ikoaGs_0": "g3",
+  "dc_team2": "team_alle",
+  "p_CxNkFWTIvL2": "pl23",
+  "ws47": "ws40"
+ },
+ "ton": {
+  "eigene_worte": [
+   "A UNiQUE EXPERiENCE BY MOMO X RUDI",
+   "geht in die nächste Runde",
+   "Signature Drinks",
+   "Cocktail Tasting",
+   "dazugehörige Schulung",
+   "Momo wird persönlich jeden Drink für dich erklären",
+   "nur 14 Plätze pro Abend",
+   "AUSGEBUCHT!",
+   "Vorverkauf",
+   "Walk on the Wild Side",
+   "AUBERGINE / KOKOS / LIMETTE / SESAM",
+   "Food Pairing"
+  ],
+  "nicht": [
+   "Geschmacksexplosionen (steht in jeder Ankündigung, bleibt dort)",
+   "kulinarische Reise",
+   "unvergesslich",
+   "Genuss pur",
+   "ein Fest für die Sinne",
+   "Geheimtipp",
+   "Emojis aus den Beiträgen",
+   "«Hasemannstrasse» (richtig: Haasemannstraße)",
+   "Sie-Ansprache",
+   "«vegetarisch» als Merkmal der Marke (Rudi 26.10.2026: nicht mehr rein vegetarisch)",
+   "Fakten der Bar als Fakten von Culinarium (Falstaff, Google-Noten)"
+  ]
+ },
+ "stand": {
+  "fotos": 232,
+  "haus": 194,
+  "frei": 0,
+  "ki": 0,
+  "fremd": 38,
+  "partner": 0,
+  "ue": 24,
+  "vn": 24,
+  "original": 232,
+  "dateien": 34,
+  "datum": "31.10.2026"
+ }
+}

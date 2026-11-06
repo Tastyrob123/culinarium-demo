@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anleitung · Die Besucherliste · Culinarium</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16151A">
+<script src="../../assets/oberflaeche/kleid/culinarium.js"></script>
+<link rel="icon" href="../../assets/oberflaeche/kleid/culinarium-zeichen.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/schrift/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-weight:100 900;font-display:swap;src:url('../../assets/schrift/fraunces-soft.woff2') format('woff2')}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url('../../assets/schrift/instrument.woff2') format('woff2')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:url('../../assets/schrift/dmmono.woff2') format('woff2')}
+/* Töne aus dem Kleid von Culinarium (kleid/culinarium.css, Farbwelt «Plakat»), hier als Werte, weil die Anleitung ohne die Oberfläche lädt */
+:root{--nacht:#3A3845;--karte:#1C1B21;--stahl:#B15736;--papier:#F3ECEA;--weiss:#FFFCFB;--hellgold:#F5A689;--gold:#B15736;--tinte:#26242D;--blatt:#FAF4F4;--linie:rgba(38,36,45,.13);--leise:#5B5763;
+  --titel:'Fraunces',Georgia,serif;--sans:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;--e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ol,ul,figure{margin:0;padding:0}ol,ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3{font-family:var(--titel);font-weight:340;letter-spacing:-.012em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.kn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:12px;height:50px;padding:0 5px 0 22px;border-radius:10px;font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte);background:linear-gradient(#FFFCFB,#F3ECEA 55%,#E9E0DE);box-shadow:inset 0 1px 0 #ffffff,inset 0 -2px 0 #EF7649,0 12px 22px -12px rgba(0,0,0,.75);transition:transform .5s var(--e2)}
+.kn:hover{transform:translateY(-2px)}
+.kn i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(#B15736,#3A3845);color:var(--papier);box-shadow:inset 0 1px 0 #5A5764,inset 0 -2px 0 #16151A}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5}
+.kn--gold{background:linear-gradient(180deg,#F3ECEA,#E9E0DE 30%,#F5A689 60%,#EF7649);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -2px 0 rgba(0,0,0,.28),0 10px 20px -12px rgba(0,0,0,.8)}
+/* Kopf: Nacht der Bar mit der dunklen Tapete der Website */
+.kopf{position:relative;color:var(--weiss);background:url('../../assets/zeichen/tapete-dunkel.svg') 0 0/224px 224px,#16151A;border-radius:0 0 34px 34px;overflow:hidden;box-shadow:inset 0 -1px 0 rgba(245,166,137,.3)}
+.kopf__in{max-width:1180px;margin:0 auto;padding:36px 28px 74px}
+.kopf nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:56px;font:10.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--hellgold)}
+.kopf nav span{display:inline-flex;align-items:center;gap:12px}.kopf nav svg{width:22px;height:23px;fill:var(--hellgold)}
+.kopf nav a:hover{color:#fff}
+.kopf__tafel{display:inline-block;max-width:760px;padding:30px 34px 34px;border-radius:24px;background:var(--nacht);box-shadow:inset 0 0 0 1px rgba(245,166,137,.35),inset 0 0 0 6px var(--nacht),inset 0 0 0 7px rgba(245,166,137,.18)}
+.kopf h1{font-size:clamp(2.4rem,5.4vw,4.6rem);line-height:1.04;max-width:14ch}.kopf h1 em{font-style:normal;color:var(--hellgold)}
+.kopf p{margin-top:20px;max-width:56ch;font-size:1.06rem;color:rgba(250,244,244,.84)}
+.kopf .kn{margin-top:28px}
+.kopf .kn+.kn{margin-left:10px}
+/* Inhalt */
+main{max-width:1180px;margin:0 auto;padding:0 28px 120px}
+.inhalt{margin:58px 0 70px}
+.inhalt h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.08;margin:8px 0 8px}.inhalt h2 em{font-style:normal;color:var(--gold)}
+.inhalt>p{max-width:60ch;color:var(--leise)}
+.themen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}
+.thema{background:var(--blatt);border-radius:22px;box-shadow:inset 0 0 0 1px var(--linie);padding:22px 24px}
+.thema h3{font-size:1.35rem;line-height:1.15;display:grid;gap:3px}.thema h3 small{font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.thema h3 em{font:11px var(--mono);font-style:normal;color:var(--leise)}
+.thema ol{margin-top:12px;display:grid;gap:2px}
+.thema a{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:10px;align-items:baseline;padding:9px 6px;border-radius:12px;transition:background-color .3s}
+.thema a:hover{background:rgba(255,255,255,.75)}.thema a b{font:12px var(--mono);color:var(--gold)}.thema a span{font-family:var(--titel);font-weight:500}.thema a i{font:10px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Kapitel */
+.kap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,60px);align-items:start;padding:54px 0;border-top:1px solid var(--linie);scroll-margin-top:20px}
+.kap:nth-of-type(even) .kap__t{order:2}
+.kap h2{font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.08;margin:12px 0 14px;text-wrap:balance}
+.einl{color:rgba(38,36,45,.78);max-width:54ch}
+.schritte{display:grid;gap:12px;margin:22px 0}
+.schritte li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start}
+.schritte li span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--nacht);color:var(--hellgold);font:12px var(--mono);box-shadow:inset 0 0 0 3px var(--nacht),inset 0 0 0 4px rgba(245,166,137,.4)}
+.schritte p{padding-top:3px}
+.wissen{padding:16px 18px;border-radius:16px;background:rgba(245,166,137,.18);box-shadow:inset 0 0 0 1px rgba(245,166,137,.32);font-size:14.5px;color:#3A3845}.wissen b{display:block;margin-bottom:3px;font:10.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tinte)}
+.kap__b{position:sticky;top:20px}
+.bild{position:relative;display:block;width:100%;border-radius:20px;overflow:hidden;background:var(--nacht);box-shadow:0 30px 50px -28px rgba(22,21,26,.6),inset 0 0 0 1px rgba(245,166,137,.35);cursor:zoom-in;transition:transform .6s var(--e2)}
+.bild:hover{transform:translateY(-3px)}.bild img{display:block;width:100%;height:auto}
+figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+/* Bild gross */
+.gross{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vmin;background:rgba(22,21,26,.9);cursor:zoom-out;animation:auf .35s var(--e1) both}
+.gross[hidden]{display:none}.gross img{max-width:100%;max-height:100%;border-radius:14px;box-shadow:0 40px 80px -30px #000}.gross small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--hellgold)}
+@keyframes auf{from{opacity:0}}
+.fuss{margin-top:20px;padding:34px 0 0;border-top:1px solid var(--linie);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--leise);font-size:14px}
+@media (max-width:900px){.themen{grid-template-columns:1fr}.kap{grid-template-columns:1fr;padding:40px 0}.kap:nth-of-type(even) .kap__t{order:0}.kap__b{position:static}.kopf__in{padding:26px 16px 44px}.kopf nav{margin-bottom:30px}.kopf__tafel{padding:22px 20px 26px}.kopf .kn+.kn{margin-left:0}.kopf .kn{display:flex;width:fit-content}main{padding:0 16px 80px}.thema a{grid-template-columns:30px minmax(0,1fr)}.thema a i{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* Messlauf 29.10.2026 (Regel einzelwort): kein einzelnes Wort allein in der letzten Titelzeile */
+h1,h2,h3,h4,figcaption{text-wrap:balance}
+/* Abnahme-Tor 30.10.2026 */
+.nw{white-space:nowrap}
+figcaption{flex-wrap:wrap;row-gap:4px}figcaption>span{white-space:nowrap}
+.kopf__ort{font-style:normal}.kopf__ort i{font-style:normal}
+.kopf nav a{white-space:nowrap}
+@media (max-width:600px){.kopf nav{flex-direction:column;align-items:flex-start;gap:12px}.kopf__ort i{display:none}}
+/* Hero breit wie in den Werkzeugen: die Tafel füllt die Spalte, kein Loch rechts daneben */
+@media (min-width:901px){.kopf__tafel{display:block;max-width:none;padding:40px 48px 44px}.kopf h1{max-width:none;font-size:clamp(4.4rem,7.3vw,6.6rem);line-height:1}.kopf p{max-width:62ch;font-size:20px;line-height:1.55}}
+/* Hero-Titel gross (Robert 27.10.2026: am Rechner um 100 px, Satz um 20 px), damit die breite Tafel gefüllt ist */
+</style>
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="zeichen"></g></defs></svg>
+<header class="kopf"><div class="kopf__in">
+  <nav><span><svg viewBox="-0.5 -0.5 39.3 41.36" aria-hidden="true"><use href="#zeichen"/></svg><em class="kopf__ort">Anleitung · Culinarium<i> · Hannover-Linden</i></em></span><a href="./">Die Besucherliste öffnen</a></nav>
+  <div class="kopf__tafel"><h1>Wer zu Besuch war, <em>und was daraus wurde.</em></h1>
+  <p>10 kurze Kapitel. Wie du einen Besuch liest, woher deine Gäste kommen, wann sie vorbeischauen, welche Seiten sie ansehen und wie oft die Website zu einem Platz an der Tafel führt.</p>
+  <a class="kn kn--gold" href="./">Die Besucherliste öffnen<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></i></a><a class="kn" href="#inhalt">Zu den Kapiteln<i><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></i></a></div>
+</div></header>
+<main>
+  <section class="inhalt" id="inhalt"><span class="mono">00 · Inhalt</span><h2>10 Kapitel, <em>vier Themen.</em></h2><p>Jedes Kapitel zeigt den Bereich und nennt die Schritte. Ein Klick macht das Bild gross, ein zweiter oder Esc bringt es zurück.</p>
+    <div class="themen"><section class="thema"><h3><small>Grundlagen</small>So geht die Besucherliste<em>2 Kapitel</em></h3><ol><li><a href="#k01"><b>01</b><span>So ist die <span class="nw">Besucherliste aufgebaut.</span></span><i>Übersicht</i></a></li><li><a href="#k02"><b>02</b><span>Die <span class="nw">Übersicht lesen.</span></span><i>Übersicht</i></a></li></ol></section><section class="thema"><h3><small>Die Gäste</small>Besuche, Herkunft und Zeit<em>4 Kapitel</em></h3><ol><li><a href="#k03"><b>03</b><span>Einen <span class="nw">Besuch lesen.</span></span><i>Besuche</i></a></li><li><a href="#k04"><b>04</b><span>Wer sich einen Platz <span class="nw">sichern wollte.</span></span><i>Besuche</i></a></li><li><a href="#k05"><b>05</b><span>Woher die <span class="nw">Gäste kommen.</span></span><i>Herkunft</i></a></li><li><a href="#k06"><b>06</b><span>Wann <span class="nw">Gäste vorbeischauen.</span></span><i>Zeit</i></a></li></ol></section><section class="thema"><h3><small>Die Website</small>Seiten, Verlauf und der Weg zum Platz<em>3 Kapitel</em></h3><ol><li><a href="#k07"><b>07</b><span>Was am meisten <span class="nw">angesehen wird.</span></span><i>Seiten</i></a></li><li><a href="#k08"><b>08</b><span>Wie sich die <span class="nw">Besuche entwickeln.</span></span><i>Verlauf</i></a></li><li><a href="#k09"><b>09</b><span>Wie oft die Website an die <span class="nw">Tafel führt.</span></span><i>Zum Platz</i></a></li></ol></section><section class="thema"><h3><small>Gut zu wissen</small>Die Zählung<em>1 Kapitel</em></h3><ol><li><a href="#k10"><b>10</b><span>Was gezählt wird und <span class="nw">was nicht.</span></span><i>Gut zu wissen</i></a></li></ol></section></div></section>
+<article class="kap" id="k01">
+  <div class="kap__t"><span class="mono">01 · Übersicht</span><h2>So ist die <span class="nw">Besucherliste aufgebaut.</span></h2><p class="einl">Die Besucherliste zeigt, wer deine Website besucht: woher die Gäste kommen, was sie sich ansehen, wie lange sie bleiben und wie oft daraus ein Platz an der Tafel wird. Du änderst hier nichts, du liest.</p>
+    <ol class="schritte"><li><span>1</span><p>Links die Bereiche: «Übersicht», darunter «Besuche», «Herkunft» und «Zeit» für die Gäste, «Seiten», «Verlauf» und «Zum Platz» für die Website, zuletzt «So wird gezählt».</p></li><li><span>2</span><p>Unter dem Titel jeder Ansicht wählst du den Zeitraum: 7, 30 oder 90 Tage. Alle Zahlen der Ansicht gelten für diesen Zeitraum.</p></li><li><span>3</span><p>Oben im Kopf stehen Titel und Stand der Ansicht, rechts der Weg zu allen Werkzeugen (Der Tresen), die Anleitung und «Website ansehen». Unten nennt die Leiste die Besuche von heute.</p></li><li><span>4</span><p>Beim ersten Mal zeigt ein kleines Schild unten rechts «Kurzer Rundgang». Er lässt sich jederzeit über den Rand wieder öffnen.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Die Bilder dieser Anleitung zeigen Beispielwerte. Sie sind erfunden und im Bild so beschriftet. Deine echten Besuche erscheinen, sobald die Website zählt.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: So ist die Besucherliste aufgebaut."><img src="anleitung/k01.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Übersicht: So ist die Besucherliste aufgebaut. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · übersicht</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k02">
+  <div class="kap__t"><span class="mono">02 · Übersicht</span><h2>Die <span class="nw">Übersicht lesen.</span></h2><p class="einl">Oben vier Zahlen: Besuche (mit dem Vergleich zum Zeitraum davor), angesehene Seiten, Minuten je Besuch und wie viele zum Platz kamen, also auf «Der Abend» einen Platz buchten oder sich auf die Warteliste setzten. Darunter die Besuche je Tag als Säulen.</p>
+    <ol class="schritte"><li><span>1</span><p>Mit der Maus über eine Säule fahren: Tag und Zahl der Besuche erscheinen.</p></li><li><span>2</span><p>«Woher die Gäste kommen» und «Am meisten angesehen» zeigen je die sechs ersten Plätze. Der Link daneben führt zur ganzen Liste.</p></li><li><span>3</span><p>Ganz unten stehen die letzten fünf Besuche. Ein Klick öffnet den Besuch.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Ein Besuch ist ein Gast an einem Tag. Kommt derselbe Gast nach mehr als einer halben Stunde Pause wieder, zählt das als neuer Besuch.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Die Übersicht lesen."><img src="anleitung/k02.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Übersicht: Die Übersicht lesen. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · übersicht</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k03">
+  <div class="kap__t"><span class="mono">03 · Besuche</span><h2>Einen <span class="nw">Besuch lesen.</span></h2><p class="einl">Unter «Besuche» steht jeder einzelne Besuch: links die Liste nach Tagen, rechts der gewählte Besuch.</p>
+    <ol class="schritte"><li><span>1</span><p>Links einen Besuch anklicken. Das Bild zeigt die Seite, auf der der Besuch begann, das Land steht klein darauf; daneben Ort, Uhrzeit, Zahl der Seiten und Dauer. Die Seite bleibt, wo sie ist, nur die Karte rechts wechselt.</p></li><li><span>2</span><p>Rechts oben sechs Angaben: wann der Gast kam, wie lange er blieb, wie viele Seiten, mit welchem Gerät, in welcher Sprache und über welche Website er zu dir fand.</p></li><li><span>3</span><p>Darunter «Der Weg durch die Website»: Seite für Seite in der Reihenfolge des Besuchs, mit der Zeit je Seite. Unter einer Seite steht, was der Gast dort getan hat, etwa «Platz buchen» geöffnet, die Warteliste begonnen oder die Route nach Linden geöffnet.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Ein Name steht nie da. Die Besucherliste kennt Ort, Uhrzeit und Weg, aber nicht, wer der Gast ist.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Einen Besuch lesen."><img src="anleitung/k03.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Besuche: Einen Besuch lesen. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · besuche</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k04">
+  <div class="kap__t"><span class="mono">04 · Besuche</span><h2>Wer sich einen Platz <span class="nw">sichern wollte.</span></h2><p class="einl">Über der Liste grenzt du ein: alle Besuche, nur die zum Platz, nur die, in denen die Warteliste begonnen wurde, nur die mit Anruf oder Instagram, oder nur die am Handy.</p>
+    <ol class="schritte"><li><span>1</span><p>Auf «Zum Platz» klicken. Die Liste zeigt nur noch Besuche, bei denen der Gast einen Platz buchte oder sich auf die Warteliste setzte. Ihr Kreis leuchtet in Kerzenlicht.</p></li><li><span>2</span><p>Einen dieser Besuche öffnen und den Weg lesen: Welche Seiten hat der Gast vorher angesehen, wie lange, und hat er gebucht oder die Warteliste gewählt?</p></li><li><span>3</span><p>«Warteliste begonnen» zeigt, wer im Ticket auf «Der Abend» angefangen oder im Fuss einer Seite seine E-Mail eingetragen hat. «Anruf oder Instagram» zeigt, wer die Nummer der Bar gewählt oder Culinarium auf Instagram geöffnet hat, «Am Handy» die Besuche vom Telefon.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>So siehst du, welche Seiten Gäste an die Tafel bringen. Lesen viele vor ihrem Platz «Alle Abende» oder «Das Haus», lohnt es sich, gerade diese Seiten mit dem nächsten Abend aktuell zu halten.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Wer sich einen Platz sichern wollte."><img src="anleitung/k04.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Besuche: Wer sich einen Platz sichern wollte. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · besuche</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k05">
+  <div class="kap__t"><span class="mono">05 · Herkunft</span><h2>Woher die <span class="nw">Gäste kommen.</span></h2><p class="einl">Unter «Herkunft» stehen Länder und Orte, wie viele aus Hannover und der Region kommen, die Sprache des Browsers und das Gerät.</p>
+    <ol class="schritte"><li><span>1</span><p>«Länder» und «Orte» nennt die Verbindung des Gastes. Der Ort ist der seines Anschlusses und kann einige Kilometer danebenliegen.</p></li><li><span>2</span><p>«Gekommen über» zeigt, von welcher Website der Gast zu dir fand: Instagram, Google, Facebook oder Hannover Marketing. «Direkt aufgerufen» heisst: Adresse eingetippt, Lesezeichen oder Link aus einer Nachricht.</p></li><li><span>3</span><p>«Sprache des Browsers» ist die Sprache, in der der Gast seinen Browser eingestellt hat (die Website selbst ist deutsch), «Gerät» unterscheidet Handy, Tablet und Rechner.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Reisen Gäste für einen Abend aus Hamburg, Berlin oder von weiter her an, siehst du es hier zuerst.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Woher die Gäste kommen."><img src="anleitung/k05.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Herkunft: Woher die Gäste kommen. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · herkunft</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k06">
+  <div class="kap__t"><span class="mono">06 · Zeit</span><h2>Wann <span class="nw">Gäste vorbeischauen.</span></h2><p class="einl">Unter «Zeit» steht, zu welcher Stunde und an welchem Wochentag die Besuche beginnen. Uhrzeit in Hannover.</p>
+    <ol class="schritte"><li><span>1</span><p>Oben vier Spitzen: wann die meisten kommen, welcher Tag am stärksten ist, wie viele ab 18 Uhr und wie viele am Wochenende.</p></li><li><span>2</span><p>«Zu welcher Uhrzeit» zeigt 24 Säulen, eine je Stunde. Mit der Maus darüber erscheint die Zahl.</p></li><li><span>3</span><p>«Wochentag und Stunde» legt beides übereinander: Je dunkler ein Feld, desto mehr Besuche.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>So siehst du, wann sich ein Beitrag zum nächsten Abend oder ein Hinweis auf freie Plätze am ehesten lohnt: Dann sind die Gäste ohnehin auf der Seite.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Wann Gäste vorbeischauen."><img src="anleitung/k06.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Zeit: Wann Gäste vorbeischauen. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · zeit</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k07">
+  <div class="kap__t"><span class="mono">07 · Seiten</span><h2>Was am meisten <span class="nw">angesehen wird.</span></h2><p class="einl">Unter «Seiten» steht jede Seite der Website mit ihren Aufrufen, der Zeit, die Gäste im Schnitt darauf bleiben, und wie oft sie auf dem Weg eines Gastes lag, der danach seinen Platz buchte oder sich auf die Warteliste setzte.</p>
+    <ol class="schritte"><li><span>1</span><p>Die Liste ist nach Aufrufen geordnet, die meistbesuchte Seite steht oben, jede mit ihrem Bild.</p></li><li><span>2</span><p>«Zeit im Schnitt» zählt nur, solange die Seite im Vordergrund war. Liegt sie in einem Reiter im Hintergrund, läuft die Zeit nicht.</p></li><li><span>3</span><p>«Zum Platz» nennt, wie oft die Seite in einem Besuch angesehen wurde, der danach zu einem Platz führte.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Eine Seite mit vielen Aufrufen und wenig Zeit wird oft nur überflogen. Eine Seite mit wenigen Aufrufen und viel Zeit wird gelesen, aber selten gefunden.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Was am meisten angesehen wird."><img src="anleitung/k07.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Seiten: Was am meisten angesehen wird. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · seiten</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k08">
+  <div class="kap__t"><span class="mono">08 · Verlauf</span><h2>Wie sich die <span class="nw">Besuche entwickeln.</span></h2><p class="einl">Unter «Verlauf» steht der gewählte Zeitraum neben dem Zeitraum davor: Geht es aufwärts oder abwärts?</p>
+    <ol class="schritte"><li><span>1</span><p>Die Säulen zeigen die Besuche je Tag, dahinter hell derselbe Tag im Zeitraum davor.</p></li><li><span>2</span><p>«Neben dem Zeitraum davor» vergleicht Besuche, Seiten, Zeit, den Weg zum Platz, die begonnene Warteliste, Anrufe und Instagram sowie die Route, mit dem Unterschied in Prozent.</p></li><li><span>3</span><p>«Woche für Woche» fasst von Montag bis Sonntag zusammen, darunter die wichtigsten Länder als kleine Verlaufslinien.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Ein einzelner Tag sagt wenig. Achte auf Wochen und auf die Richtung der Linien, besonders nach einem neuen Plakat und in der Woche vor einem Abend.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Wie sich die Besuche entwickeln."><img src="anleitung/k08.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Verlauf: Wie sich die Besuche entwickeln. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · verlauf</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k09">
+  <div class="kap__t"><span class="mono">09 · Zum Platz</span><h2>Wie oft die Website an die <span class="nw">Tafel führt.</span></h2><p class="einl">Einen Platz gibt es auf «Der Abend»: bei einem Termin mit freien Plätzen direkt buchen, sonst im Ticket auf die Warteliste. Neun Werte zeigen, wie oft ein Besuch dahin führt: von der Startseite, von «Alle Abende», über die Warteliste, «Platz buchen» ohne Buchung, die begonnene Warteliste, die Warteliste im Fuss, Anruf oder Instagram, weiter zur Bar oder zu Dirty Chicken und die Route nach Linden.</p>
+    <ol class="schritte"><li><span>1</span><p>Jeder Wert steht als Anteil in Prozent, darunter die gezählten Zahlen, also wie viele von allen Aufrufen der Startseite in einem Besuch lagen, der danach zum Platz führte.</p></li><li><span>2</span><p>«Platz buchen ohne Buchung» zählt, wie oft jemand das Fenster «Platz buchen» öffnet und dann nicht bucht.</p></li><li><span>3</span><p>Darunter «Welche Seiten vor dem Platz lagen» und «Der Weg zum Platz» vom Besuch über «Der Abend» bis zum gebuchten Platz oder zur Warteliste.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Gezählt wird, dass gebucht oder die Warteliste abgeschickt wurde, nie Name oder E-Mail. Wer sich eingetragen hat, siehst du in deinen Buchungen und auf der Warteliste selbst.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Wie oft die Website an die Tafel führt."><img src="anleitung/k09.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Zum Platz: Wie oft die Website an die Tafel führt. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · zum platz</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+<article class="kap" id="k10">
+  <div class="kap__t"><span class="mono">10 · Gut zu wissen</span><h2>Was gezählt wird und <span class="nw">was nicht.</span></h2><p class="einl">Die Besucherliste zählt so wenig wie möglich und so viel wie nötig. «So wird gezählt» im Rand sagt es in einem Blick.</p>
+    <ol class="schritte"><li><span>1</span><p>Gezählt werden Seite, Zeit, Land und Ort, Gerät, Sprache des Browsers, die Herkunft (nur der Name der Website) und die Schritte zu Platz, Warteliste, Telefon der Bar, Instagram, Bar, Dirty Chicken und Route.</p></li><li><span>2</span><p>Nie gezählt werden Namen, Mailadressen, Eingaben, die Adresse der Verbindung und Cookies. Am nächsten Tag erkennt die Besucherliste denselben Gast nicht wieder.</p></li><li><span>3</span><p>Die Daten liegen nur in deinem Speicher, getrennt von jedem anderen Haus, und werden nach 400 Tagen gelöscht.</p></li></ol>
+    <p class="wissen"><b>Gut zu wissen</b>Sobald die Zählung auf der Website läuft, steht sie auch in der Datenschutzerklärung.</p></div>
+  <figure class="kap__b"><button type="button" class="bild" aria-label="Bild gross ansehen: Was gezählt wird und was nicht."><img src="anleitung/k10.jpg" width="1200" height="750" decoding="async" alt="Die Besucherliste, Gut zu wissen: Was gezählt wird und was nicht. (Beispielwerte)"></button>
+    <figcaption><span>die besucherliste · gut zu wissen</span><span>Beispielwerte · Grösser ansehen</span></figcaption></figure>
+</article>
+  <div class="fuss"><span>Die Besucherliste · Culinarium · Beispielwerte in <span class="nw">allen Bildern</span></span><a href="./" style="border-bottom:1px solid currentColor">Zurück: Die Besucherliste</a></div>
+</main>
+<div class="gross" id="gross" hidden role="dialog" aria-modal="true" aria-label="Bild gross"><img alt=""><small>Klick oder Esc zum Schliessen</small></div>
+<script src="anleitung.js?v=1"></script>
+</body>
+</html>

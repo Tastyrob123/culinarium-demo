@@ -1,0 +1,622 @@
+/* Le Livre · Culinarium Hannover (Nachbau von Le Livre der Taverne zum Schäfli, dort nur gelesen; Kleid aus _werkzeuge/oberflaeche/kleid/culinarium.css).
+   Nacht mit der Gitter-Tapete im Kopf und in den dunklen Tafeln, Raum Warmweiss mit der hellen Tapete, Rand hell (R21), Kerze betont, Violett nur für Dirty Chicken;
+   Fraunces mit weichen Enden für Titel (leicht, nie fett), Instrument Sans zum Lesen, DM Mono für Zahlen, Urbanist für Etiketten (Schriften aus dem Kleid, wie die
+   Website). Aufbau und Klassen wie Le Livre des Schäfli (Funktion 1:1). Bewegung nur über transform. Vorsatz li-. */
+:root{--nacht:#16151A;--tief:#0F0E13;--blau:#26252E;--karte:#16151A;--stahl:#B15736;--hellgold:#F5A689;--gold:#B15736;--papier:#F3ECEA;--leinen:#E9E0DE;--blatt:#FAF4F4;--tinte:#2A2833;--schiefer:#B15736;
+  --titel:'Fraunces',Georgia,serif;--sans:var(--wo-sans,'Instrument Sans',system-ui,sans-serif);--mono:var(--wo-mono,'DM Mono',ui-monospace,monospace);--etikett:var(--wo-etikett,'Urbanist',system-ui,sans-serif);
+  --e1:cubic-bezier(.16,1,.3,1);--e2:cubic-bezier(.32,.72,0,1);--feder:cubic-bezier(.28,1.42,.42,1);
+  --kopf-h:68px;--rand-b:276px;--ok:#4F7A5C;--acht:#A35C1C;--nein:#C9533A;--leise:rgba(38,36,45,.64);--linie:rgba(38,36,45,.12);
+  --tap-nacht:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjQiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgMjI0IDIyNCI+PGcgc3Ryb2tlPSIjQTZBNUFCIiBzdHJva2Utb3BhY2l0eT0iMC4wNyIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMCAuNUgyMjRNMCA0LjVIMjI0TS41IDBWMjI0TTQuNSAwVjIyNCIvPjwvZz48c3ZnIHg9Ii0xLjkyIiB5PSItMi4wMCIgd2lkdGg9IjguODQiIGhlaWdodD0iOS4wMCIgdmlld0JveD0iMCAwIDIyNCAyMjgiIGZpbGw9IiNBNkE1QUIiIGZpbGwtb3BhY2l0eT0iMC4xNCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMjI4LjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQyMiAyMDQ5IGMtNTMgLTEwIC05NSAtMzUgLTEyMyAtNzIgLTI5IC0zOSAtMTA0IC0xOTMgLTEyMCAtMjQ1IC0xNSAtNTIgLTM5IC03NCAtNzUgLTcwIC0zMyA0IC0zOCAxMiAtOTYgMTYzIC04MCAyMDkgLTk3IDIxNyAtNDU1IDIxMyAtMjYxIC0zIC0yNjEgLTMgLTI4NyAtMjcgLTM2IC0zNCAtMzggLTI2IDQ0IC0yMDYgMTAgLTIyIDMwIC02NiA0NCAtOTggMTQgLTMxIDU4IC0xMDggOTkgLTE3MCAxMDcgLTE2NCAxNDcgLTI1MCAxNTggLTM0MyAxMSAtMTAzIDIgLTEzNSAtNzAgLTI0NCAtMzMgLTUyIC02MSAtOTcgLTYxIC0xMDIgMCAtMTMgLTk2IC0xODMgLTE3MSAtMzAzIC05OCAtMTU4IC0xMTIgLTI0OSAtNDIgLTI3NiAxNyAtNiAxMTYgLTkgMjYzIC03IDM1MiA1IDM2MSAxMSA1MDEgMzQyIDM4IDg5IDYyIDExMiAxMDIgOTcgMzMgLTEzIDgxIC05NCAxMDggLTE4NiA0MSAtMTM3IDEwOCAtMjM0IDE3MiAtMjUwIDEzIC00IDEzOSAtNSAyODAgLTMgMjUyIDMgMjU3IDMgMjc5IDI2IDQwIDM5IDMwIDk3IC0zNiAyMDYgLTMwIDUwIC02NCAxMTEgLTc0IDEzNiAtMTkgNDQgLTYzIDEyMCAtMTc2IDMwNiAtNjEgMTAwIC03NSAxNDcgLTc2IDI0NSAwIDcyIDQ0IDE3MiAxNDIgMzI1IDExMCAxNzEgMjM4IDQyMCAyMzggNDY0IDAgNjcgLTgzIDk0IC0yMzkgNzkgLTc1IC04IC0xMjYgLTggLTE3OCAwIC04MiAxMiAtOTAgMTIgLTE1MSAweiIvPjwvZz48L3N2Zz48c3ZnIHg9Ijk5LjY4IiB5PSIxMDIuNTAiIHdpZHRoPSIyOS42NSIgaGVpZ2h0PSIyNC4wMCIgdmlld0JveD0iMCAwIDc1NiA2MTIiIGZpbGw9IiNBNkE1QUIiIGZpbGwtb3BhY2l0eT0iMC4wOSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNjEyLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMzY4NSA1ODgzIGMtNzgyIC0zMiAtMTYzMCAtMzAwIC0yMjE1IC03MDIgLTU2NiAtMzg4IC05NTQgLTg3NSAtMTEzNSAtMTQyNCAtMTQ0IC00MzkgLTE0MiAtOTYxIDcgLTEzODcgMjM2IC02NzUgNzIxIC0xMjA2IDE0ODggLTE2MjcgMzk2IC0yMTcgOTczIC0zOTMgMTUyNSAtNDY1IDIwOSAtMjcgODA4IC0zMyAxMDQ4IC0xMCA1MTUgNDkgMTAyNCAxNzkgMTUzMiAzOTEgMTEzIDQ3IDQ0MCAyMTggNTMxIDI3NyAzNTAgMjI4IDYzMCA0NzMgNzk0IDY5NCA5MyAxMjcgMTAxIDE2OSAzNiAyMTAgLTc5IDQ4IC0xMzcgMjMgLTI0MSAtMTA2IC0zMTUgLTM4NiAtNzg0IC02NzUgLTEyNDAgLTc2NCAtNDg3IC05NCAtOTU3IC0xNCAtMTQ2MCAyNDkgLTMyMyAxNjkgLTU1OSAzMzcgLTkxMCA2NDcgLTU0OCA0ODMgLTEwODYgMTE3NiAtMTM4NSAxNzgwIC0zNDIgNjkxIC0zODkgMTI1NCAtMTI5IDE1MTQgMTc1IDE3NSAzOTQgMjM1IDY2MiAxODAgMTQ3IC0yOSAxOTQgLTQ3IDMyMiAtMTIwIDE3OSAtMTAxIDI3NyAtMTc2IDYxNSAtNDcwIDM0OSAtMzAzIDQ2OSAtMzk4IDY2MCAtNTI1IDIxNCAtMTQxIDI0OSAtMTYwIDQ2NSAtMjQ4IDIwMSAtODEgMzE1IC0xMDYgNjYxIC0xNDIgNjUgLTcgNDA0IDE4IDU0NCA0MCAxNTkgMjUgNDcyIDEyOSA1NzYgMTkyIDI4NiAxNzQgNDM4IDMyNSA1NzIgNTczIDE0NSAyNjggMjEzIDY0NiAxNzggOTg2IC0xOSAxNzcgLTQ4IDIyNCAtMTQxIDIyNCAtODEgMCAtMTE0IC00MCAtMTM5IC0xNjggLTUyIC0yNzcgLTIzNSAtNDAzIC01OTEgLTQwNiAtMjE1IC0xIC0zNTQgMzIgLTY4MCAxNjQgLTU2MCAyMjcgLTc1MSAyOTcgLTk2MCAzNDkgLTMyNCA4MCAtNjI4IDEwOSAtOTkwIDk0eiIvPjwvZz48L3N2Zz48L3N2Zz4=);--tap-fuss:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjQiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgMjI0IDIyNCI+PGcgc3Ryb2tlPSIjQTZBNUFCIiBzdHJva2Utb3BhY2l0eT0iMC4wNyIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMCAuNUgyMjRNMCA0LjVIMjI0TS41IDBWMjI0TTQuNSAwVjIyNCIvPjwvZz48c3ZnIHg9Ii0xLjkyIiB5PSItMi4wMCIgd2lkdGg9IjguODQiIGhlaWdodD0iOS4wMCIgdmlld0JveD0iMCAwIDIyNCAyMjgiIGZpbGw9IiNBNkE1QUIiIGZpbGwtb3BhY2l0eT0iMC4xNCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMjI4LjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQyMiAyMDQ5IGMtNTMgLTEwIC05NSAtMzUgLTEyMyAtNzIgLTI5IC0zOSAtMTA0IC0xOTMgLTEyMCAtMjQ1IC0xNSAtNTIgLTM5IC03NCAtNzUgLTcwIC0zMyA0IC0zOCAxMiAtOTYgMTYzIC04MCAyMDkgLTk3IDIxNyAtNDU1IDIxMyAtMjYxIC0zIC0yNjEgLTMgLTI4NyAtMjcgLTM2IC0zNCAtMzggLTI2IDQ0IC0yMDYgMTAgLTIyIDMwIC02NiA0NCAtOTggMTQgLTMxIDU4IC0xMDggOTkgLTE3MCAxMDcgLTE2NCAxNDcgLTI1MCAxNTggLTM0MyAxMSAtMTAzIDIgLTEzNSAtNzAgLTI0NCAtMzMgLTUyIC02MSAtOTcgLTYxIC0xMDIgMCAtMTMgLTk2IC0xODMgLTE3MSAtMzAzIC05OCAtMTU4IC0xMTIgLTI0OSAtNDIgLTI3NiAxNyAtNiAxMTYgLTkgMjYzIC03IDM1MiA1IDM2MSAxMSA1MDEgMzQyIDM4IDg5IDYyIDExMiAxMDIgOTcgMzMgLTEzIDgxIC05NCAxMDggLTE4NiA0MSAtMTM3IDEwOCAtMjM0IDE3MiAtMjUwIDEzIC00IDEzOSAtNSAyODAgLTMgMjUyIDMgMjU3IDMgMjc5IDI2IDQwIDM5IDMwIDk3IC0zNiAyMDYgLTMwIDUwIC02NCAxMTEgLTc0IDEzNiAtMTkgNDQgLTYzIDEyMCAtMTc2IDMwNiAtNjEgMTAwIC03NSAxNDcgLTc2IDI0NSAwIDcyIDQ0IDE3MiAxNDIgMzI1IDExMCAxNzEgMjM4IDQyMCAyMzggNDY0IDAgNjcgLTgzIDk0IC0yMzkgNzkgLTc1IC04IC0xMjYgLTggLTE3OCAwIC04MiAxMiAtOTAgMTIgLTE1MSAweiIvPjwvZz48L3N2Zz48c3ZnIHg9Ijk5LjY4IiB5PSIxMDIuNTAiIHdpZHRoPSIyOS42NSIgaGVpZ2h0PSIyNC4wMCIgdmlld0JveD0iMCAwIDc1NiA2MTIiIGZpbGw9IiNBNkE1QUIiIGZpbGwtb3BhY2l0eT0iMC4wOSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNjEyLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMzY4NSA1ODgzIGMtNzgyIC0zMiAtMTYzMCAtMzAwIC0yMjE1IC03MDIgLTU2NiAtMzg4IC05NTQgLTg3NSAtMTEzNSAtMTQyNCAtMTQ0IC00MzkgLTE0MiAtOTYxIDcgLTEzODcgMjM2IC02NzUgNzIxIC0xMjA2IDE0ODggLTE2MjcgMzk2IC0yMTcgOTczIC0zOTMgMTUyNSAtNDY1IDIwOSAtMjcgODA4IC0zMyAxMDQ4IC0xMCA1MTUgNDkgMTAyNCAxNzkgMTUzMiAzOTEgMTEzIDQ3IDQ0MCAyMTggNTMxIDI3NyAzNTAgMjI4IDYzMCA0NzMgNzk0IDY5NCA5MyAxMjcgMTAxIDE2OSAzNiAyMTAgLTc5IDQ4IC0xMzcgMjMgLTI0MSAtMTA2IC0zMTUgLTM4NiAtNzg0IC02NzUgLTEyNDAgLTc2NCAtNDg3IC05NCAtOTU3IC0xNCAtMTQ2MCAyNDkgLTMyMyAxNjkgLTU1OSAzMzcgLTkxMCA2NDcgLTU0OCA0ODMgLTEwODYgMTE3NiAtMTM4NSAxNzgwIC0zNDIgNjkxIC0zODkgMTI1NCAtMTI5IDE1MTQgMTc1IDE3NSAzOTQgMjM1IDY2MiAxODAgMTQ3IC0yOSAxOTQgLTQ3IDMyMiAtMTIwIDE3OSAtMTAxIDI3NyAtMTc2IDYxNSAtNDcwIDM0OSAtMzAzIDQ2OSAtMzk4IDY2MCAtNTI1IDIxNCAtMTQxIDI0OSAtMTYwIDQ2NSAtMjQ4IDIwMSAtODEgMzE1IC0xMDYgNjYxIC0xNDIgNjUgLTcgNDA0IDE4IDU0NCA0MCAxNTkgMjUgNDcyIDEyOSA1NzYgMTkyIDI4NiAxNzQgNDM4IDMyNSA1NzIgNTczIDE0NSAyNjggMjEzIDY0NiAxNzggOTg2IC0xOSAxNzcgLTQ4IDIyNCAtMTQxIDIyNCAtODEgMCAtMTE0IC00MCAtMTM5IC0xNjggLTUyIC0yNzcgLTIzNSAtNDAzIC01OTEgLTQwNiAtMjE1IC0xIC0zNTQgMzIgLTY4MCAxNjQgLTU2MCAyMjcgLTc1MSAyOTcgLTk2MCAzNDkgLTMyNCA4MCAtNjI4IDEwOSAtOTkwIDk0eiIvPjwvZz48L3N2Zz48L3N2Zz4=);--tap-papier:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjQiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgMjI0IDIyNCI+PGcgc3Ryb2tlPSIjM0EzODQ1IiBzdHJva2Utb3BhY2l0eT0iMC4wNCIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMCAuNUgyMjRNMCA0LjVIMjI0TS41IDBWMjI0TTQuNSAwVjIyNCIvPjwvZz48c3ZnIHg9Ii0xLjkyIiB5PSItMi4wMCIgd2lkdGg9IjguODQiIGhlaWdodD0iOS4wMCIgdmlld0JveD0iMCAwIDIyNCAyMjgiIGZpbGw9IiMzQTM4NDUiIGZpbGwtb3BhY2l0eT0iMC4wOSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMjI4LjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQyMiAyMDQ5IGMtNTMgLTEwIC05NSAtMzUgLTEyMyAtNzIgLTI5IC0zOSAtMTA0IC0xOTMgLTEyMCAtMjQ1IC0xNSAtNTIgLTM5IC03NCAtNzUgLTcwIC0zMyA0IC0zOCAxMiAtOTYgMTYzIC04MCAyMDkgLTk3IDIxNyAtNDU1IDIxMyAtMjYxIC0zIC0yNjEgLTMgLTI4NyAtMjcgLTM2IC0zNCAtMzggLTI2IDQ0IC0yMDYgMTAgLTIyIDMwIC02NiA0NCAtOTggMTQgLTMxIDU4IC0xMDggOTkgLTE3MCAxMDcgLTE2NCAxNDcgLTI1MCAxNTggLTM0MyAxMSAtMTAzIDIgLTEzNSAtNzAgLTI0NCAtMzMgLTUyIC02MSAtOTcgLTYxIC0xMDIgMCAtMTMgLTk2IC0xODMgLTE3MSAtMzAzIC05OCAtMTU4IC0xMTIgLTI0OSAtNDIgLTI3NiAxNyAtNiAxMTYgLTkgMjYzIC03IDM1MiA1IDM2MSAxMSA1MDEgMzQyIDM4IDg5IDYyIDExMiAxMDIgOTcgMzMgLTEzIDgxIC05NCAxMDggLTE4NiA0MSAtMTM3IDEwOCAtMjM0IDE3MiAtMjUwIDEzIC00IDEzOSAtNSAyODAgLTMgMjUyIDMgMjU3IDMgMjc5IDI2IDQwIDM5IDMwIDk3IC0zNiAyMDYgLTMwIDUwIC02NCAxMTEgLTc0IDEzNiAtMTkgNDQgLTYzIDEyMCAtMTc2IDMwNiAtNjEgMTAwIC03NSAxNDcgLTc2IDI0NSAwIDcyIDQ0IDE3MiAxNDIgMzI1IDExMCAxNzEgMjM4IDQyMCAyMzggNDY0IDAgNjcgLTgzIDk0IC0yMzkgNzkgLTc1IC04IC0xMjYgLTggLTE3OCAwIC04MiAxMiAtOTAgMTIgLTE1MSAweiIvPjwvZz48L3N2Zz48c3ZnIHg9Ijk5LjY4IiB5PSIxMDIuNTAiIHdpZHRoPSIyOS42NSIgaGVpZ2h0PSIyNC4wMCIgdmlld0JveD0iMCAwIDc1NiA2MTIiIGZpbGw9IiMzQTM4NDUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNjEyLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMzY4NSA1ODgzIGMtNzgyIC0zMiAtMTYzMCAtMzAwIC0yMjE1IC03MDIgLTU2NiAtMzg4IC05NTQgLTg3NSAtMTEzNSAtMTQyNCAtMTQ0IC00MzkgLTE0MiAtOTYxIDcgLTEzODcgMjM2IC02NzUgNzIxIC0xMjA2IDE0ODggLTE2MjcgMzk2IC0yMTcgOTczIC0zOTMgMTUyNSAtNDY1IDIwOSAtMjcgODA4IC0zMyAxMDQ4IC0xMCA1MTUgNDkgMTAyNCAxNzkgMTUzMiAzOTEgMTEzIDQ3IDQ0MCAyMTggNTMxIDI3NyAzNTAgMjI4IDYzMCA0NzMgNzk0IDY5NCA5MyAxMjcgMTAxIDE2OSAzNiAyMTAgLTc5IDQ4IC0xMzcgMjMgLTI0MSAtMTA2IC0zMTUgLTM4NiAtNzg0IC02NzUgLTEyNDAgLTc2NCAtNDg3IC05NCAtOTU3IC0xNCAtMTQ2MCAyNDkgLTMyMyAxNjkgLTU1OSAzMzcgLTkxMCA2NDcgLTU0OCA0ODMgLTEwODYgMTE3NiAtMTM4NSAxNzgwIC0zNDIgNjkxIC0zODkgMTI1NCAtMTI5IDE1MTQgMTc1IDE3NSAzOTQgMjM1IDY2MiAxODAgMTQ3IC0yOSAxOTQgLTQ3IDMyMiAtMTIwIDE3OSAtMTAxIDI3NyAtMTc2IDYxNSAtNDcwIDM0OSAtMzAzIDQ2OSAtMzk4IDY2MCAtNTI1IDIxNCAtMTQxIDI0OSAtMTYwIDQ2NSAtMjQ4IDIwMSAtODEgMzE1IC0xMDYgNjYxIC0xNDIgNjUgLTcgNDA0IDE4IDU0NCA0MCAxNTkgMjUgNDcyIDEyOSA1NzYgMTkyIDI4NiAxNzQgNDM4IDMyNSA1NzIgNTczIDE0NSAyNjggMjEzIDY0NiAxNzggOTg2IC0xOSAxNzcgLTQ4IDIyNCAtMTQxIDIyNCAtODEgMCAtMTE0IC00MCAtMTM5IC0xNjggLTUyIC0yNzcgLTIzNSAtNDAzIC01OTEgLTQwNiAtMjE1IC0xIC0zNTQgMzIgLTY4MCAxNjQgLTU2MCAyMjcgLTc1MSAyOTcgLTk2MCAzNDkgLTMyNCA4MCAtNjI4IDEwOSAtOTkwIDk0eiIvPjwvZz48L3N2Zz48L3N2Zz4=)}
+/* Titel wie die Website: Fraunces mit weichen Enden, leicht, nie fett (culinarium.css .gross) */
+.li h1,.li h2,.li h3,.li [class*="__t"] b,.f-t,.li-farbe__n b,.li-schrift b,.li-gr b,.li-tafel figcaption b,.li-leer,.li-gesamt__s{font-variation-settings:"SOFT" 100,"opsz" 96}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:auto;-webkit-text-size-adjust:100%}
+body.li{margin:0;min-height:100vh;color:var(--tinte);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;
+  background:linear-gradient(rgba(243,236,234,.5),rgba(243,236,234,.5)),var(--tap-papier) 0 0/168px 168px,var(--papier)}
+body.li-zu{overflow:hidden}
+button{font:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+::selection{background:var(--hellgold);color:var(--tinte)}
+.mono{font:400 10.8px/1.4 var(--mono);letter-spacing:.17em;text-transform:uppercase;color:var(--stahl)}
+.leise{color:var(--leise);font-size:.92rem;line-height:1.55;margin:.4em 0 0}
+.link{border:0;background:none;padding:0;cursor:pointer;color:var(--stahl);text-decoration:underline;text-decoration-color:rgba(245,166,137,.7);text-underline-offset:4px}
+.li-ki,.mono,.kn{white-space:nowrap}
+.li-noscript{padding:120px 24px;text-align:center}
+
+/* ---------- Kopf (oben, Nachtblau mit Tannen), Rand (links, hell), Leiste (unten, nachtblaues Schild) ---------- */
+.kopf{position:fixed;z-index:50;left:0;right:0;top:0;height:var(--kopf-h);display:flex;align-items:center;gap:20px;padding:0 clamp(14px,2vw,26px);color:#fff;
+  background:var(--tap-nacht) 0 0/168px 168px,var(--nacht);box-shadow:inset 0 -1px 0 rgba(245,166,137,.22),0 14px 30px -24px #000}
+.kopf__marke{display:flex;align-items:center;gap:14px;border:0;background:none;cursor:pointer;text-align:left;min-width:calc(var(--rand-b) - 26px);padding:0}
+.li-z{display:grid;place-items:center;flex:none;width:42px;height:42px;border-radius:50%;background:rgba(38,36,45,.6);box-shadow:inset 0 0 0 1px rgba(245,166,137,.42)}
+.li-z img{width:24px;height:auto}
+.kopf__marke b{display:block;font:340 1.3rem/1 var(--titel);letter-spacing:.01em}
+.kopf__marke small{display:block;margin-top:5px;font:400 9.6px var(--mono);letter-spacing:.22em;text-transform:uppercase;color:rgba(245,166,137,.78);white-space:nowrap}
+.kopf__mitte{flex:1;min-width:0;text-align:center}
+.kopf__titel{font:340 1.25rem/1.05 var(--titel)}
+.kopf__stand{margin-top:4px;font:400 9.6px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.kopf__werk{display:flex;align-items:center;gap:10px}
+.kopf__trenn{width:1px;height:26px;background:rgba(245,166,137,.32);margin:0 4px}
+.rund{position:relative;display:grid;place-items:center;flex:none;width:40px;height:40px;border:0;border-radius:50%;cursor:pointer;color:rgba(255,255,255,.86);
+  background:rgba(38,36,45,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.24);transition:color .3s,background-color .3s,transform .45s var(--e2)}
+.rund:hover{color:var(--hellgold);background:rgba(255,255,255,.08)}.rund:active{transform:scale(.92)}
+.rund svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.rund[data-tip]::after{content:attr(data-tip);position:absolute;top:calc(100% + 10px);left:50%;translate:-50% 4px;padding:6px 11px 5px;border-radius:5px;background:var(--blatt);color:var(--tinte);font:500 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .25s,translate .4s var(--e1);box-shadow:0 10px 20px -10px rgba(0,0,0,.6)}
+.rund:hover::after,.rund:focus-visible::after{opacity:1;translate:-50% 0}
+.li-sp{position:relative}
+.li-sp__k{display:flex;align-items:center;gap:8px;height:40px;padding:0 14px 0 16px;border:0;border-radius:5px;cursor:pointer;color:var(--hellgold);font:500 11px var(--mono);letter-spacing:.16em;background:rgba(38,36,45,.55);box-shadow:inset 0 0 0 1px rgba(245,166,137,.4)}
+.li-sp__k i{display:grid;width:10px}.li-sp__k svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:1.4;transition:transform .4s var(--e1)}
+.li-sp.offen .li-sp__k svg{transform:rotate(180deg)}
+.li-sp ul{position:absolute;top:calc(100% + 10px);right:0;margin:0;padding:8px;list-style:none;min-width:220px;border-radius:6px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie),0 30px 40px -20px rgba(0,0,0,.7);
+  opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;pointer-events:none;transition:opacity .25s,transform .45s var(--e1);z-index:80}
+.li-sp.offen ul{opacity:1;transform:none;pointer-events:auto}
+.li-sp li button{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:10px 12px;border:0;border-radius:4px;background:none;cursor:pointer;font:340 1rem var(--titel);color:var(--tinte);text-align:start}
+.li-sp li button small{font:400 10px var(--mono);letter-spacing:.14em;color:var(--stahl)}
+.li-sp li button:hover,.li-sp li button[aria-selected="true"]{background:rgba(245,166,137,.16)}
+
+.rand{position:fixed;z-index:40;left:0;top:var(--kopf-h);bottom:0;width:var(--rand-b);padding:20px 14px 20px 16px;overflow:auto;isolation:isolate}
+.rand::before{content:'';position:absolute;inset:14px 0 14px 12px;z-index:-1;border-radius:6px;background:#FFFCFB;box-shadow:inset 0 0 0 1px var(--linie),0 22px 40px -34px rgba(38,36,45,.45)}
+.rand__in{display:flex;flex-direction:column;gap:18px;min-height:100%;padding:10px 8px 120px}
+.rand__auf{display:none}
+.nav{display:flex;flex-direction:column;gap:4px}
+.nav>p{display:flex;align-items:center;gap:10px;margin:14px 8px 4px;font:400 9.6px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--leise)}
+.nav>p::after{content:'';flex:1;height:1px;background:var(--linie)}
+.nw{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 12px;border:0;border-radius:4px;cursor:pointer;text-align:left;background:none;
+  font:400 .98rem/1.25 var(--sans);color:var(--tinte);transition:background-color .3s}
+.nw em{min-width:26px;height:24px;padding:0 8px;border-radius:4px;display:grid;place-items:center;font:500 10.8px var(--mono);font-style:normal;background:rgba(38,36,45,.06);color:var(--leise)}
+.nw em svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.4}
+.nw:hover{background:rgba(38,36,45,.04)}
+.nw[aria-current="true"]{color:#fff;background:var(--nacht) var(--tap-nacht) 0 0/168px 168px;box-shadow:0 12px 22px -14px rgba(38,36,45,.8)}
+.nw[aria-current="true"] em{background:var(--hellgold);color:var(--tinte)}
+.wege{margin-top:auto;display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--linie);padding-top:14px}
+.wege a{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:4px;font-size:.88rem;color:rgba(38,36,45,.74);transition:color .3s,background-color .3s}
+.wege a:hover{color:var(--tinte);background:rgba(38,36,45,.04)}
+.wege svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.4}
+
+.haupt{margin-left:var(--rand-b);padding:calc(var(--kopf-h) + clamp(22px,2.4vw,34px)) clamp(18px,3.2vw,52px) 180px;min-height:100vh}
+#ansicht>*{max-width:1240px;margin-left:auto;margin-right:auto}
+.leiste{position:fixed;z-index:45;left:calc(var(--rand-b) + (100vw - var(--rand-b)) / 2);bottom:20px;translate:-50% 0;width:min(1180px,calc(100vw - var(--rand-b) - 44px));display:flex;align-items:center;gap:16px;padding:10px 10px 10px 18px;border-radius:6px;color:#fff;
+  background:var(--tap-nacht) 0 0/168px 168px,var(--nacht);box-shadow:inset 0 0 0 1px rgba(245,166,137,.3),0 26px 44px -20px rgba(38,36,45,.85)}
+.li-recht__z{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(245,166,137,.4)}.li-recht__z img{width:22px;height:auto}
+.leiste__t{flex:1;min-width:0;display:flex;flex-direction:column}
+.leiste__t b{font:340 1rem/1.2 var(--titel)}
+.leiste__t span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.78rem;line-height:1.45;color:rgba(255,255,255,.72)}
+
+/* ---------- Knöpfe (Grundform aus dem Vorbild; Form von Culinarium am Ende: Platte mit rundem Knauf in Kerze) ---------- */
+.kn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:space-between;gap:14px;height:52px;padding:0 6px 0 22px;border:0;border-radius:5px;cursor:pointer;white-space:nowrap;
+  font:500 11.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--papier);
+  background:linear-gradient(#3A3845,#26252E 55%,#16151A);box-shadow:inset 0 1px 0 #3A3845,inset 0 -2px 0 #0F0E13,0 12px 22px -12px rgba(38,36,45,.7);transition:transform .5s var(--e2)}
+.kn i{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-style:normal;background:linear-gradient(#FAF4F4,#E9E0DE);box-shadow:inset 0 1px 0 #FFFCFB,inset 0 -2px 0 #E9E0DE;transition:transform .5s var(--e2)}
+.kn svg{width:14px;height:14px;fill:none;stroke:var(--tinte);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.kn::after{content:'';position:absolute;top:0;bottom:0;left:-40%;width:32%;background:linear-gradient(100deg,transparent,rgba(245,166,137,.28),transparent);transform:translateX(-120%) skewX(-18deg);pointer-events:none}
+.kn:hover{transform:translateY(-2px)}.kn:hover::after{transform:translateX(560%) skewX(-18deg);transition:transform .9s var(--e1)}
+.kn:hover i{transform:translate(1px,-1px) rotate(-8deg)}
+.kn:active{transform:translateY(1px)}
+.kn--klein{height:44px;padding:0 5px 0 18px;font-size:10.5px;gap:10px}.kn--klein i{width:34px;height:34px}.kn--klein svg{width:12px;height:12px}
+.kn--linie,.kn--hell{color:var(--tinte);background:linear-gradient(#FAF4F4,#E9E0DE 55%,#E9E0DE);box-shadow:inset 0 1px 0 #FFFCFB,inset 0 -2px 0 #E9E0DE,0 12px 22px -12px rgba(0,0,0,.55)}
+.kn--linie i,.kn--hell i{background:linear-gradient(#B15736,#16151A);box-shadow:inset 0 1px 0 #3A3845,inset 0 -2px 0 #0F0E13}
+.kn--linie svg,.kn--hell svg{stroke:var(--papier)}
+.kn--linie::after,.kn--hell::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent)}
+.kn--gold{color:var(--tinte);background:linear-gradient(180deg,#FBD9CC,#F5A689 30%,#FBD9CC 62%,#3A3845);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -2px 0 rgba(0,0,0,.28),0 10px 20px -12px rgba(0,0,0,.8)}
+.kn--gold i{background:linear-gradient(#B15736,#16151A);box-shadow:inset 0 1px 0 #3A3845,inset 0 -2px 0 #0F0E13}
+.kn--gold svg{stroke:var(--papier)}
+.kn--gold::after{background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent)}
+.platte{border-radius:6px;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:inset 0 0 0 1px var(--linie),0 30px 50px -36px rgba(38,36,45,.55);color:var(--tinte)}
+
+/* ---------- Auftritt (R17): schwebt federnd herein, deckend ab dem ersten Bild, nur Bewegung ---------- */
+.li [data-r]{transform:translate3d(0,40px,0) scale(.97)}
+.li [data-r].da{animation:li-feder 1.1s var(--feder) calc(min(var(--i,0),3) * 70ms) both}
+.li .li-f[data-r].da{animation-duration:.6s;animation-delay:calc(var(--i,0) * 35ms)}
+@keyframes li-feder{0%{transform:translate3d(0,40px,0) scale(.97)}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.li [data-r]{transform:none}.li [data-r].da{animation:none}}
+
+/* ---------- Kopf jeder Ansicht (R16): Bühne mit Foto des Hauses, die drei Tannen zwischen feinen Goldlinien ---------- */
+.li-hero{position:relative;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:end;gap:clamp(18px,3vw,48px);min-height:clamp(260px,25vw,350px);margin-bottom:clamp(22px,2.4vw,34px);padding:clamp(26px,3vw,46px) clamp(24px,3.2vw,52px);border-radius:6px;overflow:hidden;isolation:isolate;color:#fff;
+  box-shadow:inset 0 0 0 1px rgba(245,166,137,.2),0 40px 60px -40px rgba(38,36,45,.9)}
+.li-hero__b{position:absolute;inset:0;z-index:-1;background:var(--bild) 50% 50%/cover no-repeat,var(--nacht);transform-origin:70% 50%;animation:li-zoom 3.2s var(--e1) both}
+.li-hero::before{content:'';position:absolute;left:0;top:0;bottom:0;width:46%;z-index:-1;opacity:.55;background:var(--tap-nacht) 0 0/168px 168px;-webkit-mask-image:linear-gradient(90deg,#000 40%,transparent);mask-image:linear-gradient(90deg,#000 40%,transparent)}
+@keyframes li-zoom{from{transform:scale(1.08)}to{transform:none}}
+.li-hero__t{display:flex;flex-direction:column;align-items:flex-start;max-width:660px}
+.li-hero__z{display:flex;align-items:center;gap:14px;margin:0 0 16px;animation:li-ein 1.4s var(--e1) .1s both}
+.li-hero__z img{width:34px;height:auto}
+.li-hero__z i{display:block;width:72px;height:1px;background:linear-gradient(90deg,var(--hellgold),transparent)}
+.li-hero h1{margin:0;font:340 clamp(2rem,3.6vw,3.5rem)/1.06 var(--titel);letter-spacing:-.005em;text-shadow:0 .05em .2em rgba(38,36,45,.6)}
+.li-zz{display:block;overflow:hidden;padding:0 0 .1em}
+.li-zz>span{display:block;animation:li-zeile 1.5s var(--e1) both}
+.li-zz:nth-child(1)>span{animation-delay:.2s}.li-zz:nth-child(2)>span{animation-delay:.34s}
+@keyframes li-zeile{from{transform:translate3d(0,112%,0)}to{transform:none}}
+.li-hero h1 em{font-style:normal;color:var(--hellgold)}
+.li-hero .satz{margin:clamp(12px,1.4vw,18px) 0 0;max-width:50ch;font-size:clamp(.98rem,1.08vw,1.08rem);line-height:1.62;color:rgba(255,255,255,.88);text-shadow:0 1px 3px rgba(38,36,45,.8),0 4px 18px rgba(38,36,45,.7);animation:li-ein 1.4s var(--e1) .55s both}
+@keyframes li-ein{from{transform:translate3d(0,24px,0)}to{transform:none}}
+.titel__kn{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;animation:li-ein 1.4s var(--e1) .7s both}
+.li-hero__s{list-style:none;margin:0;padding:0;display:flex;justify-content:flex-end;gap:clamp(8px,1vw,14px);flex-wrap:nowrap}
+/* Namensschild: nachtblau mit Goldprägung (wie auf «Das Haus») */
+.li-hero__s li{display:flex;flex-direction:column;align-items:center;min-width:96px;padding:14px 14px 12px;border-radius:6px;background:linear-gradient(180deg,#B15736,#0F0E13);box-shadow:inset 0 0 0 1px rgba(245,166,137,.36),inset 0 1px 0 rgba(242,245,248,.14),0 22px 30px -18px #000;animation:li-stat 1.6s var(--feder) both}
+.li-hero__s li:nth-child(1){animation-delay:.6s}.li-hero__s li:nth-child(2){animation-delay:.74s}.li-hero__s li:nth-child(3){animation-delay:.88s}
+@keyframes li-stat{from{transform:translate3d(0,40px,0) scale(.95)}to{transform:none}}
+.li-hero__s b{font:340 clamp(1.6rem,2.4vw,2.3rem)/1 var(--titel);color:var(--hellgold);font-variant-numeric:lining-nums;text-shadow:0 -1px 0 rgba(0,0,0,.6),0 1px 0 rgba(242,245,248,.18)}
+.li-hero__s span{margin-top:6px;font:400 9.6px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.74);text-align:center}
+.li-hero[data-r].da{animation:none}
+.li-hero[data-r]{transform:none}
+@media (max-width:900px){.li-hero{grid-template-columns:minmax(0,1fr);min-height:0;align-items:start}.li-hero__s{justify-content:flex-start;flex-wrap:wrap}.li-hero__b::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(38,36,45,.5),rgba(38,36,45,.86))}}
+@media (prefers-reduced-motion:reduce){.li-hero__b,.li-hero__z,.li-zz>span,.li-hero .satz,.li-hero__s li,.titel__kn{animation:none!important}}
+
+/* ---------- Übersicht ---------- */
+.li-karten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.li-k{position:relative;display:flex;flex-direction:column;padding:9px;border:0;border-radius:6px;text-align:start;cursor:pointer;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:inset 0 0 0 1px var(--linie),0 30px 50px -36px rgba(38,36,45,.6);color:var(--tinte)}
+.li-k__b{position:relative;display:block;aspect-ratio:4/3;border-radius:6px;overflow:hidden;background:var(--nacht)}
+.li-k__n{position:relative;display:flex;flex-direction:column;gap:5px;padding:18px 64px 14px 12px}
+.li-k__n small{font:400 9.6px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--stahl)}
+.li-k__n b{font:340 1.6rem/1.1 var(--titel);color:var(--nacht)}
+.li-k__n>span{color:var(--leise);font-size:.9rem;line-height:1.5}
+.li-k__p{position:absolute;right:10px;top:18px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-style:normal;background:linear-gradient(#B15736,#16151A);box-shadow:inset 0 1px 0 #3A3845,inset 0 -2px 0 #0F0E13,0 8px 14px -8px rgba(38,36,45,.6);transition:transform .6s var(--e2)}
+.li-k__p svg{width:14px;height:14px;fill:none;stroke:var(--papier);stroke-width:1.5}
+@media (hover:hover){.li-k:hover .li-k__p{transform:translate(2px,-2px) rotate(-8deg)}}
+/* Abzüge auf der Nacht: drei Fotos wie Polaroids (wie «Vor Ihrer Anreise» auf der Website) */
+.li-stapel{position:absolute;inset:0;background:var(--tap-nacht) 0 0/168px 168px,var(--nacht)}
+.li-stapel img{position:absolute;width:52%;aspect-ratio:1/1.06;object-fit:cover;padding:6px 6px 22px;background:var(--blatt);border-radius:3px;box-shadow:0 18px 28px -14px rgba(0,0,0,.75)}
+.li-stapel img:nth-child(1){left:8%;top:16%;transform:rotate(-6deg)}
+.li-stapel img:nth-child(2){left:26%;top:26%;transform:rotate(2deg)}
+.li-stapel img:nth-child(3){left:44%;top:12%;transform:rotate(8deg)}
+.li-logo{position:absolute;inset:0;display:grid;place-items:center}
+.li-tapete-d{background:var(--tap-nacht) 0 0/168px 168px,var(--nacht)}
+.li-logo img{width:72%;height:auto}
+.li-pr-bild{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;background:linear-gradient(rgba(243,236,234,.5),rgba(243,236,234,.5)),var(--tap-papier) 0 0/168px 168px,var(--papier)}
+.li-pr-f{display:flex;height:64px;width:78%;border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px var(--linie),0 18px 26px -18px rgba(38,36,45,.6)}
+.li-pr-f i{flex:1}
+.li-pr-de{display:flex;align-items:baseline;gap:8px;color:var(--nacht)}
+.li-pr-de b{font:340 3rem/1 var(--titel)}.li-pr-de small{font:400 10px var(--mono);letter-spacing:.2em;color:var(--stahl)}
+.li-zahlen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px;padding:24px 10px}
+.li-zahlen div{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:0 10px}
+.li-zahlen div+div{border-inline-start:1px solid var(--linie)}
+.li-zahlen b{font:340 2.8rem/1 var(--titel);color:var(--nacht);font-variant-numeric:lining-nums}
+.li-zahlen span{font:400 9.6px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--stahl)}
+.li-buch{display:grid;grid-template-columns:220px 1fr auto;align-items:center;gap:26px;margin-top:24px;padding:10px 22px 10px 10px}
+.li-buch__b{display:block;aspect-ratio:3/2;border-radius:6px;overflow:hidden}
+.li-buch__b img{width:100%;height:100%;object-fit:cover}
+.li-buch__t{display:flex;flex-direction:column;gap:5px}
+.li-buch__t b{font:340 1.9rem/1.1 var(--titel);color:var(--nacht)}
+.li-buch__t>span{color:var(--leise)}
+
+/* ---------- Bildarchiv ---------- */
+.li-filter{padding:18px 22px 12px}
+.suche{position:relative;display:block}
+.suche input{width:100%;height:50px;padding:0 16px 0 44px;border:0;border-radius:6px;font:inherit;font-size:16px;color:var(--tinte);background:#FFFCFB;box-shadow:inset 0 2px 4px rgba(38,36,45,.12),inset 0 0 0 1px var(--linie);-webkit-appearance:none;appearance:none}
+.suche input:focus{outline:0;box-shadow:inset 0 2px 4px rgba(38,36,45,.12),inset 0 0 0 2px var(--gold)}
+.suche input::-webkit-search-cancel-button{-webkit-appearance:none}
+.li-suche{margin:0 0 14px}
+.li-suche svg{position:absolute;left:16px;top:17px;width:16px;height:16px;fill:none;stroke:var(--stahl);stroke-width:1.6}
+.li-wahl{display:flex;align-items:center;gap:12px;margin:0 0 10px;flex-wrap:wrap}
+.li-wahl .mono{min-width:78px}
+.wahl2{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 0}
+/* Culinarium (Auftrag 28.10.: keine Pillen-Reihen): die Wahl steht wie Rudis Zeilen, Wörter mit Schrägstrich in Kerze, die gewählte unterstrichen */
+.wahl2 button{height:auto;padding:6px 2px;border:0;border-radius:0;cursor:pointer;background:none;box-shadow:none;font:600 12px/1.3 var(--etikett);letter-spacing:.12em;text-transform:uppercase;color:var(--leise);
+  text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:7px;transition:color .25s,text-decoration-color .25s}
+.wahl2 button+button::before{content:"/";display:inline-block;margin:0 12px 0 10px;color:#EF7649;text-decoration:none}
+.wahl2 button:hover{color:var(--tinte)}
+.wahl2 button[aria-pressed="true"]{color:#B15736;text-decoration-color:#EF7649}
+.li-wahl-reihe{display:flex;gap:10px 28px;flex-wrap:wrap}
+.li-treffer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:8px 2px 0;font:400 10.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--stahl)}
+.li-treffer .link{font:400 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.li-raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));grid-auto-rows:150px;grid-auto-flow:dense;gap:16px;margin-top:22px}
+.li-f{position:relative;display:block;padding:0;border:0;border-radius:6px;overflow:hidden;background:var(--leinen);box-shadow:0 0 0 1px var(--linie),0 20px 32px -22px rgba(38,36,45,.6);cursor:zoom-in;transition:box-shadow .45s}
+.li-f--hoch{grid-row:span 2}
+.li-f img{display:block;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
+/* Plakate (Oberchef/Robert 28.10.2026): nie angeschnitten. Eigene Kachel über zwei Reihen, das ganze Plakat mit Innenrand, der Name steht darunter */
+.li-f--plakat{grid-row:span 2;display:flex;flex-direction:column;gap:10px;padding:12px;background:linear-gradient(180deg,#FFFCFB,#F3ECEA)}
+.li-f--plakat img{flex:1 1 0;min-height:0;height:auto;object-fit:contain;object-position:50% 50%;border-radius:2px;filter:drop-shadow(0 10px 14px rgba(22,21,26,.28))}
+.li-f--plakat .li-f__n{position:static;max-width:none;transform:none;white-space:normal;text-overflow:clip;text-align:center;font-size:.86rem;padding:6px 10px 5px}
+.li-f:focus-visible,.li-f:hover{box-shadow:0 0 0 2px var(--gold),0 20px 32px -22px rgba(38,36,45,.6)}
+/* Namensschild unten, nachtblau mit Goldprägung */
+.li-f__n{position:absolute;left:10px;bottom:10px;max-width:calc(100% - 20px);padding:7px 12px 6px;border-radius:4px;background:linear-gradient(180deg,#B15736,#0F0E13);box-shadow:inset 0 0 0 1px rgba(245,166,137,.4),0 8px 16px -8px rgba(0,0,0,.7);
+  font:340 .9rem/1.15 var(--titel);color:var(--hellgold);text-shadow:0 -1px 0 rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transform:translateY(calc(100% + 14px));transition:transform .55s var(--e1)}
+.li-f:hover .li-f__n,.li-f:focus-visible .li-f__n{transform:none}
+@media (hover:none){.li-f__n{transform:none}}
+.li-ki{position:absolute;top:10px;left:10px;padding:5px 9px 4px;border-radius:8px;background:var(--nacht);color:var(--hellgold);font:500 9.6px var(--mono);letter-spacing:.16em;box-shadow:0 0 0 1px rgba(245,166,137,.5),0 6px 12px -6px rgba(0,0,0,.6)}
+.li-leer{grid-column:1/-1;padding:60px 0;text-align:center;font:340 1.4rem var(--titel);color:var(--stahl)}
+.li-mehr{display:flex;justify-content:center;margin-top:30px}
+
+/* ---------- Detail im Fenster ---------- */
+.fenster{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:clamp(12px,3vw,40px);background:rgba(38,36,45,.86);overflow:auto;overscroll-behavior:contain}
+.fenster[hidden]{display:none}
+.fenster__k{position:relative;width:100%;max-height:100%;overflow:auto;padding:clamp(18px,2.4vw,32px);border-radius:6px;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:0 60px 90px -40px #000;animation:li-ein .7s var(--e1) both}
+.fenster__zu{position:absolute;right:14px;top:14px;z-index:5;color:var(--tinte);background:#FFFCFB;box-shadow:inset 0 0 0 1px var(--linie),0 8px 16px -8px rgba(0,0,0,.4)}
+.fenster__zu:hover{color:var(--tinte);background:var(--papier)}
+.li-fk{width:min(1240px,100%)}
+.li-det{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:30px;align-items:start}
+.li-det__bild{position:relative;width:fit-content;max-width:100%;margin:0 auto;overflow:hidden;border-radius:6px;background:var(--leinen);box-shadow:0 0 0 1px var(--linie),0 26px 40px -26px rgba(0,0,0,.6);touch-action:none;line-height:0;outline:0}
+.li-det__bild>img:first-child{display:block;width:auto;max-width:100%;height:auto;max-height:70vh;user-select:none;-webkit-user-drag:none}
+.li-rahmen{position:absolute;left:0;top:0;border:2px solid var(--hellgold);border-radius:6px;box-shadow:0 0 0 9999px rgba(38,36,45,.55),inset 0 0 0 1px rgba(0,0,0,.25);cursor:grab;z-index:2;touch-action:none}
+.li-rahmen.zieht{cursor:grabbing}
+.li-rahmen--ganz{cursor:default}
+.li-rahmen::after{content:attr(data-g);position:absolute;left:10px;top:10px;padding:5px 9px 4px;border-radius:8px;background:var(--nacht);color:var(--hellgold);font:500 9px/1.2 var(--mono);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.li-rahmen.blitz{animation:li-blitz .7s ease-out}
+@keyframes li-blitz{0%{border-color:#fff}100%{border-color:var(--hellgold)}}
+.li-det__hilfe{margin:12px 4px 0}
+.li-det__t h2{margin:6px 0 14px;font:340 2rem/1.12 var(--titel);color:var(--nacht);overflow-wrap:anywhere}
+.li-meta{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:16px 0 20px;font-size:.88rem}
+.li-meta dt{font:400 9.6px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--stahl);padding-top:3px}
+.li-meta dd{margin:0;overflow-wrap:anywhere}
+.li-det__gr{margin:0 0 8px}
+.li-grl{list-style:none;margin:0;padding:6px;border-radius:6px;background:rgba(38,36,45,.05);box-shadow:inset 0 2px 5px rgba(38,36,45,.08)}
+.li-gr{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 8px 9px 14px;border-radius:6px;transition:background-color .35s,box-shadow .35s}
+.li-gr+.li-gr{margin-top:2px}
+.li-gr.an{background:#FFFCFB;box-shadow:inset 0 0 0 1px rgba(245,166,137,.5),0 8px 14px -8px rgba(38,36,45,.35)}
+.li-gr span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.li-gr b{font:340 1.08rem/1.1 var(--titel);color:var(--nacht)}
+.li-gr small{font-size:.8rem;color:var(--leise)}
+.li-hinweis{margin:0 0 12px;padding:12px 16px;border-radius:4px;background:rgba(245,166,137,.14);font-size:.88rem;color:var(--tinte)}
+.li-hinweis b{display:block;margin-bottom:3px;font:500 9.6px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--stahl)}
+.li-hinweis--ki{background:var(--nacht) var(--tap-nacht) 0 0/168px 168px;color:var(--papier);box-shadow:inset 0 0 0 1px rgba(245,166,137,.4)}
+.li-hinweis--ki b{color:var(--hellgold)}
+.li-hinweis--leise{background:none;padding:0;color:var(--leise)}
+.li-hinweis--bsp,.li-hinweis--probe{padding:14px 20px}
+.li-hinweis--probe{background:linear-gradient(180deg,#B15736,#0F0E13);color:var(--papier);box-shadow:inset 0 0 0 1px rgba(245,166,137,.45)}
+.li-hinweis--probe b{color:var(--hellgold)}
+.li-orig{margin:14px 0 0}
+.li-imp{margin-top:22px;padding-top:18px;border-top:1px solid var(--linie)}
+.li-imp__k{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 8px}
+/* Vorher / Nachher (L09) */
+.li-vn__v{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:fill;opacity:0;transition:opacity .6s ease;pointer-events:none;z-index:1;user-select:none;-webkit-user-drag:none}
+.li-det__bild[data-m="vorher"] .li-vn__v{opacity:1}
+.li-det__bild[data-m="schieber"] .li-vn__v{opacity:1;transition:none;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.li-det__bild[data-m="schieber"]{cursor:ew-resize}
+.li-det__bild:not([data-m="nachher"]) .li-rahmen{display:none}
+.li-vn__gr{position:absolute;top:0;bottom:0;left:var(--p,50%);width:0;display:none;pointer-events:none;z-index:3}
+.li-det__bild[data-m="schieber"] .li-vn__gr{display:block}
+.li-vn__gr::before{content:'';position:absolute;top:0;bottom:0;left:-1px;width:2px;background:var(--hellgold);box-shadow:0 0 0 1px rgba(0,0,0,.25),0 0 14px rgba(0,0,0,.45)}
+.li-vn__gr i{position:absolute;top:50%;left:0;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(#B15736,#16151A);color:var(--hellgold);box-shadow:inset 0 1px 0 #3A3845,0 10px 18px -6px rgba(0,0,0,.7)}
+.li-vn__t{position:absolute;left:14px;top:14px;padding:6px 14px;border-radius:5px;background:rgba(38,36,45,.86);color:var(--hellgold);font:500 10px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;pointer-events:none;box-shadow:0 0 0 1px rgba(245,166,137,.3);z-index:4}
+.li-det__bild[data-m="nachher"] .li-vn__t{top:auto;bottom:70px}
+.li-vn__bar{position:absolute;left:50%;bottom:16px;translate:-50% 0;z-index:4;display:flex;gap:4px;padding:4px;border-radius:5px;background:rgba(38,36,45,.9);box-shadow:inset 0 0 0 1px rgba(245,166,137,.3),0 14px 22px -10px rgba(0,0,0,.8);line-height:1}
+.li-vn__bar button{height:38px;padding:0 18px;border:0;border-radius:5px;cursor:pointer;font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);background:none;transition:background-color .3s,color .3s}
+.li-vn__bar button:hover{color:#fff}
+.li-vn__bar button[aria-pressed="true"]{color:var(--tinte);background:linear-gradient(#FAF4F4,#E9E0DE);box-shadow:inset 0 1px 0 #FFFCFB,inset 0 -2px 0 #E9E0DE}
+
+/* ---------- Dateien ---------- */
+.li-d{margin-top:clamp(34px,4vw,58px);scroll-margin-top:calc(var(--kopf-h) + 20px)}
+.li-d>header{margin-bottom:18px}
+.li-d__t{margin:0;font:340 clamp(1.7rem,2.6vw,2.4rem)/1.1 var(--titel);color:var(--nacht)}
+.li-d__t em{font-style:normal;color:var(--gold)}
+.li-tafeln{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.li-tafeln--breit{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.li-tafel{margin:0;border-radius:6px;overflow:hidden;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:inset 0 0 0 1px var(--linie),0 26px 40px -30px rgba(38,36,45,.6);display:flex;flex-direction:column;min-width:0}
+.li-tafel__f{display:grid;place-items:center;aspect-ratio:1.5;padding:22px}
+.li-tafel__f img{max-width:46%;max-height:100%;width:auto;height:auto}
+.li-tafeln--breit .li-tafel__f img{max-width:84%}
+.li-tafel--dunkel .li-tafel__f,.li-tafel--tief .li-tafel__f{background:var(--tap-nacht) 0 0/168px 168px,var(--nacht)}
+.li-tafel--tief .li-tafel__f{background:var(--tap-fuss) 0 0/168px 168px,var(--tief)}
+.li-tafel--hell .li-tafel__f{background:linear-gradient(rgba(243,236,234,.5),rgba(243,236,234,.5)),var(--tap-papier) 0 0/168px 168px,var(--papier)}
+.li-tafel--gruen .li-tafel__f{background:#3A3845}
+.li-tafel--dc .li-tafel__f{background:#8953A9}.li-tafel--dc .li-tapete{background-color:#8953A9}
+.li-tafel--dc .li-tafel__f img{max-width:62%}
+.li-tapete{background-size:168px 168px!important;background-position:0 0!important;aspect-ratio:1.5}
+.li-tafel--dunkel .li-tapete{background-color:var(--nacht)}.li-tafel--tief .li-tapete{background-color:var(--tief)}.li-tafel--hell .li-tapete{background-color:var(--papier)}
+.li-tafel figcaption{display:flex;flex-direction:column;gap:10px;padding:14px 16px 16px}
+.li-tafel figcaption>span{min-width:0}
+.li-tafel figcaption b{display:block;font:340 1.05rem/1.2 var(--titel)}
+.li-tafel figcaption small{display:block;font:400 10px var(--mono);letter-spacing:.06em;color:var(--leise);margin-top:2px}
+.li-kn{display:flex;flex-wrap:wrap;gap:8px}
+.li-kn--mitte{justify-content:center;margin-top:22px}
+.li-fg+.li-fg{margin-top:26px}
+.li-fg h3{margin:0;font:340 1.25rem/1.2 var(--titel);color:var(--nacht)}
+.li-fg>.leise{margin:4px 0 14px}
+.li-fg--druck{padding:20px;border-radius:6px;background:rgba(58,56,69,.06);box-shadow:inset 0 0 0 1px rgba(58,56,69,.16)}
+.li-farben{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px}
+.li-farbe{position:relative;display:flex;flex-direction:column;border:0;padding:0;border-radius:6px;overflow:hidden;cursor:pointer;text-align:left;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:inset 0 0 0 1px var(--linie),0 22px 32px -26px rgba(38,36,45,.6);transition:transform .6s var(--e1)}
+.li-farbe:hover{transform:translateY(-4px)}
+.li-farbe__f{position:relative;display:block;height:120px;background:var(--c);box-shadow:inset 0 -1px 0 rgba(0,0,0,.14)}
+.li-farbe__ok{position:absolute;left:50%;top:50%;translate:-50% -50%;scale:.8;padding:6px 14px;border-radius:5px;background:var(--tinte);color:var(--hellgold);font:500 10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .3s,scale .5s var(--e1)}
+.li-farbe.kopiert .li-farbe__ok{opacity:1;scale:1}
+.li-farbe__n{display:flex;flex-direction:column;gap:2px;padding:12px 14px 4px}
+.li-farbe__n b{font:340 1.05rem/1.2 var(--titel)}
+.li-farbe__n small{font-size:.78rem;line-height:1.4;color:var(--leise)}
+.li-farbe__w{display:flex;flex-direction:column;gap:2px;padding:6px 14px 14px;font:400 10.5px var(--mono);letter-spacing:.04em;color:rgba(38,36,45,.7)}
+.li-farbe__w span:hover{color:var(--gold)}
+.li-schriften{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.li-schrift{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:20px;align-items:center;padding:14px 14px 14px 24px;border-radius:6px;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:inset 0 0 0 1px var(--linie),0 18px 28px -24px rgba(38,36,45,.6)}
+.li-schrift__p{font-size:clamp(1.15rem,1.9vw,1.7rem);line-height:1.2;color:var(--nacht);overflow-wrap:anywhere}
+.li-schrift b{display:block;font:340 1rem var(--titel)}
+.li-schrift small{font-size:.8rem;color:var(--leise)}
+.f-a{font-family:var(--titel);font-weight:400}
+.f-a4{font-family:var(--titel);font-weight:400}
+.f-s{font-family:var(--sans)}
+.f-m,.f-m5{font-family:var(--mono);text-transform:uppercase;letter-spacing:.17em;font-size:clamp(.82rem,1.1vw,1rem)!important}
+.f-m5{font-weight:500}
+
+/* ---------- Markenprüfung ---------- */
+.li-feld{padding:clamp(20px,2.6vw,32px)}
+.li-feld__in{display:flex;flex-direction:column;align-items:center;gap:12px;padding:clamp(28px,4vw,54px) 20px;border:2px dashed rgba(22,21,26,.42);border-radius:6px;text-align:center;transition:background-color .3s,border-color .3s}
+.li-feld.ueber .li-feld__in{background:rgba(245,166,137,.24);border-color:var(--gold)}
+.li-feld__z{width:40px}.li-feld__z img{width:100%;height:auto}
+.li-feld__t{margin:0;font:340 1.5rem var(--titel);color:var(--nacht)}
+.li-feld__vor{width:min(260px,70%);aspect-ratio:4/3;border-radius:4px;overflow:hidden;background:var(--leinen);display:grid;place-items:center;box-shadow:0 20px 30px -18px rgba(0,0,0,.5)}
+.li-feld__vor img{width:100%;height:100%;object-fit:contain}
+.li-pdf{font:500 1.3rem var(--mono);color:var(--stahl)}
+.li-feld__name{margin:0;max-width:100%;overflow-wrap:anywhere}.li-feld__name b{display:block;font:340 1.1rem var(--titel)}.li-feld__name small{color:var(--leise)}
+.li-feld__kn{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+.li-bsp{margin:6px 0 0}
+.li-privat{margin:16px 6px 0;text-align:center;font-size:.85rem;color:var(--leise)}
+.li-lauf{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:clamp(20px,3vw,44px);align-items:center;padding:clamp(20px,2.6vw,32px)}
+.li-lauf__b{position:relative;border-radius:6px;overflow:hidden;background:var(--leinen);aspect-ratio:4/3;display:grid;place-items:center}
+.li-lauf__b img{width:100%;height:100%;object-fit:contain}
+.li-scan{position:absolute;left:0;right:0;top:0;height:30%;background:linear-gradient(180deg,transparent,rgba(245,166,137,.6),transparent);animation:li-scan 2.4s ease-in-out infinite}
+@keyframes li-scan{0%{transform:translateY(-100%)}100%{transform:translateY(340%)}}
+.li-schritte{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:12px}
+.li-schritte li{display:flex;align-items:center;gap:14px;font:340 1.15rem var(--titel);color:rgba(38,36,45,.42);transition:color .4s}
+.li-schritte i{flex:none;width:18px;height:18px;border-radius:50%;box-shadow:inset 0 0 0 2px currentColor;position:relative}
+.li-schritte li.an{color:var(--nacht)}
+.li-schritte li.an i{animation:li-puls 1.1s ease-in-out infinite}
+.li-schritte li.fertig{color:var(--ok)}
+.li-schritte li.fertig i{background:var(--ok);box-shadow:none}
+@keyframes li-puls{50%{transform:scale(.7)}}
+.li-erg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:clamp(18px,2.6vw,34px);align-items:start}
+.li-erg__l,.li-erg__r{display:grid;gap:16px;min-width:0;grid-template-columns:minmax(0,1fr)}.li-erg,.li-pk,.li-gesamt{overflow-wrap:anywhere}.li-pk>*{min-width:0}
+.li-erg__bild{margin:0;padding:12px}
+.li-erg__bild img{width:100%;border-radius:6px}
+.li-erg__bild figcaption{padding:12px 10px 4px}.li-erg__bild figcaption b{display:block;font:340 1.05rem var(--titel);overflow-wrap:anywhere}.li-erg__bild small{color:var(--leise)}
+.li-erg__farben{padding:22px}
+.li-erg__farben h3,.li-tonvor h3,.li-erg__h{margin:0 0 6px;font:340 1.35rem/1.2 var(--titel);color:var(--nacht)}
+.li-rahmen-z{display:flex;align-items:center;gap:12px;margin:14px 0;font-size:.88rem}
+.li-rahmen-z__b{flex:none;width:90px;height:8px;border-radius:4px;background:rgba(38,36,45,.1);overflow:hidden}.li-rahmen-z__b i{display:block;height:100%;background:linear-gradient(90deg,var(--hellgold),var(--gold))}
+.li-toene{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.li-ton{display:grid;grid-template-columns:34px 1fr auto;gap:4px 12px;align-items:center;padding:8px 0;border-top:1px solid var(--linie)}
+.li-ton__f{width:34px;height:34px;border-radius:9px;box-shadow:0 0 0 1px rgba(38,36,45,.14)}
+.li-ton__a{grid-column:2;display:flex;align-items:center;gap:10px;font:400 11px var(--mono)}.li-ton__a i{display:block;height:6px;border-radius:3px;background:var(--stahl);max-width:120px}
+.li-ton__n{grid-column:2;min-width:0}.li-ton__n b{font:500 11px var(--mono);letter-spacing:.06em}.li-ton__n small{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:.78rem;color:var(--leise)}.li-ton__n small i{width:12px;height:12px;border-radius:3px;display:inline-block;box-shadow:0 0 0 1px rgba(38,36,45,.2)}
+.li-ton em{grid-column:3;grid-row:1/span 2;font:500 10px var(--mono);font-style:normal;letter-spacing:.12em;text-transform:uppercase}
+.li-ton--gleich em{color:var(--ok)}.li-ton--nah em{color:var(--acht)}.li-ton--fremd em{color:var(--nein)}
+.li-sonder{margin:14px 0 0;padding:12px 16px;list-style:none;border-radius:4px;background:rgba(245,166,137,.14);font-size:.85rem}
+.li-gesamt{padding:22px 26px}.li-gesamt__s{margin:8px 0 0;font:340 1.35rem/1.35 var(--titel);color:var(--nacht)}
+.li-punkte{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.li-pk{display:grid;grid-template-columns:118px 1fr;gap:16px;padding:16px 18px;border-radius:6px;background:linear-gradient(180deg,#FFFCFB,var(--blatt));box-shadow:inset 0 0 0 1px var(--linie),0 18px 28px -24px rgba(38,36,45,.6)}
+.li-pk__m{display:flex;flex-direction:column;gap:3px}.li-pk__m em{font:500 10.5px var(--mono);font-style:normal;letter-spacing:.14em;text-transform:uppercase}.li-pk__m small{font:400 9.6px var(--mono);letter-spacing:.1em;color:var(--leise);text-transform:uppercase}
+.li-pk--passt .li-pk__m em{color:var(--ok)}.li-pk--achten .li-pk__m em{color:var(--acht)}.li-pk--passt_nicht .li-pk__m em{color:var(--nein)}
+.li-pk--passt_nicht{box-shadow:inset 3px 0 0 var(--nein),inset 0 0 0 1px var(--linie),0 18px 28px -24px rgba(38,36,45,.6)}
+.li-pk__t b{display:block;font:340 1.08rem/1.25 var(--titel)}.li-pk__t span{display:block;margin-top:3px;font-size:.92rem;color:rgba(38,36,45,.8)}
+.li-tonvor{padding:22px 26px}.li-tonvor ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:12px}.li-tonvor s{display:block;color:var(--leise)}.li-tonvor span{display:block;font:340 1.05rem/1.4 var(--titel);color:var(--nacht)}
+.li-gelesen{padding:6px 4px}.li-gelesen summary{cursor:pointer}.li-gelesen p{white-space:pre-wrap;font-size:.9rem}
+.li-erg__kn{display:flex;flex-wrap:wrap;gap:12px}
+.li-bsp-unten{margin-top:clamp(30px,4vw,54px);padding-top:clamp(24px,3vw,38px);border-top:1px solid var(--linie)}
+
+/* ---------- Meldung (Quittung), Laden ---------- */
+.meldung{position:fixed;z-index:120;left:50%;bottom:108px;translate:-50% 0;display:grid;gap:8px;justify-items:center;pointer-events:none;width:min(560px,calc(100vw - 24px))}
+.quit{display:flex;align-items:center;gap:10px;max-width:100%;padding:10px 10px 10px 20px;border-radius:5px;background:var(--nacht);color:var(--hellgold);font:500 11.5px/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 0 0 1px rgba(245,166,137,.4),0 20px 30px -14px rgba(0,0,0,.8);animation:li-ein .5s var(--e1) both;pointer-events:auto;overflow-wrap:anywhere}
+.quit button{flex:none;width:28px;height:28px;border:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:rgba(255,255,255,.08);color:inherit}
+.quit button svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.5}
+.quit.fehl{background:#3A3845;color:#FBD9CC;border-radius:6px;text-transform:none;letter-spacing:.02em}
+.lade{display:grid;place-items:center;padding-top:18vh}
+.lade__r{width:44px;height:44px;border-radius:50%;border:3px solid rgba(22,21,26,.2);border-top-color:var(--gold);animation:li-dreh 1s linear infinite}
+@keyframes li-dreh{to{transform:rotate(360deg)}}
+/* R04: Startfehler-Tür */
+.li-tuer{max-width:620px;margin:12vh auto 0;padding:42px 44px 38px;text-align:center}
+.li-tuer__z{display:block;width:40px;margin:0 auto 18px}
+.li-tuer__z img{width:100%;height:auto}
+.li-tuer h1{font:340 clamp(1.6rem,3vw,2.2rem)/1.2 var(--titel);margin:0 0 12px;color:var(--nacht)}
+.li-tuer p{margin:0 0 10px}
+.li-tuer__g{font:500 .95rem/1.5 var(--sans);color:var(--stahl)}
+.li-tuer .titel__kn{justify-content:center;margin-top:22px;animation:none}
+
+/* ---------- Schmale Bildschirme ---------- */
+@media (max-width:1100px){.li-karten{grid-template-columns:repeat(2,minmax(0,1fr))}.li-erg{grid-template-columns:minmax(0,1fr)}.li-det{grid-template-columns:minmax(0,1fr)}.li-buch{grid-template-columns:160px 1fr}.li-buch .kn{grid-column:1/-1;justify-self:start}}
+@media (max-width:900px){
+  :root{--rand-b:0px;--kopf-h:62px}
+  .kopf{gap:10px}.kopf__marke{min-width:0}.kopf__marke small,.kopf__mitte,.kopf__trenn,.kopf__werk .kn{display:none}.kopf__marke{margin-right:auto}
+  .rand{left:0;right:0;top:var(--kopf-h);bottom:auto;width:auto;max-height:calc(100vh - var(--kopf-h));padding:10px 12px;overflow:auto;background:var(--papier);box-shadow:0 18px 30px -22px rgba(38,36,45,.6)}
+  .rand::before{display:none}
+  .rand__in{display:none;min-height:0;padding:10px 4px 6px}
+  .rand.auf .rand__in{display:flex}
+  .rand__auf{display:flex;align-items:center;justify-content:space-between;width:100%;height:46px;border:0;border-radius:4px;cursor:pointer;padding:0 16px;background:#FFFCFB;box-shadow:inset 0 0 0 1px var(--linie);font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--tinte)}
+  .rand__auf i{display:grid;width:12px}.rand__auf svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.4;transition:transform .4s var(--e1)}
+  .rand.auf .rand__auf svg{transform:rotate(180deg)}
+  .wege{margin-top:6px}
+  .haupt{margin-left:0;padding-top:calc(var(--kopf-h) + 76px);padding-left:16px;padding-right:16px}
+  .leiste{left:50%;width:calc(100vw - 24px);bottom:12px;padding:8px 8px 8px 12px;gap:10px}.leiste__t span{-webkit-line-clamp:1}.li-recht__z{display:none}
+  .li-zahlen{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}.li-zahlen div+div{border-inline-start:0}
+}
+@media (max-width:640px){
+  .li-karten{grid-template-columns:minmax(0,1fr)}
+  .li-raster{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:118px;gap:10px}
+  .li-lauf{grid-template-columns:minmax(0,1fr)}.li-pk{grid-template-columns:minmax(0,1fr);gap:6px}
+  .li-schrift{grid-template-columns:minmax(0,1fr)}.li-buch{grid-template-columns:minmax(0,1fr)}
+  .leiste .kn{padding:0 5px 0 12px;font-size:9.5px}.leiste__t b{font-size:.92rem}
+  .li-wahl .mono{min-width:0;width:100%}
+  .li-vn__bar button{padding:0 12px;height:34px;font-size:9.5px}
+  .li-hero{padding:24px 20px;border-radius:6px}.li-hero__s li{min-width:84px;padding:12px 10px 10px}
+  .li-tafeln--breit{grid-template-columns:minmax(0,1fr)}
+  .li-f__n{font-size:.78rem;left:6px;bottom:6px;max-width:calc(100% - 12px)}
+}
+@media (max-width:380px){
+  .li-tafeln,.li-tafeln--breit{grid-template-columns:minmax(0,1fr)}
+  .li-hero .titel__kn{flex-direction:column;align-items:stretch}
+  .li-hero .titel__kn .kn{max-width:100%}
+  .li-hero__s{gap:8px}.li-hero__s li{min-width:0;flex:1}
+  .kn{padding-left:16px;gap:8px}
+  .li-farben{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .li-gr{flex-wrap:wrap}
+  .fenster{padding:8px}.fenster__k{padding:14px;border-radius:6px}
+  .li-imp__k .kn{max-width:100%}
+}
+.li-erg .mono,.li-gesamt .mono,.li-pk .mono{white-space:normal}
+
+/* ---------- Werkzeug-Oberfläche «Die Bühne» (Werkbank-Chat 17.10.2026, oberflaeche.py): Anschluss an das Paket assets/oberflaeche, Vorbild Hausbuch Gasterntal ---------- */
+.li .wo-raum{padding-bottom:40px}
+.li-sp__k{color:var(--hellgold);background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(245,166,137,.3)}
+.li-aufg .wo-ag__b{position:relative;display:block;aspect-ratio:16/10;background:var(--nacht)}
+.li-aufg .li-stapel img{width:46%;height:auto;padding:5px 5px 18px}
+.li-aufg .li-logo img{width:72%;height:auto;object-fit:contain}
+.li-aufg .wo-ag__b>img{width:100%;height:100%;object-fit:cover}
+.li-lage .wo-lg b{font-variant-numeric:lining-nums}
+.li .wo-sb__zier{max-width:100%}
+.li-sp-r{display:none;gap:6px;padding:10px 14px 2px;flex-wrap:wrap}
+.li-sp-r button{min-width:44px;height:34px;border:0;border-radius:5px;font:400 10.5px/1 var(--mono);letter-spacing:.14em;color:var(--tinte);background:var(--papier);box-shadow:inset 0 0 0 1px var(--linie);cursor:pointer}
+.li-sp-r button[aria-pressed="true"]{color:#fff;background:var(--nacht)}
+.meldung .wo-quittung{pointer-events:auto;margin:0}
+@media (max-width:900px){.li-sp-r{display:flex}.li-aufg{grid-template-columns:repeat(2,minmax(0,1fr))}.meldung{bottom:84px}}
+@media (max-width:640px){.li-aufg{grid-template-columns:minmax(0,1fr)}}
+
+/* Gemessene Farben (Oberchef L04, 18.10.2026): Farbband, ein Satz, ruhiges Raster; nie höher als die Punkte daneben, am Handy lesbar */
+.li-fband{display:flex;height:16px;margin:16px 0 0;border-radius:5px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--linie)}
+.li-fband i{display:block;min-width:2px}
+.li-rahmen-s{margin:10px 0 14px;font:500 14px/1.45 var(--sans);color:var(--tinte)}
+.li-ft{width:100%;border-collapse:collapse;font:13px/1.3 var(--sans);font-variant-numeric:tabular-nums}
+.li-ft th{white-space:nowrap;padding:0 6px 6px;font:500 9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--leise);text-align:start;border-bottom:1px solid var(--linie)}
+.li-ft td{padding:6px;border-bottom:1px solid var(--linie);vertical-align:middle}
+.li-ft tr:last-child td{border-bottom:0}
+.li-ft td:first-child,.li-ft th:first-child{padding-inline-start:0;width:22px}
+.li-ft__f{display:block;width:18px;height:18px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(38,36,45,.14)}
+.li-ft__a{white-space:nowrap;text-align:end;width:44px}
+.li-ft__h{font:11px var(--mono);letter-spacing:.04em;white-space:nowrap}
+.li-ft__n{color:var(--leise)}
+.li-ft__n i{display:inline-block;width:9px;height:9px;margin-inline-end:6px;border-radius:50%;vertical-align:0;box-shadow:inset 0 0 0 1px rgba(38,36,45,.18)}
+.li-ft__u{font:500 9.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;text-align:end;white-space:nowrap;padding-inline-end:0}
+.li-ft--gleich .li-ft__u{color:var(--ok)}.li-ft--nah .li-ft__u{color:var(--acht)}.li-ft--fremd .li-ft__u{color:var(--nein)}
+.li-ft .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:420px){.li-ft{font-size:12px}.li-ft td{padding:6px 4px}.li-ft__h{font-size:10px}}
+.li-ft th:nth-child(2){text-align:end}
+.li-ft--rest td{color:var(--leise);border-top:1px solid var(--linie)}
+
+/* Ruedihus Kacheln ruhig (Robert 18.10.2026, M21): die Karte hebt sich langsam, eine feine Goldlinie, der Pfeil dreht sich nicht */
+.li-k{transition:transform 1s cubic-bezier(.22,1,.36,1),box-shadow 1s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){
+.li-k:hover{transform:translateY(-3px)}
+.li-k:hover .li-k__p{transform:none!important;box-shadow:inset 0 1px 0 #3A3845,inset 0 -2px 0 #0F0E13,0 0 0 1px #B15736}
+.li-farbe:hover{transform:translateY(-2px)!important}
+}
+
+/* Robert 18.10.2026 17:36 (M25): Farben einer Gruppe stehen in einer Reihe, nie in zwei; am Handy als Band zum Wischen */
+.li-farben{grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-columns:none!important}
+@media (max-width:760px){.li-farben{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;scrollbar-width:none}.li-farben::-webkit-scrollbar{display:none}.li-farbe{flex:0 0 132px;scroll-snap-align:start}}
+
+/* Robert 18.10.2026 23:32: der Glanz beim Überfahren bleibt in der Knopf-Form, kein Balken links und rechts */
+.kn{overflow:hidden}
+
+/* Titel in Fraunces 340 wie die Website (.gross), Betonung nur über Farbe, nie Versalien-Plakat */
+.li-hero h1,.li-d__t,.li-det__t h2,.li-feld__t,.li-tuer h1,.kopf__titel,.li-erg__farben h3,.li-tonvor h3,.li-erg__h,.li-fg h3,.li-buch__t b,.li-leer{font-weight:340;letter-spacing:-.005em}
+.f-t{font-family:var(--titel);font-weight:300;letter-spacing:.012em}.f-s{font-family:var(--sans)}.f-m{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.8em}
+.li-ki--fremd{background:#3A3845;color:#FBD9CC}
+/* Logo und Zeichen, sie bleiben ganz in ihrer Tafel (nie angeschnitten) */
+.li-tafel__f{position:relative}
+.li-tafel__f>img{position:absolute;inset:0;margin:auto;max-width:calc(100% - 44px);max-height:calc(100% - 44px);width:auto;height:auto;object-fit:contain}
+.li-tafel__f.li-tapete{position:static}
+.li-aufg .li-logo img{width:auto;height:84%;max-width:84%}
+/* Die Zeilen des Rahmens wachsen nicht mit der leeren Seite (sonst springen Rand und Raum beim Laden um 214 px nach oben, CLS 0,18) */
+body.li.wo-app{align-content:start}
+.li [data-r].da.steht{animation:none;transform:none}
+/* Fehlerbuch 20.10.2026 (Robert: «in allen Tools Bilder dazu»): jede Farbe mit dem Foto, aus dem sie kommt, jede Schrift so, wie sie auf der Website steht */
+.li-farbe__b{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--c)}
+.li-farbe__b img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.li-farbe__b small{position:absolute;left:8px;right:8px;bottom:8px;padding:5px 8px;border-radius:8px;font:400 9.5px/1.3 var(--mono);letter-spacing:.06em;color:#FFFCFB;background:rgba(38,36,45,.72)}
+.li-farbe__b+.li-farbe__f{height:44px}
+.li-schrift{grid-template-columns:minmax(0,200px) minmax(0,1.3fr) minmax(0,1fr) auto}
+.li-schrift__b{display:block;height:84px;border-radius:4px;overflow:hidden;background:var(--papier);box-shadow:inset 0 0 0 1px var(--linie)}
+.li-schrift__b img{width:100%;height:100%;object-fit:cover;object-position:left center}
+@media (max-width:900px){.li-schrift{grid-template-columns:minmax(0,1fr)}.li-schrift__b{height:96px}}
+@media (max-width:760px){.li-farbe{flex:0 0 172px}}
+/* Karten der Farben bleiben gleich gross, auch wenn eine Gruppe nur eine oder zwei hat; Text-Ausschnitte der Website ganz zeigen */
+.li-farben{grid-auto-columns:minmax(0,236px)!important;justify-content:start}
+.li-farbe__b--text img{object-fit:contain;padding:10px;background:#FAF4F4}
+.li-schrift__b img{object-fit:contain;object-position:center;padding:6px}
+/* Fehlerbuch 10a 20.10.2026 (Robert, Bild: dreimal dasselbe Foto über dünnen Farbstreifen: «Nee, das finde ich dumm.»): ein Foto je Farbgruppe, links daneben,
+   die Farbkarten bleiben volle Farbe */
+.li-fg--bild{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:clamp(20px,2.6vw,36px);align-items:start}
+.li-fg__b{margin:6px 0 0;position:relative}
+.li-fg__b img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 26px 40px -26px rgba(38,36,45,.6),0 0 0 1px var(--linie)}
+.li-fg__b figcaption{margin-top:10px;font-size:.84rem;line-height:1.45;color:var(--leise)}
+.li-fg__t{min-width:0}
+@media (max-width:900px){.li-fg--bild{grid-template-columns:minmax(0,1fr)}.li-fg__b img{aspect-ratio:16/9}}
+.li-fg__b--text img{object-fit:contain;padding:18px;background:#FAF4F4}
+
+/* ---------- Culinarium: Knöpfe wie die Website (.knopf in culinarium.css) und das Kleid (.wo-kn): Platte mit Radius 10 px, rechts ein runder Knauf
+   in Kerze mit dem Zeichen als Linie, Tiefe in drei Stufen, Lichtkante oben, dunkle Kante unten, Glanzstreif beim Überfahren ---------- */
+.kn{height:50px;padding:0 6px 0 22px;gap:14px;border-radius:10px;font:600 11px var(--etikett);letter-spacing:.12em;color:#FAF4F4;
+  background:linear-gradient(180deg,#46434F 0%,#3A3845 46%,#26242D 100%);
+  box-shadow:inset 0 1px 0 rgba(255,244,240,.16),inset 0 -1px 0 rgba(10,9,13,.5),0 16px 30px -16px rgba(22,21,26,.75),0 3px 8px -3px rgba(22,21,26,.35)}
+.kn i,.kn--linie i,.kn--hell i,.kn--gold i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#16151A;
+  background:radial-gradient(circle at 35% 30%,#FBD9CC,#F5A689 38%,#EF7649 70%,#B15736);box-shadow:inset 0 1px 0 rgba(255,240,232,.7),inset 0 -2px 0 rgba(90,35,15,.35),0 4px 8px -3px rgba(0,0,0,.45)}
+.kn svg{width:14px;height:14px;stroke:currentColor;stroke-width:1.6}
+.kn--linie svg,.kn--hell svg,.kn--gold svg{stroke:currentColor}
+.kn::after{left:0;width:100%;background:linear-gradient(105deg,transparent 30%,rgba(250,244,244,.22) 48%,transparent 66%);transform:translateX(-120%)}
+.kn:hover::after{transform:translateX(120%);transition:transform 1.1s var(--e2)}
+.kn:hover i{transform:translateX(2px)}
+.kn--klein{height:42px;padding:0 5px 0 16px;gap:10px;font-size:10.5px}.kn--klein i{width:30px;height:30px}
+.kn--linie,.kn--hell{color:#26242D;background:linear-gradient(180deg,#FFFCFB 0%,#F6EEEC 52%,#EAE0DD 100%);
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(58,56,69,.28),0 16px 30px -16px rgba(10,9,13,.45),0 3px 8px -3px rgba(10,9,13,.2)}
+.kn--gold{color:#16151A;background:linear-gradient(180deg,#F8B79D 0%,#EF7649 52%,#C9603A 100%);
+  box-shadow:inset 0 1px 0 rgba(255,240,232,.7),inset 0 -1px 0 rgba(90,35,15,.45),0 16px 30px -16px rgba(22,21,26,.6)}
+.kn--gold i{background:linear-gradient(180deg,#3A3845,#16151A);color:#F5A689;box-shadow:inset 0 1px 0 rgba(255,244,240,.18),0 4px 8px -3px rgba(0,0,0,.45)}
+.li-k__p,.li-vn__gr i{border-radius:10px}
+
+/* Fehlerbuch 10a, 20.10.2026 (Robert: «3 oben und 2 unten»): Tafeln gleichmässig auf Reihen, höchstens vier, eine kurze Reihe mittig, nie eine allein am Rand */
+.li-tafeln{display:flex!important;flex-wrap:wrap;justify-content:center;gap:18px}
+.li-tafeln>.li-tafel{flex:0 0 calc((100% - 3*18px)/4);min-width:0}
+.li-tafeln--breit>.li-tafel{flex-basis:calc((100% - 2*18px)/3)}
+@media (max-width:1100px){.li-tafeln>.li-tafel{flex-basis:calc((100% - 18px)/2)}.li-tafeln--breit>.li-tafel{flex-basis:100%}}
+@media (max-width:760px){.li-tafeln>.li-tafel,.li-tafeln--breit>.li-tafel{flex-basis:100%}}
+
+/* 320 px (WebKit, Prüfung 21.10.2026): die Tabelle der gemessenen Farben stand 21 px über; schmaler gesetzt, Name der Hausfarbe bricht um, nichts ragt hinaus */
+@media (max-width:400px){.li-ft{table-layout:fixed;font-size:11.5px}.li-ft th,.li-ft td{padding:5px 3px}.li-ft td:first-child,.li-ft th:first-child{width:20px}
+  .li-ft__a,.li-ft th:nth-child(2){width:38px}.li-ft__h,.li-ft th:nth-child(3){width:62px;font-size:9.5px;letter-spacing:0}.li-ft th:nth-child(5),.li-ft__u{width:40px;letter-spacing:.04em;font-size:8.5px}
+  .li-ft__n{overflow-wrap:anywhere}.li-ft__n i{margin-inline-end:4px}}
+
+/* Fehlerbuch 10a 20.10.2026: unter der Bühne mindestens 30 px Luft bis zu den ersten Kacheln (Handy 24 px); zwischen Schrift und Kachel mindestens 16 px */
+/* Luft unter der Bühne (30 px+) steht seit 21.10.2026 im gemeinsamen Kleid (kleid/schaefli.css), hier nichts Eigenes */
+.li-fg .li-farben{margin-top:16px}
+
+/* Culinarium: Farben der Abende mit ihrem Plakat (Fehlerbuch 10a 20.10.2026: Bild nur, wo jeder Eintrag sein eigenes hat), Etikettschrift Urbanist */
+.li-farbe__b{display:block;aspect-ratio:1;overflow:hidden;background:var(--c)}.li-farbe__b img{width:100%;height:100%;object-fit:cover}
+.li-farbe--bild .li-farbe__f{height:46px}
+.f-e{font-family:var(--etikett);font-weight:700;text-transform:none;letter-spacing:.12em}
+/* Culinarium: «nächste Farbe der Marke» ist länger als im Vorbild, die Spalte darf umbrechen (WebKit 320 px stand 3 px über) */
+.li-ft th:nth-child(4){white-space:normal;line-height:1.25}
+
+/* Messlauf 29.10.2026: das Plakat im Fotoraster ganz zeigen (Schrift und Wortmarke nicht abschneiden); lange Wörter in schmalen Farbkacheln trennen; Spaltenköpfe der Farbtabelle auf dem Handy nicht ineinander */
+.li-f[data-k*="plakat"] img{object-fit:contain;background:#1C1B21}
+.li-farbe small{hyphens:auto;-webkit-hyphens:auto}
+@media (max-width:760px){.li-ft th:nth-child(2){letter-spacing:.04em;font-size:8.5px}}
+
+/* Messlauf 30.10.2026 (Roberts Fenster 1000 × 650): neben dem Foto wurden die Farbkacheln einer Reihe zu schmal (42 px, Text am Rand); unter 1280 steht das Foto über den Farben wie am Tablet, die Reihe bleibt eine Reihe (M25). Ab 1280 unverändert. */
+@media (min-width:901px) and (max-width:1279px){.li-fg--bild{grid-template-columns:minmax(0,1fr)}.li-fg__b img{aspect-ratio:16/9}}
+/* Tor 3, 30.10.2026: Farbkacheln nie schmaler als 132 px. Gruppen ab fünf Farben stellen das Foto immer über die Reihe; passt die Reihe trotzdem nicht in die Breite, wird sie zum Band zum Wischen wie am Handy (eine Reihe, M25). RGB-Werte brechen nie um. Bildzeile in den Fotos ganz, nie gekürzt. */
+@media (min-width:901px){.li-fg--bild:has(.li-farbe:nth-child(5)){grid-template-columns:minmax(0,1fr)}.li-fg--bild:has(.li-farbe:nth-child(5)) .li-fg__b img{aspect-ratio:5/2}}
+.li-fg,.li-fg__t{container-type:inline-size}.li-farben::-webkit-scrollbar{display:none}@container (max-width:277px){.li-farben:has(>.li-farbe:nth-child(2)){display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;scrollbar-width:none}.li-farben:has(>.li-farbe:nth-child(2))>.li-farbe{flex:0 0 132px;scroll-snap-align:start}}@container (max-width:423px){.li-farben:has(>.li-farbe:nth-child(3)){display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;scrollbar-width:none}.li-farben:has(>.li-farbe:nth-child(3))>.li-farbe{flex:0 0 132px;scroll-snap-align:start}}@container (max-width:569px){.li-farben:has(>.li-farbe:nth-child(4)){display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;scrollbar-width:none}.li-farben:has(>.li-farbe:nth-child(4))>.li-farbe{flex:0 0 132px;scroll-snap-align:start}}@container (max-width:715px){.li-farben:has(>.li-farbe:nth-child(5)){display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;scrollbar-width:none}.li-farben:has(>.li-farbe:nth-child(5))>.li-farbe{flex:0 0 132px;scroll-snap-align:start}}@container (max-width:861px){.li-farben:has(>.li-farbe:nth-child(6)){display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:8px;scrollbar-width:none}.li-farben:has(>.li-farbe:nth-child(6))>.li-farbe{flex:0 0 132px;scroll-snap-align:start}}
+.li-farbe__rgb i{font-style:normal;white-space:nowrap}
+.li-f__n{white-space:normal;overflow:visible;text-overflow:clip;text-wrap:balance}
+/* Tor 3, 30.10.2026 (1280): Rollen der Farbkacheln ohne Silbentrennung, ausgewogen (am Handy bleibt das Band mit 132 px); Wortmarke in den breiten Tafeln mit Schutzraum; Knöpfe einer Tafel in einer Reihe */
+.li-farbe small{hyphens:manual;-webkit-hyphens:manual;text-wrap:balance}
+.li-tafeln--breit .li-tafel__f>img{inset:16% 12%;max-width:none;max-height:none;width:76%;height:68%}.li-tafeln--breit .li-kn{flex-wrap:nowrap;gap:6px}
+/* Tor 3, 30.10.2026 (1000): RGB-Zeile im Band nie umbrochen, alle Karten gleich; Bildrechte-Satz ausgewogen */
+.li-farben[style],.li-farben{}@container (max-width:861px){.li-farben:has(>.li-farbe:nth-child(2))>.li-farbe .li-farbe__w{padding-left:12px;padding-right:12px}.li-farben:has(>.li-farbe:nth-child(2))>.li-farbe .li-farbe__rgb{white-space:nowrap;font-size:9px;letter-spacing:0}}
+.li-farbe__rgb{white-space:nowrap}#leiste small{text-wrap:balance}
+/* Tor 3 N (30.10.2026): kein Schrägstrich am Zeilenanfang. Jedes Wort trägt seinen Trenner (30 px breit), die Zeile rückt um ihn nach links
+   und schneidet diesen Streifen ab; so verschwindet der Trenner vor dem ersten Wort jeder Zeile, mitten in der Zeile bleibt er wie bisher. */
+.wahl2{margin-left:-30px;clip-path:inset(-24px -24px -24px 30px)}
+.wahl2 button::before{content:"/";display:inline-block;box-sizing:border-box;width:30px;padding:0 12px 0 10px;margin:0;text-align:left;color:#EF7649;text-decoration:none}
+.wahl2 button+button::before{margin:0}
+/* Tor 3 Q (30.10.2026): Fenstertitel ohne Einzelwort in der letzten Zeile */
+@media (max-width:420px){.li-det__t h2{font-size:1.75rem}}
+/* Tor 3 S (30.10.2026): Schrift-Zeilen. Glieder bleiben ganz, nie im Wort gebrochen; der Trenner gehört zum folgenden Glied und wird am Zeilenanfang
+   abgeschnitten (Zeile um seine Breite nach links, Streifen weggeschnitten), steht also weder am Anfang noch am Ende einer Zeile. */
+.li-schrift__p{overflow-wrap:normal}
+.li-teile{display:flex;flex-wrap:wrap;align-items:baseline;margin-left:-1.6em;clip-path:inset(-.6em -.6em -.6em 1.6em)}
+.li-teile>i{font-style:normal}
+.li-schrift__p .li-teile>i{white-space:nowrap}
+.li-teile>i::before{content:var(--tr);display:inline-block;width:1.6em;text-align:center}
+/* Beschreibung: Bereich und Werte untereinander (die Werte brechen in sich um, ein Trenner davor hätte keinen festen Platz) */
+small.li-teile{display:block;margin-left:0;clip-path:none}
+small.li-teile>i{display:block}
+small.li-teile>i::before{content:none}
+/* 901–1320 px: vier Spalten zu eng (bei 1280 «0,12 em ⏎ gesperrt»); Probe links über zwei Reihen, Muster oben über die volle Breite, Name und Text mit Knopf darunter */
+@media (min-width:901px) and (max-width:1320px){
+  .li-schrift{grid-template-columns:minmax(0,180px) minmax(0,1fr) auto;row-gap:10px}
+  .li-schrift__b{grid-row:span 2}
+  .li-schrift__p{grid-column:2/-1}
+  .li-schrift:not(:has(.li-schrift__b)) .li-schrift__p{grid-column:1/-1}
+}
+
+/* Tor 3 T (30.10.2026): Rahmen-Beschriftung zweizeilig möglich, Lage aus livre.js (--lt), nie über den Rahmen hinaus */
+.li-rahmen::after{top:var(--lt,10px);white-space:pre;max-width:calc(100% - 20px);overflow:hidden;text-overflow:clip;line-height:1.45}
+
+/* Tor 3 (31.10.2026): Laden-Knopf in der Grössen-Liste wird nie zusammengedrückt, der Text bricht davor um */
+.li-gr>.kn{flex-shrink:0}

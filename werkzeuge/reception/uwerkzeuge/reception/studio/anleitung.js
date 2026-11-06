@@ -1,0 +1,2 @@
+/* Anleitung von La Réception: Bild gross zeigen (eigene Datei, weil online keine eingebetteten Skripte laufen). */
+document.addEventListener('click',function(e){var i=e.target.closest('figure img'),g=document.getElementById('gross');if(i){g.querySelector('img').src=i.src;g.classList.add('auf')}else if(g.classList.contains('auf'))g.classList.remove('auf')});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('gross').classList.remove('auf')})

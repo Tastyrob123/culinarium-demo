@@ -1,0 +1,170 @@
+ok     A01   Laden /_werkzeuge/carte/ (1. Mal) · 200 · 563 ms
+ok     A01   Laden /_werkzeuge/carte/ (2. Mal) · 200 · 532 ms
+ok     A01   Laden /_werkzeuge/carte/satz/blatt.html (1. Mal) · 200 · 515 ms
+ok     A01   Laden /_werkzeuge/carte/satz/blatt.html (2. Mal) · 200 · 514 ms
+ok     A01   Laden /_werkzeuge/carte/anleitung.html (1. Mal) · 200 · 533 ms
+ok     A01   Laden /_werkzeuge/carte/anleitung.html (2. Mal) · 200 · 528 ms
+ok     A01   Laden /_werkzeuge/carte/pruefung.html (1. Mal) · 200 · 526 ms
+ok     A01   Laden /_werkzeuge/carte/pruefung.html (2. Mal) · 200 · 525 ms
+ok     R01   Aufbau: Kopfleiste, Rand, Hauptfläche, Leiste, Fenster, Quittung mit aria-live (Oberfläche der Häuser, Rahmen «Die Bühne», Kleid culinarium)
+FEHLER R05   Kopfleiste: Zeichen, «Die Pairing-Karte» (Name aus dem Kleid), Haus, Titel der Karte, runde Knöpfe, Website ansehen (Alle Abende); keine Abfrage «Wer arbeitet hier?»
+ok     R05   Knöpfe des Kopfs führen zum Tresen (Zentrale, 9081), Prüfung, Anleitung; das Schaufenster (9082) steht im Rand; immer 127.0.0.1
+ok     F10a  Kein Fenster «Wer arbeitet hier?» beim Öffnen
+ok     F10a  Untere Leiste: Titel einzeilig, Satz ganz (ohne «…»), Kopf und Leiste im selben Zustand
+ok     C01   Karten des Hauses als Fotokacheln: «Der nächste Abend» oben, darunter die sieben früheren Abende mit Plakat, neueste zuerst, in zwei Gruppen mit Zwischentitel · abend, abend-2025-02-21, abend-2024-11-29, abend-2024-07-19, abend-2024-04-26, abend-2023-11-17, abend-2023-09-22, abend-2023-09-15
+ok     C13   Wege: Frühere Fassungen, Veröffentlichte PDF, Zur Werkbank, Alle Abende auf der Website, das Schaufenster (Name aus dem Kleid), Anschluss, Rundgang
+ok     C07   Karte abend: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2025-02-21: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2025-02-21: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2025-02-21: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2024-11-29: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2024-11-29: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2024-11-29: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2024-07-19: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2024-07-19: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2024-07-19: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2024-04-26: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2024-04-26: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2024-04-26: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2023-11-17: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2023-11-17: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2023-11-17: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2023-09-22: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2023-09-22: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2023-09-22: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Karte abend-2023-09-15: Vorschau gesetzt, nichts läuft über
+ok     R16   Karte abend-2023-09-15: Startbild mit Foto, Zeichen und Titel (Bühne)
+ok     R07   Karte abend-2023-09-15: kein seitliches Verrutschen (390 px) · 0
+ok     C07   Vorschau «1 Seite, wie in der PDF», ein Blatt A4 hoch
+ok     C07   Vorschau verkleinert per transform, nie per zoom
+ok     C07   Zoom + vergrössert die Vorschau · 340 → 572 px
+ok     R15   Ohne Adresse öffnet die zuletzt gewählte Karte
+ok     R15   Aus dem Tresen (Zentrale) geöffnet: die erste Karte («Der nächste Abend»)
+ok     C01   Modus Fortgeschritten mit Satz, nach Neuladen gemerkt (R15)
+ok     C01   Modus Einfach mit Satz
+ok     R07   Handy: der Rand liegt hinter dem Knopf «Bereiche», zu bis man ihn drückt
+ok     R07   Handy: «Bereiche» öffnet den Rand mit den Karten und den Wegen
+ok     R07   Handy: nach der Wahl schliesst sich der Rand
+ok     C04   Klick links: rechts blinkt der Gang · VorspeiseMiso / Sellerie / RöstzwiebelnVodka | Tom Yam | Gua
+ok     C04   Klick links: links und rechts auf derselben Höhe (± 60 px), soweit die Vorschau scrollen kann · 493 / 1221 · Vorschau am Rand
+ok     F10a  Knöpfe der gewählten Zeile: eigene Zeile, nie über Bild oder Text, keine Fläche dahinter
+ok     F10a  Plus-Knopf «Gang am Ende» ist ein Knopf des Rahmens mit Körper und Knauf
+ok     F10a  Rudis Teller in der Liste in Versalien (Schrift des Hauses), Gang als Etikett darüber
+ok     C04   Klick rechts (Drink): Gang links gewählt und blinkt
+ok     C04   Doppelklick in der Vorschau öffnet den Gang
+ok     C02   Gang: Felder Gang, Teller (Rudi), Drink (Momo) · Gang, Teller, Drink, Auf der Karte zeigen
+ok     C02   Doppelklick auf die Zeile öffnet das Fenster mit allen Feldern
+ok     C02   Fenster zeigt «So steht es auf der Karte»
+ok     C02   Vorschau im Fenster folgt beim Tippen
+ok     R11   Quittung nach dem Speichern mit «Rückgängig» und «Vorher / nachher»
+ok     C02   Geänderter Teller steht in der Karte
+ok     C02   Ticketpreis: Felder Angabe, Preis, Währung
+ok     C03   Preis in der Schreibweise der Karte: «85» wird «85,00»
+ok     R08   Leiste: «Entwurf: n Änderungen», Marke «Entwurf»
+ok     R09   Speichern-Knopf grün «Gespeichert» nach dem Speichern
+ok     C01   Kachel trägt die Marke «Entwurf»
+ok     C09   Neu laden: der Entwurf ist noch da
+ok     C03   «86,5» wird «86,50»
+ok     R11   «Rückgängig» in der Quittung holt den Stand davor (85,00)
+ok     R10   «Nichts geändert, nichts gespeichert.»
+ok     C02   «Neuer Eintrag»: Fenster «Neuer Eintrag» als Kopie eines Gangs (nicht des Preises)
+ok     C02   Ohne Teller und Drink: «Bitte einen Teller oder einen Drink eintragen.»
+ok     C02   Neuer Gang steht in der Karte mit Drink
+ok     C02   Neuer Teller steht in Versalien wie die Nachbarn
+ok     C09   Marke «Neu» an der Zeile
+ok     C02   Kopieren öffnet die Kopie als neuen Gang
+ok     C02   Abbrechen nimmt die Kopie wieder weg
+ok     C02   Ausblenden: Marke «Ausgeblendet», nicht mehr in der Karte
+ok     C02   Wieder zeigen
+ok     C02   Nach oben verschieben · 7 → 6
+ok     C02   Nach unten verschieben
+ok     C02   Seite ausblenden: die einzige Seite bleibt («Auf der Karte steht keine Seite mehr», nichts gespeichert); Seiten verschieben betrifft nicht (je Karte eine Seite)
+ok     C02   «Eintrag hinzufügen» an der Rubrik «Upgrade nach Wahl»: Fenster «Neuer Eintrag»
+ok     C02   Neuer Eintrag unter dem Upgrade steht in der Karte
+ok     C02   Rubrik verschieben: «Diese Rubrik steht schon zuoberst» (einzige Rubrik)
+ok     C02   Neue Rubrik steht in der Karte
+ok     C02   Entfernen fragt nach
+ok     C02   Entfernen nimmt die Rubrik weg
+ok     C09   Vorher / nachher: Neu und Geändert · 4 Stellen
+ok     C10   Probe-PDF gedruckt, Quittung mit «Probe öffnen»
+ok     C10   Probe-PDF enthält den Entwurf (Nussbutter, Rote Bete, 85,00)
+ok     R12   Veröffentlichen öffnet zuerst «Vorher und nachher»
+ok     R12   Fortschritt mit Schritten
+ok     C11   Veröffentlicht: «Die neue Fassung steht», Wörter geprüft · 1 Seite, 79 Wörter geprüft. Schriftmass 110 bis 110 %. Demo: Die Website bleibt, wie sie i
+ok     C11   Veröffentlichte PDF = Daten (Nussbutter, Rote Bete)
+ok     C27   Nach dem Veröffentlichen: karten.json in der Form der Website (Abend DFqbLG2s_dc mit dem neuen Gang); die Website selbst bleibt unberührt
+ok     R08   Leiste danach: «Alles veröffentlicht»
+ok     R12   Ohne Entwurf steht kein Knopf «Veröffentlichen» und keiner «Vorher, nachher»
+ok     C12   Frühere Fassungen: «Ursprünglicher Stand» und die eben veröffentlichte Fassung
+ok     C12   «In den Entwurf holen»: Entwurf ohne Rote Bete, PDF bleibt
+ok     C09   Entwurf verwerfen: wieder wie veröffentlicht
+ok     C09   Der verworfene Entwurf bleibt im Verlauf
+ok     C05   Klick wählt ein Element (Rahmen mit Griffen)
+ok     C05   Seitenleiste «Gestalten» geht auf
+ok     C05   Gestalten: Schriften und Farben des Hauses, Textart nur normal oder Versalien (nie fett, nie kursiv)
+ok     C05   Ziehen zeigt das Mass «+x · +y mm» und verschiebt · +17.4 · +12.2 mm
+ok     R08   Nach dem Ziehen: Eingaben warten gelb («Speichern»)
+ok     C05   ⌘Z nimmt das Ziehen zurück
+ok     C05   ⌘⇧Z wiederholt
+ok     C05   Pfeiltaste schiebt 0,5 mm ·  → translate(0.5mm, 0mm)
+ok     C05   «Anordnung zurücksetzen» stellt die Seite wie gesetzt
+ok     C05   Doppelklick schreibt direkt in die Karte · Gin | RhabarberAbsackerGin | Turmeric | Ingwer ProbeTicket85
+ok     R09   ⌘S speichert (auch aus der Vorschau)
+ok     C06   Daten als Text: Ungültiges wird abgewiesen
+ok     C06   Daten als Text enthalten die Seite der Karte
+ok     C06   Server weist fremdes HTML ab (neues Merkmal) · Seite 1: ein Baustein, den es in dieser Karte nicht gibt.
+ok     C07   Ansicht Website: «Alle Abende» (abende.html), das Fenster dieses Abends ist offen (Menükarte vom Februar 2025) · Alle Abende · heute, mit der Karte dieses Abends
+ok     C07   Ansicht Website: «Der Abend» (abend.html) · Der Abend · heute, so steht es auf der Website
+ok     C07   Ansicht Website: «Startseite» (index.html) · Startseite · heute, so steht es auf der Website
+ok     C07   Zurück zur Karte
+ok     C07   Kartenwechsel: die Ansicht Website öffnet den Abend der neuen Karte (erstes Wochenende 2023)
+ok     C08   Der nächste Abend: Datum mit Pfeilen (kein Kalender des Systems), sechs Gänge mit Teller und Drink, als Beispiel wörtlich die Karte vom Februar 2025 · ["Sauerteig | Tomate | Butter","79,00 EUR"]
+ok     C08   Blatt A4 hoch: Wortmarke, Titel, Datum «Fr 21. und Sa 22. Februar 2025», Strich zwischen den Gängen, Ticketpreis als Marke
+ok     C08   Karte schön und mittig: Menü in der Mitte des Blatts (± 3 %), jede Zeile mittig (± 2 %), unten kein leerer Teil (unter 18 %)
+ok     C08   Eintrag geht sofort in die Karte rechts (Rudis Zeile mit Schrägstrich) und wird beim Verlassen des Feldes gespeichert; das Beispiel ist weg
+ok     C08   Pfeil: eine Woche später (Fr 28. Februar und Sa 1. März 2025), Teller bleiben
+ok     C08   «Nächsten Abend anlegen»: Teller und Drinks leer, Zeile und Preis bleiben, Datum ein Freitag nach heute
+ok     C08   Gänge stehen noch nicht fest: Satz auf der Karte
+ok     C03   Ticketpreis «89» wird «89,00 EUR» (Schreibweise der Plakate)
+ok     C08   Die Küche veröffentlicht die Karte des nächsten Abends selbst
+ok     C08   Veröffentlichte PDF des nächsten Abends = Daten (HOKKAIDO / KÜRBISKERNÖL / HASELNUSS, 89,00), eine Seite · Menü FR 30. UND SA 31. OKTOBER 2026 BY MOMO X RUDI APÉRITIF SAUERTEIG / KÜRBIS /
+ok     C27   karten.json trägt den nächsten Abend (Datum, Gänge, Preis)
+ok     S01   Ohne Rolle: 403 ROLLE
+ok     S01   Unbekannte Rolle (Spa gibt es im Culinarium nicht, C19 betrifft nicht): 403 ROLLE
+ok     S01   Küche druckt eine Probe der Karte
+ok     S01   Küche veröffentlicht frühere Abende nicht: 403
+ok     S01   Service veröffentlicht nicht: 403
+ok     S01   Zurückholen nur Direktion
+ok     S01   Anschluss an die Website nur Direktion
+ok     S01   Demo-Sperre: Anschluss einschalten wird abgewiesen (DEMO), die Website bleibt
+ok     S01   Daten mit falscher Art (Abend für eine Satz-Karte): 400 PRUEF
+ok     S02   Fremde Herkunft: 403 HERKUNFT
+ok     S02   Nur JSON: 415
+ok     S02   Über 3 MB: 413
+ok     S02   Falscher Host: 421
+ok     S02   Gesperrte Pfade (_daten, .py) nicht ausgeliefert
+ok     S02   Sicherheitskopfzeilen (CSP, frame-ancestors)
+ok     S02   Programmcode im Text: 400 PRUEF
+ok     S02   Zu viele Änderungen in einer Minute: 429 GRENZE · nach 29 Anfragen
+ok     C14   Prüfseite: Browser, Server, Karten (alle Abende), Druck, Sicherungen, Fehler ·  Zurück: Die Pairing-Karte Prüfung des Werkzeugs. Diese Seite läuft auch dann, 
+ok     C15   Alle Daten herunterladen: jede Karte mit Stand, Ursprung, Verlauf und Protokoll
+ok     R03   Fehlermelder: Skriptfehler kommt im Server an
+ok     R04   Startfehler-Tür «Die Pairing-Karte startet nicht.» mit «Prüfung öffnen»
+ok     R18   Rundgang (?rundgang): Lichtkegel und Karte mit Text über die Abende
+ok     R19   «Zur Werkbank» erscheint, wenn aus der Werkbank geöffnet
+ok     R19   «Zur Werkbank» führt auf die Werkbank des Hauses (http://127.0.0.1:9088/werkbank/index.html#werkzeuge → 200)
+ok     R05   Alle 14 Links in Kopf und Rand antworten (Tresen 9081, Schaufenster 9082, Werkbank 9088, Website 8765, Anleitung, Prüfung, PDF)
+ok     A08   Zwei Fenster: das zweite bekommt KONFLIKT, nichts überschrieben
+ok     A08   Netz weg beim Speichern: Meldung VERBINDUNG
+ok     A08   5'000 Zeichen ohne Leerzeichen: abgewiesen «Der Text ist zu lang», Eingabe bleibt gelb, kein Verrutschen
+ok     A08   3'900 Zeichen ohne Leerzeichen: gespeichert, bricht in der Liste um
+ok     A08   <script> im Text: abgewiesen mit Meldung, Eingabe bleibt gelb
+ok     A08   Emoji und Umlaute stehen in der Karte
+ok     R13   Ungespeicherte Verschiebung: Leiste gelb · {"x":-20.9375,"y":480.078125,"width":431.65625,"height":29.90625}
+ok     R13   Verlassen mit ungespeicherten Eingaben: der Browser fragt
+ok     A99   Keine Skriptfehler auf allen Seiten
+ok     A99   Keine toten Adressen
+
+chromium 390×844: 167 von 168 grün

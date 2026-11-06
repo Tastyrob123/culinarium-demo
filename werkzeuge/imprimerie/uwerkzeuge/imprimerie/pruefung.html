@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Prüfung · Die Plakatwerkstatt · Culinarium</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316151a'/%3E%3Cg transform='translate%284.60 4.00%29 scale%280.1714%29' fill='%23ef7649'%3E%3Cpath d='M95.43 51.24C90.43 51.24 85.95 50.09 81.95 47.84C77.99 45.51 74.27 42.59 70.9 39.08C67.53 35.57 64.41 32 61.49 28.28C58.61 24.56 55.72 21.33 52.87 18.59C50.06 15.81 47.14 13.97 44.19 13.1C41.2 12.19 38.04 12.82 34.67 15.01C30.74 17.4 28.69 22.09 28.56 29.01C28.45 35.89 30.01 44.08 33.32 53.57C36.65 63.12 41.41 72.92 47.59 83.06C54.37 93.73 61.38 102.59 68.68 109.53C75.98 116.48 82.85 120.72 89.35 122.18C95.43 123.67 100.95 123.43 105.96 121.48C110.99 119.5 115.44 116.48 119.36 112.38C123.26 108.25 126.42 103.84 128.85 99.08L132.95 101.3C129.27 108.87 124.09 115.61 117.42 121.48C110.75 127.35 103.21 131.91 94.84 135.17C86.47 138.4 77.75 140 68.71 140C59.23 140 50.34 138.19 42 134.58C33.73 130.93 26.44 125.9 20.15 119.47C13.86 113.04 8.96 105.61 5.38 97.17C1.81 88.69 0 79.62 0 69.93C0 60.2 1.81 51.1 5.38 42.66C8.96 34.22 13.86 26.78 20.15 20.36C26.44 13.93 33.73 8.93 42 5.38C50.34 1.81 59.23 0 68.71 0C73.86 0 78.51 0.8 82.68 2.33C86.85 3.86 90.7 5.7 94.21 7.78C97.72 9.87 100.99 11.71 103.94 13.27C106.89 14.8 109.67 15.6 112.24 15.6C117.25 15.6 120.51 14.28 122.07 11.64C123.64 9 124.4 5.42 124.4 0.97L128.85 0.97C129.68 6.53 129.79 12.26 129.2 18.13C128.57 24 127.04 29.42 124.65 34.43C122.21 39.43 118.6 43.46 113.88 46.59C109.12 49.71 102.97 51.24 95.43 51.24ZM95.43 51.24'/%3E%3C/g%3E%3C/svg%3E">
+<!-- Eigene Prüfseite von L’Imprimerie (Werkzeug-Master R23, Prüfung 16.10.2026). Läuft ohne das Werkzeug: prüft Browser, Dateien des Hauses,
+     die Ablage im Browser, zeigt die mitgeschriebenen Skriptfehler, erklärt jede Meldung (Lexikon) und bietet Reparaturen mit Doppelklick. -->
+<style>
+@font-face{font-family:"LB";src:url(haeuser/culinarium/schriften/Fraunces-340.ttf)}
+:root{--marine:#16151a;--nacht:#0f0e13;--papier:#f3ecea;--creme:#e9e0de;--gold:#f5a689;--gold2:#ef7649;--tinte:#26242d;--rot:#1c1b21;--gruen:#1e4a3b}
+*{box-sizing:border-box}body{margin:0;background:var(--papier);color:var(--tinte);font:15px/1.55 "Instrument Sans",system-ui,-apple-system,sans-serif}
+header{background:linear-gradient(rgba(15,14,19,.5),rgba(15,14,19,.5)),url(haeuser/culinarium/tapete-ui-dunkel.webp) 50% 0/224px auto,var(--nacht);color:var(--papier);padding:36px 24px 30px}
+header .in,main{max-width:980px;margin:0 auto}header small{letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-size:11px}
+h1{font:400 34px/1.15 "LB",Georgia,serif;margin:8px 0 6px}h1 em{color:var(--gold);font-style:normal}header p{margin:0;opacity:.85;max-width:620px}
+header a{color:var(--gold)}main{padding:24px 16px 60px}h2{font:400 21px "LB",Georgia,serif;margin:34px 0 10px}
+.platte{background:#faf4f4;border-radius:14px;box-shadow:0 1px 0 rgba(38,36,45,.06),0 10px 30px -18px rgba(38,36,45,.35);padding:6px 18px}
+.z{display:grid;grid-template-columns:22px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid rgba(38,36,45,.08);align-items:start}.z:last-child{border:0}
+.z i{width:12px;height:12px;border-radius:50%;margin-top:5px;background:#deae9d}.z.ok i{background:var(--gruen)}.z.gelb i{background:#c7552b}.z.rot i{background:var(--rot)}
+.z b{font-weight:500}.z span{color:#5e5976;font-size:13.5px}.z code{font:12px "DM Mono",ui-monospace,monospace;background:var(--creme);padding:1px 5px;border-radius:4px}
+.lex dt{font-weight:500;margin-top:14px}.lex dd{margin:4px 0 0;color:#423f53}.lex dd b{color:var(--tinte);font-weight:500}
+button{font:inherit;border:0;border-radius:999px;padding:9px 16px;background:var(--marine);color:var(--papier);cursor:pointer}button.scharf{background:var(--rot)}
+.fehler{font:12.5px/1.5 "DM Mono",ui-monospace,monospace;white-space:pre-wrap;word-break:break-word;margin:10px 0}
+.rep{display:flex;flex-wrap:wrap;gap:10px;padding:14px 0}.leise{color:#5e5976;font-size:13.5px}
+@media (max-width:600px){h1{font-size:27px}.z{grid-template-columns:18px 1fr}.z>:last-child{grid-column:2}}
+</style>
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body>
+<header><div class="in"><small>TS · Die Plakatwerkstatt</small><h1>Ist alles <em>in Ordnung?</em></h1>
+<p>Diese Seite prüft die Plakatwerkstatt, ohne sie zu öffnen. Sie liest nur, ausser du löst unten eine Reparatur mit Doppelklick aus. <a href="./">Zur Plakatwerkstatt</a></p></div></header>
+<main>
+<h2>Prüfungen</h2><div class="platte" id="liste"><div class="z"><i></i><div><b>Prüfe …</b></div></div></div>
+<h2>Mitgeschriebene Fehler</h2><div class="platte"><div id="fehler" class="fehler leise">Keine.</div></div>
+<h2>Reparaturen</h2><div class="platte"><div class="rep">
+  <button data-rep="sichern">Alle Drucksachen als Datei sichern</button>
+  <button data-rep="fehler" class="scharf">Fehlerliste leeren</button>
+  <button data-rep="begruessung">Begrüssung und Führung wieder zeigen</button>
+</div><p class="leise" id="repText">Reparaturen mit Doppelklick. «Sichern» legt eine Datei mit allen Drucksachen dieses Browsers auf den Rechner; in der Plakatwerkstatt unter «Ablage → Arbeitsdatei öffnen» liest sie alle wieder ein (auch in einem anderen Browser).</p></div>
+<h2>Lexikon der Meldungen</h2><div class="platte"><dl class="lex" id="lexikon"></dl></div>
+</main>
+<script>
+(function () {
+  const HAUS = 'culinarium', B = 'haeuser/' + HAUS + '/', $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const zeilen = [];
+  const zeig = () => { $('#liste').innerHTML = zeilen.map(z => `<div class="z ${z.s}"><i></i><div><b>${esc(z.t)}</b><br><span>${esc(z.d)}</span></div><span>${esc(z.w || '')}</span></div>`).join(''); };
+  const z = (t, s, d, w) => { zeilen.push({ t, s, d, w }); zeig(); };
+  const hol = async (u, art = 'json') => { const r = await fetch(u, { cache: 'no-store' }); if (!r.ok) throw new Error(r.status + ' ' + u); return art === 'json' ? r.json() : art === 'kopf' ? r : r.text(); };
+  const kb = n => n > 1e6 ? (n / 1e6).toFixed(1).replace('.', ',') + ' MB' : Math.round(n / 1024) + ' KB';
+  (async () => {
+    // Browser
+    try { localStorage.setItem('ds-probe', '1'); localStorage.removeItem('ds-probe'); z('Speicher im Browser', 'ok', 'Drucksachen lassen sich ablegen.'); }
+    catch (e) { z('Speicher im Browser', 'rot', 'Der Browser lässt keine Ablage zu (privates Fenster oder gesperrte Website-Daten). Drucksachen gehen beim Schliessen verloren.'); }
+    try { await new Promise((ok, nein) => { const r = indexedDB.open('ds-' + HAUS + '-fotos', 1); r.onupgradeneeded = () => r.result.createObjectStore('fotos', { keyPath: 'key' }); r.onsuccess = () => { const n = r.result.transaction('fotos').objectStore('fotos').count(); n.onsuccess = () => { z('Eigene Fotos', 'ok', n.result + ' eigene Fotos in diesem Browser.'); r.result.close(); ok(); }; n.onerror = nein; }; r.onerror = () => nein(r.error); }); }
+    catch (e) { z('Eigene Fotos', 'gelb', 'Eigene Fotos lassen sich in diesem Browser nicht ablegen: ' + (e && e.message || e)); }
+    const cv = document.createElement('canvas'); cv.width = cv.height = 4; z('Bilder rechnen (PDF, PNG)', cv.getContext('2d') && cv.toBlob ? 'ok' : 'rot', cv.toBlob ? 'Der Browser kann Fotos und Tapete für das PDF rechnen.' : 'Der Browser kann keine Bilder rechnen, PDF und PNG gehen nicht.');
+    // Ablage
+    try { const roh = localStorage.getItem('ds-' + HAUS + '-docs') || '{}', d = JSON.parse(roh), n = Object.keys(d).length, gr = roh.length * 2;
+      z('Meine Medien', gr > 4e6 ? 'gelb' : 'ok', `${n} Drucksachen, ${kb(gr)} von rund 5 MB, die ein Browser je Website ablegt.`, gr > 4e6 ? 'Ältere löschen oder sichern' : ''); }
+    catch (e) { z('Meine Medien', 'rot', 'Die Ablage ist beschädigt und lässt sich nicht lesen. Mit «Alle Drucksachen sichern» bleibt der Rohtext erhalten.'); }
+    // Dateien des Hauses
+    let M = null;
+    try { M = await hol(B + 'marke.json'); z('Farben & Schriften', 'ok', `${M.name}: ${M.bilder.length} Fotos, ${Object.keys(M.farben || {}).length} Farben, Zeichen ${M.zeichen ? 'da' : 'fehlt'}.`); }
+    catch (e) { z('Farben & Schriften', 'rot', 'marke.json fehlt (' + e.message + '). Ohne sie startet die Plakatwerkstatt nicht.'); }
+    try { const idx = await hol(B + 'vorlagen/index.json'), n = idx.reduce((s, x) => s + x.zahl, 0); z('Vorlagen', n >= 60 ? 'ok' : 'gelb', `${n} Vorlagen in ${idx.length} Arten.`); }
+    catch (e) { z('Vorlagen', 'rot', 'Die Liste der Vorlagen fehlt (' + e.message + ').'); }
+    if (M) {
+      const tt = [...new Set(Object.values(M.schriften || {}).map(s => s && s.datei).filter(Boolean))];
+      let fehlt = [];
+      for (const f of tt) { try { await hol(B + (f.includes('/') ? f : 'schriften/' + f), 'kopf'); } catch (e) { fehlt.push(f); } }
+      z('Schriften fürs PDF', fehlt.length ? 'rot' : 'ok', fehlt.length ? 'Es fehlen: ' + fehlt.join(', ') : (tt.length ? tt.length + ' Schriftdateien erreichbar, sie werden ins PDF eingebettet.' : 'Schriften stehen in marke.json.'));
+    }
+    try { const dr = await hol(B + 'druck.json'), k = Object.keys(dr); let ok = 0; for (const x of k.slice(0, 3)) { try { await hol(B + 'druck/' + x + '.jpg', 'kopf'); ok++; } catch (e) { } }
+      z('Druckfassungen der Fotos', ok === Math.min(3, k.length) ? 'ok' : 'gelb', !k.length ? 'Gedruckt wird jedes Foto in der grössten Fassung aus dem Plakatarchiv; die Druckprüfung nennt die Auflösung je Format.' : ok ? `${k.length} Fotos haben eine Fassung für 300 dpi.` : 'Die Druckfassungen sind nicht erreichbar. PDFs entstehen mit den Fotos der Website, die Druckprüfung nennt dann die tiefere Auflösung.'); }
+    catch (e) { z('Druckfassungen der Fotos', 'gelb', 'druck.json fehlt: PDFs nehmen die Fotos der Website.'); }
+    try { const L = await hol('../livre/livre.json'); z('Das Plakatarchiv', 'ok', `Fotos und Dateien kommen aus dem Plakatarchiv: ${(L.fotos || []).length} Fotos.`); }
+    catch (e) { z('Das Plakatarchiv', 'gelb', 'Das Plakatarchiv antwortet nicht (' + e.message + '). Die Plakatwerkstatt nimmt dann ihre eigene Kopie der Fotos.'); }
+    try { const r = await fetch('api/entwurf', { cache: 'no-store' }); const j = await r.json().catch(() => ({})); z('Entwürfe mit KI («Fünf Entwürfe», Bildtext)', r.ok ? 'ok' : 'gelb', r.ok ? 'Der Dienst ist erreichbar. Ob Guthaben da ist, zeigt erst ein Entwurf; leer meldet die Plakatwerkstatt «KI-Guthaben aufgebraucht».' : 'Der Dienst antwortet nicht (' + r.status + '). Vorlagen, Editor und PDF gehen ohne ihn.', j.modell || ''); }
+    catch (e) { z('Entwürfe mit KI', 'gelb', 'Der Dienst ist nicht erreichbar. Vorlagen, Editor und PDF gehen ohne ihn.'); }
+    // Fehler
+    let f = []; try { f = JSON.parse(localStorage.getItem('cu-imprimerie-fehler') || '[]'); } catch (e) { }
+    $('#fehler').textContent = f.length ? f.map(x => new Date(x.z).toLocaleString('de-CH') + '  ' + x.t).join('\n') : 'Keine.';
+    z('Skriptfehler', f.length ? 'gelb' : 'ok', f.length ? f.length + ' mitgeschrieben, unten aufgeführt.' : 'Keine mitgeschrieben.');
+  })();
+  // Lexikon: Sehen · Grund · Tun
+  const LEX = [
+    ['Der Browser-Speicher ist voll.', 'Ein Browser legt je Website rund 5 MB ab. Grosse Drucksachen mit vielen Seiten füllen ihn.', 'Ältere Drucksachen in Meine Medien löschen oder oben «Alle Drucksachen sichern».'],
+    ['KONFLIKT · Diese Drucksache wurde in einem anderen Fenster geändert.', 'Dieselbe Drucksache war in zwei Fenstern offen, im anderen wurde zuerst gespeichert.', 'Nichts ist verloren: Deine Fassung steht als Kopie «(zweites Fenster)» in Meine Medien. Die passende behalten, die andere löschen.'],
+    ['KI-FREIGABE · Die KI ist für dieses Haus noch nicht freigeschaltet.', 'Am Online-Projekt ist kein Schlüssel für die KI hinterlegt (das gibt nur Robert frei).', 'Mit einer Vorlage weiterarbeiten. Für «Fünf Entwürfe» Tasty Studios melden.'],
+    ['KI-Guthaben aufgebraucht.', 'Das Guthaben für die KI ist leer.', 'Mit einer Vorlage geht es ohne KI weiter. Für «Fünf Entwürfe» Tasty Studios melden.'],
+    ['HERKUNFT · Anfragen nur von der Seite der Plakatwerkstatt.', 'Eine fremde Seite wollte die KI des Hauses benutzen.', 'Nichts. Wer die Plakatwerkstatt normal öffnet, sieht diese Meldung nie.'],
+    ['GRENZE · Zu viele Entwürfe in kurzer Zeit.', 'Höchstens 40 Entwürfe je Stunde und Rechner, damit niemand das Guthaben leert.', 'Eine Stunde warten oder mit einer Vorlage weiterarbeiten.'],
+    ['GROESSE · Anfrage zu gross.', 'Ein Auftrag mit sehr viel Text (über 60 KB).', 'Kürzer beschreiben.'],
+    ['Diese Datei ist keine Arbeitsdatei des Studios.', 'Unter «Arbeitsdatei öffnen» wurde eine andere Datei gewählt oder sie ist beschädigt.', 'Die .json-Datei wählen, die «Druckfertig speichern → Arbeitsdatei» angelegt hat.'],
+    ['Hochladen hat nicht geklappt: Dieses Bildformat kann der Browser nicht lesen.', 'Die Datei ist kein Bild oder in einem Format, das der Browser nicht kennt.', 'Als JPG oder PNG speichern und noch einmal hochladen.'],
+    ['Diese Zeichen fehlen in der Hausschrift und wurden weggelassen.', 'Emoji oder Sonderzeichen gibt es in den Schriften des Hauses nicht.', 'Im Text ersetzen oder weglassen, das PDF zeigt sie nicht.'],
+    ['Druckprüfung: Platzhalter in [Klammern].', 'Die Vorlage lässt Stellen offen, die das Haus pro Fall einträgt (Name, Datum, Code).', 'Doppelklick auf den Text und eintragen.'],
+    ['Druckprüfung: Foto mit wenig Auflösung (dpi).', 'Das Foto ist für die Grösse auf dem Blatt zu klein.', 'Kleiner setzen, ein grösseres Foto wählen oder ein kleineres Format nehmen.'],
+    ['Druckprüfung: Text zu nah am Rand oder ausserhalb.', 'Die Druckerei schneidet am Rand bis 3 mm ungenau.', 'Text mindestens 4 mm vom Rand weg schieben oder kürzen.'],
+    ['Die Plakatwerkstatt startet nicht.', 'Die Dateien des Hauses kamen nicht an (kein Internet, Seite gerade neu ausgeliefert).', 'Neu laden. Bleibt es, diese Prüfseite öffnen und die roten Punkte an Tasty Studios melden.'],
+  ];
+  $('#lexikon').innerHTML = LEX.map(([s, g, t]) => `<dt>${esc(s)}</dt><dd><b>Grund:</b> ${esc(g)}<br><b>Tun:</b> ${esc(t)}</dd>`).join('');
+  // Reparaturen (Doppelklick)
+  document.addEventListener('dblclick', e => {
+    const b = e.target.closest('[data-rep]'); if (!b) return; const r = b.dataset.rep, txt = $('#repText');
+    if (r === 'fehler') { try { localStorage.removeItem('cu-imprimerie-fehler'); } catch (x) { } $('#fehler').textContent = 'Keine.'; txt.textContent = 'Fehlerliste geleert.'; }
+    if (r === 'begruessung') { try { localStorage.removeItem('ds-' + HAUS + '-willkommen'); localStorage.removeItem('ds-' + HAUS + '-rundgang'); } catch (x) { } txt.textContent = 'Beim nächsten Öffnen zeigt die Plakatwerkstatt die Begrüssung und die Führung.'; }
+    if (r === 'sichern') { const roh = localStorage.getItem('ds-' + HAUS + '-docs') || '{}'; const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([roh], { type: 'application/json' })); a.download = 'imprimerie-alle-drucksachen-' + new Date().toISOString().slice(0, 10) + '.json'; a.click(); txt.textContent = 'Datei angelegt.'; }
+  });
+  document.addEventListener('click', e => { if (e.target.closest('[data-rep]')) $('#repText').textContent = 'Zum Ausführen doppelt klicken.'; });
+})();
+</script>
+</body>
+</html>

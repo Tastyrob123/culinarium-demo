@@ -1,0 +1,38 @@
+/* Übergang «Euer Feed heute» → «die nächsten 60» (Oberchef 29.10.2026, Robert: «dass man sieht, dass es aufeinander aufbaut … wo es dann weitergehen könnte»).
+   Bausteine für die Feed-Seite und das Handy der Werkbank: .band zwischen neuen und bisherigen Kacheln, .t.alt = bisheriger Beitrag (leicht zurückgenommen),
+   .nr = Nummer in der Reihenfolge des Postens, .fw = Schalter «Heute» / «Mit den nächsten 60» und «Nummern». Gesteuert von uebergang.js. */
+#grid .band{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;padding:13px 10px;margin:6px 0;background:#16151A;
+  border-top:1px solid rgba(239,118,73,.5);border-bottom:1px solid rgba(239,118,73,.5);font:400 10.5px/1.3 'DM Mono',ui-monospace,monospace;letter-spacing:.12em;
+  text-transform:uppercase;color:#F5A689;text-align:center}
+#grid .band b{font-weight:400;color:#EF7649}
+#grid .t img{transition:opacity .3s ease!important;transition-delay:0s!important;transform:none!important}   /* sofort zeigen, was geladen ist */
+#grid .t{transition:opacity .5s cubic-bezier(.22,.68,.26,1),transform .6s cubic-bezier(.22,.68,.26,1)}
+#grid .t.alt{opacity:.55}
+#grid .t .nr{position:absolute;top:6px;left:6px;z-index:2;min-width:21px;height:21px;padding:0 6px;border-radius:99px;display:grid;place-items:center;
+  background:rgba(22,21,26,.84);color:#FAF4F4;font:400 10.5px/1 'DM Mono',ui-monospace,monospace;box-shadow:0 0 0 1px rgba(239,118,73,.55);transition:opacity .3s}
+#grid.ohne-nr .t .nr{opacity:0}
+#grid .t.zu{opacity:0;transform:translateY(18px) scale(.94)}
+#grid.heute .t:not(.alt),#grid.heute .band{display:none}
+#grid.heute .t.alt{opacity:1}
+.fw{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;padding:6px;border-radius:999px;
+  background:rgba(22,21,26,.92);box-shadow:0 0 0 1px rgba(239,118,73,.45),0 18px 30px -14px rgba(0,0,0,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  font:400 11px/1 'DM Mono',ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#FAF4F4;white-space:nowrap}
+.fw .seg{display:flex;background:rgba(250,244,244,.08);border-radius:999px;padding:3px}
+.fw button{font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;background:none;border:0;cursor:pointer;height:32px;padding:0 14px;border-radius:999px;transition:background .35s,color .35s}
+.fw .seg button.on{background:#EF7649;color:#16151A}
+.fw .nrk{display:flex;align-items:center;gap:8px;padding:0 10px 0 6px;height:32px}
+.fw .nrk i{width:30px;height:18px;border-radius:99px;background:rgba(250,244,244,.18);position:relative;transition:background .3s}
+.fw .nrk i::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#FAF4F4;transition:transform .3s}
+.fw .nrk[aria-pressed="true"] i{background:#EF7649}.fw .nrk[aria-pressed="true"] i::after{transform:translateX(12px)}
+@media (min-width:1001px){.fw{left:auto;right:28px;top:26px;bottom:auto;transform:none}}   /* am Desktop oben rechts, frei von Text und Handy */
+@media (max-width:1000px){.fw{bottom:76px}}   /* am Handy über der Leiste des Profils */
+@media (max-width:420px){.fw{gap:4px;padding:5px;font-size:10px}.fw button{padding:0 10px;height:30px}.fw .nrk{padding:0 8px 0 4px}}
+/* im Profil: der Schalter als ruhiges Band über dem Raster, nicht schwebend */
+.fw.fw--band{position:static;transform:none;margin:0;border-radius:0;justify-content:center;padding:8px 10px;background:#0F0E13;box-shadow:none;
+  border-bottom:1px solid rgba(239,118,73,.35);backdrop-filter:none;-webkit-backdrop-filter:none;font-size:10px}
+.fw.fw--band button{height:28px;padding:0 11px}
+.fw.fw--band .nrk{height:28px}
+/* Messlauf 30.10.2026: Ist ein Beitrag offen, ruht das Raster dahinter (nach dem Hereingleiten unsichtbar, beim Schliessen sofort wieder da),
+   so liegen keine Kacheln mehr unter Kopf, Zurück-Pfeil und Text des Beitrags, und die Tab-Taste springt nicht ins verdeckte Raster */
+#grid{transition:visibility 0s}
+body:has(#post.on) #grid{visibility:hidden;transition:visibility 0s .5s}

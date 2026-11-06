@@ -1,0 +1,142 @@
+/* Culinarium · Termine buchen (Vorschau, simuliert). Gleiche Sprache wie die Warteliste: Papier, Goldrahmen, erhabene Kacheln. */
+.tb,.tp{background:var(--nacht) url(zeichen/tapete-dunkel.svg) 0 0/224px 224px;color:#FAF4F4;padding:clamp(70px,11vh,130px) 0}
+.tb-innen,.tp-innen{max-width:var(--max);margin:0 auto;padding:0 var(--rand)}
+.tb-kopf{max-width:640px;margin-bottom:clamp(30px,5vh,52px)}
+.tb-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--kerze-hell);margin-bottom:14px}
+.tb-titel{font:340 clamp(44px,5.4vw,88px)/.98 var(--titel);letter-spacing:-.015em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;margin:0 0 18px;color:#FAF4F4}
+.tb-text{color:rgba(250,244,244,.78);font-size:clamp(15px,1.25vw,18px);line-height:1.65;max-width:52ch}
+.tb-hinweis{margin-top:16px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#D9B98C}
+
+/* Terminplakate (Robert «3» aus buchen-wahl.html, 27.10.2026): jeder Abend sein Plakat am Brett in eigener Farbe, ausgebuchte bekommen den Streifen */
+.tb{overflow-x:clip} /* gedrehte Plakate und Streifen ragen nie über den Rand */
+.tb-liste{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(22px,3vw,44px);padding-top:14px}
+.tb-p{position:relative;transform:rotate(var(--rot))}
+/* Hereinschweben (Robert 27.10.2026: «luxuriös, edel und elegant»): von Anfang an sichtbar, steigt langsam, schwingt kaum merklich nach und ruht in der Neigung */
+html.js:not(.ruhig) .tb-p{transform:translateY(120px) rotate(calc(var(--rot) + 3.5deg)) scale(.97)}
+html.js:not(.ruhig) .tb-p.an{animation:tb-schweben 2.6s calc(var(--i,0) * 180ms) both}
+html.js .tb-p.ruhend,html.js:not(.ruhig) .tb-p.an.ruhend{animation:none;transform:rotate(var(--rot))}
+@keyframes tb-schweben{
+  0%{transform:translateY(120px) rotate(calc(var(--rot) + 3.5deg)) scale(.97);animation-timing-function:cubic-bezier(.16,.84,.3,1)}
+  64%{transform:translateY(-7px) rotate(calc(var(--rot) - .45deg)) scale(1.003);animation-timing-function:cubic-bezier(.45,0,.35,1)}
+  100%{transform:rotate(var(--rot))}}
+.tb-p-nadel{position:absolute;z-index:2;left:50%;top:-7px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFB08A,var(--kerze) 60%,#9C3D1F);box-shadow:0 4px 6px rgba(0,0,0,.5)}
+.tb-p-papier{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;height:100%;aspect-ratio:3/4.4;padding:28px 22px 24px;background:#FAF4F4;color:#2A2833;
+  box-shadow:0 34px 44px -26px rgba(0,0,0,.9),0 2px 0 rgba(0,0,0,.08)}
+.tb-p p{margin:0}
+.tb-p-mit{font:600 8.5px/1.3 var(--etikett);letter-spacing:.2em;color:var(--schiefer)}
+.tb-p-marke{width:72%;color:var(--schiefer)}.tb-p-marke .marke{width:100%;height:auto;display:block}
+.tb-p-dat{margin-top:8px!important;font:300 clamp(46px,4.4vw,66px)/.9 var(--titel);font-variation-settings:"SOFT" 100,"opsz" 144;font-variant-numeric:lining-nums;letter-spacing:-.01em;color:var(--ak)}
+.tb-p-tag{font:340 18px/1.1 var(--titel);font-variation-settings:"SOFT" 100}
+.tb-p-linie{width:56px;height:3px;background:var(--ak);margin:4px 0}
+.tb-p-frei{font:500 10px/1.45 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#5A5662}
+.tb-p-preis{font:300 24px/1 var(--titel);font-variation-settings:"SOFT" 100,"opsz" 144}
+.tb-p .knopf{margin-top:auto;background:var(--nacht);color:#FAF4F4;height:52px;padding-left:20px}
+.tb-p .knopf i{width:38px;height:38px}
+.tb-p-aus{margin-top:auto;display:inline-flex;align-items:center;gap:12px;height:52px;font:500 11px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.tb-p-aus::before{content:"";width:26px;height:1px;background:currentColor}
+.tb-p-streifen{position:absolute;z-index:3;left:-7%;right:-7%;top:46%;padding:14px 0;background:var(--kerze);color:#fff;text-align:center;font:600 13px/1 var(--mono);letter-spacing:.32em;text-transform:uppercase;
+  box-shadow:0 10px 18px -8px rgba(0,0,0,.6);transform:rotate(-13deg)}
+@media (max-width:1000px){.tb-liste{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:56px}}
+@media (max-width:540px){.tb-liste{grid-template-columns:1fr;max-width:330px;margin:0 auto}.tb-p-papier{aspect-ratio:auto}.tb-p .knopf,.tb-p-aus{margin-top:14px}}
+.tb-leer{color:rgba(250,244,244,.7)}
+
+/* Dialog */
+.tb-dialog{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:16px}
+.tb-dialog[hidden]{display:none}
+.tb-d-grund{position:absolute;inset:0;background:rgba(10,9,12,.72)}
+.tb-d-karte{position:relative;width:min(640px,100%);max-height:calc(100svh - 32px);overflow:auto;background:linear-gradient(#F9F4F0,#F1E9E4);color:#2A2833;border-radius:28px;
+  padding:clamp(28px,3.4vw,44px);box-shadow:0 60px 90px -40px rgba(0,0,0,.95),inset 0 1px 0 #fff}
+.tb-d-karte::before{content:"";position:absolute;inset:12px;border:1px solid rgba(176,140,90,.45);border-radius:18px;pointer-events:none}
+@keyframes tb-rein{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+.tb-d-zu{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:50%;border:0;background:#F7F0EB;cursor:pointer;z-index:2;box-shadow:0 6px 12px -6px rgba(42,40,51,.45),inset 0 1px 0 #fff}
+.tb-d-zu::before,.tb-d-zu::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.6px;background:#2A2833;transform:translate(-50%,-50%) rotate(45deg)}
+.tb-d-zu::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.tb-d-schritt{display:flex;flex-direction:column;gap:20px;position:relative}
+.tb-d-titel{font:340 clamp(28px,3vw,38px)/1.05 var(--titel);font-variation-settings:"SOFT" 100,"opsz" 96;margin:-6px 0 0;padding-right:40px}
+.tb-d-feld{display:flex;flex-direction:column;gap:8px;min-width:0}
+.tb-d-label{font:500 10.5px/1 var(--etikett);letter-spacing:.2em;text-transform:uppercase;color:#9A7A4E}
+.tb-d-zwei{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.tb-d-feld input{width:100%;min-width:0;background:#F1E9E4;border:0;border-radius:12px;height:50px;padding:0 16px;font:400 16px/1 var(--text);color:#2A2833;
+  box-shadow:inset 0 2px 4px rgba(42,40,51,.08),inset 0 0 0 1px rgba(42,40,51,.1)}
+.tb-d-feld input:focus{outline:none;box-shadow:inset 0 2px 4px rgba(42,40,51,.08),inset 0 0 0 1.5px var(--kerze)}
+.tb-d-feld input[aria-invalid=true]{box-shadow:inset 0 0 0 1.5px #C9533A}
+.tb-zaehler{display:inline-flex;align-items:center;gap:6px;padding:6px;border-radius:999px;width:max-content;background:#F1E9E4;box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(42,40,51,.1),0 10px 18px -12px rgba(42,40,51,.35)}
+.tb-zaehler button{position:relative;width:44px;height:44px;border-radius:50%;border:0;background:#F7F0EB;cursor:pointer;box-shadow:0 6px 12px -6px rgba(42,40,51,.45),inset 0 1px 0 #fff}
+.tb-zaehler button::before{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.6px;background:#2A2833;transform:translate(-50%,-50%)}
+.tb-zaehler button[data-plus="1"]::after{content:"";position:absolute;left:50%;top:50%;width:1.6px;height:14px;background:#2A2833;transform:translate(-50%,-50%)}
+.tb-zaehler button:disabled{opacity:.4;cursor:default}
+.tb-zaehler output{min-width:44px;display:grid;place-items:center;height:44px;font:340 28px/1 var(--titel)}
+.tb-d-frei{font-size:11px;color:#5A5662}
+.tb-zahl{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tb-zahl label{cursor:pointer}
+.tb-zahl input{position:absolute;opacity:0;pointer-events:none}
+.tb-zahl span{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border-radius:14px;background:#F1E9E4;transition:transform .35s var(--feder),background .35s;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 0 0 1px rgba(42,40,51,.1),0 10px 18px -12px rgba(42,40,51,.35)}
+.tb-zahl b{font:500 16px/1.2 var(--text)}
+.tb-zahl em{font:400 11px/1.2 var(--mono);font-style:normal;color:#5A5662}
+.tb-zahl input:checked+span{background:#2A2833;color:#F7F0EB;transform:translateY(-2px)}
+.tb-zahl input:checked+span em{color:#D9B98C}
+.tb-d-summe{display:flex;justify-content:space-between;align-items:baseline;padding-top:16px;border-top:1px solid rgba(176,140,90,.4)}
+.tb-d-summe span{font:500 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:#5A5662}
+.tb-d-summe b{font:340 34px/1 var(--titel);color:#B15736}
+.tb-d-los,.tb-d-fertig{align-self:flex-start}
+.tb-d-fehler{color:#C9533A;font-size:14px}
+.tb-d-laden{width:56px;height:56px;margin:40px auto 0;position:relative}
+.tb-d-laden span{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(176,140,90,.3);border-top-color:#B15736;animation:tb-dreh 0.9s linear infinite}
+@keyframes tb-dreh{to{transform:rotate(360deg)}}
+.tb-d-laden-text{text-align:center;font:340 22px/1.2 var(--titel);margin-bottom:40px}
+.tb-ticket{position:relative;background:#FBF7F3;border-radius:6px;padding:32px 26px 26px;text-align:center;transform:rotate(-2deg);margin:6px 8px;
+  box-shadow:0 30px 44px -26px rgba(42,40,51,.6)}
+.tb-ticket::before{content:"";position:absolute;inset:9px;border:1px solid rgba(176,140,90,.6);outline:1px solid rgba(176,140,90,.28);outline-offset:-6px;pointer-events:none}
+.tb-t-marke{width:72%;margin:0 auto;color:#2A2833}.tb-t-marke .marke{width:100%;height:auto}
+.tb-t-zeile{margin-top:8px;font:600 9px/1 var(--etikett);letter-spacing:.2em;color:#9A7A4E}
+.tb-t-fuer{margin-top:24px;font:500 11px/1 var(--etikett);letter-spacing:.16em;text-transform:uppercase;color:#8A8592}
+.tb-t-name{margin-top:6px;font:340 clamp(28px,3vw,38px)/1.1 var(--titel);font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 96}
+.tb-t-mehr{margin-top:14px;display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;font:400 13px/1.3 var(--mono)}
+.tb-t-nr{margin-top:14px;font-size:11px;letter-spacing:.14em;color:#B15736}
+.tb-t-ort{margin-top:16px;padding-top:12px;border-top:1px solid rgba(176,140,90,.4);font-size:12.5px;color:#8A8592}
+.tb-d-mail{font-size:14px;color:#5A5662}
+
+/* Pflegeseite */
+.tp-innen>.tb-text{margin-bottom:clamp(28px,4vh,44px)}
+.tp-neu{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;gap:14px;align-items:end;background:linear-gradient(#F9F4F0,#F1E9E4);color:#2A2833;border-radius:24px;padding:26px;
+  box-shadow:inset 0 1px 0 #fff,0 40px 60px -36px rgba(0,0,0,.9)}
+.tp-liste{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.tp-z{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr auto;gap:14px;align-items:center;padding:16px 20px;border-radius:16px;background:rgba(250,244,244,.06);box-shadow:inset 0 0 0 1px rgba(250,244,244,.1)}
+.tp-z b{font:340 20px/1.2 var(--titel)}
+.tp-z span{font:400 13px/1.3 var(--mono);color:rgba(250,244,244,.75)}
+.tp-weg{border:0;background:transparent;color:#F5A689;font:500 11px/1 var(--etikett);letter-spacing:.16em;text-transform:uppercase;cursor:pointer;padding:8px}
+.tp-fuss{margin-top:28px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.tp-zurueck{border:0;background:transparent;color:rgba(250,244,244,.6);font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+
+@media (max-width:860px){
+  .tb-d-zwei{grid-template-columns:minmax(0,1fr)}
+  .tp-neu{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .tp-neu .knopf{grid-column:1/-1;justify-self:start}
+  .tp-z{grid-template-columns:1fr 1fr;row-gap:6px}
+}
+button.knopf{border:0;cursor:pointer;white-space:nowrap}
+.tb-d-schritt[hidden]{display:none}
+.tb-p .knopf span,.tb-d-karte .knopf span{white-space:nowrap}
+
+/* Auftritte wie auf der ganzen Seite (Robert 27.10.2026: «dass überall die Texte richtig geil hochrollen und reingeschwebt kommen»):
+   Titel aus dem Schlitz, Texte schweben hoch, Fenster und Ticket schweben herein; nur transform, deckend */
+.tb-d-titel{font:340 clamp(42px,5vw,72px)/.98 var(--titel);letter-spacing:-.015em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;margin:-4px 0 0;padding-right:44px}
+.tb-d-grund{animation:tb-grund .5s ease both}
+@keyframes tb-grund{from{opacity:0}}
+html.js:not(.ruhig) .tb-d-karte{animation:tb-karte 1.3s cubic-bezier(.16,.84,.3,1) both}
+@keyframes tb-karte{0%{transform:translateY(110px) scale(.98)}62%{transform:translateY(-6px) scale(1.002)}100%{transform:none}}
+html.js:not(.ruhig) .tb-dialog .sw{transform:translateY(30px);transition:transform 1.4s var(--k) calc(160ms + var(--i,0)*90ms)}
+html.js:not(.ruhig) .tb-dialog .zl .z>span{transition-delay:calc(160ms + var(--i,0)*95ms)}
+html.js .tb-dialog .sw.da{transform:none}
+html.js:not(.ruhig) .tb-ticket{transform:translateY(150px) rotate(1.5deg) scale(.97)}
+html.js:not(.ruhig) .tb-ticket.da{animation:tb-ticket 2.4s .25s both}
+@keyframes tb-ticket{
+  0%{transform:translateY(150px) rotate(1.5deg) scale(.97);animation-timing-function:cubic-bezier(.16,.84,.3,1)}
+  64%{transform:translateY(-8px) rotate(-2.5deg) scale(1.003);animation-timing-function:cubic-bezier(.45,0,.35,1)}
+  100%{transform:rotate(-2deg)}}
+@media (max-width:540px){.tb-d-titel{font-size:clamp(36px,10.4vw,46px)}}
+.tb-d-schritt>.tb-kicker{padding-right:48px}
+/* 30.10.2026 Oberchef: Schliessen ohne «×», der Zurück-Pfeil der Werkzeuge */
+.tb-d-zu::before{width:16px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Cpath d=%22M6 9.67 2.67 6.33 6 3M2.67 6.33h7.33a3.33 3.33 0 0 1 0 6.67h-2%22 fill=%22none%22 stroke=%22%232A2833%22 stroke-width=%221.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E") center/16px 16px no-repeat;transform:translate(-50%,-50%)}
+.tb-d-zu::after{display:none}

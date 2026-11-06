@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<script>/* Leistung 29.10.2026: die Daten der Übersicht sofort und zugleich holen, während Stil und Skripte noch laden (website.js und termine-ansicht.js nehmen sie einmal auf) */window.__vorab={};["/api/x/website/haus/culinarium","/api/x/website/stand/culinarium","/culinarium-demo/_werkzeuge/bureau/api/termine"].forEach(function(w){window.__vorab[w]=fetch(w,{cache:"no-store"})});</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16151A">
+<title>Website pflegen · Culinarium</title>
+<!-- Le Bureau (Website pflegen) von Culinarium: Werkzeug des Stamms (/werkzeuge/website/website.js) im gemeinsamen Rahmen des Hauses (/culinarium-demo/assets/oberflaeche/),
+     dazu die Ansicht «Termine» (termine-ansicht.js, Daten aus website/assets/buchen.js). Name im Titel kommt beim Laden aus WO_HAUS.namen (die eine Stelle). -->
+<script src="fehlermelder.js?v=3cc6e61cab"></script>   <!-- R03: vor allem anderen -->
+<script src="../../assets/oberflaeche/kleid/culinarium.js"></script>
+<script>document.title = (WO_HAUS.namen.website || 'Website pflegen') + ' · ' + WO_HAUS.name;</script>
+<script src="../../stamm/welt.js" data-haus="culinarium"></script>
+<link rel="preload" href="../../assets/schrift/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/schrift/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../stamm/welt.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/grund.css"><link rel="stylesheet" href="../../assets/oberflaeche/rahmen-buehne.css"><link rel="stylesheet" href="../../assets/oberflaeche/kleid/culinarium.css">
+<link rel="stylesheet" href="../../werkzeuge/website/website.css">   <!-- nach dem Paket: grund.css setzt Knöpfe und Absätze in wo-Flächen zurück, die Arbeitsfläche braucht ihre eigenen -->
+<link rel="stylesheet" href="schweben.css?v=e4f5bfd0d4">
+<link rel="stylesheet" href="bureau.css?v=c501b86eea">   <!-- nach dem Paket: Brücke der Werte (welt.css → Kleid des Hauses), Arbeitsfläche und Ansicht «Termine» -->
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="ws wo-app">
+<header class="wo-kopf" id="ws-kopf"></header>
+<aside class="wo-rand" id="ws-rand" aria-label="Bereiche des Werkzeugs"></aside>
+<main class="wo-raum" id="ws-mitte" tabindex="-1"></main>
+<footer class="wo-leiste" id="ws-leiste" aria-live="polite"></footer>
+<div class="ws-quittung-ort" id="ws-quittung" aria-live="polite"></div>
+<div id="ws-fenster"></div>
+<noscript><p class="ws-not">Dieses Werkzeug braucht JavaScript. <a href="../../werkzeuge/website/pruefung.html">Zur Prüfung</a></p></noscript>
+<script src="../../assets/oberflaeche/oberflaeche.js"></script>
+<script src="termine-ansicht.js?v=ebca9dac07"></script>   <!-- vor website.js: die Ansicht «Termine» muss beim Start bekannt sein -->
+<script src="../../werkzeuge/website/website.js"></script>
+<script src="zur-werkbank.js?v=45a352330b" defer data-zw data-neben="#ws-rand" data-luft="40" data-ueber="#ws-leiste"></script>
+<script src="rundgang.js?v=98f1ef3961" defer></script>
+<script src="schweben.js?v=32cb1c3cfa" data-wurzel="#ws-mitte" data-blaetter="#ws-mitte h2.wo-zw, #ws-mitte .wo-lage, #ws-mitte .ws-karte, #ws-mitte .cu-t" data-kacheln="#ws-mitte .wo-aufg > .wo-ag, #ws-mitte .wo-ber > .wo-bk"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* L’Imprimerie, Startseite im Stil von Le Bureau (Robert 12.10.2026: alle Werkzeuge «mit diesen blauen und den Buttons» wie Le Bureau).
+   Liegt über studio.css (entfernen = vorheriger Stand). Raum Marine mit Tapete, Kopfleiste als Insel mit Goldkante über die ganze Breite
+   (Zeichen + «L’Imprimerie» links, Suche, «Neu» rechts), Seitenleiste und Arbeitsfläche als Papierplatten mit Tiefe. Inhalte und Funktionen unverändert.
+   Der Editor (Kopf, Platten links und rechts, Bühne) hatte diese Form schon und bleibt, wie er ist. */
+:root{--mb-platte:linear-gradient(180deg,#faf4f4,#f3ecea 55%,#ebd7d7);
+  --mb-platte-s:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(177,87,54,.18),0 1.5px 0 rgba(142,73,48,.35),0 40px 60px -34px rgba(0,0,0,.75),0 14px 26px -16px rgba(0,0,0,.45);
+  --mb-insel:radial-gradient(120% 160% at 50% -50%,rgba(239,118,73,.22),rgba(239,118,73,0) 60%),linear-gradient(180deg,#2c2a34 0%,#3a3845 30%,#16151a 66%,#0f0e13 100%)}
+.start.ms{grid-template-columns:282px minmax(0,1fr);grid-template-rows:72px minmax(0,1fr);background:#16151a url('haeuser/culinarium/tapete-ui-dunkel.webp') 0 0/224px auto}
+
+/* Kopfleiste: Insel mit Tapete und Goldkante */
+.start.ms .ms-kopf{grid-column:1/3;grid-row:1;position:relative;z-index:3;isolation:isolate;gap:14px;padding:0 18px 0 22px;border-bottom:0;color:#f3ecea;
+  background:var(--mb-insel);box-shadow:inset 0 -1px 0 rgba(245,166,137,.45),0 18px 34px -20px rgba(0,0,0,.9)}
+.start.ms .ms-kopf::after{content:'';position:absolute;inset:0;z-index:-1;background:url('haeuser/culinarium/tapete-ui-dunkel.webp') 0 0/224px auto;opacity:.45;pointer-events:none}
+.start.ms .ms-kopf-zeichen{display:block;width:42px;height:42px;color:#e2a38c;filter:drop-shadow(0 1px 0 rgba(35,34,43,.9)) drop-shadow(0 3px 8px rgba(0,0,0,.55))}
+.ms-kopf-name{display:block;min-width:200px;margin-right:auto}
+.ms-kopf-name b{display:block;font:400 15px/1.1 var(--caps);letter-spacing:.24em;text-transform:uppercase;
+  background:linear-gradient(180deg,#eddddd 0%,#eab19c 34%,#cb7e62 52%,#a75538 62%,#dc9f89 80%,#e2c7c7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+.ms-kopf-name small{display:block;margin-top:6px;font:9.5px/1 var(--mono);letter-spacing:.26em;text-transform:uppercase;color:rgba(229,205,205,.7)}
+.start.ms .ms-frei{display:none}
+.start.ms .ms-suche{margin-right:auto;background:linear-gradient(180deg,#0b0a0e,#121116);color:rgba(229,205,205,.8);box-shadow:inset 0 2px 5px rgba(0,0,0,.55),0 0 0 1px rgba(245,166,137,.25)}
+.start.ms .ms-suche input[type=search]{color:#f4ebeb}
+.start.ms .ms-suche input::placeholder{color:rgba(229,205,205,.5)}
+.start.ms .ms-suche kbd{color:var(--gold,#f5a689);background:rgba(245,166,137,.12)}
+
+/* Seitenleiste: Platte aus Papier */
+.start.ms .ms-leiste{grid-row:2;grid-column:1;margin:14px 0 14px 14px;padding:16px 12px 14px;border-radius:24px;color:var(--tinte);background:var(--mb-platte);box-shadow:var(--mb-platte-s)}
+.start.ms .ms-marke,.start.ms .ms-haar{display:none}
+.start.ms .ms-nav button,.start.ms .ms-fuss button{color:rgba(38,36,45,.78);font:500 17px var(--serif)}
+.start.ms .ms-nav button svg,.start.ms .ms-fuss button svg{color:var(--taupe,#b15736)}
+.start.ms .ms-nav button:hover,.start.ms .ms-fuss button:hover{color:#16151a}
+.start.ms .ms-nav button.an{color:#f4ebeb}
+.start.ms .ms-nav button.an svg{color:#e5cdcd}
+.start.ms .ms-nav em{color:var(--taupe-tief,#3a3845)}
+.start.ms .ms-nav button.an em{color:#f5a689}
+.start.ms .ms-gleiter{background:linear-gradient(180deg,#141318,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.25),inset 0 0 0 1px rgba(245,166,137,.5),0 10px 18px -10px rgba(15,14,19,.7)}
+.start.ms .ms-fuss{border-top-color:rgba(177,87,54,.26)}
+.start.ms .ms-fuss small{color:rgba(38,36,45,.5)}
+
+/* Arbeitsfläche: Platte aus Papier auf der Tapete */
+.start.ms .start__in{grid-row:2;grid-column:2;margin:14px;border-radius:24px;background:var(--mb-platte);box-shadow:var(--mb-platte-s)}
+
+@media (max-width:900px){
+  .start.ms{grid-template-columns:1fr;grid-template-rows:64px auto minmax(0,1fr)}
+  .start.ms .ms-kopf{grid-column:1}.ms-kopf-name{display:none}
+  .start.ms .ms-leiste{grid-row:2;margin:10px 10px 0}
+  .start.ms .start__in{grid-row:3;grid-column:1;margin:10px}
+}
+
+/* Newsletter-Baukasten: Kacheln als Links (mail.html) */
+a.wo,a.ms-lnk{text-decoration:none;color:inherit}
+a.ms-lnk{color:var(--taupe-tief)}
+
+/* Meine Medien: E-Mails aus dem Newsletter-Baukasten als kleine Mail (Marine-Kopf mit Zeichen, Kopfbild, Papier mit Titel und Zeilen) */
+.mkm{--k:1;position:relative;display:flex;flex-direction:column;width:calc(128px * var(--k));height:calc(176px * var(--k));border-radius:10px;overflow:hidden;background:#f3ecea;
+  box-shadow:0 0 0 .5px rgba(51,48,62,.2),0 1px 1px rgba(0,0,0,.18),0 10px 18px -6px rgba(0,0,0,.32),0 24px 34px -18px rgba(0,0,0,.35)}
+.mkm__kopf{flex:none;display:grid;place-items:center;height:calc(38px * var(--k));color:#f5a689;background:#16151a url('haeuser/culinarium/tapete-ui-dunkel.webp') 0 0/224px auto}
+.mkm__kopf svg{width:calc(18px * var(--k));height:calc(18px * var(--k));fill:currentColor;stroke:none}
+.mkm__bild{flex:none;height:calc(60px * var(--k));background-size:cover;background-position:center}
+.mkm__text{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 11px 0}
+.mkm__text b{font:500 calc(13px * var(--k))/1.15 var(--serif);color:#16151a;text-align:center;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mkm__text i{display:block;width:100%;height:2px;border-radius:2px;background:rgba(38,36,45,.16)}
+.mkm__text i:last-of-type{width:64%}
+.mkm__text u{display:block;width:calc(38px * var(--k));height:calc(9px * var(--k));margin-top:3px;border-radius:9px;background:#16151a}
+
+/* Meine Medien auf Blau: Aktionen unter dem Blatt, Umbenennen-Feld dunkel, Löschen blendet aus */
+.stueck--doc{transition:opacity .4s}
+.stueck--doc.weg{opacity:0}
+.stueck--doc .doc__umbenennen{width:calc(100% - 16px);margin:8px 8px 0;height:38px;border:0;border-radius:12px;padding:0 12px;text-align:center;font:500 19px var(--serif);color:#f4ebeb;
+  background:linear-gradient(180deg,#0b0a0e,#121116);box-shadow:inset 0 2px 5px rgba(0,0,0,.55),0 0 0 1.5px rgba(245,166,137,.6);outline:0}
+
+/* ---------- Alle Listen: Blatt frei auf Hell (Robert 12.10.2026, 05:50: «Blau weg, Blätter auf Hell»; ersetzt «frei auf Blau» von 04:10) ----------
+   Kein Kasten, keine Kachel: die Blätter stehen mit Schatten direkt auf dem hellen Grund der Seite. Anheben, Geradedrehen und Fächern bleiben.
+   Vorher-Stand: _qa/*-vor-hell.* */
+#start .ms-buehne{background:none;box-shadow:none;border-radius:0;padding:0;color:var(--tinte)}
+#start .kv-buehne{margin-top:10px;padding:22px 0 30px}
+#start .ms-buehne h1{color:var(--navy);text-shadow:none}
+#start .ms-buehne .start__satz,#start .start__weg .start__satz{color:rgba(38,36,45,.72)}
+#start .vb__zeile h2{color:var(--navy)}
+#start .start__zurueck{color:var(--taupe-tief)}
+#start .start__zurueck:hover{color:var(--navy)}
+#start .start__fehler{color:var(--rot)}
+#start .ms-buehne .start__nichts{color:rgba(38,36,45,.55)}
+/* Blätter: Schatten in Tinte statt Schwarz, feine Kante, damit helles Papier auf hellem Grund steht */
+#start .stueck .papier:not(.papier--schirm):not(.papier--warten){box-shadow:0 0 0 1px rgba(153,78,51,.16),0 1px 1px rgba(38,36,45,.2),0 8px 14px -6px rgba(38,36,45,.26),0 26px 36px -16px rgba(38,36,45,.36),0 54px 64px -36px rgba(38,36,45,.3)}
+#start .stueck:hover .papier--vorn:not(.papier--warten){box-shadow:0 0 0 1px rgba(153,78,51,.16),0 1px 1px rgba(38,36,45,.2),0 12px 18px -6px rgba(38,36,45,.28),0 38px 50px -18px rgba(38,36,45,.42),0 84px 90px -44px rgba(38,36,45,.36)}
+#start .stueck__satz::before{background:radial-gradient(closest-side,rgba(38,36,45,.4),rgba(38,36,45,0))}
+#start .stueck .couvert{box-shadow:inset 0 0 0 1px rgba(245,166,137,.45),0 24px 34px -14px rgba(38,36,45,.45)}
+#start .stueck .handy--ganz{box-shadow:inset 0 0 0 1.2px rgba(255,255,255,.22),inset 0 0 0 2.6px #09080b,0 1px 1px rgba(38,36,45,.3),0 24px 34px -14px rgba(38,36,45,.42),0 60px 80px -36px rgba(38,36,45,.34)}
+#start .stueck:hover .handy--ganz{box-shadow:inset 0 0 0 1.2px rgba(255,255,255,.26),inset 0 0 0 2.6px #09080b,0 1px 1px rgba(38,36,45,.3),0 34px 46px -16px rgba(38,36,45,.48),0 80px 90px -40px rgba(38,36,45,.38)}
+#start .stueck .papier--warten{background:linear-gradient(180deg,rgba(38,36,45,.05),rgba(38,36,45,.03));box-shadow:0 0 0 1px rgba(153,78,51,.2)}
+#start .stueck .papier--warten.papier--marine{background:linear-gradient(180deg,#141318,#16151a)}
+/* Schrift unter dem Blatt in Tinte */
+#start .stueck__name,#start .stueck:hover .stueck__name,#start .zl__name,#start .stueck--vorlage .zl__name{color:var(--navy)}
+#start .stueck__format,#start .stueck--vorlage .stueck__format{color:var(--taupe-tief)}
+#start .stueck__satztext:not(.stueck__nimm),#start .stueck:hover .stueck__satztext:not(.stueck__nimm){color:rgba(38,36,45,.68)}
+#start .stueck--entwurf .stueck__satztext:not(.stueck__nimm){color:var(--taupe-tief)}
+#start .stueck__nimm,#start .stueck:hover .stueck__nimm,#start .stueck:focus-visible .stueck__nimm{color:#f1e3e3;background:linear-gradient(180deg,#5f4e53,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.26),inset 0 -2px 0 rgba(0,0,0,.4),0 8px 14px -8px rgba(38,36,45,.55)}
+/* Suche, Filter, Format, Hinweise auf Hell */
+#start .ms-buehne .start__suche svg{color:var(--taupe-tief)}
+#start .ms-buehne .start__suche input{color:var(--navy);background:linear-gradient(180deg,#fdfafa,#f3ecea);box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(239,118,73,.35),0 14px 22px -16px rgba(38,36,45,.5)}
+#start .ms-buehne .start__suche input::placeholder{color:rgba(38,36,45,.42)}
+#start .ms-buehne .start__suche input:focus{box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1.5px var(--messing),0 0 0 6px rgba(245,166,137,.2)}
+#start .ms-buehne .start__gruppen button{color:rgba(38,36,45,.78);background:linear-gradient(180deg,#fdfafa,#ebd9d9);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(153,78,51,.16),0 0 0 1px rgba(239,118,73,.3),0 8px 14px -10px rgba(38,36,45,.45)}
+#start .ms-buehne .start__gruppen button:hover{color:var(--navy)}
+#start .ms-buehne .start__gruppen button.an{color:#f1e3e3;background:linear-gradient(180deg,#5f4e53,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.26),inset 0 -2px 0 rgba(0,0,0,.4),0 8px 14px -8px rgba(38,36,45,.55)}
+#start .vb__toene button{color:rgba(38,36,45,.7);box-shadow:inset 0 0 0 1px rgba(153,78,51,.4)}
+#start .vb__toene button:hover{color:var(--navy);box-shadow:inset 0 0 0 1px rgba(153,78,51,.7)}
+#start .vb__toene button.an{color:#f1e3e3;background:linear-gradient(180deg,#5f4e53,#16151a);box-shadow:none}
+#start .start__format{color:var(--taupe-tief)}
+#start .start__format .hwahl-knopf,#start .start__format select{background:linear-gradient(180deg,#fdfafa,#f3ecea)!important;color:var(--navy)!important;box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(239,118,73,.35),0 14px 22px -16px rgba(38,36,45,.5)!important}
+#start .start__direkt{box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(239,118,73,.35),0 0 0 6px rgba(245,166,137,.14),0 26px 40px -24px rgba(38,36,45,.5)}
+#start .start__hinweise{background:rgba(253,250,250,.75);box-shadow:inset 0 0 0 1px rgba(239,118,73,.3);color:rgba(38,36,45,.8)}
+#start .start__hinweise b{color:var(--navy)}
+#start .stueck--doc .doc__umbenennen{color:var(--navy);background:#fdfafa;box-shadow:0 0 0 1.5px var(--messing)}
+#start .doc__aktionen button{box-shadow:inset 0 1px 0 rgba(250,244,244,.3),inset 0 -2px 0 rgba(0,0,0,.45),0 10px 16px -10px rgba(38,36,45,.6)}
+
+/* Karten-Unterschrift ruhig (Robert 29.10.2026, «dass da die Unterschriften … besser aussehen»): kein Einzelwort in der zweiten Zeile, Titel passend zur
+   Kartenbreite, fester Abstand Karte → Titel → Etikett. Hochformate einer Reihe gleich hoch über --s (start.js reihen), Schwebe beim Überfahren bleibt. */
+#start .stueck--vorlage .zl__name{margin:16px auto 0;padding:0 6px;font-size:19px;line-height:1.3;text-wrap:balance}
+#start .stueck--vorlage .stueck__format{margin-top:8px;font-size:10.5px;letter-spacing:.16em;line-height:1.4}
+#start .stueck__satz{transform:rotate(var(--r,0deg)) scale(var(--s,1))}
+#start .stueck:hover .stueck__satz,#start .stueck:focus-visible .stueck__satz{transform:rotate(0deg) translateY(-12px) scale(calc(var(--s,1) * 1.035))}
+@media (max-width:640px){#start .stueck--vorlage .zl__name{font-size:17px}}
+
+/* Feld «Etwas anderes für …» (Robert 29.10.2026): wächst auf zwei Zeilen, wenn der Satz sie braucht (start.js passeFeld), runde Ecken statt Pille, Symbol mit
+   Abstand im Feld auf der ersten Zeile, Platzhalter deutlich lesbar */
+.ms-feld--klein{align-items:center;border-radius:28px;padding:10px 10px 10px 20px}
+.ms-feld--klein .ms-feld__ic{align-self:center;margin-left:2px}
+.ms-feld--klein textarea{line-height:1.25;padding:6px 0!important;min-height:0}
+.ms-feld--klein textarea::placeholder{color:rgba(38,36,45,.68)}
+
+/* «Farben & Schriften» ohne Löcher (Robert 29.10.2026, «diese Sektion da mit Tapete sieht auch einfach scheiße leer aus»): Raster nach Inhaltsmenge.
+   Zeichen neben Farben, Tapete als breites Band mit Nacht und Tag in echter Wirkung und einem Blatt darauf, Schriften neben Regeln, Dateien neben Angaben */
+@media (min-width:1100px){
+  #msMarke .mb{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-areas:'z z f f f f' 'a a f f f f' 't t t t t t' 's s s r r r' 'd d d d d d'}
+  #msMarke .mb__p--zeichen{grid-area:z;min-height:230px}
+  #msMarke .mb__p--angaben{grid-area:a}
+  #msMarke .mb__p--farben{grid-area:f}
+  #msMarke .mb__p--farben .mb__farben{grid-template-columns:repeat(5,1fr)}
+  #msMarke .mb__p--tapete{grid-area:t}
+  #msMarke .mb__p--schriften{grid-area:s}
+  #msMarke .mb__p--regeln{grid-area:r}
+  #msMarke .mb__p--dateien{grid-area:d}
+  #msMarke .mb__p--dateien .mb__dateien{grid-template-columns:repeat(6,1fr)}
+}
+@media (min-width:700px) and (max-width:1099px){
+  #msMarke .mb{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #msMarke .mb__p--tapete,#msMarke .mb__p--dateien{grid-column:1/-1}
+  #msMarke .mb__p--dateien .mb__dateien{grid-template-columns:repeat(3,1fr)}
+}
+#msMarke .mb__tapeten{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+#msMarke .mb__tw{margin:0}
+#msMarke .mb__tw-flaeche{display:grid;place-items:center;height:300px;border-radius:16px;background-repeat:repeat;background-size:220px auto;box-shadow:inset 0 0 0 1px rgba(177,87,54,.28),0 18px 30px -22px rgba(38,36,45,.6)}
+#msMarke .mb__tw-flaeche--nacht{background-color:var(--navy)}
+#msMarke .mb__tw-flaeche--tag{background-color:var(--creme,#faf4f4)}
+#msMarke .mb__tw-doc .blatt{box-shadow:0 2px 3px rgba(0,0,0,.3),0 22px 34px -14px rgba(0,0,0,.55)}
+#msMarke .mb__tw figcaption{margin-top:14px;font-size:13.5px;line-height:1.55;color:rgba(38,36,45,.78)}
+#msMarke .mb__tw figcaption b{display:block;margin-bottom:2px;font:500 19px/1.2 var(--serif);color:var(--navy)}
+@media (max-width:699px){#msMarke .mb__tw-flaeche{height:240px}}
+#msMarke .mb__p dd{min-width:0;overflow-wrap:anywhere}
+
+/* Fuss der linken Leiste (Robert 29.10.2026: «Warum sind die Buttons da unten links alle so random … hässlich?»): «Hilfe und Führung» wie die Navigationspunkte
+   (die Haut setzt nur deren Beschriftung auf Culinarium Sans 14,5 px), die drei Wege als gleichwertige kleine Etiketten in einer Zeile ohne Unterstreichung,
+   der Speicher-Hinweis auf derselben linken Kante wie die Symbole (12 px Innenabstand der Knöpfe) */
+#start .ms-fuss button span{font:500 14.5px/1.3 var(--wo-sans,system-ui);letter-spacing:0;color:var(--wo-tinte,#26242d)}
+#start .ms-fuss .ms-wege{display:flex;flex-wrap:nowrap;gap:5px;margin:10px 0 2px;padding:0 12px 0 3px;font-size:0;line-height:0}
+#start .ms-fuss .ms-wege a{display:inline-flex;align-items:center;height:26px;padding:0 9px;border:0;border-radius:999px;font:500 12px/1 var(--wo-sans,system-ui);letter-spacing:0;white-space:nowrap;color:var(--wo-tinte,#26242d);text-decoration:none;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(177,87,54,.32);cursor:pointer;transition:background .3s,box-shadow .3s,color .3s}
+#start .ms-fuss .ms-wege a:hover,#start .ms-fuss .ms-wege a:focus-visible{color:#16151a;background:#fff;box-shadow:inset 0 0 0 1px rgba(239,118,73,.75);outline:0}
+#start .ms-fuss small{padding:8px 12px 0;font-size:11px}
+
+/* Fundliste Gestaltung 29.10. — 01: der gewählte Eintrag bleibt ganz lesbar (17 statt 19 px, der längste Name «Newsletter & E-Mail» passt).
+   02: nichts in der Leiste schrumpft auf 0 («Neu erstellen» fiel bei 1280 × 800 zusammen); auf niedrigen Bildschirmen rücken die Einträge enger, der Fuss passt */
+#start .ms-leiste .ms-nav button.an span{font-size:17px;white-space:nowrap}
+.start.ms .ms-leiste>*{flex-shrink:0}
+@media (min-width:821px) and (max-height:860px){
+  .start.ms .ms-nav{gap:1px}
+  .start.ms .ms-nav button{height:35px}
+  .start.ms .ms-leiste{padding-top:12px;padding-bottom:10px}
+  #start .ms-fuss{padding-top:10px}
+  #start .ms-fuss .ms-wege{margin-top:6px}
+}
+/* 04: hinter den Plakaten ragt die Rückseite nur als ruhige Fläche hervor, ohne angeschnittene Wortreste («NKS»): Schrift auf hinteren Blättern der Listen aus */
+#start .papier--hinten .el-text,#start .papier--hinten .el-zeichen{visibility:hidden}
+/* … und das hintere Blatt öffnet sich als Keil von unten links: oben ein ruhiger Streifen, unten rechts (Gänge, Drinks) bleibt es hinter dem vorderen */
+#start .stueck .papier--hinten{transform-origin:0 100%;transform:translate(0,-10px) rotate(3.4deg)}
+#start .stueck:hover .papier--hinten{transform:translate(0,-16px) rotate(6deg)}
+
+/* Fundliste Gestaltung 29.10. (Fortsetzung)
+   05: unter den runden Fotokacheln kein heller Grund, der an den Ecken hervorschaut
+   06/12: Restreihen stehen mittig
+   07/08/13: Unterzeilen, Beschreibungen und Sätze ausgewogen umbrochen, nie ein Wort allein
+   11: zweite Zeile der Filter beginnt an der Kante der Chips, nicht unter dem Etikett
+   17: leere Ansicht «Freigegeben» zeigt, wie eine Freigabe aussieht */
+#start .ms-wochen .wo__k,#start .ev-raster .wo__k,#start .kd__bild .wo__k{background:#16151a}
+#start .wv{justify-content:center}
+#start :is(.stueck__format,.stueck__satztext,.ms-leise,.kd__zahl span,.kd__text p,.art small,.art em,.art p){text-wrap:balance}
+#start .fo-reihe{position:relative;padding-left:104px}
+#start .fo-reihe__t{position:absolute;left:0;top:0;height:36px;display:flex;align-items:center}
+#start .fg-leer{display:flex;flex-direction:column;gap:18px;max-width:640px}
+#start .fg-leer p{margin:0}
+#start .fg-bsp{display:flex;align-items:center;gap:18px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(177,87,54,.24)}
+#start .fg-bsp__blatt{position:relative;flex:none;width:46px;height:96px;border-radius:3px;background:#faf4f4;box-shadow:0 0 0 1px rgba(177,87,54,.3),0 10px 18px -10px rgba(38,36,45,.5);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 8px}
+#start .fg-bsp__blatt i{display:block;height:3px;border-radius:2px;background:rgba(177,87,54,.45)}
+#start .fg-bsp__blatt::after{content:'';position:absolute;right:-9px;bottom:-9px;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f5a689,#b15736);box-shadow:0 4px 8px -3px rgba(38,36,45,.5)}
+#start .fg-bsp b{display:block;font:500 18px/1.2 var(--serif);color:var(--navy)}
+#start .fg-bsp small{display:block;margin-top:4px;font:9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-tief)}
+#start .fg-bsp em{display:block;margin-top:6px;font-style:normal;font-size:13px;color:rgba(38,36,45,.66)}
+/* Fundliste 12: die Arten-Chips stehen in einer Zeile («Digital» nicht allein darunter); wird es enger, verteilen sie sich mittig */
+#start #startGruppen{flex-wrap:wrap;justify-content:center;gap:8px}
+#start #startGruppen button{padding-left:14px;padding-right:14px;letter-spacing:.12em}
+#start #startGruppen{display:grid;grid-template-columns:repeat(4,auto);justify-content:center}
+@media (min-width:1700px){#start #startGruppen{grid-template-columns:repeat(8,auto)}}
+@media (max-width:640px){#start #startGruppen{grid-template-columns:repeat(2,auto)}}
+
+/* Schrift optisch mittig in Knöpfen (Messlauf «text-mitte», Robert 29.10.2026: «Die Schriften in deinen Buttons sitzen IMMER falsch beim ersten Mal»):
+   Text im eigenen span auf die Versalhöhe beschnitten; zentrierter, gesperrter Text links um die halbe Sperrung ausgeglichen (Chromium hängt die Sperrung
+   nach dem letzten Buchstaben an, WebKit nicht) */
+.kn > span:not([class]), #msNav > button > span { text-box: trim-both cap alphabetic }
+#seitenwahl > button { padding-left: calc(14px + .065em) }
+
+/* Safari (29.10.2026, «Arten und Vorlagen» 24–43 fps): unter der offenen Übersicht malte WebKit bei jedem Scrollbild die ganze Arbeitsfläche mit
+   (Verläufe, Blatt, Schatten), obwohl sie vollständig verdeckt ist (#start deckend, z 21 über 20). Darum unsichtbar, solange die Übersicht offen ist;
+   eine halbe Sekunde später, damit beim Öffnen nichts aufblitzt, beim Schliessen sofort wieder da. Gemessen: im Vergleich 22–24 → 29–36 fps unter hoher Last. */
+body.startoffen > .studio, body.startoffen > header.kopf { visibility: hidden; transition: visibility 0s .5s }
+
+/* «Neu» am Handy (30.10.2026): nur das Pluszeichen; der Name steht als aria-label am Knopf, das Wort ist ganz weg statt unsichtbar beschnitten (Messlauf text-mitte) */
+@media (max-width:600px){.ms-kopf .ms-kn-neu>span{display:none}}
+/* Navigation: das auf Versalhöhe beschnittene Wort darf nicht abgeschnitten werden (30.10.2026, Messlauf: Oberlängen und Umlautpunkte lagen ausserhalb des Kastens) */
+#msNav > button > span{overflow:visible;text-overflow:clip}
+/* «Zurück zur Drucksache» in der Kopfleiste nie zusammendrücken (Messlauf 30.10.2026: bei 1280 fiel der Pfeil weg, die Schrift klebte 3 px am Rand) */
+#start .start__zu{flex:none}#start .start__zu svg{flex:none}

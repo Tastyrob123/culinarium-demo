@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Die Pairing-Karte · Culinarium</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16151A">
+<script src="../../assets/oberflaeche/kleid/culinarium.js"></script>
+<script src="namen.js"></script>
+<script src="fehlermelder.js"></script>
+<script src="auftakt.js"></script>
+<link rel="icon" href="../../assets/oberflaeche/kleid/culinarium-zeichen.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/schrift/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/schrift/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="carte.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/grund.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/rahmen-buehne.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/kleid/culinarium.css">
+<link rel="stylesheet" href="tafel.css">
+<link rel="stylesheet" href="schweben.css">
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="lc wo-app">
+<header class="wo-kopf" id="oben"></header>
+<aside class="wo-rand rand" id="rand" aria-label="Karten und Wege"></aside>
+<main class="wo-raum haupt">
+  <header class="kopf" id="kopf"></header>
+  <div class="arbeit" id="arbeit">
+    <section class="liste" id="liste" aria-label="Gänge der Karte"></section>
+    <section class="vorschau" aria-label="Vorschau der Karte">
+      <div class="vorschau__k"><div class="ansicht" role="group" aria-label="Vorschau"><button type="button" data-ansicht="karte" aria-pressed="true">Karte</button><button type="button" data-ansicht="website" aria-pressed="false">Website</button></div><div class="ansicht webwahl" id="webwahl" role="group" aria-label="Seite der Website" hidden><button type="button" data-webseite="abende.html" aria-pressed="true">Alle Abende</button><button type="button" data-webseite="abend.html" aria-pressed="false">Der Abend</button><button type="button" data-webseite="index.html" aria-pressed="false">Startseite</button></div><span class="mono" id="v-zahl">Vorschau</span><span class="vorschau__w" id="v-warn" hidden></span><div class="vorschau__z"><button type="button" class="rund rund--d" data-zoom="-1" aria-label="Kleiner"><svg viewBox="0 0 14 14"><path d="M3 7h8"/></svg></button><button type="button" class="rund rund--d" data-zoom="1" aria-label="Grösser"><svg viewBox="0 0 14 14"><path d="M7 3v8M3 7h8"/></svg></button></div></div>
+      <iframe class="vorschau__f" id="vf" title="Die Karte, wie sie in der PDF steht" src="satz/blatt.html"></iframe>
+      <div class="web" id="web" hidden><iframe id="web-f" title="Die Seite der Website, auf der die Karte steht"></iframe></div>
+    </section>
+  </div>
+</main>
+<footer class="wo-leiste leiste" id="leiste" aria-live="polite"></footer>
+<div class="fenster" id="fenster" hidden></div>
+<div class="meldung" id="meldung" aria-live="polite"></div>
+<script src="../../assets/oberflaeche/oberflaeche.js"></script>
+<script src="../../assets/oberflaeche/rechtschreibung.js" defer></script>
+<script src="satz/satz.js"></script>
+<script src="carte.js"></script>
+<script src="schweben.js" data-wurzel=".haupt" data-blaetter=".vorschau__k"></script>
+<script src="rundgang.js" defer></script>
+<script src="zur-werkbank.js" defer data-zw data-neben="#rand" data-luft="40" data-ueber="#leiste"></script>
+</body>
+</html>

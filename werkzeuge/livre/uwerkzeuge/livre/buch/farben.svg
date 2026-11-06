@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="2080" viewBox="0 0 1200 2080" font-family="DM Mono, Menlo, monospace">
+<rect width="100%" height="100%" fill="#FAF4F4"/>
+<rect x="20" y="20" width="200" height="104" rx="12" fill="#FAF4F4"/>
+<rect x="240" y="20" width="104" height="70" rx="8" fill="#7D7A7A"/><text x="240" y="112" font-size="12" fill="#3A3845">#7D7A7A</text>
+<rect x="352" y="20" width="104" height="70" rx="8" fill="#BCB7B7"/><text x="352" y="112" font-size="12" fill="#3A3845">#BCB7B7</text>
+<rect x="464" y="20" width="104" height="70" rx="8" fill="#FAF4F4"/><text x="464" y="112" font-size="12" fill="#3A3845">#FAF4F4</text>
+<rect x="576" y="20" width="104" height="70" rx="8" fill="#FCF9F9"/><text x="576" y="112" font-size="12" fill="#3A3845">#FCF9F9</text>
+<rect x="688" y="20" width="104" height="70" rx="8" fill="#FEFDFD"/><text x="688" y="112" font-size="12" fill="#3A3845">#FEFDFD</text>
+<text x="830" y="50" font-size="19" fill="#3A3845">Warmweiss</text><text x="830" y="76" font-size="14" fill="#3A3845">#FAF4F4 · Logo, Drucksache</text>
+<rect x="20" y="140" width="200" height="104" rx="12" fill="#3A3845"/>
+<rect x="240" y="140" width="104" height="70" rx="8" fill="#1D1C22"/><text x="240" y="232" font-size="12" fill="#3A3845">#1D1C22</text>
+<rect x="352" y="140" width="104" height="70" rx="8" fill="#2C2A34"/><text x="352" y="232" font-size="12" fill="#3A3845">#2C2A34</text>
+<rect x="464" y="140" width="104" height="70" rx="8" fill="#3A3845"/><text x="464" y="232" font-size="12" fill="#3A3845">#3A3845</text>
+<rect x="576" y="140" width="104" height="70" rx="8" fill="#939299"/><text x="576" y="232" font-size="12" fill="#3A3845">#939299</text>
+<rect x="688" y="140" width="104" height="70" rx="8" fill="#D8D7DA"/><text x="688" y="232" font-size="12" fill="#3A3845">#D8D7DA</text>
+<text x="830" y="170" font-size="19" fill="#3A3845">Schiefer-Violett</text><text x="830" y="196" font-size="14" fill="#3A3845">#3A3845 · Logo, Drucksache</text>
+<rect x="20" y="260" width="200" height="104" rx="12" fill="#B1ADAC"/>
+<rect x="240" y="260" width="104" height="70" rx="8" fill="#585656"/><text x="240" y="352" font-size="12" fill="#3A3845">#585656</text>
+<rect x="352" y="260" width="104" height="70" rx="8" fill="#858281"/><text x="352" y="352" font-size="12" fill="#3A3845">#858281</text>
+<rect x="464" y="260" width="104" height="70" rx="8" fill="#B1ADAC"/><text x="464" y="352" font-size="12" fill="#3A3845">#B1ADAC</text>
+<rect x="576" y="260" width="104" height="70" rx="8" fill="#D4D2D1"/><text x="576" y="352" font-size="12" fill="#3A3845">#D4D2D1</text>
+<rect x="688" y="260" width="104" height="70" rx="8" fill="#EFEFEE"/><text x="688" y="352" font-size="12" fill="#3A3845">#EFEFEE</text>
+<text x="830" y="290" font-size="19" fill="#3A3845">Rahmengrau</text><text x="830" y="316" font-size="14" fill="#3A3845">#B1ADAC · Drucksache</text>
+<rect x="20" y="380" width="200" height="104" rx="12" fill="#B3EBFC"/>
+<rect x="240" y="380" width="104" height="70" rx="8" fill="#5A767E"/><text x="240" y="472" font-size="12" fill="#3A3845">#5A767E</text>
+<rect x="352" y="380" width="104" height="70" rx="8" fill="#86B0BD"/><text x="352" y="472" font-size="12" fill="#3A3845">#86B0BD</text>
+<rect x="464" y="380" width="104" height="70" rx="8" fill="#B3EBFC"/><text x="464" y="472" font-size="12" fill="#3A3845">#B3EBFC</text>
+<rect x="576" y="380" width="104" height="70" rx="8" fill="#D5F4FD"/><text x="576" y="472" font-size="12" fill="#3A3845">#D5F4FD</text>
+<rect x="688" y="380" width="104" height="70" rx="8" fill="#F0FBFE"/><text x="688" y="472" font-size="12" fill="#3A3845">#F0FBFE</text>
+<text x="830" y="410" font-size="19" fill="#3A3845">Eisblau</text><text x="830" y="436" font-size="14" fill="#3A3845">#B3EBFC · Drucksache</text>
+<rect x="20" y="500" width="200" height="104" rx="12" fill="#EF7649"/>
+<rect x="240" y="500" width="104" height="70" rx="8" fill="#783B24"/><text x="240" y="592" font-size="12" fill="#3A3845">#783B24</text>
+<rect x="352" y="500" width="104" height="70" rx="8" fill="#B35837"/><text x="352" y="592" font-size="12" fill="#3A3845">#B35837</text>
+<rect x="464" y="500" width="104" height="70" rx="8" fill="#EF7649"/><text x="464" y="592" font-size="12" fill="#3A3845">#EF7649</text>
+<rect x="576" y="500" width="104" height="70" rx="8" fill="#F6B49B"/><text x="576" y="592" font-size="12" fill="#3A3845">#F6B49B</text>
+<rect x="688" y="500" width="104" height="70" rx="8" fill="#FCE4DB"/><text x="688" y="592" font-size="12" fill="#3A3845">#FCE4DB</text>
+<text x="830" y="530" font-size="19" fill="#3A3845">Orange</text><text x="830" y="556" font-size="14" fill="#3A3845">#EF7649 · Drucksache</text>
+<rect x="20" y="620" width="200" height="104" rx="12" fill="#94B253"/>
+<rect x="240" y="620" width="104" height="70" rx="8" fill="#4A592A"/><text x="240" y="712" font-size="12" fill="#3A3845">#4A592A</text>
+<rect x="352" y="620" width="104" height="70" rx="8" fill="#6F863E"/><text x="352" y="712" font-size="12" fill="#3A3845">#6F863E</text>
+<rect x="464" y="620" width="104" height="70" rx="8" fill="#94B253"/><text x="464" y="712" font-size="12" fill="#3A3845">#94B253</text>
+<rect x="576" y="620" width="104" height="70" rx="8" fill="#C4D5A0"/><text x="576" y="712" font-size="12" fill="#3A3845">#C4D5A0</text>
+<rect x="688" y="620" width="104" height="70" rx="8" fill="#EAF0DD"/><text x="688" y="712" font-size="12" fill="#3A3845">#EAF0DD</text>
+<text x="830" y="650" font-size="19" fill="#3A3845">Grasgrün</text><text x="830" y="676" font-size="14" fill="#3A3845">#94B253 · Drucksache</text>
+<rect x="20" y="740" width="200" height="104" rx="12" fill="#112D43"/>
+<rect x="240" y="740" width="104" height="70" rx="8" fill="#081622"/><text x="240" y="832" font-size="12" fill="#3A3845">#081622</text>
+<rect x="352" y="740" width="104" height="70" rx="8" fill="#0D2232"/><text x="352" y="832" font-size="12" fill="#3A3845">#0D2232</text>
+<rect x="464" y="740" width="104" height="70" rx="8" fill="#112D43"/><text x="464" y="832" font-size="12" fill="#3A3845">#112D43</text>
+<rect x="576" y="740" width="104" height="70" rx="8" fill="#7C8C98"/><text x="576" y="832" font-size="12" fill="#3A3845">#7C8C98</text>
+<rect x="688" y="740" width="104" height="70" rx="8" fill="#CFD5D9"/><text x="688" y="832" font-size="12" fill="#3A3845">#CFD5D9</text>
+<text x="830" y="770" font-size="19" fill="#3A3845">Nachtblau</text><text x="830" y="796" font-size="14" fill="#3A3845">#112D43 · Drucksache</text>
+<rect x="20" y="860" width="200" height="104" rx="12" fill="#881301"/>
+<rect x="240" y="860" width="104" height="70" rx="8" fill="#440A00"/><text x="240" y="952" font-size="12" fill="#3A3845">#440A00</text>
+<rect x="352" y="860" width="104" height="70" rx="8" fill="#660E01"/><text x="352" y="952" font-size="12" fill="#3A3845">#660E01</text>
+<rect x="464" y="860" width="104" height="70" rx="8" fill="#881301"/><text x="464" y="952" font-size="12" fill="#3A3845">#881301</text>
+<rect x="576" y="860" width="104" height="70" rx="8" fill="#BE7D73"/><text x="576" y="952" font-size="12" fill="#3A3845">#BE7D73</text>
+<rect x="688" y="860" width="104" height="70" rx="8" fill="#E7D0CC"/><text x="688" y="952" font-size="12" fill="#3A3845">#E7D0CC</text>
+<text x="830" y="890" font-size="19" fill="#3A3845">Ochsenblut</text><text x="830" y="916" font-size="14" fill="#3A3845">#881301 · Drucksache</text>
+<rect x="20" y="980" width="200" height="104" rx="12" fill="#4D3321"/>
+<rect x="240" y="980" width="104" height="70" rx="8" fill="#261A10"/><text x="240" y="1072" font-size="12" fill="#3A3845">#261A10</text>
+<rect x="352" y="980" width="104" height="70" rx="8" fill="#3A2619"/><text x="352" y="1072" font-size="12" fill="#3A3845">#3A2619</text>
+<rect x="464" y="980" width="104" height="70" rx="8" fill="#4D3321"/><text x="464" y="1072" font-size="12" fill="#3A3845">#4D3321</text>
+<rect x="576" y="980" width="104" height="70" rx="8" fill="#9D8F85"/><text x="576" y="1072" font-size="12" fill="#3A3845">#9D8F85</text>
+<rect x="688" y="980" width="104" height="70" rx="8" fill="#DBD6D3"/><text x="688" y="1072" font-size="12" fill="#3A3845">#DBD6D3</text>
+<text x="830" y="1010" font-size="19" fill="#3A3845">Sepia</text><text x="830" y="1036" font-size="14" fill="#3A3845">#4D3321 · Drucksache</text>
+<rect x="20" y="1100" width="200" height="104" rx="12" fill="#E3BB7D"/>
+<rect x="240" y="1100" width="104" height="70" rx="8" fill="#725E3E"/><text x="240" y="1192" font-size="12" fill="#3A3845">#725E3E</text>
+<rect x="352" y="1100" width="104" height="70" rx="8" fill="#AA8C5E"/><text x="352" y="1192" font-size="12" fill="#3A3845">#AA8C5E</text>
+<rect x="464" y="1100" width="104" height="70" rx="8" fill="#E3BB7D"/><text x="464" y="1192" font-size="12" fill="#3A3845">#E3BB7D</text>
+<rect x="576" y="1100" width="104" height="70" rx="8" fill="#F0DAB8"/><text x="576" y="1192" font-size="12" fill="#3A3845">#F0DAB8</text>
+<rect x="688" y="1100" width="104" height="70" rx="8" fill="#F9F1E5"/><text x="688" y="1192" font-size="12" fill="#3A3845">#F9F1E5</text>
+<text x="830" y="1130" font-size="19" fill="#3A3845">Putz</text><text x="830" y="1156" font-size="14" fill="#3A3845">#E3BB7D · Foto</text>
+<rect x="20" y="1220" width="200" height="104" rx="12" fill="#EB6C23"/>
+<rect x="240" y="1220" width="104" height="70" rx="8" fill="#763612"/><text x="240" y="1312" font-size="12" fill="#3A3845">#763612</text>
+<rect x="352" y="1220" width="104" height="70" rx="8" fill="#B0511A"/><text x="352" y="1312" font-size="12" fill="#3A3845">#B0511A</text>
+<rect x="464" y="1220" width="104" height="70" rx="8" fill="#EB6C23"/><text x="464" y="1312" font-size="12" fill="#3A3845">#EB6C23</text>
+<rect x="576" y="1220" width="104" height="70" rx="8" fill="#F4AE86"/><text x="576" y="1312" font-size="12" fill="#3A3845">#F4AE86</text>
+<rect x="688" y="1220" width="104" height="70" rx="8" fill="#FBE2D3"/><text x="688" y="1312" font-size="12" fill="#3A3845">#FBE2D3</text>
+<text x="830" y="1250" font-size="19" fill="#3A3845">Flurorange</text><text x="830" y="1276" font-size="14" fill="#3A3845">#EB6C23 · Foto</text>
+<rect x="20" y="1340" width="200" height="104" rx="12" fill="#FFCC64"/>
+<rect x="240" y="1340" width="104" height="70" rx="8" fill="#806632"/><text x="240" y="1432" font-size="12" fill="#3A3845">#806632</text>
+<rect x="352" y="1340" width="104" height="70" rx="8" fill="#BF994B"/><text x="352" y="1432" font-size="12" fill="#3A3845">#BF994B</text>
+<rect x="464" y="1340" width="104" height="70" rx="8" fill="#FFCC64"/><text x="464" y="1432" font-size="12" fill="#3A3845">#FFCC64</text>
+<rect x="576" y="1340" width="104" height="70" rx="8" fill="#FFE3AA"/><text x="576" y="1432" font-size="12" fill="#3A3845">#FFE3AA</text>
+<rect x="688" y="1340" width="104" height="70" rx="8" fill="#FFF5E0"/><text x="688" y="1432" font-size="12" fill="#3A3845">#FFF5E0</text>
+<text x="830" y="1370" font-size="19" fill="#3A3845">Kerzenlicht</text><text x="830" y="1396" font-size="14" fill="#3A3845">#FFCC64 · Foto</text>
+<rect x="20" y="1460" width="200" height="104" rx="12" fill="#A35C1C"/>
+<rect x="240" y="1460" width="104" height="70" rx="8" fill="#522E0E"/><text x="240" y="1552" font-size="12" fill="#3A3845">#522E0E</text>
+<rect x="352" y="1460" width="104" height="70" rx="8" fill="#7A4515"/><text x="352" y="1552" font-size="12" fill="#3A3845">#7A4515</text>
+<rect x="464" y="1460" width="104" height="70" rx="8" fill="#A35C1C"/><text x="464" y="1552" font-size="12" fill="#3A3845">#A35C1C</text>
+<rect x="576" y="1460" width="104" height="70" rx="8" fill="#CCA582"/><text x="576" y="1552" font-size="12" fill="#3A3845">#CCA582</text>
+<rect x="688" y="1460" width="104" height="70" rx="8" fill="#EDDED2"/><text x="688" y="1552" font-size="12" fill="#3A3845">#EDDED2</text>
+<text x="830" y="1490" font-size="19" fill="#3A3845">Honig</text><text x="830" y="1516" font-size="14" fill="#3A3845">#A35C1C · Foto</text>
+<rect x="20" y="1580" width="200" height="104" rx="12" fill="#231B13"/>
+<rect x="240" y="1580" width="104" height="70" rx="8" fill="#120E0A"/><text x="240" y="1672" font-size="12" fill="#3A3845">#120E0A</text>
+<rect x="352" y="1580" width="104" height="70" rx="8" fill="#1A140E"/><text x="352" y="1672" font-size="12" fill="#3A3845">#1A140E</text>
+<rect x="464" y="1580" width="104" height="70" rx="8" fill="#231B13"/><text x="464" y="1672" font-size="12" fill="#3A3845">#231B13</text>
+<rect x="576" y="1580" width="104" height="70" rx="8" fill="#86827D"/><text x="576" y="1672" font-size="12" fill="#3A3845">#86827D</text>
+<rect x="688" y="1580" width="104" height="70" rx="8" fill="#D3D1D0"/><text x="688" y="1672" font-size="12" fill="#3A3845">#D3D1D0</text>
+<text x="830" y="1610" font-size="19" fill="#3A3845">Schiefertisch</text><text x="830" y="1636" font-size="14" fill="#3A3845">#231B13 · Foto</text>
+<rect x="20" y="1700" width="200" height="104" rx="12" fill="#0A0705"/>
+<rect x="240" y="1700" width="104" height="70" rx="8" fill="#050402"/><text x="240" y="1792" font-size="12" fill="#3A3845">#050402</text>
+<rect x="352" y="1700" width="104" height="70" rx="8" fill="#080504"/><text x="352" y="1792" font-size="12" fill="#3A3845">#080504</text>
+<rect x="464" y="1700" width="104" height="70" rx="8" fill="#0A0705"/><text x="464" y="1792" font-size="12" fill="#3A3845">#0A0705</text>
+<rect x="576" y="1700" width="104" height="70" rx="8" fill="#787776"/><text x="576" y="1792" font-size="12" fill="#3A3845">#787776</text>
+<rect x="688" y="1700" width="104" height="70" rx="8" fill="#CECDCD"/><text x="688" y="1792" font-size="12" fill="#3A3845">#CECDCD</text>
+<text x="830" y="1730" font-size="19" fill="#3A3845">Barnacht</text><text x="830" y="1756" font-size="14" fill="#3A3845">#0A0705 · Foto</text>
+<rect x="20" y="1820" width="200" height="104" rx="12" fill="#442D32"/>
+<rect x="240" y="1820" width="104" height="70" rx="8" fill="#221619"/><text x="240" y="1912" font-size="12" fill="#3A3845">#221619</text>
+<rect x="352" y="1820" width="104" height="70" rx="8" fill="#332226"/><text x="352" y="1912" font-size="12" fill="#3A3845">#332226</text>
+<rect x="464" y="1820" width="104" height="70" rx="8" fill="#442D32"/><text x="464" y="1912" font-size="12" fill="#3A3845">#442D32</text>
+<rect x="576" y="1820" width="104" height="70" rx="8" fill="#988C8E"/><text x="576" y="1912" font-size="12" fill="#3A3845">#988C8E</text>
+<rect x="688" y="1820" width="104" height="70" rx="8" fill="#DAD5D6"/><text x="688" y="1912" font-size="12" fill="#3A3845">#DAD5D6</text>
+<text x="830" y="1850" font-size="19" fill="#3A3845">Klinker</text><text x="830" y="1876" font-size="14" fill="#3A3845">#442D32 · Foto</text>
+<rect x="20" y="1940" width="200" height="104" rx="12" fill="#D44032"/>
+<rect x="240" y="1940" width="104" height="70" rx="8" fill="#6A2019"/><text x="240" y="2032" font-size="12" fill="#3A3845">#6A2019</text>
+<rect x="352" y="1940" width="104" height="70" rx="8" fill="#9F3026"/><text x="352" y="2032" font-size="12" fill="#3A3845">#9F3026</text>
+<rect x="464" y="1940" width="104" height="70" rx="8" fill="#D44032"/><text x="464" y="2032" font-size="12" fill="#3A3845">#D44032</text>
+<rect x="576" y="1940" width="104" height="70" rx="8" fill="#E7968E"/><text x="576" y="2032" font-size="12" fill="#3A3845">#E7968E</text>
+<rect x="688" y="1940" width="104" height="70" rx="8" fill="#F6D9D6"/><text x="688" y="2032" font-size="12" fill="#3A3845">#F6D9D6</text>
+<text x="830" y="1970" font-size="19" fill="#3A3845">Campari</text><text x="830" y="1996" font-size="14" fill="#3A3845">#D44032 · Foto</text>
+</svg>

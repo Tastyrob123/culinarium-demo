@@ -1,0 +1,447 @@
+/* Das Besucherbuch (Le Registre) · Culinarium Hannover (28.10.2026, aus der Taverne zum Schäfli übernommen, dort aus Schlössli und Gasterntal). Inhalte des Werkzeugs
+   (Kennzahlen, Ranglisten, Säulen, Besuche, Weg, Tabellen) nur in den Tönen des Kleids (kleid/culinarium.css, Farbwelt «Plakat»): Nacht und Schiefer als dunkle
+   Fläche, Kerze tief als Akzent auf Hell, Kerzenlicht als Linie auf Dunkel, Warmweiss als Raum. Keine eigenen Hexwerte für dunkle Flächen (Fehlerbuch 10a, 20.10.2026).
+   Titel in Fraunces mit weichen Enden wie die Website (normale Schreibung, nie fett, nie kursiv), Kleinzeilen DM Mono. Schriften liefert das Kleid (/culinarium-demo/assets/schrift/).
+   Kopf, Rand, Leiste, Startbild und Knöpfe kommen aus der Oberfläche der Häuser (/culinarium-demo/assets/oberflaeche/, Kleid culinarium), nicht aus dieser Datei.
+   Bewegung nur über transform/translate/scale und opacity; kein Weichzeichner, kein Verlauf und keine Transparenz über etwas Bewegtem (Regel 55). */
+:root{
+  /* Namen der Vorlage behalten (nacht, gold …), Werte nur aus dem Kleid: nacht = Nacht der Bar, hellgold = Kerzenlicht hell (Linie auf Dunkel), gold = Kerze tief (Akzent auf Hell) */
+  --nacht:var(--wo-nacht); --tief:var(--wo-tief); --blau:var(--wo-nacht2); --karte:var(--wo-tief); --stahl:var(--wo-nacht2); --schiefer:var(--wo-tief);
+  --hellgold:var(--wo-gold); --gold:var(--wo-akzent); --papier:var(--wo-papier); --leinen:var(--wo-papier2); --blatt:var(--wo-blatt); --weiss:var(--wo-weiss); --tinte:var(--wo-tinte);
+  --leise:var(--wo-leise); --linie:var(--wo-linie); --gruen:var(--wo-gut); --rot:var(--wo-punkt); --laden:var(--wo-punkt);
+  --rauten:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjQiIGhlaWdodD0iMjI0IiB2aWV3Qm94PSIwIDAgMjI0IDIyNCI+PGcgc3Ryb2tlPSIjQTZBNUFCIiBzdHJva2Utb3BhY2l0eT0iMC4wNyIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMCAuNUgyMjRNMCA0LjVIMjI0TS41IDBWMjI0TTQuNSAwVjIyNCIvPjwvZz48c3ZnIHg9Ii0xLjkyIiB5PSItMi4wMCIgd2lkdGg9IjguODQiIGhlaWdodD0iOS4wMCIgdmlld0JveD0iMCAwIDIyNCAyMjgiIGZpbGw9IiNBNkE1QUIiIGZpbGwtb3BhY2l0eT0iMC4xNCI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMjI4LjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTQyMiAyMDQ5IGMtNTMgLTEwIC05NSAtMzUgLTEyMyAtNzIgLTI5IC0zOSAtMTA0IC0xOTMgLTEyMCAtMjQ1IC0xNSAtNTIgLTM5IC03NCAtNzUgLTcwIC0zMyA0IC0zOCAxMiAtOTYgMTYzIC04MCAyMDkgLTk3IDIxNyAtNDU1IDIxMyAtMjYxIC0zIC0yNjEgLTMgLTI4NyAtMjcgLTM2IC0zNCAtMzggLTI2IDQ0IC0yMDYgMTAgLTIyIDMwIC02NiA0NCAtOTggMTQgLTMxIDU4IC0xMDggOTkgLTE3MCAxMDcgLTE2NCAxNDcgLTI1MCAxNTggLTM0MyAxMSAtMTAzIDIgLTEzNSAtNzAgLTI0NCAtMzMgLTUyIC02MSAtOTcgLTYxIC0xMDIgMCAtMTMgLTk2IC0xODMgLTE3MSAtMzAzIC05OCAtMTU4IC0xMTIgLTI0OSAtNDIgLTI3NiAxNyAtNiAxMTYgLTkgMjYzIC03IDM1MiA1IDM2MSAxMSA1MDEgMzQyIDM4IDg5IDYyIDExMiAxMDIgOTcgMzMgLTEzIDgxIC05NCAxMDggLTE4NiA0MSAtMTM3IDEwOCAtMjM0IDE3MiAtMjUwIDEzIC00IDEzOSAtNSAyODAgLTMgMjUyIDMgMjU3IDMgMjc5IDI2IDQwIDM5IDMwIDk3IC0zNiAyMDYgLTMwIDUwIC02NCAxMTEgLTc0IDEzNiAtMTkgNDQgLTYzIDEyMCAtMTc2IDMwNiAtNjEgMTAwIC03NSAxNDcgLTc2IDI0NSAwIDcyIDQ0IDE3MiAxNDIgMzI1IDExMCAxNzEgMjM4IDQyMCAyMzggNDY0IDAgNjcgLTgzIDk0IC0yMzkgNzkgLTc1IC04IC0xMjYgLTggLTE3OCAwIC04MiAxMiAtOTAgMTIgLTE1MSAweiIvPjwvZz48L3N2Zz48c3ZnIHg9Ijk5LjY4IiB5PSIxMDIuNTAiIHdpZHRoPSIyOS42NSIgaGVpZ2h0PSIyNC4wMCIgdmlld0JveD0iMCAwIDc1NiA2MTIiIGZpbGw9IiNBNkE1QUIiIGZpbGwtb3BhY2l0eT0iMC4wOSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNjEyLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMzY4NSA1ODgzIGMtNzgyIC0zMiAtMTYzMCAtMzAwIC0yMjE1IC03MDIgLTU2NiAtMzg4IC05NTQgLTg3NSAtMTEzNSAtMTQyNCAtMTQ0IC00MzkgLTE0MiAtOTYxIDcgLTEzODcgMjM2IC02NzUgNzIxIC0xMjA2IDE0ODggLTE2MjcgMzk2IC0yMTcgOTczIC0zOTMgMTUyNSAtNDY1IDIwOSAtMjcgODA4IC0zMyAxMDQ4IC0xMCA1MTUgNDkgMTAyNCAxNzkgMTUzMiAzOTEgMTEzIDQ3IDQ0MCAyMTggNTMxIDI3NyAzNTAgMjI4IDYzMCA0NzMgNzk0IDY5NCA5MyAxMjcgMTAxIDE2OSAzNiAyMTAgLTc5IDQ4IC0xMzcgMjMgLTI0MSAtMTA2IC0zMTUgLTM4NiAtNzg0IC02NzUgLTEyNDAgLTc2NCAtNDg3IC05NCAtOTU3IC0xNCAtMTQ2MCAyNDkgLTMyMyAxNjkgLTU1OSAzMzcgLTkxMCA2NDcgLTU0OCA0ODMgLTEwODYgMTE3NiAtMTM4NSAxNzgwIC0zNDIgNjkxIC0zODkgMTI1NCAtMTI5IDE1MTQgMTc1IDE3NSAzOTQgMjM1IDY2MiAxODAgMTQ3IC0yOSAxOTQgLTQ3IDMyMiAtMTIwIDE3OSAtMTAxIDI3NyAtMTc2IDYxNSAtNDcwIDM0OSAtMzAzIDQ2OSAtMzk4IDY2MCAtNTI1IDIxNCAtMTQxIDI0OSAtMTYwIDQ2NSAtMjQ4IDIwMSAtODEgMzE1IC0xMDYgNjYxIC0xNDIgNjUgLTcgNDA0IDE4IDU0NCA0MCAxNTkgMjUgNDcyIDEyOSA1NzYgMTkyIDI4NiAxNzQgNDM4IDMyNSA1NzIgNTczIDE0NSAyNjggMjEzIDY0NiAxNzggOTg2IC0xOSAxNzcgLTQ4IDIyNCAtMTQxIDIyNCAtODEgMCAtMTE0IC00MCAtMTM5IC0xNjggLTUyIC0yNzcgLTIzNSAtNDAzIC01OTEgLTQwNiAtMjE1IC0xIC0zNTQgMzIgLTY4MCAxNjQgLTU2MCAyMjcgLTc1MSAyOTcgLTk2MCAzNDkgLTMyNCA4MCAtNjI4IDEwOSAtOTkwIDk0eiIvPjwvZz48L3N2Zz48L3N2Zz4=');
+  --titel:var(--wo-titel);
+  --sans:var(--wo-sans);
+  --mono:var(--wo-mono);
+  --e1:cubic-bezier(.16,1,.3,1); --e2:cubic-bezier(.32,.72,0,1);
+  --kopf:68px; --leiste:70px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--tinte);font-family:var(--sans);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit;text-decoration:none}
+[hidden]{display:none!important}
+::selection{background:var(--gold);color:var(--tinte)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--leise)}
+.zt{display:block;width:16px;height:33px;fill:currentColor}
+
+h1,h2,h3{font-family:var(--titel);font-weight:var(--wo-titel-g,460);letter-spacing:var(--wo-titel-ls,0)}
+h1 em,h2 em,h3 em{font-style:normal;color:var(--gold)}
+
+/* ---------- Knöpfe wie auf der Website: Platte (Radius 10 px) mit rundem Knauf in Kerze ---------- */
+.kn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;height:48px;padding:0 5px 0 22px;border-radius:var(--wo-r2,10px);white-space:nowrap;
+  font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--tinte);
+  background:linear-gradient(#FFFCFB,#F3ECEA 55%,#E9E0DE);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 #EF7649,0 12px 22px -12px rgba(0,0,0,.6);
+  transition:transform .5s var(--e2),opacity .3s}
+.kn i{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(#B15736,#3A3845);box-shadow:inset 0 1px 0 #5A5764,inset 0 -2px 0 #16151A;color:var(--papier);transition:transform .5s var(--e2)}
+.kn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5}
+.kn::after{content:'';position:absolute;top:0;bottom:0;left:-40%;width:32%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:translateX(-120%) skewX(-18deg);pointer-events:none}
+.kn:hover{transform:translateY(-2px)}
+.kn:hover::after{transform:translateX(560%) skewX(-18deg);transition:transform .9s var(--e1)}
+.kn:hover i{transform:translate(1px,-1px) rotate(-8deg)}
+.kn:active{transform:translateY(1px)}
+.kn--gold,.kn--holz{background:linear-gradient(180deg,#F3ECEA,#E9E0DE 34%,#F5A689 66%,#EF7649);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),inset 0 -2px 0 rgba(38,36,45,.4),0 10px 20px -12px rgba(0,0,0,.8)}
+.kn--linie{background:none;color:inherit;box-shadow:inset 0 0 0 1px currentColor;opacity:.84}
+.kn--linie::after{display:none}
+.kn--linie:hover{opacity:1}
+.kn--linie i{background:none;box-shadow:none;color:inherit;width:28px}
+.kn--klein{height:40px;padding:0 4px 0 16px;font-size:10px;gap:9px}
+.kn--klein i{width:32px;height:32px}
+.link{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--leise);border-bottom:1px solid currentColor;padding-bottom:2px;transition:color .3s}
+.link:hover{color:var(--tinte)}
+
+/* ---------- Kopf, Rand, Leiste und Startbild: aus der Oberfläche der Häuser (/culinarium-demo/assets/oberflaeche/), hier nur noch Reste der Vorlage ---------- */
+
+   /* der rote Punkt der Fensterläden, nur hier */
+
+/* ---------- Rand: Titel und Haus (der Rest kommt aus dem Paket) ---------- */
+
+.rand__titel{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.rand__titel::before{content:'';width:22px;height:1px;background:var(--gold)}
+
+.rand__haus{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);padding-top:10px;border-top:1px solid var(--linie)}
+
+.in{max-width:1240px;margin:0 auto;padding:30px clamp(20px,3.4vw,52px) 160px}
+.wenig{margin:26px 0 0;text-align:center;font-size:13.5px;color:var(--leise)}
+.wenig .link{color:var(--stahl)}
+
+/* ---------- Wahl, Beispiel-Band ---------- */
+
+
+@keyframes rg-rahmen{from{opacity:0;scale:1.03}}
+@keyframes rg-bild{from{scale:1.14;opacity:.2}}
+@keyframes rg-zt{from{scale:1.4;opacity:0}}
+@keyframes rg-wort{from{opacity:0;translate:0 .55em;scale:.96}}
+@keyframes rg-auf{from{opacity:0;translate:0 22px}}
+@keyframes rg-linie{from{scale:0 1}}
+.wahl3{display:inline-flex;align-self:flex-start;width:fit-content;gap:4px;padding:4px;border-radius:14px;background:rgba(38,36,45,.06);flex:none}
+.wahl3 button{height:38px;padding:0 16px;border-radius:10px;font-size:13.5px;color:rgba(38,36,45,.68);white-space:nowrap;transition:background-color .3s,color .3s}
+.wahl3 button:hover{color:var(--tinte)}
+.wahl3 button.an{background:var(--nacht);color:#fff}
+.wahl3--filter{margin:0 0 18px;flex-wrap:wrap}
+.bsp-band{display:block;margin:0 0 22px;padding:12px 16px 12px 46px;border-radius:14px;background:rgba(245,166,137,.32);color:#3A3845;font-size:14px;line-height:1.45;position:relative;box-shadow:inset 0 0 0 1px rgba(245,166,137,.35)}
+.bsp-band::before{content:'B';position:absolute;left:13px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--nacht);color:var(--hellgold);font:500 11px/22px var(--mono);text-align:center}
+.bsp-band b{color:var(--tinte)}
+.zw{font-size:1.65rem;line-height:1.1;margin:46px 0 16px}
+
+/* ---------- Blätter ---------- */
+.blatt{background:var(--blatt);border-radius:22px;box-shadow:inset 0 0 0 1px var(--linie);padding:24px 26px;min-width:0}
+.blatt>header{display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.blatt h3{font-size:1.28rem;line-height:1.15}
+.blatt>header p{font-size:13px;color:var(--leise)}
+.zwei{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.stapel{display:grid;gap:16px;align-content:start}
+/* Spalten nebeneinander gleich hoch und gefüllt (Robert 29.10.2026, Kriterium 4): die Blätter eines Stapels teilen sich die Höhe der Nachbarspalte */
+.zwei--fuell{align-items:stretch}
+.zwei--fuell>.stapel{display:flex;flex-direction:column;gap:16px}
+.zwei--fuell>.stapel>.blatt{flex:1 1 auto}
+/* bleibt Höhe übrig, verteilt sie sich zwischen die Zeilen einer Liste, nie als Loch unter ihr */
+.zwei--fuell .blatt{display:flex;flex-direction:column}
+.zwei--fuell .blatt>:is(.rang,.trichter,.wochen){flex:1 1 auto;align-content:space-between}
+.tafel{margin-top:16px;overflow-x:clip}
+.zahlen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.zahlen .blatt{display:grid;gap:6px;padding:22px 24px;position:relative}
+.zahlen .blatt::before{content:'';position:absolute;left:24px;top:0;width:28px;height:3px;border-radius:0 0 3px 3px;background:var(--gold)}
+.zahlen b{font-family:var(--titel);font-weight:500;font-size:clamp(2rem,3.1vw,2.7rem);line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.zahlen small,.vgl{font-size:13px;color:var(--leise)}
+.vgl{display:inline-flex;align-items:center;gap:4px}
+.vgl svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.5}
+.vgl.gut{color:var(--gruen)}
+.vgl.weniger{color:#B15736}
+.band{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:20px 24px}
+.band>div{display:grid;gap:4px;min-width:0}
+.band b{font-family:var(--titel);font-weight:500;font-size:1.6rem;line-height:1.1}
+.nichts{color:var(--leise);font-size:14px}
+.fein{margin-top:12px;font-size:12.5px;color:var(--leise);line-height:1.45}
+
+/* Rangliste mit Balken */
+.rang{display:grid;gap:9px}
+.rang li{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(60px,1fr) auto 42px;gap:12px;align-items:center;font-size:14.5px}
+.rang__n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rang__n small{display:block;font-size:12px;color:var(--leise);overflow:hidden;text-overflow:ellipsis}
+.rang__b{display:block;height:8px;border-radius:4px;background:rgba(38,36,45,.07);overflow:hidden}
+.rang__b i{display:block;height:100%;width:100%;border-radius:4px;background:linear-gradient(90deg,var(--nacht),var(--stahl));transform-origin:0 50%;transform:scaleX(var(--w));transition:transform 1.4s var(--feder-leise);transition-delay:calc(var(--i,0) * 90ms + 200ms)}
+[data-r]:not(.rg-los) .rang__b i{transform:scaleX(0)}
+.rang li:first-child .rang__b i{background:linear-gradient(180deg,#E9E0DE,#F5A689 55%,#EF7649)}
+.rang li b{font-family:var(--mono);font-size:13px;font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
+.rang li em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--leise);text-align:right}
+
+/* Säulen */
+.saeulen{--h0:180px;display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:3px;height:var(--h0);align-items:end;padding-bottom:22px;position:relative}
+.saeulen .s{position:relative;height:100%;display:flex;align-items:flex-end;justify-content:center}
+.saeulen .s i,.saeulen .s u{position:absolute;left:12%;right:12%;bottom:0;height:100%;border-radius:4px 4px 1px 1px;transform-origin:50% 100%;transform:scaleY(var(--h));transition:transform 1.5s var(--feder-leise);transition-delay:calc(var(--i) * 35ms + 150ms)}
+.saeulen .s i{background:linear-gradient(180deg,var(--stahl),var(--nacht))}
+.saeulen .s u{left:2%;right:2%;background:rgba(245,166,137,.42);border-radius:3px 3px 0 0}
+.saeulen--vgl .s i{left:22%;right:22%}
+[data-r]:not(.rg-los) .saeulen .s i,[data-r]:not(.rg-los) .saeulen .s u{transform:scaleY(0)}
+.saeulen .s:hover i{background:linear-gradient(180deg,#E9E0DE,#EF7649)}
+.saeulen .s span{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:6px;font-family:var(--mono);font-size:10px;color:var(--leise);white-space:nowrap}
+.saeulen .s::after{content:attr(data-t);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translate(-50%,4px);background:var(--nacht);color:#fff;font-size:12px;padding:6px 9px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:2}
+.saeulen .s:hover::after{opacity:1;transform:translate(-50%,0)}
+.saeulen .s:nth-child(-n+3)::after{left:0;transform:translate(0,4px)}
+.saeulen .s:nth-child(-n+3):hover::after{transform:none}
+.saeulen .s:nth-last-child(-n+3)::after{left:auto;right:0;transform:translate(0,4px)}
+.saeulen .s:nth-last-child(-n+3):hover::after{transform:none}
+.punkt{display:inline-block;width:9px;height:9px;border-radius:2px;background:var(--nacht);margin:0 5px 0 10px;vertical-align:0}
+.punkt--hell{background:rgba(245,166,137,.6)}
+
+/* Raster Wochentag × Stunde */
+.raster{display:grid;grid-template-columns:30px repeat(24,minmax(0,1fr));gap:3px;align-items:center}
+.raster i{display:block;aspect-ratio:1;max-height:30px;border-radius:4px;background:var(--nacht);opacity:calc(.06 + var(--a) * .94);position:relative;transition:transform .2s}
+.raster i:hover{transform:scale(1.25);z-index:2}
+.raster__w,.raster__h{font-family:var(--mono);font-size:10px;color:var(--leise)}
+.raster__h{text-align:left}
+
+/* Besuche: Kreis mit Ländercode (Nachtblau, zur Reservation Seehimmel) */
+.liste{display:grid;gap:8px;align-content:start}
+.besuch{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;text-align:left;padding:13px 16px;border-radius:16px;background:var(--blatt);box-shadow:inset 0 0 0 1px var(--linie);transition:background-color .3s,box-shadow .3s,transform .4s var(--e2)}
+.besuch:hover{background:#fff;transform:translateY(-1px)}
+.besuch.aktiv{background:#fff;box-shadow:inset 0 0 0 1.5px var(--gold)}
+.besuch__l{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--nacht);color:var(--hellgold);font-family:var(--mono);font-size:12px;letter-spacing:.06em;box-shadow:inset 0 0 0 3px var(--nacht),inset 0 0 0 4px rgba(245,166,137,.4)}
+.besuch.gold .besuch__l{background:var(--hellgold);color:var(--tinte);box-shadow:inset 0 0 0 3px var(--hellgold),inset 0 0 0 4px rgba(38,36,45,.25)}
+.besuch__n{min-width:0}
+.besuch__n b{display:block;font-weight:500;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.besuch__n small{display:block;font-size:12.5px;color:var(--leise);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.besuch__z{text-align:right;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--tinte)}
+.besuch__z small{display:block;text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:12px;color:var(--leise)}
+.besuch.gold .besuch__z{color:#B15736}
+.mehr{margin-top:20px}
+.tagzeile{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--leise);padding:12px 4px 2px}
+.tagzeile:first-child{padding-top:0}
+.weitere{justify-self:start;margin:8px 4px}
+.eingang{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px;align-items:start}
+.detail{position:sticky;top:92px;min-width:0}
+/* Rechte Hälfte immer gefüllt (Vorlage Grand Beau-Rivage, Carlton): die Karte reicht vom Kopf bis über die Leiste. Ohne eigene Scrollfläche
+   (Oberfläche der Häuser, Prüfpunkt 3 «Senkrecht hängt nichts»): ein langer Weg verlängert die Karte, die Seite scrollt als Ganzes. */
+@media (min-width:1181px){
+  .detail .besuchsblatt{display:flex;flex-direction:column;box-sizing:border-box;min-height:calc(100vh - 92px - 96px);min-height:360px;min-height:max(360px,calc(100vh - 188px))}
+  .detail .besuchsblatt>*{flex:none}
+  .detail .weg{align-content:start}
+  .detail .fein{margin-top:auto;padding-top:14px;border-top:1px solid var(--linie)}
+}
+.besuchsblatt{position:relative}
+.besuchsblatt::before{content:'';position:absolute;inset:8px;border-radius:16px;border:1px solid rgba(245,166,137,.32);pointer-events:none}
+.besuchsblatt__kopf{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.besuchsblatt h2{font-size:1.7rem;line-height:1.1;margin-top:6px}
+.siegel{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--nacht);color:var(--hellgold);border-radius:999px;padding:7px 12px}
+.angaben{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px;margin:20px 0 6px;padding:16px 0;border-top:1px solid var(--linie);border-bottom:1px solid var(--linie)}
+.angaben dt{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+.angaben dd{font-size:15px;font-weight:500;margin-top:2px}
+.wegtitel{font-size:1.15rem;margin:18px 0 10px}
+.weg{display:grid;gap:0;position:relative}
+.weg li{display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:12px;padding:10px 0 10px 22px;border-bottom:1px dashed var(--linie);position:relative}
+.weg li::before{content:'';position:absolute;left:3px;top:17px;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 2px var(--blatt),0 0 0 3px rgba(245,166,137,.5)}
+.weg li::after{content:'';position:absolute;left:6.5px;top:29px;bottom:-13px;width:1px;background:rgba(245,166,137,.45)}
+.weg li:last-child::after{display:none}
+.weg li:last-child{border-bottom:0}
+.weg time{font-family:var(--mono);font-size:12px;color:var(--leise);padding-top:2px}
+.weg b{font-weight:500}
+.weg small{font-size:12px;color:var(--leise);margin-left:6px}
+.weg p{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.weg em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--leise);padding-top:2px}
+.ereignis{font-size:12px;padding:3px 9px;border-radius:999px;background:rgba(38,36,45,.07)}
+.ereignis.gold{background:var(--hellgold)}
+.leer-hinweis{padding:20px;border-radius:16px;background:rgba(38,36,45,.05);color:var(--leise)}
+.leer-hinweis b{color:var(--tinte)}
+.leer{display:grid;justify-items:center;text-align:center;gap:12px;padding:46px 26px}
+.leer .zt{color:var(--gold);width:26px;height:38px}
+.leer b{font-family:var(--titel);font-weight:500;font-size:1.5rem}
+.leer p{max-width:44ch;color:var(--leise)}
+
+/* Seiten-Tabelle */
+.tabelle{padding:10px 26px}
+.zeile{display:grid;grid-template-columns:minmax(0,2fr) 70px minmax(60px,1.4fr) 110px 90px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--linie);font-size:14.5px}
+.zeile:last-child{border-bottom:0}
+.zeile--kopf{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--leise)}
+.zeile__n b{font-weight:500}
+.zeile__z{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.zeile>span:nth-child(4),.zeile>span:nth-child(5){font-family:var(--mono);font-size:12.5px;color:var(--leise)}
+.zeile--kopf>span:nth-child(2){text-align:right}
+
+/* Verlauf */
+.vergleich .vz{display:grid;grid-template-columns:minmax(0,1.3fr) 90px 90px minmax(0,1.1fr);gap:10px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--linie);font-size:14.5px}
+.vergleich .vz:last-child{border-bottom:0}
+.vz b{font-family:var(--mono);font-weight:500;font-size:13.5px;text-align:right}
+.vz em{font-style:normal;font-family:var(--mono);font-size:13px;color:var(--leise);text-align:right}
+.vz--kopf b,.vz--kopf em{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--leise);font-weight:400}
+.wochen{display:grid;gap:9px}
+.wochen li{display:grid;grid-template-columns:118px minmax(50px,1fr) 44px 80px;gap:12px;align-items:center;font-size:13.5px}
+.wochen li>span:first-child{font-family:var(--mono);font-size:12px}
+.wochen small{display:block;font-size:11px;color:var(--leise)}
+.wochen b{font-family:var(--mono);font-weight:500;font-size:13px;text-align:right}
+.wochen em{font-style:normal;font-size:12px;color:var(--leise);text-align:right}
+.laenderverlauf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 26px}
+.lv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;align-items:center}
+.lv>span{font-size:14.5px;display:grid}
+.lv>span b{font-family:var(--mono);font-size:12px;font-weight:400;color:var(--leise)}
+.lv svg{width:100%;height:54px;display:block}
+.lv__l{fill:none;stroke:var(--nacht);stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.lv__f{fill:rgba(245,166,137,.28)}
+
+/* Zur Buchung */
+.werte{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.wert{display:grid;gap:6px;align-content:start}
+.wert b{font-family:var(--titel);font-weight:500;font-size:2.2rem;line-height:1.05}
+.wert p{font-size:13.5px;color:var(--leise)}
+.trichter{display:grid;gap:12px}
+.trichter li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;position:relative;padding:12px 16px;border-radius:14px;overflow:hidden;isolation:isolate}
+.trichter li i{position:absolute;inset:0;z-index:-1;background:var(--nacht);transform-origin:0 50%;transform:scaleX(var(--w));transition:transform 1s var(--e1);transition-delay:calc(var(--i) * 120ms);border-radius:14px}
+[data-r]:not(.rg-los) .trichter li i{transform:scaleX(0)}
+.trichter li::before{content:'';position:absolute;inset:0;z-index:-2;background:rgba(38,36,45,.06)}
+.trichter span{font-size:14.5px;color:#fff;mix-blend-mode:difference}
+.trichter b{font-family:var(--mono);font-weight:500;text-align:right;color:#fff;mix-blend-mode:difference}
+.trichter em{grid-column:1/-1;font-style:normal;font-size:12px;color:#fff;mix-blend-mode:difference}
+
+/* So wird gezählt */
+.liste-txt h3{margin-bottom:12px}
+.liste-txt ul{display:grid;gap:9px}
+.liste-txt li{position:relative;padding-left:20px;font-size:14.5px;line-height:1.5}
+.liste-txt li::before{content:'';position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.liste-txt+.liste-txt,.zwei+.liste-txt{margin-top:16px}
+
+/* ---------- Meldungen (Quittungen) ---------- */
+
+.leiste__z{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--hellgold);color:var(--tinte);font-style:normal;font-family:var(--mono);font-size:14px;font-weight:500}
+.leiste__z.bsp{background:var(--karte);color:var(--hellgold);box-shadow:inset 0 0 0 1px rgba(245,166,137,.5)}
+
+.meldung{position:fixed;right:22px;bottom:90px;z-index:40;display:grid;gap:8px;justify-items:end;pointer-events:none}
+.quit{display:flex;gap:14px;align-items:flex-start;width:min(400px,calc(100vw - 44px));background:var(--blatt);color:var(--tinte);border-radius:18px;padding:14px 14px 14px 18px;box-shadow:inset 0 0 0 1px rgba(38,36,45,.1),inset 3px 0 0 var(--gold),0 26px 50px -22px rgba(0,0,0,.6);animation:auf .5s var(--e1) both;pointer-events:auto}
+.quit>div{flex:1;min-width:0}
+.quit b{display:block;font-family:var(--titel);font-weight:500;font-size:1.08rem;line-height:1.15}
+.quit span{display:block;margin-top:3px;font-size:14px;line-height:1.35;color:rgba(38,36,45,.75);overflow-wrap:anywhere}
+.quit button{font-size:22px;line-height:1;color:var(--leise);padding:0 4px}
+.quit.fehl{box-shadow:inset 0 0 0 1px rgba(38,36,45,.1),inset 3px 0 0 var(--rot),0 26px 50px -22px rgba(0,0,0,.6)}
+@keyframes auf{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.tuer-zu{padding:60px 0}
+.tuer-zu h1{font-size:2.2rem}
+.tuer-zu p{margin-top:10px;color:var(--leise)}
+.lade-platz{display:grid;gap:16px;padding-top:30px}
+.lade-platz i{display:block;height:120px;border-radius:22px;background:rgba(38,36,45,.06);animation:puls 1.4s ease-in-out infinite alternate}
+.lade-platz i:first-child{height:64px;width:60%}
+@keyframes puls{to{opacity:.45}}
+
+/* ---------- Schweben (Rezeptur des Le Registre im Grand Beau-Rivage, wie im Carlton, Robert 16.10.2026: «darf nicht an den Scroll geknüpft sein,
+   muss luxuriös reingeschwebt kommen»). Nach der Uhr: sobald ein Blatt am unteren Rand auftaucht (.rg-da), fährt es in 2,7 s mit leichter Feder
+   an seinen Platz. Balken und Säulen wachsen erst, wenn ihr Blatt gut zur Hälfte im Bild ist (.rg-los). Immer deckend. Nur translate und scale. */
+:root{--feder:cubic-bezier(.28,1.42,.42,1);--feder-leise:cubic-bezier(.3,1.26,.4,1)}
+@keyframes rg-feder{from{translate:0 clamp(80px,9vw,140px);scale:.93}}
+@keyframes rg-zoom{from{scale:1.18}}
+@keyframes rg-zeile{from{translate:0 14px}}
+[data-r]:not(.rg-da){translate:0 clamp(80px,9vw,140px);scale:.93}
+[data-r].rg-da{animation:rg-feder 2.7s var(--feder) backwards;animation-delay:calc(var(--i,0) * 100ms)}
+.zw[data-r]:not(.rg-da),.mehr[data-r]:not(.rg-da),.wenig[data-r]:not(.rg-da){translate:0 clamp(30px,3.2vw,48px);scale:.97}
+.zw[data-r].rg-da,.mehr[data-r].rg-da,.wenig[data-r].rg-da{animation-name:rg-feder-klein}
+@keyframes rg-feder-klein{from{translate:0 clamp(30px,3.2vw,48px);scale:.97}}
+.zahlen b,.band b,.wert b{width:fit-content;justify-self:start;transform-origin:0 70%}
+.rg-da :is(.zahlen b,.band b,.wert b),.rg-da.wert b{animation:rg-zoom 1.7s var(--feder-leise) backwards;animation-delay:calc(var(--i,0) * 90ms + 120ms)}
+.leer[data-r].rg-da .zt{animation:rg-zoom 1.7s var(--feder-leise) backwards}
+.rang li,.weg li,.zeile{animation:rg-zeile .7s var(--e1) both;animation-delay:calc(var(--i,0) * 38ms)}
+.zeile--kopf{animation:none}
+[data-r]:not(.rg-los) .rang li{animation-play-state:paused}
+/* Besuchs-Kacheln: viele gleiche Zeilen, nur sanft (kein Weg, keine Feder), nichts bleibt am Seitenende hängen */
+.besuch[data-r],.besuch[data-r].rg-da{animation:none;translate:none}
+.besuch[data-r]{scale:.985;transition:scale 1.2s var(--e1),background-color .3s,box-shadow .3s,transform .4s var(--e2);transition-delay:calc(var(--i,0) * 30ms),0s,0s,0s}
+.besuch[data-r].rg-da{scale:1}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}[data-r]{translate:none!important;scale:none!important}}
+/* Neuzeichnen in derselben Ansicht (Filter, Weitere zeigen): alles steht sofort ruhig an seinem Platz */
+.rg-ruhig,.rg-ruhig.rg-da,.rg-ruhig :is(.zahlen b,.band b,.wert b){animation:none!important;translate:none!important;scale:none!important;transition:none!important}
+.rg-ruhig .rang li,.rg-ruhig .zeile{animation:none}
+
+/* Lange Wörter ohne Leerzeichen (F38) */
+.besuchsblatt h2,.rang__n,.weg b,.angaben dd,.zeile__n{overflow-wrap:anywhere}
+
+/* ---------- Schmal ---------- */
+@media (max-width:1180px){
+  .werte{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .eingang{grid-template-columns:minmax(0,1fr)}
+  .detail{position:static;order:-1}
+  .laenderverlauf{grid-template-columns:minmax(0,1fr)}
+  
+  
+}
+@media (max-width:900px){
+  :root{--kopf:62px}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .in{padding:18px 14px 50px}
+  
+  
+  
+  
+     /* Handy: «Als Tabelle sichern» steht unter der Besuchsliste, die Leiste bleibt eine Zeile (wie Carlton) */
+  .zahlen{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .zahlen .blatt{padding:16px 18px}
+  .band{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .zwei{grid-template-columns:minmax(0,1fr)}
+  .blatt{padding:20px 18px}
+  
+  
+  
+  
+  
+  
+  
+  
+  .wahl3{max-width:100%;overflow-x:auto}
+  .meldung{right:14px;left:14px;bottom:120px;justify-items:stretch}
+  .quit{width:auto}
+}
+@media (max-width:900px) and (min-width:621px){
+  .werte{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .werte>.wert:last-child{grid-column:1/-1}
+}
+@media (max-width:620px){
+  .werte{grid-template-columns:minmax(0,1fr)}
+  .saeulen{--h0:150px;gap:2px}
+  .saeulen .s span{font-size:9px}
+  .saeulen--uhr .s:not(:nth-child(6n+1)) span{display:none}
+  .raster{grid-template-columns:24px repeat(24,minmax(0,1fr));gap:1.5px}
+  .raster i{border-radius:2px}
+  .raster__h:not(:nth-child(6n+2)){visibility:hidden}
+  .angaben{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rang li{grid-template-columns:minmax(0,1.4fr) minmax(40px,.8fr) auto 36px;gap:8px;font-size:14px}
+  .zeile{grid-template-columns:minmax(0,1fr) 54px 80px;gap:10px}
+  .zeile>span:nth-child(3),.zeile>span:nth-child(5){display:none}
+  .vergleich .vz{grid-template-columns:minmax(0,1fr) 64px 64px}
+  .vergleich .vz>small{grid-column:1/-1;margin-top:-4px}
+  .vz--kopf>small{display:none}
+  .wochen li{grid-template-columns:96px minmax(30px,1fr) 38px;gap:8px}
+  .wochen li em{display:none}
+  .lv{grid-template-columns:110px minmax(0,1fr)}
+  .besuch{grid-template-columns:38px minmax(0,1fr) auto;gap:10px;padding:11px 12px}
+  .besuch__l{width:38px;height:38px;font-size:11px}
+  .kn--klein{font-size:9.5px}
+  
+}
+/* Kleine Handys (320 px, Master F45): Website-Knopf nur als Knauf, Filter brechen um, nichts verrutscht seitlich */
+@media (max-width:420px){
+  .mehr .kn{max-width:100%;white-space:normal;height:auto;min-height:48px;padding-block:8px;text-align:left;letter-spacing:.1em;line-height:1.35}
+}
+
+@media (max-width:360px){
+  
+  
+  
+  
+  
+  .rand__titel{font-size:8.5px;letter-spacing:.16em}
+  .rand__titel::before{width:12px}
+  .wahl3 button{padding:0 11px}
+  .besuch__z{font-size:9.5px}
+}
+/* Glanz in der Knopf-Form (Robert 18.10.2026 23:15) */
+.kn::after,.knopf::after{top:0!important;bottom:0!important;left:0!important;right:0!important;width:auto!important;height:auto!important;border-radius:inherit!important;
+  transform:none!important;background-size:38% 100%!important;background-repeat:no-repeat!important;background-position:-70% 0!important;transition:background-position 0s!important}
+.kn:hover:not(:disabled)::after,.knopf:hover:not(:disabled)::after{transform:none!important;background-position:170% 0!important;transition:background-position 1s cubic-bezier(.16,1,.3,1)!important}
+
+/* Bild je Seite in jeder Liste (Fehlerbuch 10a, Robert 19.10.2026): kleines Foto der Seite vor ihrem Namen, runde Kante wie die Kacheln, ohne Schatten */
+.mit-bild{display:inline-flex;align-items:center;gap:12px;min-width:0}
+.mit-bild>span{min-width:0;overflow-wrap:anywhere}
+.sbild{flex:none;display:block;width:56px;height:42px;border-radius:9px;object-fit:cover;background:var(--leinen)}
+.weg .sbild{width:44px;height:33px;border-radius:7px}
+@media (max-width:600px){.sbild{width:44px;height:33px;border-radius:7px}.mit-bild{gap:9px}}
+/* Besuche: vorne das Bild der Seite, auf der der Besuch begann (Fehlerbuch 10a «in allen Tools Bilder dazu», Robert 19.10.2026), der Kreis mit dem Land sitzt unten rechts darauf */
+.besuch{grid-template-columns:76px minmax(0,1fr) auto}
+.besuch__b{position:relative;display:block;width:76px;height:57px}
+.besuch__b .sbild{width:76px;height:57px;border-radius:11px}
+.besuch__b .besuch__l{position:absolute;right:-8px;bottom:-8px;width:32px;height:32px;font-size:10px}
+@media (max-width:600px){
+  .besuch{grid-template-columns:60px minmax(0,1fr) auto}
+  .besuch__b,.besuch__b .sbild{width:60px;height:45px}
+  .besuch__b .besuch__l{width:28px;height:28px;font-size:9.5px;right:-6px;bottom:-6px}
+}
+/* 30.10.2026 (Messlauf 390 px): das letzte Datum unter den Säulen stand mittig unter seiner Säule und ragte bis 6 px an den Rand des Blatts. Erste und letzte Beschriftung schliessen bündig mit ihrer Säule ab. */
+.saeulen .s:last-child span{left:auto;right:0;transform:none}
+.saeulen .s:first-child span{left:0;transform:none}
+/* Kein «×» (Robert 30.10.2026): die Meldung schliesst mit dem Zurück-Pfeil wie «Verwerfen» */
+.quit button{display:grid;place-items:center;width:26px;height:26px;padding:0}
+.quit button svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* Abnahme-Tor 30.10.2026 · Löcher
+   Gestreckte Blätter: der freie Platz geht an das Blatt mit der langen Liste, kurze Listen (bis vier Zeilen) bleiben in ihrer Höhe;
+   in der gestreckten Liste verteilt er sich gleichmässig über, zwischen und unter den Zeilen. Der Titel steht 4 px näher an der Liste. */
+.zwei--fuell>.stapel:has(>.blatt>:is(.rang,.trichter,.wochen)>li:nth-child(5))>.blatt:not(:has(>:is(.rang,.trichter,.wochen)>li:nth-child(5))){flex-grow:0}
+.zwei--fuell .blatt>:is(.rang,.trichter,.wochen){align-content:space-evenly}
+.blatt>header{margin-bottom:12px}
+/* Besuchskarte: die freie Höhe unter einem kurzen Weg zeigt die Seite, auf der der Gast ankam; unter 90 px Höhe entfällt das Bild */
+.besuch__buehne{display:none}
+@media (min-width:1181px){
+  .detail .besuchsblatt>.besuch__buehne{display:block;flex:1 1 0;min-height:140px;margin:14px 0 0;border-radius:14px;overflow:hidden;container-type:size}
+  .besuch__buehne img{display:block;width:100%;height:100%;object-fit:cover}
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="de">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Besuche · Culinarium</title><!-- der Name des Werkzeugs kommt aus dem Kleid (WO_HAUS.namen), registre.js setzt ihn -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#16151A">
+<script src="fehler.js?v=2"></script>
+<script src="../../assets/oberflaeche/kleid/culinarium.js"></script>
+<script src="auftakt.js?v=2"></script>
+<link rel="icon" href="../../assets/oberflaeche/kleid/culinarium-zeichen.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/schrift/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/schrift/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/oberflaeche/grund.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/rahmen-buehne.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/kleid/culinarium.css">
+<!-- registre.css nach dem Paket: grund.css setzt im Raum (.wo-app :where(p, ul, dl …)) Abstände auf null, die Inhalte des Werkzeugs brauchen ihre eigenen -->
+<link rel="stylesheet" href="registre.css?v=53a80f7505">
+<link rel="stylesheet" href="culinarium.css?v=a748043dd5">
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="rg wo-app">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="zeichen"></g></defs></svg>
+<header class="wo-kopf" id="kopf"></header>
+<aside class="wo-rand" id="rand" aria-label="Bereiche"></aside>
+<main class="wo-raum" id="haupt">
+  <div class="flaeche" id="flaeche" tabindex="-1">
+    <div class="in">
+      <div class="tuer-zu" id="tuer" hidden><h1>Startet nicht.</h1><p id="tuer-t">Die Besuche liessen sich nicht laden.</p></div>
+      <div id="ansicht" aria-live="polite"><div class="lade-platz" aria-hidden="true"><i></i><i></i><i></i></div></div>
+    </div>
+  </div>
+</main>
+<footer class="wo-leiste" id="leiste"></footer>
+<div class="meldung" id="meldung" aria-live="polite"></div>
+<script src="../../assets/oberflaeche/oberflaeche.js"></script>
+<script src="registre.js?v=f0359250e1"></script>
+<script src="rundgang.js?v=866d27476c" defer></script>
+<script src="zur-werkbank.js?v=3" defer data-zw data-neben="#rand" data-luft="40" data-ueber="#leiste"></script>
+</body>
+</html>

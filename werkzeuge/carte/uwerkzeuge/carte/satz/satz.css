@@ -1,0 +1,75 @@
+/* La Carte · Culinarium Hannover — Satz der Menükarten (28.10.2026, satz_bau.py und satz.js ABEND). Eine Datei für Vorschau, PDF und Werkbank.
+   Farben und Schriften der Website (website/assets/culinarium.css :root): Warmweiss, Nacht, Schiefer, Kerze; Fraunces mit weichen Enden,
+   Instrument Sans, Urbanist, DM Mono. Nie fett, nie kursiv. Masse in mm, Schrift in pt über --s (blatt.js passt je Seite an, damit nichts überläuft).
+   Feste Schnitte statt variabler Schriften (fonts_statisch.py): Chromium bettet variable Schriften als «Type 3» ein, die Apple-Vorschau zeigt sie weich
+   (Fehlerbuch 10a, 21.10.2026). Gesperrte Versalien höchstens .08em, sonst liest pdftotext Buchstabe für Buchstabe (Abschnitt 9). */
+@font-face{font-family:'Fraunces Titel';src:url('../fonts/Fraunces-titel-340.ttf') format('truetype');font-weight:340;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces Zeile';src:url('../fonts/Fraunces-zeile-320.ttf') format('truetype');font-weight:320;font-style:normal;font-display:block}
+@font-face{font-family:'Fraunces Zeile';src:url('../fonts/Fraunces-zeile-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Instrument Sans';src:url('../fonts/Instrument-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:'Instrument Sans';src:url('../fonts/Instrument-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:Urbanist;src:url('../fonts/Urbanist-500.ttf') format('truetype');font-weight:500;font-style:normal;font-display:block}
+@font-face{font-family:Urbanist;src:url('../fonts/Urbanist-600.ttf') format('truetype');font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:'DM Mono';src:url('../fonts/DMMono-400.ttf') format('truetype');font-weight:400;font-style:normal;font-display:block}
+:root{--papier:#FAF4F4;--nacht:#16151A;--schiefer:#3A3845;--tinte:#26242D;--leise:#5B5763;--kerze:#EF7649;--kerze-tief:#B15736;--kerze-hell:#F5A689;--linie:rgba(58,56,69,.22)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#3A3845;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.blatt{--s:1;position:relative;overflow:hidden;margin:8mm auto;background:var(--papier);color:var(--tinte);display:flex;flex-direction:column;
+  font-family:'Instrument Sans',Arial,sans-serif;font-weight:400;font-size:calc(9.2pt*var(--s));line-height:1.45;font-feature-settings:'locl' 0;page-break-after:always;break-after:page}
+:where(.blatt) :where(h1,h2,h3,h4,p){margin:0;padding:0;font-weight:inherit}
+:where(.blatt) b{font-weight:400}   /* nie fett (Kleid des Hauses) */
+/* oben eine Kante in Kerzenlicht wie die angeschlagenen Plakate der Bar, sonst ruhiges Warmweiss */
+.blatt::before{content:'';position:absolute;left:0;right:0;top:0;height:2.2mm;background:var(--kerze);pointer-events:none}
+.inhalt{position:relative;z-index:1;flex:1;min-height:0;padding:20mm 22mm 4mm;display:flex;flex-direction:column}
+.ufuss2{position:relative;z-index:1;flex:none;margin:0 22mm;padding:3mm 0 12mm;border-top:.2mm solid var(--linie);font-family:'DM Mono',Menlo,monospace;font-size:6.6pt;letter-spacing:.04em;text-align:center;color:var(--leise)}   /* ohne Versalien: «ß» bliebe sonst nicht «ß» */
+
+/* Kopf: Wortmarke, Titel des Abends (Motto oder «Menü»), Datum, «BY MOMO X RUDI» */
+.sb-quer{flex:1 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;text-align:center}
+.sb-oben{display:flex;flex-direction:column;align-items:center}
+.sb-zeichen{display:block;color:var(--nacht)}
+.cu-wm{display:block;width:calc(96mm*min(var(--s),1.12));height:auto}   /* die Wortmarke wächst bei kurzen Karten nur wenig mit */
+.sb-band{font-family:'Fraunces Titel',Georgia,serif;font-weight:340;font-size:calc(30pt*var(--s));line-height:1.04;letter-spacing:-.01em;color:var(--nacht);margin-top:calc(7mm*var(--s))}
+.sb-datum{font-family:'DM Mono',Menlo,monospace;font-size:calc(8pt*var(--s));letter-spacing:.06em;text-transform:uppercase;color:var(--kerze-tief);margin-top:calc(3.4mm*var(--s))}
+.sb-mit{font-family:Urbanist,Arial,sans-serif;font-weight:600;font-size:calc(7.4pt*var(--s));letter-spacing:.08em;text-transform:uppercase;color:var(--schiefer);margin-top:calc(1.4mm*var(--s))}
+
+/* Gänge: Etikett des Gangs, Rudis Teller in Versalien, darunter Momos Drink; das «x» von «Momo x Rudi» dazwischen, senkrechter Strich zwischen den Gängen */
+.sb-menue{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:calc(4mm*var(--s)) 0;width:100%}
+.sb-m{break-inside:avoid;max-width:150mm}
+.sb-gn{font-family:Urbanist,Arial,sans-serif;font-weight:600;font-size:calc(7.6pt*var(--s));letter-spacing:.08em;text-transform:uppercase;color:var(--kerze-tief);margin-bottom:calc(1.6mm*var(--s))}
+.sb-n,.sb-band,.sb-dr{text-wrap:balance}   /* ausgewogene Zeilen: kein «FETA-» allein am Zeilenende */
+.sb-n{font-family:'Fraunces Zeile',Georgia,serif;font-weight:400;font-size:calc(12.6pt*var(--s));letter-spacing:.06em;text-transform:uppercase;color:var(--nacht);line-height:1.3}
+.sb-dr{font-size:calc(8.8pt*var(--s));color:var(--leise);line-height:1.45;margin-top:calc(1.4mm*var(--s))}
+.sb-dr::before{content:'';display:block;width:calc(1.5mm*var(--s));height:calc(1.5mm*var(--s));border-radius:50%;background:var(--kerze);margin:calc(.9mm*var(--s)) auto calc(2.2mm*var(--s))}   /* Robert 30.10.2026: kein «x» auf der ganzen Seite; ruhiger Punkt in Kerze wie im Fuss der Website (.fu-x) */
+.sb-gn+.sb-dr::before{display:none}   /* ohne Teller (Absacker) kein Punkt */
+.sb-tr.bruch{display:block;height:0;overflow:hidden;font-size:0;line-height:0}   /* Trenner, an dem die Zeile bricht (blatt.js trennerAmRand) */
+.sb-gang{display:flex;justify-content:center;padding:calc(3.6mm*var(--s)) 0}
+.sb-gang i{display:block;width:.25mm;height:calc(6mm*var(--s));background:var(--kerze)}
+/* Upgrade nach Wahl (erstes Wochenende 2023) */
+.sb-upg{margin-top:calc(7mm*var(--s));padding-top:calc(4mm*var(--s));border-top:.2mm solid var(--linie);width:100%;max-width:130mm}
+.sb-up{font-family:Urbanist,Arial,sans-serif;font-weight:600;font-size:calc(7.6pt*var(--s));letter-spacing:.08em;text-transform:uppercase;color:var(--kerze-tief);margin-bottom:calc(2mm*var(--s))}
+.sb-m--up{padding:calc(.8mm*var(--s)) 0}
+.sb-n--satz{font-size:calc(9.6pt*var(--s));letter-spacing:.02em;text-transform:none;font-weight:320}
+/* Hinweis und Zusatz unter dem Menü */
+.sb-hinweis{margin-top:calc(3mm*var(--s));font-size:calc(9pt*var(--s));color:var(--leise)}
+.sb-zusatz{margin-top:calc(2.4mm*var(--s));font-size:calc(8.6pt*var(--s));color:var(--leise)}
+
+/* Ticketpreis als ruhige Marke: Angabe klein in Urbanist, Zahl in Fraunces, Währung in DM Mono */
+.sb-unten{display:flex;flex-direction:column;align-items:center}
+.sb-lunchpreis{display:block;padding:calc(2.2mm*var(--s)) 10mm;border-top:.2mm solid var(--linie);border-bottom:.2mm solid var(--linie)}
+.sb-lunchpreis .sb-p{display:flex;justify-content:center}
+.sb-lunchpreis .sb-p>span{display:flex;align-items:baseline;gap:2.4mm}
+.sb-p em{font-style:normal;font-family:Urbanist,Arial,sans-serif;font-weight:600;font-size:calc(7pt*var(--s));letter-spacing:.08em;text-transform:uppercase;color:var(--kerze-tief)}
+.sb-p b{font-family:'Fraunces Titel',Georgia,serif;font-weight:340;font-size:calc(17pt*var(--s));line-height:1;color:var(--nacht)}
+.sb-p small{font-family:'DM Mono',Menlo,monospace;font-size:calc(7pt*var(--s));letter-spacing:.06em;color:var(--leise)}
+
+/* Gestalten (Fortgeschritten): Stile, die satz.js an ein Element legt (nie fett, nie kursiv: «kursiv» und «medium» gibt es hier nicht) */
+[data-gf]{font-family:var(--gf)!important}
+[data-gc]{color:var(--gc)!important}
+[data-ga="versal"]{text-transform:uppercase!important;letter-spacing:.06em}
+[data-ga="normal"]{text-transform:none!important;letter-spacing:0!important}
+[data-gal]{text-align:var(--gal)!important;justify-content:var(--gai)!important;align-items:var(--gai)}
+[data-gz]{line-height:var(--gz)!important}
+@media print{html,body{background:none}.blatt{margin:0}}
+/* Flächen wachsen, schrumpfen aber nie: sonst läuft Inhalt unbemerkt übereinander statt dass blatt.js die Schrift einpasst (Fehlerbuch 9) */
+.sb-quer,.sb-menue{flex:1 0 auto;min-height:auto}
+.sb-menue{flex:0 0 auto}

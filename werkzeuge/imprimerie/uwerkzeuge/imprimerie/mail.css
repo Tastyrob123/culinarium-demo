@@ -1,0 +1,301 @@
+/* L’Imprimerie · Newsletter-Baukasten. Gleiche Form wie die Startseite im Stil von Le Bureau (ms-bureau.css): Raum Marine mit Tapete,
+   Kopfleiste als Insel mit Goldkante, links und rechts Papierplatten, in der Mitte die Mail auf der Tapete wie im Posteingang.
+   Bausteine aus studio.css: .kn, .ms-kn-gold, .rund, .haken, .ms-chips, .ms-suche, .ms-lnk, Kuhlen für Felder. Bewegung nur transform/opacity. */
+@font-face{font-family:'DS-titel';src:url('haeuser/culinarium/schriften/Fraunces-340.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'DS-kapitale';src:url('haeuser/culinarium/schriften/Fraunces-Zeile-360.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'DS-text';src:url('haeuser/culinarium/schriften/InstrumentSans-400.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'DS-mono';src:url('haeuser/culinarium/schriften/DMMono-400.ttf') format('truetype');font-display:swap}
+
+.ml{position:fixed;inset:0;display:grid;grid-template-columns:336px minmax(0,1fr) 356px;grid-template-rows:72px minmax(0,1fr);
+  background:var(--navy) url('haeuser/culinarium/tapete-ui-dunkel.webp') 0 0/224px auto}
+.ml-seite.an .ml-links{animation:msLinks 1.2s var(--e1) both}
+.ml-seite.an .ml-rechts{animation:msRechts 1.2s var(--e1) .1s both}
+.ml-seite.an .ml-buehne{animation:msAuf 1.2s var(--e1) .2s both}
+.ml-seite.an .ml-kopf{animation:einblenden 1s var(--e1) both}
+
+/* Kopfleiste: Insel mit Tapete und Goldkante */
+.ml-kopf{grid-column:1/4;position:relative;z-index:5;isolation:isolate;display:flex;align-items:center;gap:12px;padding:0 18px 0 22px;color:#f3ecea;
+  background:radial-gradient(120% 160% at 50% -50%,rgba(239,118,73,.22),rgba(239,118,73,0) 60%),linear-gradient(180deg,#2c2a34 0%,#3a3845 30%,#16151a 66%,#0f0e13 100%);
+  box-shadow:inset 0 -1px 0 rgba(245,166,137,.45),0 18px 34px -20px rgba(0,0,0,.9)}
+.ml-kopf::after{content:'';position:absolute;inset:0;z-index:-1;background:url('haeuser/culinarium/tapete-ui-dunkel.webp') 0 0/224px auto;opacity:.45;pointer-events:none}
+.ml-marke{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none;flex:none}
+.ml-zeichen{display:block;width:42px;height:42px;color:#e2a38c;filter:drop-shadow(0 1px 0 rgba(35,34,43,.9)) drop-shadow(0 3px 8px rgba(0,0,0,.55))}
+.ml-zeichen svg{width:100%;height:100%;fill:currentColor;stroke:none}
+.ml-marke__n b{display:block;font:400 15px/1.1 var(--caps);letter-spacing:.24em;text-transform:uppercase;
+  background:linear-gradient(180deg,#eddddd 0%,#eab19c 34%,#cb7e62 52%,#a75538 62%,#dc9f89 80%,#e2c7c7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 rgba(0,0,0,.6))}
+.ml-marke__n small{display:block;margin-top:6px;font:9.5px/1 var(--mono);letter-spacing:.26em;text-transform:uppercase;color:rgba(229,205,205,.7)}
+.ml-name{margin-left:26px;width:min(320px,26vw);height:40px;padding:0 16px;border:0;border-radius:999px;font:500 19px var(--serif);color:#f4ebeb;
+  background:linear-gradient(180deg,#0b0a0e,#121116);box-shadow:inset 0 2px 5px rgba(0,0,0,.55),0 0 0 1px rgba(245,166,137,.25);outline:0}
+.ml-name:focus{box-shadow:inset 0 2px 5px rgba(0,0,0,.55),0 0 0 1.5px rgba(245,166,137,.7)}
+.ml-gespeichert{font:9.5px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(229,205,205,.6);opacity:0;transform:translateY(4px);transition:opacity .5s,transform .5s var(--e1)}
+.ml-gespeichert.an{opacity:1;transform:none}
+.ml-frei{flex:1}
+.ml-kopf .kn--klein{height:38px}
+.ml-kopf .kn svg{width:16px;height:16px}
+.ml-kopf .kn{flex:none}
+.ml-kopf .ms-kn-gold{width:auto;height:42px;margin:0;gap:14px;font-size:10.5px}
+.ml-kopf .ms-kn-gold i{width:32px;height:32px}
+.ml-geraet{display:flex;gap:4px;padding:4px;border-radius:999px;background:linear-gradient(180deg,#0b0a0e,#121116);box-shadow:inset 0 2px 5px rgba(0,0,0,.55),0 0 0 1px rgba(245,166,137,.22)}
+.ml-geraet button{width:34px;height:30px;border:0;border-radius:999px;display:grid;place-items:center;background:none;color:rgba(229,205,205,.6);transition:color .3s,background .3s}
+.ml-geraet button svg{width:17px;height:17px}
+.ml-geraet button.an{color:#16151a;background:linear-gradient(180deg,#e9d4d4,#d99f8a);box-shadow:inset 0 1px 0 #fff,0 2px 6px rgba(0,0,0,.4)}
+
+/* Prüfung */
+.ml-pruefen{position:relative}
+.ml-pruefen summary{list-style:none;cursor:pointer}
+.ml-pruefen summary::-webkit-details-marker{display:none}
+.ml-pruef__zahl{display:grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;font:10px var(--mono);letter-spacing:0;color:#f4ebeb;background:#9b3b33}
+.ml-pruefen summary.gut .ml-pruef__zahl,.ml-pruefen .gut .ml-pruef__zahl{background:#4f6b4a}
+.ml-pruef__liste{position:absolute;right:0;top:calc(100% + 10px);width:380px;max-height:60vh;overflow:auto;padding:10px;border-radius:18px;color:var(--tinte);
+  background:var(--platte);box-shadow:var(--platte-s);animation:msAuf .5s var(--e1) both}
+.ml-pruef__liste button{display:flex;gap:12px;align-items:flex-start;width:100%;padding:10px 12px;border:0;border-radius:12px;background:none;text-align:left;font:13.5px/1.45 var(--sans)}
+.ml-pruef__liste button:hover{background:rgba(177,87,54,.12)}
+.ml-pruef__liste i{flex:none;width:8px;height:8px;margin-top:6px;border-radius:50%;background:#9b3b33}
+.ml-gut{margin:6px 10px;font:500 19px var(--serif);color:var(--navy)}
+
+/* Platten links und rechts */
+.ml-links,.ml-rechts{grid-row:2;margin:14px;padding:18px 14px;border-radius:24px;overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(177,87,54,.45) transparent;
+  color:var(--tinte);background:var(--platte);box-shadow:var(--platte-s)}
+.ml-links{grid-column:1;margin-right:0}
+.ml-rechts{grid-column:3;margin-left:0;padding:18px 18px 28px}
+.ml-links h3,.ml-rechts h3{margin:22px 8px 10px;font:10px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--taupe-tief);display:flex;justify-content:space-between}
+.ml-links h3 em{font-style:normal}
+.ml-zurueck{margin:0 8px 2px;text-decoration:none}
+.ml-vorlagen,.ml-nav{display:flex;flex-direction:column;gap:3px}
+.ml-vorlagen button{display:flex;align-items:center;gap:12px;width:100%;padding:7px 8px;border:0;border-radius:14px;background:none;text-align:left;transition:background .35s}
+.ml-vorlagen button:hover{background:rgba(177,87,54,.11)}
+.ml-vorlagen button.an{background:linear-gradient(180deg,#141318,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.25),inset 0 0 0 1px rgba(245,166,137,.5),0 10px 18px -10px rgba(15,14,19,.7)}
+.ml-vb{flex:none;width:52px;height:40px;border-radius:9px;background:var(--navy) url('haeuser/culinarium/tapete-ui-dunkel.webp') 0 0/224px auto;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1px rgba(246,238,238,.4),0 4px 10px -4px rgba(15,14,19,.5)}
+.ml-vorlagen b{display:block;font:500 17px/1.15 var(--serif);color:var(--navy)}
+.ml-vorlagen small{display:block;margin-top:3px;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-tief)}
+.ml-vorlagen button.an b{color:#f4ebeb}.ml-vorlagen button.an small{color:#f5a689}
+.ml-nav button{display:flex;align-items:center;gap:12px;width:100%;height:40px;padding:0 12px;border:0;border-radius:12px;background:none;color:rgba(38,36,45,.78);font:500 17px var(--serif);transition:background .3s,color .3s}
+.ml-nav button svg{width:18px;height:18px;flex:none;color:var(--taupe)}
+.ml-nav button:hover{background:rgba(177,87,54,.11);color:var(--navy)}
+.ml-nav button.an{color:#f4ebeb;background:linear-gradient(180deg,#141318,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.25),inset 0 0 0 1px rgba(245,166,137,.5)}
+.ml-nav button.an svg{color:#e5cdcd}
+.ml-meine{display:flex;flex-direction:column;gap:2px}
+.ml-meine__e{display:flex;align-items:center;border-radius:12px;transition:background .3s}
+.ml-meine__e:hover{background:rgba(177,87,54,.11)}
+.ml-meine__e button[data-mail]{flex:1;min-width:0;padding:8px 10px;border:0;background:none;text-align:left;border-radius:12px}
+.ml-meine__e button[data-mail].an{background:rgba(22,21,26,.08);box-shadow:inset 0 0 0 1px rgba(239,118,73,.6)}
+.ml-meine__e b{display:block;font:500 16px/1.2 var(--serif);color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ml-meine__e small{display:block;margin-top:2px;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe-tief)}
+.ml-x{flex:none;width:28px;height:28px;margin-right:6px;border:0;border-radius:50%;display:grid;place-items:center;background:none;color:var(--taupe);opacity:0;transition:opacity .3s}
+.ml-x svg{width:13px;height:13px}
+.ml-meine__e:hover .ml-x{opacity:1}
+.ml-x:hover{color:#9b3b33}
+
+/* Mitte: die Mail auf der Tapete */
+.ml-mitte{grid-column:2;grid-row:2;overflow:auto;scrollbar-width:thin;scrollbar-color:rgba(245,166,137,.35) transparent;padding:28px 24px 80px}
+.ml-buehne{--w:600px;width:calc(var(--w) + 24px);margin:0 auto;transition:width .7s var(--e1)}
+.ml-posteingang{display:flex;align-items:center;gap:14px;margin:0 12px 18px;padding:14px 18px;border-radius:16px;color:#f1e3e3;
+  background:linear-gradient(180deg,rgba(22,21,27,.82),rgba(29,28,37,.82));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 0 0 1px rgba(245,166,137,.25)}
+.ml-pe__zeichen{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:500 16px var(--serif);color:#16151a;background:linear-gradient(180deg,#e9d4d4,#d28f77)}
+.ml-posteingang div{min-width:0;display:flex;flex-direction:column;gap:2px}
+.ml-posteingang b{font:600 13px var(--sans);color:#f4ebeb}
+.ml-pe__betreff{font:13.5px var(--sans);color:#f4ebeb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ml-pe__vorschau{font:13px var(--sans);color:rgba(229,205,205,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mlRahmen{display:block;width:100%;height:1600px;border:0;background:transparent;overflow:hidden}
+.ml-buehne.ml-handy .ml-posteingang{margin-bottom:26px}
+
+/* Rechts: einfügen und bearbeiten */
+.ml-rechts h3:first-child{margin-top:4px}
+.ml-einfuegen{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.ml-einfuegen button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 4px 9px;border:0;border-radius:14px;background:var(--kuhle);box-shadow:var(--kuhle-s);
+  font:8.5px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--taupe-tief);transition:transform .45s var(--e2),color .3s}
+.ml-einfuegen button svg{width:20px;height:20px;color:var(--messing)}
+.ml-einfuegen button:hover{transform:translateY(-2px);color:var(--navy)}
+.ml-felder{margin-top:20px;padding-top:18px;border-top:1px solid var(--linie)}
+.ml-kopfzeile{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 12px}
+.ml-kopfzeile h2{margin:0;font:500 27px/1.1 var(--serif);color:var(--navy)}
+.ml-werk{display:flex;gap:5px}
+.ml-f{display:block;margin:0 0 14px}
+.ml-f>span{display:block;margin:0 0 7px;line-height:1.4}
+.ml-f input[type=text],.ml-f textarea{font:14.5px/1.5 var(--sans);padding:11px 13px;border-radius:12px}
+.ml-f textarea{min-height:0;resize:vertical}
+.ml-f--klein{margin-bottom:8px}.ml-f--klein input[type=text]{padding:8px 11px;font-size:13.5px}
+.ml-leise{margin:0 0 14px;font-size:13px;line-height:1.5;color:var(--leise)}
+.ml-foto{position:relative;display:block;width:100%;height:150px;padding:0;border:0;border-radius:14px;overflow:hidden;background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.ml-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.ml-foto i{display:grid;place-items:center;height:100%;font:500 18px var(--serif);color:var(--taupe)}
+.ml-foto b{position:absolute;right:10px;bottom:10px;padding:8px 14px;border-radius:999px;font:500 9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e5cdcd;
+  background:linear-gradient(180deg,#695456,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.25),0 0 0 1px rgba(245,166,137,.5),0 6px 14px -6px rgba(0,0,0,.6)}
+.ml-mini{margin-top:8px;border:0;background:none;padding:4px 0;font:9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-tief);text-decoration:underline;text-underline-offset:3px}
+.ml-mehr{margin:0 0 14px}
+.ml-mehr summary{cursor:pointer;font:9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--taupe-tief);margin-bottom:10px}
+.ml-chips{display:flex;gap:6px;flex-wrap:wrap;margin:-4px 0 14px}
+.ml-chips button{height:30px;padding:0 13px;border:0;border-radius:999px;font:9.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--taupe-tief);background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.ml-chips button:hover{color:var(--navy)}
+.ml-eintrag{margin:0 0 10px;padding:10px 12px 4px;border-radius:14px;background:rgba(253,250,250,.6);box-shadow:inset 0 0 0 1px rgba(177,87,54,.22)}
+.ml-eintrag__kopf{display:flex;align-items:center;gap:5px;margin-bottom:6px}
+.ml-eintrag__kopf em{margin-right:auto;font:normal 10px var(--mono);letter-spacing:.14em;color:var(--taupe-tief)}
+.ml-dazu{width:100%;justify-content:center;padding:0 16px}
+.ml-rechts .haken{margin:4px 0 16px}
+
+/* Fotos des Hauses */
+.ml-fotos{width:min(1100px,94vw);height:min(820px,90vh);padding:0;border:0;border-radius:26px;color:var(--tinte);background:var(--platte);box-shadow:var(--platte-s);overflow:hidden}
+.ml-fotos[open]{display:flex;flex-direction:column;animation:msAuf .6s var(--e1) both}
+.ml-fotos::backdrop{background:rgba(15,14,19,.62)}
+.ml-fotos__kopf{display:flex;align-items:center;gap:18px;padding:24px 26px 14px}
+.ml-fotos__kopf h2{margin:0 auto 0 0;font:500 32px var(--serif);color:var(--navy)}
+.ml-fotos__kopf .ms-suche{width:min(380px,40vw);background:var(--kuhle);box-shadow:var(--kuhle-s)}
+.ml-fotos__gruppen{margin:0;padding:0 26px 14px}
+.ml-fotos__raster{flex:1;overflow:auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;padding:6px 26px 26px;align-content:start}
+.ml-fotos__raster button{padding:0;border:0;background:none;text-align:left;border-radius:14px}
+.ml-fotos__raster img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;box-shadow:0 8px 16px -10px rgba(15,14,19,.6);transition:transform .5s var(--e2)}
+.ml-fotos__raster button:hover img{transform:translateY(-3px)}
+.ml-fotos__raster button.an img{box-shadow:0 0 0 2px var(--navy),0 0 0 5px var(--gold)}
+.ml-fotos__raster span{display:block;margin-top:7px;font:12px/1.35 var(--sans);color:rgba(38,36,45,.7);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* Hinweis unten */
+.ml-hinweis{position:fixed;left:50%;bottom:28px;z-index:60;max-width:min(620px,92vw);padding:16px 22px;border-radius:18px;font:14px/1.5 var(--sans);color:#f1e3e3;transform:translateX(-50%);
+  background:linear-gradient(180deg,#141318,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.2),0 0 0 1px rgba(245,166,137,.5),0 30px 50px -20px rgba(0,0,0,.8)}
+.ml-hinweis b{color:#e5cdcd;font-weight:500}
+.ml-hinweis.an{animation:hinweisAuf .7s var(--e1) both}
+@keyframes hinweisAuf{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translateX(-50%)}}
+
+/* ===== Fassung 2 (Robert 12.10.2026: «Newsletter 3D wie die Kacheln, mehr Hervorschein, vom Boden abheben; links und rechts viel luxuriöser und eleganter,
+   links breiter, rechts etwas nach links, an den Rändern Luft»). Vorher-Stand: _qa/mail-vor-3d.css/.js/.html ===== */
+
+/* Die Mail als Kachel wie auf der Website des Hauses (_gbr.css .k3/.k3b, Robert 12.10.2026: «kein gelbes Licht, einfach der 3D-Kacheleffekt
+   von meiner Website, runde Ecken, schwebt vom Boden hervor»): ohne Rahmen, runde Ecken 28 px, weicher dunkler Schatten, mit Maus hebt sie sich
+   4 px und neigt sich, ein ganz leiser heller Lichtfleck wandert mit. Gedreht wird um die Mitte des sichtbaren Ausschnitts. */
+.ml-mitte{margin:22px 20px 24px;padding:40px 34px 130px;border-radius:30px;
+  background:linear-gradient(180deg,rgba(252,250,250,.9),rgba(243,236,234,.92) 50%,rgba(235,215,215,.94)),url('haeuser/culinarium/tapete-ui-hell.webp') 0 0/224px auto,#f3ecea;
+  box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(239,118,73,.32),inset 0 0 0 7px rgba(252,250,250,.75),inset 0 0 0 8px rgba(239,118,73,.32),0 1.5px 0 rgba(142,73,48,.4),0 44px 64px -34px rgba(0,0,0,.85),0 16px 28px -16px rgba(0,0,0,.5);
+  scrollbar-color:rgba(177,87,54,.45) transparent}
+.ml-buehne{position:relative;width:calc(var(--w) + 80px);padding:0 40px}
+.ml-blatt{--rx:0deg;--ry:0deg;--ly:0px;--ls:1;position:relative;z-index:1;width:var(--w);max-width:100%;margin:0 auto;border-radius:28px;overflow:hidden;isolation:isolate;
+  transform:perspective(2600px) translateZ(0) translateY(var(--ly)) rotateX(var(--rx)) rotateY(var(--ry)) scale(var(--ls));transition:transform .8s var(--e2),box-shadow .7s var(--e2);
+  box-shadow:0 0 0 1px rgba(137,70,46,.08),0 36px 48px -28px rgba(15,14,19,.6),0 12px 20px -12px rgba(15,14,19,.32),0 70px 90px -56px rgba(15,14,19,.45)}
+.ml-blatt.kipp{--ly:-4px;--ls:1.004;transition:transform .2s ease-out,box-shadow .7s var(--e2);
+  box-shadow:0 0 0 1px rgba(137,70,46,.08),0 56px 70px -34px rgba(15,14,19,.62),0 22px 30px -18px rgba(15,14,19,.32),0 100px 120px -66px rgba(15,14,19,.5)}
+.ml-blatt__licht{position:absolute;left:0;top:0;z-index:3;width:1100px;height:1100px;margin:-550px 0 0 -550px;pointer-events:none;opacity:0;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(249,242,242,.12),rgba(249,242,242,0));transform:translate(var(--gx,300px),var(--gy,300px));transition:opacity .6s var(--e2)}
+.ml-blatt.kipp .ml-blatt__licht{opacity:1}
+.ml-boden{position:absolute;left:14%;right:14%;bottom:-40px;height:56px;z-index:0;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,rgba(15,14,19,.32),rgba(15,14,19,0));transition:transform .8s var(--e2),opacity .8s}
+.ml-buehne:has(.kipp) .ml-boden{transform:scaleX(.94);opacity:.85}
+.ml-buehne.ml-handy .ml-blatt{border-radius:40px;box-shadow:0 0 0 9px #100f15,0 0 0 10px rgba(137,70,46,.15),0 36px 48px -28px rgba(15,14,19,.6),0 70px 90px -56px rgba(15,14,19,.45)}
+.ml-posteingang{position:relative;z-index:2;margin:0 0 34px;border-radius:18px;background:linear-gradient(180deg,#141318,#16151a);box-shadow:inset 0 1px 0 rgba(250,244,244,.22),0 0 0 1px rgba(245,166,137,.4),0 18px 30px -18px rgba(15,14,19,.6)}
+@media (prefers-reduced-motion:reduce){.ml-blatt,.ml-blatt.kipp{transform:none}}
+
+/* Platten links und rechts: Papier mit doppelter Goldlinie wie eine Karte des Hauses, mehr Luft zum Rand */
+.ml-links,.ml-rechts{position:relative;isolation:isolate;margin:22px 0 24px;border-radius:30px;
+  background:linear-gradient(180deg,rgba(252,250,250,.9),rgba(243,236,234,.92) 50%,rgba(235,215,215,.94)),url('haeuser/culinarium/tapete-ui-hell.webp') 0 0/224px auto,#f3ecea;
+  box-shadow:inset 0 1px 0 #fff,inset 0 0 0 1px rgba(239,118,73,.32),inset 0 0 0 7px rgba(252,250,250,.75),inset 0 0 0 8px rgba(239,118,73,.32),
+    0 1.5px 0 rgba(142,73,48,.4),0 44px 64px -34px rgba(0,0,0,.85),0 16px 28px -16px rgba(0,0,0,.5)}
+.ml-links{grid-column:1;margin-left:30px;margin-right:0;padding:26px 22px 22px}
+.ml-rechts{grid-column:3;margin-right:44px;margin-left:0;padding:26px 24px 30px}
+.ml-zurueck{margin:0 4px 18px}
+.ml-kapitel{padding:0 4px 4px;text-align:center}
+.ml-kapitel__z{display:block;width:44px;height:44px;margin:0 auto 12px;color:var(--messing);filter:drop-shadow(0 1px 0 #fff)}
+.ml-kapitel__z svg{width:100%;height:100%;fill:currentColor;stroke:none}
+.ml-kapitel h1{margin:0;font:500 31px/1.05 var(--serif);color:var(--navy);letter-spacing:-.005em}
+.ml-kapitel p{margin:8px 0 0;font:500 16.5px/1.35 var(--serif);color:var(--taupe-tief)}
+.ml-links h3,.ml-rechts h3{display:flex;align-items:center;gap:12px;margin:28px 2px 14px;font:9.5px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--taupe-tief)}
+.ml-links h3::before,.ml-links h3::after,.ml-rechts h3::before,.ml-rechts h3::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(239,118,73,0),rgba(239,118,73,.7))}
+.ml-links h3::after,.ml-rechts h3::after{background:linear-gradient(90deg,rgba(239,118,73,.7),rgba(239,118,73,0))}
+.ml-links h3 em{order:3;margin-left:-4px}
+.ml-rechts h3:first-child{margin-top:2px}
+.ml-vorlagen{gap:6px}
+.ml-vorlagen button{position:relative;gap:13px;padding:8px 30px 8px 8px;border-radius:16px;transition:background .4s,transform .6s var(--e2),box-shadow .5s var(--e2)}
+.ml-vorlagen button::after{content:'';position:absolute;right:12px;top:50%;width:7px;height:7px;margin-top:-4px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;color:var(--messing);transform:rotate(45deg) translate(-4px,4px);opacity:0;transition:opacity .4s,transform .6s var(--e2)}
+.ml-vorlagen button:hover{background:rgba(253,250,250,.85);transform:translateY(-1px);box-shadow:0 0 0 1px rgba(239,118,73,.35),0 14px 22px -16px rgba(15,14,19,.55)}
+.ml-vorlagen button:hover::after,.ml-vorlagen button.an::after{opacity:1;transform:rotate(45deg)}
+.ml-vorlagen button.an{background:linear-gradient(180deg,#403d51,#16151a 70%);box-shadow:inset 0 1px 0 rgba(250,244,244,.28),inset 0 0 0 1px rgba(226,163,140,.6),0 16px 26px -14px rgba(15,14,19,.8)}
+.ml-vorlagen button.an::after{color:#e2a38c}
+.ml-vb{width:60px;height:48px;border-radius:11px;box-shadow:inset 0 0 0 1px rgba(246,238,238,.55),0 0 0 1px rgba(239,118,73,.25),0 8px 14px -8px rgba(15,14,19,.7)}
+.ml-vorlagen b{font-size:18.5px}
+.ml-nav button{height:44px;border-radius:14px;font-size:17.5px}
+.ml-nav button.an{background:linear-gradient(180deg,#403d51,#16151a 70%);box-shadow:inset 0 1px 0 rgba(250,244,244,.28),inset 0 0 0 1px rgba(226,163,140,.6),0 12px 20px -12px rgba(15,14,19,.8)}
+
+/* Rechts: Bausteine als erhabene Plättchen mit Goldzeichen, Überschrift wie im Haus */
+.ml-einfuegen{gap:8px}
+.ml-einfuegen button{position:relative;overflow:hidden;isolation:isolate;padding:13px 4px 11px;border-radius:16px;color:var(--navy);font-size:8.5px;
+  background:linear-gradient(180deg,#fdfafa,#f0e3e3 60%,#e5cdcd);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(137,70,46,.18),inset 0 0 0 1px rgba(239,118,73,.28),0 1px 1px rgba(15,14,19,.12),0 12px 18px -12px rgba(15,14,19,.5)}
+.ml-einfuegen button svg{width:22px;height:22px;color:#bc603f}
+.ml-einfuegen button::after{content:'';position:absolute;z-index:-1;top:-30%;bottom:-30%;left:0;width:50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.9) 50%,transparent);transform:translateX(-200%) skewX(-18deg)}
+.ml-einfuegen button:hover{transform:translateY(-3px);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(137,70,46,.2),inset 0 0 0 1px rgba(239,118,73,.6),0 20px 26px -14px rgba(15,14,19,.6)}
+.ml-einfuegen button:hover::after{transform:translateX(320%) skewX(-18deg);transition:transform 1s var(--e1)}
+.ml-felder{margin-top:24px;padding-top:22px;border-top:0;background:linear-gradient(90deg,rgba(239,118,73,0),rgba(239,118,73,.6) 50%,rgba(239,118,73,0)) top/100% 1px no-repeat}
+.ml-kopfzeile{align-items:flex-end;margin-bottom:16px}
+.ml-kopfzeile h2{font-size:32px}
+.ml-kopfzeile h2 small{display:block;margin-bottom:6px;font:9.5px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--messing)}
+.ml-rechts .ml-f>span{font-size:9.5px;letter-spacing:.2em}
+
+@media (max-width:1440px){#mlFenster span{display:none}#mlFenster{padding:0 12px}}
+@media (max-width:1380px){.ml{grid-template-columns:300px minmax(0,1fr) 330px}.ml-links{margin-left:20px}.ml-rechts{margin-right:24px}.ml-name{display:none}}
+@media (max-width:980px){
+  body.ml-seite{overflow:auto}
+  .ml{position:static;display:block}
+  .ml-kopf{flex-wrap:wrap;padding:12px 16px;gap:8px}.ml-marke__n{display:none}.ml-frei{display:none}
+  .ml-links,.ml-rechts{margin:12px 16px}.ml-mitte{margin:12px 16px;padding:24px 0 40px;overflow:visible}
+  .ml-buehne{width:100%;max-width:calc(var(--w) + 80px);padding:0 16px}.ml-links,.ml-rechts{margin:12px 16px!important}
+}
+
+/* Robert 12.10.2026: «nicht die Farbe verändern und hell werden, wenn ich mit der Maus darüber streiche». Kein Lichtfleck auf der Mail,
+   kein heller Grund und kein Glanz beim Überfahren; Anheben und Neigen bleiben. */
+.ml-blatt__licht,.ml-blatt.kipp .ml-blatt__licht{display:none}
+.ml-vorlagen button:hover{background:none;box-shadow:none}
+.ml-vorlagen button.an:hover{background:linear-gradient(180deg,#403d51,#16151a 70%);box-shadow:inset 0 1px 0 rgba(250,244,244,.28),inset 0 0 0 1px rgba(226,163,140,.6),0 16px 26px -14px rgba(15,14,19,.8)}
+.ml-nav button:hover:not(.an),.ml-meine__e:hover{background:none}
+.ml-einfuegen button::after,.ml-einfuegen button:hover::after{display:none}
+.ml-einfuegen button:hover{color:var(--navy);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(137,70,46,.18),inset 0 0 0 1px rgba(239,118,73,.28),0 1px 1px rgba(15,14,19,.12),0 18px 24px -14px rgba(15,14,19,.55)}
+.ml-pruef__liste button:hover{background:none}
+
+/* «Verschickt mit» erklärt, Bearbeiten-Tipp als eigener Hinweis darunter (Robert 29.10.2026) */
+.ml-versand{margin-top:-4px}
+.ml-tipp{padding-top:12px;border-top:1px solid var(--wo-linie,rgba(38,36,45,.14))}
+
+/* Schrift optisch mittig in Knöpfen (Messlauf «text-mitte», 29.10.2026): Text im eigenen span auf die Versalhöhe beschnitten */
+.kn > span:not([class]) { text-box: trim-both cap alphabetic }
+
+/* Messlauf 29.10.2026, behoben 30.10. (Kriterien 1, 2, 3, 35) */
+/* Rundknöpfe rund: Haus-Knopf, Ansicht-Knöpfe, «Ansehen» ohne Wort */
+.ml-kopf .zur-maison{flex:none;width:38px;height:38px;padding:0}
+.ml-geraet button{width:30px;height:30px;padding:0}
+@media (max-width:1440px){#mlFenster{width:38px;padding:0;justify-content:center}}
+/* Bausteine: jede Reihe füllt die Breite (4 + 3), alle Plättchen gleich hoch, Zeichen und Wort als Gruppe mittig, mindestens 6 px Luft zum Rand */
+.ml-einfuegen{display:flex;flex-wrap:wrap}
+.ml-einfuegen button{flex:1 1 calc(25% - 8px);min-width:0;min-height:74px;justify-content:center;padding:12px 6px;letter-spacing:.06em;text-indent:.06em}
+.ml-einfuegen button:nth-child(n+5){flex-basis:calc(33.3% - 8px)}
+/* Felder wachsen mit dem Text (mail.js wachse) */
+.ml-f textarea.ml-zeile{resize:none;overflow:hidden;display:block}
+.ml-f textarea{overflow:hidden}
+/* Chips und Gruppen: halbe Sperrung links ausgleichen, das Wort steht optisch mittig */
+.ml-chips button,#mlFotoGruppen button,.ml-eintraege .kn{text-indent:.12em}
+.ml-einfuegen button>span{text-box:trim-both cap alphabetic}   /* Wort ohne Leerraum unter der Grundlinie: Zeichen und Wort stehen als Gruppe mittig */
+/* Gemessener Ausgleich je Zeichen (Messlauf text-mitte, 30.10.2026): die Zeichen tragen oben unterschiedlich viel Luft im Raster, die Gruppe rückt um so viel hoch */
+.ml-einfuegen button{padding-top:calc(12px - var(--h,0px));padding-bottom:calc(12px + var(--h,0px))}
+.ml-einfuegen [data-neu=titel],.ml-einfuegen [data-neu=text]{--h:2.8px}.ml-einfuegen [data-neu=foto]{--h:2.4px}.ml-einfuegen [data-neu=termine]{--h:1.5px}
+.ml-einfuegen [data-neu=liste]{--h:3.3px}.ml-einfuegen [data-neu=trenner]{--h:4.2px}
+/* Posteingang: die ganze Vorschauzeile lesbar, umbrochen statt mit … gekürzt (Kriterium 2, 30.10.2026) */
+.ml-posteingang .ml-pe__vorschau,.ml-posteingang .ml-pe__betreff{white-space:normal;overflow:visible;text-overflow:clip;text-wrap:pretty}
+/* Messlauf 30.10.2026 (zweiter Lauf): Prüfliste am Handy unter der Kopfleiste über die volle Breite statt links aus dem Bild; Schliessen rund; Fototitel ohne Einzelwort */
+@media (max-width:600px){.ml-pruefen{position:static}.ml-pruef__liste{left:16px;right:16px;width:auto;top:100%}}
+.ml-fotos__kopf #mlFotoZu{flex:none;width:36px;height:36px;padding:0}
+.ml-fotos__kopf h2{text-wrap:balance}
+@media (max-width:600px){.ml-fotos__kopf h2{font-size:26px}}
+@media (max-width:600px){.ml-fotos__kopf{flex-wrap:wrap}.ml-fotos__kopf h2{flex:1 1 0;min-width:0;white-space:nowrap}.ml-fotos__kopf .ms-suche{order:3;width:100%}}   /* Titel in einer Zeile, Suche darunter */
+/* ---------- Tor werkstatt-3010c (30.10.2026) ---------- */
+/* K5: die Kopfleiste passt auch bei 1000 px: «HTML kopieren» als runder Knopf mit Zeichen, Untertitel der Marke weg */
+@media (max-width:1200px) and (min-width:981px){.ml-kopf{gap:8px}#mlKopieren span{display:none}#mlKopieren{width:38px;padding:0;justify-content:center}.ml-marke__n small{display:none}}
+/* K7: Vorlagen-Namen ausgewogen, kurze in einer Zeile, nie ein Wort allein; schmaler etwas kleiner */
+#mlVorlagen b{white-space:normal;text-wrap:balance}
+@media (max-width:1380px){#mlVorlagen b{font-size:14.5px}}
+/* K4: «Leere E-Mail» zeigt ein leeres Mailblatt statt dunkler Fläche */
+#mlVorlagen .ml-vb:not([style]){background:linear-gradient(#ef7649,#ef7649) 50% 9px/26px 3px no-repeat,linear-gradient(rgba(38,36,45,.28),rgba(38,36,45,.28)) 50% 19px/34px 2px no-repeat,
+  linear-gradient(rgba(38,36,45,.18),rgba(38,36,45,.18)) 50% 25px/34px 2px no-repeat,linear-gradient(rgba(38,36,45,.18),rgba(38,36,45,.18)) 50% 31px/24px 2px no-repeat,#faf4f4}
+/* K5 (Tor 2): zwischen 981 und 1180 px schmalere Seitenplatten und weniger Rand, damit die Vorschau gross genug bleibt (mail.js verkleinert sie nur noch wenig) */
+@media (max-width:1180px) and (min-width:981px){.ml{grid-template-columns:250px minmax(0,1fr) 280px}.ml-links{margin-left:12px}.ml-rechts{margin-right:12px}
+  .ml-mitte{margin:16px 8px 18px;padding:24px 10px 110px}.ml-buehne{padding:0 6px}}
+@media (max-width:1180px) and (min-width:981px){#mlVorlagen .ml-vb{width:40px;height:34px}#mlVorlagen button{gap:10px;padding-right:22px}#mlVorlagen b{font-size:14px}}   /* schmale linke Platte: Namen bleiben ganz und ausgewogen */
+.ml-kapitel p{text-wrap:balance}   /* M-D (Tor 2): «Hauses» nie allein in der letzten Zeile */
+/* Tor 2, Maschinenlauf 13:09: «PREISLISTE» bei schmaler Platte mit Luft zum Rand; «WEBSITE» in Safari mittig */
+@media (max-width:1180px) and (min-width:981px){#mlEinfuegen button span{letter-spacing:0;font-size:7.6px}}
+@supports (font:-apple-system-body){.ml-chips button{text-indent:.06em}}
+/* Tor 2, F1 (K13): Kacheln im Fenster «Fotos des Hauses» im Seitenverhältnis der Vorschaubilder (520 × 402), Plakate werden nicht beschnitten */
+.ml-fotos__raster img{aspect-ratio:520/402}
+/* Tor 2, F2 (K35): «Eintrag hinzufügen» und «Alle» in Safari optisch mittig, wie die Chips */
+@supports (font:-apple-system-body){#mlFotoGruppen button,.ml-eintraege .kn{text-indent:.06em}}

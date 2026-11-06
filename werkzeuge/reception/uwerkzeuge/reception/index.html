@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de" data-wo-titel="{name} · Culinarium Hannover">
+<head><script src="../../demo/karte.js"></script><script src="../../demo/shim.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Culinarium Hannover</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#282630">
+<script>/* Leistung 29.10.2026: die Daten der ersten Ansicht sofort holen, alle zugleich, während Stil und Skript noch laden (reception.js nimmt sie einmal in api() auf) */window.__vorab={};["ueberblick","anfragen","fragen"].concat(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)?["wissen_links"]:[]).forEach(function(w){window.__vorab[w]=fetch("api/"+w,{cache:"no-store"})});</script>
+<link rel="icon" href="../../assets/oberflaeche/kleid/culinarium-zeichen.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/schrift/fraunces-soft.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/schrift/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<script src="studio/fehlermelder.js?v=51fa5663ed"></script>
+<script src="../../assets/oberflaeche/kleid/culinarium.js"></script>
+<script src="studio/auftakt.js?v=9978a72ef2"></script>
+<link rel="stylesheet" href="studio/studio.css?v=9e3a3f6e10">
+<link rel="stylesheet" href="reception.css?v=2ef4a96b7b">
+<link rel="stylesheet" href="studio/schweben.css?v=92b894e249">
+<link rel="stylesheet" href="studio/hell.css?v=b2ee35e00b">
+<link rel="stylesheet" href="culinarium-reception.css?v=35172e54ab">
+<link rel="stylesheet" href="../../assets/oberflaeche/grund.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/rahmen-buehne.css">
+<link rel="stylesheet" href="../../assets/oberflaeche/kleid/culinarium.css">
+<link rel="stylesheet" href="gastgeber.css?v=90922b49b5">
+<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<body class="bu re wo-app">
+<header class="wo-kopf" id="kopf"></header>
+<aside class="wo-rand" id="rand" aria-label="Bereiche"></aside>
+<main class="gg-raum" id="haupt">
+  <div class="start-tuer" id="tuer" hidden>
+    <h1><span data-wo-name="gaeste">Das Werkzeug</span> startet nicht.</h1>
+    <p id="tuer-t">Die Verbindung zum Server-Teil fehlt.</p>
+    <p style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 0"><a class="kn kn--gold" href="pruefung.html?v=c085d8ef7b">Prüfung öffnen</a><a class="kn kn--linie" href="">Neu laden</a></p>
+  </div>
+  <div id="ansicht"></div>
+</main>
+<footer class="wo-leiste" id="leiste" aria-live="polite"></footer>
+<div class="fenster" id="fenster" hidden></div>
+<div class="meldung" id="meldung" aria-live="polite"></div>
+<script src="../../assets/oberflaeche/oberflaeche.js"></script>
+<script src="../../assets/oberflaeche/rechtschreibung.js" defer></script>
+<script src="studio/namen.js?v=31a3c2f7a8"></script>
+<script src="studio/auswahl.js?v=f27ae92e7a" defer></script>
+<script src="reception.js?v=6caea521eb"></script>
+<script src="studio/schweben.js?v=5ab9de8e89" data-wurzel="#ansicht" data-blaetter="#ansicht h2.wo-zw, #ansicht .wo-lage, #ansicht .re-zahlen, #ansicht .re-leer" data-kacheln="#ansicht .re-gr, #ansicht .wo-ag" data-zeilen="#ansicht .re-liste .re-a" data-zahlen="#ansicht .re-zahlen b"></script>
+<script src="studio/zur-werkbank.js?v=52e6920c73" defer data-zw data-neben="#rand" data-luft="40" data-ueber="#leiste"></script>
+<script src="studio/rundgang.js?v=6c5a9737a5" defer data-werkzeug="reception"></script>
+</body>
+</html>

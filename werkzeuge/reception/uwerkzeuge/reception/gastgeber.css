@@ -1,0 +1,37 @@
+/* Der Gastgeber · Landgasthof Ruedihus: Anschluss der Arbeitsflächen (Eingang, Brief, Wissen) an das Paket der Werkzeuge des Hauses
+   (assets/oberflaeche, Rahmen «Die Bühne», kleid/ruedihus.css); gebaut von _bau/oberflaeche.py, Vorbild Der Gastgeber Gasterntal. Lädt als letztes Stylesheet. */
+.wo-rand__wege button{display:flex;align-items:center;gap:8px;width:100%;padding:7px 14px;border:0;background:none;font:inherit;font-size:13.5px;color:var(--wo-leise);text-align:left;cursor:pointer}
+.wo-rand__wege button:hover,.wo-rand__wege a:hover{color:var(--wo-tinte)}
+@media (min-width:901px){.wo-rand__probe{display:none!important}}
+/* Knöpfe des Pakets: studio.css setzt «.bu button{font:inherit}» und überstimmt sonst die Schrift von .wo-kn */
+.wo-app button.wo-kn{font:400 11px/1 var(--wo-mono);letter-spacing:.16em;text-transform:uppercase}
+.wo-app button.wo-kn--klein{font-size:10.5px}
+/* Raum: Lage wie .wo-raum des Rahmens «Die Bühne», aber ohne Klasse «wo-» (sonst setzt grund.css die Knöpfe der Arbeitsflächen zurück) */
+.wo-app>.gg-raum{grid-area:raum;min-width:0;margin-left:28px}
+@media (max-width:900px){.wo-app>.gg-raum{margin:0 16px}}
+/* Kacheln als Knopf: «.bu button{color:inherit}» aus studio.css überstimmt sonst die helle Schrift auf der dunklen Kachel */
+.wo-app button.wo-ag{color:var(--wo-weiss);text-align:left;padding:0;border:0;font:inherit}
+.wo-app button.wo-kopf__ber{font:400 10.5px/1 var(--wo-mono);letter-spacing:.16em;text-transform:uppercase}
+.wo-app button.wo-kn--hell{color:var(--wo-tinte)}
+.wo-app button.wo-kn--gold{color:var(--wo-tief)}
+.wo-app button.wo-kn--dunkel,.wo-app button.wo-kn--glas{color:var(--wo-weiss)}
+.wo-app button.wo-kn--rund{color:var(--wo-gold)}
+
+/* Werkbank-Chat 18.10.2026 (Kopfleiste 1000–1920 ganz drin): bei schmalem Fenster steht der Titel der Ansicht nicht unter «Chat ausprobieren» */
+@media (max-width:1240px){.wo-kopf__mitte{display:none!important}}
+
+/* Endprüfung 19.10.2026: «Alle 10 Fragen ansehen» lag unter der letzten Fragen-Kachel und liess sich nicht anklicken; der Stand «Gesichert» beim Brief
+   war mit 9,5 px Beige auf Beige kaum lesbar (1,9:1) */
+.re-mehr{position:relative;z-index:3;margin-top:26px!important}
+.re-qliste{position:relative;z-index:1}
+.gs-hinweis .gs-werk__stand{font-size:11px!important;font-weight:400;letter-spacing:.14em;color:#444152!important}
+.gs-hinweis .gs-werk__stand.laeuft{color:#1a191f!important}
+
+/* Culinarium Hannover 21.10.2026 (lädt als letztes, deshalb hier) */
+/* Kopf (Fehlerbuch 10a «Titel überdeckt nie einen Knopf»): La Réception hat rechts zusätzlich «Chat ausprobieren»; der Titel in der Mitte nimmt deshalb
+   in jeder Breite nur den freien Platz zwischen Marke und Knöpfen und kürzt notfalls mit «…» (gemessen 21.10.2026: «Vom Team nachgetragen» lief bei 1440 unter den Knopf). */
+@media (min-width:901px){
+  .wo-kopf{grid-template-columns:auto minmax(0,1fr) auto}
+  .wo-kopf__mitte{min-width:0;max-width:100%}
+  .wo-kopf__mitte b,.wo-kopf__mitte small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+}

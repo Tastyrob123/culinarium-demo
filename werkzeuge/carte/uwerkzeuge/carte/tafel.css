@@ -1,0 +1,156 @@
+/* La Carte · Culinarium Hannover (28.10.2026, aus der Tafel im Schäfli): Zusammenspiel von Werkzeug-Oberfläche (Rahmen «Die Bühne», Kleid culinarium) und Arbeitsbereich
+   (19.10.2026, aus der Tafel des Gasterntal). Kommt nach grund.css, rahmen-buehne.css und kleid/culinarium.css. Nur transform und opacity bewegen, nichts hält das Scrollen. */
+
+/* Raum: Warmweiss wie die Plakate der Abende, ruhig ohne Muster */
+body.lc.wo-app{background:var(--wo-blatt)}
+.lc .wo-raum{min-width:0}
+.lc #kopf{margin-bottom:24px}
+
+/* Kopf: Zustand und wer arbeitet, auf der Nacht der Bar */
+.lc .wo-kopf__r{gap:8px}
+.lc .wo-kopf .zustand{height:40px;padding:0 14px;color:#F5A689;box-shadow:inset 0 0 0 1px rgba(245,166,137,.4)}
+.lc .wo-kopf .zustand::before{content:'';flex:none;width:15px;height:15px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8.5 3.2 3.2L13 4.5' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3 8.5 3.2 3.2L13 4.5' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}   /* Haken statt Punkt (keine Punkt-Etiketten im Kleid des Hauses) */
+.lc .wo-kopf .zustand.rot{color:#F5A689;box-shadow:inset 0 0 0 1px rgba(245,166,137,.6)}
+.lc .wo-kopf .zustand.rot::before{-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3v6M8 12v.5' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3v6M8 12v.5' fill='none' stroke='%23000' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")}
+.lc .wo-kopf .wer{height:42px;color:var(--wo-weiss);box-shadow:inset 0 0 0 1px var(--wo-linie-d)}
+.lc .wo-kopf .wer i{font-family:var(--wo-titel);font-weight:400}
+.lc .wer--handy{display:none}
+@media (max-width:1560px){.lc .wo-kopf .zustand span,.lc .wo-kopf .wer>span,.lc .wo-kopf .wer>small{display:none}.lc .wo-kopf .zustand{width:40px;padding:0;justify-content:center}.lc .wo-kopf .wer{padding:0 5px}}
+@media (max-width:900px){.lc .wer--handy{display:inline-flex;align-items:center;height:40px;padding:0 4px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--wo-linie-d);justify-self:end;margin-right:8px}
+  .lc .wo-kopf{grid-template-columns:minmax(0,1fr) auto auto}}
+
+/* Rand: Karte mit Foto, Wahl Einfach / Fortgeschritten, Wege */
+.lc .wo-rand .karten ul{display:grid;gap:6px}
+.lc .wo-rand .kw{width:100%;text-align:left;cursor:pointer}
+.lc .wo-rand .kw .wo-marke{padding:5px 7px}
+.lc .modus-g{margin-top:18px}
+.lc .modus-g .wo-mk{display:block;margin-bottom:10px}
+.lc .modus.wo-seg{display:grid;grid-template-columns:1fr 1fr;width:100%}
+.lc .modus.wo-seg button{padding:10px 8px;text-align:center}
+.lc .modus__t{margin:10px 6px 0;font-size:12.5px;line-height:1.5;color:var(--wo-leise)}
+.lc .wo-rand .wege{margin-top:18px}
+
+/* Startbild jeder Ansicht: Angaben der Karte neben dem Knopf */
+.lc .wo-sb__kn{align-items:center}
+.lc .kopf__zahlen{display:flex;gap:26px;margin:0 0 0 12px;flex-wrap:wrap}
+.lc .kopf__zahlen div{display:flex;flex-direction:column-reverse}
+.lc .kopf__zahlen dd{margin:0;font:var(--wo-titel-g) 24px/1 var(--wo-titel);color:var(--wo-weiss);font-feature-settings:"lnum","tnum"}
+.lc .kopf__zahlen dt{margin-top:6px;font:400 9.5px/1.2 var(--wo-mono);letter-spacing:.18em;text-transform:uppercase;color:var(--wo-gold)}
+.lc .wo-sb.auftritt .wo-sb__foto img{animation:tfoto 2.6s var(--wo-e1) both}
+.lc .wo-sb.auftritt .wo-sb__text{animation:ttext 1.3s var(--wo-e1) .08s both}
+@keyframes tfoto{from{transform:scale(1.1)}to{transform:none}}
+@keyframes ttext{from{transform:translateY(46px)}to{transform:none}}
+@media (max-width:700px){.lc .kopf__zahlen{margin:12px 0 0;gap:20px}.lc .kopf__zahlen dd{font-size:21px}}
+
+/* Arbeitsbereich in der Fläche des Rahmens */
+.lc .arbeit{grid-template-columns:minmax(330px,1fr) minmax(360px,1.05fr)}
+@media (max-width:1240px){.lc .arbeit{grid-template-columns:minmax(0,1fr)}.lc .vorschau{position:relative;top:0;height:72vh}}
+.lc .teil__k{background:linear-gradient(180deg,#3A3845,#16151A)}
+.lc .teil__k b,.lc .r__t b,.lc .fenster h2,.lc .verlauf__z b,.lc .vgl__z b,.lc .gst-name,.lc .mw-name,.lc .quit b{font-family:var(--serif);font-weight:500;letter-spacing:.02em}
+.lc .r--rubrik .r__t b{font-size:22px}
+.lc .r--rubrik{background:rgba(239,230,228,.32)}
+.lc .r.gewaehlt{box-shadow:inset 3px 0 0 var(--wo-akzent)}
+.lc .vorschau{background:#E9E0DE}
+.lc .ansicht{flex-wrap:wrap}
+.lc .webwahl button{font-size:11.5px}
+.lc .ansicht button[aria-pressed="true"]{background:var(--wo-nacht)}
+/* Knöpfe im Arbeitsbereich: dunkle Platte mit rundem Knauf in Kerze (wie auf der Website) */
+.lc .kn{--o:#3A3845;--m:#1C1B21;--u:#0F0E13;--ko:#FBD9CB;--ku:#EF7649;--kt:var(--tinte)}
+.lc .kn--hell{--o:#FFFCFB;--m:#F3ECEA;--u:#E0D6D4;--t:var(--tinte);--ko:#3A3845;--ku:#0F0E13;--kt:#fff}
+.lc .kn--gold{--o:#FBD9CB;--m:#EF7649;--u:#B15736;--t:var(--tinte);--ko:#1C1B21;--ku:#0F0E13;--kt:#fff}
+
+/* Leiste unten: Text-Knopf auf der dunklen Platte, Knöpfe brechen am schmalen Rechner nicht aus */
+.lc .wo-leiste .textknopf{color:rgba(250,244,244,.78);text-decoration-color:rgba(239,118,73,.6);margin-right:6px;white-space:nowrap}
+.lc .wo-leiste .textknopf:hover{color:#fff}
+.lc .wo-leiste__t{min-width:0;flex:1 1 auto}
+.lc .wo-leiste__t small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:1320px){.lc .wo-leiste__t small{display:none}}
+@media (max-width:900px){.lc .wo-leiste__kn{gap:6px}}
+.lc.gst-offen .wo-leiste{right:calc(296px + 28px)}
+@media (max-width:900px){.lc.gst-offen .wo-leiste{right:10px}}
+
+/* Quittungen über der Leiste, in der Nacht der Bar mit Kante in Kerze */
+.lc .quit{background:linear-gradient(180deg,#3A3845,#16151A);box-shadow:0 0 0 1px rgba(239,118,73,.4),0 22px 40px -20px rgba(0,0,0,.6)}
+.lc .quit a,.lc .quit button{color:var(--wo-gold)}
+.lc .fenster{background:rgba(22,21,26,.62)}
+.lc .fenster__k::before{border-color:rgba(91,87,99,.35)}
+.lc .fenster h2 em,.lc .anl h1 em{color:var(--wo-akzent)}
+
+/* Handy: Knöpfe einer Zeile brechen um, «Eintrag hinzufügen» der Rubrik bekommt eine eigene Zeile */
+@media (max-width:900px),(hover:none){.lc .r__k{flex-wrap:wrap;justify-content:flex-end}.lc .r--rubrik .r__k .kn{flex:1 1 100%;justify-content:space-between}}
+body.lc.anl{background:var(--papier)}
+/* Handy, Fortgeschritten: liegt «Gestalten» unten als Platte über der Karte, bekommt die Seite unten Luft, damit sich jedes Element über die Platte schieben lässt (Gasterntal 17.10.2026) */
+@media (max-width:900px){body.lc.gst-offen.wo-app{padding-bottom:calc(52vh + 150px)}}
+
+/* Mittagsmenü, Knopf «Nächste Woche anlegen» bekommt unten Luft */
+.lc #liste > .teil:first-child .mw-in{padding-bottom:22px}
+
+/* Schlössli 20.10.2026: Bild je Zeile der Liste (Fehlerbuch 10a «in allen Tools Bilder dazu»), Foto des Hauses rund in der Hausfarbe gerahmt */
+.lc .r.r--bild{grid-template-columns:64px minmax(0,1fr) auto}
+.lc .r__b{width:64px;height:64px;border-radius:14px;background:#EFE6E4 center/cover no-repeat;box-shadow:inset 0 0 0 1px rgba(38,36,45,.08)}
+.lc .r--rubrik .r__b{width:64px;height:64px}
+.lc .r.r--bild .r__k{grid-column:2/-1}
+@media (max-width:900px),(hover:none){.lc .r.r--bild{grid-template-columns:44px minmax(0,1fr) auto}.lc .r__b{width:44px;height:44px;border-radius:10px}}
+/* Bilder auch in der Rubrik-Wahl, in Vorher/nachher und in den früheren Fassungen (Robert 19.10.2026: «in allen Tools Bilder dazu») */
+.lc .g-wahl button{display:inline-flex;align-items:center;gap:12px;padding:4px 18px 4px 4px}
+.lc .g-b{flex:none;width:40px;height:40px;border-radius:50%;background:#EFE6E4 center/cover no-repeat}
+.lc .vgl__b{float:left;width:44px;height:44px;margin:0 12px 4px 0;border-radius:10px;background:#EFE6E4 center/cover no-repeat}
+.lc .verlauf__z{align-items:center}
+.lc .verlauf__b{flex:none;width:48px;height:48px;margin-right:14px;border-radius:12px;background:#EFE6E4 center/cover no-repeat}
+.lc .verlauf__z > div:first-of-type{flex:1}
+
+/* ===== Robert 20.10.2026, 01:00 (sechs Bildschirmfotos, Fehlerbuch 10a) ===== */
+/* Knöpfe einer Zeile (Stift, Kopieren, hoch, runter, Auge, Papierkorb): nie über Bild oder Text, keine Fläche und kein Schatten dahinter.
+   Sie stehen als eigene Zeile unter dem gewählten Eintrag (Klick wählt, wie bisher); «Eintrag hinzufügen» der Rubrik steht darin vorn. */
+.lc .r__k{position:static;transform:none;opacity:1;background:none;padding:6px 0 2px;grid-column:2/-1;display:none;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-start}
+.lc .r:not(.r--bild) .r__k{grid-column:1/-1}
+.lc .r.gewaehlt .r__k,.lc .r:focus-within .r__k{display:flex}
+.lc .r:hover .r__p,.lc .r:focus-within .r__p{opacity:1}
+.lc .r__k .rund{box-shadow:inset 0 0 0 1px rgba(22,21,26,.22);background:#fff}
+.lc .r__k .rund:hover{background:#FFFCFB;box-shadow:inset 0 0 0 1px rgba(22,21,26,.38)}
+.lc .r__k .wo-kn{margin-right:6px}
+@media (max-width:900px),(hover:none){.lc .r__k{display:none;justify-content:flex-start}.lc .r.gewaehlt .r__k,.lc .r:focus-within .r__k{display:flex}.lc .r--rubrik .r__k .wo-kn{flex:0 0 auto}}
+/* Plus-Knöpfe unter jeder Seite: Knöpfe des Rahmens mit Tiefe und Knauf (WO.knopf «gold»), Luft rundum */
+.lc .neu-zeile{gap:10px;padding:14px 18px 18px 20px}
+.lc .mw-in > div[style*="flex"] .wo-kn{margin-top:4px}
+/* Untere Leiste: Titel nie umbrochen, der kurze Satz ganz; wird es eng (Gestalten offen, schmale Fenster), zeigen die Knöpfe nur ihr Zeichen */
+.lc .wo-leiste__t b,.lc .wo-leiste__t strong{white-space:nowrap}
+.lc .wo-leiste__t small{white-space:nowrap;overflow:visible;text-overflow:clip}
+@media (max-width:1320px){.lc .wo-leiste__t small{display:none}}
+.lc.gst-offen .wo-leiste .wo-kn span{display:none}
+.lc.gst-offen .wo-leiste .wo-kn{padding:0;width:42px;justify-content:center}
+.lc.gst-offen .wo-leiste .wo-kn i{margin:0}
+.lc.gst-offen .wo-leiste__t small{display:none}
+/* «Gestalten» im Modus Fortgeschritten: reicht bis unten (die Leiste rückt ja nach links), unten Luft statt abgeschnittener Felder */
+.lc.gst-offen .gst{bottom:14px;padding-bottom:28px}
+/* Robert 20.10.2026, 01:18: im Modus Fortgeschritten schliesst das Fenster (Karte und Website) unten bündig mit der linken Kachel ab. */
+@media (min-width:901px){
+  .lc.frei .wo-raum{align-self:stretch;display:flex;flex-direction:column}
+  .lc.frei .wo-rand{align-self:stretch}
+  .lc.frei .arbeit{flex:1;align-items:stretch}
+  .lc.frei .vorschau{height:auto;min-height:max(560px,calc(100vh - var(--oben) - var(--leiste) - 200px))}
+}
+/* Robert 20.10.2026, 01:24: Titel der Leiste läuft nie in einen Knopf (carte.js leistePasst). */
+.lc .wo-leiste__t span{overflow:hidden}
+.lc .wo-leiste.eng .wo-kn span{display:none}
+.lc .wo-leiste.eng .wo-kn{padding:0;width:42px;justify-content:center}
+.lc .wo-leiste.eng .wo-kn i{margin:0}
+.lc .wo-leiste.eng .wo-leiste__t small{display:none}
+.lc .wo-leiste.enger .wo-leiste__t .wo-marke{display:none}
+.lc .wo-leiste.enger .wo-leiste__t b{font-size:15px;overflow:hidden;text-overflow:ellipsis}
+
+/* Knöpfe einer gewählten Rubrik (Selbst gefunden 20.10.2026: Auge und Papierkorb fielen allein in eine zweite Zeile): «Eintrag hinzufügen» steht in der ersten Zeile,
+   alle sechs runden Knöpfe zusammen in der zweiten, nie ein Rest allein. */
+@media (min-width:901px) and (hover:hover){
+  .lc .r--rubrik .r__k::before{content:'';order:1;flex-basis:100%;height:0}
+  .lc .r--rubrik .r__k .kn{order:0}
+  .lc .r--rubrik .r__k .rund{order:2}
+}
+/* Schäfli 21.10.2026: Bildgrössen nach Master «Bilder in jeder Liste» (Zeile 104 × 78, Rubrik 128 × 84, Handy 72 × 54) statt 64 × 64 */
+.lc .r.r--bild{grid-template-columns:104px minmax(0,1fr) auto}
+.lc .r__b{width:104px;height:78px;border-radius:10px}
+.lc .r.r--rubrik.r--bild{grid-template-columns:128px minmax(0,1fr) auto}
+.lc .r--rubrik .r__b{width:128px;height:84px}
+@media (max-width:900px),(hover:none){.lc .r.r--bild,.lc .r.r--rubrik.r--bild{grid-template-columns:72px minmax(0,1fr) auto}.lc .r__b,.lc .r--rubrik .r__b{width:72px;height:54px;border-radius:8px}}
+/* Fehlerbuch 10a (Schlössli 20.10.2026): unter der Bühne mindestens 30 px Luft bis zu den ersten Kacheln (Handy 24 px); gemessen vorher 24 px */
+@media (min-width:901px){.lc #arbeit{margin-top:34px}}   /* Ränder fallen zusammen: der grössere zählt */

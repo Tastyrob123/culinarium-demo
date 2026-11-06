@@ -1,0 +1,185 @@
+/* Culinarium Hannover · Handy-Fassung (28.10.2026, Robert: «die Formatierung auf dem Handy ist absoluter Müll … arbeite die mobile Version bis ins Detail aus»).
+   Eigene Stilschicht, lädt als letzte nach culinarium.css und den Seiten-Stilen. Nur Breiten bis 860 px: der Desktop bleibt Pixel für Pixel, wie er ist.
+   Grundsatz je Abschnitt: Bild gross und ganz, Text darunter auf ruhiger Fläche, Wand an Wand, kein Leerraum, nie Text auf Foto (ausser im Fenster). */
+@media (max-width:860px){
+
+/* ================================================================ Grund */
+:root{--rand:18px}
+body{font-size:16.5px}
+.vab{padding:52px 0}
+.vk .vtext{font-size:16.5px;max-width:none}
+.ueber{font-size:22px;margin-top:40px}
+.knoepfe{gap:12px}
+.vk .knoepfe .knopf{max-width:100%}
+/* Fenster am Schluss: ganzer Bildschirm, Satz, Text und beide Knöpfe immer ganz im Bild (vorher 54svh, Knöpfe abgeschnitten) */
+.vi.fs{height:100svh!important;min-height:560px}
+.fs .fenster-schicht .fs-inhalt{padding:84px var(--rand) 36px;gap:16px;justify-content:center}
+.fs .fenster-satz{font-size:clamp(34px,10.2vw,46px)}
+.fs-text{font-size:16px;max-width:34ch}
+.fs .knoepfe{gap:12px}
+/* Fenster: Satz etwas kleiner, damit er nie über den Rand läuft */
+.fenster:not(.fs) .fenster-satz{font-size:clamp(32px,9.6vw,40px);max-width:calc(100vw - 2*var(--rand))}
+/* Lesbarkeit: nichts unter 11,5 px (Etiketten, Monoschrift) */
+.fk-zeile,.fk-kopf,.v-gaenge .fk-fuss,.fw-karte .fk-fuss,.fw-karte .fk-wer,.mk-mit,.mk-deckel .mk-mit,.mk-karte .mk-mit,.mk-karte .mk-fuss,.mk-ort,.mk-kopf,.tk-zeile,.ak-mit,.vit-mit,.vit-mehr,.ad-mit,.ad-k,.ad-liste dt,.ad-teller span,.ad-rb cite,.ad-zitat cite,
+.wt-marke span,.wt-k,.wt-feld span,.wt-ok,.fu-wl-k,.fu-wl-feld span,.fu-wl2-stub span,.fu-wl2-k,.gr-gross figcaption .mono,.gr-p .vpz em,.gr-p .vpz b,.v-plakate .vpz b,.v-plakate .vpz em,
+.aw-oben,.aw-unten,.aw-karte .aw-liste dd,.gt-k,.gt-ort,.mz span,.vn-k span,.stk-tag span,.ms-fuss,.v-leute .rr .vcap span,.gz span,.bn-zahlen span,.te-z span,.tq-kopf,.tb-hinweis,.tb-p-frei,.tb-p-aus,.tb-d-label,.tb-d-frei,.tb-zahl em,.tb-d-summe span,.tb-t-zeile,.tb-t-fuer,.tb-t-nr,.tp-weg,.tp-zurueck,.tb-p-mit,.tb-kicker,.ck-wann,.wk-quelle,.wk-unter span,.fl-etikett,.dk-kicker,.fwk-kicker,.mm-kicker,.ub-mono,.fuss .fu-k,.fu-zeiten dt,.wi-k,.wi-kopf .mono,.pp-vz dt,.ka-fuss,.dcn .dcn-k{font-size:11.5px}
+.gr-p .vpz b{font-size:14px}
+.vit-datum{font-size:18px}
+.ek,.fu-wl2-stub span,.tb-p-mit{font-size:11.5px}
+.vit-mono{font-size:12px}
+.fk-zeile{font-size:11.5px;letter-spacing:.14em}
+
+/* ================================================================ Leiste und Menü */
+.leiste{height:60px;padding:0 var(--rand)}
+.menue{inset:60px 0 0;padding:24px var(--rand) 34px}
+.menue nav a{font-size:34px;line-height:1.3}
+
+/* ================================================================ Startseite · Auftakt «Ebenen»
+   Am Desktop liegt der Name über vier Bildern, am Handy wird daraus eine Dramaturgie in vier Schritten:
+   Tafel und Theke Wand an Wand, darunter die Wortmarke gross, darunter Satz und Knopf auf Nacht, unten Glas und Teller als Abschluss.
+   Nichts liegt mehr auf einem Foto. Die beiden Bildpaare gleiten beim Scrollen leicht mit (culinarium.js). */
+.auftakt .fassung.f-ebenen{height:max(100svh,600px);min-height:0;padding:0;display:flex;flex-direction:column;background:#16151A}   /* genau ein Bildschirm: beide Bildpaare stehen im ersten Bild ganz, der Übergang «Darüber» (ueberleitung.js) deckt beim Scrollen nur ab, was schon oben hinausgeschoben ist */
+.auftakt .f-ebenen .at-hof{display:none}
+.auftakt .f-ebenen .ve-e{position:relative;inset:auto;pointer-events:auto;will-change:auto;display:grid;grid-template-columns:1fr 1fr;gap:var(--fuge)}
+.auftakt .f-ebenen .ve-e>.foto{position:relative;inset:auto;left:auto;right:auto;top:auto;bottom:auto;width:auto;height:100%;min-height:0;aspect-ratio:auto;border-radius:0;box-shadow:none}
+.auftakt .f-ebenen .ve-e>.foto img{filter:none}
+.auftakt .f-ebenen .ve-e:first-child{order:1;height:min(34svh,300px);min-height:200px;flex:none;grid-template-columns:1.15fr 1fr}
+.auftakt .f-ebenen .at-marke{order:2;position:relative;left:auto;top:auto;transform:none;width:auto;margin:clamp(18px,3.4svh,34px) var(--rand) 0;filter:none;flex:none}
+.auftakt .f-ebenen .at-zeile{width:64%;margin-top:12px}
+.auftakt .f-ebenen .at-text{order:3;position:relative;left:auto;right:auto;bottom:auto;max-width:none;margin:clamp(14px,2.6svh,26px) var(--rand) clamp(16px,3svh,28px);gap:16px;flex:none}
+.auftakt .f-ebenen .at-satz{font-size:17px;line-height:1.5}
+.auftakt .f-ebenen .at-marke~.ve-e{order:4;flex:1 1 auto;min-height:110px;grid-template-columns:1fr 1.3fr}
+/* Leiste auf der Startseite: im Auftakt bleibt sie weg (wie am Desktop), darum oben kein Platzhalter */
+
+/* ================================================================ Startseite · Abend und Haus (Über Eck) */
+.v-ebenen{padding-top:clamp(56px,9vh,84px)}
+.ue-rahmen{height:min(980px,250vw)}
+.ue-tafel{padding:16px 18px 18px;max-width:88%}
+.ue-tafel .titel{font-size:clamp(30px,8.4vw,40px)}
+.ue-unter{gap:26px}
+.ue-text .vtext{font-size:16.5px}
+.ue-kn{width:100%}
+.ue-kn .knopf,.ue-kn .knopf.leise{width:100%;max-width:300px;height:60px}
+
+/* ================================================================ Startseite · Wände (Wand mit Fuge): nie ein einzelnes Bild mit Leere daneben.
+   Bleibt in der letzten Reihe ein Bild allein, steht es über die ganze Breite und doppelt hoch. */
+.fw:not(:has(.fw-karte,.fw-film))>*:nth-child(odd):last-child,.fw:has(.fw-karte)>*:nth-child(even):last-child{grid-column:1/-1!important;grid-row:span 2!important}
+.fw{grid-auto-rows:44vw}
+/* Die Leute (Startseite): Film so hoch wie die Fotos daneben, Name darunter auf gleicher Höhe */
+.v-leute .rr>.st>.film{aspect-ratio:4/5!important;height:auto;width:100%}
+.v-leute .rr>.st>.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* Die Plakate: Text, dann die neueste Ausgabe über die ganze Breite, dann die früheren zu zweit mit Datum (vorher vier winzige ohne Beschriftung) */
+.gr{display:flex;flex-direction:column;gap:26px}
+.gr-r{display:contents}
+.gr-r .vk{order:1}
+.gr-gross{order:2;width:100%;margin:0}
+.gr-regal{order:3;grid-template-columns:1fr 1fr;gap:24px 10px;align-items:start;margin:0;padding:0 0 30px}   /* 29.10.: Brett sass auf der letzten Bildzeile (Robert 09:27) */
+.gr-p .vpz b{text-wrap:balance}
+.gr-p figcaption{display:flex;position:static;margin-top:8px}
+/* Seit 2023: fünf Karten, die letzte über die ganze Breite statt allein in einer halben Reihe */
+.ck-karten{gap:30px 10px;margin-top:30px}
+.ck-k:nth-child(even){margin-top:0}
+.ck-k:nth-child(odd):last-child{grid-column:1/-1}
+.ck-k:nth-child(odd):last-child .ck-bild .foto{aspect-ratio:4/3}
+/* Das Haus: Karte unter dem Bild, die Zeiten laufen um */
+.bk-bild{min-height:60svh}
+.bk-karte{margin:-56px 12px 0;padding:26px 22px 28px}
+.bk-karte .vinfo .mono{white-space:normal;line-height:1.7}
+/* Dirty Chicken (Startseite): Film über die ganze Breite im 4:5 statt 9:14, die Wand bleibt dicht */
+.v-dirty-chicken .fw>.fw-film{grid-row:span 2!important}
+.v-dirty-chicken .fw>.fw-film .film{aspect-ratio:auto;height:100%}
+.v-dirty-chicken .fw>.fw-film .film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ================================================================ Der Abend */
+/* Auftakt «Von oben»: Bilder oben und unten höher, Titel grösser */
+.aa5 .aa-buehne{grid-template-rows:minmax(0,1fr) auto minmax(0,1fr)}
+.aa5-karte{gap:12px;padding:20px 20px 22px}
+.aa5-wm{width:min(220px,58vw)}
+.aa5-t{font-size:clamp(38px,11vw,54px)}
+.aa5-karte .aa-satz{font-size:15.5px;max-width:34ch}
+/* Was auf den Tisch kommt: die vier Säulen stehen zu zweit, ohne Gleiten (die Verschiebung schob am Handy Text über Bilder) */
+.ms-s{transform:none!important;will-change:auto}
+.ms-reihe{gap:10px;padding-bottom:0;margin-top:32px}
+.ms-s:nth-child(even){margin-top:40px}
+.ms-text h3{font-size:22px}
+.ms-text p{font-size:15px}
+/* Platz buchen: Plakate dichter untereinander */
+.tb-liste{max-width:340px;gap:30px}
+/* Buchen-Dialog in voller Breite */
+.tb-dialog{padding:0;align-items:end}
+.tb-d-karte{width:100%;max-height:100svh;border-radius:24px 24px 0 0;padding:26px 20px 34px;overflow-x:hidden}
+.tb-d-karte::before{inset:10px;border-radius:16px 16px 0 0}
+.tb-d-zu{top:18px;right:18px}
+
+/* ================================================================ Alle Abende */
+.kg-text .sw{font-size:16.5px;max-width:30ch}
+.vit-glas{padding:28px 14px 18px}
+.vit-reihe{gap:26px 14px}
+.vit-p,.vit-reihe.n2 .vit-p,.vit-reihe.n3 .vit-p,.vit-reihe.n4 .vit-p{flex:0 1 calc(50% - 7px)}
+.vit-sockel{padding:18px 16px}
+/* Abend-Blatt (Plakat antippen) in voller Breite */
+.ad{padding:0}
+.ad-blatt{width:100%;max-height:100svh;border-radius:0;padding:16px 16px 44px}
+.ad-zu{margin:0 0 0 auto}
+.ad-plakat{max-width:none}
+.ad-titel{font-size:clamp(28px,8.4vw,42px)}   /* 30.10.2026 Tor K7: vorher clamp(32px,9vw,42px); «Culinarium‑Wochenende» passt so ab 360 px in eine Zeile */
+
+/* ================================================================ Das Haus */
+.sa-tafel{padding:24px 20px 26px}
+.sa-tafel .mittel{font-size:clamp(46px,14vw,66px)}
+.sa-tafel .at-satz{font-size:16.5px}
+.ls-bild{height:54svh}
+
+/* ================================================================ Der Weg */
+.wk-text{bottom:90px}   /* 30.10.2026 Abnahme-Tor K32: über der Knopfreihe (Sprache, «Frag uns zum Abend», 58 px + 16 px Rand); vorher clamp(28px,5vh,52px), der Google-Maps-Knopf lag darunter */
+.wk .gross{font-size:clamp(44px,12vw,70px)}
+.wk-text>p{font-size:16.5px}
+
+/* ================================================================ Dirty Chicken */
+.am-schild{padding:26px 20px 30px;width:calc(100% - 2*var(--rand))}
+.am-satz{font-size:16px}
+.fl-bild{height:min(60svh,560px)}
+.fl-mitte{gap:24px}
+
+/* ================================================================ Fuss */
+.fuss .fu-spalten{gap:30px 18px}
+
+/* ================================================================ Nachbesserung 29.10.2026 (Roberts iPhone-Befund 09:27) */
+/* Dirty Chicken, Gerichte: der lila Punkt lag auf dem Textanfang; .ess .ez setzt den linken Abstand auf 0 */
+.ess .e18-z{padding-left:22px}
+/* Startseite, Fragen «Beginn»: Ziffern in Fraunces bei 40 px mit opsz 144 nur noch Haarlinien; am Handy die Text-Optik (72) */
+.gt-text h3{font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 72}
+/* Der Abend, Warteliste: der Abriss-Zettel floss als Zeile um (Warteliste 2 Plätze Freitag / ab 19:00 Dein Name); jetzt geordnet wie der Zettel am Desktop */
+.wt-abriss{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"k k" "n plaetze" "n tag" "n zeit" "name name" "ok ok";column-gap:18px;row-gap:2px;align-items:baseline;text-align:left;padding:24px 22px 26px}
+.wt-abriss .wt-k{grid-area:k;margin:0 0 12px}
+.wt-abriss b{grid-area:n;align-self:center;font-size:68px;line-height:.9;font-variation-settings:"SOFT" 100,"opsz" 96}
+.wt-abriss span.wt-klein{grid-area:plaetze}
+.wt-abriss .wt-tag{grid-area:tag;margin:0}
+.wt-abriss p.wt-klein{grid-area:zeit;margin:0}
+.wt-abriss .wt-name{grid-area:name;margin-top:16px;padding-top:12px;border-top:1px solid rgba(42,40,51,.18)}
+.wt-abriss .wt-ok{grid-area:ok;margin-top:10px}
+
+/* Sprachknopf unten links (29.10.2026): am Handy nur der Kreis, damit er neben dem Chat-Knopf Platz hat und mit dem Daumen erreichbar bleibt */
+.sprache-knopf{width:58px;height:58px;padding:0;justify-content:center;gap:0}
+.sprache-knopf>span{display:none}   /* 30.10.2026: nur das Wort «English», das «EN» im Kreis bleibt (vorher war der Kreis am Handy leer) */
+html.cc-offen .sprache-knopf{opacity:0;pointer-events:none}
+
+/* Roberts Handy-Befunde 29.10. 16:03/16:04: (1) Handschrift-Zeile «Dann haste allet richtig jemacht!» liegt am Handy auf hellem Grund, der dunkle Schein
+   (für die Lage über dem Foto am Desktop) wirkt dort verschmiert → ohne Schein, in der tiefen Kerzenfarbe. (2) Gutschein-Kachel: das Motiv (1000×472) stand
+   in einer 16:10-Fläche mit leeren dunklen Bändern → Kachel im Mass des Motivs. */
+.v-leute .handschrift{text-shadow:none;color:var(--kerze-tief)}
+.zg-gutschein{aspect-ratio:1000/472}
+
+/* Fuss, Kontaktspalte: «Schreib uns» stand in der 168 px breiten Spalte zweizeilig; eine Zeile, Knopf etwas schmaler (Text 94 + 18 + 12 + 42 + 8 = 174 px, reicht 6 px in die Spaltenlücke) */
+.fu-tat .knopf{width:max-content;max-width:none;padding-left:18px;gap:12px}
+.fu-tat .knopf>span{white-space:nowrap}
+.tb-p-aus{padding-top:1.4px}   /* Stempel «Ausgebucht» am Handy 0,5–0,8 px zu hoch, gemessen */
+}
+
+/* 30.10.2026 Abnahme-Tor K5/K32: Team-Hero am Handy, Satz über der Knopfreihe (vorher 28 px vom Boden, unter beiden schwebenden Knöpfen) */
+.vi.sa-ueber .at-text{bottom:90px}
+/* 30.10.2026: Der Weg am Handy, Text 57 px höher (siehe .wk-text) und das Foto mit, damit das Leuchtschild wie vorher über dem Titel steht; der unterste Streifen liegt unter dem dunklen Verlauf und der Knopfreihe */
+.wk-bild{top:-57px;bottom:57px}
+/* 30.10.2026 Oberchef (Tor K7): Begriffe der Liste «Ungefähr so» am Handy 17 statt 19 px, damit «Fünf / Signature Drinks» bricht (waisen.py hält das Paar zusammen); unter 350 px 14 px, damit das Paar nicht überläuft */
+.aw-karte .aw-liste dt{font-size:17px}
+@media (max-width:350px){.aw-karte .aw-liste dt{font-size:14px}}

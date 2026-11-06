@@ -1,0 +1,29 @@
+/* La Carte · Waldhotel Doldenhorn (über La Carte des Carlton-Europe): Kopie von studio/schweben.css des Grand Beau-Rivage (16.10.2026), unverändert in der Wirkung. */
+/* Schweben, Pulsieren, Zoom für die Werkzeuge (Gefühl der Carlton-Seiten, wie in Le Registre). Gehört zu schweben.js.
+   Jedes Blatt trägt data-sw. Wo der Browser Scroll-Zeitachsen kann, wird es am Scrollen aus der Tiefe hochgeführt (sw-zug, gebunden an den Einzug
+   entry 0% bis 100%, nichts bleibt am Seitenende hängen); im Bild (.sw-da) federt es zusätzlich nach der Uhr in seine Grösse (sw-puls).
+   Viele gleiche Zeilen (data-sw="z") blenden nur sanft ein. Nur translate, scale, opacity. Muss nach studio.css geladen werden. */
+:root{--sw-feder:cubic-bezier(.3,1.26,.4,1)}
+@keyframes sw-zug{from{translate:0 var(--weg,100px)}}
+@keyframes sw-puls{from{scale:var(--kl,.93)}}
+@keyframes sw-zoom{from{scale:1.18}}
+[data-sw]{--weg:clamp(60px,7vw,110px)}
+h2[data-sw],[data-sw="k"]{--weg:clamp(30px,3.2vw,48px);--kl:.97}
+/* Nach der Uhr, nicht am Scrollen (Robert 16.10.2026): sobald ein Blatt auftaucht, schwebt es in 1,5 s mit leichter Feder an seinen Platz, immer deckend */
+/* Rezeptur der Carlton-Landingpage (Robert 16.10.2026: «hochgeschwebt mit diesem Reinzoomen, leicht federnd, das will ich haben»):
+   Blatt aus clamp(80px,9vw,140px) Tiefe und 93 %, 2,7 s Feder (.28,1.42,.42,1), Staffel 100 ms; das Foto darin zoomt gleichzeitig von 108 % in Ruhe */
+@keyframes sw-feder{from{translate:0 clamp(80px,9vw,140px);scale:.93}}
+@keyframes sw-bild{from{scale:1.08}}
+[data-sw]:not(.sw-da){translate:0 clamp(80px,9vw,140px);scale:.93}
+[data-sw].sw-da{animation:sw-feder 2.7s cubic-bezier(.28,1.42,.42,1) backwards;animation-delay:calc(var(--i,0) * 90ms)}
+[data-sw].sw-da img{animation:sw-bild 2.8s cubic-bezier(.16,1,.3,1) backwards;animation-delay:calc(var(--i,0) * 90ms)}
+/* Zahlen zoomen aus einer Vergrösserung herein; schmale Box, damit nichts seitlich überläuft */
+[data-swz]{width:fit-content;max-width:100%;transform-origin:0 70%}
+[data-swz].sw-da{animation:sw-zoom 1.7s var(--sw-feder) backwards;animation-delay:calc(var(--i,0) * 90ms + 120ms)}
+/* Viele gleiche Zeilen: nur sanft einblenden, kein Weg, keine Feder */
+[data-sw="z"],[data-sw="z"].sw-da{animation:none;translate:none;--weg:0px}
+[data-sw="z"]{scale:.985;transition:opacity 1s var(--e1),scale 1.2s var(--e1);transition-delay:calc(var(--i,0) * 30ms)}
+[data-sw="z"].sw-da{opacity:1;scale:1}
+/* Später dazugekommene Teile (Eingabe, Neuzeichnen): sofort ruhig an ihrem Platz */
+.sw-ruhig,.sw-ruhig.sw-da{animation:none!important;transition:none!important;translate:none!important;scale:none!important;opacity:1!important}
+@media (prefers-reduced-motion:reduce){[data-sw],[data-swz],[data-sw] img,[data-swz] img{animation:none!important;transition:none!important;translate:none!important;scale:none!important;opacity:1!important}}

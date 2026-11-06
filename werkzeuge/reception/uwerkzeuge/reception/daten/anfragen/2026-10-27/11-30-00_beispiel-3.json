@@ -1,0 +1,40 @@
+{
+ "zeit": "2026-10-27T11:30:00+01:00",
+ "art": "abend",
+ "name": "Mira Schulte",
+ "kontakt": "mira.schulte@example.com",
+ "datum": "",
+ "personen": 2,
+ "anliegen": "Zwei Plätze am nächsten Abend; eine Person hat eine Nussallergie.",
+ "sprache": "de",
+ "gespraech": "beispiel-3",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Hallo, wir möchten gern zu zweit zum nächsten Culinarium. Eine von uns hat eine Nussallergie."
+  },
+  {
+   "rolle": "assistant",
+   "text": "Der nächste Termin steht noch nicht fest; auf der Warteliste erfährst du ihn zuerst. Zur Nussallergie sagt die Website nichts, Rudi in der Küche klärt das mit dir. Magst du mir deinen Namen und eine E-Mail-Adresse geben?"
+  },
+  {
+   "rolle": "user",
+   "text": "Mira Schulte, mira.schulte@example.com"
+  },
+  {
+   "rolle": "assistant",
+   "text": "Danke. Dies ist ein Entwurf von Tasty Studios: Die Anfrage geht nicht an das Team, sie liegt nur zur Ansicht im Gästebuch."
+  }
+ ],
+ "status": "gelesen",
+ "beispiel": true,
+ "abteilung": "Abende",
+ "entwurf": {
+  "betreff": "Zwei Plätze an der Tafel und deine Nussallergie",
+  "text": "Hallo Mira,\n\ndanke für deine Nachricht. Für den nächsten Abend merken wir dich mit zwei Plätzen vor; der Termin steht noch nicht fest.\n\nDass eine von euch keine Nüsse verträgt, gibt das Team an Rudi in der Küche weiter. Er stimmt mit dir ab, was auf euren Tellern landet.\n\nZuletzt kostete der Abend 89,00 EUR, mit drei Gängen, fünf Drinks, Tasting und Schulung. Tickets gibt es nur im Vorverkauf.\n\nBis bald an der Tafel\n\nMomo und Rudi\nCulinarium im Walk on the Wild Side",
+  "team": "Grundlage: Startseite «Gut zu wissen» (89,00 EUR zuletzt, Vorverkauf), Der Abend (drei Gänge, fünf Drinks). Allergien: dazu sagt die Website nichts.\nOffen: Termin, Preis des nächsten Abends, Nussallergie mit Rudi klären.",
+  "vorlage": "abend",
+  "absender": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+  "zeit": "2026-10-27T11:30:00+01:00"
+ }
+}

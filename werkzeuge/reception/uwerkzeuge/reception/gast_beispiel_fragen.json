@@ -1,0 +1,132 @@
+[
+ {
+  "vor": [
+   0,
+   10,
+   20
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Wann ist der nächste Abend?",
+  "buchung": true,
+  "antwort": "Der nächste Termin steht noch nicht fest. Wer auf der Warteliste steht, erfährt ihn zuerst.\n- Freitag: ab 19 Uhr\n- Samstag: ab 17 Uhr\n- Plätze: wenige, an einer Tafel",
+  "thema": ""
+ },
+ {
+  "vor": [
+   0,
+   8,
+   55
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Was kostet ein Abend?",
+  "antwort": "Zuletzt kostete ein Abend 89,00 EUR, am 25. und 26. September 2026.\n- Darin: drei Gänge, fünf Drinks, Tasting und Schulung\n- Tickets: nur im Vorverkauf",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   1,
+   19,
+   5
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Was ist Fatwashing?",
+  "antwort": "Die Spirituose nimmt den Geschmack eines Fetts an; kalt gestellt, wird das Fett wieder abgehoben. Momo erklärt jeden Drink am Tisch.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   1,
+   13,
+   40
+  ],
+  "sprache": "de",
+  "belegt": false,
+  "thema": "Nussallergie",
+  "frage": "Ich habe eine Nussallergie, geht das?",
+  "antwort": "Dazu steht nichts in meinen Unterlagen; Rudi in der Küche klärt es mit dir. Frag am besten direkt:\n- Telefon der Bar: +49 163 3909578\n- Instagram: @culinarium_hannover",
+  "buchung": false
+ },
+ {
+  "vor": [
+   2,
+   17,
+   25
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Kann ich mein Ticket zurückgeben?",
+  "antwort": "Tickets werden nicht rückerstattet, weil die Plätze an der Tafel begrenzt sind.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   2,
+   9,
+   10
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Wo ist das genau?",
+  "antwort": "Im Walk on the Wild Side in Linden.\n- Adresse: Haasemannstraße 13, 30449 Hannover\n- Ecke: Haasemannstraße, Ecke Rampenstraße\n- Plus Code: 9PC7+49 Hannover",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   3,
+   12,
+   30
+  ],
+  "sprache": "de",
+  "belegt": false,
+  "thema": "Alkoholfrei",
+  "frage": "Gibt es den Abend auch alkoholfrei?",
+  "antwort": "Dazu steht nichts in meinen Unterlagen. Frag am besten direkt:\n- Telefon der Bar: +49 163 3909578\n- Instagram: @culinarium_hannover",
+  "buchung": false
+ },
+ {
+  "vor": [
+   3,
+   15,
+   45
+  ],
+  "sprache": "en",
+  "belegt": true,
+  "frage": "What time does the evening start?",
+  "antwort": "On Fridays from 7 pm, on Saturdays from 5 pm. Culinarium takes place on single weekends, usually a Friday and the Saturday after.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   4,
+   11,
+   0
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Wann gibt es wieder Dirty Chicken?",
+  "antwort": "Dirty Chicken gibt es nur an einzelnen Tagen; die Termine stehen auf Instagram bei @dirtychicken.hannover.",
+  "thema": "",
+  "buchung": false
+ },
+ {
+  "vor": [
+   4,
+   18,
+   20
+  ],
+  "sprache": "de",
+  "belegt": true,
+  "frage": "Kann ich die lange Tafel für meinen Geburtstag haben?",
+  "antwort": "Ja, die lange Tafel gibt es auch für eure eigene Feier.\n- Reservieren: bei der Bar per Nachricht oder Telefon\n- Telefon der Bar: +49 163 3909578",
+  "thema": "",
+  "buchung": false
+ }
+]

@@ -1,0 +1,34 @@
+{
+ "zeit": "2026-10-27T20:05:00+01:00",
+ "art": "warteliste",
+ "name": "Jonas Albers",
+ "kontakt": "jonas.albers@example.com",
+ "datum": "Freitag oder Samstag",
+ "personen": 4,
+ "anliegen": "Warteliste: Freitag oder Samstag, 4 Plätze",
+ "sprache": "de",
+ "gespraech": "beispiel-2",
+ "verlauf": [
+  {
+   "rolle": "user",
+   "text": "Über ein Formular der Website (Seite Der Abend): Tag: Freitag oder Samstag, beides geht\nPlätze: 4"
+  }
+ ],
+ "status": "gelesen",
+ "beispiel": true,
+ "an": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+ "abteilung": "Warteliste",
+ "seite": "/abend.html#warteliste",
+ "seite_name": "Der Abend",
+ "web": true,
+ "nachricht": "Tag: Freitag oder Samstag, beides geht\nPlätze: 4",
+ "formular": "warteliste",
+ "entwurf": {
+  "betreff": "Dein Platz an der Tafel",
+  "text": "Hallo Jonas,\n\ndanke, dass du dich eingetragen hast. Du stehst mit vier Plätzen auf der Warteliste, Freitag oder Samstag ist dir beides recht.\n\nDer nächste Abend steht noch nicht fest. Sobald es so weit ist, erfährst du es vor allen anderen. An der Tafel gibt es nur wenige Plätze, und Tickets gibt es bisher nur im Vorverkauf.\n\nFreitags geht es ab 19 Uhr los, samstags ab 17 Uhr: ein Aperitif zum Ankommen, drei Gänge von Rudi und fünf Drinks von Momo, der dir jeden am Tisch erklärt.\n\nBis bald an der Tafel\n\nMomo und Rudi\nCulinarium im Walk on the Wild Side",
+  "team": "Grundlage: Der Abend (Warteliste, «Der nächste Termin steht noch nicht fest»), Startseite «Gut zu wissen» (Vorverkauf, Freitag ab 19, Samstag ab 17).\nOffen: Termin des nächsten Abends, ob vier Plätze zusammen frei sind.",
+  "vorlage": "warteliste",
+  "absender": "Telefon der Bar +49 163 3909578 · Instagram @culinarium_hannover",
+  "zeit": "2026-10-27T20:05:00+01:00"
+ }
+}

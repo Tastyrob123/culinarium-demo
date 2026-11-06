@@ -1,0 +1,80 @@
+{
+ "name": "L’Imprimerie",
+ "hinweis": "cu-imprimerie (L’Imprimerie des Culinarium Hannover), 28.10.2026, Form wie die Werkstatt der Taverne zum Schäfli (dort nur gelesen). Oberfläche statisch unter /werkzeuge/imprimerie/, das Hausbuch (Le Livre) daneben unter /werkzeuge/livre/ (livre.json, Fotos über «fl» = /assets/bild/). KI-Funktion api/imprimerie_entwurf.py aus api/entwurf.py (Wissen und Marke als lib); ohne ANTHROPIC_API_KEY am Vercel-Projekt melden nur «Fünf Entwürfe» und Bildtext «KI-FREIGABE», Vorlagen, Editor und PDF gehen. Schlüssel nur auf Roberts Wort (Regel 54). Kein Blob-Speicher: alles im Browser des Hauses. Die grossen Fotos (haeuser/culinarium/bilder) nur unter «zusatz» (I08). Mail-Bilder (haeuser/culinarium/mail): nach dem ersten Versand nie mehr entfernen. NICHT ANGESCHLOSSEN: das Online-Projekt des Hauses gibt es noch nicht (Name vorläufig culinarium-hannover-entwurf), nichts hochgeladen.",
+ "funktionen": {
+  "api/imprimerie_entwurf.py": {
+   "von": "_werkzeuge/imprimerie/api/entwurf.py",
+   "dauer": 60,
+   "includeFiles": "api/_lib/imprimerie/**"
+  }
+ },
+ "lib": {
+  "_werkzeuge/imprimerie/api/_daten": "api/_lib/imprimerie/_daten"
+ },
+ "statik": {
+  "assets/oberflaeche": "assets/oberflaeche",
+  "_werkzeuge/imprimerie/index.html": "werkzeuge/imprimerie/index.html",
+  "_werkzeuge/imprimerie/mail.html": "werkzeuge/imprimerie/mail.html",
+  "_werkzeuge/imprimerie/pruefung.html": "werkzeuge/imprimerie/pruefung.html",
+  "_werkzeuge/imprimerie/satz.js": "werkzeuge/imprimerie/satz.js",
+  "_werkzeuge/imprimerie/eigene.js": "werkzeuge/imprimerie/eigene.js",
+  "_werkzeuge/imprimerie/vorlagen.js": "werkzeuge/imprimerie/vorlagen.js",
+  "_werkzeuge/imprimerie/druck.js": "werkzeuge/imprimerie/druck.js",
+  "_werkzeuge/imprimerie/studio.js": "werkzeuge/imprimerie/studio.js",
+  "_werkzeuge/imprimerie/instagram.js": "werkzeuge/imprimerie/instagram.js",
+  "_werkzeuge/imprimerie/lelivre.js": "werkzeuge/imprimerie/lelivre.js",
+  "_werkzeuge/imprimerie/katalog.js": "werkzeuge/imprimerie/katalog.js",
+  "_werkzeuge/imprimerie/siegel.js": "werkzeuge/imprimerie/siegel.js",
+  "_werkzeuge/imprimerie/start.js": "werkzeuge/imprimerie/start.js",
+  "_werkzeuge/imprimerie/fuehrung.js": "werkzeuge/imprimerie/fuehrung.js",
+  "_werkzeuge/imprimerie/mail.js": "werkzeuge/imprimerie/mail.js",
+  "_werkzeuge/imprimerie/mail-satz.js": "werkzeuge/imprimerie/mail-satz.js",
+  "_werkzeuge/imprimerie/zur-werkbank.js": "werkzeuge/imprimerie/zur-werkbank.js",
+  "_werkzeuge/imprimerie/studio.css": "werkzeuge/imprimerie/studio.css",
+  "_werkzeuge/imprimerie/ms-bureau.css": "werkzeuge/imprimerie/ms-bureau.css",
+  "_werkzeuge/imprimerie/mail.css": "werkzeuge/imprimerie/mail.css",
+  "_werkzeuge/imprimerie/lib": "werkzeuge/imprimerie/lib",
+  "_werkzeuge/imprimerie/haeuser/culinarium/marke.json": "werkzeuge/imprimerie/haeuser/culinarium/marke.json",
+  "_werkzeuge/imprimerie/haeuser/culinarium/druck.json": "werkzeuge/imprimerie/haeuser/culinarium/druck.json",
+  "_werkzeuge/imprimerie/haeuser/culinarium/buehne.js": "werkzeuge/imprimerie/haeuser/culinarium/buehne.js",
+  "_werkzeuge/imprimerie/haeuser/culinarium/feder.js": "werkzeuge/imprimerie/haeuser/culinarium/feder.js",
+  "_werkzeuge/imprimerie/haeuser/culinarium/feder.css": "werkzeuge/imprimerie/haeuser/culinarium/feder.css",
+  "_werkzeuge/imprimerie/haeuser/culinarium/hell.css": "werkzeuge/imprimerie/haeuser/culinarium/hell.css",
+  "_werkzeuge/imprimerie/haeuser/culinarium/tapete-dunkel.webp": "werkzeuge/imprimerie/haeuser/culinarium/tapete-dunkel.webp",
+  "_werkzeuge/imprimerie/haeuser/culinarium/tapete-hell.webp": "werkzeuge/imprimerie/haeuser/culinarium/tapete-hell.webp",
+  "_werkzeuge/imprimerie/haeuser/culinarium/tapete-ui-dunkel.webp": "werkzeuge/imprimerie/haeuser/culinarium/tapete-ui-dunkel.webp",
+  "_werkzeuge/imprimerie/haeuser/culinarium/tapete-ui-hell.webp": "werkzeuge/imprimerie/haeuser/culinarium/tapete-ui-hell.webp",
+  "_werkzeuge/imprimerie/haeuser/culinarium/schriften": "werkzeuge/imprimerie/haeuser/culinarium/schriften",
+  "_werkzeuge/imprimerie/haeuser/culinarium/vorlagen": "werkzeuge/imprimerie/haeuser/culinarium/vorlagen",
+  "_werkzeuge/imprimerie/haeuser/culinarium/kopf": "werkzeuge/imprimerie/haeuser/culinarium/kopf",
+  "_werkzeuge/imprimerie/haeuser/culinarium/mini": "werkzeuge/imprimerie/haeuser/culinarium/mini",
+  "_werkzeuge/imprimerie/haeuser/culinarium/mail": "werkzeuge/imprimerie/haeuser/culinarium/mail",
+  "_werkzeuge/imprimerie/haeuser/culinarium/oberflaeche.js": "werkzeuge/imprimerie/haeuser/culinarium/oberflaeche.js",
+  "_werkzeuge/imprimerie/haeuser/culinarium/oberflaeche.css": "werkzeuge/imprimerie/haeuser/culinarium/oberflaeche.css"
+ },
+ "zusatz": {
+  "_": "Nur nötig, wenn das Hausbuch online fehlt. Wie beim Carlton in ein Zusatz-Projekt, falls das Hauptprojekt zu gross wird; Umleitung unten. Name ohne Nummer (-2 bis -4 vergibt die Website-Aufteilung von online.py).",
+  "culinarium-hannover-werkstatt": {
+   "_werkzeuge/imprimerie/haeuser/culinarium/bilder": "werkzeuge/imprimerie/haeuser/culinarium/bilder"
+  }
+ },
+ "umleitungen": [
+  {
+   "source": "/werkzeuge/imprimerie/api/entwurf",
+   "destination": "/api/imprimerie_entwurf"
+  },
+  {
+   "source": "/_werkzeuge/imprimerie/:pfad*",
+   "destination": "/werkzeuge/imprimerie/:pfad*"
+  },
+  {
+   "source": "/werkzeuge/imprimerie/haeuser/culinarium/bilder/:pfad*",
+   "destination": "https://culinarium-hannover-werkstatt.vercel.app/werkzeuge/imprimerie/haeuser/culinarium/bilder/:pfad*"
+  }
+ ],
+ "stand": "",
+ "pruefung": {
+  "weg": "/werkzeuge/imprimerie/",
+  "kurz": true
+ }
+}

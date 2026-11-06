@@ -1,0 +1,470 @@
+{
+  "art": "menuekarte",
+  "format": "dlh",
+  "vorlagen": [
+    {
+      "id": "menuekarte-001",
+      "titel": "Menükarte · Fr 15. und Sa 16. September 2023",
+      "bereich": "Karte",
+      "vorlage": "menue",
+      "ton": "hell",
+      "stil": {
+        "ausr": "l",
+        "rahmen": "ohne",
+        "titel": 1.1,
+        "zeichen": 0.85,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "titel": "Menü",
+        "ueber": "Fr 15. und Sa 16. September 2023",
+        "liste": [
+          {
+            "gang": "Amuse Bouche",
+            "name": "",
+            "detail": "Cleared Strawberry Martini · Gin | Cleared Erdbeer-Wasser"
+          },
+          {
+            "gang": "Apéritif",
+            "name": "",
+            "detail": "Umami · Tequila | lakto-fermentierte Tomaten | Agave | Limettensaft | Tomatenstaub"
+          },
+          {
+            "gang": "Vorspeise",
+            "name": "Das „Brot der Freude“ · Geeister Sugo von allerfeinsten sizilianischen Dattel-Tomaten | Burrata-Mozzarella | Pfirsich | Avocado",
+            "detail": "Cabra · Mezcal | Thymian | Feige | Birne | Limetten | ziegenmilch-filtriert"
+          },
+          {
+            "gang": "Hauptgang",
+            "name": "Allerlei geröstete Pilze in Schnittlauch-Rahmsauce · hausgemachte Bandnudeln | grüner Erbsen-Sud",
+            "detail": "Molekulare Aviation · Gin | Zitrone | Maraschino | Veilchen-Caviar"
+          },
+          {
+            "gang": "Dessert",
+            "name": "Crème Brulée mit hausgemachtem Sorbet",
+            "detail": "Black Pearl · Black Sesam fatwashed Tequila | Guave | Grapefruit | Limette | MSG Solution"
+          },
+          {
+            "gang": "Upgrade nach Wahl",
+            "name": "Bunter Salat von der Permakultur Kirchhorst · Filet vom Fjord-Lachs mit Bouillabaisse-Sauce · Striploin-Steak (grasgefüttert aus Australien) mit Kräuterbutter",
+            "detail": ""
+          }
+        ],
+        "akzent": "#ba4757",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-002",
+      "titel": "Menükarte · Fr 22. und Sa 23. September 2023",
+      "bereich": "Karte",
+      "vorlage": "menue",
+      "ton": "hell",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "ohne",
+        "titel": 1.04,
+        "zeichen": 0.95,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "titel": "Menü",
+        "ueber": "Fr 22. und Sa 23. September 2023",
+        "liste": [
+          {
+            "gang": "Apéritif",
+            "name": "",
+            "detail": "White Mojito"
+          },
+          {
+            "gang": "Vorspeise",
+            "name": "Sashimi vom Balfego-Thunfisch · Tomate | Ingwer | Sesam (vegetarische Alternative auf Nachfrage)",
+            "detail": "Birne"
+          },
+          {
+            "gang": "Hauptgang",
+            "name": "Risotto vom Hokkaido-Kürbis mit gebratenen Pfifferlingen",
+            "detail": "Butternut Old Fashioned"
+          },
+          {
+            "gang": "Dessert",
+            "name": "Crème Brulée mit hausgemachtem Sorbet",
+            "detail": "Escape"
+          },
+          {
+            "gang": "Absacker",
+            "name": "",
+            "detail": "Autumn Highball"
+          }
+        ],
+        "akzent": "messing",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-003",
+      "titel": "Menükarte · Fr 17. und Sa 18. November 2023",
+      "bereich": "Karte",
+      "vorlage": "menue",
+      "ton": "hell",
+      "stil": {
+        "ausr": "l",
+        "rahmen": "einfach",
+        "titel": 1.06,
+        "zeichen": 1,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "titel": "Menü",
+        "ueber": "Fr 17. und Sa 18. November 2023",
+        "liste": [
+          {
+            "gang": "Apéritif",
+            "name": "",
+            "detail": "Un air de Déjà-vu · Cranberry-Orangen-Sherbet | Rosmarin | Thomas Henry Spicy Ginger"
+          },
+          {
+            "gang": "Vorspeise",
+            "name": "Pilzkraftbrühe mit vegetarischen Gyoza",
+            "detail": "Pera Dulce · Cazcabel Tequila Honey | Cleared Pear Water | weiße Schokolade"
+          },
+          {
+            "gang": "Hauptgang",
+            "name": "Gebackenes Bio Ei auf Kartoffelstampf mit Champagner-Senf-Soße und Rote Bete",
+            "detail": "Beet it · Beetroot-infused Knut Hansen Gin | Himbeer-Cordial | Absinth | Aztec Bitters | Thomas Henry Soda"
+          },
+          {
+            "gang": "Dessert",
+            "name": "Crème Brûlée",
+            "detail": "Russian Winter · Three Sixty Vodka | Vanille | Coldbrew-Kaffee | Maronen | Feigen-Espuma"
+          },
+          {
+            "gang": "Absacker",
+            "name": "",
+            "detail": "Apfel-Punsch · Ron Piet Rum | Sherry | Limette | Kamille | Apfel | Zimt"
+          }
+        ],
+        "akzent": "#7d3c2c",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-004",
+      "titel": "Menükarte · Fr 26. und Sa 27. April 2024",
+      "bereich": "Karte",
+      "vorlage": "menue",
+      "ton": "hell",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "einfach",
+        "titel": 1,
+        "zeichen": 1,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "titel": "Menü",
+        "ueber": "Fr 26. und Sa 27. April 2024",
+        "liste": [
+          {
+            "gang": "Apéritif",
+            "name": "Sauerteigbrot | Miso-Butter",
+            "detail": "Arcane · Hendrick’s Floral Adora | Rosen-Shrub | CO2"
+          },
+          {
+            "gang": "Vorspeise",
+            "name": "Gurke | Sesam | Sternanis",
+            "detail": "Cabinet Collins · Discarded Vodka | gelbe Paprika | grüner Apfel"
+          },
+          {
+            "gang": "Hauptgang",
+            "name": "Sellerie | Lauch | Frisée",
+            "detail": "Mystical Mixology · Hendrick’s Neptunia | Gurke | rosa Pfeffer | Sellerie"
+          },
+          {
+            "gang": "Dessert",
+            "name": "Amalfi-Zitrone | Vanille",
+            "detail": "Wanderlust · Monkey Shoulder Whisky | Rhabarber | Spargel | weißer Port | Estragon"
+          },
+          {
+            "gang": "Absacker",
+            "name": "",
+            "detail": "Curiosity Crush · Discarded Banana Peel Rum | Erdbeere | Grana Padano"
+          }
+        ],
+        "akzent": "#523c2f",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-005",
+      "titel": "Menükarte · Fr 21. und Sa 22. Februar 2025",
+      "bereich": "Karte",
+      "vorlage": "menue",
+      "ton": "hell",
+      "stil": {
+        "ausr": "l",
+        "rahmen": "ohne",
+        "titel": 1.1,
+        "zeichen": 0.85,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "titel": "Menü",
+        "ueber": "Fr 21. und Sa 22. Februar 2025",
+        "liste": [
+          {
+            "gang": "Apéritif",
+            "name": "Sauerteig | Tomate | Butter",
+            "detail": "Cognac | Toasted Pumpkin Samen | Limette | Champagner"
+          },
+          {
+            "gang": "Vorspeise",
+            "name": "Miso | Sellerie | Röstzwiebeln",
+            "detail": "Vodka | Tom Yam | Guava | Cocos | Acids | Soda"
+          },
+          {
+            "gang": "Hauptgang",
+            "name": "Spinat | braune Butter | Parmesan",
+            "detail": "Tequila | lakto-fermentierte Tomate | Agave | Limette"
+          },
+          {
+            "gang": "Dessert",
+            "name": "Kaffee | Molke | Amaretto",
+            "detail": "Vodka | Cacao | Matcha | Mango"
+          },
+          {
+            "gang": "Absacker",
+            "name": "",
+            "detail": "Gin | Turmeric | Ingwer"
+          }
+        ],
+        "akzent": "#ef7648",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-006",
+      "titel": "Rudis Zeilen",
+      "bereich": "Karte",
+      "vorlage": "karte",
+      "ton": "creme",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "ohne",
+        "titel": 1.04,
+        "zeichen": 0.95,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "ueber": "Culinarium",
+        "titel": "Vom Pass",
+        "text": "Das Menü wechselt mit jedem Abend. Ein paar Teller und Drinks aus den letzten Ausgaben.",
+        "liste": [
+          {
+            "name": "LAUCH / BLUMENKOHL / CHIPOTLE",
+            "detail": "",
+            "preis": ""
+          },
+          {
+            "name": "BLUMENKOHL / ROQUEFORT / KAPERN / QUINOA",
+            "detail": "",
+            "preis": ""
+          },
+          {
+            "name": "HOKKAIDO / KÜRBISKERNÖL / HASELNUSS",
+            "detail": "",
+            "preis": ""
+          },
+          {
+            "name": "SPAGHETTI-EIS / KIWI / WEISSE SCHOKOLADE",
+            "detail": "",
+            "preis": ""
+          }
+        ],
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-007",
+      "titel": "Die drei Techniken",
+      "bereich": "Drinks",
+      "vorlage": "karte",
+      "ton": "dunkel",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "einfach",
+        "titel": 1,
+        "zeichen": 1,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "ueber": "Tasting und Schulung",
+        "titel": "Was im Glas passiert",
+        "text": "Momo erklärt jeden Drink am Tisch: Fatwashing, Milkwashing, Klärung mit Enzymen",
+        "liste": [
+          {
+            "name": "Fatwashing",
+            "detail": "Die Spirituose nimmt den Geschmack eines Fetts an; kalt gestellt, wird das Fett wieder abgehoben.",
+            "preis": ""
+          },
+          {
+            "name": "Milkwashing",
+            "detail": "Milch bindet die Trübstoffe und wird abgefiltert, der Drink wird klar und weich.",
+            "preis": ""
+          },
+          {
+            "name": "Klärung mit Enzymen",
+            "detail": "Enzyme lösen die Trübung aus Fruchtsaft, der Geschmack bleibt.",
+            "preis": ""
+          }
+        ],
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13"
+      }
+    },
+    {
+      "id": "menuekarte-2910-01",
+      "titel": "Dirty Chicken · Pop-up · Die Karte",
+      "bereich": "Anlässe & Events",
+      "anlass": "dirty-chicken",
+      "wo": "an der Theke und am Tisch",
+      "vorlage": "karte",
+      "ton": "dc",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "einfach",
+        "titel": 1,
+        "zeichen": 1,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "ueber": "Dirty Chicken",
+        "titel": "Dirty Food.",
+        "text": "Fried Chicken, das kracht. Nur an einzelnen Tagen.",
+        "liste": [
+          {
+            "name": "Sandwich",
+            "detail": "Paprika-Honig-Mayo, eingelegte Zwiebeln",
+            "preis": ""
+          },
+          {
+            "name": "Chicken Chunks",
+            "detail": "Spicy Glaze, grüne Sauce",
+            "preis": ""
+          },
+          {
+            "name": "Pommes & Krautsalat",
+            "detail": "kommen immer mit",
+            "preis": ""
+          },
+          {
+            "name": "Dirty Drinks",
+            "detail": "von der Bar",
+            "preis": ""
+          }
+        ],
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13 · @dirtychicken.hannover"
+      }
+    },
+    {
+      "id": "menuekarte-2910-02",
+      "titel": "Die fünf Drinks eines Abends",
+      "bereich": "Drinks",
+      "wo": "an der Bar",
+      "vorlage": "karte",
+      "ton": "creme",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "ohne",
+        "titel": 1.04,
+        "zeichen": 0.95,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "ueber": "Fr 26. und Sa 27. April 2024",
+        "titel": "Fünf Signature Drinks",
+        "text": "Momo erklärt jeden Drink am Tisch: Fatwashing, Milkwashing, Klärung mit Enzymen",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13",
+        "liste": [
+          {
+            "name": "Arcane",
+            "detail": "Hendrick’s Floral Adora | Rosen-Shrub | CO2",
+            "preis": ""
+          },
+          {
+            "name": "Cabinet Collins",
+            "detail": "Discarded Vodka | gelbe Paprika | grüner Apfel",
+            "preis": ""
+          },
+          {
+            "name": "Mystical Mixology",
+            "detail": "Hendrick’s Neptunia | Gurke | rosa Pfeffer | Sellerie",
+            "preis": ""
+          },
+          {
+            "name": "Wanderlust",
+            "detail": "Monkey Shoulder Whisky | Rhabarber | Spargel | weißer Port | Estragon",
+            "preis": ""
+          },
+          {
+            "name": "Curiosity Crush",
+            "detail": "Discarded Banana Peel Rum | Erdbeere | Grana Padano",
+            "preis": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "menuekarte-2910-03",
+      "titel": "Menükarte · Dezember 2025",
+      "bereich": "Karte",
+      "wo": "am Platz",
+      "vorlage": "menue",
+      "ton": "hell",
+      "stil": {
+        "ausr": "c",
+        "rahmen": "einfach",
+        "titel": 1,
+        "zeichen": 1,
+        "ecke": 2.4,
+        "bild": 0.56
+      },
+      "inhalt": {
+        "titel": "Menü",
+        "ueber": "Dezember 2025",
+        "akzent": "messing",
+        "fuss": "Walk on the Wild Side · Haasemannstraße 13",
+        "liste": [
+          {
+            "gang": "Apéritif",
+            "name": "",
+            "detail": "Rotkraut & Orange Gin · Hibiskus · Cranberry · Rosmarin · Granatapfel"
+          },
+          {
+            "gang": "Vorspeise",
+            "name": "Grünkohl · Sesam · Dumpling",
+            "detail": ""
+          },
+          {
+            "gang": "Hauptgang",
+            "name": "Barbarie-Entenbrust · Kartoffel · Spitzkohl",
+            "detail": ""
+          },
+          {
+            "gang": "Dessert",
+            "name": "Milchreis · fermentierte Pflaume",
+            "detail": ""
+          }
+        ]
+      }
+    }
+  ]
+}
