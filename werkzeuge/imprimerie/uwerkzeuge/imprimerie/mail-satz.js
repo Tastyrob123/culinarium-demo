@@ -5,7 +5,7 @@
    Fotos als JPG (haeuser/culinarium/mail/, 1200 px, Outlook kann kein WebP), öffentliche Adressen auf der Studio-Seite.
    Kein Mailprogramm führt Skripte aus; alles hier ist reines HTML. DSMAIL.html(doc, {editor}) → vollständiges Dokument. */
 (function () {
-  const ONLINE = 'https://culinarium-hannover-entwurf.vercel.app/werkzeuge/imprimerie/';   // öffentliche Adresse der Bilder in den Mails (Fotos, Kopf, Fuss)
+  const ONLINE = 'https://tastyrob123.github.io/culinarium-entwurf/werkzeuge/imprimerie/';   // öffentliche Adresse der Bilder in den Mails (Fotos, Kopf, Fuss)
   const C = { navy: '#16151a', papier: '#f3ecea', creme: '#e9e0de', weiss: '#faf4f4', sand: '#e9e0de', gold: '#f5a689', messing: '#ef7649', taupe: '#b15736', tief: '#3a3845', tinte: '#26242d' };
   const F = {
     serif: "Fraunces,Georgia,'Times New Roman',serif",

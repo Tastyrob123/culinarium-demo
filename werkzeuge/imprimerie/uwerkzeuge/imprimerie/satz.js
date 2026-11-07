@@ -108,7 +108,7 @@
     const reihe = (STUFEN.find(r => r[0] === +ms[1]) || [+ms[1]]).filter(w => w <= +ml[2]), ziel = breite * 1.6;
     return DS.livreUrl(ml[1] + '-' + (reihe.find(w => w >= ziel) || +ml[2]) + '.webp');
   };
-  DS.livreSeite = () => location.port === '9087' ? 'http://127.0.0.1:9085/_werkzeuge/livre/' : DS.ALLEIN ? 'https://culinarium-hannover-entwurf.vercel.app/werkzeuge/livre/' : DS.LIVRE;
+  DS.livreSeite = () => location.port === '9087' ? 'http://127.0.0.1:9085/_werkzeuge/livre/' : DS.ALLEIN ? 'https://tastyrob123.github.io/culinarium-entwurf/werkzeuge/livre/' : DS.LIVRE;
   /* Logo, Logo quer und Wortmarke aus Le Livre: Bildschirm SVG, Blatt und PDF PNG (bis 3000 px, mit Transparenz) */
   DS.livreDateien = M => (M.livre ? M.livre.dateien : []).filter(d => ['logo', 'quer', 'wortmarke'].includes(d.k) && d.var).flatMap(d => {
     const vb = (d.vb || '0 0 4 3').split(' ').map(Number), N = { logo: 'Logo', quer: 'Logo quer', wortmarke: 'Wortmarke' }[d.k];
