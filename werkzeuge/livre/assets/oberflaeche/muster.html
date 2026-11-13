@@ -6,7 +6,7 @@
      So wird auch jedes Werkzeug eingebunden: 1. kleid/<haus>.js  2. grund.css  3. rahmen-<inseln|buehne>.css  4. kleid/<haus>.css  5. oberflaeche.js -->
 <script>var WOH = (new URLSearchParams(location.search).get('haus') || 'culinarium').replace(/[^a-z]/g, ''); document.write('<script src="kleid/' + WOH + '.js"><\/script>');</script>
 <script>document.write('<link rel="stylesheet" href="grund.css"><link rel="stylesheet" href="rahmen-' + WO_HAUS.rahmen + '.css"><link rel="stylesheet" href="kleid/' + WOH + '.css"><script src="oberflaeche.js"><\/script>');</script>
-<script src="/culinarium-demo/besuch.js?v=3c4c57a56e" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
+<script src="/culinarium-demo/besuch.js" defer></script><script src="/culinarium-demo/verweil.js?v=5881fd455d" defer></script></head>
 <body class="wo-app">
 <header class="wo-kopf" id="kopf"></header>
 <nav class="wo-rand" id="rand" aria-label="Bereiche"></nav>
