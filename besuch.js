@@ -48,7 +48,7 @@
   var fertig = false;
   function aufSenden(ort) {
     if (fertig) return; fertig = true;
-    if (ort) { auf.st = ort.city || ''; auf.re = ort.region || ''; auf.la = ort.country || ''; auf.lc = ort.country_code || ''; }
+    if (ort) { auf.st = ort.city || ''; auf.re = ort.region || ''; auf.la = ort.country || ''; auf.lc = ort.country_code || ''; auf.an = String((ort.organization || '') + ' · ' + (ort.organization_name || '')).slice(0, 120); auf.as = String(ort.asn || ''); }
     if (!probe && auf.lc && /^(PH|TH|HK|SG)$/.test(auf.lc)) { basis = null; return; }   // Roberts Standorte
     senden(mit(auf), false);
   }
